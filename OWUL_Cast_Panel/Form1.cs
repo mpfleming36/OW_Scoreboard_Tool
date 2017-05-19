@@ -109,7 +109,7 @@ namespace OWUL_Cast_Panel
         {
 
             String temp;
-            temp = m1t1Name.Text;
+            temp = m3t1Name.Text;
             m3t1Name.Text = m3t2Name.Text;
             m3t2Name.Text = temp;
             temp = "";
