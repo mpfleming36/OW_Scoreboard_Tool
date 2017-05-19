@@ -71,6 +71,29 @@ namespace OWUL_Cast_Panel
             loadText(m2t2p7Name, "Match2", "t2p7Name");
             loadText(m2t2p8Name, "Match2", "t2p8Name");
 
+            loadText(m3MessageBox, "Match3", "MessageBox");
+            loadText(m3DivisionNumber, "Match3", "DivisionNumber");
+            loadScore(m3t1Score, "Match3", "t1Score");
+            loadText(m3t1Name, "Match3", "t1Name");
+            loadText(m3t1p1Name, "Match3", "t1p1Name");
+            loadText(m3t1p2Name, "Match3", "t1p2Name");
+            loadText(m3t1p3Name, "Match3", "t1p3Name");
+            loadText(m3t1p4Name, "Match3", "t1p4Name");
+            loadText(m3t1p5Name, "Match3", "t1p5Name");
+            loadText(m3t1p6Name, "Match3", "t1p6Name");
+            loadText(m3t1p7Name, "Match3", "t1p7Name");
+            loadText(m3t1p8Name, "Match3", "t1p8Name");
+            loadScore(m3t2Score, "Match3", "t2Score");
+            loadText(m3t2Name, "Match3", "t2Name");
+            loadText(m3t2p1Name, "Match3", "t2p1Name");
+            loadText(m3t2p2Name, "Match3", "t2p2Name");
+            loadText(m3t2p3Name, "Match3", "t2p3Name");
+            loadText(m3t2p4Name, "Match3", "t2p4Name");
+            loadText(m3t2p5Name, "Match3", "t2p5Name");
+            loadText(m3t2p6Name, "Match3", "t2p6Name");
+            loadText(m3t2p7Name, "Match3", "t2p7Name");
+            loadText(m3t2p8Name, "Match3", "t2p8Name");
+
         }
 
         private void m1SwapButton_Click(object sender, EventArgs e)
