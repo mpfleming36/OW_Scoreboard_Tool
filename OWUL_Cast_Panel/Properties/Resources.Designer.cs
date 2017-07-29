@@ -83,6 +83,16 @@ namespace OWUL_Cast_Panel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_doomfist {
+            get {
+                object obj = ResourceManager.GetObject("Icon_doomfist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_dva {
             get {
                 object obj = ResourceManager.GetObject("Icon_dva", resourceCulture);

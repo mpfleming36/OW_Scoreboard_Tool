@@ -9,6 +9,7 @@
 
         private object[] heroList = new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -407,6 +408,7 @@
             this.m1t2p8Hero.FormattingEnabled = true;
             this.m1t2p8Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -443,6 +445,7 @@
             this.m1t2p7Hero.FormattingEnabled = true;
             this.m1t2p7Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -479,6 +482,7 @@
             this.m1t2p6Hero.FormattingEnabled = true;
             this.m1t2p6Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -515,6 +519,7 @@
             this.m1t2p5Hero.FormattingEnabled = true;
             this.m1t2p5Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -551,6 +556,7 @@
             this.m1t2p4Hero.FormattingEnabled = true;
             this.m1t2p4Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -587,6 +593,7 @@
             this.m1t2p3Hero.FormattingEnabled = true;
             this.m1t2p3Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -623,6 +630,7 @@
             this.m1t2p2Hero.FormattingEnabled = true;
             this.m1t2p2Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -659,6 +667,7 @@
             this.m1t2p1Hero.FormattingEnabled = true;
             this.m1t2p1Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -695,6 +704,7 @@
             this.m1t1p8Hero.FormattingEnabled = true;
             this.m1t1p8Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -730,6 +740,7 @@
             this.m1t1p7Hero.FormattingEnabled = true;
             this.m1t1p7Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -765,6 +776,7 @@
             this.m1t1p6Hero.FormattingEnabled = true;
             this.m1t1p6Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -800,6 +812,7 @@
             this.m1t1p5Hero.FormattingEnabled = true;
             this.m1t1p5Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -835,6 +848,7 @@
             this.m1t1p4Hero.FormattingEnabled = true;
             this.m1t1p4Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -870,6 +884,7 @@
             this.m1t1p3Hero.FormattingEnabled = true;
             this.m1t1p3Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -905,6 +920,7 @@
             this.m1t1p2Hero.FormattingEnabled = true;
             this.m1t1p2Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -940,6 +956,7 @@
             this.m1t1p1Hero.FormattingEnabled = true;
             this.m1t1p1Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1442,6 +1459,7 @@
             this.m2t2p8Hero.FormattingEnabled = true;
             this.m2t2p8Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1478,6 +1496,7 @@
             this.m2t2p7Hero.FormattingEnabled = true;
             this.m2t2p7Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1514,6 +1533,7 @@
             this.m2t2p6Hero.FormattingEnabled = true;
             this.m2t2p6Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1550,6 +1570,7 @@
             this.m2t2p5Hero.FormattingEnabled = true;
             this.m2t2p5Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1586,6 +1607,7 @@
             this.m2t2p4Hero.FormattingEnabled = true;
             this.m2t2p4Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1622,6 +1644,7 @@
             this.m2t2p3Hero.FormattingEnabled = true;
             this.m2t2p3Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1658,6 +1681,7 @@
             this.m2t2p2Hero.FormattingEnabled = true;
             this.m2t2p2Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1694,6 +1718,7 @@
             this.m2t2p1Hero.FormattingEnabled = true;
             this.m2t2p1Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1730,6 +1755,7 @@
             this.m2t1p8Hero.FormattingEnabled = true;
             this.m2t1p8Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1765,6 +1791,7 @@
             this.m2t1p7Hero.FormattingEnabled = true;
             this.m2t1p7Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1800,6 +1827,7 @@
             this.m2t1p6Hero.FormattingEnabled = true;
             this.m2t1p6Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1835,6 +1863,7 @@
             this.m2t1p5Hero.FormattingEnabled = true;
             this.m2t1p5Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1870,6 +1899,7 @@
             this.m2t1p4Hero.FormattingEnabled = true;
             this.m2t1p4Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1905,6 +1935,7 @@
             this.m2t1p3Hero.FormattingEnabled = true;
             this.m2t1p3Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1940,6 +1971,7 @@
             this.m2t1p2Hero.FormattingEnabled = true;
             this.m2t1p2Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -1975,6 +2007,7 @@
             this.m2t1p1Hero.FormattingEnabled = true;
             this.m2t1p1Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2477,6 +2510,7 @@
             this.m3t2p8Hero.FormattingEnabled = true;
             this.m3t2p8Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2513,6 +2547,7 @@
             this.m3t2p7Hero.FormattingEnabled = true;
             this.m3t2p7Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2549,6 +2584,7 @@
             this.m3t2p6Hero.FormattingEnabled = true;
             this.m3t2p6Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2585,6 +2621,7 @@
             this.m3t2p5Hero.FormattingEnabled = true;
             this.m3t2p5Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2621,6 +2658,7 @@
             this.m3t2p4Hero.FormattingEnabled = true;
             this.m3t2p4Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2657,6 +2695,7 @@
             this.m3t2p3Hero.FormattingEnabled = true;
             this.m3t2p3Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2693,6 +2732,7 @@
             this.m3t2p2Hero.FormattingEnabled = true;
             this.m3t2p2Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2729,6 +2769,7 @@
             this.m3t2p1Hero.FormattingEnabled = true;
             this.m3t2p1Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2765,6 +2806,7 @@
             this.m3t1p8Hero.FormattingEnabled = true;
             this.m3t1p8Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2800,6 +2842,7 @@
             this.m3t1p7Hero.FormattingEnabled = true;
             this.m3t1p7Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2835,6 +2878,7 @@
             this.m3t1p6Hero.FormattingEnabled = true;
             this.m3t1p6Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2870,6 +2914,7 @@
             this.m3t1p5Hero.FormattingEnabled = true;
             this.m3t1p5Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2905,6 +2950,7 @@
             this.m3t1p4Hero.FormattingEnabled = true;
             this.m3t1p4Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2940,6 +2986,7 @@
             this.m3t1p3Hero.FormattingEnabled = true;
             this.m3t1p3Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -2975,6 +3022,7 @@
             this.m3t1p2Hero.FormattingEnabled = true;
             this.m3t1p2Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",
@@ -3010,6 +3058,7 @@
             this.m3t1p1Hero.FormattingEnabled = true;
             this.m3t1p1Hero.Items.AddRange(new object[] {
             "",
+            "Doomfist",
             "Genji",
             "McCree",
             "Pharah",

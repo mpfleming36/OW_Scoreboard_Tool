@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="owul_logo_gray.ico" />
+    <None Include="Resources\Icon-doomfist.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

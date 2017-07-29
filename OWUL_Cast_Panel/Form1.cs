@@ -618,6 +618,10 @@ namespace OWUL_Cast_Panel
                 {
                     Properties.Resources.Icon_bastion.Save(path + "\\" + folder + "\\" + file + ".png");
                 }
+                else if (field.SelectedItem.ToString().Equals("Doomfist"))
+                {
+                    Properties.Resources.Icon_doomfist.Save(path + "\\" + folder + "\\" + file + ".png");
+                }
                 else if (field.SelectedItem.ToString().Equals("D.Va"))
                 {
                     Properties.Resources.Icon_dva.Save(path + "\\" + folder + "\\" + file + ".png");
