@@ -83,6 +83,16 @@ namespace OWUL_Cast_Panel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_defense {
+            get {
+                object obj = ResourceManager.GetObject("Icon_defense", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_doomfist {
             get {
                 object obj = ResourceManager.GetObject("Icon_doomfist", resourceCulture);
@@ -183,6 +193,16 @@ namespace OWUL_Cast_Panel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_offense {
+            get {
+                object obj = ResourceManager.GetObject("Icon_offense", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_orisa {
             get {
                 object obj = ResourceManager.GetObject("Icon_orisa", resourceCulture);
@@ -253,9 +273,29 @@ namespace OWUL_Cast_Panel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_support {
+            get {
+                object obj = ResourceManager.GetObject("Icon_support", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_symmetra {
             get {
                 object obj = ResourceManager.GetObject("Icon_symmetra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_tank {
+            get {
+                object obj = ResourceManager.GetObject("Icon_tank", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

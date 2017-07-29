@@ -59,6 +59,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Match_1 = new System.Windows.Forms.TabPage();
+            this.m1t2Side = new System.Windows.Forms.GroupBox();
+            this.m1t2Defend = new System.Windows.Forms.RadioButton();
+            this.m1t2Attack = new System.Windows.Forms.RadioButton();
+            this.m1t2Neutral = new System.Windows.Forms.RadioButton();
+            this.m1t1Side = new System.Windows.Forms.GroupBox();
+            this.m1t1Attack = new System.Windows.Forms.RadioButton();
+            this.m1t1Defend = new System.Windows.Forms.RadioButton();
+            this.m1t1Neutral = new System.Windows.Forms.RadioButton();
             this.m1DivisionLabel = new System.Windows.Forms.Label();
             this.m1DivisionNumber = new System.Windows.Forms.TextBox();
             this.m1MessageLabel = new System.Windows.Forms.Label();
@@ -124,6 +132,14 @@
             this.m1t1Name = new System.Windows.Forms.TextBox();
             this.m1t1Label = new System.Windows.Forms.Label();
             this.Match_2 = new System.Windows.Forms.TabPage();
+            this.m2t2Side = new System.Windows.Forms.GroupBox();
+            this.m2t2Defend = new System.Windows.Forms.RadioButton();
+            this.m2t2Attack = new System.Windows.Forms.RadioButton();
+            this.m2t2Neutral = new System.Windows.Forms.RadioButton();
+            this.m2t1Side = new System.Windows.Forms.GroupBox();
+            this.m2t1Defend = new System.Windows.Forms.RadioButton();
+            this.m2t1Attack = new System.Windows.Forms.RadioButton();
+            this.m2t1Neutral = new System.Windows.Forms.RadioButton();
             this.m2DivisionLabel = new System.Windows.Forms.Label();
             this.m2DivisionNumber = new System.Windows.Forms.TextBox();
             this.m2MessageLabel = new System.Windows.Forms.Label();
@@ -189,6 +205,14 @@
             this.m2t1Name = new System.Windows.Forms.TextBox();
             this.m2t1Label = new System.Windows.Forms.Label();
             this.Match_3 = new System.Windows.Forms.TabPage();
+            this.m3t2Side = new System.Windows.Forms.GroupBox();
+            this.m3t2Attack = new System.Windows.Forms.RadioButton();
+            this.m3t2Defend = new System.Windows.Forms.RadioButton();
+            this.m3t2Neutral = new System.Windows.Forms.RadioButton();
+            this.m3t1Side = new System.Windows.Forms.GroupBox();
+            this.m3t1Attack = new System.Windows.Forms.RadioButton();
+            this.m3t1Defend = new System.Windows.Forms.RadioButton();
+            this.m3t1Neutral = new System.Windows.Forms.RadioButton();
             this.m3DivisionLabel = new System.Windows.Forms.Label();
             this.m3DivisionNumber = new System.Windows.Forms.TextBox();
             this.m3MessageLabel = new System.Windows.Forms.Label();
@@ -253,14 +277,21 @@
             this.m3t2Label = new System.Windows.Forms.Label();
             this.m3t1Name = new System.Windows.Forms.TextBox();
             this.m3t1Label = new System.Windows.Forms.Label();
+            this.General_Info = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.Match_1.SuspendLayout();
+            this.m1t2Side.SuspendLayout();
+            this.m1t1Side.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m1t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m1t1Score)).BeginInit();
             this.Match_2.SuspendLayout();
+            this.m2t2Side.SuspendLayout();
+            this.m2t1Side.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m2t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2t1Score)).BeginInit();
             this.Match_3.SuspendLayout();
+            this.m3t2Side.SuspendLayout();
+            this.m3t1Side.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m3t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m3t1Score)).BeginInit();
             this.SuspendLayout();
@@ -270,14 +301,17 @@
             this.tabControl1.Controls.Add(this.Match_1);
             this.tabControl1.Controls.Add(this.Match_2);
             this.tabControl1.Controls.Add(this.Match_3);
+            this.tabControl1.Controls.Add(this.General_Info);
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(550, 446);
+            this.tabControl1.Size = new System.Drawing.Size(550, 491);
             this.tabControl1.TabIndex = 0;
             // 
             // Match_1
             // 
+            this.Match_1.Controls.Add(this.m1t2Side);
+            this.Match_1.Controls.Add(this.m1t1Side);
             this.Match_1.Controls.Add(this.m1DivisionLabel);
             this.Match_1.Controls.Add(this.m1DivisionNumber);
             this.Match_1.Controls.Add(this.m1MessageLabel);
@@ -345,10 +379,98 @@
             this.Match_1.Location = new System.Drawing.Point(4, 22);
             this.Match_1.Name = "Match_1";
             this.Match_1.Padding = new System.Windows.Forms.Padding(3);
-            this.Match_1.Size = new System.Drawing.Size(542, 420);
+            this.Match_1.Size = new System.Drawing.Size(542, 465);
             this.Match_1.TabIndex = 0;
             this.Match_1.Text = "Match 1";
             this.Match_1.UseVisualStyleBackColor = true;
+            // 
+            // m1t2Side
+            // 
+            this.m1t2Side.Controls.Add(this.m1t2Defend);
+            this.m1t2Side.Controls.Add(this.m1t2Attack);
+            this.m1t2Side.Controls.Add(this.m1t2Neutral);
+            this.m1t2Side.Location = new System.Drawing.Point(332, 41);
+            this.m1t2Side.Name = "m1t2Side";
+            this.m1t2Side.Size = new System.Drawing.Size(120, 30);
+            this.m1t2Side.TabIndex = 73;
+            this.m1t2Side.TabStop = false;
+            // 
+            // m1t2Defend
+            // 
+            this.m1t2Defend.AutoSize = true;
+            this.m1t2Defend.Location = new System.Drawing.Point(49, 9);
+            this.m1t2Defend.Name = "m1t2Defend";
+            this.m1t2Defend.Size = new System.Drawing.Size(33, 17);
+            this.m1t2Defend.TabIndex = 70;
+            this.m1t2Defend.TabStop = true;
+            this.m1t2Defend.Text = "D";
+            this.m1t2Defend.UseVisualStyleBackColor = true;
+            // 
+            // m1t2Attack
+            // 
+            this.m1t2Attack.AutoSize = true;
+            this.m1t2Attack.Location = new System.Drawing.Point(11, 9);
+            this.m1t2Attack.Name = "m1t2Attack";
+            this.m1t2Attack.Size = new System.Drawing.Size(32, 17);
+            this.m1t2Attack.TabIndex = 69;
+            this.m1t2Attack.TabStop = true;
+            this.m1t2Attack.Text = "A";
+            this.m1t2Attack.UseVisualStyleBackColor = true;
+            // 
+            // m1t2Neutral
+            // 
+            this.m1t2Neutral.AutoSize = true;
+            this.m1t2Neutral.Location = new System.Drawing.Point(87, 9);
+            this.m1t2Neutral.Name = "m1t2Neutral";
+            this.m1t2Neutral.Size = new System.Drawing.Size(33, 17);
+            this.m1t2Neutral.TabIndex = 71;
+            this.m1t2Neutral.TabStop = true;
+            this.m1t2Neutral.Text = "N";
+            this.m1t2Neutral.UseVisualStyleBackColor = true;
+            // 
+            // m1t1Side
+            // 
+            this.m1t1Side.Controls.Add(this.m1t1Attack);
+            this.m1t1Side.Controls.Add(this.m1t1Defend);
+            this.m1t1Side.Controls.Add(this.m1t1Neutral);
+            this.m1t1Side.Location = new System.Drawing.Point(90, 41);
+            this.m1t1Side.Name = "m1t1Side";
+            this.m1t1Side.Size = new System.Drawing.Size(120, 30);
+            this.m1t1Side.TabIndex = 72;
+            this.m1t1Side.TabStop = false;
+            // 
+            // m1t1Attack
+            // 
+            this.m1t1Attack.AutoSize = true;
+            this.m1t1Attack.Location = new System.Drawing.Point(6, 9);
+            this.m1t1Attack.Name = "m1t1Attack";
+            this.m1t1Attack.Size = new System.Drawing.Size(32, 17);
+            this.m1t1Attack.TabIndex = 66;
+            this.m1t1Attack.TabStop = true;
+            this.m1t1Attack.Text = "A";
+            this.m1t1Attack.UseVisualStyleBackColor = true;
+            // 
+            // m1t1Defend
+            // 
+            this.m1t1Defend.AutoSize = true;
+            this.m1t1Defend.Location = new System.Drawing.Point(44, 9);
+            this.m1t1Defend.Name = "m1t1Defend";
+            this.m1t1Defend.Size = new System.Drawing.Size(33, 17);
+            this.m1t1Defend.TabIndex = 67;
+            this.m1t1Defend.TabStop = true;
+            this.m1t1Defend.Text = "D";
+            this.m1t1Defend.UseVisualStyleBackColor = true;
+            // 
+            // m1t1Neutral
+            // 
+            this.m1t1Neutral.AutoSize = true;
+            this.m1t1Neutral.Location = new System.Drawing.Point(82, 9);
+            this.m1t1Neutral.Name = "m1t1Neutral";
+            this.m1t1Neutral.Size = new System.Drawing.Size(33, 17);
+            this.m1t1Neutral.TabIndex = 68;
+            this.m1t1Neutral.TabStop = true;
+            this.m1t1Neutral.Text = "N";
+            this.m1t1Neutral.UseVisualStyleBackColor = true;
             // 
             // m1DivisionLabel
             // 
@@ -1264,7 +1386,7 @@
             // 
             // m1t2Score
             // 
-            this.m1t2Score.Location = new System.Drawing.Point(357, 47);
+            this.m1t2Score.Location = new System.Drawing.Point(458, 47);
             this.m1t2Score.Name = "m1t2Score";
             this.m1t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2Score.Size = new System.Drawing.Size(36, 20);
@@ -1272,7 +1394,7 @@
             // 
             // m1t1Score
             // 
-            this.m1t1Score.Location = new System.Drawing.Point(148, 50);
+            this.m1t1Score.Location = new System.Drawing.Point(48, 47);
             this.m1t1Score.Name = "m1t1Score";
             this.m1t1Score.Size = new System.Drawing.Size(36, 20);
             this.m1t1Score.TabIndex = 5;
@@ -1280,20 +1402,20 @@
             // m1t2ScoreLabel
             // 
             this.m1t2ScoreLabel.AutoSize = true;
-            this.m1t2ScoreLabel.Location = new System.Drawing.Point(433, 49);
+            this.m1t2ScoreLabel.Location = new System.Drawing.Point(500, 49);
             this.m1t2ScoreLabel.Name = "m1t2ScoreLabel";
-            this.m1t2ScoreLabel.Size = new System.Drawing.Size(74, 13);
+            this.m1t2ScoreLabel.Size = new System.Drawing.Size(35, 13);
             this.m1t2ScoreLabel.TabIndex = 4;
-            this.m1t2ScoreLabel.Text = "Team 2 Score";
+            this.m1t2ScoreLabel.Text = "Score";
             // 
             // m1t1ScoreLabel
             // 
             this.m1t1ScoreLabel.AutoSize = true;
-            this.m1t1ScoreLabel.Location = new System.Drawing.Point(32, 52);
+            this.m1t1ScoreLabel.Location = new System.Drawing.Point(7, 49);
             this.m1t1ScoreLabel.Name = "m1t1ScoreLabel";
-            this.m1t1ScoreLabel.Size = new System.Drawing.Size(74, 13);
+            this.m1t1ScoreLabel.Size = new System.Drawing.Size(35, 13);
             this.m1t1ScoreLabel.TabIndex = 3;
-            this.m1t1ScoreLabel.Text = "Team 1 Score";
+            this.m1t1ScoreLabel.Text = "Score";
             // 
             // m1t2Name
             // 
@@ -1329,6 +1451,8 @@
             // 
             // Match_2
             // 
+            this.Match_2.Controls.Add(this.m2t2Side);
+            this.Match_2.Controls.Add(this.m2t1Side);
             this.Match_2.Controls.Add(this.m2DivisionLabel);
             this.Match_2.Controls.Add(this.m2DivisionNumber);
             this.Match_2.Controls.Add(this.m2MessageLabel);
@@ -1396,10 +1520,98 @@
             this.Match_2.Location = new System.Drawing.Point(4, 22);
             this.Match_2.Name = "Match_2";
             this.Match_2.Padding = new System.Windows.Forms.Padding(3);
-            this.Match_2.Size = new System.Drawing.Size(542, 420);
+            this.Match_2.Size = new System.Drawing.Size(542, 465);
             this.Match_2.TabIndex = 0;
             this.Match_2.Text = "Match 2";
             this.Match_2.UseVisualStyleBackColor = true;
+            // 
+            // m2t2Side
+            // 
+            this.m2t2Side.Controls.Add(this.m2t2Defend);
+            this.m2t2Side.Controls.Add(this.m2t2Attack);
+            this.m2t2Side.Controls.Add(this.m2t2Neutral);
+            this.m2t2Side.Location = new System.Drawing.Point(332, 41);
+            this.m2t2Side.Name = "m2t2Side";
+            this.m2t2Side.Size = new System.Drawing.Size(120, 30);
+            this.m2t2Side.TabIndex = 79;
+            this.m2t2Side.TabStop = false;
+            // 
+            // m2t2Defend
+            // 
+            this.m2t2Defend.AutoSize = true;
+            this.m2t2Defend.Location = new System.Drawing.Point(49, 9);
+            this.m2t2Defend.Name = "m2t2Defend";
+            this.m2t2Defend.Size = new System.Drawing.Size(33, 17);
+            this.m2t2Defend.TabIndex = 76;
+            this.m2t2Defend.TabStop = true;
+            this.m2t2Defend.Text = "D";
+            this.m2t2Defend.UseVisualStyleBackColor = true;
+            // 
+            // m2t2Attack
+            // 
+            this.m2t2Attack.AutoSize = true;
+            this.m2t2Attack.Location = new System.Drawing.Point(11, 9);
+            this.m2t2Attack.Name = "m2t2Attack";
+            this.m2t2Attack.Size = new System.Drawing.Size(32, 17);
+            this.m2t2Attack.TabIndex = 75;
+            this.m2t2Attack.TabStop = true;
+            this.m2t2Attack.Text = "A";
+            this.m2t2Attack.UseVisualStyleBackColor = true;
+            // 
+            // m2t2Neutral
+            // 
+            this.m2t2Neutral.AutoSize = true;
+            this.m2t2Neutral.Location = new System.Drawing.Point(87, 9);
+            this.m2t2Neutral.Name = "m2t2Neutral";
+            this.m2t2Neutral.Size = new System.Drawing.Size(33, 17);
+            this.m2t2Neutral.TabIndex = 77;
+            this.m2t2Neutral.TabStop = true;
+            this.m2t2Neutral.Text = "N";
+            this.m2t2Neutral.UseVisualStyleBackColor = true;
+            // 
+            // m2t1Side
+            // 
+            this.m2t1Side.Controls.Add(this.m2t1Defend);
+            this.m2t1Side.Controls.Add(this.m2t1Attack);
+            this.m2t1Side.Controls.Add(this.m2t1Neutral);
+            this.m2t1Side.Location = new System.Drawing.Point(90, 41);
+            this.m2t1Side.Name = "m2t1Side";
+            this.m2t1Side.Size = new System.Drawing.Size(120, 30);
+            this.m2t1Side.TabIndex = 78;
+            this.m2t1Side.TabStop = false;
+            // 
+            // m2t1Defend
+            // 
+            this.m2t1Defend.AutoSize = true;
+            this.m2t1Defend.Location = new System.Drawing.Point(44, 9);
+            this.m2t1Defend.Name = "m2t1Defend";
+            this.m2t1Defend.Size = new System.Drawing.Size(33, 17);
+            this.m2t1Defend.TabIndex = 73;
+            this.m2t1Defend.TabStop = true;
+            this.m2t1Defend.Text = "D";
+            this.m2t1Defend.UseVisualStyleBackColor = true;
+            // 
+            // m2t1Attack
+            // 
+            this.m2t1Attack.AutoSize = true;
+            this.m2t1Attack.Location = new System.Drawing.Point(6, 9);
+            this.m2t1Attack.Name = "m2t1Attack";
+            this.m2t1Attack.Size = new System.Drawing.Size(32, 17);
+            this.m2t1Attack.TabIndex = 72;
+            this.m2t1Attack.TabStop = true;
+            this.m2t1Attack.Text = "A";
+            this.m2t1Attack.UseVisualStyleBackColor = true;
+            // 
+            // m2t1Neutral
+            // 
+            this.m2t1Neutral.AutoSize = true;
+            this.m2t1Neutral.Location = new System.Drawing.Point(82, 9);
+            this.m2t1Neutral.Name = "m2t1Neutral";
+            this.m2t1Neutral.Size = new System.Drawing.Size(33, 17);
+            this.m2t1Neutral.TabIndex = 74;
+            this.m2t1Neutral.TabStop = true;
+            this.m2t1Neutral.Text = "N";
+            this.m2t1Neutral.UseVisualStyleBackColor = true;
             // 
             // m2DivisionLabel
             // 
@@ -2315,7 +2527,7 @@
             // 
             // m2t2Score
             // 
-            this.m2t2Score.Location = new System.Drawing.Point(357, 47);
+            this.m2t2Score.Location = new System.Drawing.Point(458, 47);
             this.m2t2Score.Name = "m2t2Score";
             this.m2t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2t2Score.Size = new System.Drawing.Size(36, 20);
@@ -2323,7 +2535,7 @@
             // 
             // m2t1Score
             // 
-            this.m2t1Score.Location = new System.Drawing.Point(148, 50);
+            this.m2t1Score.Location = new System.Drawing.Point(48, 47);
             this.m2t1Score.Name = "m2t1Score";
             this.m2t1Score.Size = new System.Drawing.Size(36, 20);
             this.m2t1Score.TabIndex = 5;
@@ -2331,20 +2543,20 @@
             // m2t2ScoreLabel
             // 
             this.m2t2ScoreLabel.AutoSize = true;
-            this.m2t2ScoreLabel.Location = new System.Drawing.Point(433, 49);
+            this.m2t2ScoreLabel.Location = new System.Drawing.Point(500, 49);
             this.m2t2ScoreLabel.Name = "m2t2ScoreLabel";
-            this.m2t2ScoreLabel.Size = new System.Drawing.Size(74, 13);
+            this.m2t2ScoreLabel.Size = new System.Drawing.Size(35, 13);
             this.m2t2ScoreLabel.TabIndex = 4;
-            this.m2t2ScoreLabel.Text = "Team 2 Score";
+            this.m2t2ScoreLabel.Text = "Score";
             // 
             // m2t1ScoreLabel
             // 
             this.m2t1ScoreLabel.AutoSize = true;
-            this.m2t1ScoreLabel.Location = new System.Drawing.Point(32, 52);
+            this.m2t1ScoreLabel.Location = new System.Drawing.Point(7, 49);
             this.m2t1ScoreLabel.Name = "m2t1ScoreLabel";
-            this.m2t1ScoreLabel.Size = new System.Drawing.Size(74, 13);
+            this.m2t1ScoreLabel.Size = new System.Drawing.Size(35, 13);
             this.m2t1ScoreLabel.TabIndex = 3;
-            this.m2t1ScoreLabel.Text = "Team 1 Score";
+            this.m2t1ScoreLabel.Text = "Score";
             // 
             // m2t2Name
             // 
@@ -2380,6 +2592,8 @@
             // 
             // Match_3
             // 
+            this.Match_3.Controls.Add(this.m3t2Side);
+            this.Match_3.Controls.Add(this.m3t1Side);
             this.Match_3.Controls.Add(this.m3DivisionLabel);
             this.Match_3.Controls.Add(this.m3DivisionNumber);
             this.Match_3.Controls.Add(this.m3MessageLabel);
@@ -2447,10 +2661,96 @@
             this.Match_3.Location = new System.Drawing.Point(4, 22);
             this.Match_3.Name = "Match_3";
             this.Match_3.Padding = new System.Windows.Forms.Padding(3);
-            this.Match_3.Size = new System.Drawing.Size(542, 420);
+            this.Match_3.Size = new System.Drawing.Size(542, 465);
             this.Match_3.TabIndex = 0;
             this.Match_3.Text = "Match 3";
             this.Match_3.UseVisualStyleBackColor = true;
+            // 
+            // m3t2Side
+            // 
+            this.m3t2Side.Controls.Add(this.m3t2Attack);
+            this.m3t2Side.Controls.Add(this.m3t2Defend);
+            this.m3t2Side.Controls.Add(this.m3t2Neutral);
+            this.m3t2Side.Location = new System.Drawing.Point(332, 41);
+            this.m3t2Side.Name = "m3t2Side";
+            this.m3t2Side.Size = new System.Drawing.Size(120, 30);
+            this.m3t2Side.TabIndex = 85;
+            this.m3t2Side.TabStop = false;
+            // 
+            // m3t2Attack
+            // 
+            this.m3t2Attack.AutoSize = true;
+            this.m3t2Attack.Location = new System.Drawing.Point(11, 9);
+            this.m3t2Attack.Name = "m3t2Attack";
+            this.m3t2Attack.Size = new System.Drawing.Size(32, 17);
+            this.m3t2Attack.TabIndex = 81;
+            this.m3t2Attack.Text = "A";
+            this.m3t2Attack.UseVisualStyleBackColor = true;
+            // 
+            // m3t2Defend
+            // 
+            this.m3t2Defend.AutoSize = true;
+            this.m3t2Defend.Location = new System.Drawing.Point(49, 9);
+            this.m3t2Defend.Name = "m3t2Defend";
+            this.m3t2Defend.Size = new System.Drawing.Size(33, 17);
+            this.m3t2Defend.TabIndex = 82;
+            this.m3t2Defend.Text = "D";
+            this.m3t2Defend.UseVisualStyleBackColor = true;
+            // 
+            // m3t2Neutral
+            // 
+            this.m3t2Neutral.AutoSize = true;
+            this.m3t2Neutral.Checked = true;
+            this.m3t2Neutral.Location = new System.Drawing.Point(87, 9);
+            this.m3t2Neutral.Name = "m3t2Neutral";
+            this.m3t2Neutral.Size = new System.Drawing.Size(33, 17);
+            this.m3t2Neutral.TabIndex = 83;
+            this.m3t2Neutral.TabStop = true;
+            this.m3t2Neutral.Text = "N";
+            this.m3t2Neutral.UseVisualStyleBackColor = true;
+            // 
+            // m3t1Side
+            // 
+            this.m3t1Side.Controls.Add(this.m3t1Attack);
+            this.m3t1Side.Controls.Add(this.m3t1Defend);
+            this.m3t1Side.Controls.Add(this.m3t1Neutral);
+            this.m3t1Side.Location = new System.Drawing.Point(90, 41);
+            this.m3t1Side.Name = "m3t1Side";
+            this.m3t1Side.Size = new System.Drawing.Size(120, 30);
+            this.m3t1Side.TabIndex = 84;
+            this.m3t1Side.TabStop = false;
+            // 
+            // m3t1Attack
+            // 
+            this.m3t1Attack.AutoSize = true;
+            this.m3t1Attack.Location = new System.Drawing.Point(6, 9);
+            this.m3t1Attack.Name = "m3t1Attack";
+            this.m3t1Attack.Size = new System.Drawing.Size(32, 17);
+            this.m3t1Attack.TabIndex = 78;
+            this.m3t1Attack.Text = "A";
+            this.m3t1Attack.UseVisualStyleBackColor = true;
+            // 
+            // m3t1Defend
+            // 
+            this.m3t1Defend.AutoSize = true;
+            this.m3t1Defend.Location = new System.Drawing.Point(44, 9);
+            this.m3t1Defend.Name = "m3t1Defend";
+            this.m3t1Defend.Size = new System.Drawing.Size(33, 17);
+            this.m3t1Defend.TabIndex = 79;
+            this.m3t1Defend.Text = "D";
+            this.m3t1Defend.UseVisualStyleBackColor = true;
+            // 
+            // m3t1Neutral
+            // 
+            this.m3t1Neutral.AutoSize = true;
+            this.m3t1Neutral.Checked = true;
+            this.m3t1Neutral.Location = new System.Drawing.Point(82, 9);
+            this.m3t1Neutral.Name = "m3t1Neutral";
+            this.m3t1Neutral.Size = new System.Drawing.Size(33, 17);
+            this.m3t1Neutral.TabIndex = 80;
+            this.m3t1Neutral.TabStop = true;
+            this.m3t1Neutral.Text = "N";
+            this.m3t1Neutral.UseVisualStyleBackColor = true;
             // 
             // m3DivisionLabel
             // 
@@ -3366,7 +3666,7 @@
             // 
             // m3t2Score
             // 
-            this.m3t2Score.Location = new System.Drawing.Point(357, 47);
+            this.m3t2Score.Location = new System.Drawing.Point(458, 47);
             this.m3t2Score.Name = "m3t2Score";
             this.m3t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3t2Score.Size = new System.Drawing.Size(36, 20);
@@ -3374,7 +3674,7 @@
             // 
             // m3t1Score
             // 
-            this.m3t1Score.Location = new System.Drawing.Point(148, 50);
+            this.m3t1Score.Location = new System.Drawing.Point(48, 47);
             this.m3t1Score.Name = "m3t1Score";
             this.m3t1Score.Size = new System.Drawing.Size(36, 20);
             this.m3t1Score.TabIndex = 5;
@@ -3382,20 +3682,20 @@
             // m3t2ScoreLabel
             // 
             this.m3t2ScoreLabel.AutoSize = true;
-            this.m3t2ScoreLabel.Location = new System.Drawing.Point(433, 49);
+            this.m3t2ScoreLabel.Location = new System.Drawing.Point(500, 49);
             this.m3t2ScoreLabel.Name = "m3t2ScoreLabel";
-            this.m3t2ScoreLabel.Size = new System.Drawing.Size(74, 13);
+            this.m3t2ScoreLabel.Size = new System.Drawing.Size(35, 13);
             this.m3t2ScoreLabel.TabIndex = 4;
-            this.m3t2ScoreLabel.Text = "Team 2 Score";
+            this.m3t2ScoreLabel.Text = "Score";
             // 
             // m3t1ScoreLabel
             // 
             this.m3t1ScoreLabel.AutoSize = true;
-            this.m3t1ScoreLabel.Location = new System.Drawing.Point(32, 52);
+            this.m3t1ScoreLabel.Location = new System.Drawing.Point(7, 49);
             this.m3t1ScoreLabel.Name = "m3t1ScoreLabel";
-            this.m3t1ScoreLabel.Size = new System.Drawing.Size(74, 13);
+            this.m3t1ScoreLabel.Size = new System.Drawing.Size(35, 13);
             this.m3t1ScoreLabel.TabIndex = 3;
-            this.m3t1ScoreLabel.Text = "Team 1 Score";
+            this.m3t1ScoreLabel.Text = "Score";
             // 
             // m3t2Name
             // 
@@ -3429,11 +3729,21 @@
             this.m3t1Label.TabIndex = 0;
             this.m3t1Label.Text = "Team 1";
             // 
+            // General_Info
+            // 
+            this.General_Info.Location = new System.Drawing.Point(4, 22);
+            this.General_Info.Name = "General_Info";
+            this.General_Info.Padding = new System.Windows.Forms.Padding(3);
+            this.General_Info.Size = new System.Drawing.Size(542, 465);
+            this.General_Info.TabIndex = 1;
+            this.General_Info.Text = "General";
+            this.General_Info.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 466);
+            this.ClientSize = new System.Drawing.Size(575, 516);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -3442,14 +3752,26 @@
             this.tabControl1.ResumeLayout(false);
             this.Match_1.ResumeLayout(false);
             this.Match_1.PerformLayout();
+            this.m1t2Side.ResumeLayout(false);
+            this.m1t2Side.PerformLayout();
+            this.m1t1Side.ResumeLayout(false);
+            this.m1t1Side.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m1t2Score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m1t1Score)).EndInit();
             this.Match_2.ResumeLayout(false);
             this.Match_2.PerformLayout();
+            this.m2t2Side.ResumeLayout(false);
+            this.m2t2Side.PerformLayout();
+            this.m2t1Side.ResumeLayout(false);
+            this.m2t1Side.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m2t2Score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2t1Score)).EndInit();
             this.Match_3.ResumeLayout(false);
             this.Match_3.PerformLayout();
+            this.m3t2Side.ResumeLayout(false);
+            this.m3t2Side.PerformLayout();
+            this.m3t1Side.ResumeLayout(false);
+            this.m3t1Side.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m3t2Score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m3t1Score)).EndInit();
             this.ResumeLayout(false);
@@ -3659,6 +3981,32 @@
         private System.Windows.Forms.TextBox m3MessageBox;
         private System.Windows.Forms.CheckBox m3currentCheck;
         #endregion
+
+        private System.Windows.Forms.TabPage General_Info;
+        private System.Windows.Forms.RadioButton m1t1Neutral;
+        private System.Windows.Forms.RadioButton m1t1Defend;
+        private System.Windows.Forms.RadioButton m1t1Attack;
+        private System.Windows.Forms.RadioButton m1t2Neutral;
+        private System.Windows.Forms.RadioButton m1t2Defend;
+        private System.Windows.Forms.RadioButton m1t2Attack;
+        private System.Windows.Forms.RadioButton m2t2Neutral;
+        private System.Windows.Forms.RadioButton m2t2Defend;
+        private System.Windows.Forms.RadioButton m2t2Attack;
+        private System.Windows.Forms.RadioButton m2t1Neutral;
+        private System.Windows.Forms.RadioButton m2t1Defend;
+        private System.Windows.Forms.RadioButton m2t1Attack;
+        private System.Windows.Forms.RadioButton m3t2Neutral;
+        private System.Windows.Forms.RadioButton m3t2Defend;
+        private System.Windows.Forms.RadioButton m3t2Attack;
+        private System.Windows.Forms.RadioButton m3t1Neutral;
+        private System.Windows.Forms.RadioButton m3t1Defend;
+        private System.Windows.Forms.RadioButton m3t1Attack;
+        private System.Windows.Forms.GroupBox m1t1Side;
+        private System.Windows.Forms.GroupBox m1t2Side;
+        private System.Windows.Forms.GroupBox m2t2Side;
+        private System.Windows.Forms.GroupBox m2t1Side;
+        private System.Windows.Forms.GroupBox m3t2Side;
+        private System.Windows.Forms.GroupBox m3t1Side;
     }
 }
 

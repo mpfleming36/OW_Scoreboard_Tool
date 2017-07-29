@@ -352,6 +352,13 @@ namespace OWUL_Cast_Panel
             updateHero(m1t2p7Hero, "Match1", "t2p7Hero");
             updateHero(m1t2p8Hero, "Match1", "t2p8Hero");
 
+            updateSide(m1t1Attack, "Match1", "t1Side");
+            updateSide(m1t1Defend, "Match1", "t1Side");
+            updateSide(m1t1Neutral, "Match1", "t1Side");
+            
+            updateSide(m1t2Attack, "Match1", "t2Side");
+            updateSide(m1t2Defend, "Match1", "t2Side");
+            updateSide(m1t2Neutral, "Match1", "t2Side");
 
             if (m1currentCheck.Checked == true)
             {
@@ -397,6 +404,14 @@ namespace OWUL_Cast_Panel
                 updateHero(m1t2p6Hero, "Current", "t2p6Hero");
                 updateHero(m1t2p7Hero, "Current", "t2p7Hero");
                 updateHero(m1t2p8Hero, "Current", "t2p8Hero");
+
+                updateSide(m1t1Attack, "Current", "t1Side");
+                updateSide(m1t1Defend, "Current", "t1Side");
+                updateSide(m1t1Neutral, "Current", "t1Side");
+
+                updateSide(m1t2Attack, "Current", "t2Side");
+                updateSide(m1t2Defend, "Current", "t2Side");
+                updateSide(m1t2Neutral, "Current", "t2Side");
             }
         }
 
@@ -446,6 +461,13 @@ namespace OWUL_Cast_Panel
             updateHero(m2t2p7Hero, "Match2", "t2p7Hero");
             updateHero(m2t2p8Hero, "Match2", "t2p8Hero");
 
+            updateSide(m2t1Attack, "Match2", "t1Side");
+            updateSide(m2t1Defend, "Match2", "t1Side");
+            updateSide(m2t1Neutral, "Match2", "t1Side");
+
+            updateSide(m2t2Attack, "Match2", "t2Side");
+            updateSide(m2t2Defend, "Match2", "t2Side");
+            updateSide(m2t2Neutral, "Match2", "t2Side");
 
             if (m2currentCheck.Checked == true)
             {
@@ -491,6 +513,14 @@ namespace OWUL_Cast_Panel
                 updateHero(m2t2p6Hero, "Current", "t2p6Hero");
                 updateHero(m2t2p7Hero, "Current", "t2p7Hero");
                 updateHero(m2t2p8Hero, "Current", "t2p8Hero");
+
+                updateSide(m2t1Attack, "Current", "t1Side");
+                updateSide(m2t1Defend, "Current", "t1Side");
+                updateSide(m2t1Neutral, "Current", "t1Side");
+
+                updateSide(m2t2Attack, "Current", "t2Side");
+                updateSide(m2t2Defend, "Current", "t2Side");
+                updateSide(m2t2Neutral, "Current", "t2Side");
             }
         }
 
@@ -540,6 +570,13 @@ namespace OWUL_Cast_Panel
             updateHero(m3t2p7Hero, "Match3", "t2p7Hero");
             updateHero(m3t2p8Hero, "Match3", "t2p8Hero");
 
+            updateSide(m3t1Attack, "Match3", "t1Side");
+            updateSide(m3t1Defend, "Match3", "t1Side");
+            updateSide(m3t1Neutral, "Match3", "t1Side");
+
+            updateSide(m3t2Attack, "Match3", "t2Side");
+            updateSide(m3t2Defend, "Match3", "t2Side");
+            updateSide(m3t2Neutral, "Match3", "t2Side");
 
             if (m3currentCheck.Checked == true)
             {
@@ -585,6 +622,14 @@ namespace OWUL_Cast_Panel
                 updateHero(m3t2p6Hero, "Current", "t2p6Hero");
                 updateHero(m3t2p7Hero, "Current", "t2p7Hero");
                 updateHero(m3t2p8Hero, "Current", "t2p8Hero");
+
+                updateSide(m3t1Attack, "Current", "t1Side");
+                updateSide(m3t1Defend, "Current", "t1Side");
+                updateSide(m3t1Neutral, "Current", "t1Side");
+
+                updateSide(m3t2Attack, "Current", "t2Side");
+                updateSide(m3t2Defend, "Current", "t2Side");
+                updateSide(m3t2Neutral, "Current", "t2Side");
             }
         }
 
@@ -722,6 +767,26 @@ namespace OWUL_Cast_Panel
 
         }
 
+        private void updateSide(RadioButton field, String folder, String file)
+        {
+            if (field.Checked == true)
+            {
+                if (field.Text == "A")
+                {
+                    Properties.Resources.Icon_offense.Save(path + "\\" + folder + "\\" + file + ".png");
+                }
+                else if(field.Text == "D")
+                {
+                    Properties.Resources.Icon_defense.Save(path + "\\" + folder + "\\" + file + ".png");
+                }
+                else
+                {
+                    Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
+                }
+
+            }
+        }
+
         private void loadText(TextBox field, String folder, String file)
         {
             string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
@@ -755,6 +820,7 @@ namespace OWUL_Cast_Panel
         {
             field.SelectedIndex = 0;
         }
+
 
         /*private void loadHero(ComboBox field, String folder, String file)
         {

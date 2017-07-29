@@ -159,6 +159,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="owul_logo_gray.ico" />
+    <None Include="Resources\Icon-tank.png" />
+    <None Include="Resources\Icon-support.png" />
+    <None Include="Resources\Icon-offense.png" />
+    <None Include="Resources\Icon-defense.png" />
     <None Include="Resources\Icon-doomfist.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
