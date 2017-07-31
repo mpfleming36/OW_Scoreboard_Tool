@@ -110,6 +110,30 @@ namespace OWUL_Cast_Panel
             m1t2Score.Value = tempoary;
             tempoary = 0;
 
+            tempoary = m1m1t1Score.Value;
+            m1m1t1Score.Value = m1m1t2Score.Value;
+            m1m1t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m1m2t1Score.Value;
+            m1m2t1Score.Value = m1m2t2Score.Value;
+            m1m2t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m1m3t1Score.Value;
+            m1m3t1Score.Value = m1m3t2Score.Value;
+            m1m3t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m1m4t1Score.Value;
+            m1m4t1Score.Value = m1m4t2Score.Value;
+            m1m4t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m1m5t1Score.Value;
+            m1m5t1Score.Value = m1m5t2Score.Value;
+            m1m5t2Score.Value = tempoary;
+            tempoary = 0;
         }
 
         private void m2SwapButton_Click(object sender, EventArgs e)
@@ -126,6 +150,31 @@ namespace OWUL_Cast_Panel
             m2t2Score.Value = tempoary;
             tempoary = 0;
 
+            tempoary = m2m1t1Score.Value;
+            m2m1t1Score.Value = m2m1t2Score.Value;
+            m2m1t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m2m2t1Score.Value;
+            m2m2t1Score.Value = m2m2t2Score.Value;
+            m2m2t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m2m3t1Score.Value;
+            m2m3t1Score.Value = m2m3t2Score.Value;
+            m2m3t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m2m4t1Score.Value;
+            m2m4t1Score.Value = m2m4t2Score.Value;
+            m2m4t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m2m5t1Score.Value;
+            m2m5t1Score.Value = m2m5t2Score.Value;
+            m2m5t2Score.Value = tempoary;
+            tempoary = 0;
+
         }
 
         private void m3SwapButton_Click(object sender, EventArgs e)
@@ -140,6 +189,31 @@ namespace OWUL_Cast_Panel
             tempoary = m3t1Score.Value;
             m3t1Score.Value = m3t2Score.Value;
             m3t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m3m1t1Score.Value;
+            m3m1t1Score.Value = m3m1t2Score.Value;
+            m3m1t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m3m2t1Score.Value;
+            m3m2t1Score.Value = m3m2t2Score.Value;
+            m3m2t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m3m3t1Score.Value;
+            m3m3t1Score.Value = m3m3t2Score.Value;
+            m3m3t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m3m4t1Score.Value;
+            m3m4t1Score.Value = m3m4t2Score.Value;
+            m3m4t2Score.Value = tempoary;
+            tempoary = 0;
+
+            tempoary = m3m5t1Score.Value;
+            m3m5t1Score.Value = m3m5t2Score.Value;
+            m3m5t2Score.Value = tempoary;
             tempoary = 0;
 
         }
@@ -200,6 +274,17 @@ namespace OWUL_Cast_Panel
                 resetMap(m1m3Map);
                 resetMap(m1m4Map);
                 resetMap(m1m5Map);
+
+                resetScore(m1m1t1Score);
+                resetScore(m1m1t2Score);
+                resetScore(m1m2t1Score);
+                resetScore(m1m2t2Score);
+                resetScore(m1m3t1Score);
+                resetScore(m1m3t2Score);
+                resetScore(m1m4t1Score);
+                resetScore(m1m4t2Score);
+                resetScore(m1m5t1Score);
+                resetScore(m1m5t2Score);
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -263,6 +348,17 @@ namespace OWUL_Cast_Panel
                 resetMap(m2m3Map);
                 resetMap(m2m4Map);
                 resetMap(m2m5Map);
+
+                resetScore(m2m1t1Score);
+                resetScore(m2m1t2Score);
+                resetScore(m2m2t1Score);
+                resetScore(m2m2t2Score);
+                resetScore(m2m3t1Score);
+                resetScore(m2m3t2Score);
+                resetScore(m2m4t1Score);
+                resetScore(m2m4t2Score);
+                resetScore(m2m5t1Score);
+                resetScore(m2m5t2Score);
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -326,6 +422,17 @@ namespace OWUL_Cast_Panel
                 resetMap(m3m3Map);
                 resetMap(m3m4Map);
                 resetMap(m3m5Map);
+
+                resetScore(m3m1t1Score);
+                resetScore(m3m1t2Score);
+                resetScore(m3m2t1Score);
+                resetScore(m3m2t2Score);
+                resetScore(m3m3t1Score);
+                resetScore(m3m3t2Score);
+                resetScore(m3m4t1Score);
+                resetScore(m3m4t2Score);
+                resetScore(m3m5t1Score);
+                resetScore(m3m5t2Score);
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -393,6 +500,18 @@ namespace OWUL_Cast_Panel
             updateMap(m1m4Map, "Match1", "m4Map");
             updateMap(m1m5Map, "Match1", "m5Map");
 
+            updateScore(m1m1t1Score, "Match1", "m1t1Score");
+            updateScore(m1m1t2Score, "Match1", "m1t2Score");
+            updateScore(m1m2t1Score, "Match1", "m2t1Score");
+            updateScore(m1m2t2Score, "Match1", "m2t2Score");
+            updateScore(m1m3t1Score, "Match1", "m3t1Score");
+            updateScore(m1m3t2Score, "Match1", "m3t2Score");
+            updateScore(m1m4t1Score, "Match1", "m4t1Score");
+            updateScore(m1m4t2Score, "Match1", "m4t2Score");
+            updateScore(m1m5t1Score, "Match1", "m5t1Score");
+            updateScore(m1m5t2Score, "Match1", "m5t2Score");
+
+
             if (m1currentCheck.Checked == true)
             {
                 updateText(m1MessageBox, "Current", "MessageBox");
@@ -451,6 +570,17 @@ namespace OWUL_Cast_Panel
                 updateMap(m1m3Map, "Current", "m3Map");
                 updateMap(m1m4Map, "Current", "m4Map");
                 updateMap(m1m5Map, "Current", "m5Map");
+
+                updateScore(m1m1t1Score, "Current", "m1t1Score");
+                updateScore(m1m1t2Score, "Current", "m1t2Score");
+                updateScore(m1m2t1Score, "Current", "m2t1Score");
+                updateScore(m1m2t2Score, "Current", "m2t2Score");
+                updateScore(m1m3t1Score, "Current", "m3t1Score");
+                updateScore(m1m3t2Score, "Current", "m3t2Score");
+                updateScore(m1m4t1Score, "Current", "m4t1Score");
+                updateScore(m1m4t2Score, "Current", "m4t2Score");
+                updateScore(m1m5t1Score, "Current", "m5t1Score");
+                updateScore(m1m5t2Score, "Current", "m5t2Score");
             }
         }
 
@@ -514,6 +644,17 @@ namespace OWUL_Cast_Panel
             updateMap(m2m4Map, "Match2", "m4Map");
             updateMap(m2m5Map, "Match2", "m5Map");
 
+            updateScore(m2m1t1Score, "Match2", "m1t1Score");
+            updateScore(m2m1t2Score, "Match2", "m1t2Score");
+            updateScore(m2m2t1Score, "Match2", "m2t1Score");
+            updateScore(m2m2t2Score, "Match2", "m2t2Score");
+            updateScore(m2m3t1Score, "Match2", "m3t1Score");
+            updateScore(m2m3t2Score, "Match2", "m3t2Score");
+            updateScore(m2m4t1Score, "Match2", "m4t1Score");
+            updateScore(m2m4t2Score, "Match2", "m4t2Score");
+            updateScore(m2m5t1Score, "Match2", "m5t1Score");
+            updateScore(m2m5t2Score, "Match2", "m5t2Score");
+
             if (m2currentCheck.Checked == true)
             {
                 updateText(m2MessageBox, "Current", "MessageBox");
@@ -572,6 +713,17 @@ namespace OWUL_Cast_Panel
                 updateMap(m2m3Map, "Current", "m3Map");
                 updateMap(m2m4Map, "Current", "m4Map");
                 updateMap(m2m5Map, "Current", "m5Map");
+
+                updateScore(m2m1t1Score, "Current", "m1t1Score");
+                updateScore(m2m1t2Score, "Current", "m1t2Score");
+                updateScore(m2m2t1Score, "Current", "m2t1Score");
+                updateScore(m2m2t2Score, "Current", "m2t2Score");
+                updateScore(m2m3t1Score, "Current", "m3t1Score");
+                updateScore(m2m3t2Score, "Current", "m3t2Score");
+                updateScore(m2m4t1Score, "Current", "m4t1Score");
+                updateScore(m2m4t2Score, "Current", "m4t2Score");
+                updateScore(m2m5t1Score, "Current", "m5t1Score");
+                updateScore(m2m5t2Score, "Current", "m5t2Score");
             }
         }
 
@@ -635,6 +787,17 @@ namespace OWUL_Cast_Panel
             updateMap(m3m4Map, "Match3", "m4Map");
             updateMap(m3m5Map, "Match3", "m5Map");
 
+            updateScore(m3m1t1Score, "Match3", "m1t1Score");
+            updateScore(m3m1t2Score, "Match3", "m1t2Score");
+            updateScore(m3m2t1Score, "Match3", "m2t1Score");
+            updateScore(m3m2t2Score, "Match3", "m2t2Score");
+            updateScore(m3m3t1Score, "Match3", "m3t1Score");
+            updateScore(m3m3t2Score, "Match3", "m3t2Score");
+            updateScore(m3m4t1Score, "Match3", "m4t1Score");
+            updateScore(m3m4t2Score, "Match3", "m4t2Score");
+            updateScore(m3m5t1Score, "Match3", "m5t1Score");
+            updateScore(m3m5t2Score, "Match3", "m5t2Score");
+
             if (m3currentCheck.Checked == true)
             {
                 updateText(m3MessageBox, "Current", "MessageBox");
@@ -693,6 +856,17 @@ namespace OWUL_Cast_Panel
                 updateMap(m3m3Map, "Current", "m3Map");
                 updateMap(m3m4Map, "Current", "m4Map");
                 updateMap(m3m5Map, "Current", "m5Map");
+
+                updateScore(m3m1t1Score, "Current", "m1t1Score");
+                updateScore(m3m1t2Score, "Current", "m1t2Score");
+                updateScore(m3m2t1Score, "Current", "m2t1Score");
+                updateScore(m3m2t2Score, "Current", "m2t2Score");
+                updateScore(m3m3t1Score, "Current", "m3t1Score");
+                updateScore(m3m3t2Score, "Current", "m3t2Score");
+                updateScore(m3m4t1Score, "Current", "m4t1Score");
+                updateScore(m3m4t2Score, "Current", "m4t2Score");
+                updateScore(m3m5t1Score, "Current", "m5t1Score");
+                updateScore(m3m5t2Score, "Current", "m5t2Score");
             }
         }
 
