@@ -35,6 +35,24 @@
             "Symmetra",
             "Zenyatta"};
 
+        private object[] mapList = new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King's Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"};
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -59,6 +77,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Match_1 = new System.Windows.Forms.TabPage();
+            this.m1m5t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m1m5t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m1m4t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m1m4t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m1m3t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m1m3t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m1m2t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m1m2t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m1m1t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m1m1t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m1m5Map = new System.Windows.Forms.ComboBox();
+            this.m1m4Map = new System.Windows.Forms.ComboBox();
+            this.m1m3Map = new System.Windows.Forms.ComboBox();
+            this.m1m2Map = new System.Windows.Forms.ComboBox();
+            this.m1m1Map = new System.Windows.Forms.ComboBox();
+            this.m1m3Label = new System.Windows.Forms.Label();
+            this.m1m4Label = new System.Windows.Forms.Label();
+            this.m1m5Label = new System.Windows.Forms.Label();
+            this.m1m2Label = new System.Windows.Forms.Label();
+            this.m1m1Label = new System.Windows.Forms.Label();
             this.m1t2Side = new System.Windows.Forms.GroupBox();
             this.m1t2Defend = new System.Windows.Forms.RadioButton();
             this.m1t2Attack = new System.Windows.Forms.RadioButton();
@@ -132,6 +170,26 @@
             this.m1t1Name = new System.Windows.Forms.TextBox();
             this.m1t1Label = new System.Windows.Forms.Label();
             this.Match_2 = new System.Windows.Forms.TabPage();
+            this.m2m5t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m2m5t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m2m4t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m2m4t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m2m3t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m2m3t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m2m2t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m2m2t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m2m1t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m2m1t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m2m5Map = new System.Windows.Forms.ComboBox();
+            this.m2m4Map = new System.Windows.Forms.ComboBox();
+            this.m2m3Map = new System.Windows.Forms.ComboBox();
+            this.m2m2Map = new System.Windows.Forms.ComboBox();
+            this.m2m1Map = new System.Windows.Forms.ComboBox();
+            this.m2m3Label = new System.Windows.Forms.Label();
+            this.m2m4Label = new System.Windows.Forms.Label();
+            this.m2m5Label = new System.Windows.Forms.Label();
+            this.m2m2Label = new System.Windows.Forms.Label();
+            this.m2m1Label = new System.Windows.Forms.Label();
             this.m2t2Side = new System.Windows.Forms.GroupBox();
             this.m2t2Defend = new System.Windows.Forms.RadioButton();
             this.m2t2Attack = new System.Windows.Forms.RadioButton();
@@ -205,6 +263,26 @@
             this.m2t1Name = new System.Windows.Forms.TextBox();
             this.m2t1Label = new System.Windows.Forms.Label();
             this.Match_3 = new System.Windows.Forms.TabPage();
+            this.m3m5t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m3m5t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m3m4t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m3m4t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m3m3t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m3m3t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m3m2t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m3m2t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m3m1t2Score = new System.Windows.Forms.NumericUpDown();
+            this.m3m1t1Score = new System.Windows.Forms.NumericUpDown();
+            this.m3m5Map = new System.Windows.Forms.ComboBox();
+            this.m3m4Map = new System.Windows.Forms.ComboBox();
+            this.m3m3Map = new System.Windows.Forms.ComboBox();
+            this.m3m2Map = new System.Windows.Forms.ComboBox();
+            this.m3m1Map = new System.Windows.Forms.ComboBox();
+            this.m3m3Label = new System.Windows.Forms.Label();
+            this.m3m4Label = new System.Windows.Forms.Label();
+            this.m3m5Label = new System.Windows.Forms.Label();
+            this.m3m2Label = new System.Windows.Forms.Label();
+            this.m3m1Label = new System.Windows.Forms.Label();
             this.m3t2Side = new System.Windows.Forms.GroupBox();
             this.m3t2Attack = new System.Windows.Forms.RadioButton();
             this.m3t2Defend = new System.Windows.Forms.RadioButton();
@@ -280,16 +358,46 @@
             this.General_Info = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.Match_1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m5t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m5t1Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m4t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m4t1Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m3t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m3t1Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m2t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m2t1Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m1t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m1t1Score)).BeginInit();
             this.m1t2Side.SuspendLayout();
             this.m1t1Side.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m1t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m1t1Score)).BeginInit();
             this.Match_2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m5t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m5t1Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m4t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m4t1Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m3t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m3t1Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m2t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m2t1Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m1t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m1t1Score)).BeginInit();
             this.m2t2Side.SuspendLayout();
             this.m2t1Side.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m2t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2t1Score)).BeginInit();
             this.Match_3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m5t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m5t1Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m4t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m4t1Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m3t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m3t1Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m2t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m2t1Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m1t2Score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m1t1Score)).BeginInit();
             this.m3t2Side.SuspendLayout();
             this.m3t1Side.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m3t2Score)).BeginInit();
@@ -305,11 +413,31 @@
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(550, 491);
+            this.tabControl1.Size = new System.Drawing.Size(550, 519);
             this.tabControl1.TabIndex = 0;
             // 
             // Match_1
             // 
+            this.Match_1.Controls.Add(this.m1m5t2Score);
+            this.Match_1.Controls.Add(this.m1m5t1Score);
+            this.Match_1.Controls.Add(this.m1m4t2Score);
+            this.Match_1.Controls.Add(this.m1m4t1Score);
+            this.Match_1.Controls.Add(this.m1m3t2Score);
+            this.Match_1.Controls.Add(this.m1m3t1Score);
+            this.Match_1.Controls.Add(this.m1m2t2Score);
+            this.Match_1.Controls.Add(this.m1m2t1Score);
+            this.Match_1.Controls.Add(this.m1m1t2Score);
+            this.Match_1.Controls.Add(this.m1m1t1Score);
+            this.Match_1.Controls.Add(this.m1m5Map);
+            this.Match_1.Controls.Add(this.m1m4Map);
+            this.Match_1.Controls.Add(this.m1m3Map);
+            this.Match_1.Controls.Add(this.m1m2Map);
+            this.Match_1.Controls.Add(this.m1m1Map);
+            this.Match_1.Controls.Add(this.m1m3Label);
+            this.Match_1.Controls.Add(this.m1m4Label);
+            this.Match_1.Controls.Add(this.m1m5Label);
+            this.Match_1.Controls.Add(this.m1m2Label);
+            this.Match_1.Controls.Add(this.m1m1Label);
             this.Match_1.Controls.Add(this.m1t2Side);
             this.Match_1.Controls.Add(this.m1t1Side);
             this.Match_1.Controls.Add(this.m1DivisionLabel);
@@ -379,10 +507,255 @@
             this.Match_1.Location = new System.Drawing.Point(4, 22);
             this.Match_1.Name = "Match_1";
             this.Match_1.Padding = new System.Windows.Forms.Padding(3);
-            this.Match_1.Size = new System.Drawing.Size(542, 465);
+            this.Match_1.Size = new System.Drawing.Size(542, 493);
             this.Match_1.TabIndex = 0;
             this.Match_1.Text = "Match 1";
             this.Match_1.UseVisualStyleBackColor = true;
+            // 
+            // m1m5t2Score
+            // 
+            this.m1m5t2Score.Location = new System.Drawing.Point(499, 463);
+            this.m1m5t2Score.Name = "m1m5t2Score";
+            this.m1m5t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1m5t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m1m5t2Score.TabIndex = 119;
+            // 
+            // m1m5t1Score
+            // 
+            this.m1m5t1Score.Location = new System.Drawing.Point(452, 463);
+            this.m1m5t1Score.Name = "m1m5t1Score";
+            this.m1m5t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m1m5t1Score.TabIndex = 118;
+            // 
+            // m1m4t2Score
+            // 
+            this.m1m4t2Score.Location = new System.Drawing.Point(394, 463);
+            this.m1m4t2Score.Name = "m1m4t2Score";
+            this.m1m4t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1m4t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m1m4t2Score.TabIndex = 117;
+            // 
+            // m1m4t1Score
+            // 
+            this.m1m4t1Score.Location = new System.Drawing.Point(347, 463);
+            this.m1m4t1Score.Name = "m1m4t1Score";
+            this.m1m4t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m1m4t1Score.TabIndex = 116;
+            // 
+            // m1m3t2Score
+            // 
+            this.m1m3t2Score.Location = new System.Drawing.Point(275, 463);
+            this.m1m3t2Score.Name = "m1m3t2Score";
+            this.m1m3t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1m3t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m1m3t2Score.TabIndex = 115;
+            // 
+            // m1m3t1Score
+            // 
+            this.m1m3t1Score.Location = new System.Drawing.Point(228, 463);
+            this.m1m3t1Score.Name = "m1m3t1Score";
+            this.m1m3t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m1m3t1Score.TabIndex = 114;
+            // 
+            // m1m2t2Score
+            // 
+            this.m1m2t2Score.Location = new System.Drawing.Point(160, 463);
+            this.m1m2t2Score.Name = "m1m2t2Score";
+            this.m1m2t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1m2t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m1m2t2Score.TabIndex = 113;
+            // 
+            // m1m2t1Score
+            // 
+            this.m1m2t1Score.Location = new System.Drawing.Point(113, 463);
+            this.m1m2t1Score.Name = "m1m2t1Score";
+            this.m1m2t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m1m2t1Score.TabIndex = 112;
+            // 
+            // m1m1t2Score
+            // 
+            this.m1m1t2Score.Location = new System.Drawing.Point(54, 463);
+            this.m1m1t2Score.Name = "m1m1t2Score";
+            this.m1m1t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1m1t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m1m1t2Score.TabIndex = 111;
+            // 
+            // m1m1t1Score
+            // 
+            this.m1m1t1Score.Location = new System.Drawing.Point(7, 463);
+            this.m1m1t1Score.Name = "m1m1t1Score";
+            this.m1m1t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m1m1t1Score.TabIndex = 110;
+            // 
+            // m1m5Map
+            // 
+            this.m1m5Map.FormattingEnabled = true;
+            this.m1m5Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m1m5Map.Location = new System.Drawing.Point(452, 436);
+            this.m1m5Map.Name = "m1m5Map";
+            this.m1m5Map.Size = new System.Drawing.Size(83, 21);
+            this.m1m5Map.TabIndex = 109;
+            // 
+            // m1m4Map
+            // 
+            this.m1m4Map.FormattingEnabled = true;
+            this.m1m4Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m1m4Map.Location = new System.Drawing.Point(347, 436);
+            this.m1m4Map.Name = "m1m4Map";
+            this.m1m4Map.Size = new System.Drawing.Size(83, 21);
+            this.m1m4Map.TabIndex = 108;
+            // 
+            // m1m3Map
+            // 
+            this.m1m3Map.FormattingEnabled = true;
+            this.m1m3Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m1m3Map.Location = new System.Drawing.Point(228, 436);
+            this.m1m3Map.Name = "m1m3Map";
+            this.m1m3Map.Size = new System.Drawing.Size(83, 21);
+            this.m1m3Map.TabIndex = 107;
+            // 
+            // m1m2Map
+            // 
+            this.m1m2Map.FormattingEnabled = true;
+            this.m1m2Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m1m2Map.Location = new System.Drawing.Point(113, 436);
+            this.m1m2Map.Name = "m1m2Map";
+            this.m1m2Map.Size = new System.Drawing.Size(83, 21);
+            this.m1m2Map.TabIndex = 106;
+            // 
+            // m1m1Map
+            // 
+            this.m1m1Map.FormattingEnabled = true;
+            this.m1m1Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m1m1Map.Location = new System.Drawing.Point(7, 436);
+            this.m1m1Map.Name = "m1m1Map";
+            this.m1m1Map.Size = new System.Drawing.Size(83, 21);
+            this.m1m1Map.TabIndex = 105;
+            // 
+            // m1m3Label
+            // 
+            this.m1m3Label.AutoSize = true;
+            this.m1m3Label.Location = new System.Drawing.Point(250, 419);
+            this.m1m3Label.Name = "m1m3Label";
+            this.m1m3Label.Size = new System.Drawing.Size(37, 13);
+            this.m1m3Label.TabIndex = 104;
+            this.m1m3Label.Text = "Map 3";
+            // 
+            // m1m4Label
+            // 
+            this.m1m4Label.AutoSize = true;
+            this.m1m4Label.Location = new System.Drawing.Point(378, 419);
+            this.m1m4Label.Name = "m1m4Label";
+            this.m1m4Label.Size = new System.Drawing.Size(37, 13);
+            this.m1m4Label.TabIndex = 103;
+            this.m1m4Label.Text = "Map 4";
+            // 
+            // m1m5Label
+            // 
+            this.m1m5Label.AutoSize = true;
+            this.m1m5Label.Location = new System.Drawing.Point(493, 419);
+            this.m1m5Label.Name = "m1m5Label";
+            this.m1m5Label.Size = new System.Drawing.Size(37, 13);
+            this.m1m5Label.TabIndex = 102;
+            this.m1m5Label.Text = "Map 5";
+            // 
+            // m1m2Label
+            // 
+            this.m1m2Label.AutoSize = true;
+            this.m1m2Label.Location = new System.Drawing.Point(131, 419);
+            this.m1m2Label.Name = "m1m2Label";
+            this.m1m2Label.Size = new System.Drawing.Size(37, 13);
+            this.m1m2Label.TabIndex = 101;
+            this.m1m2Label.Text = "Map 2";
+            // 
+            // m1m1Label
+            // 
+            this.m1m1Label.AutoSize = true;
+            this.m1m1Label.Location = new System.Drawing.Point(16, 419);
+            this.m1m1Label.Name = "m1m1Label";
+            this.m1m1Label.Size = new System.Drawing.Size(37, 13);
+            this.m1m1Label.TabIndex = 100;
+            this.m1m1Label.Text = "Map 1";
             // 
             // m1t2Side
             // 
@@ -402,7 +775,6 @@
             this.m1t2Defend.Name = "m1t2Defend";
             this.m1t2Defend.Size = new System.Drawing.Size(33, 17);
             this.m1t2Defend.TabIndex = 70;
-            this.m1t2Defend.TabStop = true;
             this.m1t2Defend.Text = "D";
             this.m1t2Defend.UseVisualStyleBackColor = true;
             // 
@@ -413,13 +785,13 @@
             this.m1t2Attack.Name = "m1t2Attack";
             this.m1t2Attack.Size = new System.Drawing.Size(32, 17);
             this.m1t2Attack.TabIndex = 69;
-            this.m1t2Attack.TabStop = true;
             this.m1t2Attack.Text = "A";
             this.m1t2Attack.UseVisualStyleBackColor = true;
             // 
             // m1t2Neutral
             // 
             this.m1t2Neutral.AutoSize = true;
+            this.m1t2Neutral.Checked = true;
             this.m1t2Neutral.Location = new System.Drawing.Point(87, 9);
             this.m1t2Neutral.Name = "m1t2Neutral";
             this.m1t2Neutral.Size = new System.Drawing.Size(33, 17);
@@ -446,7 +818,6 @@
             this.m1t1Attack.Name = "m1t1Attack";
             this.m1t1Attack.Size = new System.Drawing.Size(32, 17);
             this.m1t1Attack.TabIndex = 66;
-            this.m1t1Attack.TabStop = true;
             this.m1t1Attack.Text = "A";
             this.m1t1Attack.UseVisualStyleBackColor = true;
             // 
@@ -457,13 +828,13 @@
             this.m1t1Defend.Name = "m1t1Defend";
             this.m1t1Defend.Size = new System.Drawing.Size(33, 17);
             this.m1t1Defend.TabIndex = 67;
-            this.m1t1Defend.TabStop = true;
             this.m1t1Defend.Text = "D";
             this.m1t1Defend.UseVisualStyleBackColor = true;
             // 
             // m1t1Neutral
             // 
             this.m1t1Neutral.AutoSize = true;
+            this.m1t1Neutral.Checked = true;
             this.m1t1Neutral.Location = new System.Drawing.Point(82, 9);
             this.m1t1Neutral.Name = "m1t1Neutral";
             this.m1t1Neutral.Size = new System.Drawing.Size(33, 17);
@@ -1451,6 +1822,26 @@
             // 
             // Match_2
             // 
+            this.Match_2.Controls.Add(this.m2m5t2Score);
+            this.Match_2.Controls.Add(this.m2m5t1Score);
+            this.Match_2.Controls.Add(this.m2m4t2Score);
+            this.Match_2.Controls.Add(this.m2m4t1Score);
+            this.Match_2.Controls.Add(this.m2m3t2Score);
+            this.Match_2.Controls.Add(this.m2m3t1Score);
+            this.Match_2.Controls.Add(this.m2m2t2Score);
+            this.Match_2.Controls.Add(this.m2m2t1Score);
+            this.Match_2.Controls.Add(this.m2m1t2Score);
+            this.Match_2.Controls.Add(this.m2m1t1Score);
+            this.Match_2.Controls.Add(this.m2m5Map);
+            this.Match_2.Controls.Add(this.m2m4Map);
+            this.Match_2.Controls.Add(this.m2m3Map);
+            this.Match_2.Controls.Add(this.m2m2Map);
+            this.Match_2.Controls.Add(this.m2m1Map);
+            this.Match_2.Controls.Add(this.m2m3Label);
+            this.Match_2.Controls.Add(this.m2m4Label);
+            this.Match_2.Controls.Add(this.m2m5Label);
+            this.Match_2.Controls.Add(this.m2m2Label);
+            this.Match_2.Controls.Add(this.m2m1Label);
             this.Match_2.Controls.Add(this.m2t2Side);
             this.Match_2.Controls.Add(this.m2t1Side);
             this.Match_2.Controls.Add(this.m2DivisionLabel);
@@ -1520,10 +1911,255 @@
             this.Match_2.Location = new System.Drawing.Point(4, 22);
             this.Match_2.Name = "Match_2";
             this.Match_2.Padding = new System.Windows.Forms.Padding(3);
-            this.Match_2.Size = new System.Drawing.Size(542, 465);
+            this.Match_2.Size = new System.Drawing.Size(542, 493);
             this.Match_2.TabIndex = 0;
             this.Match_2.Text = "Match 2";
             this.Match_2.UseVisualStyleBackColor = true;
+            // 
+            // m2m5t2Score
+            // 
+            this.m2m5t2Score.Location = new System.Drawing.Point(499, 463);
+            this.m2m5t2Score.Name = "m2m5t2Score";
+            this.m2m5t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2m5t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m2m5t2Score.TabIndex = 99;
+            // 
+            // m2m5t1Score
+            // 
+            this.m2m5t1Score.Location = new System.Drawing.Point(452, 463);
+            this.m2m5t1Score.Name = "m2m5t1Score";
+            this.m2m5t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m2m5t1Score.TabIndex = 98;
+            // 
+            // m2m4t2Score
+            // 
+            this.m2m4t2Score.Location = new System.Drawing.Point(394, 463);
+            this.m2m4t2Score.Name = "m2m4t2Score";
+            this.m2m4t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2m4t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m2m4t2Score.TabIndex = 97;
+            // 
+            // m2m4t1Score
+            // 
+            this.m2m4t1Score.Location = new System.Drawing.Point(347, 463);
+            this.m2m4t1Score.Name = "m2m4t1Score";
+            this.m2m4t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m2m4t1Score.TabIndex = 96;
+            // 
+            // m2m3t2Score
+            // 
+            this.m2m3t2Score.Location = new System.Drawing.Point(275, 463);
+            this.m2m3t2Score.Name = "m2m3t2Score";
+            this.m2m3t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2m3t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m2m3t2Score.TabIndex = 95;
+            // 
+            // m2m3t1Score
+            // 
+            this.m2m3t1Score.Location = new System.Drawing.Point(228, 463);
+            this.m2m3t1Score.Name = "m2m3t1Score";
+            this.m2m3t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m2m3t1Score.TabIndex = 94;
+            // 
+            // m2m2t2Score
+            // 
+            this.m2m2t2Score.Location = new System.Drawing.Point(160, 463);
+            this.m2m2t2Score.Name = "m2m2t2Score";
+            this.m2m2t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2m2t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m2m2t2Score.TabIndex = 93;
+            // 
+            // m2m2t1Score
+            // 
+            this.m2m2t1Score.Location = new System.Drawing.Point(113, 463);
+            this.m2m2t1Score.Name = "m2m2t1Score";
+            this.m2m2t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m2m2t1Score.TabIndex = 92;
+            // 
+            // m2m1t2Score
+            // 
+            this.m2m1t2Score.Location = new System.Drawing.Point(54, 463);
+            this.m2m1t2Score.Name = "m2m1t2Score";
+            this.m2m1t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2m1t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m2m1t2Score.TabIndex = 91;
+            // 
+            // m2m1t1Score
+            // 
+            this.m2m1t1Score.Location = new System.Drawing.Point(7, 463);
+            this.m2m1t1Score.Name = "m2m1t1Score";
+            this.m2m1t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m2m1t1Score.TabIndex = 90;
+            // 
+            // m2m5Map
+            // 
+            this.m2m5Map.FormattingEnabled = true;
+            this.m2m5Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m2m5Map.Location = new System.Drawing.Point(452, 436);
+            this.m2m5Map.Name = "m2m5Map";
+            this.m2m5Map.Size = new System.Drawing.Size(83, 21);
+            this.m2m5Map.TabIndex = 89;
+            // 
+            // m2m4Map
+            // 
+            this.m2m4Map.FormattingEnabled = true;
+            this.m2m4Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m2m4Map.Location = new System.Drawing.Point(347, 436);
+            this.m2m4Map.Name = "m2m4Map";
+            this.m2m4Map.Size = new System.Drawing.Size(83, 21);
+            this.m2m4Map.TabIndex = 88;
+            // 
+            // m2m3Map
+            // 
+            this.m2m3Map.FormattingEnabled = true;
+            this.m2m3Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m2m3Map.Location = new System.Drawing.Point(228, 436);
+            this.m2m3Map.Name = "m2m3Map";
+            this.m2m3Map.Size = new System.Drawing.Size(83, 21);
+            this.m2m3Map.TabIndex = 87;
+            // 
+            // m2m2Map
+            // 
+            this.m2m2Map.FormattingEnabled = true;
+            this.m2m2Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m2m2Map.Location = new System.Drawing.Point(113, 436);
+            this.m2m2Map.Name = "m2m2Map";
+            this.m2m2Map.Size = new System.Drawing.Size(83, 21);
+            this.m2m2Map.TabIndex = 86;
+            // 
+            // m2m1Map
+            // 
+            this.m2m1Map.FormattingEnabled = true;
+            this.m2m1Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m2m1Map.Location = new System.Drawing.Point(7, 436);
+            this.m2m1Map.Name = "m2m1Map";
+            this.m2m1Map.Size = new System.Drawing.Size(83, 21);
+            this.m2m1Map.TabIndex = 85;
+            // 
+            // m2m3Label
+            // 
+            this.m2m3Label.AutoSize = true;
+            this.m2m3Label.Location = new System.Drawing.Point(250, 419);
+            this.m2m3Label.Name = "m2m3Label";
+            this.m2m3Label.Size = new System.Drawing.Size(37, 13);
+            this.m2m3Label.TabIndex = 84;
+            this.m2m3Label.Text = "Map 3";
+            // 
+            // m2m4Label
+            // 
+            this.m2m4Label.AutoSize = true;
+            this.m2m4Label.Location = new System.Drawing.Point(378, 419);
+            this.m2m4Label.Name = "m2m4Label";
+            this.m2m4Label.Size = new System.Drawing.Size(37, 13);
+            this.m2m4Label.TabIndex = 83;
+            this.m2m4Label.Text = "Map 4";
+            // 
+            // m2m5Label
+            // 
+            this.m2m5Label.AutoSize = true;
+            this.m2m5Label.Location = new System.Drawing.Point(493, 419);
+            this.m2m5Label.Name = "m2m5Label";
+            this.m2m5Label.Size = new System.Drawing.Size(37, 13);
+            this.m2m5Label.TabIndex = 82;
+            this.m2m5Label.Text = "Map 5";
+            // 
+            // m2m2Label
+            // 
+            this.m2m2Label.AutoSize = true;
+            this.m2m2Label.Location = new System.Drawing.Point(131, 419);
+            this.m2m2Label.Name = "m2m2Label";
+            this.m2m2Label.Size = new System.Drawing.Size(37, 13);
+            this.m2m2Label.TabIndex = 81;
+            this.m2m2Label.Text = "Map 2";
+            // 
+            // m2m1Label
+            // 
+            this.m2m1Label.AutoSize = true;
+            this.m2m1Label.Location = new System.Drawing.Point(16, 419);
+            this.m2m1Label.Name = "m2m1Label";
+            this.m2m1Label.Size = new System.Drawing.Size(37, 13);
+            this.m2m1Label.TabIndex = 80;
+            this.m2m1Label.Text = "Map 1";
             // 
             // m2t2Side
             // 
@@ -1543,7 +2179,6 @@
             this.m2t2Defend.Name = "m2t2Defend";
             this.m2t2Defend.Size = new System.Drawing.Size(33, 17);
             this.m2t2Defend.TabIndex = 76;
-            this.m2t2Defend.TabStop = true;
             this.m2t2Defend.Text = "D";
             this.m2t2Defend.UseVisualStyleBackColor = true;
             // 
@@ -1554,13 +2189,13 @@
             this.m2t2Attack.Name = "m2t2Attack";
             this.m2t2Attack.Size = new System.Drawing.Size(32, 17);
             this.m2t2Attack.TabIndex = 75;
-            this.m2t2Attack.TabStop = true;
             this.m2t2Attack.Text = "A";
             this.m2t2Attack.UseVisualStyleBackColor = true;
             // 
             // m2t2Neutral
             // 
             this.m2t2Neutral.AutoSize = true;
+            this.m2t2Neutral.Checked = true;
             this.m2t2Neutral.Location = new System.Drawing.Point(87, 9);
             this.m2t2Neutral.Name = "m2t2Neutral";
             this.m2t2Neutral.Size = new System.Drawing.Size(33, 17);
@@ -1587,7 +2222,6 @@
             this.m2t1Defend.Name = "m2t1Defend";
             this.m2t1Defend.Size = new System.Drawing.Size(33, 17);
             this.m2t1Defend.TabIndex = 73;
-            this.m2t1Defend.TabStop = true;
             this.m2t1Defend.Text = "D";
             this.m2t1Defend.UseVisualStyleBackColor = true;
             // 
@@ -1598,13 +2232,13 @@
             this.m2t1Attack.Name = "m2t1Attack";
             this.m2t1Attack.Size = new System.Drawing.Size(32, 17);
             this.m2t1Attack.TabIndex = 72;
-            this.m2t1Attack.TabStop = true;
             this.m2t1Attack.Text = "A";
             this.m2t1Attack.UseVisualStyleBackColor = true;
             // 
             // m2t1Neutral
             // 
             this.m2t1Neutral.AutoSize = true;
+            this.m2t1Neutral.Checked = true;
             this.m2t1Neutral.Location = new System.Drawing.Point(82, 9);
             this.m2t1Neutral.Name = "m2t1Neutral";
             this.m2t1Neutral.Size = new System.Drawing.Size(33, 17);
@@ -2592,6 +3226,26 @@
             // 
             // Match_3
             // 
+            this.Match_3.Controls.Add(this.m3m5t2Score);
+            this.Match_3.Controls.Add(this.m3m5t1Score);
+            this.Match_3.Controls.Add(this.m3m4t2Score);
+            this.Match_3.Controls.Add(this.m3m4t1Score);
+            this.Match_3.Controls.Add(this.m3m3t2Score);
+            this.Match_3.Controls.Add(this.m3m3t1Score);
+            this.Match_3.Controls.Add(this.m3m2t2Score);
+            this.Match_3.Controls.Add(this.m3m2t1Score);
+            this.Match_3.Controls.Add(this.m3m1t2Score);
+            this.Match_3.Controls.Add(this.m3m1t1Score);
+            this.Match_3.Controls.Add(this.m3m5Map);
+            this.Match_3.Controls.Add(this.m3m4Map);
+            this.Match_3.Controls.Add(this.m3m3Map);
+            this.Match_3.Controls.Add(this.m3m2Map);
+            this.Match_3.Controls.Add(this.m3m1Map);
+            this.Match_3.Controls.Add(this.m3m3Label);
+            this.Match_3.Controls.Add(this.m3m4Label);
+            this.Match_3.Controls.Add(this.m3m5Label);
+            this.Match_3.Controls.Add(this.m3m2Label);
+            this.Match_3.Controls.Add(this.m3m1Label);
             this.Match_3.Controls.Add(this.m3t2Side);
             this.Match_3.Controls.Add(this.m3t1Side);
             this.Match_3.Controls.Add(this.m3DivisionLabel);
@@ -2661,10 +3315,255 @@
             this.Match_3.Location = new System.Drawing.Point(4, 22);
             this.Match_3.Name = "Match_3";
             this.Match_3.Padding = new System.Windows.Forms.Padding(3);
-            this.Match_3.Size = new System.Drawing.Size(542, 465);
+            this.Match_3.Size = new System.Drawing.Size(542, 493);
             this.Match_3.TabIndex = 0;
             this.Match_3.Text = "Match 3";
             this.Match_3.UseVisualStyleBackColor = true;
+            // 
+            // m3m5t2Score
+            // 
+            this.m3m5t2Score.Location = new System.Drawing.Point(499, 463);
+            this.m3m5t2Score.Name = "m3m5t2Score";
+            this.m3m5t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3m5t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m3m5t2Score.TabIndex = 119;
+            // 
+            // m3m5t1Score
+            // 
+            this.m3m5t1Score.Location = new System.Drawing.Point(452, 463);
+            this.m3m5t1Score.Name = "m3m5t1Score";
+            this.m3m5t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m3m5t1Score.TabIndex = 118;
+            // 
+            // m3m4t2Score
+            // 
+            this.m3m4t2Score.Location = new System.Drawing.Point(394, 463);
+            this.m3m4t2Score.Name = "m3m4t2Score";
+            this.m3m4t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3m4t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m3m4t2Score.TabIndex = 117;
+            // 
+            // m3m4t1Score
+            // 
+            this.m3m4t1Score.Location = new System.Drawing.Point(347, 463);
+            this.m3m4t1Score.Name = "m3m4t1Score";
+            this.m3m4t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m3m4t1Score.TabIndex = 116;
+            // 
+            // m3m3t2Score
+            // 
+            this.m3m3t2Score.Location = new System.Drawing.Point(275, 463);
+            this.m3m3t2Score.Name = "m3m3t2Score";
+            this.m3m3t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3m3t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m3m3t2Score.TabIndex = 115;
+            // 
+            // m3m3t1Score
+            // 
+            this.m3m3t1Score.Location = new System.Drawing.Point(228, 463);
+            this.m3m3t1Score.Name = "m3m3t1Score";
+            this.m3m3t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m3m3t1Score.TabIndex = 114;
+            // 
+            // m3m2t2Score
+            // 
+            this.m3m2t2Score.Location = new System.Drawing.Point(160, 463);
+            this.m3m2t2Score.Name = "m3m2t2Score";
+            this.m3m2t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3m2t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m3m2t2Score.TabIndex = 113;
+            // 
+            // m3m2t1Score
+            // 
+            this.m3m2t1Score.Location = new System.Drawing.Point(113, 463);
+            this.m3m2t1Score.Name = "m3m2t1Score";
+            this.m3m2t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m3m2t1Score.TabIndex = 112;
+            // 
+            // m3m1t2Score
+            // 
+            this.m3m1t2Score.Location = new System.Drawing.Point(54, 463);
+            this.m3m1t2Score.Name = "m3m1t2Score";
+            this.m3m1t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3m1t2Score.Size = new System.Drawing.Size(36, 20);
+            this.m3m1t2Score.TabIndex = 111;
+            // 
+            // m3m1t1Score
+            // 
+            this.m3m1t1Score.Location = new System.Drawing.Point(7, 463);
+            this.m3m1t1Score.Name = "m3m1t1Score";
+            this.m3m1t1Score.Size = new System.Drawing.Size(36, 20);
+            this.m3m1t1Score.TabIndex = 110;
+            // 
+            // m3m5Map
+            // 
+            this.m3m5Map.FormattingEnabled = true;
+            this.m3m5Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m3m5Map.Location = new System.Drawing.Point(452, 436);
+            this.m3m5Map.Name = "m3m5Map";
+            this.m3m5Map.Size = new System.Drawing.Size(83, 21);
+            this.m3m5Map.TabIndex = 109;
+            // 
+            // m3m4Map
+            // 
+            this.m3m4Map.FormattingEnabled = true;
+            this.m3m4Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m3m4Map.Location = new System.Drawing.Point(347, 436);
+            this.m3m4Map.Name = "m3m4Map";
+            this.m3m4Map.Size = new System.Drawing.Size(83, 21);
+            this.m3m4Map.TabIndex = 108;
+            // 
+            // m3m3Map
+            // 
+            this.m3m3Map.FormattingEnabled = true;
+            this.m3m3Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m3m3Map.Location = new System.Drawing.Point(228, 436);
+            this.m3m3Map.Name = "m3m3Map";
+            this.m3m3Map.Size = new System.Drawing.Size(83, 21);
+            this.m3m3Map.TabIndex = 107;
+            // 
+            // m3m2Map
+            // 
+            this.m3m2Map.FormattingEnabled = true;
+            this.m3m2Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m3m2Map.Location = new System.Drawing.Point(113, 436);
+            this.m3m2Map.Name = "m3m2Map";
+            this.m3m2Map.Size = new System.Drawing.Size(83, 21);
+            this.m3m2Map.TabIndex = 106;
+            // 
+            // m3m1Map
+            // 
+            this.m3m1Map.FormattingEnabled = true;
+            this.m3m1Map.Items.AddRange(new object[] {
+            "",
+            "Hanamura",
+            "Horizon Lunar Colony",
+            "Temple of Anubis",
+            "Volskaya Industries",
+            "Dorado",
+            "Route 66",
+            "Watchpoint: Gibraltar",
+            "Eichenwalde",
+            "Hollywood",
+            "King\'s Row",
+            "Numbani",
+            "Ilios",
+            "Lijiang Tower",
+            "Nepal",
+            "Oasis"});
+            this.m3m1Map.Location = new System.Drawing.Point(7, 436);
+            this.m3m1Map.Name = "m3m1Map";
+            this.m3m1Map.Size = new System.Drawing.Size(83, 21);
+            this.m3m1Map.TabIndex = 105;
+            // 
+            // m3m3Label
+            // 
+            this.m3m3Label.AutoSize = true;
+            this.m3m3Label.Location = new System.Drawing.Point(250, 419);
+            this.m3m3Label.Name = "m3m3Label";
+            this.m3m3Label.Size = new System.Drawing.Size(37, 13);
+            this.m3m3Label.TabIndex = 104;
+            this.m3m3Label.Text = "Map 3";
+            // 
+            // m3m4Label
+            // 
+            this.m3m4Label.AutoSize = true;
+            this.m3m4Label.Location = new System.Drawing.Point(378, 419);
+            this.m3m4Label.Name = "m3m4Label";
+            this.m3m4Label.Size = new System.Drawing.Size(37, 13);
+            this.m3m4Label.TabIndex = 103;
+            this.m3m4Label.Text = "Map 4";
+            // 
+            // m3m5Label
+            // 
+            this.m3m5Label.AutoSize = true;
+            this.m3m5Label.Location = new System.Drawing.Point(493, 419);
+            this.m3m5Label.Name = "m3m5Label";
+            this.m3m5Label.Size = new System.Drawing.Size(37, 13);
+            this.m3m5Label.TabIndex = 102;
+            this.m3m5Label.Text = "Map 5";
+            // 
+            // m3m2Label
+            // 
+            this.m3m2Label.AutoSize = true;
+            this.m3m2Label.Location = new System.Drawing.Point(131, 419);
+            this.m3m2Label.Name = "m3m2Label";
+            this.m3m2Label.Size = new System.Drawing.Size(37, 13);
+            this.m3m2Label.TabIndex = 101;
+            this.m3m2Label.Text = "Map 2";
+            // 
+            // m3m1Label
+            // 
+            this.m3m1Label.AutoSize = true;
+            this.m3m1Label.Location = new System.Drawing.Point(16, 419);
+            this.m3m1Label.Name = "m3m1Label";
+            this.m3m1Label.Size = new System.Drawing.Size(37, 13);
+            this.m3m1Label.TabIndex = 100;
+            this.m3m1Label.Text = "Map 1";
             // 
             // m3t2Side
             // 
@@ -3734,7 +4633,7 @@
             this.General_Info.Location = new System.Drawing.Point(4, 22);
             this.General_Info.Name = "General_Info";
             this.General_Info.Padding = new System.Windows.Forms.Padding(3);
-            this.General_Info.Size = new System.Drawing.Size(542, 465);
+            this.General_Info.Size = new System.Drawing.Size(542, 493);
             this.General_Info.TabIndex = 1;
             this.General_Info.Text = "General";
             this.General_Info.UseVisualStyleBackColor = true;
@@ -3743,7 +4642,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 516);
+            this.ClientSize = new System.Drawing.Size(575, 544);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -3752,6 +4651,16 @@
             this.tabControl1.ResumeLayout(false);
             this.Match_1.ResumeLayout(false);
             this.Match_1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m5t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m5t1Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m4t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m4t1Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m3t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m3t1Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m2t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m2t1Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m1t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m1m1t1Score)).EndInit();
             this.m1t2Side.ResumeLayout(false);
             this.m1t2Side.PerformLayout();
             this.m1t1Side.ResumeLayout(false);
@@ -3760,6 +4669,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.m1t1Score)).EndInit();
             this.Match_2.ResumeLayout(false);
             this.Match_2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m5t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m5t1Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m4t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m4t1Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m3t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m3t1Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m2t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m2t1Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m1t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m2m1t1Score)).EndInit();
             this.m2t2Side.ResumeLayout(false);
             this.m2t2Side.PerformLayout();
             this.m2t1Side.ResumeLayout(false);
@@ -3768,6 +4687,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.m2t1Score)).EndInit();
             this.Match_3.ResumeLayout(false);
             this.Match_3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m5t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m5t1Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m4t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m4t1Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m3t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m3t1Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m2t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m2t1Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m1t2Score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m3m1t1Score)).EndInit();
             this.m3t2Side.ResumeLayout(false);
             this.m3t2Side.PerformLayout();
             this.m3t1Side.ResumeLayout(false);
@@ -4007,6 +4936,66 @@
         private System.Windows.Forms.GroupBox m2t1Side;
         private System.Windows.Forms.GroupBox m3t2Side;
         private System.Windows.Forms.GroupBox m3t1Side;
+        private System.Windows.Forms.NumericUpDown m1m5t2Score;
+        private System.Windows.Forms.NumericUpDown m1m5t1Score;
+        private System.Windows.Forms.NumericUpDown m1m4t2Score;
+        private System.Windows.Forms.NumericUpDown m1m4t1Score;
+        private System.Windows.Forms.NumericUpDown m1m3t2Score;
+        private System.Windows.Forms.NumericUpDown m1m3t1Score;
+        private System.Windows.Forms.NumericUpDown m1m2t2Score;
+        private System.Windows.Forms.NumericUpDown m1m2t1Score;
+        private System.Windows.Forms.NumericUpDown m1m1t2Score;
+        private System.Windows.Forms.NumericUpDown m1m1t1Score;
+        private System.Windows.Forms.ComboBox m1m5Map;
+        private System.Windows.Forms.ComboBox m1m4Map;
+        private System.Windows.Forms.ComboBox m1m3Map;
+        private System.Windows.Forms.ComboBox m1m2Map;
+        private System.Windows.Forms.ComboBox m1m1Map;
+        private System.Windows.Forms.Label m1m3Label;
+        private System.Windows.Forms.Label m1m4Label;
+        private System.Windows.Forms.Label m1m5Label;
+        private System.Windows.Forms.Label m1m2Label;
+        private System.Windows.Forms.Label m1m1Label;
+        private System.Windows.Forms.NumericUpDown m2m5t2Score;
+        private System.Windows.Forms.NumericUpDown m2m5t1Score;
+        private System.Windows.Forms.NumericUpDown m2m4t2Score;
+        private System.Windows.Forms.NumericUpDown m2m4t1Score;
+        private System.Windows.Forms.NumericUpDown m2m3t2Score;
+        private System.Windows.Forms.NumericUpDown m2m3t1Score;
+        private System.Windows.Forms.NumericUpDown m2m2t2Score;
+        private System.Windows.Forms.NumericUpDown m2m2t1Score;
+        private System.Windows.Forms.NumericUpDown m2m1t2Score;
+        private System.Windows.Forms.NumericUpDown m2m1t1Score;
+        private System.Windows.Forms.ComboBox m2m5Map;
+        private System.Windows.Forms.ComboBox m2m4Map;
+        private System.Windows.Forms.ComboBox m2m3Map;
+        private System.Windows.Forms.ComboBox m2m2Map;
+        private System.Windows.Forms.ComboBox m2m1Map;
+        private System.Windows.Forms.Label m2m3Label;
+        private System.Windows.Forms.Label m2m4Label;
+        private System.Windows.Forms.Label m2m5Label;
+        private System.Windows.Forms.Label m2m2Label;
+        private System.Windows.Forms.Label m2m1Label;
+        private System.Windows.Forms.NumericUpDown m3m5t2Score;
+        private System.Windows.Forms.NumericUpDown m3m5t1Score;
+        private System.Windows.Forms.NumericUpDown m3m4t2Score;
+        private System.Windows.Forms.NumericUpDown m3m4t1Score;
+        private System.Windows.Forms.NumericUpDown m3m3t2Score;
+        private System.Windows.Forms.NumericUpDown m3m3t1Score;
+        private System.Windows.Forms.NumericUpDown m3m2t2Score;
+        private System.Windows.Forms.NumericUpDown m3m2t1Score;
+        private System.Windows.Forms.NumericUpDown m3m1t2Score;
+        private System.Windows.Forms.NumericUpDown m3m1t1Score;
+        private System.Windows.Forms.ComboBox m3m5Map;
+        private System.Windows.Forms.ComboBox m3m4Map;
+        private System.Windows.Forms.ComboBox m3m3Map;
+        private System.Windows.Forms.ComboBox m3m2Map;
+        private System.Windows.Forms.ComboBox m3m1Map;
+        private System.Windows.Forms.Label m3m3Label;
+        private System.Windows.Forms.Label m3m4Label;
+        private System.Windows.Forms.Label m3m5Label;
+        private System.Windows.Forms.Label m3m2Label;
+        private System.Windows.Forms.Label m3m1Label;
     }
 }
 

@@ -208,4 +208,67 @@
   <data name="Icon_tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-tank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_assault" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-assault.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_control" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-control.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_dorado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-dorado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_eichenwalde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-eichenwalde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_escort" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-escort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_hanamura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-hanamura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_hollywood" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-hollywood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_horizon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-horizon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_hybrid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-hybrid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_ilios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-ilios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_kings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-kings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_lijiang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-lijiang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_nepal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-nepal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_numbani" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-numbani.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_oasis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-oasis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_route" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-route.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_support1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-support.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_tank1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-tank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_temple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-temple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_volskaya" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-volskaya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_watchpoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-watchpoint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -191,6 +191,15 @@ namespace OWUL_Cast_Panel
                 resetHero(m1t2p6Hero);
                 resetHero(m1t2p7Hero);
                 resetHero(m1t2p8Hero);
+
+                resetSide(m1t1Neutral);
+                resetSide(m1t2Neutral);
+
+                resetMap(m1m1Map);
+                resetMap(m1m2Map);
+                resetMap(m1m3Map);
+                resetMap(m1m4Map);
+                resetMap(m1m5Map);
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -245,6 +254,15 @@ namespace OWUL_Cast_Panel
                 resetHero(m2t2p6Hero);
                 resetHero(m2t2p7Hero);
                 resetHero(m2t2p8Hero);
+
+                resetSide(m2t1Neutral);
+                resetSide(m2t2Neutral);
+
+                resetMap(m2m1Map);
+                resetMap(m2m2Map);
+                resetMap(m2m3Map);
+                resetMap(m2m4Map);
+                resetMap(m2m5Map);
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -299,6 +317,15 @@ namespace OWUL_Cast_Panel
                 resetHero(m3t2p6Hero);
                 resetHero(m3t2p7Hero);
                 resetHero(m3t2p8Hero);
+
+                resetSide(m3t1Neutral);
+                resetSide(m3t2Neutral);
+
+                resetMap(m3m1Map);
+                resetMap(m3m2Map);
+                resetMap(m3m3Map);
+                resetMap(m3m4Map);
+                resetMap(m3m5Map);
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -360,6 +387,12 @@ namespace OWUL_Cast_Panel
             updateSide(m1t2Defend, "Match1", "t2Side");
             updateSide(m1t2Neutral, "Match1", "t2Side");
 
+            updateMap(m1m1Map, "Match1", "m1Map");
+            updateMap(m1m2Map, "Match1", "m2Map");
+            updateMap(m1m3Map, "Match1", "m3Map");
+            updateMap(m1m4Map, "Match1", "m4Map");
+            updateMap(m1m5Map, "Match1", "m5Map");
+
             if (m1currentCheck.Checked == true)
             {
                 updateText(m1MessageBox, "Current", "MessageBox");
@@ -412,6 +445,12 @@ namespace OWUL_Cast_Panel
                 updateSide(m1t2Attack, "Current", "t2Side");
                 updateSide(m1t2Defend, "Current", "t2Side");
                 updateSide(m1t2Neutral, "Current", "t2Side");
+
+                updateMap(m1m1Map, "Current", "m1Map");
+                updateMap(m1m2Map, "Current", "m2Map");
+                updateMap(m1m3Map, "Current", "m3Map");
+                updateMap(m1m4Map, "Current", "m4Map");
+                updateMap(m1m5Map, "Current", "m5Map");
             }
         }
 
@@ -469,6 +508,12 @@ namespace OWUL_Cast_Panel
             updateSide(m2t2Defend, "Match2", "t2Side");
             updateSide(m2t2Neutral, "Match2", "t2Side");
 
+            updateMap(m2m1Map, "Match2", "m1Map");
+            updateMap(m2m2Map, "Match2", "m2Map");
+            updateMap(m2m3Map, "Match2", "m3Map");
+            updateMap(m2m4Map, "Match2", "m4Map");
+            updateMap(m2m5Map, "Match2", "m5Map");
+
             if (m2currentCheck.Checked == true)
             {
                 updateText(m2MessageBox, "Current", "MessageBox");
@@ -521,6 +566,12 @@ namespace OWUL_Cast_Panel
                 updateSide(m2t2Attack, "Current", "t2Side");
                 updateSide(m2t2Defend, "Current", "t2Side");
                 updateSide(m2t2Neutral, "Current", "t2Side");
+
+                updateMap(m2m1Map, "Current", "m1Map");
+                updateMap(m2m2Map, "Current", "m2Map");
+                updateMap(m2m3Map, "Current", "m3Map");
+                updateMap(m2m4Map, "Current", "m4Map");
+                updateMap(m2m5Map, "Current", "m5Map");
             }
         }
 
@@ -578,6 +629,12 @@ namespace OWUL_Cast_Panel
             updateSide(m3t2Defend, "Match3", "t2Side");
             updateSide(m3t2Neutral, "Match3", "t2Side");
 
+            updateMap(m3m1Map, "Match3", "m1Map");
+            updateMap(m3m2Map, "Match3", "m2Map");
+            updateMap(m3m3Map, "Match3", "m3Map");
+            updateMap(m3m4Map, "Match3", "m4Map");
+            updateMap(m3m5Map, "Match3", "m5Map");
+
             if (m3currentCheck.Checked == true)
             {
                 updateText(m3MessageBox, "Current", "MessageBox");
@@ -630,6 +687,12 @@ namespace OWUL_Cast_Panel
                 updateSide(m3t2Attack, "Current", "t2Side");
                 updateSide(m3t2Defend, "Current", "t2Side");
                 updateSide(m3t2Neutral, "Current", "t2Side");
+
+                updateMap(m3m1Map, "Current", "m1Map");
+                updateMap(m3m2Map, "Current", "m2Map");
+                updateMap(m3m3Map, "Current", "m3Map");
+                updateMap(m3m4Map, "Current", "m4Map");
+                updateMap(m3m5Map, "Current", "m5Map");
             }
         }
 
@@ -787,6 +850,94 @@ namespace OWUL_Cast_Panel
             }
         }
 
+        private void updateMap(ComboBox field, String folder, String file)
+        {
+            if (field.SelectedItem != null)
+            {
+                if (field.Text == "Dorado")
+                {
+                    Properties.Resources.Icon_dorado.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Eichenwalde")
+                {
+                    Properties.Resources.Icon_eichenwalde.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Hanamura")
+                {
+                    Properties.Resources.Icon_hanamura.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Hollywood")
+                {
+                    Properties.Resources.Icon_hollywood.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Horizon Lunar Colony")
+                {
+                    Properties.Resources.Icon_horizon.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Ilios")
+                {
+                    Properties.Resources.Icon_ilios.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "King's Row")
+                {
+                    Properties.Resources.Icon_kings.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Lijiang Tower")
+                {
+                    Properties.Resources.Icon_lijiang.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Nepal")
+                {
+                    Properties.Resources.Icon_nepal.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Numbani")
+                {
+                    Properties.Resources.Icon_numbani.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Oasis")
+                {
+                    Properties.Resources.Icon_oasis.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Route 66")
+                {
+                    Properties.Resources.Icon_route.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Temple of Anubis")
+                {
+                    Properties.Resources.Icon_temple.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Volskaya Industries")
+                {
+                    Properties.Resources.Icon_volskaya.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else if (field.Text == "Watchpoint: Gibraltar")
+                {
+                    Properties.Resources.Icon_watchpoint.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+                else
+                {
+                    Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                }
+
+            }
+        }
+
         private void loadText(TextBox field, String folder, String file)
         {
             string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
@@ -821,6 +972,15 @@ namespace OWUL_Cast_Panel
             field.SelectedIndex = 0;
         }
 
+        private void resetSide(RadioButton field)
+        {
+            field.Checked = true;
+        }
+
+        private void resetMap(ComboBox field)
+        {
+            field.SelectedIndex = 0;
+        }
 
         /*private void loadHero(ComboBox field, String folder, String file)
         {

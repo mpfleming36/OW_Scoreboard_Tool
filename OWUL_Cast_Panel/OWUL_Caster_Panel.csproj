@@ -61,18 +61,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -159,6 +159,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="owul_logo_gray.ico" />
+    <None Include="Resources\Icon-assault.png" />
+    <None Include="Resources\Icon-control.png" />
+    <None Include="Resources\Icon-escort.png" />
+    <None Include="Resources\Icon-hybrid.png" />
+    <None Include="Resources\Icon-ilios.png" />
+    <None Include="Resources\icon-route.png" />
+    <None Include="Resources\icon-oasis.png" />
+    <None Include="Resources\icon-numbani.png" />
+    <None Include="Resources\icon-nepal.png" />
+    <None Include="Resources\icon-lijiang.png" />
+    <None Include="Resources\icon-kings.png" />
+    <None Include="Resources\icon-illios.png" />
+    <None Include="Resources\icon-horizon.png" />
+    <None Include="Resources\icon-hollywood.png" />
+    <None Include="Resources\icon-hanamura.png" />
+    <None Include="Resources\icon-eichenwalde.png" />
+    <None Include="Resources\icon-dorado.png" />
+    <None Include="Resources\icon-watchpoint.png" />
+    <None Include="Resources\icon-volskaya.png" />
+    <None Include="Resources\icon-temple.png" />
     <None Include="Resources\Icon-tank.png" />
     <None Include="Resources\Icon-support.png" />
     <None Include="Resources\Icon-offense.png" />
