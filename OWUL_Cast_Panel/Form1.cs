@@ -1028,87 +1028,111 @@ namespace OWUL_Cast_Panel
         {
             if (field.SelectedItem != null)
             {
+                String gametype = "";
                 if (field.Text == "Dorado")
                 {
                     Properties.Resources.Icon_dorado.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Escort";
                 }
                 else if (field.Text == "Eichenwalde")
                 {
                     Properties.Resources.Icon_eichenwalde.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Hybrid";
                 }
                 else if (field.Text == "Hanamura")
                 {
                     Properties.Resources.Icon_hanamura.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Assault";
                 }
                 else if (field.Text == "Hollywood")
                 {
                     Properties.Resources.Icon_hollywood.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Hybrid";
                 }
                 else if (field.Text == "Horizon Lunar Colony")
                 {
                     Properties.Resources.Icon_horizon.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Assault";
                 }
                 else if (field.Text == "Ilios")
                 {
                     Properties.Resources.Icon_ilios.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Control";
                 }
                 else if (field.Text == "King's Row")
                 {
                     Properties.Resources.Icon_kings.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Hybrid";
                 }
                 else if (field.Text == "Lijiang Tower")
                 {
                     Properties.Resources.Icon_lijiang.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Control";
                 }
                 else if (field.Text == "Nepal")
                 {
                     Properties.Resources.Icon_nepal.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Control";
                 }
                 else if (field.Text == "Numbani")
                 {
                     Properties.Resources.Icon_numbani.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Hybrid";
                 }
                 else if (field.Text == "Oasis")
                 {
                     Properties.Resources.Icon_oasis.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Control";
                 }
                 else if (field.Text == "Route 66")
                 {
                     Properties.Resources.Icon_route.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Escort";
                 }
                 else if (field.Text == "Temple of Anubis")
                 {
                     Properties.Resources.Icon_temple.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Assault";
                 }
                 else if (field.Text == "Volskaya Industries")
                 {
                     Properties.Resources.Icon_volskaya.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Assault";
                 }
                 else if (field.Text == "Watchpoint: Gibraltar")
                 {
                     Properties.Resources.Icon_watchpoint.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Escort";
                 }
                 else
                 {
                     Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "";
                 }
-
+                using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
+                {
+                    sw.WriteLine(field.Text);
+                }
+                using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + "Gametype" + ".txt"))
+                {
+                    sw.WriteLine(gametype);
+                }
             }
         }
 
