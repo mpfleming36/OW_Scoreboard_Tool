@@ -53,6 +53,13 @@
             "Nepal",
             "Oasis"};
 
+        private object[] roleList = new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"};
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -77,6 +84,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Match_1 = new System.Windows.Forms.TabPage();
+            this.m1t2p6Role = new System.Windows.Forms.ComboBox();
+            this.m1t2p5Role = new System.Windows.Forms.ComboBox();
+            this.m1t2p4Role = new System.Windows.Forms.ComboBox();
+            this.m1t2p3Role = new System.Windows.Forms.ComboBox();
+            this.m1t2p2Role = new System.Windows.Forms.ComboBox();
+            this.m1t2p1Role = new System.Windows.Forms.ComboBox();
+            this.m1t1p6Role = new System.Windows.Forms.ComboBox();
+            this.m1t1p5Role = new System.Windows.Forms.ComboBox();
+            this.m1t1p4Role = new System.Windows.Forms.ComboBox();
+            this.m1t1p3Role = new System.Windows.Forms.ComboBox();
+            this.m1t1p2Role = new System.Windows.Forms.ComboBox();
+            this.m1t1p1Role = new System.Windows.Forms.ComboBox();
             this.m1m5t2Score = new System.Windows.Forms.NumericUpDown();
             this.m1m5t1Score = new System.Windows.Forms.NumericUpDown();
             this.m1m4t2Score = new System.Windows.Forms.NumericUpDown();
@@ -111,16 +130,12 @@
             this.m1MessageBox = new System.Windows.Forms.TextBox();
             this.m1currentCheck = new System.Windows.Forms.CheckBox();
             this.m1UpdateButton = new System.Windows.Forms.Button();
-            this.m1t2p8Hero = new System.Windows.Forms.ComboBox();
-            this.m1t2p7Hero = new System.Windows.Forms.ComboBox();
             this.m1t2p6Hero = new System.Windows.Forms.ComboBox();
             this.m1t2p5Hero = new System.Windows.Forms.ComboBox();
             this.m1t2p4Hero = new System.Windows.Forms.ComboBox();
             this.m1t2p3Hero = new System.Windows.Forms.ComboBox();
             this.m1t2p2Hero = new System.Windows.Forms.ComboBox();
             this.m1t2p1Hero = new System.Windows.Forms.ComboBox();
-            this.m1t1p8Hero = new System.Windows.Forms.ComboBox();
-            this.m1t1p7Hero = new System.Windows.Forms.ComboBox();
             this.m1t1p6Hero = new System.Windows.Forms.ComboBox();
             this.m1t1p5Hero = new System.Windows.Forms.ComboBox();
             this.m1t1p4Hero = new System.Windows.Forms.ComboBox();
@@ -129,10 +144,6 @@
             this.m1t1p1Hero = new System.Windows.Forms.ComboBox();
             this.m1ResetButton = new System.Windows.Forms.Button();
             this.m1SwapButton = new System.Windows.Forms.Button();
-            this.m1t2p8Name = new System.Windows.Forms.TextBox();
-            this.m1t2p8Label = new System.Windows.Forms.Label();
-            this.m1t2p7Name = new System.Windows.Forms.TextBox();
-            this.m1t2p7Label = new System.Windows.Forms.Label();
             this.m1t2p6Name = new System.Windows.Forms.TextBox();
             this.m1t2p6Label = new System.Windows.Forms.Label();
             this.m1t2p5Name = new System.Windows.Forms.TextBox();
@@ -145,10 +156,6 @@
             this.m1t2p2Label = new System.Windows.Forms.Label();
             this.m1t2p1Name = new System.Windows.Forms.TextBox();
             this.m1t2p1Label = new System.Windows.Forms.Label();
-            this.m1t1p8Name = new System.Windows.Forms.TextBox();
-            this.m1t1p8Label = new System.Windows.Forms.Label();
-            this.m1t1p7Name = new System.Windows.Forms.TextBox();
-            this.m1t1p7Label = new System.Windows.Forms.Label();
             this.m1t1p6Name = new System.Windows.Forms.TextBox();
             this.m1t1p6Label = new System.Windows.Forms.Label();
             this.m1t1p5Name = new System.Windows.Forms.TextBox();
@@ -170,6 +177,18 @@
             this.m1t1Name = new System.Windows.Forms.TextBox();
             this.m1t1Label = new System.Windows.Forms.Label();
             this.Match_2 = new System.Windows.Forms.TabPage();
+            this.m2t2p6Role = new System.Windows.Forms.ComboBox();
+            this.m2t2p5Role = new System.Windows.Forms.ComboBox();
+            this.m2t2p4Role = new System.Windows.Forms.ComboBox();
+            this.m2t2p3Role = new System.Windows.Forms.ComboBox();
+            this.m2t2p2Role = new System.Windows.Forms.ComboBox();
+            this.m2t2p1Role = new System.Windows.Forms.ComboBox();
+            this.m2t1p6Role = new System.Windows.Forms.ComboBox();
+            this.m2t1p5Role = new System.Windows.Forms.ComboBox();
+            this.m2t1p4Role = new System.Windows.Forms.ComboBox();
+            this.m2t1p3Role = new System.Windows.Forms.ComboBox();
+            this.m2t1p2Role = new System.Windows.Forms.ComboBox();
+            this.m2t1p1Role = new System.Windows.Forms.ComboBox();
             this.m2m5t2Score = new System.Windows.Forms.NumericUpDown();
             this.m2m5t1Score = new System.Windows.Forms.NumericUpDown();
             this.m2m4t2Score = new System.Windows.Forms.NumericUpDown();
@@ -204,16 +223,12 @@
             this.m2MessageBox = new System.Windows.Forms.TextBox();
             this.m2currentCheck = new System.Windows.Forms.CheckBox();
             this.m2UpdateButton = new System.Windows.Forms.Button();
-            this.m2t2p8Hero = new System.Windows.Forms.ComboBox();
-            this.m2t2p7Hero = new System.Windows.Forms.ComboBox();
             this.m2t2p6Hero = new System.Windows.Forms.ComboBox();
             this.m2t2p5Hero = new System.Windows.Forms.ComboBox();
             this.m2t2p4Hero = new System.Windows.Forms.ComboBox();
             this.m2t2p3Hero = new System.Windows.Forms.ComboBox();
             this.m2t2p2Hero = new System.Windows.Forms.ComboBox();
             this.m2t2p1Hero = new System.Windows.Forms.ComboBox();
-            this.m2t1p8Hero = new System.Windows.Forms.ComboBox();
-            this.m2t1p7Hero = new System.Windows.Forms.ComboBox();
             this.m2t1p6Hero = new System.Windows.Forms.ComboBox();
             this.m2t1p5Hero = new System.Windows.Forms.ComboBox();
             this.m2t1p4Hero = new System.Windows.Forms.ComboBox();
@@ -222,10 +237,6 @@
             this.m2t1p1Hero = new System.Windows.Forms.ComboBox();
             this.m2ResetButton = new System.Windows.Forms.Button();
             this.m2SwapButton = new System.Windows.Forms.Button();
-            this.m2t2p8Name = new System.Windows.Forms.TextBox();
-            this.m2t2p8Label = new System.Windows.Forms.Label();
-            this.m2t2p7Name = new System.Windows.Forms.TextBox();
-            this.m2t2p7Label = new System.Windows.Forms.Label();
             this.m2t2p6Name = new System.Windows.Forms.TextBox();
             this.m2t2p6Label = new System.Windows.Forms.Label();
             this.m2t2p5Name = new System.Windows.Forms.TextBox();
@@ -238,10 +249,6 @@
             this.m2t2p2Label = new System.Windows.Forms.Label();
             this.m2t2p1Name = new System.Windows.Forms.TextBox();
             this.m2t2p1Label = new System.Windows.Forms.Label();
-            this.m2t1p8Name = new System.Windows.Forms.TextBox();
-            this.m2t1p8Label = new System.Windows.Forms.Label();
-            this.m2t1p7Name = new System.Windows.Forms.TextBox();
-            this.m2t1p7Label = new System.Windows.Forms.Label();
             this.m2t1p6Name = new System.Windows.Forms.TextBox();
             this.m2t1p6Label = new System.Windows.Forms.Label();
             this.m2t1p5Name = new System.Windows.Forms.TextBox();
@@ -263,6 +270,18 @@
             this.m2t1Name = new System.Windows.Forms.TextBox();
             this.m2t1Label = new System.Windows.Forms.Label();
             this.Match_3 = new System.Windows.Forms.TabPage();
+            this.m3t2p6Role = new System.Windows.Forms.ComboBox();
+            this.m3t2p5Role = new System.Windows.Forms.ComboBox();
+            this.m3t2p4Role = new System.Windows.Forms.ComboBox();
+            this.m3t2p3Role = new System.Windows.Forms.ComboBox();
+            this.m3t2p2Role = new System.Windows.Forms.ComboBox();
+            this.m3t2p1Role = new System.Windows.Forms.ComboBox();
+            this.m3t1p6Role = new System.Windows.Forms.ComboBox();
+            this.m3t1p5Role = new System.Windows.Forms.ComboBox();
+            this.m3t1p4Role = new System.Windows.Forms.ComboBox();
+            this.m3t1p3Role = new System.Windows.Forms.ComboBox();
+            this.m3t1p2Role = new System.Windows.Forms.ComboBox();
+            this.m3t1p1Role = new System.Windows.Forms.ComboBox();
             this.m3m5t2Score = new System.Windows.Forms.NumericUpDown();
             this.m3m5t1Score = new System.Windows.Forms.NumericUpDown();
             this.m3m4t2Score = new System.Windows.Forms.NumericUpDown();
@@ -297,16 +316,12 @@
             this.m3MessageBox = new System.Windows.Forms.TextBox();
             this.m3currentCheck = new System.Windows.Forms.CheckBox();
             this.m3UpdateButton = new System.Windows.Forms.Button();
-            this.m3t2p8Hero = new System.Windows.Forms.ComboBox();
-            this.m3t2p7Hero = new System.Windows.Forms.ComboBox();
             this.m3t2p6Hero = new System.Windows.Forms.ComboBox();
             this.m3t2p5Hero = new System.Windows.Forms.ComboBox();
             this.m3t2p4Hero = new System.Windows.Forms.ComboBox();
             this.m3t2p3Hero = new System.Windows.Forms.ComboBox();
             this.m3t2p2Hero = new System.Windows.Forms.ComboBox();
             this.m3t2p1Hero = new System.Windows.Forms.ComboBox();
-            this.m3t1p8Hero = new System.Windows.Forms.ComboBox();
-            this.m3t1p7Hero = new System.Windows.Forms.ComboBox();
             this.m3t1p6Hero = new System.Windows.Forms.ComboBox();
             this.m3t1p5Hero = new System.Windows.Forms.ComboBox();
             this.m3t1p4Hero = new System.Windows.Forms.ComboBox();
@@ -315,10 +330,6 @@
             this.m3t1p1Hero = new System.Windows.Forms.ComboBox();
             this.m3ResetButton = new System.Windows.Forms.Button();
             this.m3SwapButton = new System.Windows.Forms.Button();
-            this.m3t2p8Name = new System.Windows.Forms.TextBox();
-            this.m3t2p8Label = new System.Windows.Forms.Label();
-            this.m3t2p7Name = new System.Windows.Forms.TextBox();
-            this.m3t2p7Label = new System.Windows.Forms.Label();
             this.m3t2p6Name = new System.Windows.Forms.TextBox();
             this.m3t2p6Label = new System.Windows.Forms.Label();
             this.m3t2p5Name = new System.Windows.Forms.TextBox();
@@ -331,10 +342,6 @@
             this.m3t2p2Label = new System.Windows.Forms.Label();
             this.m3t2p1Name = new System.Windows.Forms.TextBox();
             this.m3t2p1Label = new System.Windows.Forms.Label();
-            this.m3t1p8Name = new System.Windows.Forms.TextBox();
-            this.m3t1p8Label = new System.Windows.Forms.Label();
-            this.m3t1p7Name = new System.Windows.Forms.TextBox();
-            this.m3t1p7Label = new System.Windows.Forms.Label();
             this.m3t1p6Name = new System.Windows.Forms.TextBox();
             this.m3t1p6Label = new System.Windows.Forms.Label();
             this.m3t1p5Name = new System.Windows.Forms.TextBox();
@@ -356,6 +363,12 @@
             this.m3t1Name = new System.Windows.Forms.TextBox();
             this.m3t1Label = new System.Windows.Forms.Label();
             this.General_Info = new System.Windows.Forms.TabPage();
+            this.m1t1SR = new System.Windows.Forms.TextBox();
+            this.m1t2SR = new System.Windows.Forms.TextBox();
+            this.m2t2SR = new System.Windows.Forms.TextBox();
+            this.m2t1SR = new System.Windows.Forms.TextBox();
+            this.m3t2SR = new System.Windows.Forms.TextBox();
+            this.m3t1SR = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.Match_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m1m5t2Score)).BeginInit();
@@ -413,11 +426,25 @@
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(550, 519);
+            this.tabControl1.Size = new System.Drawing.Size(667, 440);
             this.tabControl1.TabIndex = 0;
             // 
             // Match_1
             // 
+            this.Match_1.Controls.Add(this.m1t2SR);
+            this.Match_1.Controls.Add(this.m1t1SR);
+            this.Match_1.Controls.Add(this.m1t2p6Role);
+            this.Match_1.Controls.Add(this.m1t2p5Role);
+            this.Match_1.Controls.Add(this.m1t2p4Role);
+            this.Match_1.Controls.Add(this.m1t2p3Role);
+            this.Match_1.Controls.Add(this.m1t2p2Role);
+            this.Match_1.Controls.Add(this.m1t2p1Role);
+            this.Match_1.Controls.Add(this.m1t1p6Role);
+            this.Match_1.Controls.Add(this.m1t1p5Role);
+            this.Match_1.Controls.Add(this.m1t1p4Role);
+            this.Match_1.Controls.Add(this.m1t1p3Role);
+            this.Match_1.Controls.Add(this.m1t1p2Role);
+            this.Match_1.Controls.Add(this.m1t1p1Role);
             this.Match_1.Controls.Add(this.m1m5t2Score);
             this.Match_1.Controls.Add(this.m1m5t1Score);
             this.Match_1.Controls.Add(this.m1m4t2Score);
@@ -446,16 +473,12 @@
             this.Match_1.Controls.Add(this.m1MessageBox);
             this.Match_1.Controls.Add(this.m1currentCheck);
             this.Match_1.Controls.Add(this.m1UpdateButton);
-            this.Match_1.Controls.Add(this.m1t2p8Hero);
-            this.Match_1.Controls.Add(this.m1t2p7Hero);
             this.Match_1.Controls.Add(this.m1t2p6Hero);
             this.Match_1.Controls.Add(this.m1t2p5Hero);
             this.Match_1.Controls.Add(this.m1t2p4Hero);
             this.Match_1.Controls.Add(this.m1t2p3Hero);
             this.Match_1.Controls.Add(this.m1t2p2Hero);
             this.Match_1.Controls.Add(this.m1t2p1Hero);
-            this.Match_1.Controls.Add(this.m1t1p8Hero);
-            this.Match_1.Controls.Add(this.m1t1p7Hero);
             this.Match_1.Controls.Add(this.m1t1p6Hero);
             this.Match_1.Controls.Add(this.m1t1p5Hero);
             this.Match_1.Controls.Add(this.m1t1p4Hero);
@@ -464,10 +487,6 @@
             this.Match_1.Controls.Add(this.m1t1p1Hero);
             this.Match_1.Controls.Add(this.m1ResetButton);
             this.Match_1.Controls.Add(this.m1SwapButton);
-            this.Match_1.Controls.Add(this.m1t2p8Name);
-            this.Match_1.Controls.Add(this.m1t2p8Label);
-            this.Match_1.Controls.Add(this.m1t2p7Name);
-            this.Match_1.Controls.Add(this.m1t2p7Label);
             this.Match_1.Controls.Add(this.m1t2p6Name);
             this.Match_1.Controls.Add(this.m1t2p6Label);
             this.Match_1.Controls.Add(this.m1t2p5Name);
@@ -480,10 +499,6 @@
             this.Match_1.Controls.Add(this.m1t2p2Label);
             this.Match_1.Controls.Add(this.m1t2p1Name);
             this.Match_1.Controls.Add(this.m1t2p1Label);
-            this.Match_1.Controls.Add(this.m1t1p8Name);
-            this.Match_1.Controls.Add(this.m1t1p8Label);
-            this.Match_1.Controls.Add(this.m1t1p7Name);
-            this.Match_1.Controls.Add(this.m1t1p7Label);
             this.Match_1.Controls.Add(this.m1t1p6Name);
             this.Match_1.Controls.Add(this.m1t1p6Label);
             this.Match_1.Controls.Add(this.m1t1p5Name);
@@ -507,14 +522,206 @@
             this.Match_1.Location = new System.Drawing.Point(4, 22);
             this.Match_1.Name = "Match_1";
             this.Match_1.Padding = new System.Windows.Forms.Padding(3);
-            this.Match_1.Size = new System.Drawing.Size(542, 493);
+            this.Match_1.Size = new System.Drawing.Size(659, 414);
             this.Match_1.TabIndex = 0;
             this.Match_1.Text = "Match 1";
             this.Match_1.UseVisualStyleBackColor = true;
             // 
+            // m1t2p6Role
+            // 
+            this.m1t2p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m1t2p6Role.FormattingEnabled = true;
+            this.m1t2p6Role.Location = new System.Drawing.Point(337, 315);
+            this.m1t2p6Role.Name = "m1t2p6Role";
+            this.m1t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m1t2p6Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t2p6Role.TabIndex = 131;
+            this.m1t2p6Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m1t2p5Role
+            // 
+            this.m1t2p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m1t2p5Role.FormattingEnabled = true;
+            this.m1t2p5Role.Location = new System.Drawing.Point(337, 275);
+            this.m1t2p5Role.Name = "m1t2p5Role";
+            this.m1t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m1t2p5Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t2p5Role.TabIndex = 130;
+            this.m1t2p5Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m1t2p4Role
+            // 
+            this.m1t2p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m1t2p4Role.FormattingEnabled = true;
+            this.m1t2p4Role.Location = new System.Drawing.Point(337, 236);
+            this.m1t2p4Role.Name = "m1t2p4Role";
+            this.m1t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m1t2p4Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t2p4Role.TabIndex = 129;
+            this.m1t2p4Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m1t2p3Role
+            // 
+            this.m1t2p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m1t2p3Role.FormattingEnabled = true;
+            this.m1t2p3Role.Location = new System.Drawing.Point(337, 198);
+            this.m1t2p3Role.Name = "m1t2p3Role";
+            this.m1t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m1t2p3Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t2p3Role.TabIndex = 128;
+            this.m1t2p3Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m1t2p2Role
+            // 
+            this.m1t2p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m1t2p2Role.FormattingEnabled = true;
+            this.m1t2p2Role.Location = new System.Drawing.Point(337, 158);
+            this.m1t2p2Role.Name = "m1t2p2Role";
+            this.m1t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m1t2p2Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t2p2Role.TabIndex = 127;
+            this.m1t2p2Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m1t2p1Role
+            // 
+            this.m1t2p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m1t2p1Role.FormattingEnabled = true;
+            this.m1t2p1Role.Location = new System.Drawing.Point(337, 119);
+            this.m1t2p1Role.Name = "m1t2p1Role";
+            this.m1t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m1t2p1Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t2p1Role.TabIndex = 126;
+            this.m1t2p1Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m1t1p6Role
+            // 
+            this.m1t1p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m1t1p6Role.FormattingEnabled = true;
+            this.m1t1p6Role.Location = new System.Drawing.Point(240, 314);
+            this.m1t1p6Role.Name = "m1t1p6Role";
+            this.m1t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p6Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t1p6Role.TabIndex = 125;
+            this.m1t1p6Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m1t1p5Role
+            // 
+            this.m1t1p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m1t1p5Role.FormattingEnabled = true;
+            this.m1t1p5Role.Location = new System.Drawing.Point(240, 275);
+            this.m1t1p5Role.Name = "m1t1p5Role";
+            this.m1t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p5Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t1p5Role.TabIndex = 124;
+            this.m1t1p5Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m1t1p4Role
+            // 
+            this.m1t1p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m1t1p4Role.FormattingEnabled = true;
+            this.m1t1p4Role.Location = new System.Drawing.Point(240, 236);
+            this.m1t1p4Role.Name = "m1t1p4Role";
+            this.m1t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p4Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t1p4Role.TabIndex = 123;
+            this.m1t1p4Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m1t1p3Role
+            // 
+            this.m1t1p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m1t1p3Role.FormattingEnabled = true;
+            this.m1t1p3Role.Location = new System.Drawing.Point(240, 197);
+            this.m1t1p3Role.Name = "m1t1p3Role";
+            this.m1t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p3Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t1p3Role.TabIndex = 122;
+            this.m1t1p3Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m1t1p2Role
+            // 
+            this.m1t1p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m1t1p2Role.FormattingEnabled = true;
+            this.m1t1p2Role.Location = new System.Drawing.Point(240, 158);
+            this.m1t1p2Role.Name = "m1t1p2Role";
+            this.m1t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p2Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t1p2Role.TabIndex = 121;
+            this.m1t1p2Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m1t1p1Role
+            // 
+            this.m1t1p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m1t1p1Role.FormattingEnabled = true;
+            this.m1t1p1Role.Location = new System.Drawing.Point(240, 119);
+            this.m1t1p1Role.Name = "m1t1p1Role";
+            this.m1t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p1Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t1p1Role.TabIndex = 120;
+            this.m1t1p1Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
             // m1m5t2Score
             // 
-            this.m1m5t2Score.Location = new System.Drawing.Point(499, 463);
+            this.m1m5t2Score.Location = new System.Drawing.Point(614, 381);
             this.m1m5t2Score.Name = "m1m5t2Score";
             this.m1m5t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m5t2Score.Size = new System.Drawing.Size(36, 20);
@@ -522,14 +729,14 @@
             // 
             // m1m5t1Score
             // 
-            this.m1m5t1Score.Location = new System.Drawing.Point(452, 463);
+            this.m1m5t1Score.Location = new System.Drawing.Point(567, 381);
             this.m1m5t1Score.Name = "m1m5t1Score";
             this.m1m5t1Score.Size = new System.Drawing.Size(36, 20);
             this.m1m5t1Score.TabIndex = 118;
             // 
             // m1m4t2Score
             // 
-            this.m1m4t2Score.Location = new System.Drawing.Point(394, 463);
+            this.m1m4t2Score.Location = new System.Drawing.Point(471, 381);
             this.m1m4t2Score.Name = "m1m4t2Score";
             this.m1m4t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m4t2Score.Size = new System.Drawing.Size(36, 20);
@@ -537,14 +744,14 @@
             // 
             // m1m4t1Score
             // 
-            this.m1m4t1Score.Location = new System.Drawing.Point(347, 463);
+            this.m1m4t1Score.Location = new System.Drawing.Point(424, 381);
             this.m1m4t1Score.Name = "m1m4t1Score";
             this.m1m4t1Score.Size = new System.Drawing.Size(36, 20);
             this.m1m4t1Score.TabIndex = 116;
             // 
             // m1m3t2Score
             // 
-            this.m1m3t2Score.Location = new System.Drawing.Point(275, 463);
+            this.m1m3t2Score.Location = new System.Drawing.Point(334, 381);
             this.m1m3t2Score.Name = "m1m3t2Score";
             this.m1m3t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m3t2Score.Size = new System.Drawing.Size(36, 20);
@@ -552,14 +759,14 @@
             // 
             // m1m3t1Score
             // 
-            this.m1m3t1Score.Location = new System.Drawing.Point(228, 463);
+            this.m1m3t1Score.Location = new System.Drawing.Point(287, 381);
             this.m1m3t1Score.Name = "m1m3t1Score";
             this.m1m3t1Score.Size = new System.Drawing.Size(36, 20);
             this.m1m3t1Score.TabIndex = 114;
             // 
             // m1m2t2Score
             // 
-            this.m1m2t2Score.Location = new System.Drawing.Point(160, 463);
+            this.m1m2t2Score.Location = new System.Drawing.Point(196, 381);
             this.m1m2t2Score.Name = "m1m2t2Score";
             this.m1m2t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m2t2Score.Size = new System.Drawing.Size(36, 20);
@@ -567,14 +774,14 @@
             // 
             // m1m2t1Score
             // 
-            this.m1m2t1Score.Location = new System.Drawing.Point(113, 463);
+            this.m1m2t1Score.Location = new System.Drawing.Point(149, 381);
             this.m1m2t1Score.Name = "m1m2t1Score";
             this.m1m2t1Score.Size = new System.Drawing.Size(36, 20);
             this.m1m2t1Score.TabIndex = 112;
             // 
             // m1m1t2Score
             // 
-            this.m1m1t2Score.Location = new System.Drawing.Point(54, 463);
+            this.m1m1t2Score.Location = new System.Drawing.Point(52, 381);
             this.m1m1t2Score.Name = "m1m1t2Score";
             this.m1m1t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m1t2Score.Size = new System.Drawing.Size(36, 20);
@@ -582,7 +789,7 @@
             // 
             // m1m1t1Score
             // 
-            this.m1m1t1Score.Location = new System.Drawing.Point(7, 463);
+            this.m1m1t1Score.Location = new System.Drawing.Point(5, 381);
             this.m1m1t1Score.Name = "m1m1t1Score";
             this.m1m1t1Score.Size = new System.Drawing.Size(36, 20);
             this.m1m1t1Score.TabIndex = 110;
@@ -592,11 +799,16 @@
             this.m1m5Map.FormattingEnabled = true;
             this.m1m5Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -607,7 +819,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m1m5Map.Location = new System.Drawing.Point(452, 436);
+            this.m1m5Map.Location = new System.Drawing.Point(567, 354);
             this.m1m5Map.Name = "m1m5Map";
             this.m1m5Map.Size = new System.Drawing.Size(83, 21);
             this.m1m5Map.TabIndex = 109;
@@ -617,11 +829,16 @@
             this.m1m4Map.FormattingEnabled = true;
             this.m1m4Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -632,7 +849,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m1m4Map.Location = new System.Drawing.Point(347, 436);
+            this.m1m4Map.Location = new System.Drawing.Point(424, 354);
             this.m1m4Map.Name = "m1m4Map";
             this.m1m4Map.Size = new System.Drawing.Size(83, 21);
             this.m1m4Map.TabIndex = 108;
@@ -642,11 +859,16 @@
             this.m1m3Map.FormattingEnabled = true;
             this.m1m3Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -657,7 +879,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m1m3Map.Location = new System.Drawing.Point(228, 436);
+            this.m1m3Map.Location = new System.Drawing.Point(287, 354);
             this.m1m3Map.Name = "m1m3Map";
             this.m1m3Map.Size = new System.Drawing.Size(83, 21);
             this.m1m3Map.TabIndex = 107;
@@ -667,11 +889,16 @@
             this.m1m2Map.FormattingEnabled = true;
             this.m1m2Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -682,7 +909,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m1m2Map.Location = new System.Drawing.Point(113, 436);
+            this.m1m2Map.Location = new System.Drawing.Point(149, 354);
             this.m1m2Map.Name = "m1m2Map";
             this.m1m2Map.Size = new System.Drawing.Size(83, 21);
             this.m1m2Map.TabIndex = 106;
@@ -692,11 +919,16 @@
             this.m1m1Map.FormattingEnabled = true;
             this.m1m1Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -707,7 +939,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m1m1Map.Location = new System.Drawing.Point(7, 436);
+            this.m1m1Map.Location = new System.Drawing.Point(5, 354);
             this.m1m1Map.Name = "m1m1Map";
             this.m1m1Map.Size = new System.Drawing.Size(83, 21);
             this.m1m1Map.TabIndex = 105;
@@ -715,7 +947,7 @@
             // m1m3Label
             // 
             this.m1m3Label.AutoSize = true;
-            this.m1m3Label.Location = new System.Drawing.Point(250, 419);
+            this.m1m3Label.Location = new System.Drawing.Point(309, 337);
             this.m1m3Label.Name = "m1m3Label";
             this.m1m3Label.Size = new System.Drawing.Size(37, 13);
             this.m1m3Label.TabIndex = 104;
@@ -724,7 +956,7 @@
             // m1m4Label
             // 
             this.m1m4Label.AutoSize = true;
-            this.m1m4Label.Location = new System.Drawing.Point(378, 419);
+            this.m1m4Label.Location = new System.Drawing.Point(455, 337);
             this.m1m4Label.Name = "m1m4Label";
             this.m1m4Label.Size = new System.Drawing.Size(37, 13);
             this.m1m4Label.TabIndex = 103;
@@ -733,7 +965,7 @@
             // m1m5Label
             // 
             this.m1m5Label.AutoSize = true;
-            this.m1m5Label.Location = new System.Drawing.Point(493, 419);
+            this.m1m5Label.Location = new System.Drawing.Point(608, 337);
             this.m1m5Label.Name = "m1m5Label";
             this.m1m5Label.Size = new System.Drawing.Size(37, 13);
             this.m1m5Label.TabIndex = 102;
@@ -742,7 +974,7 @@
             // m1m2Label
             // 
             this.m1m2Label.AutoSize = true;
-            this.m1m2Label.Location = new System.Drawing.Point(131, 419);
+            this.m1m2Label.Location = new System.Drawing.Point(167, 337);
             this.m1m2Label.Name = "m1m2Label";
             this.m1m2Label.Size = new System.Drawing.Size(37, 13);
             this.m1m2Label.TabIndex = 101;
@@ -751,7 +983,7 @@
             // m1m1Label
             // 
             this.m1m1Label.AutoSize = true;
-            this.m1m1Label.Location = new System.Drawing.Point(16, 419);
+            this.m1m1Label.Location = new System.Drawing.Point(14, 337);
             this.m1m1Label.Name = "m1m1Label";
             this.m1m1Label.Size = new System.Drawing.Size(37, 13);
             this.m1m1Label.TabIndex = 100;
@@ -762,7 +994,7 @@
             this.m1t2Side.Controls.Add(this.m1t2Defend);
             this.m1t2Side.Controls.Add(this.m1t2Attack);
             this.m1t2Side.Controls.Add(this.m1t2Neutral);
-            this.m1t2Side.Location = new System.Drawing.Point(332, 41);
+            this.m1t2Side.Location = new System.Drawing.Point(449, 41);
             this.m1t2Side.Name = "m1t2Side";
             this.m1t2Side.Size = new System.Drawing.Size(120, 30);
             this.m1t2Side.TabIndex = 73;
@@ -862,7 +1094,7 @@
             // m1MessageLabel
             // 
             this.m1MessageLabel.AutoSize = true;
-            this.m1MessageLabel.Location = new System.Drawing.Point(333, 78);
+            this.m1MessageLabel.Location = new System.Drawing.Point(450, 78);
             this.m1MessageLabel.Name = "m1MessageLabel";
             this.m1MessageLabel.Size = new System.Drawing.Size(50, 13);
             this.m1MessageLabel.TabIndex = 63;
@@ -870,7 +1102,7 @@
             // 
             // m1MessageBox
             // 
-            this.m1MessageBox.Location = new System.Drawing.Point(389, 76);
+            this.m1MessageBox.Location = new System.Drawing.Point(506, 76);
             this.m1MessageBox.Name = "m1MessageBox";
             this.m1MessageBox.Size = new System.Drawing.Size(146, 20);
             this.m1MessageBox.TabIndex = 62;
@@ -887,87 +1119,13 @@
             // 
             // m1UpdateButton
             // 
-            this.m1UpdateButton.Location = new System.Drawing.Point(234, 75);
+            this.m1UpdateButton.Location = new System.Drawing.Point(292, 77);
             this.m1UpdateButton.Name = "m1UpdateButton";
             this.m1UpdateButton.Size = new System.Drawing.Size(75, 23);
             this.m1UpdateButton.TabIndex = 57;
             this.m1UpdateButton.Text = "Update";
             this.m1UpdateButton.UseVisualStyleBackColor = true;
             this.m1UpdateButton.Click += new System.EventHandler(this.m1UpdateButton_Click);
-            // 
-            // m1t2p8Hero
-            // 
-            this.m1t2p8Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m1t2p8Hero.FormattingEnabled = true;
-            this.m1t2p8Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Symmetra",
-            "Zenyatta"});
-            this.m1t2p8Hero.Location = new System.Drawing.Point(309, 392);
-            this.m1t2p8Hero.Name = "m1t2p8Hero";
-            this.m1t2p8Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t2p8Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t2p8Hero.TabIndex = 56;
-            // 
-            // m1t2p7Hero
-            // 
-            this.m1t2p7Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m1t2p7Hero.FormattingEnabled = true;
-            this.m1t2p7Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Symmetra",
-            "Zenyatta"});
-            this.m1t2p7Hero.Location = new System.Drawing.Point(309, 353);
-            this.m1t2p7Hero.Name = "m1t2p7Hero";
-            this.m1t2p7Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t2p7Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t2p7Hero.TabIndex = 55;
             // 
             // m1t2p6Hero
             // 
@@ -1000,7 +1158,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m1t2p6Hero.Location = new System.Drawing.Point(309, 314);
+            this.m1t2p6Hero.Location = new System.Drawing.Point(426, 314);
             this.m1t2p6Hero.Name = "m1t2p6Hero";
             this.m1t2p6Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2p6Hero.Size = new System.Drawing.Size(121, 21);
@@ -1037,7 +1195,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m1t2p5Hero.Location = new System.Drawing.Point(309, 275);
+            this.m1t2p5Hero.Location = new System.Drawing.Point(426, 275);
             this.m1t2p5Hero.Name = "m1t2p5Hero";
             this.m1t2p5Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2p5Hero.Size = new System.Drawing.Size(121, 21);
@@ -1074,7 +1232,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m1t2p4Hero.Location = new System.Drawing.Point(309, 236);
+            this.m1t2p4Hero.Location = new System.Drawing.Point(426, 236);
             this.m1t2p4Hero.Name = "m1t2p4Hero";
             this.m1t2p4Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2p4Hero.Size = new System.Drawing.Size(121, 21);
@@ -1111,7 +1269,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m1t2p3Hero.Location = new System.Drawing.Point(309, 197);
+            this.m1t2p3Hero.Location = new System.Drawing.Point(426, 197);
             this.m1t2p3Hero.Name = "m1t2p3Hero";
             this.m1t2p3Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2p3Hero.Size = new System.Drawing.Size(121, 21);
@@ -1148,7 +1306,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m1t2p2Hero.Location = new System.Drawing.Point(309, 158);
+            this.m1t2p2Hero.Location = new System.Drawing.Point(426, 158);
             this.m1t2p2Hero.Name = "m1t2p2Hero";
             this.m1t2p2Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2p2Hero.Size = new System.Drawing.Size(121, 21);
@@ -1185,83 +1343,11 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m1t2p1Hero.Location = new System.Drawing.Point(309, 119);
+            this.m1t2p1Hero.Location = new System.Drawing.Point(426, 119);
             this.m1t2p1Hero.Name = "m1t2p1Hero";
             this.m1t2p1Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2p1Hero.Size = new System.Drawing.Size(121, 21);
             this.m1t2p1Hero.TabIndex = 49;
-            // 
-            // m1t1p8Hero
-            // 
-            this.m1t1p8Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m1t1p8Hero.FormattingEnabled = true;
-            this.m1t1p8Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Symmetra",
-            "Zenyatta"});
-            this.m1t1p8Hero.Location = new System.Drawing.Point(113, 392);
-            this.m1t1p8Hero.Name = "m1t1p8Hero";
-            this.m1t1p8Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t1p8Hero.TabIndex = 48;
-            // 
-            // m1t1p7Hero
-            // 
-            this.m1t1p7Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m1t1p7Hero.FormattingEnabled = true;
-            this.m1t1p7Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Symmetra",
-            "Zenyatta"});
-            this.m1t1p7Hero.Location = new System.Drawing.Point(113, 353);
-            this.m1t1p7Hero.Name = "m1t1p7Hero";
-            this.m1t1p7Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t1p7Hero.TabIndex = 47;
             // 
             // m1t1p6Hero
             // 
@@ -1481,7 +1567,7 @@
             // 
             // m1ResetButton
             // 
-            this.m1ResetButton.Location = new System.Drawing.Point(234, 47);
+            this.m1ResetButton.Location = new System.Drawing.Point(292, 49);
             this.m1ResetButton.Name = "m1ResetButton";
             this.m1ResetButton.Size = new System.Drawing.Size(75, 23);
             this.m1ResetButton.TabIndex = 40;
@@ -1491,7 +1577,7 @@
             // 
             // m1SwapButton
             // 
-            this.m1SwapButton.Location = new System.Drawing.Point(234, 19);
+            this.m1SwapButton.Location = new System.Drawing.Point(292, 21);
             this.m1SwapButton.Name = "m1SwapButton";
             this.m1SwapButton.Size = new System.Drawing.Size(75, 23);
             this.m1SwapButton.TabIndex = 39;
@@ -1499,41 +1585,9 @@
             this.m1SwapButton.UseVisualStyleBackColor = true;
             this.m1SwapButton.Click += new System.EventHandler(this.m1SwapButton_Click);
             // 
-            // m1t2p8Name
-            // 
-            this.m1t2p8Name.Location = new System.Drawing.Point(435, 392);
-            this.m1t2p8Name.Name = "m1t2p8Name";
-            this.m1t2p8Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t2p8Name.TabIndex = 37;
-            // 
-            // m1t2p8Label
-            // 
-            this.m1t2p8Label.AutoSize = true;
-            this.m1t2p8Label.Location = new System.Drawing.Point(491, 376);
-            this.m1t2p8Label.Name = "m1t2p8Label";
-            this.m1t2p8Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t2p8Label.TabIndex = 38;
-            this.m1t2p8Label.Text = "Player 8";
-            // 
-            // m1t2p7Name
-            // 
-            this.m1t2p7Name.Location = new System.Drawing.Point(435, 353);
-            this.m1t2p7Name.Name = "m1t2p7Name";
-            this.m1t2p7Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t2p7Name.TabIndex = 35;
-            // 
-            // m1t2p7Label
-            // 
-            this.m1t2p7Label.AutoSize = true;
-            this.m1t2p7Label.Location = new System.Drawing.Point(491, 337);
-            this.m1t2p7Label.Name = "m1t2p7Label";
-            this.m1t2p7Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t2p7Label.TabIndex = 36;
-            this.m1t2p7Label.Text = "Player 7";
-            // 
             // m1t2p6Name
             // 
-            this.m1t2p6Name.Location = new System.Drawing.Point(435, 314);
+            this.m1t2p6Name.Location = new System.Drawing.Point(552, 314);
             this.m1t2p6Name.Name = "m1t2p6Name";
             this.m1t2p6Name.Size = new System.Drawing.Size(100, 20);
             this.m1t2p6Name.TabIndex = 33;
@@ -1541,7 +1595,7 @@
             // m1t2p6Label
             // 
             this.m1t2p6Label.AutoSize = true;
-            this.m1t2p6Label.Location = new System.Drawing.Point(491, 298);
+            this.m1t2p6Label.Location = new System.Drawing.Point(608, 298);
             this.m1t2p6Label.Name = "m1t2p6Label";
             this.m1t2p6Label.Size = new System.Drawing.Size(45, 13);
             this.m1t2p6Label.TabIndex = 34;
@@ -1549,7 +1603,7 @@
             // 
             // m1t2p5Name
             // 
-            this.m1t2p5Name.Location = new System.Drawing.Point(435, 275);
+            this.m1t2p5Name.Location = new System.Drawing.Point(552, 275);
             this.m1t2p5Name.Name = "m1t2p5Name";
             this.m1t2p5Name.Size = new System.Drawing.Size(100, 20);
             this.m1t2p5Name.TabIndex = 31;
@@ -1557,7 +1611,7 @@
             // m1t2p5Label
             // 
             this.m1t2p5Label.AutoSize = true;
-            this.m1t2p5Label.Location = new System.Drawing.Point(491, 259);
+            this.m1t2p5Label.Location = new System.Drawing.Point(608, 259);
             this.m1t2p5Label.Name = "m1t2p5Label";
             this.m1t2p5Label.Size = new System.Drawing.Size(45, 13);
             this.m1t2p5Label.TabIndex = 32;
@@ -1565,7 +1619,7 @@
             // 
             // m1t2p4Name
             // 
-            this.m1t2p4Name.Location = new System.Drawing.Point(436, 236);
+            this.m1t2p4Name.Location = new System.Drawing.Point(553, 236);
             this.m1t2p4Name.Name = "m1t2p4Name";
             this.m1t2p4Name.Size = new System.Drawing.Size(100, 20);
             this.m1t2p4Name.TabIndex = 29;
@@ -1573,7 +1627,7 @@
             // m1t2p4Label
             // 
             this.m1t2p4Label.AutoSize = true;
-            this.m1t2p4Label.Location = new System.Drawing.Point(491, 220);
+            this.m1t2p4Label.Location = new System.Drawing.Point(608, 220);
             this.m1t2p4Label.Name = "m1t2p4Label";
             this.m1t2p4Label.Size = new System.Drawing.Size(45, 13);
             this.m1t2p4Label.TabIndex = 30;
@@ -1581,7 +1635,7 @@
             // 
             // m1t2p3Name
             // 
-            this.m1t2p3Name.Location = new System.Drawing.Point(436, 197);
+            this.m1t2p3Name.Location = new System.Drawing.Point(553, 197);
             this.m1t2p3Name.Name = "m1t2p3Name";
             this.m1t2p3Name.Size = new System.Drawing.Size(100, 20);
             this.m1t2p3Name.TabIndex = 27;
@@ -1589,7 +1643,7 @@
             // m1t2p3Label
             // 
             this.m1t2p3Label.AutoSize = true;
-            this.m1t2p3Label.Location = new System.Drawing.Point(491, 181);
+            this.m1t2p3Label.Location = new System.Drawing.Point(608, 181);
             this.m1t2p3Label.Name = "m1t2p3Label";
             this.m1t2p3Label.Size = new System.Drawing.Size(45, 13);
             this.m1t2p3Label.TabIndex = 28;
@@ -1597,7 +1651,7 @@
             // 
             // m1t2p2Name
             // 
-            this.m1t2p2Name.Location = new System.Drawing.Point(436, 158);
+            this.m1t2p2Name.Location = new System.Drawing.Point(553, 158);
             this.m1t2p2Name.Name = "m1t2p2Name";
             this.m1t2p2Name.Size = new System.Drawing.Size(100, 20);
             this.m1t2p2Name.TabIndex = 25;
@@ -1605,7 +1659,7 @@
             // m1t2p2Label
             // 
             this.m1t2p2Label.AutoSize = true;
-            this.m1t2p2Label.Location = new System.Drawing.Point(491, 142);
+            this.m1t2p2Label.Location = new System.Drawing.Point(608, 142);
             this.m1t2p2Label.Name = "m1t2p2Label";
             this.m1t2p2Label.Size = new System.Drawing.Size(45, 13);
             this.m1t2p2Label.TabIndex = 26;
@@ -1613,7 +1667,7 @@
             // 
             // m1t2p1Name
             // 
-            this.m1t2p1Name.Location = new System.Drawing.Point(436, 119);
+            this.m1t2p1Name.Location = new System.Drawing.Point(553, 119);
             this.m1t2p1Name.Name = "m1t2p1Name";
             this.m1t2p1Name.Size = new System.Drawing.Size(100, 20);
             this.m1t2p1Name.TabIndex = 23;
@@ -1621,43 +1675,11 @@
             // m1t2p1Label
             // 
             this.m1t2p1Label.AutoSize = true;
-            this.m1t2p1Label.Location = new System.Drawing.Point(491, 103);
+            this.m1t2p1Label.Location = new System.Drawing.Point(608, 103);
             this.m1t2p1Label.Name = "m1t2p1Label";
             this.m1t2p1Label.Size = new System.Drawing.Size(45, 13);
             this.m1t2p1Label.TabIndex = 24;
             this.m1t2p1Label.Text = "Player 1";
-            // 
-            // m1t1p8Name
-            // 
-            this.m1t1p8Name.Location = new System.Drawing.Point(6, 392);
-            this.m1t1p8Name.Name = "m1t1p8Name";
-            this.m1t1p8Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t1p8Name.TabIndex = 21;
-            // 
-            // m1t1p8Label
-            // 
-            this.m1t1p8Label.AutoSize = true;
-            this.m1t1p8Label.Location = new System.Drawing.Point(6, 376);
-            this.m1t1p8Label.Name = "m1t1p8Label";
-            this.m1t1p8Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t1p8Label.TabIndex = 22;
-            this.m1t1p8Label.Text = "Player 8";
-            // 
-            // m1t1p7Name
-            // 
-            this.m1t1p7Name.Location = new System.Drawing.Point(6, 353);
-            this.m1t1p7Name.Name = "m1t1p7Name";
-            this.m1t1p7Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t1p7Name.TabIndex = 19;
-            // 
-            // m1t1p7Label
-            // 
-            this.m1t1p7Label.AutoSize = true;
-            this.m1t1p7Label.Location = new System.Drawing.Point(6, 337);
-            this.m1t1p7Label.Name = "m1t1p7Label";
-            this.m1t1p7Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t1p7Label.TabIndex = 20;
-            this.m1t1p7Label.Text = "Player 7";
             // 
             // m1t1p6Name
             // 
@@ -1757,7 +1779,7 @@
             // 
             // m1t2Score
             // 
-            this.m1t2Score.Location = new System.Drawing.Point(458, 47);
+            this.m1t2Score.Location = new System.Drawing.Point(575, 47);
             this.m1t2Score.Name = "m1t2Score";
             this.m1t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2Score.Size = new System.Drawing.Size(36, 20);
@@ -1773,7 +1795,7 @@
             // m1t2ScoreLabel
             // 
             this.m1t2ScoreLabel.AutoSize = true;
-            this.m1t2ScoreLabel.Location = new System.Drawing.Point(500, 49);
+            this.m1t2ScoreLabel.Location = new System.Drawing.Point(617, 49);
             this.m1t2ScoreLabel.Name = "m1t2ScoreLabel";
             this.m1t2ScoreLabel.Size = new System.Drawing.Size(35, 13);
             this.m1t2ScoreLabel.TabIndex = 4;
@@ -1790,7 +1812,7 @@
             // 
             // m1t2Name
             // 
-            this.m1t2Name.Location = new System.Drawing.Point(357, 21);
+            this.m1t2Name.Location = new System.Drawing.Point(474, 21);
             this.m1t2Name.Name = "m1t2Name";
             this.m1t2Name.Size = new System.Drawing.Size(178, 20);
             this.m1t2Name.TabIndex = 1;
@@ -1798,7 +1820,7 @@
             // m1t2Label
             // 
             this.m1t2Label.AutoSize = true;
-            this.m1t2Label.Location = new System.Drawing.Point(493, 3);
+            this.m1t2Label.Location = new System.Drawing.Point(610, 3);
             this.m1t2Label.Name = "m1t2Label";
             this.m1t2Label.Size = new System.Drawing.Size(43, 13);
             this.m1t2Label.TabIndex = 2;
@@ -1822,6 +1844,20 @@
             // 
             // Match_2
             // 
+            this.Match_2.Controls.Add(this.m2t2SR);
+            this.Match_2.Controls.Add(this.m2t1SR);
+            this.Match_2.Controls.Add(this.m2t2p6Role);
+            this.Match_2.Controls.Add(this.m2t2p5Role);
+            this.Match_2.Controls.Add(this.m2t2p4Role);
+            this.Match_2.Controls.Add(this.m2t2p3Role);
+            this.Match_2.Controls.Add(this.m2t2p2Role);
+            this.Match_2.Controls.Add(this.m2t2p1Role);
+            this.Match_2.Controls.Add(this.m2t1p6Role);
+            this.Match_2.Controls.Add(this.m2t1p5Role);
+            this.Match_2.Controls.Add(this.m2t1p4Role);
+            this.Match_2.Controls.Add(this.m2t1p3Role);
+            this.Match_2.Controls.Add(this.m2t1p2Role);
+            this.Match_2.Controls.Add(this.m2t1p1Role);
             this.Match_2.Controls.Add(this.m2m5t2Score);
             this.Match_2.Controls.Add(this.m2m5t1Score);
             this.Match_2.Controls.Add(this.m2m4t2Score);
@@ -1850,16 +1886,12 @@
             this.Match_2.Controls.Add(this.m2MessageBox);
             this.Match_2.Controls.Add(this.m2currentCheck);
             this.Match_2.Controls.Add(this.m2UpdateButton);
-            this.Match_2.Controls.Add(this.m2t2p8Hero);
-            this.Match_2.Controls.Add(this.m2t2p7Hero);
             this.Match_2.Controls.Add(this.m2t2p6Hero);
             this.Match_2.Controls.Add(this.m2t2p5Hero);
             this.Match_2.Controls.Add(this.m2t2p4Hero);
             this.Match_2.Controls.Add(this.m2t2p3Hero);
             this.Match_2.Controls.Add(this.m2t2p2Hero);
             this.Match_2.Controls.Add(this.m2t2p1Hero);
-            this.Match_2.Controls.Add(this.m2t1p8Hero);
-            this.Match_2.Controls.Add(this.m2t1p7Hero);
             this.Match_2.Controls.Add(this.m2t1p6Hero);
             this.Match_2.Controls.Add(this.m2t1p5Hero);
             this.Match_2.Controls.Add(this.m2t1p4Hero);
@@ -1868,10 +1900,6 @@
             this.Match_2.Controls.Add(this.m2t1p1Hero);
             this.Match_2.Controls.Add(this.m2ResetButton);
             this.Match_2.Controls.Add(this.m2SwapButton);
-            this.Match_2.Controls.Add(this.m2t2p8Name);
-            this.Match_2.Controls.Add(this.m2t2p8Label);
-            this.Match_2.Controls.Add(this.m2t2p7Name);
-            this.Match_2.Controls.Add(this.m2t2p7Label);
             this.Match_2.Controls.Add(this.m2t2p6Name);
             this.Match_2.Controls.Add(this.m2t2p6Label);
             this.Match_2.Controls.Add(this.m2t2p5Name);
@@ -1884,10 +1912,6 @@
             this.Match_2.Controls.Add(this.m2t2p2Label);
             this.Match_2.Controls.Add(this.m2t2p1Name);
             this.Match_2.Controls.Add(this.m2t2p1Label);
-            this.Match_2.Controls.Add(this.m2t1p8Name);
-            this.Match_2.Controls.Add(this.m2t1p8Label);
-            this.Match_2.Controls.Add(this.m2t1p7Name);
-            this.Match_2.Controls.Add(this.m2t1p7Label);
             this.Match_2.Controls.Add(this.m2t1p6Name);
             this.Match_2.Controls.Add(this.m2t1p6Label);
             this.Match_2.Controls.Add(this.m2t1p5Name);
@@ -1911,14 +1935,206 @@
             this.Match_2.Location = new System.Drawing.Point(4, 22);
             this.Match_2.Name = "Match_2";
             this.Match_2.Padding = new System.Windows.Forms.Padding(3);
-            this.Match_2.Size = new System.Drawing.Size(542, 493);
+            this.Match_2.Size = new System.Drawing.Size(659, 414);
             this.Match_2.TabIndex = 0;
             this.Match_2.Text = "Match 2";
             this.Match_2.UseVisualStyleBackColor = true;
             // 
+            // m2t2p6Role
+            // 
+            this.m2t2p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m2t2p6Role.FormattingEnabled = true;
+            this.m2t2p6Role.Location = new System.Drawing.Point(337, 315);
+            this.m2t2p6Role.Name = "m2t2p6Role";
+            this.m2t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m2t2p6Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t2p6Role.TabIndex = 143;
+            this.m2t2p6Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m2t2p5Role
+            // 
+            this.m2t2p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m2t2p5Role.FormattingEnabled = true;
+            this.m2t2p5Role.Location = new System.Drawing.Point(337, 275);
+            this.m2t2p5Role.Name = "m2t2p5Role";
+            this.m2t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m2t2p5Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t2p5Role.TabIndex = 142;
+            this.m2t2p5Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m2t2p4Role
+            // 
+            this.m2t2p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m2t2p4Role.FormattingEnabled = true;
+            this.m2t2p4Role.Location = new System.Drawing.Point(337, 236);
+            this.m2t2p4Role.Name = "m2t2p4Role";
+            this.m2t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m2t2p4Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t2p4Role.TabIndex = 141;
+            this.m2t2p4Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m2t2p3Role
+            // 
+            this.m2t2p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m2t2p3Role.FormattingEnabled = true;
+            this.m2t2p3Role.Location = new System.Drawing.Point(337, 198);
+            this.m2t2p3Role.Name = "m2t2p3Role";
+            this.m2t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m2t2p3Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t2p3Role.TabIndex = 140;
+            this.m2t2p3Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m2t2p2Role
+            // 
+            this.m2t2p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m2t2p2Role.FormattingEnabled = true;
+            this.m2t2p2Role.Location = new System.Drawing.Point(337, 158);
+            this.m2t2p2Role.Name = "m2t2p2Role";
+            this.m2t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m2t2p2Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t2p2Role.TabIndex = 139;
+            this.m2t2p2Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m2t2p1Role
+            // 
+            this.m2t2p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m2t2p1Role.FormattingEnabled = true;
+            this.m2t2p1Role.Location = new System.Drawing.Point(337, 119);
+            this.m2t2p1Role.Name = "m2t2p1Role";
+            this.m2t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m2t2p1Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t2p1Role.TabIndex = 138;
+            this.m2t2p1Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m2t1p6Role
+            // 
+            this.m2t1p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m2t1p6Role.FormattingEnabled = true;
+            this.m2t1p6Role.Location = new System.Drawing.Point(240, 314);
+            this.m2t1p6Role.Name = "m2t1p6Role";
+            this.m2t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2t1p6Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t1p6Role.TabIndex = 137;
+            this.m2t1p6Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m2t1p5Role
+            // 
+            this.m2t1p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m2t1p5Role.FormattingEnabled = true;
+            this.m2t1p5Role.Location = new System.Drawing.Point(240, 275);
+            this.m2t1p5Role.Name = "m2t1p5Role";
+            this.m2t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2t1p5Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t1p5Role.TabIndex = 136;
+            this.m2t1p5Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m2t1p4Role
+            // 
+            this.m2t1p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m2t1p4Role.FormattingEnabled = true;
+            this.m2t1p4Role.Location = new System.Drawing.Point(240, 236);
+            this.m2t1p4Role.Name = "m2t1p4Role";
+            this.m2t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2t1p4Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t1p4Role.TabIndex = 135;
+            this.m2t1p4Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m2t1p3Role
+            // 
+            this.m2t1p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m2t1p3Role.FormattingEnabled = true;
+            this.m2t1p3Role.Location = new System.Drawing.Point(240, 197);
+            this.m2t1p3Role.Name = "m2t1p3Role";
+            this.m2t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2t1p3Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t1p3Role.TabIndex = 134;
+            this.m2t1p3Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m2t1p2Role
+            // 
+            this.m2t1p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m2t1p2Role.FormattingEnabled = true;
+            this.m2t1p2Role.Location = new System.Drawing.Point(240, 158);
+            this.m2t1p2Role.Name = "m2t1p2Role";
+            this.m2t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2t1p2Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t1p2Role.TabIndex = 133;
+            this.m2t1p2Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m2t1p1Role
+            // 
+            this.m2t1p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m2t1p1Role.FormattingEnabled = true;
+            this.m2t1p1Role.Location = new System.Drawing.Point(240, 119);
+            this.m2t1p1Role.Name = "m2t1p1Role";
+            this.m2t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2t1p1Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t1p1Role.TabIndex = 132;
+            this.m2t1p1Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
             // m2m5t2Score
             // 
-            this.m2m5t2Score.Location = new System.Drawing.Point(499, 463);
+            this.m2m5t2Score.Location = new System.Drawing.Point(614, 381);
             this.m2m5t2Score.Name = "m2m5t2Score";
             this.m2m5t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2m5t2Score.Size = new System.Drawing.Size(36, 20);
@@ -1926,14 +2142,14 @@
             // 
             // m2m5t1Score
             // 
-            this.m2m5t1Score.Location = new System.Drawing.Point(452, 463);
+            this.m2m5t1Score.Location = new System.Drawing.Point(567, 381);
             this.m2m5t1Score.Name = "m2m5t1Score";
             this.m2m5t1Score.Size = new System.Drawing.Size(36, 20);
             this.m2m5t1Score.TabIndex = 98;
             // 
             // m2m4t2Score
             // 
-            this.m2m4t2Score.Location = new System.Drawing.Point(394, 463);
+            this.m2m4t2Score.Location = new System.Drawing.Point(471, 381);
             this.m2m4t2Score.Name = "m2m4t2Score";
             this.m2m4t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2m4t2Score.Size = new System.Drawing.Size(36, 20);
@@ -1941,14 +2157,14 @@
             // 
             // m2m4t1Score
             // 
-            this.m2m4t1Score.Location = new System.Drawing.Point(347, 463);
+            this.m2m4t1Score.Location = new System.Drawing.Point(424, 381);
             this.m2m4t1Score.Name = "m2m4t1Score";
             this.m2m4t1Score.Size = new System.Drawing.Size(36, 20);
             this.m2m4t1Score.TabIndex = 96;
             // 
             // m2m3t2Score
             // 
-            this.m2m3t2Score.Location = new System.Drawing.Point(275, 463);
+            this.m2m3t2Score.Location = new System.Drawing.Point(334, 381);
             this.m2m3t2Score.Name = "m2m3t2Score";
             this.m2m3t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2m3t2Score.Size = new System.Drawing.Size(36, 20);
@@ -1956,14 +2172,14 @@
             // 
             // m2m3t1Score
             // 
-            this.m2m3t1Score.Location = new System.Drawing.Point(228, 463);
+            this.m2m3t1Score.Location = new System.Drawing.Point(287, 381);
             this.m2m3t1Score.Name = "m2m3t1Score";
             this.m2m3t1Score.Size = new System.Drawing.Size(36, 20);
             this.m2m3t1Score.TabIndex = 94;
             // 
             // m2m2t2Score
             // 
-            this.m2m2t2Score.Location = new System.Drawing.Point(160, 463);
+            this.m2m2t2Score.Location = new System.Drawing.Point(196, 381);
             this.m2m2t2Score.Name = "m2m2t2Score";
             this.m2m2t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2m2t2Score.Size = new System.Drawing.Size(36, 20);
@@ -1971,14 +2187,14 @@
             // 
             // m2m2t1Score
             // 
-            this.m2m2t1Score.Location = new System.Drawing.Point(113, 463);
+            this.m2m2t1Score.Location = new System.Drawing.Point(149, 381);
             this.m2m2t1Score.Name = "m2m2t1Score";
             this.m2m2t1Score.Size = new System.Drawing.Size(36, 20);
             this.m2m2t1Score.TabIndex = 92;
             // 
             // m2m1t2Score
             // 
-            this.m2m1t2Score.Location = new System.Drawing.Point(54, 463);
+            this.m2m1t2Score.Location = new System.Drawing.Point(52, 381);
             this.m2m1t2Score.Name = "m2m1t2Score";
             this.m2m1t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2m1t2Score.Size = new System.Drawing.Size(36, 20);
@@ -1986,7 +2202,7 @@
             // 
             // m2m1t1Score
             // 
-            this.m2m1t1Score.Location = new System.Drawing.Point(7, 463);
+            this.m2m1t1Score.Location = new System.Drawing.Point(5, 381);
             this.m2m1t1Score.Name = "m2m1t1Score";
             this.m2m1t1Score.Size = new System.Drawing.Size(36, 20);
             this.m2m1t1Score.TabIndex = 90;
@@ -1996,11 +2212,16 @@
             this.m2m5Map.FormattingEnabled = true;
             this.m2m5Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -2011,7 +2232,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m2m5Map.Location = new System.Drawing.Point(452, 436);
+            this.m2m5Map.Location = new System.Drawing.Point(567, 354);
             this.m2m5Map.Name = "m2m5Map";
             this.m2m5Map.Size = new System.Drawing.Size(83, 21);
             this.m2m5Map.TabIndex = 89;
@@ -2021,11 +2242,16 @@
             this.m2m4Map.FormattingEnabled = true;
             this.m2m4Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -2036,7 +2262,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m2m4Map.Location = new System.Drawing.Point(347, 436);
+            this.m2m4Map.Location = new System.Drawing.Point(424, 354);
             this.m2m4Map.Name = "m2m4Map";
             this.m2m4Map.Size = new System.Drawing.Size(83, 21);
             this.m2m4Map.TabIndex = 88;
@@ -2046,11 +2272,16 @@
             this.m2m3Map.FormattingEnabled = true;
             this.m2m3Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -2061,7 +2292,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m2m3Map.Location = new System.Drawing.Point(228, 436);
+            this.m2m3Map.Location = new System.Drawing.Point(287, 354);
             this.m2m3Map.Name = "m2m3Map";
             this.m2m3Map.Size = new System.Drawing.Size(83, 21);
             this.m2m3Map.TabIndex = 87;
@@ -2071,11 +2302,16 @@
             this.m2m2Map.FormattingEnabled = true;
             this.m2m2Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -2086,7 +2322,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m2m2Map.Location = new System.Drawing.Point(113, 436);
+            this.m2m2Map.Location = new System.Drawing.Point(149, 354);
             this.m2m2Map.Name = "m2m2Map";
             this.m2m2Map.Size = new System.Drawing.Size(83, 21);
             this.m2m2Map.TabIndex = 86;
@@ -2096,11 +2332,16 @@
             this.m2m1Map.FormattingEnabled = true;
             this.m2m1Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -2111,7 +2352,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m2m1Map.Location = new System.Drawing.Point(7, 436);
+            this.m2m1Map.Location = new System.Drawing.Point(5, 354);
             this.m2m1Map.Name = "m2m1Map";
             this.m2m1Map.Size = new System.Drawing.Size(83, 21);
             this.m2m1Map.TabIndex = 85;
@@ -2119,7 +2360,7 @@
             // m2m3Label
             // 
             this.m2m3Label.AutoSize = true;
-            this.m2m3Label.Location = new System.Drawing.Point(250, 419);
+            this.m2m3Label.Location = new System.Drawing.Point(309, 337);
             this.m2m3Label.Name = "m2m3Label";
             this.m2m3Label.Size = new System.Drawing.Size(37, 13);
             this.m2m3Label.TabIndex = 84;
@@ -2128,7 +2369,7 @@
             // m2m4Label
             // 
             this.m2m4Label.AutoSize = true;
-            this.m2m4Label.Location = new System.Drawing.Point(378, 419);
+            this.m2m4Label.Location = new System.Drawing.Point(455, 337);
             this.m2m4Label.Name = "m2m4Label";
             this.m2m4Label.Size = new System.Drawing.Size(37, 13);
             this.m2m4Label.TabIndex = 83;
@@ -2137,7 +2378,7 @@
             // m2m5Label
             // 
             this.m2m5Label.AutoSize = true;
-            this.m2m5Label.Location = new System.Drawing.Point(493, 419);
+            this.m2m5Label.Location = new System.Drawing.Point(608, 337);
             this.m2m5Label.Name = "m2m5Label";
             this.m2m5Label.Size = new System.Drawing.Size(37, 13);
             this.m2m5Label.TabIndex = 82;
@@ -2146,7 +2387,7 @@
             // m2m2Label
             // 
             this.m2m2Label.AutoSize = true;
-            this.m2m2Label.Location = new System.Drawing.Point(131, 419);
+            this.m2m2Label.Location = new System.Drawing.Point(167, 337);
             this.m2m2Label.Name = "m2m2Label";
             this.m2m2Label.Size = new System.Drawing.Size(37, 13);
             this.m2m2Label.TabIndex = 81;
@@ -2155,7 +2396,7 @@
             // m2m1Label
             // 
             this.m2m1Label.AutoSize = true;
-            this.m2m1Label.Location = new System.Drawing.Point(16, 419);
+            this.m2m1Label.Location = new System.Drawing.Point(14, 337);
             this.m2m1Label.Name = "m2m1Label";
             this.m2m1Label.Size = new System.Drawing.Size(37, 13);
             this.m2m1Label.TabIndex = 80;
@@ -2166,7 +2407,7 @@
             this.m2t2Side.Controls.Add(this.m2t2Defend);
             this.m2t2Side.Controls.Add(this.m2t2Attack);
             this.m2t2Side.Controls.Add(this.m2t2Neutral);
-            this.m2t2Side.Location = new System.Drawing.Point(332, 41);
+            this.m2t2Side.Location = new System.Drawing.Point(449, 41);
             this.m2t2Side.Name = "m2t2Side";
             this.m2t2Side.Size = new System.Drawing.Size(120, 30);
             this.m2t2Side.TabIndex = 79;
@@ -2266,7 +2507,7 @@
             // m2MessageLabel
             // 
             this.m2MessageLabel.AutoSize = true;
-            this.m2MessageLabel.Location = new System.Drawing.Point(333, 78);
+            this.m2MessageLabel.Location = new System.Drawing.Point(450, 78);
             this.m2MessageLabel.Name = "m2MessageLabel";
             this.m2MessageLabel.Size = new System.Drawing.Size(50, 13);
             this.m2MessageLabel.TabIndex = 63;
@@ -2274,7 +2515,7 @@
             // 
             // m2MessageBox
             // 
-            this.m2MessageBox.Location = new System.Drawing.Point(389, 76);
+            this.m2MessageBox.Location = new System.Drawing.Point(506, 76);
             this.m2MessageBox.Name = "m2MessageBox";
             this.m2MessageBox.Size = new System.Drawing.Size(146, 20);
             this.m2MessageBox.TabIndex = 62;
@@ -2291,87 +2532,13 @@
             // 
             // m2UpdateButton
             // 
-            this.m2UpdateButton.Location = new System.Drawing.Point(234, 75);
+            this.m2UpdateButton.Location = new System.Drawing.Point(292, 77);
             this.m2UpdateButton.Name = "m2UpdateButton";
             this.m2UpdateButton.Size = new System.Drawing.Size(75, 23);
             this.m2UpdateButton.TabIndex = 57;
             this.m2UpdateButton.Text = "Update";
             this.m2UpdateButton.UseVisualStyleBackColor = true;
             this.m2UpdateButton.Click += new System.EventHandler(this.m2UpdateButton_Click);
-            // 
-            // m2t2p8Hero
-            // 
-            this.m2t2p8Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m2t2p8Hero.FormattingEnabled = true;
-            this.m2t2p8Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Symmetra",
-            "Zenyatta"});
-            this.m2t2p8Hero.Location = new System.Drawing.Point(309, 392);
-            this.m2t2p8Hero.Name = "m2t2p8Hero";
-            this.m2t2p8Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m2t2p8Hero.Size = new System.Drawing.Size(121, 21);
-            this.m2t2p8Hero.TabIndex = 56;
-            // 
-            // m2t2p7Hero
-            // 
-            this.m2t2p7Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m2t2p7Hero.FormattingEnabled = true;
-            this.m2t2p7Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Symmetra",
-            "Zenyatta"});
-            this.m2t2p7Hero.Location = new System.Drawing.Point(309, 353);
-            this.m2t2p7Hero.Name = "m2t2p7Hero";
-            this.m2t2p7Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m2t2p7Hero.Size = new System.Drawing.Size(121, 21);
-            this.m2t2p7Hero.TabIndex = 55;
             // 
             // m2t2p6Hero
             // 
@@ -2404,7 +2571,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m2t2p6Hero.Location = new System.Drawing.Point(309, 314);
+            this.m2t2p6Hero.Location = new System.Drawing.Point(426, 314);
             this.m2t2p6Hero.Name = "m2t2p6Hero";
             this.m2t2p6Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2t2p6Hero.Size = new System.Drawing.Size(121, 21);
@@ -2441,7 +2608,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m2t2p5Hero.Location = new System.Drawing.Point(309, 275);
+            this.m2t2p5Hero.Location = new System.Drawing.Point(426, 275);
             this.m2t2p5Hero.Name = "m2t2p5Hero";
             this.m2t2p5Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2t2p5Hero.Size = new System.Drawing.Size(121, 21);
@@ -2478,7 +2645,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m2t2p4Hero.Location = new System.Drawing.Point(309, 236);
+            this.m2t2p4Hero.Location = new System.Drawing.Point(426, 236);
             this.m2t2p4Hero.Name = "m2t2p4Hero";
             this.m2t2p4Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2t2p4Hero.Size = new System.Drawing.Size(121, 21);
@@ -2515,7 +2682,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m2t2p3Hero.Location = new System.Drawing.Point(309, 197);
+            this.m2t2p3Hero.Location = new System.Drawing.Point(426, 197);
             this.m2t2p3Hero.Name = "m2t2p3Hero";
             this.m2t2p3Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2t2p3Hero.Size = new System.Drawing.Size(121, 21);
@@ -2552,7 +2719,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m2t2p2Hero.Location = new System.Drawing.Point(309, 158);
+            this.m2t2p2Hero.Location = new System.Drawing.Point(426, 158);
             this.m2t2p2Hero.Name = "m2t2p2Hero";
             this.m2t2p2Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2t2p2Hero.Size = new System.Drawing.Size(121, 21);
@@ -2589,83 +2756,11 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m2t2p1Hero.Location = new System.Drawing.Point(309, 119);
+            this.m2t2p1Hero.Location = new System.Drawing.Point(426, 119);
             this.m2t2p1Hero.Name = "m2t2p1Hero";
             this.m2t2p1Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2t2p1Hero.Size = new System.Drawing.Size(121, 21);
             this.m2t2p1Hero.TabIndex = 49;
-            // 
-            // m2t1p8Hero
-            // 
-            this.m2t1p8Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m2t1p8Hero.FormattingEnabled = true;
-            this.m2t1p8Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Symmetra",
-            "Zenyatta"});
-            this.m2t1p8Hero.Location = new System.Drawing.Point(113, 392);
-            this.m2t1p8Hero.Name = "m2t1p8Hero";
-            this.m2t1p8Hero.Size = new System.Drawing.Size(121, 21);
-            this.m2t1p8Hero.TabIndex = 48;
-            // 
-            // m2t1p7Hero
-            // 
-            this.m2t1p7Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m2t1p7Hero.FormattingEnabled = true;
-            this.m2t1p7Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Symmetra",
-            "Zenyatta"});
-            this.m2t1p7Hero.Location = new System.Drawing.Point(113, 353);
-            this.m2t1p7Hero.Name = "m2t1p7Hero";
-            this.m2t1p7Hero.Size = new System.Drawing.Size(121, 21);
-            this.m2t1p7Hero.TabIndex = 47;
             // 
             // m2t1p6Hero
             // 
@@ -2885,7 +2980,7 @@
             // 
             // m2ResetButton
             // 
-            this.m2ResetButton.Location = new System.Drawing.Point(234, 47);
+            this.m2ResetButton.Location = new System.Drawing.Point(292, 49);
             this.m2ResetButton.Name = "m2ResetButton";
             this.m2ResetButton.Size = new System.Drawing.Size(75, 23);
             this.m2ResetButton.TabIndex = 40;
@@ -2895,7 +2990,7 @@
             // 
             // m2SwapButton
             // 
-            this.m2SwapButton.Location = new System.Drawing.Point(234, 19);
+            this.m2SwapButton.Location = new System.Drawing.Point(292, 21);
             this.m2SwapButton.Name = "m2SwapButton";
             this.m2SwapButton.Size = new System.Drawing.Size(75, 23);
             this.m2SwapButton.TabIndex = 39;
@@ -2903,41 +2998,9 @@
             this.m2SwapButton.UseVisualStyleBackColor = true;
             this.m2SwapButton.Click += new System.EventHandler(this.m2SwapButton_Click);
             // 
-            // m2t2p8Name
-            // 
-            this.m2t2p8Name.Location = new System.Drawing.Point(435, 392);
-            this.m2t2p8Name.Name = "m2t2p8Name";
-            this.m2t2p8Name.Size = new System.Drawing.Size(100, 20);
-            this.m2t2p8Name.TabIndex = 37;
-            // 
-            // m2t2p8Label
-            // 
-            this.m2t2p8Label.AutoSize = true;
-            this.m2t2p8Label.Location = new System.Drawing.Point(491, 376);
-            this.m2t2p8Label.Name = "m2t2p8Label";
-            this.m2t2p8Label.Size = new System.Drawing.Size(45, 13);
-            this.m2t2p8Label.TabIndex = 38;
-            this.m2t2p8Label.Text = "Player 8";
-            // 
-            // m2t2p7Name
-            // 
-            this.m2t2p7Name.Location = new System.Drawing.Point(435, 353);
-            this.m2t2p7Name.Name = "m2t2p7Name";
-            this.m2t2p7Name.Size = new System.Drawing.Size(100, 20);
-            this.m2t2p7Name.TabIndex = 35;
-            // 
-            // m2t2p7Label
-            // 
-            this.m2t2p7Label.AutoSize = true;
-            this.m2t2p7Label.Location = new System.Drawing.Point(491, 337);
-            this.m2t2p7Label.Name = "m2t2p7Label";
-            this.m2t2p7Label.Size = new System.Drawing.Size(45, 13);
-            this.m2t2p7Label.TabIndex = 36;
-            this.m2t2p7Label.Text = "Player 7";
-            // 
             // m2t2p6Name
             // 
-            this.m2t2p6Name.Location = new System.Drawing.Point(435, 314);
+            this.m2t2p6Name.Location = new System.Drawing.Point(552, 314);
             this.m2t2p6Name.Name = "m2t2p6Name";
             this.m2t2p6Name.Size = new System.Drawing.Size(100, 20);
             this.m2t2p6Name.TabIndex = 33;
@@ -2945,7 +3008,7 @@
             // m2t2p6Label
             // 
             this.m2t2p6Label.AutoSize = true;
-            this.m2t2p6Label.Location = new System.Drawing.Point(491, 298);
+            this.m2t2p6Label.Location = new System.Drawing.Point(608, 298);
             this.m2t2p6Label.Name = "m2t2p6Label";
             this.m2t2p6Label.Size = new System.Drawing.Size(45, 13);
             this.m2t2p6Label.TabIndex = 34;
@@ -2953,7 +3016,7 @@
             // 
             // m2t2p5Name
             // 
-            this.m2t2p5Name.Location = new System.Drawing.Point(435, 275);
+            this.m2t2p5Name.Location = new System.Drawing.Point(552, 275);
             this.m2t2p5Name.Name = "m2t2p5Name";
             this.m2t2p5Name.Size = new System.Drawing.Size(100, 20);
             this.m2t2p5Name.TabIndex = 31;
@@ -2961,7 +3024,7 @@
             // m2t2p5Label
             // 
             this.m2t2p5Label.AutoSize = true;
-            this.m2t2p5Label.Location = new System.Drawing.Point(491, 259);
+            this.m2t2p5Label.Location = new System.Drawing.Point(608, 259);
             this.m2t2p5Label.Name = "m2t2p5Label";
             this.m2t2p5Label.Size = new System.Drawing.Size(45, 13);
             this.m2t2p5Label.TabIndex = 32;
@@ -2969,7 +3032,7 @@
             // 
             // m2t2p4Name
             // 
-            this.m2t2p4Name.Location = new System.Drawing.Point(436, 236);
+            this.m2t2p4Name.Location = new System.Drawing.Point(553, 236);
             this.m2t2p4Name.Name = "m2t2p4Name";
             this.m2t2p4Name.Size = new System.Drawing.Size(100, 20);
             this.m2t2p4Name.TabIndex = 29;
@@ -2977,7 +3040,7 @@
             // m2t2p4Label
             // 
             this.m2t2p4Label.AutoSize = true;
-            this.m2t2p4Label.Location = new System.Drawing.Point(491, 220);
+            this.m2t2p4Label.Location = new System.Drawing.Point(608, 220);
             this.m2t2p4Label.Name = "m2t2p4Label";
             this.m2t2p4Label.Size = new System.Drawing.Size(45, 13);
             this.m2t2p4Label.TabIndex = 30;
@@ -2985,7 +3048,7 @@
             // 
             // m2t2p3Name
             // 
-            this.m2t2p3Name.Location = new System.Drawing.Point(436, 197);
+            this.m2t2p3Name.Location = new System.Drawing.Point(553, 197);
             this.m2t2p3Name.Name = "m2t2p3Name";
             this.m2t2p3Name.Size = new System.Drawing.Size(100, 20);
             this.m2t2p3Name.TabIndex = 27;
@@ -2993,7 +3056,7 @@
             // m2t2p3Label
             // 
             this.m2t2p3Label.AutoSize = true;
-            this.m2t2p3Label.Location = new System.Drawing.Point(491, 181);
+            this.m2t2p3Label.Location = new System.Drawing.Point(608, 181);
             this.m2t2p3Label.Name = "m2t2p3Label";
             this.m2t2p3Label.Size = new System.Drawing.Size(45, 13);
             this.m2t2p3Label.TabIndex = 28;
@@ -3001,7 +3064,7 @@
             // 
             // m2t2p2Name
             // 
-            this.m2t2p2Name.Location = new System.Drawing.Point(436, 158);
+            this.m2t2p2Name.Location = new System.Drawing.Point(553, 158);
             this.m2t2p2Name.Name = "m2t2p2Name";
             this.m2t2p2Name.Size = new System.Drawing.Size(100, 20);
             this.m2t2p2Name.TabIndex = 25;
@@ -3009,7 +3072,7 @@
             // m2t2p2Label
             // 
             this.m2t2p2Label.AutoSize = true;
-            this.m2t2p2Label.Location = new System.Drawing.Point(491, 142);
+            this.m2t2p2Label.Location = new System.Drawing.Point(608, 142);
             this.m2t2p2Label.Name = "m2t2p2Label";
             this.m2t2p2Label.Size = new System.Drawing.Size(45, 13);
             this.m2t2p2Label.TabIndex = 26;
@@ -3017,7 +3080,7 @@
             // 
             // m2t2p1Name
             // 
-            this.m2t2p1Name.Location = new System.Drawing.Point(436, 119);
+            this.m2t2p1Name.Location = new System.Drawing.Point(553, 119);
             this.m2t2p1Name.Name = "m2t2p1Name";
             this.m2t2p1Name.Size = new System.Drawing.Size(100, 20);
             this.m2t2p1Name.TabIndex = 23;
@@ -3025,43 +3088,11 @@
             // m2t2p1Label
             // 
             this.m2t2p1Label.AutoSize = true;
-            this.m2t2p1Label.Location = new System.Drawing.Point(491, 103);
+            this.m2t2p1Label.Location = new System.Drawing.Point(608, 103);
             this.m2t2p1Label.Name = "m2t2p1Label";
             this.m2t2p1Label.Size = new System.Drawing.Size(45, 13);
             this.m2t2p1Label.TabIndex = 24;
             this.m2t2p1Label.Text = "Player 1";
-            // 
-            // m2t1p8Name
-            // 
-            this.m2t1p8Name.Location = new System.Drawing.Point(6, 392);
-            this.m2t1p8Name.Name = "m2t1p8Name";
-            this.m2t1p8Name.Size = new System.Drawing.Size(100, 20);
-            this.m2t1p8Name.TabIndex = 21;
-            // 
-            // m2t1p8Label
-            // 
-            this.m2t1p8Label.AutoSize = true;
-            this.m2t1p8Label.Location = new System.Drawing.Point(6, 376);
-            this.m2t1p8Label.Name = "m2t1p8Label";
-            this.m2t1p8Label.Size = new System.Drawing.Size(45, 13);
-            this.m2t1p8Label.TabIndex = 22;
-            this.m2t1p8Label.Text = "Player 8";
-            // 
-            // m2t1p7Name
-            // 
-            this.m2t1p7Name.Location = new System.Drawing.Point(6, 353);
-            this.m2t1p7Name.Name = "m2t1p7Name";
-            this.m2t1p7Name.Size = new System.Drawing.Size(100, 20);
-            this.m2t1p7Name.TabIndex = 19;
-            // 
-            // m2t1p7Label
-            // 
-            this.m2t1p7Label.AutoSize = true;
-            this.m2t1p7Label.Location = new System.Drawing.Point(6, 337);
-            this.m2t1p7Label.Name = "m2t1p7Label";
-            this.m2t1p7Label.Size = new System.Drawing.Size(45, 13);
-            this.m2t1p7Label.TabIndex = 20;
-            this.m2t1p7Label.Text = "Player 7";
             // 
             // m2t1p6Name
             // 
@@ -3161,7 +3192,7 @@
             // 
             // m2t2Score
             // 
-            this.m2t2Score.Location = new System.Drawing.Point(458, 47);
+            this.m2t2Score.Location = new System.Drawing.Point(575, 47);
             this.m2t2Score.Name = "m2t2Score";
             this.m2t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m2t2Score.Size = new System.Drawing.Size(36, 20);
@@ -3177,7 +3208,7 @@
             // m2t2ScoreLabel
             // 
             this.m2t2ScoreLabel.AutoSize = true;
-            this.m2t2ScoreLabel.Location = new System.Drawing.Point(500, 49);
+            this.m2t2ScoreLabel.Location = new System.Drawing.Point(617, 49);
             this.m2t2ScoreLabel.Name = "m2t2ScoreLabel";
             this.m2t2ScoreLabel.Size = new System.Drawing.Size(35, 13);
             this.m2t2ScoreLabel.TabIndex = 4;
@@ -3194,7 +3225,7 @@
             // 
             // m2t2Name
             // 
-            this.m2t2Name.Location = new System.Drawing.Point(357, 21);
+            this.m2t2Name.Location = new System.Drawing.Point(474, 21);
             this.m2t2Name.Name = "m2t2Name";
             this.m2t2Name.Size = new System.Drawing.Size(178, 20);
             this.m2t2Name.TabIndex = 1;
@@ -3202,7 +3233,7 @@
             // m2t2Label
             // 
             this.m2t2Label.AutoSize = true;
-            this.m2t2Label.Location = new System.Drawing.Point(493, 3);
+            this.m2t2Label.Location = new System.Drawing.Point(610, 3);
             this.m2t2Label.Name = "m2t2Label";
             this.m2t2Label.Size = new System.Drawing.Size(43, 13);
             this.m2t2Label.TabIndex = 2;
@@ -3226,6 +3257,20 @@
             // 
             // Match_3
             // 
+            this.Match_3.Controls.Add(this.m3t2SR);
+            this.Match_3.Controls.Add(this.m3t1SR);
+            this.Match_3.Controls.Add(this.m3t2p6Role);
+            this.Match_3.Controls.Add(this.m3t2p5Role);
+            this.Match_3.Controls.Add(this.m3t2p4Role);
+            this.Match_3.Controls.Add(this.m3t2p3Role);
+            this.Match_3.Controls.Add(this.m3t2p2Role);
+            this.Match_3.Controls.Add(this.m3t2p1Role);
+            this.Match_3.Controls.Add(this.m3t1p6Role);
+            this.Match_3.Controls.Add(this.m3t1p5Role);
+            this.Match_3.Controls.Add(this.m3t1p4Role);
+            this.Match_3.Controls.Add(this.m3t1p3Role);
+            this.Match_3.Controls.Add(this.m3t1p2Role);
+            this.Match_3.Controls.Add(this.m3t1p1Role);
             this.Match_3.Controls.Add(this.m3m5t2Score);
             this.Match_3.Controls.Add(this.m3m5t1Score);
             this.Match_3.Controls.Add(this.m3m4t2Score);
@@ -3254,16 +3299,12 @@
             this.Match_3.Controls.Add(this.m3MessageBox);
             this.Match_3.Controls.Add(this.m3currentCheck);
             this.Match_3.Controls.Add(this.m3UpdateButton);
-            this.Match_3.Controls.Add(this.m3t2p8Hero);
-            this.Match_3.Controls.Add(this.m3t2p7Hero);
             this.Match_3.Controls.Add(this.m3t2p6Hero);
             this.Match_3.Controls.Add(this.m3t2p5Hero);
             this.Match_3.Controls.Add(this.m3t2p4Hero);
             this.Match_3.Controls.Add(this.m3t2p3Hero);
             this.Match_3.Controls.Add(this.m3t2p2Hero);
             this.Match_3.Controls.Add(this.m3t2p1Hero);
-            this.Match_3.Controls.Add(this.m3t1p8Hero);
-            this.Match_3.Controls.Add(this.m3t1p7Hero);
             this.Match_3.Controls.Add(this.m3t1p6Hero);
             this.Match_3.Controls.Add(this.m3t1p5Hero);
             this.Match_3.Controls.Add(this.m3t1p4Hero);
@@ -3272,10 +3313,6 @@
             this.Match_3.Controls.Add(this.m3t1p1Hero);
             this.Match_3.Controls.Add(this.m3ResetButton);
             this.Match_3.Controls.Add(this.m3SwapButton);
-            this.Match_3.Controls.Add(this.m3t2p8Name);
-            this.Match_3.Controls.Add(this.m3t2p8Label);
-            this.Match_3.Controls.Add(this.m3t2p7Name);
-            this.Match_3.Controls.Add(this.m3t2p7Label);
             this.Match_3.Controls.Add(this.m3t2p6Name);
             this.Match_3.Controls.Add(this.m3t2p6Label);
             this.Match_3.Controls.Add(this.m3t2p5Name);
@@ -3288,10 +3325,6 @@
             this.Match_3.Controls.Add(this.m3t2p2Label);
             this.Match_3.Controls.Add(this.m3t2p1Name);
             this.Match_3.Controls.Add(this.m3t2p1Label);
-            this.Match_3.Controls.Add(this.m3t1p8Name);
-            this.Match_3.Controls.Add(this.m3t1p8Label);
-            this.Match_3.Controls.Add(this.m3t1p7Name);
-            this.Match_3.Controls.Add(this.m3t1p7Label);
             this.Match_3.Controls.Add(this.m3t1p6Name);
             this.Match_3.Controls.Add(this.m3t1p6Label);
             this.Match_3.Controls.Add(this.m3t1p5Name);
@@ -3315,14 +3348,206 @@
             this.Match_3.Location = new System.Drawing.Point(4, 22);
             this.Match_3.Name = "Match_3";
             this.Match_3.Padding = new System.Windows.Forms.Padding(3);
-            this.Match_3.Size = new System.Drawing.Size(542, 493);
+            this.Match_3.Size = new System.Drawing.Size(659, 414);
             this.Match_3.TabIndex = 0;
             this.Match_3.Text = "Match 3";
             this.Match_3.UseVisualStyleBackColor = true;
             // 
+            // m3t2p6Role
+            // 
+            this.m3t2p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m3t2p6Role.FormattingEnabled = true;
+            this.m3t2p6Role.Location = new System.Drawing.Point(337, 315);
+            this.m3t2p6Role.Name = "m3t2p6Role";
+            this.m3t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m3t2p6Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t2p6Role.TabIndex = 143;
+            this.m3t2p6Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m3t2p5Role
+            // 
+            this.m3t2p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m3t2p5Role.FormattingEnabled = true;
+            this.m3t2p5Role.Location = new System.Drawing.Point(337, 275);
+            this.m3t2p5Role.Name = "m3t2p5Role";
+            this.m3t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m3t2p5Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t2p5Role.TabIndex = 142;
+            this.m3t2p5Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m3t2p4Role
+            // 
+            this.m3t2p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m3t2p4Role.FormattingEnabled = true;
+            this.m3t2p4Role.Location = new System.Drawing.Point(337, 236);
+            this.m3t2p4Role.Name = "m3t2p4Role";
+            this.m3t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m3t2p4Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t2p4Role.TabIndex = 141;
+            this.m3t2p4Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m3t2p3Role
+            // 
+            this.m3t2p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m3t2p3Role.FormattingEnabled = true;
+            this.m3t2p3Role.Location = new System.Drawing.Point(337, 198);
+            this.m3t2p3Role.Name = "m3t2p3Role";
+            this.m3t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m3t2p3Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t2p3Role.TabIndex = 140;
+            this.m3t2p3Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m3t2p2Role
+            // 
+            this.m3t2p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m3t2p2Role.FormattingEnabled = true;
+            this.m3t2p2Role.Location = new System.Drawing.Point(337, 158);
+            this.m3t2p2Role.Name = "m3t2p2Role";
+            this.m3t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m3t2p2Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t2p2Role.TabIndex = 139;
+            this.m3t2p2Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m3t2p1Role
+            // 
+            this.m3t2p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m3t2p1Role.FormattingEnabled = true;
+            this.m3t2p1Role.Location = new System.Drawing.Point(337, 119);
+            this.m3t2p1Role.Name = "m3t2p1Role";
+            this.m3t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m3t2p1Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t2p1Role.TabIndex = 138;
+            this.m3t2p1Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m3t1p6Role
+            // 
+            this.m3t1p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m3t1p6Role.FormattingEnabled = true;
+            this.m3t1p6Role.Location = new System.Drawing.Point(240, 314);
+            this.m3t1p6Role.Name = "m3t1p6Role";
+            this.m3t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3t1p6Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t1p6Role.TabIndex = 137;
+            this.m3t1p6Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m3t1p5Role
+            // 
+            this.m3t1p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m3t1p5Role.FormattingEnabled = true;
+            this.m3t1p5Role.Location = new System.Drawing.Point(240, 275);
+            this.m3t1p5Role.Name = "m3t1p5Role";
+            this.m3t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3t1p5Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t1p5Role.TabIndex = 136;
+            this.m3t1p5Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m3t1p4Role
+            // 
+            this.m3t1p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m3t1p4Role.FormattingEnabled = true;
+            this.m3t1p4Role.Location = new System.Drawing.Point(240, 236);
+            this.m3t1p4Role.Name = "m3t1p4Role";
+            this.m3t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3t1p4Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t1p4Role.TabIndex = 135;
+            this.m3t1p4Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m3t1p3Role
+            // 
+            this.m3t1p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m3t1p3Role.FormattingEnabled = true;
+            this.m3t1p3Role.Location = new System.Drawing.Point(240, 197);
+            this.m3t1p3Role.Name = "m3t1p3Role";
+            this.m3t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3t1p3Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t1p3Role.TabIndex = 134;
+            this.m3t1p3Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m3t1p2Role
+            // 
+            this.m3t1p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m3t1p2Role.FormattingEnabled = true;
+            this.m3t1p2Role.Location = new System.Drawing.Point(240, 158);
+            this.m3t1p2Role.Name = "m3t1p2Role";
+            this.m3t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3t1p2Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t1p2Role.TabIndex = 133;
+            this.m3t1p2Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
+            // m3t1p1Role
+            // 
+            this.m3t1p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m3t1p1Role.FormattingEnabled = true;
+            this.m3t1p1Role.Location = new System.Drawing.Point(240, 119);
+            this.m3t1p1Role.Name = "m3t1p1Role";
+            this.m3t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3t1p1Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t1p1Role.TabIndex = 132;
+            this.m3t1p1Role.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Supp",
+            "Tank"});
+            // 
             // m3m5t2Score
             // 
-            this.m3m5t2Score.Location = new System.Drawing.Point(499, 463);
+            this.m3m5t2Score.Location = new System.Drawing.Point(614, 381);
             this.m3m5t2Score.Name = "m3m5t2Score";
             this.m3m5t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3m5t2Score.Size = new System.Drawing.Size(36, 20);
@@ -3330,14 +3555,14 @@
             // 
             // m3m5t1Score
             // 
-            this.m3m5t1Score.Location = new System.Drawing.Point(452, 463);
+            this.m3m5t1Score.Location = new System.Drawing.Point(567, 381);
             this.m3m5t1Score.Name = "m3m5t1Score";
             this.m3m5t1Score.Size = new System.Drawing.Size(36, 20);
             this.m3m5t1Score.TabIndex = 118;
             // 
             // m3m4t2Score
             // 
-            this.m3m4t2Score.Location = new System.Drawing.Point(394, 463);
+            this.m3m4t2Score.Location = new System.Drawing.Point(471, 381);
             this.m3m4t2Score.Name = "m3m4t2Score";
             this.m3m4t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3m4t2Score.Size = new System.Drawing.Size(36, 20);
@@ -3345,14 +3570,14 @@
             // 
             // m3m4t1Score
             // 
-            this.m3m4t1Score.Location = new System.Drawing.Point(347, 463);
+            this.m3m4t1Score.Location = new System.Drawing.Point(424, 381);
             this.m3m4t1Score.Name = "m3m4t1Score";
             this.m3m4t1Score.Size = new System.Drawing.Size(36, 20);
             this.m3m4t1Score.TabIndex = 116;
             // 
             // m3m3t2Score
             // 
-            this.m3m3t2Score.Location = new System.Drawing.Point(275, 463);
+            this.m3m3t2Score.Location = new System.Drawing.Point(334, 381);
             this.m3m3t2Score.Name = "m3m3t2Score";
             this.m3m3t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3m3t2Score.Size = new System.Drawing.Size(36, 20);
@@ -3360,14 +3585,14 @@
             // 
             // m3m3t1Score
             // 
-            this.m3m3t1Score.Location = new System.Drawing.Point(228, 463);
+            this.m3m3t1Score.Location = new System.Drawing.Point(287, 381);
             this.m3m3t1Score.Name = "m3m3t1Score";
             this.m3m3t1Score.Size = new System.Drawing.Size(36, 20);
             this.m3m3t1Score.TabIndex = 114;
             // 
             // m3m2t2Score
             // 
-            this.m3m2t2Score.Location = new System.Drawing.Point(160, 463);
+            this.m3m2t2Score.Location = new System.Drawing.Point(196, 381);
             this.m3m2t2Score.Name = "m3m2t2Score";
             this.m3m2t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3m2t2Score.Size = new System.Drawing.Size(36, 20);
@@ -3375,14 +3600,14 @@
             // 
             // m3m2t1Score
             // 
-            this.m3m2t1Score.Location = new System.Drawing.Point(113, 463);
+            this.m3m2t1Score.Location = new System.Drawing.Point(149, 381);
             this.m3m2t1Score.Name = "m3m2t1Score";
             this.m3m2t1Score.Size = new System.Drawing.Size(36, 20);
             this.m3m2t1Score.TabIndex = 112;
             // 
             // m3m1t2Score
             // 
-            this.m3m1t2Score.Location = new System.Drawing.Point(54, 463);
+            this.m3m1t2Score.Location = new System.Drawing.Point(52, 381);
             this.m3m1t2Score.Name = "m3m1t2Score";
             this.m3m1t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3m1t2Score.Size = new System.Drawing.Size(36, 20);
@@ -3390,7 +3615,7 @@
             // 
             // m3m1t1Score
             // 
-            this.m3m1t1Score.Location = new System.Drawing.Point(7, 463);
+            this.m3m1t1Score.Location = new System.Drawing.Point(5, 381);
             this.m3m1t1Score.Name = "m3m1t1Score";
             this.m3m1t1Score.Size = new System.Drawing.Size(36, 20);
             this.m3m1t1Score.TabIndex = 110;
@@ -3400,11 +3625,16 @@
             this.m3m5Map.FormattingEnabled = true;
             this.m3m5Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -3415,7 +3645,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m3m5Map.Location = new System.Drawing.Point(452, 436);
+            this.m3m5Map.Location = new System.Drawing.Point(567, 354);
             this.m3m5Map.Name = "m3m5Map";
             this.m3m5Map.Size = new System.Drawing.Size(83, 21);
             this.m3m5Map.TabIndex = 109;
@@ -3425,11 +3655,16 @@
             this.m3m4Map.FormattingEnabled = true;
             this.m3m4Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -3440,7 +3675,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m3m4Map.Location = new System.Drawing.Point(347, 436);
+            this.m3m4Map.Location = new System.Drawing.Point(424, 354);
             this.m3m4Map.Name = "m3m4Map";
             this.m3m4Map.Size = new System.Drawing.Size(83, 21);
             this.m3m4Map.TabIndex = 108;
@@ -3450,11 +3685,16 @@
             this.m3m3Map.FormattingEnabled = true;
             this.m3m3Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -3465,7 +3705,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m3m3Map.Location = new System.Drawing.Point(228, 436);
+            this.m3m3Map.Location = new System.Drawing.Point(287, 354);
             this.m3m3Map.Name = "m3m3Map";
             this.m3m3Map.Size = new System.Drawing.Size(83, 21);
             this.m3m3Map.TabIndex = 107;
@@ -3475,11 +3715,16 @@
             this.m3m2Map.FormattingEnabled = true;
             this.m3m2Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -3490,7 +3735,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m3m2Map.Location = new System.Drawing.Point(113, 436);
+            this.m3m2Map.Location = new System.Drawing.Point(149, 354);
             this.m3m2Map.Name = "m3m2Map";
             this.m3m2Map.Size = new System.Drawing.Size(83, 21);
             this.m3m2Map.TabIndex = 106;
@@ -3500,11 +3745,16 @@
             this.m3m1Map.FormattingEnabled = true;
             this.m3m1Map.Items.AddRange(new object[] {
             "",
+            "Assault",
+            "Escort",
+            "Hybrid",
+            "Control",
             "Hanamura",
             "Horizon Lunar Colony",
             "Temple of Anubis",
             "Volskaya Industries",
             "Dorado",
+            "Junkertown",
             "Route 66",
             "Watchpoint: Gibraltar",
             "Eichenwalde",
@@ -3515,7 +3765,7 @@
             "Lijiang Tower",
             "Nepal",
             "Oasis"});
-            this.m3m1Map.Location = new System.Drawing.Point(7, 436);
+            this.m3m1Map.Location = new System.Drawing.Point(5, 354);
             this.m3m1Map.Name = "m3m1Map";
             this.m3m1Map.Size = new System.Drawing.Size(83, 21);
             this.m3m1Map.TabIndex = 105;
@@ -3523,7 +3773,7 @@
             // m3m3Label
             // 
             this.m3m3Label.AutoSize = true;
-            this.m3m3Label.Location = new System.Drawing.Point(250, 419);
+            this.m3m3Label.Location = new System.Drawing.Point(309, 337);
             this.m3m3Label.Name = "m3m3Label";
             this.m3m3Label.Size = new System.Drawing.Size(37, 13);
             this.m3m3Label.TabIndex = 104;
@@ -3532,7 +3782,7 @@
             // m3m4Label
             // 
             this.m3m4Label.AutoSize = true;
-            this.m3m4Label.Location = new System.Drawing.Point(378, 419);
+            this.m3m4Label.Location = new System.Drawing.Point(455, 337);
             this.m3m4Label.Name = "m3m4Label";
             this.m3m4Label.Size = new System.Drawing.Size(37, 13);
             this.m3m4Label.TabIndex = 103;
@@ -3541,7 +3791,7 @@
             // m3m5Label
             // 
             this.m3m5Label.AutoSize = true;
-            this.m3m5Label.Location = new System.Drawing.Point(493, 419);
+            this.m3m5Label.Location = new System.Drawing.Point(608, 337);
             this.m3m5Label.Name = "m3m5Label";
             this.m3m5Label.Size = new System.Drawing.Size(37, 13);
             this.m3m5Label.TabIndex = 102;
@@ -3550,7 +3800,7 @@
             // m3m2Label
             // 
             this.m3m2Label.AutoSize = true;
-            this.m3m2Label.Location = new System.Drawing.Point(131, 419);
+            this.m3m2Label.Location = new System.Drawing.Point(167, 337);
             this.m3m2Label.Name = "m3m2Label";
             this.m3m2Label.Size = new System.Drawing.Size(37, 13);
             this.m3m2Label.TabIndex = 101;
@@ -3559,7 +3809,7 @@
             // m3m1Label
             // 
             this.m3m1Label.AutoSize = true;
-            this.m3m1Label.Location = new System.Drawing.Point(16, 419);
+            this.m3m1Label.Location = new System.Drawing.Point(14, 337);
             this.m3m1Label.Name = "m3m1Label";
             this.m3m1Label.Size = new System.Drawing.Size(37, 13);
             this.m3m1Label.TabIndex = 100;
@@ -3570,7 +3820,7 @@
             this.m3t2Side.Controls.Add(this.m3t2Attack);
             this.m3t2Side.Controls.Add(this.m3t2Defend);
             this.m3t2Side.Controls.Add(this.m3t2Neutral);
-            this.m3t2Side.Location = new System.Drawing.Point(332, 41);
+            this.m3t2Side.Location = new System.Drawing.Point(449, 41);
             this.m3t2Side.Name = "m3t2Side";
             this.m3t2Side.Size = new System.Drawing.Size(120, 30);
             this.m3t2Side.TabIndex = 85;
@@ -3670,7 +3920,7 @@
             // m3MessageLabel
             // 
             this.m3MessageLabel.AutoSize = true;
-            this.m3MessageLabel.Location = new System.Drawing.Point(333, 78);
+            this.m3MessageLabel.Location = new System.Drawing.Point(450, 78);
             this.m3MessageLabel.Name = "m3MessageLabel";
             this.m3MessageLabel.Size = new System.Drawing.Size(50, 13);
             this.m3MessageLabel.TabIndex = 63;
@@ -3678,7 +3928,7 @@
             // 
             // m3MessageBox
             // 
-            this.m3MessageBox.Location = new System.Drawing.Point(389, 76);
+            this.m3MessageBox.Location = new System.Drawing.Point(506, 76);
             this.m3MessageBox.Name = "m3MessageBox";
             this.m3MessageBox.Size = new System.Drawing.Size(146, 20);
             this.m3MessageBox.TabIndex = 62;
@@ -3695,87 +3945,13 @@
             // 
             // m3UpdateButton
             // 
-            this.m3UpdateButton.Location = new System.Drawing.Point(234, 75);
+            this.m3UpdateButton.Location = new System.Drawing.Point(292, 77);
             this.m3UpdateButton.Name = "m3UpdateButton";
             this.m3UpdateButton.Size = new System.Drawing.Size(75, 23);
             this.m3UpdateButton.TabIndex = 57;
             this.m3UpdateButton.Text = "Update";
             this.m3UpdateButton.UseVisualStyleBackColor = true;
             this.m3UpdateButton.Click += new System.EventHandler(this.m3UpdateButton_Click);
-            // 
-            // m3t2p8Hero
-            // 
-            this.m3t2p8Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m3t2p8Hero.FormattingEnabled = true;
-            this.m3t2p8Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Symmetra",
-            "Zenyatta"});
-            this.m3t2p8Hero.Location = new System.Drawing.Point(309, 392);
-            this.m3t2p8Hero.Name = "m3t2p8Hero";
-            this.m3t2p8Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m3t2p8Hero.Size = new System.Drawing.Size(121, 21);
-            this.m3t2p8Hero.TabIndex = 56;
-            // 
-            // m3t2p7Hero
-            // 
-            this.m3t2p7Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m3t2p7Hero.FormattingEnabled = true;
-            this.m3t2p7Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Symmetra",
-            "Zenyatta"});
-            this.m3t2p7Hero.Location = new System.Drawing.Point(309, 353);
-            this.m3t2p7Hero.Name = "m3t2p7Hero";
-            this.m3t2p7Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m3t2p7Hero.Size = new System.Drawing.Size(121, 21);
-            this.m3t2p7Hero.TabIndex = 55;
             // 
             // m3t2p6Hero
             // 
@@ -3808,7 +3984,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m3t2p6Hero.Location = new System.Drawing.Point(309, 314);
+            this.m3t2p6Hero.Location = new System.Drawing.Point(426, 314);
             this.m3t2p6Hero.Name = "m3t2p6Hero";
             this.m3t2p6Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3t2p6Hero.Size = new System.Drawing.Size(121, 21);
@@ -3845,7 +4021,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m3t2p5Hero.Location = new System.Drawing.Point(309, 275);
+            this.m3t2p5Hero.Location = new System.Drawing.Point(426, 275);
             this.m3t2p5Hero.Name = "m3t2p5Hero";
             this.m3t2p5Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3t2p5Hero.Size = new System.Drawing.Size(121, 21);
@@ -3882,7 +4058,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m3t2p4Hero.Location = new System.Drawing.Point(309, 236);
+            this.m3t2p4Hero.Location = new System.Drawing.Point(426, 236);
             this.m3t2p4Hero.Name = "m3t2p4Hero";
             this.m3t2p4Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3t2p4Hero.Size = new System.Drawing.Size(121, 21);
@@ -3919,7 +4095,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m3t2p3Hero.Location = new System.Drawing.Point(309, 197);
+            this.m3t2p3Hero.Location = new System.Drawing.Point(426, 197);
             this.m3t2p3Hero.Name = "m3t2p3Hero";
             this.m3t2p3Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3t2p3Hero.Size = new System.Drawing.Size(121, 21);
@@ -3956,7 +4132,7 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m3t2p2Hero.Location = new System.Drawing.Point(309, 158);
+            this.m3t2p2Hero.Location = new System.Drawing.Point(426, 158);
             this.m3t2p2Hero.Name = "m3t2p2Hero";
             this.m3t2p2Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3t2p2Hero.Size = new System.Drawing.Size(121, 21);
@@ -3993,83 +4169,11 @@
             "Mercy",
             "Symmetra",
             "Zenyatta"});
-            this.m3t2p1Hero.Location = new System.Drawing.Point(309, 119);
+            this.m3t2p1Hero.Location = new System.Drawing.Point(426, 119);
             this.m3t2p1Hero.Name = "m3t2p1Hero";
             this.m3t2p1Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3t2p1Hero.Size = new System.Drawing.Size(121, 21);
             this.m3t2p1Hero.TabIndex = 49;
-            // 
-            // m3t1p8Hero
-            // 
-            this.m3t1p8Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m3t1p8Hero.FormattingEnabled = true;
-            this.m3t1p8Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Symmetra",
-            "Zenyatta"});
-            this.m3t1p8Hero.Location = new System.Drawing.Point(113, 392);
-            this.m3t1p8Hero.Name = "m3t1p8Hero";
-            this.m3t1p8Hero.Size = new System.Drawing.Size(121, 21);
-            this.m3t1p8Hero.TabIndex = 48;
-            // 
-            // m3t1p7Hero
-            // 
-            this.m3t1p7Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m3t1p7Hero.FormattingEnabled = true;
-            this.m3t1p7Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Symmetra",
-            "Zenyatta"});
-            this.m3t1p7Hero.Location = new System.Drawing.Point(113, 353);
-            this.m3t1p7Hero.Name = "m3t1p7Hero";
-            this.m3t1p7Hero.Size = new System.Drawing.Size(121, 21);
-            this.m3t1p7Hero.TabIndex = 47;
             // 
             // m3t1p6Hero
             // 
@@ -4289,7 +4393,7 @@
             // 
             // m3ResetButton
             // 
-            this.m3ResetButton.Location = new System.Drawing.Point(234, 47);
+            this.m3ResetButton.Location = new System.Drawing.Point(292, 49);
             this.m3ResetButton.Name = "m3ResetButton";
             this.m3ResetButton.Size = new System.Drawing.Size(75, 23);
             this.m3ResetButton.TabIndex = 40;
@@ -4299,7 +4403,7 @@
             // 
             // m3SwapButton
             // 
-            this.m3SwapButton.Location = new System.Drawing.Point(234, 19);
+            this.m3SwapButton.Location = new System.Drawing.Point(292, 21);
             this.m3SwapButton.Name = "m3SwapButton";
             this.m3SwapButton.Size = new System.Drawing.Size(75, 23);
             this.m3SwapButton.TabIndex = 39;
@@ -4307,41 +4411,9 @@
             this.m3SwapButton.UseVisualStyleBackColor = true;
             this.m3SwapButton.Click += new System.EventHandler(this.m3SwapButton_Click);
             // 
-            // m3t2p8Name
-            // 
-            this.m3t2p8Name.Location = new System.Drawing.Point(435, 392);
-            this.m3t2p8Name.Name = "m3t2p8Name";
-            this.m3t2p8Name.Size = new System.Drawing.Size(100, 20);
-            this.m3t2p8Name.TabIndex = 37;
-            // 
-            // m3t2p8Label
-            // 
-            this.m3t2p8Label.AutoSize = true;
-            this.m3t2p8Label.Location = new System.Drawing.Point(491, 376);
-            this.m3t2p8Label.Name = "m3t2p8Label";
-            this.m3t2p8Label.Size = new System.Drawing.Size(45, 13);
-            this.m3t2p8Label.TabIndex = 38;
-            this.m3t2p8Label.Text = "Player 8";
-            // 
-            // m3t2p7Name
-            // 
-            this.m3t2p7Name.Location = new System.Drawing.Point(435, 353);
-            this.m3t2p7Name.Name = "m3t2p7Name";
-            this.m3t2p7Name.Size = new System.Drawing.Size(100, 20);
-            this.m3t2p7Name.TabIndex = 35;
-            // 
-            // m3t2p7Label
-            // 
-            this.m3t2p7Label.AutoSize = true;
-            this.m3t2p7Label.Location = new System.Drawing.Point(491, 337);
-            this.m3t2p7Label.Name = "m3t2p7Label";
-            this.m3t2p7Label.Size = new System.Drawing.Size(45, 13);
-            this.m3t2p7Label.TabIndex = 36;
-            this.m3t2p7Label.Text = "Player 7";
-            // 
             // m3t2p6Name
             // 
-            this.m3t2p6Name.Location = new System.Drawing.Point(435, 314);
+            this.m3t2p6Name.Location = new System.Drawing.Point(552, 314);
             this.m3t2p6Name.Name = "m3t2p6Name";
             this.m3t2p6Name.Size = new System.Drawing.Size(100, 20);
             this.m3t2p6Name.TabIndex = 33;
@@ -4349,7 +4421,7 @@
             // m3t2p6Label
             // 
             this.m3t2p6Label.AutoSize = true;
-            this.m3t2p6Label.Location = new System.Drawing.Point(491, 298);
+            this.m3t2p6Label.Location = new System.Drawing.Point(608, 298);
             this.m3t2p6Label.Name = "m3t2p6Label";
             this.m3t2p6Label.Size = new System.Drawing.Size(45, 13);
             this.m3t2p6Label.TabIndex = 34;
@@ -4357,7 +4429,7 @@
             // 
             // m3t2p5Name
             // 
-            this.m3t2p5Name.Location = new System.Drawing.Point(435, 275);
+            this.m3t2p5Name.Location = new System.Drawing.Point(552, 275);
             this.m3t2p5Name.Name = "m3t2p5Name";
             this.m3t2p5Name.Size = new System.Drawing.Size(100, 20);
             this.m3t2p5Name.TabIndex = 31;
@@ -4365,7 +4437,7 @@
             // m3t2p5Label
             // 
             this.m3t2p5Label.AutoSize = true;
-            this.m3t2p5Label.Location = new System.Drawing.Point(491, 259);
+            this.m3t2p5Label.Location = new System.Drawing.Point(608, 259);
             this.m3t2p5Label.Name = "m3t2p5Label";
             this.m3t2p5Label.Size = new System.Drawing.Size(45, 13);
             this.m3t2p5Label.TabIndex = 32;
@@ -4373,7 +4445,7 @@
             // 
             // m3t2p4Name
             // 
-            this.m3t2p4Name.Location = new System.Drawing.Point(436, 236);
+            this.m3t2p4Name.Location = new System.Drawing.Point(553, 236);
             this.m3t2p4Name.Name = "m3t2p4Name";
             this.m3t2p4Name.Size = new System.Drawing.Size(100, 20);
             this.m3t2p4Name.TabIndex = 29;
@@ -4381,7 +4453,7 @@
             // m3t2p4Label
             // 
             this.m3t2p4Label.AutoSize = true;
-            this.m3t2p4Label.Location = new System.Drawing.Point(491, 220);
+            this.m3t2p4Label.Location = new System.Drawing.Point(608, 220);
             this.m3t2p4Label.Name = "m3t2p4Label";
             this.m3t2p4Label.Size = new System.Drawing.Size(45, 13);
             this.m3t2p4Label.TabIndex = 30;
@@ -4389,7 +4461,7 @@
             // 
             // m3t2p3Name
             // 
-            this.m3t2p3Name.Location = new System.Drawing.Point(436, 197);
+            this.m3t2p3Name.Location = new System.Drawing.Point(553, 197);
             this.m3t2p3Name.Name = "m3t2p3Name";
             this.m3t2p3Name.Size = new System.Drawing.Size(100, 20);
             this.m3t2p3Name.TabIndex = 27;
@@ -4397,7 +4469,7 @@
             // m3t2p3Label
             // 
             this.m3t2p3Label.AutoSize = true;
-            this.m3t2p3Label.Location = new System.Drawing.Point(491, 181);
+            this.m3t2p3Label.Location = new System.Drawing.Point(608, 181);
             this.m3t2p3Label.Name = "m3t2p3Label";
             this.m3t2p3Label.Size = new System.Drawing.Size(45, 13);
             this.m3t2p3Label.TabIndex = 28;
@@ -4405,7 +4477,7 @@
             // 
             // m3t2p2Name
             // 
-            this.m3t2p2Name.Location = new System.Drawing.Point(436, 158);
+            this.m3t2p2Name.Location = new System.Drawing.Point(553, 158);
             this.m3t2p2Name.Name = "m3t2p2Name";
             this.m3t2p2Name.Size = new System.Drawing.Size(100, 20);
             this.m3t2p2Name.TabIndex = 25;
@@ -4413,7 +4485,7 @@
             // m3t2p2Label
             // 
             this.m3t2p2Label.AutoSize = true;
-            this.m3t2p2Label.Location = new System.Drawing.Point(491, 142);
+            this.m3t2p2Label.Location = new System.Drawing.Point(608, 142);
             this.m3t2p2Label.Name = "m3t2p2Label";
             this.m3t2p2Label.Size = new System.Drawing.Size(45, 13);
             this.m3t2p2Label.TabIndex = 26;
@@ -4421,7 +4493,7 @@
             // 
             // m3t2p1Name
             // 
-            this.m3t2p1Name.Location = new System.Drawing.Point(436, 119);
+            this.m3t2p1Name.Location = new System.Drawing.Point(553, 119);
             this.m3t2p1Name.Name = "m3t2p1Name";
             this.m3t2p1Name.Size = new System.Drawing.Size(100, 20);
             this.m3t2p1Name.TabIndex = 23;
@@ -4429,43 +4501,11 @@
             // m3t2p1Label
             // 
             this.m3t2p1Label.AutoSize = true;
-            this.m3t2p1Label.Location = new System.Drawing.Point(491, 103);
+            this.m3t2p1Label.Location = new System.Drawing.Point(608, 103);
             this.m3t2p1Label.Name = "m3t2p1Label";
             this.m3t2p1Label.Size = new System.Drawing.Size(45, 13);
             this.m3t2p1Label.TabIndex = 24;
             this.m3t2p1Label.Text = "Player 1";
-            // 
-            // m3t1p8Name
-            // 
-            this.m3t1p8Name.Location = new System.Drawing.Point(6, 392);
-            this.m3t1p8Name.Name = "m3t1p8Name";
-            this.m3t1p8Name.Size = new System.Drawing.Size(100, 20);
-            this.m3t1p8Name.TabIndex = 21;
-            // 
-            // m3t1p8Label
-            // 
-            this.m3t1p8Label.AutoSize = true;
-            this.m3t1p8Label.Location = new System.Drawing.Point(6, 376);
-            this.m3t1p8Label.Name = "m3t1p8Label";
-            this.m3t1p8Label.Size = new System.Drawing.Size(45, 13);
-            this.m3t1p8Label.TabIndex = 22;
-            this.m3t1p8Label.Text = "Player 8";
-            // 
-            // m3t1p7Name
-            // 
-            this.m3t1p7Name.Location = new System.Drawing.Point(6, 353);
-            this.m3t1p7Name.Name = "m3t1p7Name";
-            this.m3t1p7Name.Size = new System.Drawing.Size(100, 20);
-            this.m3t1p7Name.TabIndex = 19;
-            // 
-            // m3t1p7Label
-            // 
-            this.m3t1p7Label.AutoSize = true;
-            this.m3t1p7Label.Location = new System.Drawing.Point(6, 337);
-            this.m3t1p7Label.Name = "m3t1p7Label";
-            this.m3t1p7Label.Size = new System.Drawing.Size(45, 13);
-            this.m3t1p7Label.TabIndex = 20;
-            this.m3t1p7Label.Text = "Player 7";
             // 
             // m3t1p6Name
             // 
@@ -4565,7 +4605,7 @@
             // 
             // m3t2Score
             // 
-            this.m3t2Score.Location = new System.Drawing.Point(458, 47);
+            this.m3t2Score.Location = new System.Drawing.Point(575, 47);
             this.m3t2Score.Name = "m3t2Score";
             this.m3t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m3t2Score.Size = new System.Drawing.Size(36, 20);
@@ -4581,7 +4621,7 @@
             // m3t2ScoreLabel
             // 
             this.m3t2ScoreLabel.AutoSize = true;
-            this.m3t2ScoreLabel.Location = new System.Drawing.Point(500, 49);
+            this.m3t2ScoreLabel.Location = new System.Drawing.Point(617, 49);
             this.m3t2ScoreLabel.Name = "m3t2ScoreLabel";
             this.m3t2ScoreLabel.Size = new System.Drawing.Size(35, 13);
             this.m3t2ScoreLabel.TabIndex = 4;
@@ -4598,7 +4638,7 @@
             // 
             // m3t2Name
             // 
-            this.m3t2Name.Location = new System.Drawing.Point(357, 21);
+            this.m3t2Name.Location = new System.Drawing.Point(474, 21);
             this.m3t2Name.Name = "m3t2Name";
             this.m3t2Name.Size = new System.Drawing.Size(178, 20);
             this.m3t2Name.TabIndex = 1;
@@ -4606,7 +4646,7 @@
             // m3t2Label
             // 
             this.m3t2Label.AutoSize = true;
-            this.m3t2Label.Location = new System.Drawing.Point(493, 3);
+            this.m3t2Label.Location = new System.Drawing.Point(610, 3);
             this.m3t2Label.Name = "m3t2Label";
             this.m3t2Label.Size = new System.Drawing.Size(43, 13);
             this.m3t2Label.TabIndex = 2;
@@ -4633,16 +4673,58 @@
             this.General_Info.Location = new System.Drawing.Point(4, 22);
             this.General_Info.Name = "General_Info";
             this.General_Info.Padding = new System.Windows.Forms.Padding(3);
-            this.General_Info.Size = new System.Drawing.Size(542, 493);
+            this.General_Info.Size = new System.Drawing.Size(659, 414);
             this.General_Info.TabIndex = 1;
             this.General_Info.Text = "General";
             this.General_Info.UseVisualStyleBackColor = true;
+            // 
+            // m1t1SR
+            // 
+            this.m1t1SR.Location = new System.Drawing.Point(190, 21);
+            this.m1t1SR.Name = "m1t1SR";
+            this.m1t1SR.Size = new System.Drawing.Size(97, 20);
+            this.m1t1SR.TabIndex = 132;
+            // 
+            // m1t2SR
+            // 
+            this.m1t2SR.Location = new System.Drawing.Point(371, 21);
+            this.m1t2SR.Name = "m1t2SR";
+            this.m1t2SR.Size = new System.Drawing.Size(97, 20);
+            this.m1t2SR.TabIndex = 133;
+            // 
+            // m2t2SR
+            // 
+            this.m2t2SR.Location = new System.Drawing.Point(371, 21);
+            this.m2t2SR.Name = "m2t2SR";
+            this.m2t2SR.Size = new System.Drawing.Size(97, 20);
+            this.m2t2SR.TabIndex = 145;
+            // 
+            // m2t1SR
+            // 
+            this.m2t1SR.Location = new System.Drawing.Point(190, 21);
+            this.m2t1SR.Name = "m2t1SR";
+            this.m2t1SR.Size = new System.Drawing.Size(97, 20);
+            this.m2t1SR.TabIndex = 144;
+            // 
+            // m3t2SR
+            // 
+            this.m3t2SR.Location = new System.Drawing.Point(371, 21);
+            this.m3t2SR.Name = "m3t2SR";
+            this.m3t2SR.Size = new System.Drawing.Size(97, 20);
+            this.m3t2SR.TabIndex = 145;
+            // 
+            // m3t1SR
+            // 
+            this.m3t1SR.Location = new System.Drawing.Point(190, 21);
+            this.m3t1SR.Name = "m3t1SR";
+            this.m3t1SR.Size = new System.Drawing.Size(97, 20);
+            this.m3t1SR.TabIndex = 144;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 544);
+            this.ClientSize = new System.Drawing.Size(692, 465);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -4723,10 +4805,6 @@
         private System.Windows.Forms.NumericUpDown m1t1Score;
         private System.Windows.Forms.TextBox m1t1p1Name;
         private System.Windows.Forms.Label m1t1p1Label;
-        private System.Windows.Forms.TextBox m1t2p8Name;
-        private System.Windows.Forms.Label m1t2p8Label;
-        private System.Windows.Forms.TextBox m1t2p7Name;
-        private System.Windows.Forms.Label m1t2p7Label;
         private System.Windows.Forms.TextBox m1t2p6Name;
         private System.Windows.Forms.Label m1t2p6Label;
         private System.Windows.Forms.TextBox m1t2p5Name;
@@ -4739,10 +4817,6 @@
         private System.Windows.Forms.Label m1t2p2Label;
         private System.Windows.Forms.TextBox m1t2p1Name;
         private System.Windows.Forms.Label m1t2p1Label;
-        private System.Windows.Forms.TextBox m1t1p8Name;
-        private System.Windows.Forms.Label m1t1p8Label;
-        private System.Windows.Forms.TextBox m1t1p7Name;
-        private System.Windows.Forms.Label m1t1p7Label;
         private System.Windows.Forms.TextBox m1t1p6Name;
         private System.Windows.Forms.Label m1t1p6Label;
         private System.Windows.Forms.TextBox m1t1p5Name;
@@ -4755,16 +4829,12 @@
         private System.Windows.Forms.Label m1t1p2Label;
         private System.Windows.Forms.Button m1ResetButton;
         private System.Windows.Forms.Button m1SwapButton;
-        private System.Windows.Forms.ComboBox m1t1p8Hero;
-        private System.Windows.Forms.ComboBox m1t1p7Hero;
         private System.Windows.Forms.ComboBox m1t1p6Hero;
         private System.Windows.Forms.ComboBox m1t1p5Hero;
         private System.Windows.Forms.ComboBox m1t1p4Hero;
         private System.Windows.Forms.ComboBox m1t1p3Hero;
         private System.Windows.Forms.ComboBox m1t1p2Hero;
         private System.Windows.Forms.ComboBox m1t1p1Hero;
-        private System.Windows.Forms.ComboBox m1t2p8Hero;
-        private System.Windows.Forms.ComboBox m1t2p7Hero;
         private System.Windows.Forms.ComboBox m1t2p6Hero;
         private System.Windows.Forms.ComboBox m1t2p5Hero;
         private System.Windows.Forms.ComboBox m1t2p4Hero;
@@ -4789,10 +4859,6 @@
         private System.Windows.Forms.NumericUpDown m2t1Score;
         private System.Windows.Forms.TextBox m2t1p1Name;
         private System.Windows.Forms.Label m2t1p1Label;
-        private System.Windows.Forms.TextBox m2t2p8Name;
-        private System.Windows.Forms.Label m2t2p8Label;
-        private System.Windows.Forms.TextBox m2t2p7Name;
-        private System.Windows.Forms.Label m2t2p7Label;
         private System.Windows.Forms.TextBox m2t2p6Name;
         private System.Windows.Forms.Label m2t2p6Label;
         private System.Windows.Forms.TextBox m2t2p5Name;
@@ -4805,10 +4871,6 @@
         private System.Windows.Forms.Label m2t2p2Label;
         private System.Windows.Forms.TextBox m2t2p1Name;
         private System.Windows.Forms.Label m2t2p1Label;
-        private System.Windows.Forms.TextBox m2t1p8Name;
-        private System.Windows.Forms.Label m2t1p8Label;
-        private System.Windows.Forms.TextBox m2t1p7Name;
-        private System.Windows.Forms.Label m2t1p7Label;
         private System.Windows.Forms.TextBox m2t1p6Name;
         private System.Windows.Forms.Label m2t1p6Label;
         private System.Windows.Forms.TextBox m2t1p5Name;
@@ -4821,16 +4883,12 @@
         private System.Windows.Forms.Label m2t1p2Label;
         private System.Windows.Forms.Button m2ResetButton;
         private System.Windows.Forms.Button m2SwapButton;
-        private System.Windows.Forms.ComboBox m2t1p8Hero;
-        private System.Windows.Forms.ComboBox m2t1p7Hero;
         private System.Windows.Forms.ComboBox m2t1p6Hero;
         private System.Windows.Forms.ComboBox m2t1p5Hero;
         private System.Windows.Forms.ComboBox m2t1p4Hero;
         private System.Windows.Forms.ComboBox m2t1p3Hero;
         private System.Windows.Forms.ComboBox m2t1p2Hero;
         private System.Windows.Forms.ComboBox m2t1p1Hero;
-        private System.Windows.Forms.ComboBox m2t2p8Hero;
-        private System.Windows.Forms.ComboBox m2t2p7Hero;
         private System.Windows.Forms.ComboBox m2t2p6Hero;
         private System.Windows.Forms.ComboBox m2t2p5Hero;
         private System.Windows.Forms.ComboBox m2t2p4Hero;
@@ -4855,10 +4913,6 @@
         private System.Windows.Forms.NumericUpDown m3t1Score;
         private System.Windows.Forms.TextBox m3t1p1Name;
         private System.Windows.Forms.Label m3t1p1Label;
-        private System.Windows.Forms.TextBox m3t2p8Name;
-        private System.Windows.Forms.Label m3t2p8Label;
-        private System.Windows.Forms.TextBox m3t2p7Name;
-        private System.Windows.Forms.Label m3t2p7Label;
         private System.Windows.Forms.TextBox m3t2p6Name;
         private System.Windows.Forms.Label m3t2p6Label;
         private System.Windows.Forms.TextBox m3t2p5Name;
@@ -4871,10 +4925,6 @@
         private System.Windows.Forms.Label m3t2p2Label;
         private System.Windows.Forms.TextBox m3t2p1Name;
         private System.Windows.Forms.Label m3t2p1Label;
-        private System.Windows.Forms.TextBox m3t1p8Name;
-        private System.Windows.Forms.Label m3t1p8Label;
-        private System.Windows.Forms.TextBox m3t1p7Name;
-        private System.Windows.Forms.Label m3t1p7Label;
         private System.Windows.Forms.TextBox m3t1p6Name;
         private System.Windows.Forms.Label m3t1p6Label;
         private System.Windows.Forms.TextBox m3t1p5Name;
@@ -4887,16 +4937,12 @@
         private System.Windows.Forms.Label m3t1p2Label;
         private System.Windows.Forms.Button m3ResetButton;
         private System.Windows.Forms.Button m3SwapButton;
-        private System.Windows.Forms.ComboBox m3t1p8Hero;
-        private System.Windows.Forms.ComboBox m3t1p7Hero;
         private System.Windows.Forms.ComboBox m3t1p6Hero;
         private System.Windows.Forms.ComboBox m3t1p5Hero;
         private System.Windows.Forms.ComboBox m3t1p4Hero;
         private System.Windows.Forms.ComboBox m3t1p3Hero;
         private System.Windows.Forms.ComboBox m3t1p2Hero;
         private System.Windows.Forms.ComboBox m3t1p1Hero;
-        private System.Windows.Forms.ComboBox m3t2p8Hero;
-        private System.Windows.Forms.ComboBox m3t2p7Hero;
         private System.Windows.Forms.ComboBox m3t2p6Hero;
         private System.Windows.Forms.ComboBox m3t2p5Hero;
         private System.Windows.Forms.ComboBox m3t2p4Hero;
@@ -4996,6 +5042,48 @@
         private System.Windows.Forms.Label m3m5Label;
         private System.Windows.Forms.Label m3m2Label;
         private System.Windows.Forms.Label m3m1Label;
+        private System.Windows.Forms.ComboBox m1t1p4Role;
+        private System.Windows.Forms.ComboBox m1t1p3Role;
+        private System.Windows.Forms.ComboBox m1t1p2Role;
+        private System.Windows.Forms.ComboBox m1t1p1Role;
+        private System.Windows.Forms.ComboBox m1t2p6Role;
+        private System.Windows.Forms.ComboBox m1t2p5Role;
+        private System.Windows.Forms.ComboBox m1t2p4Role;
+        private System.Windows.Forms.ComboBox m1t2p3Role;
+        private System.Windows.Forms.ComboBox m1t2p2Role;
+        private System.Windows.Forms.ComboBox m1t2p1Role;
+        private System.Windows.Forms.ComboBox m1t1p6Role;
+        private System.Windows.Forms.ComboBox m1t1p5Role;
+        private System.Windows.Forms.ComboBox m2t2p6Role;
+        private System.Windows.Forms.ComboBox m2t2p5Role;
+        private System.Windows.Forms.ComboBox m2t2p4Role;
+        private System.Windows.Forms.ComboBox m2t2p3Role;
+        private System.Windows.Forms.ComboBox m2t2p2Role;
+        private System.Windows.Forms.ComboBox m2t2p1Role;
+        private System.Windows.Forms.ComboBox m2t1p6Role;
+        private System.Windows.Forms.ComboBox m2t1p5Role;
+        private System.Windows.Forms.ComboBox m2t1p4Role;
+        private System.Windows.Forms.ComboBox m2t1p3Role;
+        private System.Windows.Forms.ComboBox m2t1p2Role;
+        private System.Windows.Forms.ComboBox m2t1p1Role;
+        private System.Windows.Forms.ComboBox m3t2p6Role;
+        private System.Windows.Forms.ComboBox m3t2p5Role;
+        private System.Windows.Forms.ComboBox m3t2p4Role;
+        private System.Windows.Forms.ComboBox m3t2p3Role;
+        private System.Windows.Forms.ComboBox m3t2p2Role;
+        private System.Windows.Forms.ComboBox m3t2p1Role;
+        private System.Windows.Forms.ComboBox m3t1p6Role;
+        private System.Windows.Forms.ComboBox m3t1p5Role;
+        private System.Windows.Forms.ComboBox m3t1p4Role;
+        private System.Windows.Forms.ComboBox m3t1p3Role;
+        private System.Windows.Forms.ComboBox m3t1p2Role;
+        private System.Windows.Forms.ComboBox m3t1p1Role;
+        private System.Windows.Forms.TextBox m1t2SR;
+        private System.Windows.Forms.TextBox m1t1SR;
+        private System.Windows.Forms.TextBox m2t2SR;
+        private System.Windows.Forms.TextBox m2t1SR;
+        private System.Windows.Forms.TextBox m3t2SR;
+        private System.Windows.Forms.TextBox m3t1SR;
     }
 }
 
