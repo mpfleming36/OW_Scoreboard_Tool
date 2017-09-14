@@ -238,6 +238,7 @@ namespace OWUL_Cast_Panel
 
                 resetScore(m1t1Score);
                 resetText(m1t1Name);
+                resetText(m1t1SR);
                 resetText(m1t1p1Name);
                 resetText(m1t1p2Name);
                 resetText(m1t1p3Name);
@@ -247,6 +248,7 @@ namespace OWUL_Cast_Panel
 
                 resetScore(m1t2Score);
                 resetText(m1t2Name);
+                resetText(m1t2SR);
                 resetText(m1t2p1Name);
                 resetText(m1t2p2Name);
                 resetText(m1t2p3Name);
@@ -318,6 +320,7 @@ namespace OWUL_Cast_Panel
 
                 resetScore(m2t1Score);
                 resetText(m2t1Name);
+                resetText(m2t1SR);
                 resetText(m2t1p1Name);
                 resetText(m2t1p2Name);
                 resetText(m2t1p3Name);
@@ -327,6 +330,7 @@ namespace OWUL_Cast_Panel
 
                 resetScore(m2t2Score);
                 resetText(m2t2Name);
+                resetText(m2t2SR);
                 resetText(m2t2p1Name);
                 resetText(m2t2p2Name);
                 resetText(m2t2p3Name);
@@ -398,6 +402,7 @@ namespace OWUL_Cast_Panel
 
                 resetScore(m3t1Score);
                 resetText(m3t1Name);
+                resetText(m3t1SR);
                 resetText(m3t1p1Name);
                 resetText(m3t1p2Name);
                 resetText(m3t1p3Name);
@@ -407,6 +412,7 @@ namespace OWUL_Cast_Panel
 
                 resetScore(m3t2Score);
                 resetText(m3t2Name);
+                resetText(m3t2SR);
                 resetText(m3t2p1Name);
                 resetText(m3t2p2Name);
                 resetText(m3t2p3Name);
