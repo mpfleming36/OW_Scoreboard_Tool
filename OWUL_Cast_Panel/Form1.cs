@@ -285,8 +285,8 @@ namespace OWUL_Cast_Panel
                 resetRole(m1t2p6Role);
 
                 resetSide(m1t1Neutral);
-                resetSide(m1t2Neutral);
 
+                resetSide(m1t2Neutral);
                 resetMap(m1m1Map);
                 resetMap(m1m2Map);
                 resetMap(m1m3Map);
@@ -1183,7 +1183,7 @@ namespace OWUL_Cast_Panel
                 }
                 else if (field.Text == "Junkertown")
                 {
-                    Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_junkertown.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Escort";
                 }

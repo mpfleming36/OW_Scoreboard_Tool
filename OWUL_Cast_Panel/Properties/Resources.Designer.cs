@@ -293,6 +293,16 @@ namespace OWUL_Cast_Panel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_junkertown {
+            get {
+                object obj = ResourceManager.GetObject("Icon_junkertown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_junkrat {
             get {
                 object obj = ResourceManager.GetObject("Icon_junkrat", resourceCulture);

@@ -158,6 +158,7 @@
     <None Include="Resources\Icon-none.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Icon-junkertown.png" />
     <None Include="Resources\Sombra.png" />
     <None Include="Resources\Widowmaker.png" />
     <None Include="Resources\Torbjorn.png" />
