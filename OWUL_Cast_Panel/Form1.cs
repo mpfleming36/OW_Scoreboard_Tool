@@ -956,7 +956,7 @@ namespace OWUL_Cast_Panel
         {
             using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
             {
-                sw.WriteLine(field.Text);
+                sw.WriteLine(field.Text.TrimEnd());
             }
         }
 
@@ -964,7 +964,7 @@ namespace OWUL_Cast_Panel
         {
             using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
             {
-                sw.WriteLine(field.Value.ToString());
+                sw.WriteLine(field.Value.ToString().TrimEnd());
             }
         }
 
@@ -1279,12 +1279,12 @@ namespace OWUL_Cast_Panel
                     }
                     else
                     {
-                        sw.WriteLine(field.Text);
+                        sw.WriteLine(field.Text.TrimEnd());
                     }
                 }
                 using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + "Gametype" + ".txt"))
                 {
-                    sw.WriteLine(gametype);
+                    sw.WriteLine(gametype.TrimEnd());
                 }
             }
         }

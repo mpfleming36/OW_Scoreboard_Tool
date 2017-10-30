@@ -57,7 +57,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"};
 
         /// <summary>
@@ -540,7 +540,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m1t2p5Role
@@ -556,7 +556,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m1t2p4Role
@@ -572,7 +572,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m1t2p3Role
@@ -588,7 +588,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m1t2p2Role
@@ -604,7 +604,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m1t2p1Role
@@ -620,7 +620,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m1t1p6Role
@@ -636,7 +636,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m1t1p5Role
@@ -652,7 +652,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m1t1p4Role
@@ -668,7 +668,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m1t1p3Role
@@ -684,7 +684,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m1t1p2Role
@@ -700,7 +700,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m1t1p1Role
@@ -716,7 +716,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m1m5t2Score
@@ -796,6 +796,7 @@
             // 
             // m1m5Map
             // 
+            this.m1m5Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1m5Map.FormattingEnabled = true;
             this.m1m5Map.Items.AddRange(new object[] {
             "",
@@ -826,6 +827,7 @@
             // 
             // m1m4Map
             // 
+            this.m1m4Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1m4Map.FormattingEnabled = true;
             this.m1m4Map.Items.AddRange(new object[] {
             "",
@@ -856,6 +858,7 @@
             // 
             // m1m3Map
             // 
+            this.m1m3Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1m3Map.FormattingEnabled = true;
             this.m1m3Map.Items.AddRange(new object[] {
             "",
@@ -886,6 +889,7 @@
             // 
             // m1m2Map
             // 
+            this.m1m2Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1m2Map.FormattingEnabled = true;
             this.m1m2Map.Items.AddRange(new object[] {
             "",
@@ -916,6 +920,7 @@
             // 
             // m1m1Map
             // 
+            this.m1m1Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1m1Map.FormattingEnabled = true;
             this.m1m1Map.Items.AddRange(new object[] {
             "",
@@ -1953,7 +1958,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m2t2p5Role
@@ -1969,7 +1974,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m2t2p4Role
@@ -1985,7 +1990,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m2t2p3Role
@@ -2001,7 +2006,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m2t2p2Role
@@ -2017,7 +2022,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m2t2p1Role
@@ -2033,7 +2038,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m2t1p6Role
@@ -2049,7 +2054,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m2t1p5Role
@@ -2065,7 +2070,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m2t1p4Role
@@ -2081,7 +2086,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m2t1p3Role
@@ -2097,7 +2102,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m2t1p2Role
@@ -2113,7 +2118,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m2t1p1Role
@@ -2129,7 +2134,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m2m5t2Score
@@ -2209,6 +2214,7 @@
             // 
             // m2m5Map
             // 
+            this.m2m5Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2m5Map.FormattingEnabled = true;
             this.m2m5Map.Items.AddRange(new object[] {
             "",
@@ -2239,6 +2245,7 @@
             // 
             // m2m4Map
             // 
+            this.m2m4Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2m4Map.FormattingEnabled = true;
             this.m2m4Map.Items.AddRange(new object[] {
             "",
@@ -2269,6 +2276,7 @@
             // 
             // m2m3Map
             // 
+            this.m2m3Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2m3Map.FormattingEnabled = true;
             this.m2m3Map.Items.AddRange(new object[] {
             "",
@@ -2299,6 +2307,7 @@
             // 
             // m2m2Map
             // 
+            this.m2m2Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2m2Map.FormattingEnabled = true;
             this.m2m2Map.Items.AddRange(new object[] {
             "",
@@ -2329,6 +2338,7 @@
             // 
             // m2m1Map
             // 
+            this.m2m1Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2m1Map.FormattingEnabled = true;
             this.m2m1Map.Items.AddRange(new object[] {
             "",
@@ -3366,7 +3376,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m3t2p5Role
@@ -3382,7 +3392,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m3t2p4Role
@@ -3398,7 +3408,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m3t2p3Role
@@ -3414,7 +3424,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m3t2p2Role
@@ -3430,7 +3440,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m3t2p1Role
@@ -3446,7 +3456,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m3t1p6Role
@@ -3462,7 +3472,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m3t1p5Role
@@ -3478,7 +3488,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m3t1p4Role
@@ -3494,7 +3504,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m3t1p3Role
@@ -3510,7 +3520,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m3t1p2Role
@@ -3526,7 +3536,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m3t1p1Role
@@ -3542,7 +3552,7 @@
             "",
             "DPS",
             "Flex",
-            "Supp",
+            "Support",
             "Tank"});
             // 
             // m3m5t2Score
@@ -3622,6 +3632,7 @@
             // 
             // m3m5Map
             // 
+            this.m3m5Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3m5Map.FormattingEnabled = true;
             this.m3m5Map.Items.AddRange(new object[] {
             "",
@@ -3652,6 +3663,7 @@
             // 
             // m3m4Map
             // 
+            this.m3m4Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3m4Map.FormattingEnabled = true;
             this.m3m4Map.Items.AddRange(new object[] {
             "",
@@ -3682,6 +3694,7 @@
             // 
             // m3m3Map
             // 
+            this.m3m3Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3m3Map.FormattingEnabled = true;
             this.m3m3Map.Items.AddRange(new object[] {
             "",
@@ -3712,6 +3725,7 @@
             // 
             // m3m2Map
             // 
+            this.m3m2Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3m2Map.FormattingEnabled = true;
             this.m3m2Map.Items.AddRange(new object[] {
             "",
@@ -3742,6 +3756,7 @@
             // 
             // m3m1Map
             // 
+            this.m3m1Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3m1Map.FormattingEnabled = true;
             this.m3m1Map.Items.AddRange(new object[] {
             "",
