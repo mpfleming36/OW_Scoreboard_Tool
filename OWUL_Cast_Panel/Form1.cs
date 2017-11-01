@@ -284,9 +284,8 @@ namespace OWUL_Cast_Panel
                 resetRole(m1t2p5Role);
                 resetRole(m1t2p6Role);
 
-                resetSide(m1t1Neutral);
+                resetSide(m1Neutral);
 
-                resetSide(m1t2Neutral);
                 resetMap(m1m1Map);
                 resetMap(m1m2Map);
                 resetMap(m1m3Map);
@@ -366,8 +365,7 @@ namespace OWUL_Cast_Panel
                 resetRole(m2t2p5Role);
                 resetRole(m2t2p6Role);
 
-                resetSide(m2t1Neutral);
-                resetSide(m2t2Neutral);
+                resetSide(m2Neutral);
 
                 resetMap(m2m1Map);
                 resetMap(m2m2Map);
@@ -448,8 +446,7 @@ namespace OWUL_Cast_Panel
                 resetRole(m3t2p5Role);
                 resetRole(m3t2p6Role);
 
-                resetSide(m3t1Neutral);
-                resetSide(m3t2Neutral);
+                resetSide(m3Neutral);
 
                 resetMap(m3m1Map);
                 resetMap(m3m2Map);
@@ -528,13 +525,9 @@ namespace OWUL_Cast_Panel
             updateRole(m1t2p5Role, "Match1", "t2p5Role");
             updateRole(m1t2p6Role, "Match1", "t2p6Role");
 
-            updateSide(m1t1Attack, "Match1", "t1Side");
-            updateSide(m1t1Defend, "Match1", "t1Side");
-            updateSide(m1t1Neutral, "Match1", "t1Side");
-            
-            updateSide(m1t2Attack, "Match1", "t2Side");
-            updateSide(m1t2Defend, "Match1", "t2Side");
-            updateSide(m1t2Neutral, "Match1", "t2Side");
+            updateSide(m1Attack, "Match1", "t1Side", "t2Side");
+            updateSide(m1Defend, "Match1", "t1Side", "t2Side");
+            updateSide(m1Neutral, "Match1", "t1Side", "t2Side");
 
             updateMap(m1m1Map, "Match1", "m1Map");
             updateMap(m1m2Map, "Match1", "m2Map");
@@ -607,13 +600,10 @@ namespace OWUL_Cast_Panel
                 updateRole(m1t2p5Role, "Current", "t2p5Role");
                 updateRole(m1t2p6Role, "Current", "t2p6Role");
 
-                updateSide(m1t1Attack, "Current", "t1Side");
-                updateSide(m1t1Defend, "Current", "t1Side");
-                updateSide(m1t1Neutral, "Current", "t1Side");
+                updateSide(m1Attack, "Current", "t1Side", "t2Side");
+                updateSide(m1Defend, "Current", "t1Side", "t2Side");
+                updateSide(m1Neutral, "Current", "t1Side", "t2Side");
 
-                updateSide(m1t2Attack, "Current", "t2Side");
-                updateSide(m1t2Defend, "Current", "t2Side");
-                updateSide(m1t2Neutral, "Current", "t2Side");
 
                 updateMap(m1m1Map, "Current", "m1Map");
                 updateMap(m1m2Map, "Current", "m2Map");
@@ -688,13 +678,10 @@ namespace OWUL_Cast_Panel
             updateRole(m2t2p5Role, "Match2", "t2p5Role");
             updateRole(m2t2p6Role, "Match2", "t2p6Role");
 
-            updateSide(m2t1Attack, "Match2", "t1Side");
-            updateSide(m2t1Defend, "Match2", "t1Side");
-            updateSide(m2t1Neutral, "Match2", "t1Side");
+            updateSide(m2Attack, "Match2", "t1Side", "t2Side");
+            updateSide(m2Defend, "Match2", "t1Side", "t2Side");
+            updateSide(m2Neutral, "Match2", "t1Side", "t2Side");
 
-            updateSide(m2t2Attack, "Match2", "t2Side");
-            updateSide(m2t2Defend, "Match2", "t2Side");
-            updateSide(m2t2Neutral, "Match2", "t2Side");
 
             updateMap(m2m1Map, "Match2", "m1Map");
             updateMap(m2m2Map, "Match2", "m2Map");
@@ -766,13 +753,9 @@ namespace OWUL_Cast_Panel
                 updateRole(m2t2p5Role, "Current", "t2p5Role");
                 updateRole(m2t2p6Role, "Current", "t2p6Role");
 
-                updateSide(m2t1Attack, "Current", "t1Side");
-                updateSide(m2t1Defend, "Current", "t1Side");
-                updateSide(m2t1Neutral, "Current", "t1Side");
-
-                updateSide(m2t2Attack, "Current", "t2Side");
-                updateSide(m2t2Defend, "Current", "t2Side");
-                updateSide(m2t2Neutral, "Current", "t2Side");
+                updateSide(m2Attack, "Current", "t1Side", "t2Side");
+                updateSide(m2Defend, "Current", "t1Side", "t2Side");
+                updateSide(m2Neutral, "Current", "t1Side", "t2Side");
 
                 updateMap(m2m1Map, "Current", "m1Map");
                 updateMap(m2m2Map, "Current", "m2Map");
@@ -847,13 +830,9 @@ namespace OWUL_Cast_Panel
             updateRole(m3t2p5Role, "Match3", "t2p5Role");
             updateRole(m3t2p6Role, "Match3", "t2p6Role");
 
-            updateSide(m3t1Attack, "Match3", "t1Side");
-            updateSide(m3t1Defend, "Match3", "t1Side");
-            updateSide(m3t1Neutral, "Match3", "t1Side");
-
-            updateSide(m3t2Attack, "Match3", "t2Side");
-            updateSide(m3t2Defend, "Match3", "t2Side");
-            updateSide(m3t2Neutral, "Match3", "t2Side");
+            updateSide(m3Attack, "Match3", "t1Side", "t2Side");
+            updateSide(m3Defend, "Match3", "t1Side", "t2Side");
+            updateSide(m3Neutral, "Match3", "t1Side", "t2Side");
 
             updateMap(m3m1Map, "Match3", "m1Map");
             updateMap(m3m2Map, "Match3", "m2Map");
@@ -925,13 +904,10 @@ namespace OWUL_Cast_Panel
                 updateRole(m3t2p5Role, "Current", "t2p5Role");
                 updateRole(m3t2p6Role, "Current", "t2p6Role");
 
-                updateSide(m3t1Attack, "Current", "t1Side");
-                updateSide(m3t1Defend, "Current", "t1Side");
-                updateSide(m3t1Neutral, "Current", "t1Side");
+                updateSide(m3Attack, "Current", "t1Side", "t2Side");
+                updateSide(m3Defend, "Current", "t1Side", "t2Side");
+                updateSide(m3Neutral, "Current", "t1Side", "t2Side");
 
-                updateSide(m3t2Attack, "Current", "t2Side");
-                updateSide(m3t2Defend, "Current", "t2Side");
-                updateSide(m3t2Neutral, "Current", "t2Side");
 
                 updateMap(m3m1Map, "Current", "m1Map");
                 updateMap(m3m2Map, "Current", "m2Map");
@@ -1120,21 +1096,24 @@ namespace OWUL_Cast_Panel
 
         }
 
-        private void updateSide(RadioButton field, String folder, String file)
+        private void updateSide(RadioButton field, String folder, String file1, String file2)
         {
             if (field.Checked == true)
             {
                 if (field.Text == "A")
                 {
-                    Properties.Resources.Icon_offense.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_offense.Save(path + "\\" + folder + "\\" + file1 + ".png");
+                    Properties.Resources.Icon_defense.Save(path + "\\" + folder + "\\" + file2 + ".png");
                 }
                 else if(field.Text == "D")
                 {
-                    Properties.Resources.Icon_defense.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_defense.Save(path + "\\" + folder + "\\" + file1 + ".png");
+                    Properties.Resources.Icon_offense.Save(path + "\\" + folder + "\\" + file2 + ".png");
                 }
                 else
                 {
-                    Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file1 + ".png");
+                    Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file2 + ".png");
                 }
 
             }
@@ -1337,8 +1316,6 @@ namespace OWUL_Cast_Panel
         {
             field.SelectedIndex = 0;
         }
-
-  
 
         /*private void loadHero(ComboBox field, String folder, String file)
         {

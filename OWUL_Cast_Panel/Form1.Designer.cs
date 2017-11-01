@@ -84,6 +84,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Match_1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m1t2SR = new System.Windows.Forms.TextBox();
+            this.m1t1SR = new System.Windows.Forms.TextBox();
             this.m1t2p6Role = new System.Windows.Forms.ComboBox();
             this.m1t2p5Role = new System.Windows.Forms.ComboBox();
             this.m1t2p4Role = new System.Windows.Forms.ComboBox();
@@ -116,14 +120,10 @@
             this.m1m5Label = new System.Windows.Forms.Label();
             this.m1m2Label = new System.Windows.Forms.Label();
             this.m1m1Label = new System.Windows.Forms.Label();
-            this.m1t2Side = new System.Windows.Forms.GroupBox();
-            this.m1t2Defend = new System.Windows.Forms.RadioButton();
-            this.m1t2Attack = new System.Windows.Forms.RadioButton();
-            this.m1t2Neutral = new System.Windows.Forms.RadioButton();
             this.m1t1Side = new System.Windows.Forms.GroupBox();
-            this.m1t1Attack = new System.Windows.Forms.RadioButton();
-            this.m1t1Defend = new System.Windows.Forms.RadioButton();
-            this.m1t1Neutral = new System.Windows.Forms.RadioButton();
+            this.m1Attack = new System.Windows.Forms.RadioButton();
+            this.m1Defend = new System.Windows.Forms.RadioButton();
+            this.m1Neutral = new System.Windows.Forms.RadioButton();
             this.m1DivisionLabel = new System.Windows.Forms.Label();
             this.m1DivisionNumber = new System.Windows.Forms.TextBox();
             this.m1MessageLabel = new System.Windows.Forms.Label();
@@ -177,6 +177,10 @@
             this.m1t1Name = new System.Windows.Forms.TextBox();
             this.m1t1Label = new System.Windows.Forms.Label();
             this.Match_2 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.m2t2SR = new System.Windows.Forms.TextBox();
+            this.m2t1SR = new System.Windows.Forms.TextBox();
             this.m2t2p6Role = new System.Windows.Forms.ComboBox();
             this.m2t2p5Role = new System.Windows.Forms.ComboBox();
             this.m2t2p4Role = new System.Windows.Forms.ComboBox();
@@ -209,14 +213,10 @@
             this.m2m5Label = new System.Windows.Forms.Label();
             this.m2m2Label = new System.Windows.Forms.Label();
             this.m2m1Label = new System.Windows.Forms.Label();
-            this.m2t2Side = new System.Windows.Forms.GroupBox();
-            this.m2t2Defend = new System.Windows.Forms.RadioButton();
-            this.m2t2Attack = new System.Windows.Forms.RadioButton();
-            this.m2t2Neutral = new System.Windows.Forms.RadioButton();
             this.m2t1Side = new System.Windows.Forms.GroupBox();
-            this.m2t1Defend = new System.Windows.Forms.RadioButton();
-            this.m2t1Attack = new System.Windows.Forms.RadioButton();
-            this.m2t1Neutral = new System.Windows.Forms.RadioButton();
+            this.m2Defend = new System.Windows.Forms.RadioButton();
+            this.m2Attack = new System.Windows.Forms.RadioButton();
+            this.m2Neutral = new System.Windows.Forms.RadioButton();
             this.m2DivisionLabel = new System.Windows.Forms.Label();
             this.m2DivisionNumber = new System.Windows.Forms.TextBox();
             this.m2MessageLabel = new System.Windows.Forms.Label();
@@ -270,6 +270,10 @@
             this.m2t1Name = new System.Windows.Forms.TextBox();
             this.m2t1Label = new System.Windows.Forms.Label();
             this.Match_3 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.m3t2SR = new System.Windows.Forms.TextBox();
+            this.m3t1SR = new System.Windows.Forms.TextBox();
             this.m3t2p6Role = new System.Windows.Forms.ComboBox();
             this.m3t2p5Role = new System.Windows.Forms.ComboBox();
             this.m3t2p4Role = new System.Windows.Forms.ComboBox();
@@ -302,14 +306,10 @@
             this.m3m5Label = new System.Windows.Forms.Label();
             this.m3m2Label = new System.Windows.Forms.Label();
             this.m3m1Label = new System.Windows.Forms.Label();
-            this.m3t2Side = new System.Windows.Forms.GroupBox();
-            this.m3t2Attack = new System.Windows.Forms.RadioButton();
-            this.m3t2Defend = new System.Windows.Forms.RadioButton();
-            this.m3t2Neutral = new System.Windows.Forms.RadioButton();
             this.m3t1Side = new System.Windows.Forms.GroupBox();
-            this.m3t1Attack = new System.Windows.Forms.RadioButton();
-            this.m3t1Defend = new System.Windows.Forms.RadioButton();
-            this.m3t1Neutral = new System.Windows.Forms.RadioButton();
+            this.m3Attack = new System.Windows.Forms.RadioButton();
+            this.m3Defend = new System.Windows.Forms.RadioButton();
+            this.m3Neutral = new System.Windows.Forms.RadioButton();
             this.m3DivisionLabel = new System.Windows.Forms.Label();
             this.m3DivisionNumber = new System.Windows.Forms.TextBox();
             this.m3MessageLabel = new System.Windows.Forms.Label();
@@ -363,12 +363,6 @@
             this.m3t1Name = new System.Windows.Forms.TextBox();
             this.m3t1Label = new System.Windows.Forms.Label();
             this.General_Info = new System.Windows.Forms.TabPage();
-            this.m1t1SR = new System.Windows.Forms.TextBox();
-            this.m1t2SR = new System.Windows.Forms.TextBox();
-            this.m2t2SR = new System.Windows.Forms.TextBox();
-            this.m2t1SR = new System.Windows.Forms.TextBox();
-            this.m3t2SR = new System.Windows.Forms.TextBox();
-            this.m3t1SR = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.Match_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m1m5t2Score)).BeginInit();
@@ -381,7 +375,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.m1m2t1Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m1m1t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m1m1t1Score)).BeginInit();
-            this.m1t2Side.SuspendLayout();
             this.m1t1Side.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m1t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m1t1Score)).BeginInit();
@@ -396,7 +389,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.m2m2t1Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2m1t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2m1t1Score)).BeginInit();
-            this.m2t2Side.SuspendLayout();
             this.m2t1Side.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m2t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2t1Score)).BeginInit();
@@ -411,7 +403,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.m3m2t1Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m3m1t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m3m1t1Score)).BeginInit();
-            this.m3t2Side.SuspendLayout();
             this.m3t1Side.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m3t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m3t1Score)).BeginInit();
@@ -431,6 +422,8 @@
             // 
             // Match_1
             // 
+            this.Match_1.Controls.Add(this.label2);
+            this.Match_1.Controls.Add(this.label1);
             this.Match_1.Controls.Add(this.m1t2SR);
             this.Match_1.Controls.Add(this.m1t1SR);
             this.Match_1.Controls.Add(this.m1t2p6Role);
@@ -465,7 +458,6 @@
             this.Match_1.Controls.Add(this.m1m5Label);
             this.Match_1.Controls.Add(this.m1m2Label);
             this.Match_1.Controls.Add(this.m1m1Label);
-            this.Match_1.Controls.Add(this.m1t2Side);
             this.Match_1.Controls.Add(this.m1t1Side);
             this.Match_1.Controls.Add(this.m1DivisionLabel);
             this.Match_1.Controls.Add(this.m1DivisionNumber);
@@ -527,197 +519,229 @@
             this.Match_1.Text = "Match 1";
             this.Match_1.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(407, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 135;
+            this.label2.Text = "Team 2 SR";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(187, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 134;
+            this.label1.Text = "Team 1 SR";
+            // 
+            // m1t2SR
+            // 
+            this.m1t2SR.Location = new System.Drawing.Point(371, 21);
+            this.m1t2SR.Name = "m1t2SR";
+            this.m1t2SR.Size = new System.Drawing.Size(97, 20);
+            this.m1t2SR.TabIndex = 133;
+            // 
+            // m1t1SR
+            // 
+            this.m1t1SR.Location = new System.Drawing.Point(190, 21);
+            this.m1t1SR.Name = "m1t1SR";
+            this.m1t1SR.Size = new System.Drawing.Size(97, 20);
+            this.m1t1SR.TabIndex = 132;
+            // 
             // m1t2p6Role
             // 
             this.m1t2p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p6Role.FormattingEnabled = true;
-            this.m1t2p6Role.Location = new System.Drawing.Point(337, 315);
-            this.m1t2p6Role.Name = "m1t2p6Role";
-            this.m1t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m1t2p6Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t2p6Role.TabIndex = 131;
             this.m1t2p6Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m1t2p6Role.Location = new System.Drawing.Point(337, 315);
+            this.m1t2p6Role.Name = "m1t2p6Role";
+            this.m1t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m1t2p6Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t2p6Role.TabIndex = 131;
             // 
             // m1t2p5Role
             // 
             this.m1t2p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p5Role.FormattingEnabled = true;
-            this.m1t2p5Role.Location = new System.Drawing.Point(337, 275);
-            this.m1t2p5Role.Name = "m1t2p5Role";
-            this.m1t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m1t2p5Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t2p5Role.TabIndex = 130;
             this.m1t2p5Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m1t2p5Role.Location = new System.Drawing.Point(337, 275);
+            this.m1t2p5Role.Name = "m1t2p5Role";
+            this.m1t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m1t2p5Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t2p5Role.TabIndex = 130;
             // 
             // m1t2p4Role
             // 
             this.m1t2p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p4Role.FormattingEnabled = true;
-            this.m1t2p4Role.Location = new System.Drawing.Point(337, 236);
-            this.m1t2p4Role.Name = "m1t2p4Role";
-            this.m1t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m1t2p4Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t2p4Role.TabIndex = 129;
             this.m1t2p4Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m1t2p4Role.Location = new System.Drawing.Point(337, 236);
+            this.m1t2p4Role.Name = "m1t2p4Role";
+            this.m1t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m1t2p4Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t2p4Role.TabIndex = 129;
             // 
             // m1t2p3Role
             // 
             this.m1t2p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p3Role.FormattingEnabled = true;
-            this.m1t2p3Role.Location = new System.Drawing.Point(337, 198);
-            this.m1t2p3Role.Name = "m1t2p3Role";
-            this.m1t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m1t2p3Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t2p3Role.TabIndex = 128;
             this.m1t2p3Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m1t2p3Role.Location = new System.Drawing.Point(337, 198);
+            this.m1t2p3Role.Name = "m1t2p3Role";
+            this.m1t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m1t2p3Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t2p3Role.TabIndex = 128;
             // 
             // m1t2p2Role
             // 
             this.m1t2p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p2Role.FormattingEnabled = true;
-            this.m1t2p2Role.Location = new System.Drawing.Point(337, 158);
-            this.m1t2p2Role.Name = "m1t2p2Role";
-            this.m1t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m1t2p2Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t2p2Role.TabIndex = 127;
             this.m1t2p2Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m1t2p2Role.Location = new System.Drawing.Point(337, 158);
+            this.m1t2p2Role.Name = "m1t2p2Role";
+            this.m1t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m1t2p2Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t2p2Role.TabIndex = 127;
             // 
             // m1t2p1Role
             // 
             this.m1t2p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p1Role.FormattingEnabled = true;
-            this.m1t2p1Role.Location = new System.Drawing.Point(337, 119);
-            this.m1t2p1Role.Name = "m1t2p1Role";
-            this.m1t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m1t2p1Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t2p1Role.TabIndex = 126;
             this.m1t2p1Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m1t2p1Role.Location = new System.Drawing.Point(337, 119);
+            this.m1t2p1Role.Name = "m1t2p1Role";
+            this.m1t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m1t2p1Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t2p1Role.TabIndex = 126;
             // 
             // m1t1p6Role
             // 
             this.m1t1p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p6Role.FormattingEnabled = true;
-            this.m1t1p6Role.Location = new System.Drawing.Point(240, 314);
-            this.m1t1p6Role.Name = "m1t1p6Role";
-            this.m1t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1p6Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t1p6Role.TabIndex = 125;
             this.m1t1p6Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m1t1p6Role.Location = new System.Drawing.Point(240, 314);
+            this.m1t1p6Role.Name = "m1t1p6Role";
+            this.m1t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p6Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t1p6Role.TabIndex = 125;
             // 
             // m1t1p5Role
             // 
             this.m1t1p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p5Role.FormattingEnabled = true;
-            this.m1t1p5Role.Location = new System.Drawing.Point(240, 275);
-            this.m1t1p5Role.Name = "m1t1p5Role";
-            this.m1t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1p5Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t1p5Role.TabIndex = 124;
             this.m1t1p5Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m1t1p5Role.Location = new System.Drawing.Point(240, 275);
+            this.m1t1p5Role.Name = "m1t1p5Role";
+            this.m1t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p5Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t1p5Role.TabIndex = 124;
             // 
             // m1t1p4Role
             // 
             this.m1t1p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p4Role.FormattingEnabled = true;
-            this.m1t1p4Role.Location = new System.Drawing.Point(240, 236);
-            this.m1t1p4Role.Name = "m1t1p4Role";
-            this.m1t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1p4Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t1p4Role.TabIndex = 123;
             this.m1t1p4Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m1t1p4Role.Location = new System.Drawing.Point(240, 236);
+            this.m1t1p4Role.Name = "m1t1p4Role";
+            this.m1t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p4Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t1p4Role.TabIndex = 123;
             // 
             // m1t1p3Role
             // 
             this.m1t1p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p3Role.FormattingEnabled = true;
-            this.m1t1p3Role.Location = new System.Drawing.Point(240, 197);
-            this.m1t1p3Role.Name = "m1t1p3Role";
-            this.m1t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1p3Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t1p3Role.TabIndex = 122;
             this.m1t1p3Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m1t1p3Role.Location = new System.Drawing.Point(240, 197);
+            this.m1t1p3Role.Name = "m1t1p3Role";
+            this.m1t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p3Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t1p3Role.TabIndex = 122;
             // 
             // m1t1p2Role
             // 
             this.m1t1p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p2Role.FormattingEnabled = true;
-            this.m1t1p2Role.Location = new System.Drawing.Point(240, 158);
-            this.m1t1p2Role.Name = "m1t1p2Role";
-            this.m1t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1p2Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t1p2Role.TabIndex = 121;
             this.m1t1p2Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m1t1p2Role.Location = new System.Drawing.Point(240, 158);
+            this.m1t1p2Role.Name = "m1t1p2Role";
+            this.m1t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p2Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t1p2Role.TabIndex = 121;
             // 
             // m1t1p1Role
             // 
             this.m1t1p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p1Role.FormattingEnabled = true;
-            this.m1t1p1Role.Location = new System.Drawing.Point(240, 119);
-            this.m1t1p1Role.Name = "m1t1p1Role";
-            this.m1t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1p1Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t1p1Role.TabIndex = 120;
             this.m1t1p1Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m1t1p1Role.Location = new System.Drawing.Point(240, 119);
+            this.m1t1p1Role.Name = "m1t1p1Role";
+            this.m1t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p1Role.Size = new System.Drawing.Size(82, 21);
+            this.m1t1p1Role.TabIndex = 120;
             // 
             // m1m5t2Score
             // 
@@ -994,91 +1018,48 @@
             this.m1m1Label.TabIndex = 100;
             this.m1m1Label.Text = "Map 1";
             // 
-            // m1t2Side
-            // 
-            this.m1t2Side.Controls.Add(this.m1t2Defend);
-            this.m1t2Side.Controls.Add(this.m1t2Attack);
-            this.m1t2Side.Controls.Add(this.m1t2Neutral);
-            this.m1t2Side.Location = new System.Drawing.Point(449, 41);
-            this.m1t2Side.Name = "m1t2Side";
-            this.m1t2Side.Size = new System.Drawing.Size(120, 30);
-            this.m1t2Side.TabIndex = 73;
-            this.m1t2Side.TabStop = false;
-            // 
-            // m1t2Defend
-            // 
-            this.m1t2Defend.AutoSize = true;
-            this.m1t2Defend.Location = new System.Drawing.Point(49, 9);
-            this.m1t2Defend.Name = "m1t2Defend";
-            this.m1t2Defend.Size = new System.Drawing.Size(33, 17);
-            this.m1t2Defend.TabIndex = 70;
-            this.m1t2Defend.Text = "D";
-            this.m1t2Defend.UseVisualStyleBackColor = true;
-            // 
-            // m1t2Attack
-            // 
-            this.m1t2Attack.AutoSize = true;
-            this.m1t2Attack.Location = new System.Drawing.Point(11, 9);
-            this.m1t2Attack.Name = "m1t2Attack";
-            this.m1t2Attack.Size = new System.Drawing.Size(32, 17);
-            this.m1t2Attack.TabIndex = 69;
-            this.m1t2Attack.Text = "A";
-            this.m1t2Attack.UseVisualStyleBackColor = true;
-            // 
-            // m1t2Neutral
-            // 
-            this.m1t2Neutral.AutoSize = true;
-            this.m1t2Neutral.Checked = true;
-            this.m1t2Neutral.Location = new System.Drawing.Point(87, 9);
-            this.m1t2Neutral.Name = "m1t2Neutral";
-            this.m1t2Neutral.Size = new System.Drawing.Size(33, 17);
-            this.m1t2Neutral.TabIndex = 71;
-            this.m1t2Neutral.TabStop = true;
-            this.m1t2Neutral.Text = "N";
-            this.m1t2Neutral.UseVisualStyleBackColor = true;
-            // 
             // m1t1Side
             // 
-            this.m1t1Side.Controls.Add(this.m1t1Attack);
-            this.m1t1Side.Controls.Add(this.m1t1Defend);
-            this.m1t1Side.Controls.Add(this.m1t1Neutral);
+            this.m1t1Side.Controls.Add(this.m1Attack);
+            this.m1t1Side.Controls.Add(this.m1Defend);
+            this.m1t1Side.Controls.Add(this.m1Neutral);
             this.m1t1Side.Location = new System.Drawing.Point(90, 41);
             this.m1t1Side.Name = "m1t1Side";
             this.m1t1Side.Size = new System.Drawing.Size(120, 30);
             this.m1t1Side.TabIndex = 72;
             this.m1t1Side.TabStop = false;
             // 
-            // m1t1Attack
+            // m1Attack
             // 
-            this.m1t1Attack.AutoSize = true;
-            this.m1t1Attack.Location = new System.Drawing.Point(6, 9);
-            this.m1t1Attack.Name = "m1t1Attack";
-            this.m1t1Attack.Size = new System.Drawing.Size(32, 17);
-            this.m1t1Attack.TabIndex = 66;
-            this.m1t1Attack.Text = "A";
-            this.m1t1Attack.UseVisualStyleBackColor = true;
+            this.m1Attack.AutoSize = true;
+            this.m1Attack.Location = new System.Drawing.Point(6, 9);
+            this.m1Attack.Name = "m1Attack";
+            this.m1Attack.Size = new System.Drawing.Size(32, 17);
+            this.m1Attack.TabIndex = 66;
+            this.m1Attack.Text = "A";
+            this.m1Attack.UseVisualStyleBackColor = true;
             // 
-            // m1t1Defend
+            // m1Defend
             // 
-            this.m1t1Defend.AutoSize = true;
-            this.m1t1Defend.Location = new System.Drawing.Point(44, 9);
-            this.m1t1Defend.Name = "m1t1Defend";
-            this.m1t1Defend.Size = new System.Drawing.Size(33, 17);
-            this.m1t1Defend.TabIndex = 67;
-            this.m1t1Defend.Text = "D";
-            this.m1t1Defend.UseVisualStyleBackColor = true;
+            this.m1Defend.AutoSize = true;
+            this.m1Defend.Location = new System.Drawing.Point(44, 9);
+            this.m1Defend.Name = "m1Defend";
+            this.m1Defend.Size = new System.Drawing.Size(33, 17);
+            this.m1Defend.TabIndex = 67;
+            this.m1Defend.Text = "D";
+            this.m1Defend.UseVisualStyleBackColor = true;
             // 
-            // m1t1Neutral
+            // m1Neutral
             // 
-            this.m1t1Neutral.AutoSize = true;
-            this.m1t1Neutral.Checked = true;
-            this.m1t1Neutral.Location = new System.Drawing.Point(82, 9);
-            this.m1t1Neutral.Name = "m1t1Neutral";
-            this.m1t1Neutral.Size = new System.Drawing.Size(33, 17);
-            this.m1t1Neutral.TabIndex = 68;
-            this.m1t1Neutral.TabStop = true;
-            this.m1t1Neutral.Text = "N";
-            this.m1t1Neutral.UseVisualStyleBackColor = true;
+            this.m1Neutral.AutoSize = true;
+            this.m1Neutral.Checked = true;
+            this.m1Neutral.Location = new System.Drawing.Point(82, 9);
+            this.m1Neutral.Name = "m1Neutral";
+            this.m1Neutral.Size = new System.Drawing.Size(33, 17);
+            this.m1Neutral.TabIndex = 68;
+            this.m1Neutral.TabStop = true;
+            this.m1Neutral.Text = "N";
+            this.m1Neutral.UseVisualStyleBackColor = true;
             // 
             // m1DivisionLabel
             // 
@@ -1849,6 +1830,8 @@
             // 
             // Match_2
             // 
+            this.Match_2.Controls.Add(this.label4);
+            this.Match_2.Controls.Add(this.label3);
             this.Match_2.Controls.Add(this.m2t2SR);
             this.Match_2.Controls.Add(this.m2t1SR);
             this.Match_2.Controls.Add(this.m2t2p6Role);
@@ -1883,7 +1866,6 @@
             this.Match_2.Controls.Add(this.m2m5Label);
             this.Match_2.Controls.Add(this.m2m2Label);
             this.Match_2.Controls.Add(this.m2m1Label);
-            this.Match_2.Controls.Add(this.m2t2Side);
             this.Match_2.Controls.Add(this.m2t1Side);
             this.Match_2.Controls.Add(this.m2DivisionLabel);
             this.Match_2.Controls.Add(this.m2DivisionNumber);
@@ -1945,197 +1927,229 @@
             this.Match_2.Text = "Match 2";
             this.Match_2.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(407, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 147;
+            this.label4.Text = "Team 2 SR";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(187, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 146;
+            this.label3.Text = "Team 1 SR";
+            // 
+            // m2t2SR
+            // 
+            this.m2t2SR.Location = new System.Drawing.Point(371, 21);
+            this.m2t2SR.Name = "m2t2SR";
+            this.m2t2SR.Size = new System.Drawing.Size(97, 20);
+            this.m2t2SR.TabIndex = 145;
+            // 
+            // m2t1SR
+            // 
+            this.m2t1SR.Location = new System.Drawing.Point(190, 21);
+            this.m2t1SR.Name = "m2t1SR";
+            this.m2t1SR.Size = new System.Drawing.Size(97, 20);
+            this.m2t1SR.TabIndex = 144;
+            // 
             // m2t2p6Role
             // 
             this.m2t2p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p6Role.FormattingEnabled = true;
-            this.m2t2p6Role.Location = new System.Drawing.Point(337, 315);
-            this.m2t2p6Role.Name = "m2t2p6Role";
-            this.m2t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m2t2p6Role.Size = new System.Drawing.Size(82, 21);
-            this.m2t2p6Role.TabIndex = 143;
             this.m2t2p6Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m2t2p6Role.Location = new System.Drawing.Point(337, 315);
+            this.m2t2p6Role.Name = "m2t2p6Role";
+            this.m2t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m2t2p6Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t2p6Role.TabIndex = 143;
             // 
             // m2t2p5Role
             // 
             this.m2t2p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p5Role.FormattingEnabled = true;
-            this.m2t2p5Role.Location = new System.Drawing.Point(337, 275);
-            this.m2t2p5Role.Name = "m2t2p5Role";
-            this.m2t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m2t2p5Role.Size = new System.Drawing.Size(82, 21);
-            this.m2t2p5Role.TabIndex = 142;
             this.m2t2p5Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m2t2p5Role.Location = new System.Drawing.Point(337, 275);
+            this.m2t2p5Role.Name = "m2t2p5Role";
+            this.m2t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m2t2p5Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t2p5Role.TabIndex = 142;
             // 
             // m2t2p4Role
             // 
             this.m2t2p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p4Role.FormattingEnabled = true;
-            this.m2t2p4Role.Location = new System.Drawing.Point(337, 236);
-            this.m2t2p4Role.Name = "m2t2p4Role";
-            this.m2t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m2t2p4Role.Size = new System.Drawing.Size(82, 21);
-            this.m2t2p4Role.TabIndex = 141;
             this.m2t2p4Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m2t2p4Role.Location = new System.Drawing.Point(337, 236);
+            this.m2t2p4Role.Name = "m2t2p4Role";
+            this.m2t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m2t2p4Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t2p4Role.TabIndex = 141;
             // 
             // m2t2p3Role
             // 
             this.m2t2p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p3Role.FormattingEnabled = true;
-            this.m2t2p3Role.Location = new System.Drawing.Point(337, 198);
-            this.m2t2p3Role.Name = "m2t2p3Role";
-            this.m2t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m2t2p3Role.Size = new System.Drawing.Size(82, 21);
-            this.m2t2p3Role.TabIndex = 140;
             this.m2t2p3Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m2t2p3Role.Location = new System.Drawing.Point(337, 198);
+            this.m2t2p3Role.Name = "m2t2p3Role";
+            this.m2t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m2t2p3Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t2p3Role.TabIndex = 140;
             // 
             // m2t2p2Role
             // 
             this.m2t2p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p2Role.FormattingEnabled = true;
-            this.m2t2p2Role.Location = new System.Drawing.Point(337, 158);
-            this.m2t2p2Role.Name = "m2t2p2Role";
-            this.m2t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m2t2p2Role.Size = new System.Drawing.Size(82, 21);
-            this.m2t2p2Role.TabIndex = 139;
             this.m2t2p2Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m2t2p2Role.Location = new System.Drawing.Point(337, 158);
+            this.m2t2p2Role.Name = "m2t2p2Role";
+            this.m2t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m2t2p2Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t2p2Role.TabIndex = 139;
             // 
             // m2t2p1Role
             // 
             this.m2t2p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p1Role.FormattingEnabled = true;
-            this.m2t2p1Role.Location = new System.Drawing.Point(337, 119);
-            this.m2t2p1Role.Name = "m2t2p1Role";
-            this.m2t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m2t2p1Role.Size = new System.Drawing.Size(82, 21);
-            this.m2t2p1Role.TabIndex = 138;
             this.m2t2p1Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m2t2p1Role.Location = new System.Drawing.Point(337, 119);
+            this.m2t2p1Role.Name = "m2t2p1Role";
+            this.m2t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m2t2p1Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t2p1Role.TabIndex = 138;
             // 
             // m2t1p6Role
             // 
             this.m2t1p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p6Role.FormattingEnabled = true;
-            this.m2t1p6Role.Location = new System.Drawing.Point(240, 314);
-            this.m2t1p6Role.Name = "m2t1p6Role";
-            this.m2t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m2t1p6Role.Size = new System.Drawing.Size(82, 21);
-            this.m2t1p6Role.TabIndex = 137;
             this.m2t1p6Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m2t1p6Role.Location = new System.Drawing.Point(240, 314);
+            this.m2t1p6Role.Name = "m2t1p6Role";
+            this.m2t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2t1p6Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t1p6Role.TabIndex = 137;
             // 
             // m2t1p5Role
             // 
             this.m2t1p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p5Role.FormattingEnabled = true;
-            this.m2t1p5Role.Location = new System.Drawing.Point(240, 275);
-            this.m2t1p5Role.Name = "m2t1p5Role";
-            this.m2t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m2t1p5Role.Size = new System.Drawing.Size(82, 21);
-            this.m2t1p5Role.TabIndex = 136;
             this.m2t1p5Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m2t1p5Role.Location = new System.Drawing.Point(240, 275);
+            this.m2t1p5Role.Name = "m2t1p5Role";
+            this.m2t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2t1p5Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t1p5Role.TabIndex = 136;
             // 
             // m2t1p4Role
             // 
             this.m2t1p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p4Role.FormattingEnabled = true;
-            this.m2t1p4Role.Location = new System.Drawing.Point(240, 236);
-            this.m2t1p4Role.Name = "m2t1p4Role";
-            this.m2t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m2t1p4Role.Size = new System.Drawing.Size(82, 21);
-            this.m2t1p4Role.TabIndex = 135;
             this.m2t1p4Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m2t1p4Role.Location = new System.Drawing.Point(240, 236);
+            this.m2t1p4Role.Name = "m2t1p4Role";
+            this.m2t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2t1p4Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t1p4Role.TabIndex = 135;
             // 
             // m2t1p3Role
             // 
             this.m2t1p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p3Role.FormattingEnabled = true;
-            this.m2t1p3Role.Location = new System.Drawing.Point(240, 197);
-            this.m2t1p3Role.Name = "m2t1p3Role";
-            this.m2t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m2t1p3Role.Size = new System.Drawing.Size(82, 21);
-            this.m2t1p3Role.TabIndex = 134;
             this.m2t1p3Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m2t1p3Role.Location = new System.Drawing.Point(240, 197);
+            this.m2t1p3Role.Name = "m2t1p3Role";
+            this.m2t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2t1p3Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t1p3Role.TabIndex = 134;
             // 
             // m2t1p2Role
             // 
             this.m2t1p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p2Role.FormattingEnabled = true;
-            this.m2t1p2Role.Location = new System.Drawing.Point(240, 158);
-            this.m2t1p2Role.Name = "m2t1p2Role";
-            this.m2t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m2t1p2Role.Size = new System.Drawing.Size(82, 21);
-            this.m2t1p2Role.TabIndex = 133;
             this.m2t1p2Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m2t1p2Role.Location = new System.Drawing.Point(240, 158);
+            this.m2t1p2Role.Name = "m2t1p2Role";
+            this.m2t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2t1p2Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t1p2Role.TabIndex = 133;
             // 
             // m2t1p1Role
             // 
             this.m2t1p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p1Role.FormattingEnabled = true;
-            this.m2t1p1Role.Location = new System.Drawing.Point(240, 119);
-            this.m2t1p1Role.Name = "m2t1p1Role";
-            this.m2t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m2t1p1Role.Size = new System.Drawing.Size(82, 21);
-            this.m2t1p1Role.TabIndex = 132;
             this.m2t1p1Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m2t1p1Role.Location = new System.Drawing.Point(240, 119);
+            this.m2t1p1Role.Name = "m2t1p1Role";
+            this.m2t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m2t1p1Role.Size = new System.Drawing.Size(82, 21);
+            this.m2t1p1Role.TabIndex = 132;
             // 
             // m2m5t2Score
             // 
@@ -2412,91 +2426,48 @@
             this.m2m1Label.TabIndex = 80;
             this.m2m1Label.Text = "Map 1";
             // 
-            // m2t2Side
-            // 
-            this.m2t2Side.Controls.Add(this.m2t2Defend);
-            this.m2t2Side.Controls.Add(this.m2t2Attack);
-            this.m2t2Side.Controls.Add(this.m2t2Neutral);
-            this.m2t2Side.Location = new System.Drawing.Point(449, 41);
-            this.m2t2Side.Name = "m2t2Side";
-            this.m2t2Side.Size = new System.Drawing.Size(120, 30);
-            this.m2t2Side.TabIndex = 79;
-            this.m2t2Side.TabStop = false;
-            // 
-            // m2t2Defend
-            // 
-            this.m2t2Defend.AutoSize = true;
-            this.m2t2Defend.Location = new System.Drawing.Point(49, 9);
-            this.m2t2Defend.Name = "m2t2Defend";
-            this.m2t2Defend.Size = new System.Drawing.Size(33, 17);
-            this.m2t2Defend.TabIndex = 76;
-            this.m2t2Defend.Text = "D";
-            this.m2t2Defend.UseVisualStyleBackColor = true;
-            // 
-            // m2t2Attack
-            // 
-            this.m2t2Attack.AutoSize = true;
-            this.m2t2Attack.Location = new System.Drawing.Point(11, 9);
-            this.m2t2Attack.Name = "m2t2Attack";
-            this.m2t2Attack.Size = new System.Drawing.Size(32, 17);
-            this.m2t2Attack.TabIndex = 75;
-            this.m2t2Attack.Text = "A";
-            this.m2t2Attack.UseVisualStyleBackColor = true;
-            // 
-            // m2t2Neutral
-            // 
-            this.m2t2Neutral.AutoSize = true;
-            this.m2t2Neutral.Checked = true;
-            this.m2t2Neutral.Location = new System.Drawing.Point(87, 9);
-            this.m2t2Neutral.Name = "m2t2Neutral";
-            this.m2t2Neutral.Size = new System.Drawing.Size(33, 17);
-            this.m2t2Neutral.TabIndex = 77;
-            this.m2t2Neutral.TabStop = true;
-            this.m2t2Neutral.Text = "N";
-            this.m2t2Neutral.UseVisualStyleBackColor = true;
-            // 
             // m2t1Side
             // 
-            this.m2t1Side.Controls.Add(this.m2t1Defend);
-            this.m2t1Side.Controls.Add(this.m2t1Attack);
-            this.m2t1Side.Controls.Add(this.m2t1Neutral);
+            this.m2t1Side.Controls.Add(this.m2Defend);
+            this.m2t1Side.Controls.Add(this.m2Attack);
+            this.m2t1Side.Controls.Add(this.m2Neutral);
             this.m2t1Side.Location = new System.Drawing.Point(90, 41);
             this.m2t1Side.Name = "m2t1Side";
             this.m2t1Side.Size = new System.Drawing.Size(120, 30);
             this.m2t1Side.TabIndex = 78;
             this.m2t1Side.TabStop = false;
             // 
-            // m2t1Defend
+            // m2Defend
             // 
-            this.m2t1Defend.AutoSize = true;
-            this.m2t1Defend.Location = new System.Drawing.Point(44, 9);
-            this.m2t1Defend.Name = "m2t1Defend";
-            this.m2t1Defend.Size = new System.Drawing.Size(33, 17);
-            this.m2t1Defend.TabIndex = 73;
-            this.m2t1Defend.Text = "D";
-            this.m2t1Defend.UseVisualStyleBackColor = true;
+            this.m2Defend.AutoSize = true;
+            this.m2Defend.Location = new System.Drawing.Point(44, 9);
+            this.m2Defend.Name = "m2Defend";
+            this.m2Defend.Size = new System.Drawing.Size(33, 17);
+            this.m2Defend.TabIndex = 73;
+            this.m2Defend.Text = "D";
+            this.m2Defend.UseVisualStyleBackColor = true;
             // 
             // m2t1Attack
             // 
-            this.m2t1Attack.AutoSize = true;
-            this.m2t1Attack.Location = new System.Drawing.Point(6, 9);
-            this.m2t1Attack.Name = "m2t1Attack";
-            this.m2t1Attack.Size = new System.Drawing.Size(32, 17);
-            this.m2t1Attack.TabIndex = 72;
-            this.m2t1Attack.Text = "A";
-            this.m2t1Attack.UseVisualStyleBackColor = true;
+            this.m2Attack.AutoSize = true;
+            this.m2Attack.Location = new System.Drawing.Point(6, 9);
+            this.m2Attack.Name = "m2Attack";
+            this.m2Attack.Size = new System.Drawing.Size(32, 17);
+            this.m2Attack.TabIndex = 72;
+            this.m2Attack.Text = "A";
+            this.m2Attack.UseVisualStyleBackColor = true;
             // 
             // m2t1Neutral
             // 
-            this.m2t1Neutral.AutoSize = true;
-            this.m2t1Neutral.Checked = true;
-            this.m2t1Neutral.Location = new System.Drawing.Point(82, 9);
-            this.m2t1Neutral.Name = "m2t1Neutral";
-            this.m2t1Neutral.Size = new System.Drawing.Size(33, 17);
-            this.m2t1Neutral.TabIndex = 74;
-            this.m2t1Neutral.TabStop = true;
-            this.m2t1Neutral.Text = "N";
-            this.m2t1Neutral.UseVisualStyleBackColor = true;
+            this.m2Neutral.AutoSize = true;
+            this.m2Neutral.Checked = true;
+            this.m2Neutral.Location = new System.Drawing.Point(82, 9);
+            this.m2Neutral.Name = "m2Neutral";
+            this.m2Neutral.Size = new System.Drawing.Size(33, 17);
+            this.m2Neutral.TabIndex = 74;
+            this.m2Neutral.TabStop = true;
+            this.m2Neutral.Text = "N";
+            this.m2Neutral.UseVisualStyleBackColor = true;
             // 
             // m2DivisionLabel
             // 
@@ -3267,6 +3238,8 @@
             // 
             // Match_3
             // 
+            this.Match_3.Controls.Add(this.label6);
+            this.Match_3.Controls.Add(this.label5);
             this.Match_3.Controls.Add(this.m3t2SR);
             this.Match_3.Controls.Add(this.m3t1SR);
             this.Match_3.Controls.Add(this.m3t2p6Role);
@@ -3301,7 +3274,6 @@
             this.Match_3.Controls.Add(this.m3m5Label);
             this.Match_3.Controls.Add(this.m3m2Label);
             this.Match_3.Controls.Add(this.m3m1Label);
-            this.Match_3.Controls.Add(this.m3t2Side);
             this.Match_3.Controls.Add(this.m3t1Side);
             this.Match_3.Controls.Add(this.m3DivisionLabel);
             this.Match_3.Controls.Add(this.m3DivisionNumber);
@@ -3363,197 +3335,229 @@
             this.Match_3.Text = "Match 3";
             this.Match_3.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(407, 5);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 13);
+            this.label6.TabIndex = 147;
+            this.label6.Text = "Team 2 SR";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(187, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 146;
+            this.label5.Text = "Team 1 SR";
+            // 
+            // m3t2SR
+            // 
+            this.m3t2SR.Location = new System.Drawing.Point(371, 21);
+            this.m3t2SR.Name = "m3t2SR";
+            this.m3t2SR.Size = new System.Drawing.Size(97, 20);
+            this.m3t2SR.TabIndex = 145;
+            // 
+            // m3t1SR
+            // 
+            this.m3t1SR.Location = new System.Drawing.Point(190, 21);
+            this.m3t1SR.Name = "m3t1SR";
+            this.m3t1SR.Size = new System.Drawing.Size(97, 20);
+            this.m3t1SR.TabIndex = 144;
+            // 
             // m3t2p6Role
             // 
             this.m3t2p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p6Role.FormattingEnabled = true;
-            this.m3t2p6Role.Location = new System.Drawing.Point(337, 315);
-            this.m3t2p6Role.Name = "m3t2p6Role";
-            this.m3t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m3t2p6Role.Size = new System.Drawing.Size(82, 21);
-            this.m3t2p6Role.TabIndex = 143;
             this.m3t2p6Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m3t2p6Role.Location = new System.Drawing.Point(337, 315);
+            this.m3t2p6Role.Name = "m3t2p6Role";
+            this.m3t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m3t2p6Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t2p6Role.TabIndex = 143;
             // 
             // m3t2p5Role
             // 
             this.m3t2p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p5Role.FormattingEnabled = true;
-            this.m3t2p5Role.Location = new System.Drawing.Point(337, 275);
-            this.m3t2p5Role.Name = "m3t2p5Role";
-            this.m3t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m3t2p5Role.Size = new System.Drawing.Size(82, 21);
-            this.m3t2p5Role.TabIndex = 142;
             this.m3t2p5Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m3t2p5Role.Location = new System.Drawing.Point(337, 275);
+            this.m3t2p5Role.Name = "m3t2p5Role";
+            this.m3t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m3t2p5Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t2p5Role.TabIndex = 142;
             // 
             // m3t2p4Role
             // 
             this.m3t2p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p4Role.FormattingEnabled = true;
-            this.m3t2p4Role.Location = new System.Drawing.Point(337, 236);
-            this.m3t2p4Role.Name = "m3t2p4Role";
-            this.m3t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m3t2p4Role.Size = new System.Drawing.Size(82, 21);
-            this.m3t2p4Role.TabIndex = 141;
             this.m3t2p4Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m3t2p4Role.Location = new System.Drawing.Point(337, 236);
+            this.m3t2p4Role.Name = "m3t2p4Role";
+            this.m3t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m3t2p4Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t2p4Role.TabIndex = 141;
             // 
             // m3t2p3Role
             // 
             this.m3t2p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p3Role.FormattingEnabled = true;
-            this.m3t2p3Role.Location = new System.Drawing.Point(337, 198);
-            this.m3t2p3Role.Name = "m3t2p3Role";
-            this.m3t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m3t2p3Role.Size = new System.Drawing.Size(82, 21);
-            this.m3t2p3Role.TabIndex = 140;
             this.m3t2p3Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m3t2p3Role.Location = new System.Drawing.Point(337, 198);
+            this.m3t2p3Role.Name = "m3t2p3Role";
+            this.m3t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m3t2p3Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t2p3Role.TabIndex = 140;
             // 
             // m3t2p2Role
             // 
             this.m3t2p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p2Role.FormattingEnabled = true;
-            this.m3t2p2Role.Location = new System.Drawing.Point(337, 158);
-            this.m3t2p2Role.Name = "m3t2p2Role";
-            this.m3t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m3t2p2Role.Size = new System.Drawing.Size(82, 21);
-            this.m3t2p2Role.TabIndex = 139;
             this.m3t2p2Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m3t2p2Role.Location = new System.Drawing.Point(337, 158);
+            this.m3t2p2Role.Name = "m3t2p2Role";
+            this.m3t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m3t2p2Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t2p2Role.TabIndex = 139;
             // 
             // m3t2p1Role
             // 
             this.m3t2p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p1Role.FormattingEnabled = true;
-            this.m3t2p1Role.Location = new System.Drawing.Point(337, 119);
-            this.m3t2p1Role.Name = "m3t2p1Role";
-            this.m3t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m3t2p1Role.Size = new System.Drawing.Size(82, 21);
-            this.m3t2p1Role.TabIndex = 138;
             this.m3t2p1Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m3t2p1Role.Location = new System.Drawing.Point(337, 119);
+            this.m3t2p1Role.Name = "m3t2p1Role";
+            this.m3t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m3t2p1Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t2p1Role.TabIndex = 138;
             // 
             // m3t1p6Role
             // 
             this.m3t1p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p6Role.FormattingEnabled = true;
-            this.m3t1p6Role.Location = new System.Drawing.Point(240, 314);
-            this.m3t1p6Role.Name = "m3t1p6Role";
-            this.m3t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m3t1p6Role.Size = new System.Drawing.Size(82, 21);
-            this.m3t1p6Role.TabIndex = 137;
             this.m3t1p6Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m3t1p6Role.Location = new System.Drawing.Point(240, 314);
+            this.m3t1p6Role.Name = "m3t1p6Role";
+            this.m3t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3t1p6Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t1p6Role.TabIndex = 137;
             // 
             // m3t1p5Role
             // 
             this.m3t1p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p5Role.FormattingEnabled = true;
-            this.m3t1p5Role.Location = new System.Drawing.Point(240, 275);
-            this.m3t1p5Role.Name = "m3t1p5Role";
-            this.m3t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m3t1p5Role.Size = new System.Drawing.Size(82, 21);
-            this.m3t1p5Role.TabIndex = 136;
             this.m3t1p5Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m3t1p5Role.Location = new System.Drawing.Point(240, 275);
+            this.m3t1p5Role.Name = "m3t1p5Role";
+            this.m3t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3t1p5Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t1p5Role.TabIndex = 136;
             // 
             // m3t1p4Role
             // 
             this.m3t1p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p4Role.FormattingEnabled = true;
-            this.m3t1p4Role.Location = new System.Drawing.Point(240, 236);
-            this.m3t1p4Role.Name = "m3t1p4Role";
-            this.m3t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m3t1p4Role.Size = new System.Drawing.Size(82, 21);
-            this.m3t1p4Role.TabIndex = 135;
             this.m3t1p4Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m3t1p4Role.Location = new System.Drawing.Point(240, 236);
+            this.m3t1p4Role.Name = "m3t1p4Role";
+            this.m3t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3t1p4Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t1p4Role.TabIndex = 135;
             // 
             // m3t1p3Role
             // 
             this.m3t1p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p3Role.FormattingEnabled = true;
-            this.m3t1p3Role.Location = new System.Drawing.Point(240, 197);
-            this.m3t1p3Role.Name = "m3t1p3Role";
-            this.m3t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m3t1p3Role.Size = new System.Drawing.Size(82, 21);
-            this.m3t1p3Role.TabIndex = 134;
             this.m3t1p3Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m3t1p3Role.Location = new System.Drawing.Point(240, 197);
+            this.m3t1p3Role.Name = "m3t1p3Role";
+            this.m3t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3t1p3Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t1p3Role.TabIndex = 134;
             // 
             // m3t1p2Role
             // 
             this.m3t1p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p2Role.FormattingEnabled = true;
-            this.m3t1p2Role.Location = new System.Drawing.Point(240, 158);
-            this.m3t1p2Role.Name = "m3t1p2Role";
-            this.m3t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m3t1p2Role.Size = new System.Drawing.Size(82, 21);
-            this.m3t1p2Role.TabIndex = 133;
             this.m3t1p2Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m3t1p2Role.Location = new System.Drawing.Point(240, 158);
+            this.m3t1p2Role.Name = "m3t1p2Role";
+            this.m3t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3t1p2Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t1p2Role.TabIndex = 133;
             // 
             // m3t1p1Role
             // 
             this.m3t1p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p1Role.FormattingEnabled = true;
-            this.m3t1p1Role.Location = new System.Drawing.Point(240, 119);
-            this.m3t1p1Role.Name = "m3t1p1Role";
-            this.m3t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m3t1p1Role.Size = new System.Drawing.Size(82, 21);
-            this.m3t1p1Role.TabIndex = 132;
             this.m3t1p1Role.Items.AddRange(new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"});
+            this.m3t1p1Role.Location = new System.Drawing.Point(240, 119);
+            this.m3t1p1Role.Name = "m3t1p1Role";
+            this.m3t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m3t1p1Role.Size = new System.Drawing.Size(82, 21);
+            this.m3t1p1Role.TabIndex = 132;
             // 
             // m3m5t2Score
             // 
@@ -3830,91 +3834,48 @@
             this.m3m1Label.TabIndex = 100;
             this.m3m1Label.Text = "Map 1";
             // 
-            // m3t2Side
-            // 
-            this.m3t2Side.Controls.Add(this.m3t2Attack);
-            this.m3t2Side.Controls.Add(this.m3t2Defend);
-            this.m3t2Side.Controls.Add(this.m3t2Neutral);
-            this.m3t2Side.Location = new System.Drawing.Point(449, 41);
-            this.m3t2Side.Name = "m3t2Side";
-            this.m3t2Side.Size = new System.Drawing.Size(120, 30);
-            this.m3t2Side.TabIndex = 85;
-            this.m3t2Side.TabStop = false;
-            // 
-            // m3t2Attack
-            // 
-            this.m3t2Attack.AutoSize = true;
-            this.m3t2Attack.Location = new System.Drawing.Point(11, 9);
-            this.m3t2Attack.Name = "m3t2Attack";
-            this.m3t2Attack.Size = new System.Drawing.Size(32, 17);
-            this.m3t2Attack.TabIndex = 81;
-            this.m3t2Attack.Text = "A";
-            this.m3t2Attack.UseVisualStyleBackColor = true;
-            // 
-            // m3t2Defend
-            // 
-            this.m3t2Defend.AutoSize = true;
-            this.m3t2Defend.Location = new System.Drawing.Point(49, 9);
-            this.m3t2Defend.Name = "m3t2Defend";
-            this.m3t2Defend.Size = new System.Drawing.Size(33, 17);
-            this.m3t2Defend.TabIndex = 82;
-            this.m3t2Defend.Text = "D";
-            this.m3t2Defend.UseVisualStyleBackColor = true;
-            // 
-            // m3t2Neutral
-            // 
-            this.m3t2Neutral.AutoSize = true;
-            this.m3t2Neutral.Checked = true;
-            this.m3t2Neutral.Location = new System.Drawing.Point(87, 9);
-            this.m3t2Neutral.Name = "m3t2Neutral";
-            this.m3t2Neutral.Size = new System.Drawing.Size(33, 17);
-            this.m3t2Neutral.TabIndex = 83;
-            this.m3t2Neutral.TabStop = true;
-            this.m3t2Neutral.Text = "N";
-            this.m3t2Neutral.UseVisualStyleBackColor = true;
-            // 
             // m3t1Side
             // 
-            this.m3t1Side.Controls.Add(this.m3t1Attack);
-            this.m3t1Side.Controls.Add(this.m3t1Defend);
-            this.m3t1Side.Controls.Add(this.m3t1Neutral);
+            this.m3t1Side.Controls.Add(this.m3Attack);
+            this.m3t1Side.Controls.Add(this.m3Defend);
+            this.m3t1Side.Controls.Add(this.m3Neutral);
             this.m3t1Side.Location = new System.Drawing.Point(90, 41);
             this.m3t1Side.Name = "m3t1Side";
             this.m3t1Side.Size = new System.Drawing.Size(120, 30);
             this.m3t1Side.TabIndex = 84;
             this.m3t1Side.TabStop = false;
             // 
-            // m3t1Attack
+            // m3Attack
             // 
-            this.m3t1Attack.AutoSize = true;
-            this.m3t1Attack.Location = new System.Drawing.Point(6, 9);
-            this.m3t1Attack.Name = "m3t1Attack";
-            this.m3t1Attack.Size = new System.Drawing.Size(32, 17);
-            this.m3t1Attack.TabIndex = 78;
-            this.m3t1Attack.Text = "A";
-            this.m3t1Attack.UseVisualStyleBackColor = true;
+            this.m3Attack.AutoSize = true;
+            this.m3Attack.Location = new System.Drawing.Point(6, 9);
+            this.m3Attack.Name = "m3Attack";
+            this.m3Attack.Size = new System.Drawing.Size(32, 17);
+            this.m3Attack.TabIndex = 78;
+            this.m3Attack.Text = "A";
+            this.m3Attack.UseVisualStyleBackColor = true;
             // 
-            // m3t1Defend
+            // m3Defend
             // 
-            this.m3t1Defend.AutoSize = true;
-            this.m3t1Defend.Location = new System.Drawing.Point(44, 9);
-            this.m3t1Defend.Name = "m3t1Defend";
-            this.m3t1Defend.Size = new System.Drawing.Size(33, 17);
-            this.m3t1Defend.TabIndex = 79;
-            this.m3t1Defend.Text = "D";
-            this.m3t1Defend.UseVisualStyleBackColor = true;
+            this.m3Defend.AutoSize = true;
+            this.m3Defend.Location = new System.Drawing.Point(44, 9);
+            this.m3Defend.Name = "m3Defend";
+            this.m3Defend.Size = new System.Drawing.Size(33, 17);
+            this.m3Defend.TabIndex = 79;
+            this.m3Defend.Text = "D";
+            this.m3Defend.UseVisualStyleBackColor = true;
             // 
-            // m3t1Neutral
+            // m3Neutral
             // 
-            this.m3t1Neutral.AutoSize = true;
-            this.m3t1Neutral.Checked = true;
-            this.m3t1Neutral.Location = new System.Drawing.Point(82, 9);
-            this.m3t1Neutral.Name = "m3t1Neutral";
-            this.m3t1Neutral.Size = new System.Drawing.Size(33, 17);
-            this.m3t1Neutral.TabIndex = 80;
-            this.m3t1Neutral.TabStop = true;
-            this.m3t1Neutral.Text = "N";
-            this.m3t1Neutral.UseVisualStyleBackColor = true;
+            this.m3Neutral.AutoSize = true;
+            this.m3Neutral.Checked = true;
+            this.m3Neutral.Location = new System.Drawing.Point(82, 9);
+            this.m3Neutral.Name = "m3Neutral";
+            this.m3Neutral.Size = new System.Drawing.Size(33, 17);
+            this.m3Neutral.TabIndex = 80;
+            this.m3Neutral.TabStop = true;
+            this.m3Neutral.Text = "N";
+            this.m3Neutral.UseVisualStyleBackColor = true;
             // 
             // m3DivisionLabel
             // 
@@ -4693,48 +4654,6 @@
             this.General_Info.Text = "General";
             this.General_Info.UseVisualStyleBackColor = true;
             // 
-            // m1t1SR
-            // 
-            this.m1t1SR.Location = new System.Drawing.Point(190, 21);
-            this.m1t1SR.Name = "m1t1SR";
-            this.m1t1SR.Size = new System.Drawing.Size(97, 20);
-            this.m1t1SR.TabIndex = 132;
-            // 
-            // m1t2SR
-            // 
-            this.m1t2SR.Location = new System.Drawing.Point(371, 21);
-            this.m1t2SR.Name = "m1t2SR";
-            this.m1t2SR.Size = new System.Drawing.Size(97, 20);
-            this.m1t2SR.TabIndex = 133;
-            // 
-            // m2t2SR
-            // 
-            this.m2t2SR.Location = new System.Drawing.Point(371, 21);
-            this.m2t2SR.Name = "m2t2SR";
-            this.m2t2SR.Size = new System.Drawing.Size(97, 20);
-            this.m2t2SR.TabIndex = 145;
-            // 
-            // m2t1SR
-            // 
-            this.m2t1SR.Location = new System.Drawing.Point(190, 21);
-            this.m2t1SR.Name = "m2t1SR";
-            this.m2t1SR.Size = new System.Drawing.Size(97, 20);
-            this.m2t1SR.TabIndex = 144;
-            // 
-            // m3t2SR
-            // 
-            this.m3t2SR.Location = new System.Drawing.Point(371, 21);
-            this.m3t2SR.Name = "m3t2SR";
-            this.m3t2SR.Size = new System.Drawing.Size(97, 20);
-            this.m3t2SR.TabIndex = 145;
-            // 
-            // m3t1SR
-            // 
-            this.m3t1SR.Location = new System.Drawing.Point(190, 21);
-            this.m3t1SR.Name = "m3t1SR";
-            this.m3t1SR.Size = new System.Drawing.Size(97, 20);
-            this.m3t1SR.TabIndex = 144;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4758,8 +4677,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.m1m2t1Score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m1m1t2Score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m1m1t1Score)).EndInit();
-            this.m1t2Side.ResumeLayout(false);
-            this.m1t2Side.PerformLayout();
             this.m1t1Side.ResumeLayout(false);
             this.m1t1Side.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m1t2Score)).EndInit();
@@ -4776,8 +4693,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.m2m2t1Score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2m1t2Score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2m1t1Score)).EndInit();
-            this.m2t2Side.ResumeLayout(false);
-            this.m2t2Side.PerformLayout();
             this.m2t1Side.ResumeLayout(false);
             this.m2t1Side.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m2t2Score)).EndInit();
@@ -4794,8 +4709,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.m3m2t1Score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m3m1t2Score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m3m1t1Score)).EndInit();
-            this.m3t2Side.ResumeLayout(false);
-            this.m3t2Side.PerformLayout();
             this.m3t1Side.ResumeLayout(false);
             this.m3t1Side.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m3t2Score)).EndInit();
@@ -4973,29 +4886,17 @@
         #endregion
 
         private System.Windows.Forms.TabPage General_Info;
-        private System.Windows.Forms.RadioButton m1t1Neutral;
-        private System.Windows.Forms.RadioButton m1t1Defend;
-        private System.Windows.Forms.RadioButton m1t1Attack;
-        private System.Windows.Forms.RadioButton m1t2Neutral;
-        private System.Windows.Forms.RadioButton m1t2Defend;
-        private System.Windows.Forms.RadioButton m1t2Attack;
-        private System.Windows.Forms.RadioButton m2t2Neutral;
-        private System.Windows.Forms.RadioButton m2t2Defend;
-        private System.Windows.Forms.RadioButton m2t2Attack;
-        private System.Windows.Forms.RadioButton m2t1Neutral;
-        private System.Windows.Forms.RadioButton m2t1Defend;
-        private System.Windows.Forms.RadioButton m2t1Attack;
-        private System.Windows.Forms.RadioButton m3t2Neutral;
-        private System.Windows.Forms.RadioButton m3t2Defend;
-        private System.Windows.Forms.RadioButton m3t2Attack;
-        private System.Windows.Forms.RadioButton m3t1Neutral;
-        private System.Windows.Forms.RadioButton m3t1Defend;
-        private System.Windows.Forms.RadioButton m3t1Attack;
+        private System.Windows.Forms.RadioButton m1Neutral;
+        private System.Windows.Forms.RadioButton m1Defend;
+        private System.Windows.Forms.RadioButton m1Attack;
+        private System.Windows.Forms.RadioButton m2Neutral;
+        private System.Windows.Forms.RadioButton m2Defend;
+        private System.Windows.Forms.RadioButton m2Attack;
+        private System.Windows.Forms.RadioButton m3Neutral;
+        private System.Windows.Forms.RadioButton m3Defend;
+        private System.Windows.Forms.RadioButton m3Attack;
         private System.Windows.Forms.GroupBox m1t1Side;
-        private System.Windows.Forms.GroupBox m1t2Side;
-        private System.Windows.Forms.GroupBox m2t2Side;
         private System.Windows.Forms.GroupBox m2t1Side;
-        private System.Windows.Forms.GroupBox m3t2Side;
         private System.Windows.Forms.GroupBox m3t1Side;
         private System.Windows.Forms.NumericUpDown m1m5t2Score;
         private System.Windows.Forms.NumericUpDown m1m5t1Score;
@@ -5099,6 +5000,12 @@
         private System.Windows.Forms.TextBox m2t1SR;
         private System.Windows.Forms.TextBox m3t2SR;
         private System.Windows.Forms.TextBox m3t1SR;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
 
