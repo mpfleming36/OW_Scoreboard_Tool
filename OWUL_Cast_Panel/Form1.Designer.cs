@@ -32,6 +32,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"};
 
@@ -84,8 +85,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Match_1 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.m1t2SRLabel = new System.Windows.Forms.Label();
+            this.m1t1SRLabel = new System.Windows.Forms.Label();
             this.m1t2SR = new System.Windows.Forms.TextBox();
             this.m1t1SR = new System.Windows.Forms.TextBox();
             this.m1t2p6Role = new System.Windows.Forms.ComboBox();
@@ -177,8 +178,8 @@
             this.m1t1Name = new System.Windows.Forms.TextBox();
             this.m1t1Label = new System.Windows.Forms.Label();
             this.Match_2 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.m2t2SRLabel = new System.Windows.Forms.Label();
+            this.m2t1SRLabel = new System.Windows.Forms.Label();
             this.m2t2SR = new System.Windows.Forms.TextBox();
             this.m2t1SR = new System.Windows.Forms.TextBox();
             this.m2t2p6Role = new System.Windows.Forms.ComboBox();
@@ -270,8 +271,8 @@
             this.m2t1Name = new System.Windows.Forms.TextBox();
             this.m2t1Label = new System.Windows.Forms.Label();
             this.Match_3 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.m3t2SRLabel = new System.Windows.Forms.Label();
+            this.m3t1SRLabel = new System.Windows.Forms.Label();
             this.m3t2SR = new System.Windows.Forms.TextBox();
             this.m3t1SR = new System.Windows.Forms.TextBox();
             this.m3t2p6Role = new System.Windows.Forms.ComboBox();
@@ -363,6 +364,37 @@
             this.m3t1Name = new System.Windows.Forms.TextBox();
             this.m3t1Label = new System.Windows.Forms.Label();
             this.General_Info = new System.Windows.Forms.TabPage();
+            this.description = new System.Windows.Forms.RichTextBox();
+            this.generalUpdateButton = new System.Windows.Forms.Button();
+            this.generalResetButton = new System.Windows.Forms.Button();
+            this.utility8 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.utility7 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.utility6 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.utility5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.utility4 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.utility3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.utility2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.utility1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.analyst2 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.analyst1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.caster2 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.caster1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.host = new System.Windows.Forms.TextBox();
+            this.hostLabel = new System.Windows.Forms.Label();
+            this.message = new System.Windows.Forms.TextBox();
+            this.messageLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Match_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m1m5t2Score)).BeginInit();
@@ -406,6 +438,7 @@
             this.m3t1Side.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m3t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m3t1Score)).BeginInit();
+            this.General_Info.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -419,11 +452,12 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(667, 440);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // Match_1
             // 
-            this.Match_1.Controls.Add(this.label2);
-            this.Match_1.Controls.Add(this.label1);
+            this.Match_1.Controls.Add(this.m1t2SRLabel);
+            this.Match_1.Controls.Add(this.m1t1SRLabel);
             this.Match_1.Controls.Add(this.m1t2SR);
             this.Match_1.Controls.Add(this.m1t1SR);
             this.Match_1.Controls.Add(this.m1t2p6Role);
@@ -519,23 +553,23 @@
             this.Match_1.Text = "Match 1";
             this.Match_1.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // m1t2SRLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(407, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 135;
-            this.label2.Text = "Team 2 SR";
+            this.m1t2SRLabel.AutoSize = true;
+            this.m1t2SRLabel.Location = new System.Drawing.Point(407, 5);
+            this.m1t2SRLabel.Name = "m1t2SRLabel";
+            this.m1t2SRLabel.Size = new System.Drawing.Size(61, 13);
+            this.m1t2SRLabel.TabIndex = 135;
+            this.m1t2SRLabel.Text = "Team 2 SR";
             // 
-            // label1
+            // m1t1SRLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(187, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 134;
-            this.label1.Text = "Team 1 SR";
+            this.m1t1SRLabel.AutoSize = true;
+            this.m1t1SRLabel.Location = new System.Drawing.Point(187, 5);
+            this.m1t1SRLabel.Name = "m1t1SRLabel";
+            this.m1t1SRLabel.Size = new System.Drawing.Size(61, 13);
+            this.m1t1SRLabel.TabIndex = 134;
+            this.m1t1SRLabel.Text = "Team 1 SR";
             // 
             // m1t2SR
             // 
@@ -1064,15 +1098,15 @@
             // m1DivisionLabel
             // 
             this.m1DivisionLabel.AutoSize = true;
-            this.m1DivisionLabel.Location = new System.Drawing.Point(110, 79);
+            this.m1DivisionLabel.Location = new System.Drawing.Point(388, 49);
             this.m1DivisionLabel.Name = "m1DivisionLabel";
-            this.m1DivisionLabel.Size = new System.Drawing.Size(44, 13);
+            this.m1DivisionLabel.Size = new System.Drawing.Size(78, 13);
             this.m1DivisionLabel.TabIndex = 65;
-            this.m1DivisionLabel.Text = "Division";
+            this.m1DivisionLabel.Text = "Division/Group";
             // 
             // m1DivisionNumber
             // 
-            this.m1DivisionNumber.Location = new System.Drawing.Point(7, 76);
+            this.m1DivisionNumber.Location = new System.Drawing.Point(469, 46);
             this.m1DivisionNumber.Name = "m1DivisionNumber";
             this.m1DivisionNumber.Size = new System.Drawing.Size(100, 20);
             this.m1DivisionNumber.TabIndex = 64;
@@ -1096,7 +1130,7 @@
             // m1currentCheck
             // 
             this.m1currentCheck.AutoSize = true;
-            this.m1currentCheck.Location = new System.Drawing.Point(168, 78);
+            this.m1currentCheck.Location = new System.Drawing.Point(216, 49);
             this.m1currentCheck.Name = "m1currentCheck";
             this.m1currentCheck.Size = new System.Drawing.Size(60, 17);
             this.m1currentCheck.TabIndex = 61;
@@ -1142,6 +1176,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m1t2p6Hero.Location = new System.Drawing.Point(426, 314);
@@ -1179,6 +1214,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m1t2p5Hero.Location = new System.Drawing.Point(426, 275);
@@ -1216,6 +1252,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m1t2p4Hero.Location = new System.Drawing.Point(426, 236);
@@ -1253,6 +1290,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m1t2p3Hero.Location = new System.Drawing.Point(426, 197);
@@ -1290,6 +1328,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m1t2p2Hero.Location = new System.Drawing.Point(426, 158);
@@ -1327,6 +1366,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m1t2p1Hero.Location = new System.Drawing.Point(426, 119);
@@ -1364,6 +1404,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m1t1p6Hero.Location = new System.Drawing.Point(113, 314);
@@ -1400,6 +1441,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m1t1p5Hero.Location = new System.Drawing.Point(113, 275);
@@ -1436,6 +1478,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m1t1p4Hero.Location = new System.Drawing.Point(113, 236);
@@ -1472,6 +1515,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m1t1p3Hero.Location = new System.Drawing.Point(113, 197);
@@ -1508,6 +1552,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m1t1p2Hero.Location = new System.Drawing.Point(113, 158);
@@ -1544,6 +1589,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m1t1p1Hero.Location = new System.Drawing.Point(113, 119);
@@ -1830,8 +1876,8 @@
             // 
             // Match_2
             // 
-            this.Match_2.Controls.Add(this.label4);
-            this.Match_2.Controls.Add(this.label3);
+            this.Match_2.Controls.Add(this.m2t2SRLabel);
+            this.Match_2.Controls.Add(this.m2t1SRLabel);
             this.Match_2.Controls.Add(this.m2t2SR);
             this.Match_2.Controls.Add(this.m2t1SR);
             this.Match_2.Controls.Add(this.m2t2p6Role);
@@ -1927,23 +1973,23 @@
             this.Match_2.Text = "Match 2";
             this.Match_2.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // m2t2SRLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(407, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 147;
-            this.label4.Text = "Team 2 SR";
+            this.m2t2SRLabel.AutoSize = true;
+            this.m2t2SRLabel.Location = new System.Drawing.Point(407, 5);
+            this.m2t2SRLabel.Name = "m2t2SRLabel";
+            this.m2t2SRLabel.Size = new System.Drawing.Size(61, 13);
+            this.m2t2SRLabel.TabIndex = 147;
+            this.m2t2SRLabel.Text = "Team 2 SR";
             // 
-            // label3
+            // m2t1SRLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(187, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 146;
-            this.label3.Text = "Team 1 SR";
+            this.m2t1SRLabel.AutoSize = true;
+            this.m2t1SRLabel.Location = new System.Drawing.Point(187, 5);
+            this.m2t1SRLabel.Name = "m2t1SRLabel";
+            this.m2t1SRLabel.Size = new System.Drawing.Size(61, 13);
+            this.m2t1SRLabel.TabIndex = 146;
+            this.m2t1SRLabel.Text = "Team 1 SR";
             // 
             // m2t2SR
             // 
@@ -2447,7 +2493,7 @@
             this.m2Defend.Text = "D";
             this.m2Defend.UseVisualStyleBackColor = true;
             // 
-            // m2t1Attack
+            // m2Attack
             // 
             this.m2Attack.AutoSize = true;
             this.m2Attack.Location = new System.Drawing.Point(6, 9);
@@ -2457,7 +2503,7 @@
             this.m2Attack.Text = "A";
             this.m2Attack.UseVisualStyleBackColor = true;
             // 
-            // m2t1Neutral
+            // m2Neutral
             // 
             this.m2Neutral.AutoSize = true;
             this.m2Neutral.Checked = true;
@@ -2472,15 +2518,15 @@
             // m2DivisionLabel
             // 
             this.m2DivisionLabel.AutoSize = true;
-            this.m2DivisionLabel.Location = new System.Drawing.Point(110, 79);
+            this.m2DivisionLabel.Location = new System.Drawing.Point(388, 49);
             this.m2DivisionLabel.Name = "m2DivisionLabel";
-            this.m2DivisionLabel.Size = new System.Drawing.Size(44, 13);
+            this.m2DivisionLabel.Size = new System.Drawing.Size(78, 13);
             this.m2DivisionLabel.TabIndex = 65;
-            this.m2DivisionLabel.Text = "Division";
+            this.m2DivisionLabel.Text = "Division/Group";
             // 
             // m2DivisionNumber
             // 
-            this.m2DivisionNumber.Location = new System.Drawing.Point(7, 76);
+            this.m2DivisionNumber.Location = new System.Drawing.Point(469, 46);
             this.m2DivisionNumber.Name = "m2DivisionNumber";
             this.m2DivisionNumber.Size = new System.Drawing.Size(100, 20);
             this.m2DivisionNumber.TabIndex = 64;
@@ -2504,7 +2550,7 @@
             // m2currentCheck
             // 
             this.m2currentCheck.AutoSize = true;
-            this.m2currentCheck.Location = new System.Drawing.Point(168, 78);
+            this.m2currentCheck.Location = new System.Drawing.Point(216, 49);
             this.m2currentCheck.Name = "m2currentCheck";
             this.m2currentCheck.Size = new System.Drawing.Size(60, 17);
             this.m2currentCheck.TabIndex = 61;
@@ -2550,6 +2596,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m2t2p6Hero.Location = new System.Drawing.Point(426, 314);
@@ -2587,6 +2634,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m2t2p5Hero.Location = new System.Drawing.Point(426, 275);
@@ -2624,6 +2672,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m2t2p4Hero.Location = new System.Drawing.Point(426, 236);
@@ -2661,6 +2710,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m2t2p3Hero.Location = new System.Drawing.Point(426, 197);
@@ -2698,6 +2748,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m2t2p2Hero.Location = new System.Drawing.Point(426, 158);
@@ -2735,6 +2786,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m2t2p1Hero.Location = new System.Drawing.Point(426, 119);
@@ -2772,6 +2824,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m2t1p6Hero.Location = new System.Drawing.Point(113, 314);
@@ -2808,6 +2861,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m2t1p5Hero.Location = new System.Drawing.Point(113, 275);
@@ -2844,6 +2898,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m2t1p4Hero.Location = new System.Drawing.Point(113, 236);
@@ -2880,6 +2935,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m2t1p3Hero.Location = new System.Drawing.Point(113, 197);
@@ -2916,6 +2972,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m2t1p2Hero.Location = new System.Drawing.Point(113, 158);
@@ -2952,6 +3009,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m2t1p1Hero.Location = new System.Drawing.Point(113, 119);
@@ -3238,8 +3296,8 @@
             // 
             // Match_3
             // 
-            this.Match_3.Controls.Add(this.label6);
-            this.Match_3.Controls.Add(this.label5);
+            this.Match_3.Controls.Add(this.m3t2SRLabel);
+            this.Match_3.Controls.Add(this.m3t1SRLabel);
             this.Match_3.Controls.Add(this.m3t2SR);
             this.Match_3.Controls.Add(this.m3t1SR);
             this.Match_3.Controls.Add(this.m3t2p6Role);
@@ -3335,23 +3393,23 @@
             this.Match_3.Text = "Match 3";
             this.Match_3.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // m3t2SRLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(407, 5);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
-            this.label6.TabIndex = 147;
-            this.label6.Text = "Team 2 SR";
+            this.m3t2SRLabel.AutoSize = true;
+            this.m3t2SRLabel.Location = new System.Drawing.Point(407, 5);
+            this.m3t2SRLabel.Name = "m3t2SRLabel";
+            this.m3t2SRLabel.Size = new System.Drawing.Size(61, 13);
+            this.m3t2SRLabel.TabIndex = 147;
+            this.m3t2SRLabel.Text = "Team 2 SR";
             // 
-            // label5
+            // m3t1SRLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(187, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 13);
-            this.label5.TabIndex = 146;
-            this.label5.Text = "Team 1 SR";
+            this.m3t1SRLabel.AutoSize = true;
+            this.m3t1SRLabel.Location = new System.Drawing.Point(187, 5);
+            this.m3t1SRLabel.Name = "m3t1SRLabel";
+            this.m3t1SRLabel.Size = new System.Drawing.Size(61, 13);
+            this.m3t1SRLabel.TabIndex = 146;
+            this.m3t1SRLabel.Text = "Team 1 SR";
             // 
             // m3t2SR
             // 
@@ -3880,15 +3938,15 @@
             // m3DivisionLabel
             // 
             this.m3DivisionLabel.AutoSize = true;
-            this.m3DivisionLabel.Location = new System.Drawing.Point(110, 79);
+            this.m3DivisionLabel.Location = new System.Drawing.Point(388, 49);
             this.m3DivisionLabel.Name = "m3DivisionLabel";
-            this.m3DivisionLabel.Size = new System.Drawing.Size(44, 13);
+            this.m3DivisionLabel.Size = new System.Drawing.Size(78, 13);
             this.m3DivisionLabel.TabIndex = 65;
-            this.m3DivisionLabel.Text = "Division";
+            this.m3DivisionLabel.Text = "Division/Group";
             // 
             // m3DivisionNumber
             // 
-            this.m3DivisionNumber.Location = new System.Drawing.Point(7, 76);
+            this.m3DivisionNumber.Location = new System.Drawing.Point(469, 46);
             this.m3DivisionNumber.Name = "m3DivisionNumber";
             this.m3DivisionNumber.Size = new System.Drawing.Size(100, 20);
             this.m3DivisionNumber.TabIndex = 64;
@@ -3912,7 +3970,7 @@
             // m3currentCheck
             // 
             this.m3currentCheck.AutoSize = true;
-            this.m3currentCheck.Location = new System.Drawing.Point(168, 78);
+            this.m3currentCheck.Location = new System.Drawing.Point(216, 49);
             this.m3currentCheck.Name = "m3currentCheck";
             this.m3currentCheck.Size = new System.Drawing.Size(60, 17);
             this.m3currentCheck.TabIndex = 61;
@@ -3958,6 +4016,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m3t2p6Hero.Location = new System.Drawing.Point(426, 314);
@@ -3995,6 +4054,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m3t2p5Hero.Location = new System.Drawing.Point(426, 275);
@@ -4032,6 +4092,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m3t2p4Hero.Location = new System.Drawing.Point(426, 236);
@@ -4069,6 +4130,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m3t2p3Hero.Location = new System.Drawing.Point(426, 197);
@@ -4106,6 +4168,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m3t2p2Hero.Location = new System.Drawing.Point(426, 158);
@@ -4143,6 +4206,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m3t2p1Hero.Location = new System.Drawing.Point(426, 119);
@@ -4180,6 +4244,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m3t1p6Hero.Location = new System.Drawing.Point(113, 314);
@@ -4216,6 +4281,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m3t1p5Hero.Location = new System.Drawing.Point(113, 275);
@@ -4252,6 +4318,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m3t1p4Hero.Location = new System.Drawing.Point(113, 236);
@@ -4288,6 +4355,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m3t1p3Hero.Location = new System.Drawing.Point(113, 197);
@@ -4324,6 +4392,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m3t1p2Hero.Location = new System.Drawing.Point(113, 158);
@@ -4360,6 +4429,7 @@
             "Ana",
             "Lúcio",
             "Mercy",
+            "Moira",
             "Symmetra",
             "Zenyatta"});
             this.m3t1p1Hero.Location = new System.Drawing.Point(113, 119);
@@ -4646,6 +4716,37 @@
             // 
             // General_Info
             // 
+            this.General_Info.Controls.Add(this.description);
+            this.General_Info.Controls.Add(this.generalUpdateButton);
+            this.General_Info.Controls.Add(this.generalResetButton);
+            this.General_Info.Controls.Add(this.utility8);
+            this.General_Info.Controls.Add(this.label9);
+            this.General_Info.Controls.Add(this.utility7);
+            this.General_Info.Controls.Add(this.label8);
+            this.General_Info.Controls.Add(this.utility6);
+            this.General_Info.Controls.Add(this.label6);
+            this.General_Info.Controls.Add(this.utility5);
+            this.General_Info.Controls.Add(this.label5);
+            this.General_Info.Controls.Add(this.utility4);
+            this.General_Info.Controls.Add(this.label4);
+            this.General_Info.Controls.Add(this.utility3);
+            this.General_Info.Controls.Add(this.label3);
+            this.General_Info.Controls.Add(this.utility2);
+            this.General_Info.Controls.Add(this.label2);
+            this.General_Info.Controls.Add(this.utility1);
+            this.General_Info.Controls.Add(this.label1);
+            this.General_Info.Controls.Add(this.analyst2);
+            this.General_Info.Controls.Add(this.label13);
+            this.General_Info.Controls.Add(this.analyst1);
+            this.General_Info.Controls.Add(this.label12);
+            this.General_Info.Controls.Add(this.caster2);
+            this.General_Info.Controls.Add(this.label11);
+            this.General_Info.Controls.Add(this.caster1);
+            this.General_Info.Controls.Add(this.label10);
+            this.General_Info.Controls.Add(this.host);
+            this.General_Info.Controls.Add(this.hostLabel);
+            this.General_Info.Controls.Add(this.message);
+            this.General_Info.Controls.Add(this.messageLabel);
             this.General_Info.Location = new System.Drawing.Point(4, 22);
             this.General_Info.Name = "General_Info";
             this.General_Info.Padding = new System.Windows.Forms.Padding(3);
@@ -4653,6 +4754,262 @@
             this.General_Info.TabIndex = 1;
             this.General_Info.Text = "General";
             this.General_Info.UseVisualStyleBackColor = true;
+            // 
+            // description
+            // 
+            this.description.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.description.Cursor = System.Windows.Forms.Cursors.Default;
+            this.description.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.description.Location = new System.Drawing.Point(246, 7);
+            this.description.Name = "description";
+            this.description.ReadOnly = true;
+            this.description.Size = new System.Drawing.Size(407, 401);
+            this.description.TabIndex = 60;
+            this.description.Text = resources.GetString("description.Text");
+            // 
+            // generalUpdateButton
+            // 
+            this.generalUpdateButton.Location = new System.Drawing.Point(165, 6);
+            this.generalUpdateButton.Name = "generalUpdateButton";
+            this.generalUpdateButton.Size = new System.Drawing.Size(75, 23);
+            this.generalUpdateButton.TabIndex = 59;
+            this.generalUpdateButton.Text = "Update";
+            this.generalUpdateButton.UseVisualStyleBackColor = true;
+            this.generalUpdateButton.Click += new System.EventHandler(this.generalUpdateButton_Click);
+            // 
+            // generalResetButton
+            // 
+            this.generalResetButton.Location = new System.Drawing.Point(11, 6);
+            this.generalResetButton.Name = "generalResetButton";
+            this.generalResetButton.Size = new System.Drawing.Size(75, 23);
+            this.generalResetButton.TabIndex = 58;
+            this.generalResetButton.Text = "Reset";
+            this.generalResetButton.UseVisualStyleBackColor = true;
+            this.generalResetButton.Click += new System.EventHandler(this.generalResetButton_Click);
+            // 
+            // utility8
+            // 
+            this.utility8.Location = new System.Drawing.Point(64, 388);
+            this.utility8.Name = "utility8";
+            this.utility8.Size = new System.Drawing.Size(176, 20);
+            this.utility8.TabIndex = 28;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 391);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(38, 13);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Utility8";
+            // 
+            // utility7
+            // 
+            this.utility7.Location = new System.Drawing.Point(64, 362);
+            this.utility7.Name = "utility7";
+            this.utility7.Size = new System.Drawing.Size(176, 20);
+            this.utility7.TabIndex = 26;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 365);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(38, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Utility7";
+            // 
+            // utility6
+            // 
+            this.utility6.Location = new System.Drawing.Point(64, 336);
+            this.utility6.Name = "utility6";
+            this.utility6.Size = new System.Drawing.Size(176, 20);
+            this.utility6.TabIndex = 24;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 339);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Utility6";
+            // 
+            // utility5
+            // 
+            this.utility5.Location = new System.Drawing.Point(64, 310);
+            this.utility5.Name = "utility5";
+            this.utility5.Size = new System.Drawing.Size(176, 20);
+            this.utility5.TabIndex = 22;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 313);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Utility5";
+            // 
+            // utility4
+            // 
+            this.utility4.Location = new System.Drawing.Point(64, 284);
+            this.utility4.Name = "utility4";
+            this.utility4.Size = new System.Drawing.Size(176, 20);
+            this.utility4.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 287);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Utility4";
+            // 
+            // utility3
+            // 
+            this.utility3.Location = new System.Drawing.Point(64, 258);
+            this.utility3.Name = "utility3";
+            this.utility3.Size = new System.Drawing.Size(176, 20);
+            this.utility3.TabIndex = 18;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 261);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Utility3";
+            // 
+            // utility2
+            // 
+            this.utility2.Location = new System.Drawing.Point(64, 232);
+            this.utility2.Name = "utility2";
+            this.utility2.Size = new System.Drawing.Size(176, 20);
+            this.utility2.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 235);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Utility2";
+            // 
+            // utility1
+            // 
+            this.utility1.Location = new System.Drawing.Point(64, 206);
+            this.utility1.Name = "utility1";
+            this.utility1.Size = new System.Drawing.Size(176, 20);
+            this.utility1.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 209);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Utility1";
+            // 
+            // analyst2
+            // 
+            this.analyst2.Location = new System.Drawing.Point(64, 180);
+            this.analyst2.Name = "analyst2";
+            this.analyst2.Size = new System.Drawing.Size(176, 20);
+            this.analyst2.TabIndex = 12;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(8, 183);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 13);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "Analyst2";
+            // 
+            // analyst1
+            // 
+            this.analyst1.Location = new System.Drawing.Point(64, 154);
+            this.analyst1.Name = "analyst1";
+            this.analyst1.Size = new System.Drawing.Size(176, 20);
+            this.analyst1.TabIndex = 10;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 157);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 13);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Analyst1";
+            // 
+            // caster2
+            // 
+            this.caster2.Location = new System.Drawing.Point(64, 128);
+            this.caster2.Name = "caster2";
+            this.caster2.Size = new System.Drawing.Size(176, 20);
+            this.caster2.TabIndex = 8;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 131);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(43, 13);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Caster2";
+            // 
+            // caster1
+            // 
+            this.caster1.Location = new System.Drawing.Point(64, 102);
+            this.caster1.Name = "caster1";
+            this.caster1.Size = new System.Drawing.Size(176, 20);
+            this.caster1.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(8, 105);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Caster1";
+            // 
+            // host
+            // 
+            this.host.Location = new System.Drawing.Point(64, 76);
+            this.host.Name = "host";
+            this.host.Size = new System.Drawing.Size(176, 20);
+            this.host.TabIndex = 4;
+            // 
+            // hostLabel
+            // 
+            this.hostLabel.AutoSize = true;
+            this.hostLabel.Location = new System.Drawing.Point(8, 79);
+            this.hostLabel.Name = "hostLabel";
+            this.hostLabel.Size = new System.Drawing.Size(29, 13);
+            this.hostLabel.TabIndex = 3;
+            this.hostLabel.Text = "Host";
+            // 
+            // message
+            // 
+            this.message.Location = new System.Drawing.Point(64, 50);
+            this.message.Name = "message";
+            this.message.Size = new System.Drawing.Size(176, 20);
+            this.message.TabIndex = 2;
+            // 
+            // messageLabel
+            // 
+            this.messageLabel.AutoSize = true;
+            this.messageLabel.Location = new System.Drawing.Point(8, 53);
+            this.messageLabel.Name = "messageLabel";
+            this.messageLabel.Size = new System.Drawing.Size(50, 13);
+            this.messageLabel.TabIndex = 1;
+            this.messageLabel.Text = "Message";
             // 
             // Form1
             // 
@@ -4713,6 +5070,8 @@
             this.m3t1Side.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m3t2Score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m3t1Score)).EndInit();
+            this.General_Info.ResumeLayout(false);
+            this.General_Info.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -5000,12 +5359,43 @@
         private System.Windows.Forms.TextBox m2t1SR;
         private System.Windows.Forms.TextBox m3t2SR;
         private System.Windows.Forms.TextBox m3t1SR;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label m1t2SRLabel;
+        private System.Windows.Forms.Label m1t1SRLabel;
+        private System.Windows.Forms.Label m2t2SRLabel;
+        private System.Windows.Forms.Label m2t1SRLabel;
+        private System.Windows.Forms.Label m3t2SRLabel;
+        private System.Windows.Forms.Label m3t1SRLabel;
+        private System.Windows.Forms.TextBox analyst2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox analyst1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox caster2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox caster1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox host;
+        private System.Windows.Forms.Label hostLabel;
+        private System.Windows.Forms.TextBox message;
+        private System.Windows.Forms.Label messageLabel;
+        private System.Windows.Forms.TextBox utility8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox utility7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox utility6;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox utility5;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox utility4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox utility3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox utility2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox utility1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button generalUpdateButton;
+        private System.Windows.Forms.Button generalResetButton;
+        private System.Windows.Forms.RichTextBox description;
     }
 }
 

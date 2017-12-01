@@ -88,6 +88,21 @@ namespace OWUL_Cast_Panel
             loadText(m3t2p5Name, "Match3", "t2p5Name");
             loadText(m3t2p6Name, "Match3", "t2p6Name");
 
+            loadText(message, "General", "message");
+            loadText(host, "General", "host");
+            loadText(analyst1, "General", "analyst1");
+            loadText(analyst2, "General", "analyst2");
+            loadText(caster1, "General", "caster1");
+            loadText(caster2, "General", "caster2");
+            loadText(utility1, "General", "utility1");
+            loadText(utility2, "General", "utility2");
+            loadText(utility3, "General", "utility3");
+            loadText(utility4, "General", "utility4");
+            loadText(utility5, "General", "utility5");
+            loadText(utility6, "General", "utility6");
+            loadText(utility7, "General", "utility7");
+            loadText(utility8, "General", "utility8");
+
         }
 
         private void m1SwapButton_Click(object sender, EventArgs e)
@@ -469,6 +484,33 @@ namespace OWUL_Cast_Panel
             {
                 //do something else
             }
+
+        }
+
+        private void generalResetButton_Click(object sender, EventArgs e)
+        { DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove all match data?", "Reset General Data?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                resetText(message);
+                resetText(host);
+                resetText(analyst1);
+                resetText(analyst2);
+                resetText(caster1);
+                resetText(caster2);
+                resetText(utility1);
+                resetText(utility2);
+                resetText(utility3);
+                resetText(utility4);
+                resetText(utility5);
+                resetText(utility6);
+                resetText(utility7);
+                resetText(utility8);
+            }
+            else if(dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+
         }
 
         private void m1UpdateButton_Click(object sender, EventArgs e)
@@ -928,6 +970,24 @@ namespace OWUL_Cast_Panel
             }
         }
 
+        private void generalUpdateButton_Click(object sender, EventArgs e)
+        {
+            updateText(message, "General", "message");
+            updateText(host, "General", "host");
+            updateText(analyst1, "General", "analyst1");
+            updateText(analyst2, "General", "analyst2");
+            updateText(caster1, "General", "caster1");
+            updateText(caster2, "General", "caster2");
+            updateText(utility1, "General", "utility1");
+            updateText(utility2, "General", "utility2");
+            updateText(utility3, "General", "utility3");
+            updateText(utility4, "General", "utility4");
+            updateText(utility5, "General", "utility5");
+            updateText(utility6, "General", "utility6");
+            updateText(utility7, "General", "utility7");
+            updateText(utility8, "General", "utility8");
+        }
+
         private void updateText(TextBox field, String folder, String file)
         {
             using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
@@ -993,6 +1053,10 @@ namespace OWUL_Cast_Panel
                 else if (field.SelectedItem.ToString().Equals("Mercy"))
                 {
                     Properties.Resources.Mercy.Save(path + "\\" + folder + "\\" + file + ".png");
+                }
+                else if (field.SelectedItem.ToString().Equals("Moira"))
+                {
+                    Properties.Resources.Moira.Save(path + "\\" + folder + "\\" + file + ".png");
                 }
                 else if (field.SelectedItem.ToString().Equals("Orisa"))
                 {
@@ -1070,13 +1134,13 @@ namespace OWUL_Cast_Panel
             {
                 if (field.SelectedItem.ToString().Equals("DPS"))
                 {
-                    Properties.Resources.Icon_offense.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_dps.Save(path + "\\" + folder + "\\" + file + ".png");
                 }
                 else if (field.SelectedItem.ToString().Equals("Flex"))
                 {
-                    Properties.Resources.Icon_defense.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_flex.Save(path + "\\" + folder + "\\" + file + ".png");
                 }
-                else if (field.SelectedItem.ToString().Equals("Supp"))
+                else if (field.SelectedItem.ToString().Equals("Support"))
                 {
                     Properties.Resources.Icon_support.Save(path + "\\" + folder + "\\" + file + ".png");
                 }
@@ -1315,6 +1379,12 @@ namespace OWUL_Cast_Panel
         private void resetMap(ComboBox field)
         {
             field.SelectedIndex = 0;
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
         }
 
         /*private void loadHero(ComboBox field, String folder, String file)

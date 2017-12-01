@@ -199,9 +199,6 @@
   <data name="Icon_defense" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-defense.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon_offense" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon-offense.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Icon_support" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-support.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -342,5 +339,32 @@
   </data>
   <data name="Icon_junkertown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-junkertown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_ctf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-ctf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_deathmatch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-deathmatch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_dps" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-dps.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_elmination" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-elmination.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_flex" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-flex.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_moira" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\Icon-moira.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_offense" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-offense.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_tdm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-tdm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Moira" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Moira.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

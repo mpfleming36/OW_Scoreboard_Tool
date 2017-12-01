@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -158,6 +173,15 @@
     <None Include="Resources\Icon-none.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Icon-dps.png" />
+    <None Include="Resources\Icon-flex.png" />
+    <None Include="res\Icon-moira.png" />
+    <None Include="Resources\Icon-ctf.png" />
+    <None Include="Resources\Icon-deathmatch.png" />
+    <None Include="Resources\Icon-elmination.png" />
+    <None Include="Resources\Icon-tdm.png" />
+    <None Include="Resources\Moira.png" />
+    <None Include="Resources\Icon-moira.png" />
     <None Include="Resources\Icon-junkertown.png" />
     <None Include="Resources\Sombra.png" />
     <None Include="Resources\Widowmaker.png" />

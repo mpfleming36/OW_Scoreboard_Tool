@@ -163,6 +163,26 @@ namespace OWUL_Cast_Panel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_ctf {
+            get {
+                object obj = ResourceManager.GetObject("Icon_ctf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_deathmatch {
+            get {
+                object obj = ResourceManager.GetObject("Icon_deathmatch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_defense {
             get {
                 object obj = ResourceManager.GetObject("Icon_defense", resourceCulture);
@@ -193,6 +213,16 @@ namespace OWUL_Cast_Panel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_dps {
+            get {
+                object obj = ResourceManager.GetObject("Icon_dps", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_dva {
             get {
                 object obj = ResourceManager.GetObject("Icon_dva", resourceCulture);
@@ -213,9 +243,29 @@ namespace OWUL_Cast_Panel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_elmination {
+            get {
+                object obj = ResourceManager.GetObject("Icon_elmination", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_escort {
             get {
                 object obj = ResourceManager.GetObject("Icon_escort", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_flex {
+            get {
+                object obj = ResourceManager.GetObject("Icon_flex", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +416,16 @@ namespace OWUL_Cast_Panel.Properties {
         internal static System.Drawing.Bitmap Icon_mercy {
             get {
                 object obj = ResourceManager.GetObject("Icon_mercy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_moira {
+            get {
+                object obj = ResourceManager.GetObject("Icon_moira", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -533,6 +593,16 @@ namespace OWUL_Cast_Panel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_tdm {
+            get {
+                object obj = ResourceManager.GetObject("Icon_tdm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_temple {
             get {
                 object obj = ResourceManager.GetObject("Icon_temple", resourceCulture);
@@ -666,6 +736,16 @@ namespace OWUL_Cast_Panel.Properties {
         internal static System.Drawing.Bitmap Mercy {
             get {
                 object obj = ResourceManager.GetObject("Mercy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Moira {
+            get {
+                object obj = ResourceManager.GetObject("Moira", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
