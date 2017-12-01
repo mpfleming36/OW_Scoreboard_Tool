@@ -7,7 +7,30 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        private object[] heroList = new object[] {
+        
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+             object[] heroList = new object[] {
             "",
             "Doomfist",
             "Genji",
@@ -36,7 +59,7 @@
             "Symmetra",
             "Zenyatta"};
 
-        private object[] mapList = new object[] {
+         object[] mapList = new object[] {
             "",
             "Hanamura",
             "Horizon Lunar Colony",
@@ -54,35 +77,14 @@
             "Nepal",
             "Oasis"};
 
-        private object[] roleList = new object[] {
+       object[] roleList = new object[] {
             "",
             "DPS",
             "Flex",
             "Support",
             "Tank"};
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Match_1 = new System.Windows.Forms.TabPage();
             this.m1t2SRLabel = new System.Windows.Forms.Label();
@@ -589,12 +591,7 @@
             // 
             this.m1t2p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p6Role.FormattingEnabled = true;
-            this.m1t2p6Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m1t2p6Role.Items.AddRange(roleList);
             this.m1t2p6Role.Location = new System.Drawing.Point(337, 315);
             this.m1t2p6Role.Name = "m1t2p6Role";
             this.m1t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -605,12 +602,7 @@
             // 
             this.m1t2p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p5Role.FormattingEnabled = true;
-            this.m1t2p5Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m1t2p5Role.Items.AddRange(roleList);
             this.m1t2p5Role.Location = new System.Drawing.Point(337, 275);
             this.m1t2p5Role.Name = "m1t2p5Role";
             this.m1t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -621,12 +613,7 @@
             // 
             this.m1t2p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p4Role.FormattingEnabled = true;
-            this.m1t2p4Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m1t2p4Role.Items.AddRange(roleList);
             this.m1t2p4Role.Location = new System.Drawing.Point(337, 236);
             this.m1t2p4Role.Name = "m1t2p4Role";
             this.m1t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -637,12 +624,7 @@
             // 
             this.m1t2p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p3Role.FormattingEnabled = true;
-            this.m1t2p3Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m1t2p3Role.Items.AddRange(roleList);
             this.m1t2p3Role.Location = new System.Drawing.Point(337, 198);
             this.m1t2p3Role.Name = "m1t2p3Role";
             this.m1t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -653,12 +635,7 @@
             // 
             this.m1t2p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p2Role.FormattingEnabled = true;
-            this.m1t2p2Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m1t2p2Role.Items.AddRange(roleList);
             this.m1t2p2Role.Location = new System.Drawing.Point(337, 158);
             this.m1t2p2Role.Name = "m1t2p2Role";
             this.m1t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -669,12 +646,7 @@
             // 
             this.m1t2p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p1Role.FormattingEnabled = true;
-            this.m1t2p1Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m1t2p1Role.Items.AddRange(roleList);
             this.m1t2p1Role.Location = new System.Drawing.Point(337, 119);
             this.m1t2p1Role.Name = "m1t2p1Role";
             this.m1t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -685,12 +657,7 @@
             // 
             this.m1t1p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p6Role.FormattingEnabled = true;
-            this.m1t1p6Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m1t1p6Role.Items.AddRange(roleList);
             this.m1t1p6Role.Location = new System.Drawing.Point(240, 314);
             this.m1t1p6Role.Name = "m1t1p6Role";
             this.m1t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -701,12 +668,7 @@
             // 
             this.m1t1p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p5Role.FormattingEnabled = true;
-            this.m1t1p5Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m1t1p5Role.Items.AddRange(roleList);
             this.m1t1p5Role.Location = new System.Drawing.Point(240, 275);
             this.m1t1p5Role.Name = "m1t1p5Role";
             this.m1t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -717,12 +679,7 @@
             // 
             this.m1t1p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p4Role.FormattingEnabled = true;
-            this.m1t1p4Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m1t1p4Role.Items.AddRange(roleList);
             this.m1t1p4Role.Location = new System.Drawing.Point(240, 236);
             this.m1t1p4Role.Name = "m1t1p4Role";
             this.m1t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -733,12 +690,7 @@
             // 
             this.m1t1p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p3Role.FormattingEnabled = true;
-            this.m1t1p3Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m1t1p3Role.Items.AddRange(roleList);
             this.m1t1p3Role.Location = new System.Drawing.Point(240, 197);
             this.m1t1p3Role.Name = "m1t1p3Role";
             this.m1t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -749,12 +701,7 @@
             // 
             this.m1t1p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p2Role.FormattingEnabled = true;
-            this.m1t1p2Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m1t1p2Role.Items.AddRange(roleList);
             this.m1t1p2Role.Location = new System.Drawing.Point(240, 158);
             this.m1t1p2Role.Name = "m1t1p2Role";
             this.m1t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -765,12 +712,7 @@
             // 
             this.m1t1p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p1Role.FormattingEnabled = true;
-            this.m1t1p1Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m1t1p1Role.Items.AddRange(roleList);
             this.m1t1p1Role.Location = new System.Drawing.Point(240, 119);
             this.m1t1p1Role.Name = "m1t1p1Role";
             this.m1t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -856,28 +798,7 @@
             // 
             this.m1m5Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1m5Map.FormattingEnabled = true;
-            this.m1m5Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m1m5Map.Items.AddRange(mapList);
             this.m1m5Map.Location = new System.Drawing.Point(567, 354);
             this.m1m5Map.Name = "m1m5Map";
             this.m1m5Map.Size = new System.Drawing.Size(83, 21);
@@ -887,28 +808,7 @@
             // 
             this.m1m4Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1m4Map.FormattingEnabled = true;
-            this.m1m4Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m1m4Map.Items.AddRange(mapList);
             this.m1m4Map.Location = new System.Drawing.Point(424, 354);
             this.m1m4Map.Name = "m1m4Map";
             this.m1m4Map.Size = new System.Drawing.Size(83, 21);
@@ -918,28 +818,7 @@
             // 
             this.m1m3Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1m3Map.FormattingEnabled = true;
-            this.m1m3Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m1m3Map.Items.AddRange(mapList);
             this.m1m3Map.Location = new System.Drawing.Point(287, 354);
             this.m1m3Map.Name = "m1m3Map";
             this.m1m3Map.Size = new System.Drawing.Size(83, 21);
@@ -949,28 +828,7 @@
             // 
             this.m1m2Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1m2Map.FormattingEnabled = true;
-            this.m1m2Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m1m2Map.Items.AddRange(mapList);
             this.m1m2Map.Location = new System.Drawing.Point(149, 354);
             this.m1m2Map.Name = "m1m2Map";
             this.m1m2Map.Size = new System.Drawing.Size(83, 21);
@@ -980,28 +838,7 @@
             // 
             this.m1m1Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1m1Map.FormattingEnabled = true;
-            this.m1m1Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m1m1Map.Items.AddRange(mapList);
             this.m1m1Map.Location = new System.Drawing.Point(5, 354);
             this.m1m1Map.Name = "m1m1Map";
             this.m1m1Map.Size = new System.Drawing.Size(83, 21);
@@ -1151,34 +988,7 @@
             // 
             this.m1t2p6Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p6Hero.FormattingEnabled = true;
-            this.m1t2p6Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m1t2p6Hero.Items.AddRange(heroList);
             this.m1t2p6Hero.Location = new System.Drawing.Point(426, 314);
             this.m1t2p6Hero.Name = "m1t2p6Hero";
             this.m1t2p6Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1189,34 +999,7 @@
             // 
             this.m1t2p5Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p5Hero.FormattingEnabled = true;
-            this.m1t2p5Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m1t2p5Hero.Items.AddRange(heroList);
             this.m1t2p5Hero.Location = new System.Drawing.Point(426, 275);
             this.m1t2p5Hero.Name = "m1t2p5Hero";
             this.m1t2p5Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1227,34 +1010,7 @@
             // 
             this.m1t2p4Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p4Hero.FormattingEnabled = true;
-            this.m1t2p4Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m1t2p4Hero.Items.AddRange(heroList);
             this.m1t2p4Hero.Location = new System.Drawing.Point(426, 236);
             this.m1t2p4Hero.Name = "m1t2p4Hero";
             this.m1t2p4Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1265,34 +1021,7 @@
             // 
             this.m1t2p3Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p3Hero.FormattingEnabled = true;
-            this.m1t2p3Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m1t2p3Hero.Items.AddRange(heroList);
             this.m1t2p3Hero.Location = new System.Drawing.Point(426, 197);
             this.m1t2p3Hero.Name = "m1t2p3Hero";
             this.m1t2p3Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1303,34 +1032,7 @@
             // 
             this.m1t2p2Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p2Hero.FormattingEnabled = true;
-            this.m1t2p2Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m1t2p2Hero.Items.AddRange(heroList);
             this.m1t2p2Hero.Location = new System.Drawing.Point(426, 158);
             this.m1t2p2Hero.Name = "m1t2p2Hero";
             this.m1t2p2Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1341,34 +1043,7 @@
             // 
             this.m1t2p1Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t2p1Hero.FormattingEnabled = true;
-            this.m1t2p1Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m1t2p1Hero.Items.AddRange(heroList);
             this.m1t2p1Hero.Location = new System.Drawing.Point(426, 119);
             this.m1t2p1Hero.Name = "m1t2p1Hero";
             this.m1t2p1Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1379,34 +1054,7 @@
             // 
             this.m1t1p6Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p6Hero.FormattingEnabled = true;
-            this.m1t1p6Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m1t1p6Hero.Items.AddRange(heroList);
             this.m1t1p6Hero.Location = new System.Drawing.Point(113, 314);
             this.m1t1p6Hero.Name = "m1t1p6Hero";
             this.m1t1p6Hero.Size = new System.Drawing.Size(121, 21);
@@ -1416,34 +1064,7 @@
             // 
             this.m1t1p5Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p5Hero.FormattingEnabled = true;
-            this.m1t1p5Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m1t1p5Hero.Items.AddRange(heroList);
             this.m1t1p5Hero.Location = new System.Drawing.Point(113, 275);
             this.m1t1p5Hero.Name = "m1t1p5Hero";
             this.m1t1p5Hero.Size = new System.Drawing.Size(121, 21);
@@ -1453,34 +1074,7 @@
             // 
             this.m1t1p4Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p4Hero.FormattingEnabled = true;
-            this.m1t1p4Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m1t1p4Hero.Items.AddRange(heroList);
             this.m1t1p4Hero.Location = new System.Drawing.Point(113, 236);
             this.m1t1p4Hero.Name = "m1t1p4Hero";
             this.m1t1p4Hero.Size = new System.Drawing.Size(121, 21);
@@ -1490,34 +1084,7 @@
             // 
             this.m1t1p3Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p3Hero.FormattingEnabled = true;
-            this.m1t1p3Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m1t1p3Hero.Items.AddRange(heroList);
             this.m1t1p3Hero.Location = new System.Drawing.Point(113, 197);
             this.m1t1p3Hero.Name = "m1t1p3Hero";
             this.m1t1p3Hero.Size = new System.Drawing.Size(121, 21);
@@ -1527,34 +1094,7 @@
             // 
             this.m1t1p2Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p2Hero.FormattingEnabled = true;
-            this.m1t1p2Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m1t1p2Hero.Items.AddRange(heroList);
             this.m1t1p2Hero.Location = new System.Drawing.Point(113, 158);
             this.m1t1p2Hero.Name = "m1t1p2Hero";
             this.m1t1p2Hero.Size = new System.Drawing.Size(121, 21);
@@ -1564,34 +1104,7 @@
             // 
             this.m1t1p1Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m1t1p1Hero.FormattingEnabled = true;
-            this.m1t1p1Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m1t1p1Hero.Items.AddRange(heroList);
             this.m1t1p1Hero.Location = new System.Drawing.Point(113, 119);
             this.m1t1p1Hero.Name = "m1t1p1Hero";
             this.m1t1p1Hero.Size = new System.Drawing.Size(121, 21);
@@ -2009,12 +1522,7 @@
             // 
             this.m2t2p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p6Role.FormattingEnabled = true;
-            this.m2t2p6Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m2t2p6Role.Items.AddRange(roleList);
             this.m2t2p6Role.Location = new System.Drawing.Point(337, 315);
             this.m2t2p6Role.Name = "m2t2p6Role";
             this.m2t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -2025,12 +1533,7 @@
             // 
             this.m2t2p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p5Role.FormattingEnabled = true;
-            this.m2t2p5Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m2t2p5Role.Items.AddRange(roleList);
             this.m2t2p5Role.Location = new System.Drawing.Point(337, 275);
             this.m2t2p5Role.Name = "m2t2p5Role";
             this.m2t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -2041,12 +1544,7 @@
             // 
             this.m2t2p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p4Role.FormattingEnabled = true;
-            this.m2t2p4Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m2t2p4Role.Items.AddRange(roleList);
             this.m2t2p4Role.Location = new System.Drawing.Point(337, 236);
             this.m2t2p4Role.Name = "m2t2p4Role";
             this.m2t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -2057,12 +1555,7 @@
             // 
             this.m2t2p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p3Role.FormattingEnabled = true;
-            this.m2t2p3Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m2t2p3Role.Items.AddRange(roleList);
             this.m2t2p3Role.Location = new System.Drawing.Point(337, 198);
             this.m2t2p3Role.Name = "m2t2p3Role";
             this.m2t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -2073,12 +1566,7 @@
             // 
             this.m2t2p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p2Role.FormattingEnabled = true;
-            this.m2t2p2Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m2t2p2Role.Items.AddRange(roleList);
             this.m2t2p2Role.Location = new System.Drawing.Point(337, 158);
             this.m2t2p2Role.Name = "m2t2p2Role";
             this.m2t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -2089,12 +1577,7 @@
             // 
             this.m2t2p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p1Role.FormattingEnabled = true;
-            this.m2t2p1Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m2t2p1Role.Items.AddRange(roleList);
             this.m2t2p1Role.Location = new System.Drawing.Point(337, 119);
             this.m2t2p1Role.Name = "m2t2p1Role";
             this.m2t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -2105,12 +1588,7 @@
             // 
             this.m2t1p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p6Role.FormattingEnabled = true;
-            this.m2t1p6Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m2t1p6Role.Items.AddRange(roleList);
             this.m2t1p6Role.Location = new System.Drawing.Point(240, 314);
             this.m2t1p6Role.Name = "m2t1p6Role";
             this.m2t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2121,12 +1599,7 @@
             // 
             this.m2t1p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p5Role.FormattingEnabled = true;
-            this.m2t1p5Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m2t1p5Role.Items.AddRange(roleList);
             this.m2t1p5Role.Location = new System.Drawing.Point(240, 275);
             this.m2t1p5Role.Name = "m2t1p5Role";
             this.m2t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2137,12 +1610,7 @@
             // 
             this.m2t1p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p4Role.FormattingEnabled = true;
-            this.m2t1p4Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m2t1p4Role.Items.AddRange(roleList);
             this.m2t1p4Role.Location = new System.Drawing.Point(240, 236);
             this.m2t1p4Role.Name = "m2t1p4Role";
             this.m2t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2153,12 +1621,7 @@
             // 
             this.m2t1p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p3Role.FormattingEnabled = true;
-            this.m2t1p3Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m2t1p3Role.Items.AddRange(roleList);
             this.m2t1p3Role.Location = new System.Drawing.Point(240, 197);
             this.m2t1p3Role.Name = "m2t1p3Role";
             this.m2t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2169,12 +1632,7 @@
             // 
             this.m2t1p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p2Role.FormattingEnabled = true;
-            this.m2t1p2Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m2t1p2Role.Items.AddRange(roleList);
             this.m2t1p2Role.Location = new System.Drawing.Point(240, 158);
             this.m2t1p2Role.Name = "m2t1p2Role";
             this.m2t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2185,12 +1643,7 @@
             // 
             this.m2t1p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p1Role.FormattingEnabled = true;
-            this.m2t1p1Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m2t1p1Role.Items.AddRange(roleList);
             this.m2t1p1Role.Location = new System.Drawing.Point(240, 119);
             this.m2t1p1Role.Name = "m2t1p1Role";
             this.m2t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2276,28 +1729,7 @@
             // 
             this.m2m5Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2m5Map.FormattingEnabled = true;
-            this.m2m5Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m2m5Map.Items.AddRange(mapList);
             this.m2m5Map.Location = new System.Drawing.Point(567, 354);
             this.m2m5Map.Name = "m2m5Map";
             this.m2m5Map.Size = new System.Drawing.Size(83, 21);
@@ -2307,28 +1739,7 @@
             // 
             this.m2m4Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2m4Map.FormattingEnabled = true;
-            this.m2m4Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m2m4Map.Items.AddRange(mapList);
             this.m2m4Map.Location = new System.Drawing.Point(424, 354);
             this.m2m4Map.Name = "m2m4Map";
             this.m2m4Map.Size = new System.Drawing.Size(83, 21);
@@ -2338,28 +1749,7 @@
             // 
             this.m2m3Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2m3Map.FormattingEnabled = true;
-            this.m2m3Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m2m3Map.Items.AddRange(mapList);
             this.m2m3Map.Location = new System.Drawing.Point(287, 354);
             this.m2m3Map.Name = "m2m3Map";
             this.m2m3Map.Size = new System.Drawing.Size(83, 21);
@@ -2369,28 +1759,7 @@
             // 
             this.m2m2Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2m2Map.FormattingEnabled = true;
-            this.m2m2Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m2m2Map.Items.AddRange(mapList);
             this.m2m2Map.Location = new System.Drawing.Point(149, 354);
             this.m2m2Map.Name = "m2m2Map";
             this.m2m2Map.Size = new System.Drawing.Size(83, 21);
@@ -2400,28 +1769,7 @@
             // 
             this.m2m1Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2m1Map.FormattingEnabled = true;
-            this.m2m1Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m2m1Map.Items.AddRange(mapList);
             this.m2m1Map.Location = new System.Drawing.Point(5, 354);
             this.m2m1Map.Name = "m2m1Map";
             this.m2m1Map.Size = new System.Drawing.Size(83, 21);
@@ -2571,34 +1919,7 @@
             // 
             this.m2t2p6Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p6Hero.FormattingEnabled = true;
-            this.m2t2p6Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m2t2p6Hero.Items.AddRange(heroList);
             this.m2t2p6Hero.Location = new System.Drawing.Point(426, 314);
             this.m2t2p6Hero.Name = "m2t2p6Hero";
             this.m2t2p6Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2609,34 +1930,7 @@
             // 
             this.m2t2p5Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p5Hero.FormattingEnabled = true;
-            this.m2t2p5Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m2t2p5Hero.Items.AddRange(heroList);
             this.m2t2p5Hero.Location = new System.Drawing.Point(426, 275);
             this.m2t2p5Hero.Name = "m2t2p5Hero";
             this.m2t2p5Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2647,34 +1941,7 @@
             // 
             this.m2t2p4Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p4Hero.FormattingEnabled = true;
-            this.m2t2p4Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m2t2p4Hero.Items.AddRange(heroList);
             this.m2t2p4Hero.Location = new System.Drawing.Point(426, 236);
             this.m2t2p4Hero.Name = "m2t2p4Hero";
             this.m2t2p4Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2685,34 +1952,7 @@
             // 
             this.m2t2p3Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p3Hero.FormattingEnabled = true;
-            this.m2t2p3Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m2t2p3Hero.Items.AddRange(heroList);
             this.m2t2p3Hero.Location = new System.Drawing.Point(426, 197);
             this.m2t2p3Hero.Name = "m2t2p3Hero";
             this.m2t2p3Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2723,34 +1963,7 @@
             // 
             this.m2t2p2Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p2Hero.FormattingEnabled = true;
-            this.m2t2p2Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m2t2p2Hero.Items.AddRange(heroList);
             this.m2t2p2Hero.Location = new System.Drawing.Point(426, 158);
             this.m2t2p2Hero.Name = "m2t2p2Hero";
             this.m2t2p2Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2761,34 +1974,7 @@
             // 
             this.m2t2p1Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t2p1Hero.FormattingEnabled = true;
-            this.m2t2p1Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m2t2p1Hero.Items.AddRange(heroList);
             this.m2t2p1Hero.Location = new System.Drawing.Point(426, 119);
             this.m2t2p1Hero.Name = "m2t2p1Hero";
             this.m2t2p1Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2799,34 +1985,7 @@
             // 
             this.m2t1p6Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p6Hero.FormattingEnabled = true;
-            this.m2t1p6Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m2t1p6Hero.Items.AddRange(heroList);
             this.m2t1p6Hero.Location = new System.Drawing.Point(113, 314);
             this.m2t1p6Hero.Name = "m2t1p6Hero";
             this.m2t1p6Hero.Size = new System.Drawing.Size(121, 21);
@@ -2836,34 +1995,7 @@
             // 
             this.m2t1p5Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p5Hero.FormattingEnabled = true;
-            this.m2t1p5Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m2t1p5Hero.Items.AddRange(heroList);
             this.m2t1p5Hero.Location = new System.Drawing.Point(113, 275);
             this.m2t1p5Hero.Name = "m2t1p5Hero";
             this.m2t1p5Hero.Size = new System.Drawing.Size(121, 21);
@@ -2873,34 +2005,7 @@
             // 
             this.m2t1p4Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p4Hero.FormattingEnabled = true;
-            this.m2t1p4Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m2t1p4Hero.Items.AddRange(heroList);
             this.m2t1p4Hero.Location = new System.Drawing.Point(113, 236);
             this.m2t1p4Hero.Name = "m2t1p4Hero";
             this.m2t1p4Hero.Size = new System.Drawing.Size(121, 21);
@@ -2910,34 +2015,7 @@
             // 
             this.m2t1p3Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p3Hero.FormattingEnabled = true;
-            this.m2t1p3Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m2t1p3Hero.Items.AddRange(heroList);
             this.m2t1p3Hero.Location = new System.Drawing.Point(113, 197);
             this.m2t1p3Hero.Name = "m2t1p3Hero";
             this.m2t1p3Hero.Size = new System.Drawing.Size(121, 21);
@@ -2947,34 +2025,7 @@
             // 
             this.m2t1p2Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p2Hero.FormattingEnabled = true;
-            this.m2t1p2Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m2t1p2Hero.Items.AddRange(heroList);
             this.m2t1p2Hero.Location = new System.Drawing.Point(113, 158);
             this.m2t1p2Hero.Name = "m2t1p2Hero";
             this.m2t1p2Hero.Size = new System.Drawing.Size(121, 21);
@@ -2984,34 +2035,7 @@
             // 
             this.m2t1p1Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m2t1p1Hero.FormattingEnabled = true;
-            this.m2t1p1Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m2t1p1Hero.Items.AddRange(heroList);
             this.m2t1p1Hero.Location = new System.Drawing.Point(113, 119);
             this.m2t1p1Hero.Name = "m2t1p1Hero";
             this.m2t1p1Hero.Size = new System.Drawing.Size(121, 21);
@@ -3429,12 +2453,7 @@
             // 
             this.m3t2p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p6Role.FormattingEnabled = true;
-            this.m3t2p6Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m3t2p6Role.Items.AddRange(roleList);
             this.m3t2p6Role.Location = new System.Drawing.Point(337, 315);
             this.m3t2p6Role.Name = "m3t2p6Role";
             this.m3t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -3445,12 +2464,7 @@
             // 
             this.m3t2p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p5Role.FormattingEnabled = true;
-            this.m3t2p5Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m3t2p5Role.Items.AddRange(roleList);
             this.m3t2p5Role.Location = new System.Drawing.Point(337, 275);
             this.m3t2p5Role.Name = "m3t2p5Role";
             this.m3t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -3461,12 +2475,7 @@
             // 
             this.m3t2p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p4Role.FormattingEnabled = true;
-            this.m3t2p4Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m3t2p4Role.Items.AddRange(roleList);
             this.m3t2p4Role.Location = new System.Drawing.Point(337, 236);
             this.m3t2p4Role.Name = "m3t2p4Role";
             this.m3t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -3477,12 +2486,7 @@
             // 
             this.m3t2p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p3Role.FormattingEnabled = true;
-            this.m3t2p3Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m3t2p3Role.Items.AddRange(roleList);
             this.m3t2p3Role.Location = new System.Drawing.Point(337, 198);
             this.m3t2p3Role.Name = "m3t2p3Role";
             this.m3t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -3493,12 +2497,7 @@
             // 
             this.m3t2p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p2Role.FormattingEnabled = true;
-            this.m3t2p2Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m3t2p2Role.Items.AddRange(roleList);
             this.m3t2p2Role.Location = new System.Drawing.Point(337, 158);
             this.m3t2p2Role.Name = "m3t2p2Role";
             this.m3t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -3509,12 +2508,7 @@
             // 
             this.m3t2p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p1Role.FormattingEnabled = true;
-            this.m3t2p1Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m3t2p1Role.Items.AddRange(roleList);
             this.m3t2p1Role.Location = new System.Drawing.Point(337, 119);
             this.m3t2p1Role.Name = "m3t2p1Role";
             this.m3t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -3525,12 +2519,7 @@
             // 
             this.m3t1p6Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p6Role.FormattingEnabled = true;
-            this.m3t1p6Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m3t1p6Role.Items.AddRange(roleList);
             this.m3t1p6Role.Location = new System.Drawing.Point(240, 314);
             this.m3t1p6Role.Name = "m3t1p6Role";
             this.m3t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -3541,12 +2530,7 @@
             // 
             this.m3t1p5Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p5Role.FormattingEnabled = true;
-            this.m3t1p5Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m3t1p5Role.Items.AddRange(roleList);
             this.m3t1p5Role.Location = new System.Drawing.Point(240, 275);
             this.m3t1p5Role.Name = "m3t1p5Role";
             this.m3t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -3557,12 +2541,7 @@
             // 
             this.m3t1p4Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p4Role.FormattingEnabled = true;
-            this.m3t1p4Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m3t1p4Role.Items.AddRange(roleList);
             this.m3t1p4Role.Location = new System.Drawing.Point(240, 236);
             this.m3t1p4Role.Name = "m3t1p4Role";
             this.m3t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -3573,12 +2552,7 @@
             // 
             this.m3t1p3Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p3Role.FormattingEnabled = true;
-            this.m3t1p3Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m3t1p3Role.Items.AddRange(roleList);
             this.m3t1p3Role.Location = new System.Drawing.Point(240, 197);
             this.m3t1p3Role.Name = "m3t1p3Role";
             this.m3t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -3589,12 +2563,7 @@
             // 
             this.m3t1p2Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p2Role.FormattingEnabled = true;
-            this.m3t1p2Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m3t1p2Role.Items.AddRange(roleList);
             this.m3t1p2Role.Location = new System.Drawing.Point(240, 158);
             this.m3t1p2Role.Name = "m3t1p2Role";
             this.m3t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -3605,12 +2574,7 @@
             // 
             this.m3t1p1Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p1Role.FormattingEnabled = true;
-            this.m3t1p1Role.Items.AddRange(new object[] {
-            "",
-            "DPS",
-            "Flex",
-            "Support",
-            "Tank"});
+            this.m3t1p1Role.Items.AddRange(roleList);
             this.m3t1p1Role.Location = new System.Drawing.Point(240, 119);
             this.m3t1p1Role.Name = "m3t1p1Role";
             this.m3t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -3696,28 +2660,7 @@
             // 
             this.m3m5Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3m5Map.FormattingEnabled = true;
-            this.m3m5Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m3m5Map.Items.AddRange(mapList);
             this.m3m5Map.Location = new System.Drawing.Point(567, 354);
             this.m3m5Map.Name = "m3m5Map";
             this.m3m5Map.Size = new System.Drawing.Size(83, 21);
@@ -3727,28 +2670,7 @@
             // 
             this.m3m4Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3m4Map.FormattingEnabled = true;
-            this.m3m4Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m3m4Map.Items.AddRange(mapList);
             this.m3m4Map.Location = new System.Drawing.Point(424, 354);
             this.m3m4Map.Name = "m3m4Map";
             this.m3m4Map.Size = new System.Drawing.Size(83, 21);
@@ -3758,28 +2680,7 @@
             // 
             this.m3m3Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3m3Map.FormattingEnabled = true;
-            this.m3m3Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m3m3Map.Items.AddRange(mapList);
             this.m3m3Map.Location = new System.Drawing.Point(287, 354);
             this.m3m3Map.Name = "m3m3Map";
             this.m3m3Map.Size = new System.Drawing.Size(83, 21);
@@ -3789,28 +2690,7 @@
             // 
             this.m3m2Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3m2Map.FormattingEnabled = true;
-            this.m3m2Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m3m2Map.Items.AddRange(mapList);
             this.m3m2Map.Location = new System.Drawing.Point(149, 354);
             this.m3m2Map.Name = "m3m2Map";
             this.m3m2Map.Size = new System.Drawing.Size(83, 21);
@@ -3820,28 +2700,7 @@
             // 
             this.m3m1Map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3m1Map.FormattingEnabled = true;
-            this.m3m1Map.Items.AddRange(new object[] {
-            "",
-            "Assault",
-            "Escort",
-            "Hybrid",
-            "Control",
-            "Hanamura",
-            "Horizon Lunar Colony",
-            "Temple of Anubis",
-            "Volskaya Industries",
-            "Dorado",
-            "Junkertown",
-            "Route 66",
-            "Watchpoint: Gibraltar",
-            "Eichenwalde",
-            "Hollywood",
-            "King\'s Row",
-            "Numbani",
-            "Ilios",
-            "Lijiang Tower",
-            "Nepal",
-            "Oasis"});
+            this.m3m1Map.Items.AddRange(mapList);
             this.m3m1Map.Location = new System.Drawing.Point(5, 354);
             this.m3m1Map.Name = "m3m1Map";
             this.m3m1Map.Size = new System.Drawing.Size(83, 21);
@@ -3991,34 +2850,7 @@
             // 
             this.m3t2p6Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p6Hero.FormattingEnabled = true;
-            this.m3t2p6Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m3t2p6Hero.Items.AddRange(heroList);
             this.m3t2p6Hero.Location = new System.Drawing.Point(426, 314);
             this.m3t2p6Hero.Name = "m3t2p6Hero";
             this.m3t2p6Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -4029,34 +2861,7 @@
             // 
             this.m3t2p5Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p5Hero.FormattingEnabled = true;
-            this.m3t2p5Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m3t2p5Hero.Items.AddRange(heroList);
             this.m3t2p5Hero.Location = new System.Drawing.Point(426, 275);
             this.m3t2p5Hero.Name = "m3t2p5Hero";
             this.m3t2p5Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -4067,34 +2872,7 @@
             // 
             this.m3t2p4Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p4Hero.FormattingEnabled = true;
-            this.m3t2p4Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m3t2p4Hero.Items.AddRange(heroList);
             this.m3t2p4Hero.Location = new System.Drawing.Point(426, 236);
             this.m3t2p4Hero.Name = "m3t2p4Hero";
             this.m3t2p4Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -4105,34 +2883,7 @@
             // 
             this.m3t2p3Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p3Hero.FormattingEnabled = true;
-            this.m3t2p3Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m3t2p3Hero.Items.AddRange(heroList);
             this.m3t2p3Hero.Location = new System.Drawing.Point(426, 197);
             this.m3t2p3Hero.Name = "m3t2p3Hero";
             this.m3t2p3Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -4143,34 +2894,7 @@
             // 
             this.m3t2p2Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p2Hero.FormattingEnabled = true;
-            this.m3t2p2Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m3t2p2Hero.Items.AddRange(heroList);
             this.m3t2p2Hero.Location = new System.Drawing.Point(426, 158);
             this.m3t2p2Hero.Name = "m3t2p2Hero";
             this.m3t2p2Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -4181,34 +2905,7 @@
             // 
             this.m3t2p1Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t2p1Hero.FormattingEnabled = true;
-            this.m3t2p1Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m3t2p1Hero.Items.AddRange(heroList);
             this.m3t2p1Hero.Location = new System.Drawing.Point(426, 119);
             this.m3t2p1Hero.Name = "m3t2p1Hero";
             this.m3t2p1Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -4219,34 +2916,7 @@
             // 
             this.m3t1p6Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p6Hero.FormattingEnabled = true;
-            this.m3t1p6Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m3t1p6Hero.Items.AddRange(heroList);
             this.m3t1p6Hero.Location = new System.Drawing.Point(113, 314);
             this.m3t1p6Hero.Name = "m3t1p6Hero";
             this.m3t1p6Hero.Size = new System.Drawing.Size(121, 21);
@@ -4256,34 +2926,7 @@
             // 
             this.m3t1p5Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p5Hero.FormattingEnabled = true;
-            this.m3t1p5Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m3t1p5Hero.Items.AddRange(heroList);
             this.m3t1p5Hero.Location = new System.Drawing.Point(113, 275);
             this.m3t1p5Hero.Name = "m3t1p5Hero";
             this.m3t1p5Hero.Size = new System.Drawing.Size(121, 21);
@@ -4293,34 +2936,7 @@
             // 
             this.m3t1p4Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p4Hero.FormattingEnabled = true;
-            this.m3t1p4Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m3t1p4Hero.Items.AddRange(heroList);
             this.m3t1p4Hero.Location = new System.Drawing.Point(113, 236);
             this.m3t1p4Hero.Name = "m3t1p4Hero";
             this.m3t1p4Hero.Size = new System.Drawing.Size(121, 21);
@@ -4330,34 +2946,7 @@
             // 
             this.m3t1p3Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p3Hero.FormattingEnabled = true;
-            this.m3t1p3Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m3t1p3Hero.Items.AddRange(heroList);
             this.m3t1p3Hero.Location = new System.Drawing.Point(113, 197);
             this.m3t1p3Hero.Name = "m3t1p3Hero";
             this.m3t1p3Hero.Size = new System.Drawing.Size(121, 21);
@@ -4367,34 +2956,7 @@
             // 
             this.m3t1p2Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p2Hero.FormattingEnabled = true;
-            this.m3t1p2Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m3t1p2Hero.Items.AddRange(heroList);
             this.m3t1p2Hero.Location = new System.Drawing.Point(113, 158);
             this.m3t1p2Hero.Name = "m3t1p2Hero";
             this.m3t1p2Hero.Size = new System.Drawing.Size(121, 21);
@@ -4404,34 +2966,7 @@
             // 
             this.m3t1p1Hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m3t1p1Hero.FormattingEnabled = true;
-            this.m3t1p1Hero.Items.AddRange(new object[] {
-            "",
-            "Doomfist",
-            "Genji",
-            "McCree",
-            "Pharah",
-            "Reaper",
-            "Soldier: 76",
-            "Sombra",
-            "Tracer",
-            "Bastion",
-            "Hanzo",
-            "Junkrat",
-            "Mei",
-            "Torbjörn",
-            "Widowmaker",
-            "D.Va",
-            "Orisa",
-            "Reinhardt",
-            "Roadhog",
-            "Winston",
-            "Zarya",
-            "Ana",
-            "Lúcio",
-            "Mercy",
-            "Moira",
-            "Symmetra",
-            "Zenyatta"});
+            this.m3t1p1Hero.Items.AddRange(heroList);
             this.m3t1p1Hero.Location = new System.Drawing.Point(113, 119);
             this.m3t1p1Hero.Name = "m3t1p1Hero";
             this.m3t1p1Hero.Size = new System.Drawing.Size(121, 21);
@@ -4765,7 +3300,7 @@
             this.description.ReadOnly = true;
             this.description.Size = new System.Drawing.Size(407, 401);
             this.description.TabIndex = 60;
-            this.description.Text = resources.GetString("description.Text");
+            //this.description.Text = resources.GetString("description.Text");
             // 
             // generalUpdateButton
             // 
@@ -5017,7 +3552,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 465);
             this.Controls.Add(this.tabControl1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Overwatch Scoreboard Tool";
             this.Load += new System.EventHandler(this.Form1_Load);

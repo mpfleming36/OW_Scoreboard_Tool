@@ -15,9 +15,6 @@ namespace OW_Scoreboard_Tool
     {
         string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
-        Image ana = Properties.Resources.Icon_ana;
-        Image bastion = Properties.Resources.Icon_bastion;
-
         public Form1()
         {
             InitializeComponent();
