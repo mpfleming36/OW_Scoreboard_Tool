@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{36FD671A-2CE0-4CC5-8CDB-21018738808C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>OWUL_Cast_Panel</RootNamespace>
-    <AssemblyName>OWUL_Cast_Panel</AssemblyName>
+    <RootNamespace>OW_Scoreboard_Tool</RootNamespace>
+    <AssemblyName>OW_Scoreboard_Tool</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -175,7 +175,6 @@
   <ItemGroup>
     <None Include="Resources\Icon-dps.png" />
     <None Include="Resources\Icon-flex.png" />
-    <None Include="res\Icon-moira.png" />
     <None Include="Resources\Icon-ctf.png" />
     <None Include="Resources\Icon-deathmatch.png" />
     <None Include="Resources\Icon-elmination.png" />
@@ -233,6 +232,7 @@
     <None Include="Hero Portraits\Zenyatta.png" />
     <None Include="Hero Portraits\Ana.png" />
     <None Include="Hero Portraits\Soldier76.png" />
+    <Content Include="Hero Portraits\Moira.png" />
     <Content Include="owul_logo_gray.ico" />
     <None Include="Resources\Icon-assault.png" />
     <None Include="Resources\Icon-control.png" />
@@ -258,6 +258,9 @@
     <None Include="Resources\Icon-offense.png" />
     <None Include="Resources\Icon-defense.png" />
     <None Include="Resources\Icon-doomfist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="res\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace OWUL_Cast_Panel
+﻿namespace OW_Scoreboard_Tool
 {
     partial class Form1
     {

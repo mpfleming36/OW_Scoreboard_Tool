@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OWUL_Cast_Panel
+namespace OW_Scoreboard_Tool
 {
     static class Program
     {

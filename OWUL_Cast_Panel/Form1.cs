@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OWUL_Cast_Panel
+namespace OW_Scoreboard_Tool
 {
     public partial class Form1 : Form
     {
