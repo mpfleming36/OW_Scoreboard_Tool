@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OW_Scoreboard_Tool", "OWUL_Cast_Panel\OW_Scoreboard_Tool.csproj", "{36FD671A-2CE0-4CC5-8CDB-21018738808C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OW_Scoreboard_Tool", "OW_Scoreboard_Tool\OW_Scoreboard_Tool.csproj", "{36FD671A-2CE0-4CC5-8CDB-21018738808C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E4D40355-6EAD-4BF6-94D6-9440C8E2AC0D}
+		SolutionGuid = {BE32B6E3-7492-4C7E-ACC4-CE54DB528257}
 	EndGlobalSection
 EndGlobal
