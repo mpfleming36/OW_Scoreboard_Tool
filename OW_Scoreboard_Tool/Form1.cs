@@ -14,15 +14,18 @@ namespace OW_Scoreboard_Tool
     public partial class Form1 : Form
     {
         string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        string main = "\\Replay";
+        string playlist = "\\Playlist";
+        const int Bytes_TO_READ = sizeof(Int64);
 
         public Form1()
         {
             InitializeComponent();
+            CreateFileWatcher(path + main);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            loadText(m1MessageBox, "Match1", "MessageBox");
             loadText(m1DivisionNumber, "Match1", "DivisionNumber");
             loadScore(m1t1Score, "Match1", "t1Score");
             loadText(m1t1Name, "Match1", "t1Name");
@@ -43,47 +46,21 @@ namespace OW_Scoreboard_Tool
             loadText(m1t2p5Name, "Match1", "t2p5Name");
             loadText(m1t2p6Name, "Match1", "t2p6Name");
 
-            loadText(m2MessageBox, "Match2", "MessageBox");
-            loadText(m2DivisionNumber, "Match2", "DivisionNumber");
-            loadScore(m2t1Score, "Match2", "t1Score");
-            loadText(m2t1Name, "Match2", "t1Name");
-            loadText(m2t1SR, "Match2", "t1SR");
-            loadText(m2t1p1Name, "Match2", "t1p1Name");
-            loadText(m2t1p2Name, "Match2", "t1p2Name");
-            loadText(m2t1p3Name, "Match2", "t1p3Name");
-            loadText(m2t1p4Name, "Match2", "t1p4Name");
-            loadText(m2t1p5Name, "Match2", "t1p5Name");
-            loadText(m2t1p6Name, "Match2", "t1p6Name");
-            loadScore(m2t2Score, "Match2", "t2Score");
-            loadText(m2t2Name, "Match2", "t2Name");
-            loadText(m2t2SR, "Match2", "t2SR");
-            loadText(m2t2p1Name, "Match2", "t2p1Name");
-            loadText(m2t2p2Name, "Match2", "t2p2Name");
-            loadText(m2t2p3Name, "Match2", "t2p3Name");
-            loadText(m2t2p4Name, "Match2", "t2p4Name");
-            loadText(m2t2p5Name, "Match2", "t2p5Name");
-            loadText(m2t2p6Name, "Match2", "t2p6Name");
+            loadScore(m1m1t1Score, "Match1", "m1t1Score");
+            loadScore(m1m2t1Score, "Match1", "m2t1Score");
+            loadScore(m1m3t1Score, "Match1", "m3t1Score");
+            loadScore(m1m4t1Score, "Match1", "m4t1Score");
+            loadScore(m1m5t1Score, "Match1", "m5t1Score");
+            loadScore(m1m6t1Score, "Match1", "m6t1Score");
+            loadScore(m1m7t1Score, "Match1", "m7t1Score");
 
-            loadText(m3MessageBox, "Match3", "MessageBox");
-            loadText(m3DivisionNumber, "Match3", "DivisionNumber");
-            loadScore(m3t1Score, "Match3", "t1Score");
-            loadText(m3t1Name, "Match3", "t1Name");
-            loadText(m3t1SR, "Match3", "t1SR");
-            loadText(m3t1p1Name, "Match3", "t1p1Name");
-            loadText(m3t1p2Name, "Match3", "t1p2Name");
-            loadText(m3t1p3Name, "Match3", "t1p3Name");
-            loadText(m3t1p4Name, "Match3", "t1p4Name");
-            loadText(m3t1p5Name, "Match3", "t1p5Name");
-            loadText(m3t1p6Name, "Match3", "t1p6Name");
-            loadScore(m3t2Score, "Match3", "t2Score");
-            loadText(m3t2Name, "Match3", "t2Name");
-            loadText(m3t2SR, "Match3", "t2SR");
-            loadText(m3t2p1Name, "Match3", "t2p1Name");
-            loadText(m3t2p2Name, "Match3", "t2p2Name");
-            loadText(m3t2p3Name, "Match3", "t2p3Name");
-            loadText(m3t2p4Name, "Match3", "t2p4Name");
-            loadText(m3t2p5Name, "Match3", "t2p5Name");
-            loadText(m3t2p6Name, "Match3", "t2p6Name");
+            loadScore(m1m1t2Score, "Match1", "m1t2Score");
+            loadScore(m1m2t2Score, "Match1", "m2t2Score");
+            loadScore(m1m3t2Score, "Match1", "m3t2Score");
+            loadScore(m1m4t2Score, "Match1", "m4t2Score");
+            loadScore(m1m5t2Score, "Match1", "m5t2Score");
+            loadScore(m1m6t2Score, "Match1", "m6t2Score");
+            loadScore(m1m7t2Score, "Match1", "m7t2Score");
 
             loadText(message, "General", "message");
             loadText(host, "General", "host");
@@ -110,134 +87,148 @@ namespace OW_Scoreboard_Tool
             m1t1Name.Text = m1t2Name.Text;
             m1t2Name.Text = temp;
             temp = "";
-            decimal tempoary;
-            tempoary = m1t1Score.Value;
+
+            decimal temporary;
+            temporary = m1t1Score.Value;
             m1t1Score.Value = m1t2Score.Value;
-            m1t2Score.Value = tempoary;
-            tempoary = 0;
+            m1t2Score.Value = temporary;
+            temporary = 0;
 
-            tempoary = m1m1t1Score.Value;
+            temporary = m1m1t1Score.Value;
             m1m1t1Score.Value = m1m1t2Score.Value;
-            m1m1t2Score.Value = tempoary;
-            tempoary = 0;
+            m1m1t2Score.Value = temporary;
+            temporary = 0;
 
-            tempoary = m1m2t1Score.Value;
+            temporary = m1m2t1Score.Value;
             m1m2t1Score.Value = m1m2t2Score.Value;
-            m1m2t2Score.Value = tempoary;
-            tempoary = 0;
+            m1m2t2Score.Value = temporary;
+            temporary = 0;
 
-            tempoary = m1m3t1Score.Value;
+            temporary = m1m3t1Score.Value;
             m1m3t1Score.Value = m1m3t2Score.Value;
-            m1m3t2Score.Value = tempoary;
-            tempoary = 0;
+            m1m3t2Score.Value = temporary;
+            temporary = 0;
 
-            tempoary = m1m4t1Score.Value;
+            temporary = m1m4t1Score.Value;
             m1m4t1Score.Value = m1m4t2Score.Value;
-            m1m4t2Score.Value = tempoary;
-            tempoary = 0;
+            m1m4t2Score.Value = temporary;
+            temporary = 0;
 
-            tempoary = m1m5t1Score.Value;
+            temporary = m1m5t1Score.Value;
             m1m5t1Score.Value = m1m5t2Score.Value;
-            m1m5t2Score.Value = tempoary;
-            tempoary = 0;
+            m1m5t2Score.Value = temporary;
+            temporary = 0;
+
+            temporary = m1m6t1Score.Value;
+            m1m6t1Score.Value = m1m6t2Score.Value;
+            m1m6t2Score.Value = temporary;
+            temporary = 0;
+
+            temporary = m1m7t1Score.Value;
+            m1m7t1Score.Value = m1m7t2Score.Value;
+            m1m7t2Score.Value = temporary;
+            temporary = 0;
 
             temp = m1t1SR.Text;
             m1t1SR.Text = m1t2SR.Text;
             m1t2SR.Text = temp;
             temp = "";
 
-        }
-
-        private void m2SwapButton_Click(object sender, EventArgs e)
-        {
-
-            String temp;
-            temp = m2t1Name.Text;
-            m2t1Name.Text = m2t2Name.Text;
-            m2t2Name.Text = temp;
-            temp = "";
-            decimal tempoary;
-            tempoary = m2t1Score.Value;
-            m2t1Score.Value = m2t2Score.Value;
-            m2t2Score.Value = tempoary;
-            tempoary = 0;
-
-            tempoary = m2m1t1Score.Value;
-            m2m1t1Score.Value = m2m1t2Score.Value;
-            m2m1t2Score.Value = tempoary;
-            tempoary = 0;
-
-            tempoary = m2m2t1Score.Value;
-            m2m2t1Score.Value = m2m2t2Score.Value;
-            m2m2t2Score.Value = tempoary;
-            tempoary = 0;
-
-            tempoary = m2m3t1Score.Value;
-            m2m3t1Score.Value = m2m3t2Score.Value;
-            m2m3t2Score.Value = tempoary;
-            tempoary = 0;
-
-            tempoary = m2m4t1Score.Value;
-            m2m4t1Score.Value = m2m4t2Score.Value;
-            m2m4t2Score.Value = tempoary;
-            tempoary = 0;
-
-            tempoary = m2m5t1Score.Value;
-            m2m5t1Score.Value = m2m5t2Score.Value;
-            m2m5t2Score.Value = tempoary;
-            tempoary = 0;
-
-            temp = m2t1SR.Text;
-            m2t1SR.Text = m2t2SR.Text;
-            m2t2SR.Text = temp;
+            temp = m1t1Logo.Text;
+            m1t1Logo.Text = m1t2Logo.Text;
+            m1t2Logo.Text = temp;
             temp = "";
 
-        }
-
-        private void m3SwapButton_Click(object sender, EventArgs e)
-        {
-
-            String temp;
-            temp = m3t1Name.Text;
-            m3t1Name.Text = m3t2Name.Text;
-            m3t2Name.Text = temp;
-            temp = "";
-            decimal tempoary;
-            tempoary = m3t1Score.Value;
-            m3t1Score.Value = m3t2Score.Value;
-            m3t2Score.Value = tempoary;
-            tempoary = 0;
-
-            tempoary = m3m1t1Score.Value;
-            m3m1t1Score.Value = m3m1t2Score.Value;
-            m3m1t2Score.Value = tempoary;
-            tempoary = 0;
-
-            tempoary = m3m2t1Score.Value;
-            m3m2t1Score.Value = m3m2t2Score.Value;
-            m3m2t2Score.Value = tempoary;
-            tempoary = 0;
-
-            tempoary = m3m3t1Score.Value;
-            m3m3t1Score.Value = m3m3t2Score.Value;
-            m3m3t2Score.Value = tempoary;
-            tempoary = 0;
-
-            tempoary = m3m4t1Score.Value;
-            m3m4t1Score.Value = m3m4t2Score.Value;
-            m3m4t2Score.Value = tempoary;
-            tempoary = 0;
-
-            tempoary = m3m5t1Score.Value;
-            m3m5t1Score.Value = m3m5t2Score.Value;
-            m3m5t2Score.Value = tempoary;
-            tempoary = 0;
-
-            temp = m3t1SR.Text;
-            m3t1SR.Text = m3t2SR.Text;
-            m3t2SR.Text = temp;
+            temp = m1t1p1Name.Text;
+            m1t1p1Name.Text = m1t2p1Name.Text;
+            m1t2p1Name.Text = temp;
             temp = "";
 
+            temp = m1t1p2Name.Text;
+            m1t1p2Name.Text = m1t2p2Name.Text;
+            m1t2p2Name.Text = temp;
+            temp = "";
+
+            temp = m1t1p3Name.Text;
+            m1t1p3Name.Text = m1t2p3Name.Text;
+            m1t2p3Name.Text = temp;
+            temp = "";
+
+            temp = m1t1p4Name.Text;
+            m1t1p4Name.Text = m1t2p4Name.Text;
+            m1t2p4Name.Text = temp;
+            temp = "";
+
+            temp = m1t1p5Name.Text;
+            m1t1p5Name.Text = m1t2p5Name.Text;
+            m1t2p5Name.Text = temp;
+            temp = "";
+
+            temp = m1t1p6Name.Text;
+            m1t1p6Name.Text = m1t2p6Name.Text;
+            m1t2p6Name.Text = temp;
+            temp = "";
+
+            int temps = 0;
+            temps = m1t1p1Hero.SelectedIndex;
+            m1t1p1Hero.SelectedIndex = m1t2p1Hero.SelectedIndex;
+            m1t2p1Hero.SelectedIndex = temps;
+            temps = 0;
+
+            temps = m1t1p2Hero.SelectedIndex;
+            m1t1p2Hero.SelectedIndex = m1t2p2Hero.SelectedIndex;
+            m1t2p2Hero.SelectedIndex = temps;
+            temps = 0;
+
+            temps = m1t1p3Hero.SelectedIndex;
+            m1t1p3Hero.SelectedIndex = m1t2p3Hero.SelectedIndex;
+            m1t2p3Hero.SelectedIndex = temps;
+            temps = 0;
+
+            temps = m1t1p4Hero.SelectedIndex;
+            m1t1p4Hero.SelectedIndex = m1t2p4Hero.SelectedIndex;
+            m1t2p4Hero.SelectedIndex = temps;
+            temps = 0;
+
+            temps = m1t1p5Hero.SelectedIndex;
+            m1t1p5Hero.SelectedIndex = m1t2p5Hero.SelectedIndex;
+            m1t2p5Hero.SelectedIndex = temps;
+            temps = 0;
+
+            temps = m1t1p6Hero.SelectedIndex;
+            m1t1p6Hero.SelectedIndex = m1t2p6Hero.SelectedIndex;
+            m1t2p6Hero.SelectedIndex = temps;
+            temps = 0;
+
+            temps = m1t1p1Role.SelectedIndex;
+            m1t1p1Role.SelectedIndex = m1t2p1Role.SelectedIndex;
+            m1t2p1Role.SelectedIndex = temps;
+            temps = 0;
+
+            temps = m1t1p2Role.SelectedIndex;
+            m1t1p2Role.SelectedIndex = m1t2p2Role.SelectedIndex;
+            m1t2p2Role.SelectedIndex = temps;
+            temps = 0;
+
+            temps = m1t1p3Role.SelectedIndex;
+            m1t1p3Role.SelectedIndex = m1t2p3Role.SelectedIndex;
+            m1t2p3Role.SelectedIndex = temps;
+            temps = 0;
+
+            temps = m1t1p4Role.SelectedIndex;
+            m1t1p4Role.SelectedIndex = m1t2p4Role.SelectedIndex;
+            m1t2p4Role.SelectedIndex = temps;
+            temps = 0;
+
+            temps = m1t1p5Role.SelectedIndex;
+            m1t1p5Role.SelectedIndex = m1t2p5Role.SelectedIndex;
+            m1t2p5Role.SelectedIndex = temps;
+            temps = 0;
+
+            temps = m1t1p6Role.SelectedIndex;
+            m1t1p6Role.SelectedIndex = m1t2p6Role.SelectedIndex;
+            m1t2p6Role.SelectedIndex = temps;
+            temps = 0;
         }
 
         private void m1ResetButton_Click(object sender, EventArgs e)
@@ -245,7 +236,6 @@ namespace OW_Scoreboard_Tool
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove all match data?", "Reset Match Data?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                resetText(m1MessageBox);
                 resetText(m1DivisionNumber);
 
                 resetScore(m1t1Score);
@@ -303,6 +293,8 @@ namespace OW_Scoreboard_Tool
                 resetMap(m1m3Map);
                 resetMap(m1m4Map);
                 resetMap(m1m5Map);
+                resetMap(m1m6Map);
+                resetMap(m1m7Map);
 
                 resetScore(m1m1t1Score);
                 resetScore(m1m1t2Score);
@@ -314,178 +306,22 @@ namespace OW_Scoreboard_Tool
                 resetScore(m1m4t2Score);
                 resetScore(m1m5t1Score);
                 resetScore(m1m5t2Score);
+                resetScore(m1m6t1Score);
+                resetScore(m1m6t2Score);
+                resetScore(m1m7t1Score);
+                resetScore(m1m7t2Score);
+
+                resetText(m1t1Logo);
+                resetText(m1t2Logo);
             }
             else if (dialogResult == DialogResult.No)
             {
                 //do something else
             }
-        }
-
-        private void m2ResetButton_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove all match data?", "Reset Match Data?", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                resetText(m2MessageBox);
-                resetText(m2DivisionNumber);
-
-                resetScore(m2t1Score);
-                resetText(m2t1Name);
-                resetText(m2t1SR);
-                resetText(m2t1p1Name);
-                resetText(m2t1p2Name);
-                resetText(m2t1p3Name);
-                resetText(m2t1p4Name);
-                resetText(m2t1p5Name);
-                resetText(m2t1p6Name);
-
-                resetScore(m2t2Score);
-                resetText(m2t2Name);
-                resetText(m2t2SR);
-                resetText(m2t2p1Name);
-                resetText(m2t2p2Name);
-                resetText(m2t2p3Name);
-                resetText(m2t2p4Name);
-                resetText(m2t2p5Name);
-                resetText(m2t2p6Name);
-
-                resetHero(m2t1p1Hero);
-                resetHero(m2t1p2Hero);
-                resetHero(m2t1p3Hero);
-                resetHero(m2t1p4Hero);
-                resetHero(m2t1p5Hero);
-                resetHero(m2t1p6Hero);
-
-                resetHero(m2t2p1Hero);
-                resetHero(m2t2p2Hero);
-                resetHero(m2t2p3Hero);
-                resetHero(m2t2p4Hero);
-                resetHero(m2t2p5Hero);
-                resetHero(m2t2p6Hero);
-
-                resetRole(m2t1p1Role);
-                resetRole(m2t1p2Role);
-                resetRole(m2t1p3Role);
-                resetRole(m2t1p4Role);
-                resetRole(m2t1p5Role);
-                resetRole(m2t1p6Role);
-
-                resetRole(m2t2p1Role);
-                resetRole(m2t2p2Role);
-                resetRole(m2t2p3Role);
-                resetRole(m2t2p4Role);
-                resetRole(m2t2p5Role);
-                resetRole(m2t2p6Role);
-
-                resetSide(m2Neutral);
-
-                resetMap(m2m1Map);
-                resetMap(m2m2Map);
-                resetMap(m2m3Map);
-                resetMap(m2m4Map);
-                resetMap(m2m5Map);
-
-                resetScore(m2m1t1Score);
-                resetScore(m2m1t2Score);
-                resetScore(m2m2t1Score);
-                resetScore(m2m2t2Score);
-                resetScore(m2m3t1Score);
-                resetScore(m2m3t2Score);
-                resetScore(m2m4t1Score);
-                resetScore(m2m4t2Score);
-                resetScore(m2m5t1Score);
-                resetScore(m2m5t2Score);
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
-            }
-        }
-
-        private void m3ResetButton_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove all match data?", "Reset Match Data?", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                resetText(m3MessageBox);
-                resetText(m3DivisionNumber);
-
-                resetScore(m3t1Score);
-                resetText(m3t1Name);
-                resetText(m3t1SR);
-                resetText(m3t1p1Name);
-                resetText(m3t1p2Name);
-                resetText(m3t1p3Name);
-                resetText(m3t1p4Name);
-                resetText(m3t1p5Name);
-                resetText(m3t1p6Name);
-
-                resetScore(m3t2Score);
-                resetText(m3t2Name);
-                resetText(m3t2SR);
-                resetText(m3t2p1Name);
-                resetText(m3t2p2Name);
-                resetText(m3t2p3Name);
-                resetText(m3t2p4Name);
-                resetText(m3t2p5Name);
-                resetText(m3t2p6Name);
-
-                resetHero(m3t1p1Hero);
-                resetHero(m3t1p2Hero);
-                resetHero(m3t1p3Hero);
-                resetHero(m3t1p4Hero);
-                resetHero(m3t1p5Hero);
-                resetHero(m3t1p6Hero);
-
-                resetHero(m3t2p1Hero);
-                resetHero(m3t2p2Hero);
-                resetHero(m3t2p3Hero);
-                resetHero(m3t2p4Hero);
-                resetHero(m3t2p5Hero);
-                resetHero(m3t2p6Hero);
-
-                resetRole(m3t1p1Role);
-                resetRole(m3t1p2Role);
-                resetRole(m3t1p3Role);
-                resetRole(m3t1p4Role);
-                resetRole(m3t1p5Role);
-                resetRole(m3t1p6Role);
-
-                resetRole(m3t2p1Role);
-                resetRole(m3t2p2Role);
-                resetRole(m3t2p3Role);
-                resetRole(m3t2p4Role);
-                resetRole(m3t2p5Role);
-                resetRole(m3t2p6Role);
-
-                resetSide(m3Neutral);
-
-                resetMap(m3m1Map);
-                resetMap(m3m2Map);
-                resetMap(m3m3Map);
-                resetMap(m3m4Map);
-                resetMap(m3m5Map);
-
-                resetScore(m3m1t1Score);
-                resetScore(m3m1t2Score);
-                resetScore(m3m2t1Score);
-                resetScore(m3m2t2Score);
-                resetScore(m3m3t1Score);
-                resetScore(m3m3t2Score);
-                resetScore(m3m4t1Score);
-                resetScore(m3m4t2Score);
-                resetScore(m3m5t1Score);
-                resetScore(m3m5t2Score);
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
-            }
-
         }
 
         private void generalResetButton_Click(object sender, EventArgs e)
-        { DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove all match data?", "Reset General Data?", MessageBoxButtons.YesNo);
+        { DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove all general data?", "Reset General Data?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 resetText(message);
@@ -513,7 +349,6 @@ namespace OW_Scoreboard_Tool
         private void m1UpdateButton_Click(object sender, EventArgs e)
         {
 
-            updateText(m1MessageBox, "Match1", "MessageBox");
             updateText(m1DivisionNumber, "Match1", "DivisionNumber");
 
             updateScore(m1t1Score, "Match1", "t1Score");
@@ -536,19 +371,19 @@ namespace OW_Scoreboard_Tool
             updateText(m1t2p5Name, "Match1", "t2p5Name");
             updateText(m1t2p6Name, "Match1", "t2p6Name");
 
-            updateHero(m1t1p1Hero, "Match1", "t1p1Hero");
-            updateHero(m1t1p2Hero, "Match1", "t1p2Hero");
-            updateHero(m1t1p3Hero, "Match1", "t1p3Hero");
-            updateHero(m1t1p4Hero, "Match1", "t1p4Hero");
-            updateHero(m1t1p5Hero, "Match1", "t1p5Hero");
-            updateHero(m1t1p6Hero, "Match1", "t1p6Hero");
-
-            updateHero(m1t2p1Hero, "Match1", "t2p1Hero");
-            updateHero(m1t2p2Hero, "Match1", "t2p2Hero");
-            updateHero(m1t2p3Hero, "Match1", "t2p3Hero");
-            updateHero(m1t2p4Hero, "Match1", "t2p4Hero");
-            updateHero(m1t2p5Hero, "Match1", "t2p5Hero");
-            updateHero(m1t2p6Hero, "Match1", "t2p6Hero");
+            updateHero(m1t1p1Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p1Hero");
+            updateHero(m1t1p2Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p2Hero");
+            updateHero(m1t1p3Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p3Hero");
+            updateHero(m1t1p4Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p4Hero");
+            updateHero(m1t1p5Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p5Hero");
+            updateHero(m1t1p6Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p6Hero");
+                                                               
+            updateHero(m1t2p1Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t2p1Hero");
+            updateHero(m1t2p2Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t2p2Hero");
+            updateHero(m1t2p3Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t2p3Hero");
+            updateHero(m1t2p4Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t2p4Hero");
+            updateHero(m1t2p5Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t2p5Hero");
+            updateHero(m1t2p6Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t2p6Hero");
 
             updateRole(m1t1p1Role, "Match1", "t1p1Role");
             updateRole(m1t1p2Role, "Match1", "t1p2Role");
@@ -568,11 +403,13 @@ namespace OW_Scoreboard_Tool
             updateSide(m1Defend, "Match1", "t1Side", "t2Side");
             updateSide(m1Neutral, "Match1", "t1Side", "t2Side");
 
-            updateMap(m1m1Map, "Match1", "m1Map");
-            updateMap(m1m2Map, "Match1", "m2Map");
-            updateMap(m1m3Map, "Match1", "m3Map");
-            updateMap(m1m4Map, "Match1", "m4Map");
-            updateMap(m1m5Map, "Match1", "m5Map");
+            updateMap(m1m1Map, m1m1Selected, m1MapFull, m1MapLong, "Match1", "m1Map");
+            updateMap(m1m2Map, m1m2Selected, m1MapFull, m1MapLong, "Match1", "m2Map");
+            updateMap(m1m3Map, m1m3Selected, m1MapFull, m1MapLong, "Match1", "m3Map");
+            updateMap(m1m4Map, m1m4Selected, m1MapFull, m1MapLong, "Match1", "m4Map");
+            updateMap(m1m5Map, m1m5Selected, m1MapFull, m1MapLong, "Match1", "m5Map");
+            updateMap(m1m6Map, m1m6Selected, m1MapFull, m1MapLong, "Match1", "m6Map");
+            updateMap(m1m7Map, m1m7Selected, m1MapFull, m1MapLong, "Match1", "m7Map");
 
             updateScore(m1m1t1Score, "Match1", "m1t1Score");
             updateScore(m1m1t2Score, "Match1", "m1t2Score");
@@ -584,11 +421,24 @@ namespace OW_Scoreboard_Tool
             updateScore(m1m4t2Score, "Match1", "m4t2Score");
             updateScore(m1m5t1Score, "Match1", "m5t1Score");
             updateScore(m1m5t2Score, "Match1", "m5t2Score");
+            updateScore(m1m6t1Score, "Match1", "m6t1Score");
+            updateScore(m1m6t2Score, "Match1", "m6t2Score");
+            updateScore(m1m7t1Score, "Match1", "m7t1Score");
+            updateScore(m1m7t2Score, "Match1", "m7t2Score");
 
+            updateCompleted(m1m1Completed, m1t1Name, m1t2Name, m1m1t1Score, m1m1t2Score, "Match1", "m1MapWin");
+            updateCompleted(m1m2Completed, m1t1Name, m1t2Name, m1m2t1Score, m1m2t2Score, "Match1", "m2MapWin");
+            updateCompleted(m1m3Completed, m1t1Name, m1t2Name, m1m3t1Score, m1m3t2Score, "Match1", "m3MapWin");
+            updateCompleted(m1m4Completed, m1t1Name, m1t2Name, m1m4t1Score, m1m4t2Score, "Match1", "m4MapWin");
+            updateCompleted(m1m5Completed, m1t1Name, m1t2Name, m1m5t1Score, m1m5t2Score, "Match1", "m5MapWin");
+            updateCompleted(m1m6Completed, m1t1Name, m1t2Name, m1m6t1Score, m1m6t2Score, "Match1", "m6MapWin");
+            updateCompleted(m1m7Completed, m1t1Name, m1t2Name, m1m7t1Score, m1m7t2Score, "Match1", "m7MapWin");
+
+            updateLogos(m1t1Logo, "Match1", "t1Logo");
+            updateLogos(m1t2Logo, "Match1", "t2Logo");
 
             if (m1currentCheck.Checked == true)
             {
-                updateText(m1MessageBox, "Current", "MessageBox");
                 updateText(m1DivisionNumber, "Current", "DivisionNumber");
 
                 updateScore(m1t1Score, "Current", "t1Score");
@@ -611,19 +461,19 @@ namespace OW_Scoreboard_Tool
                 updateText(m1t2p5Name, "Current", "t2p5Name");
                 updateText(m1t2p6Name, "Current", "t2p6Name");
 
-                updateHero(m1t1p1Hero, "Current", "t1p1Hero");
-                updateHero(m1t1p2Hero, "Current", "t1p2Hero");
-                updateHero(m1t1p3Hero, "Current", "t1p3Hero");
-                updateHero(m1t1p4Hero, "Current", "t1p4Hero");
-                updateHero(m1t1p5Hero, "Current", "t1p5Hero");
-                updateHero(m1t1p6Hero, "Current", "t1p6Hero");
-
-                updateHero(m1t2p1Hero, "Current", "t2p1Hero");
-                updateHero(m1t2p2Hero, "Current", "t2p2Hero");
-                updateHero(m1t2p3Hero, "Current", "t2p3Hero");
-                updateHero(m1t2p4Hero, "Current", "t2p4Hero");
-                updateHero(m1t2p5Hero, "Current", "t2p5Hero");
-                updateHero(m1t2p6Hero, "Current", "t2p6Hero");
+                updateHero(m1t1p1Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Current", "t1p1Hero");
+                updateHero(m1t1p2Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Current", "t1p2Hero");
+                updateHero(m1t1p3Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Current", "t1p3Hero");
+                updateHero(m1t1p4Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Current", "t1p4Hero");
+                updateHero(m1t1p5Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Current", "t1p5Hero");
+                updateHero(m1t1p6Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Current", "t1p6Hero");
+                                                                   
+                updateHero(m1t2p1Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Current", "t2p1Hero");
+                updateHero(m1t2p2Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Current", "t2p2Hero");
+                updateHero(m1t2p3Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Current", "t2p3Hero");
+                updateHero(m1t2p4Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Current", "t2p4Hero");
+                updateHero(m1t2p5Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Current", "t2p5Hero");
+                updateHero(m1t2p6Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Current", "t2p6Hero");
 
                 updateRole(m1t1p1Role, "Current", "t1p1Role");
                 updateRole(m1t1p2Role, "Current", "t1p2Role");
@@ -644,11 +494,13 @@ namespace OW_Scoreboard_Tool
                 updateSide(m1Neutral, "Current", "t1Side", "t2Side");
 
 
-                updateMap(m1m1Map, "Current", "m1Map");
-                updateMap(m1m2Map, "Current", "m2Map");
-                updateMap(m1m3Map, "Current", "m3Map");
-                updateMap(m1m4Map, "Current", "m4Map");
-                updateMap(m1m5Map, "Current", "m5Map");
+                updateMap(m1m1Map, m1m1Selected, m1MapFull, m1MapLong, "Current", "m1Map");
+                updateMap(m1m2Map, m1m2Selected, m1MapFull, m1MapLong, "Current", "m2Map");
+                updateMap(m1m3Map, m1m3Selected, m1MapFull, m1MapLong, "Current", "m3Map");
+                updateMap(m1m4Map, m1m4Selected, m1MapFull, m1MapLong, "Current", "m4Map");
+                updateMap(m1m5Map, m1m5Selected, m1MapFull, m1MapLong, "Current", "m5Map");
+                updateMap(m1m6Map, m1m6Selected, m1MapFull, m1MapLong, "Current", "m6Map");
+                updateMap(m1m7Map, m1m7Selected, m1MapFull, m1MapLong, "Current", "m7Map");
 
                 updateScore(m1m1t1Score, "Current", "m1t1Score");
                 updateScore(m1m1t2Score, "Current", "m1t2Score");
@@ -660,312 +512,25 @@ namespace OW_Scoreboard_Tool
                 updateScore(m1m4t2Score, "Current", "m4t2Score");
                 updateScore(m1m5t1Score, "Current", "m5t1Score");
                 updateScore(m1m5t2Score, "Current", "m5t2Score");
+                updateScore(m1m6t1Score, "Current", "m6t1Score");
+                updateScore(m1m6t2Score, "Current", "m6t2Score");
+                updateScore(m1m7t1Score, "Current", "m7t1Score");
+                updateScore(m1m7t2Score, "Current", "m7t2Score");
+
+                updateCompleted(m1m1Completed, m1t1Name, m1t2Name, m1m1t1Score, m1m1t2Score, "Current", "m1MapWin");
+                updateCompleted(m1m2Completed, m1t1Name, m1t2Name, m1m2t1Score, m1m2t2Score, "Current", "m2MapWin");
+                updateCompleted(m1m3Completed, m1t1Name, m1t2Name, m1m3t1Score, m1m3t2Score, "Current", "m3MapWin");
+                updateCompleted(m1m4Completed, m1t1Name, m1t2Name, m1m4t1Score, m1m4t2Score, "Current", "m4MapWin");
+                updateCompleted(m1m5Completed, m1t1Name, m1t2Name, m1m5t1Score, m1m5t2Score, "Current", "m5MapWin");
+                updateCompleted(m1m6Completed, m1t1Name, m1t2Name, m1m6t1Score, m1m6t2Score, "Current", "m6MapWin");
+                updateCompleted(m1m7Completed, m1t1Name, m1t2Name, m1m7t1Score, m1m7t2Score, "Current", "m7MapWin");
+
+                updateLogos(m1t1Logo, "Current", "t1Logo");
+                updateLogos(m1t2Logo, "Current", "t2Logo");
             }
         }
 
-        private void m2UpdateButton_Click(object sender, EventArgs e)
-        {
 
-            updateText(m2MessageBox, "Match2", "MessageBox");
-            updateText(m2DivisionNumber, "Match2", "DivisionNumber");
-
-            updateScore(m2t1Score, "Match2", "t1Score");
-            updateText(m2t1Name, "Match2", "t1Name");
-            updateText(m2t1SR, "Match2", "t1SR");
-            updateText(m2t1p1Name, "Match2", "t1p1Name");
-            updateText(m2t1p2Name, "Match2", "t1p2Name");
-            updateText(m2t1p3Name, "Match2", "t1p3Name");
-            updateText(m2t1p4Name, "Match2", "t1p4Name");
-            updateText(m2t1p5Name, "Match2", "t1p5Name");
-            updateText(m2t1p6Name, "Match2", "t1p6Name");
-
-            updateScore(m2t2Score, "Match2", "t2Score");
-            updateText(m2t2Name, "Match2", "t2Name");
-            updateText(m2t2SR, "Match2", "t2SR");
-            updateText(m2t2p1Name, "Match2", "t2p1Name");
-            updateText(m2t2p2Name, "Match2", "t2p2Name");
-            updateText(m2t2p3Name, "Match2", "t2p3Name");
-            updateText(m2t2p4Name, "Match2", "t2p4Name");
-            updateText(m2t2p5Name, "Match2", "t2p5Name");
-            updateText(m2t2p6Name, "Match2", "t2p6Name");
-
-            updateHero(m2t1p1Hero, "Match2", "t1p1Hero");
-            updateHero(m2t1p2Hero, "Match2", "t1p2Hero");
-            updateHero(m2t1p3Hero, "Match2", "t1p3Hero");
-            updateHero(m2t1p4Hero, "Match2", "t1p4Hero");
-            updateHero(m2t1p5Hero, "Match2", "t1p5Hero");
-            updateHero(m2t1p6Hero, "Match2", "t1p6Hero");
-
-            updateHero(m2t2p1Hero, "Match2", "t2p1Hero");
-            updateHero(m2t2p2Hero, "Match2", "t2p2Hero");
-            updateHero(m2t2p3Hero, "Match2", "t2p3Hero");
-            updateHero(m2t2p4Hero, "Match2", "t2p4Hero");
-            updateHero(m2t2p5Hero, "Match2", "t2p5Hero");
-            updateHero(m2t2p6Hero, "Match2", "t2p6Hero");
-
-            updateRole(m2t1p1Role, "Match2", "t1p1Role");
-            updateRole(m2t1p2Role, "Match2", "t1p2Role");
-            updateRole(m2t1p3Role, "Match2", "t1p3Role");
-            updateRole(m2t1p4Role, "Match2", "t1p4Role");
-            updateRole(m2t1p5Role, "Match2", "t1p5Role");
-            updateRole(m2t1p6Role, "Match2", "t1p6Role");
-
-            updateRole(m2t2p1Role, "Match2", "t2p1Role");
-            updateRole(m2t2p2Role, "Match2", "t2p2Role");
-            updateRole(m2t2p3Role, "Match2", "t2p3Role");
-            updateRole(m2t2p4Role, "Match2", "t2p4Role");
-            updateRole(m2t2p5Role, "Match2", "t2p5Role");
-            updateRole(m2t2p6Role, "Match2", "t2p6Role");
-
-            updateSide(m2Attack, "Match2", "t1Side", "t2Side");
-            updateSide(m2Defend, "Match2", "t1Side", "t2Side");
-            updateSide(m2Neutral, "Match2", "t1Side", "t2Side");
-
-
-            updateMap(m2m1Map, "Match2", "m1Map");
-            updateMap(m2m2Map, "Match2", "m2Map");
-            updateMap(m2m3Map, "Match2", "m3Map");
-            updateMap(m2m4Map, "Match2", "m4Map");
-            updateMap(m2m5Map, "Match2", "m5Map");
-
-            updateScore(m2m1t1Score, "Match2", "m1t1Score");
-            updateScore(m2m1t2Score, "Match2", "m1t2Score");
-            updateScore(m2m2t1Score, "Match2", "m2t1Score");
-            updateScore(m2m2t2Score, "Match2", "m2t2Score");
-            updateScore(m2m3t1Score, "Match2", "m3t1Score");
-            updateScore(m2m3t2Score, "Match2", "m3t2Score");
-            updateScore(m2m4t1Score, "Match2", "m4t1Score");
-            updateScore(m2m4t2Score, "Match2", "m4t2Score");
-            updateScore(m2m5t1Score, "Match2", "m5t1Score");
-            updateScore(m2m5t2Score, "Match2", "m5t2Score");
-
-            if (m2currentCheck.Checked == true)
-            {
-                updateText(m2MessageBox, "Current", "MessageBox");
-                updateText(m2DivisionNumber, "Current", "DivisionNumber");
-
-                updateScore(m2t1Score, "Current", "t1Score");
-                updateText(m2t1Name, "Current", "t1Name");
-                updateText(m2t1SR, "Current", "t1SR");
-                updateText(m2t1p1Name, "Current", "t1p1Name");
-                updateText(m2t1p2Name, "Current", "t1p2Name");
-                updateText(m2t1p3Name, "Current", "t1p3Name");
-                updateText(m2t1p4Name, "Current", "t1p4Name");
-                updateText(m2t1p5Name, "Current", "t1p5Name");
-                updateText(m2t1p6Name, "Current", "t1p6Name");
-
-                updateScore(m2t2Score, "Current", "t2Score");
-                updateText(m2t2Name, "Current", "t2Name");
-                updateText(m2t2SR, "Current", "t2SR");
-                updateText(m2t2p1Name, "Current", "t2p1Name");
-                updateText(m2t2p2Name, "Current", "t2p2Name");
-                updateText(m2t2p3Name, "Current", "t2p3Name");
-                updateText(m2t2p4Name, "Current", "t2p4Name");
-                updateText(m2t2p5Name, "Current", "t2p5Name");
-                updateText(m2t2p6Name, "Current", "t2p6Name");
-
-                updateHero(m2t1p1Hero, "Current", "t1p1Hero");
-                updateHero(m2t1p2Hero, "Current", "t1p2Hero");
-                updateHero(m2t1p3Hero, "Current", "t1p3Hero");
-                updateHero(m2t1p4Hero, "Current", "t1p4Hero");
-                updateHero(m2t1p5Hero, "Current", "t1p5Hero");
-                updateHero(m2t1p6Hero, "Current", "t1p6Hero");
-
-                updateHero(m2t2p1Hero, "Current", "t2p1Hero");
-                updateHero(m2t2p2Hero, "Current", "t2p2Hero");
-                updateHero(m2t2p3Hero, "Current", "t2p3Hero");
-                updateHero(m2t2p4Hero, "Current", "t2p4Hero");
-                updateHero(m2t2p5Hero, "Current", "t2p5Hero");
-                updateHero(m2t2p6Hero, "Current", "t2p6Hero");
-
-                updateRole(m2t1p1Role, "Current", "t1p1Role");
-                updateRole(m2t1p2Role, "Current", "t1p2Role");
-                updateRole(m2t1p3Role, "Current", "t1p3Role");
-                updateRole(m2t1p4Role, "Current", "t1p4Role");
-                updateRole(m2t1p5Role, "Current", "t1p5Role");
-                updateRole(m2t1p6Role, "Current", "t1p6Role");
-
-                updateRole(m2t2p1Role, "Current", "t2p1Role");
-                updateRole(m2t2p2Role, "Current", "t2p2Role");
-                updateRole(m2t2p3Role, "Current", "t2p3Role");
-                updateRole(m2t2p4Role, "Current", "t2p4Role");
-                updateRole(m2t2p5Role, "Current", "t2p5Role");
-                updateRole(m2t2p6Role, "Current", "t2p6Role");
-
-                updateSide(m2Attack, "Current", "t1Side", "t2Side");
-                updateSide(m2Defend, "Current", "t1Side", "t2Side");
-                updateSide(m2Neutral, "Current", "t1Side", "t2Side");
-
-                updateMap(m2m1Map, "Current", "m1Map");
-                updateMap(m2m2Map, "Current", "m2Map");
-                updateMap(m2m3Map, "Current", "m3Map");
-                updateMap(m2m4Map, "Current", "m4Map");
-                updateMap(m2m5Map, "Current", "m5Map");
-
-                updateScore(m2m1t1Score, "Current", "m1t1Score");
-                updateScore(m2m1t2Score, "Current", "m1t2Score");
-                updateScore(m2m2t1Score, "Current", "m2t1Score");
-                updateScore(m2m2t2Score, "Current", "m2t2Score");
-                updateScore(m2m3t1Score, "Current", "m3t1Score");
-                updateScore(m2m3t2Score, "Current", "m3t2Score");
-                updateScore(m2m4t1Score, "Current", "m4t1Score");
-                updateScore(m2m4t2Score, "Current", "m4t2Score");
-                updateScore(m2m5t1Score, "Current", "m5t1Score");
-                updateScore(m2m5t2Score, "Current", "m5t2Score");
-            }
-        }
-
-        private void m3UpdateButton_Click(object sender, EventArgs e)
-        {
-
-            updateText(m3MessageBox, "Match3", "MessageBox");
-            updateText(m3DivisionNumber, "Match3", "DivisionNumber");
-
-            updateScore(m3t1Score, "Match3", "t1Score");
-            updateText(m3t1Name, "Match3", "t1Name");
-            updateText(m3t1SR, "Match3", "t1SR");
-            updateText(m3t1p1Name, "Match3", "t1p1Name");
-            updateText(m3t1p2Name, "Match3", "t1p2Name");
-            updateText(m3t1p3Name, "Match3", "t1p3Name");
-            updateText(m3t1p4Name, "Match3", "t1p4Name");
-            updateText(m3t1p5Name, "Match3", "t1p5Name");
-            updateText(m3t1p6Name, "Match3", "t1p6Name");
-
-            updateScore(m3t2Score, "Match3", "t2Score");
-            updateText(m3t2Name, "Match3", "t2Name");
-            updateText(m3t2SR, "Match3", "t2SR");
-            updateText(m3t2p1Name, "Match3", "t2p1Name");
-            updateText(m3t2p2Name, "Match3", "t2p2Name");
-            updateText(m3t2p3Name, "Match3", "t2p3Name");
-            updateText(m3t2p4Name, "Match3", "t2p4Name");
-            updateText(m3t2p5Name, "Match3", "t2p5Name");
-            updateText(m3t2p6Name, "Match3", "t2p6Name");
-
-            updateHero(m3t1p1Hero, "Match3", "t1p1Hero");
-            updateHero(m3t1p2Hero, "Match3", "t1p2Hero");
-            updateHero(m3t1p3Hero, "Match3", "t1p3Hero");
-            updateHero(m3t1p4Hero, "Match3", "t1p4Hero");
-            updateHero(m3t1p5Hero, "Match3", "t1p5Hero");
-            updateHero(m3t1p6Hero, "Match3", "t1p6Hero");
-
-            updateHero(m3t2p1Hero, "Match3", "t2p1Hero");
-            updateHero(m3t2p2Hero, "Match3", "t2p2Hero");
-            updateHero(m3t2p3Hero, "Match3", "t2p3Hero");
-            updateHero(m3t2p4Hero, "Match3", "t2p4Hero");
-            updateHero(m3t2p5Hero, "Match3", "t2p5Hero");
-            updateHero(m3t2p6Hero, "Match3", "t2p6Hero");
-
-            updateRole(m3t1p1Role, "Match3", "t1p1Role");
-            updateRole(m3t1p2Role, "Match3", "t1p2Role");
-            updateRole(m3t1p3Role, "Match3", "t1p3Role");
-            updateRole(m3t1p4Role, "Match3", "t1p4Role");
-            updateRole(m3t1p5Role, "Match3", "t1p5Role");
-            updateRole(m3t1p6Role, "Match3", "t1p6Role");
-
-            updateRole(m3t2p1Role, "Match3", "t2p1Role");
-            updateRole(m3t2p2Role, "Match3", "t2p2Role");
-            updateRole(m3t2p3Role, "Match3", "t2p3Role");
-            updateRole(m3t2p4Role, "Match3", "t2p4Role");
-            updateRole(m3t2p5Role, "Match3", "t2p5Role");
-            updateRole(m3t2p6Role, "Match3", "t2p6Role");
-
-            updateSide(m3Attack, "Match3", "t1Side", "t2Side");
-            updateSide(m3Defend, "Match3", "t1Side", "t2Side");
-            updateSide(m3Neutral, "Match3", "t1Side", "t2Side");
-
-            updateMap(m3m1Map, "Match3", "m1Map");
-            updateMap(m3m2Map, "Match3", "m2Map");
-            updateMap(m3m3Map, "Match3", "m3Map");
-            updateMap(m3m4Map, "Match3", "m4Map");
-            updateMap(m3m5Map, "Match3", "m5Map");
-
-            updateScore(m3m1t1Score, "Match3", "m1t1Score");
-            updateScore(m3m1t2Score, "Match3", "m1t2Score");
-            updateScore(m3m2t1Score, "Match3", "m2t1Score");
-            updateScore(m3m2t2Score, "Match3", "m2t2Score");
-            updateScore(m3m3t1Score, "Match3", "m3t1Score");
-            updateScore(m3m3t2Score, "Match3", "m3t2Score");
-            updateScore(m3m4t1Score, "Match3", "m4t1Score");
-            updateScore(m3m4t2Score, "Match3", "m4t2Score");
-            updateScore(m3m5t1Score, "Match3", "m5t1Score");
-            updateScore(m3m5t2Score, "Match3", "m5t2Score");
-
-            if (m3currentCheck.Checked == true)
-            {
-                updateText(m3MessageBox, "Current", "MessageBox");
-                updateText(m3DivisionNumber, "Current", "DivisionNumber");
-
-                updateScore(m3t1Score, "Current", "t1Score");
-                updateText(m3t1Name, "Current", "t1Name");
-                updateText(m3t1SR, "Current", "t1SR");
-                updateText(m3t1p1Name, "Current", "t1p1Name");
-                updateText(m3t1p2Name, "Current", "t1p2Name");
-                updateText(m3t1p3Name, "Current", "t1p3Name");
-                updateText(m3t1p4Name, "Current", "t1p4Name");
-                updateText(m3t1p5Name, "Current", "t1p5Name");
-                updateText(m3t1p6Name, "Current", "t1p6Name");
-
-                updateScore(m3t2Score, "Current", "t2Score");
-                updateText(m3t2Name, "Current", "t2Name");
-                updateText(m3t2SR, "Current", "t2SR");
-                updateText(m3t2p1Name, "Current", "t2p1Name");
-                updateText(m3t2p2Name, "Current", "t2p2Name");
-                updateText(m3t2p3Name, "Current", "t2p3Name");
-                updateText(m3t2p4Name, "Current", "t2p4Name");
-                updateText(m3t2p5Name, "Current", "t2p5Name");
-                updateText(m3t2p6Name, "Current", "t2p6Name");
-
-                updateHero(m3t1p1Hero, "Current", "t1p1Hero");
-                updateHero(m3t1p2Hero, "Current", "t1p2Hero");
-                updateHero(m3t1p3Hero, "Current", "t1p3Hero");
-                updateHero(m3t1p4Hero, "Current", "t1p4Hero");
-                updateHero(m3t1p5Hero, "Current", "t1p5Hero");
-                updateHero(m3t1p6Hero, "Current", "t1p6Hero");
-
-                updateHero(m3t2p1Hero, "Current", "t2p1Hero");
-                updateHero(m3t2p2Hero, "Current", "t2p2Hero");
-                updateHero(m3t2p3Hero, "Current", "t2p3Hero");
-                updateHero(m3t2p4Hero, "Current", "t2p4Hero");
-                updateHero(m3t2p5Hero, "Current", "t2p5Hero");
-                updateHero(m3t2p6Hero, "Current", "t2p6Hero");
-
-                updateRole(m3t1p1Role, "Current", "t1p1Role");
-                updateRole(m3t1p2Role, "Current", "t1p2Role");
-                updateRole(m3t1p3Role, "Current", "t1p3Role");
-                updateRole(m3t1p4Role, "Current", "t1p4Role");
-                updateRole(m3t1p5Role, "Current", "t1p5Role");
-                updateRole(m3t1p6Role, "Current", "t1p6Role");
-
-                updateRole(m3t2p1Role, "Current", "t2p1Role");
-                updateRole(m3t2p2Role, "Current", "t2p2Role");
-                updateRole(m3t2p3Role, "Current", "t2p3Role");
-                updateRole(m3t2p4Role, "Current", "t2p4Role");
-                updateRole(m3t2p5Role, "Current", "t2p5Role");
-                updateRole(m3t2p6Role, "Current", "t2p6Role");
-
-                updateSide(m3Attack, "Current", "t1Side", "t2Side");
-                updateSide(m3Defend, "Current", "t1Side", "t2Side");
-                updateSide(m3Neutral, "Current", "t1Side", "t2Side");
-
-
-                updateMap(m3m1Map, "Current", "m1Map");
-                updateMap(m3m2Map, "Current", "m2Map");
-                updateMap(m3m3Map, "Current", "m3Map");
-                updateMap(m3m4Map, "Current", "m4Map");
-                updateMap(m3m5Map, "Current", "m5Map");
-
-                updateScore(m3m1t1Score, "Current", "m1t1Score");
-                updateScore(m3m1t2Score, "Current", "m1t2Score");
-                updateScore(m3m2t1Score, "Current", "m2t1Score");
-                updateScore(m3m2t2Score, "Current", "m2t2Score");
-                updateScore(m3m3t1Score, "Current", "m3t1Score");
-                updateScore(m3m3t2Score, "Current", "m3t2Score");
-                updateScore(m3m4t1Score, "Current", "m4t1Score");
-                updateScore(m3m4t2Score, "Current", "m4t2Score");
-                updateScore(m3m5t1Score, "Current", "m5t1Score");
-                updateScore(m3m5t2Score, "Current", "m5t2Score");
-            }
-        }
 
         private void generalUpdateButton_Click(object sender, EventArgs e)
         {
@@ -1001,7 +566,7 @@ namespace OW_Scoreboard_Tool
             }
         }
 
-        private void updateHero(ComboBox field, String folder, String file)
+        private void updateHero(ComboBox field, RadioButton radio1, RadioButton radio2, RadioButton radio3, String folder, String file)
         {
             
 
@@ -1009,107 +574,408 @@ namespace OW_Scoreboard_Tool
             {
                 if (field.SelectedItem.ToString().Equals("Ana"))
                 {
-                    Properties.Resources.Ana.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true )
+                    {
+                        Properties.Resources.Icon_ana.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Ana.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Ana.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Bastion"))
                 {
-                    Properties.Resources.Bastion.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_bastion.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Bastion.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Bastion.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                }
+                else if (field.SelectedItem.ToString().Equals("Brigitte"))
+                {
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_brigitte.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Brigitte.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Brigitte.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Doomfist"))
                 {
-                    Properties.Resources.Doomfist.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_doomfist.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Doomfist.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Doomfist.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("D.Va"))
                 {
-                    Properties.Resources.Dva.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_dva.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Dva.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Dva.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Genji"))
                 {
-                    Properties.Resources.Genji.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_genji.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Genji.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Genji.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Hanzo"))
                 {
-                    Properties.Resources.Hanzo.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_hanzo.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Hanzo.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Hanzo.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Junkrat"))
                 {
-                    Properties.Resources.Junkrat.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_junkrat.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Junkrat.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Junkrat.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Lúcio"))
                 {
-                    Properties.Resources.Lucio.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_Lucio.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Lucio.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Lucio.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("McCree"))
                 {
-                    Properties.Resources.McCree.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_mccree.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_McCree.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.McCree.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Mei"))
                 {
-                    Properties.Resources.Mei.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_mei.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Mei.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Mei.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Mercy"))
                 {
-                    Properties.Resources.Mercy.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_mercy.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Mercy.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Mercy.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Moira"))
                 {
-                    Properties.Resources.Moira.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_moira.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Moira.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Moira.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Orisa"))
                 {
-                    Properties.Resources.Orisa.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_orisa.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Orisa.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Orisa.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Pharah"))
                 {
-                    Properties.Resources.Pharah.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_pharah.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Pharah.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Pharah.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Reaper"))
                 {
-                    Properties.Resources.Reaper.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_reaper.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Reaper.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Reaper.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Reinhardt"))
                 {
-                    Properties.Resources.Reinhart.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_reinhardt.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Reinhardt.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Reinhart.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Roadhog"))
                 {
-                    Properties.Resources.Roadhog.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_roadhog.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Roadhog.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Roadhog.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Soldier: 76"))
                 {
-                    Properties.Resources.Soldier76.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_soldier76.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Soldier76.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Soldier76.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Sombra"))
                 {
-                    Properties.Resources.Sombra.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_sombra.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Sombra.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Sombra.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Symmetra"))
                 {
-                    Properties.Resources.Symetra.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_symmetra.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Symmetra.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Symetra.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Torbjörn"))
                 {
-                    Properties.Resources.Torbjorn.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_torbjorn.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Torbjorn.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Torbjorn.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Tracer"))
                 {
-                    Properties.Resources.Tracer.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_tracer.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Tracer.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Tracer.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Widowmaker"))
                 {
-                    Properties.Resources.Widowmaker.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_widowmaker.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Widowmaker.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Widowmaker.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Winston"))
                 {
-                    Properties.Resources.Winston.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_winston.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Winston.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Winston.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Zarya"))
                 {
-                    Properties.Resources.Zarya.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_zarya.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Zarya.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Zarya.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else if (field.SelectedItem.ToString().Equals("Zenyatta"))
                 {
-                    Properties.Resources.Zenyatta.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_zenyatta.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_Zenyatta.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Zenyatta.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                 }
                 else
                 {
@@ -1180,136 +1046,376 @@ namespace OW_Scoreboard_Tool
             }
         }
 
-        private void updateMap(ComboBox field, String folder, String file)
+        private void updateMap(ComboBox field, RadioButton check, RadioButton radio1, RadioButton radio2, String folder, String file)
         {
             if (field.SelectedItem != null)
             {
                 String gametype = "";
-                if (field.Text == "Dorado")
+                if (field.Text == "Blizzard World")
                 {
-                    Properties.Resources.Icon_dorado.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Blizzworld.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_blizzworld.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Blizzworld.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+
+                    Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Hybrid";
+                }
+                else if (field.Text == "Dorado")
+                {   if(radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Dorado.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_dorado.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Dorado.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    
                     Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Escort";
                 }
                 else if (field.Text == "Eichenwalde")
                 {
-                    Properties.Resources.Icon_eichenwalde.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Eichenwalde.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_eichenwalde.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Eichenwalde.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Hybrid";
                 }
                 else if (field.Text == "Hanamura")
                 {
-                    Properties.Resources.Icon_hanamura.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Hanamura.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_hanamura.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Hanamura.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Assault";
                 }
                 else if (field.Text == "Hollywood")
                 {
-                    Properties.Resources.Icon_hollywood.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Hollywood.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_hollywood.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Hollywood.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Hybrid";
                 }
                 else if (field.Text == "Horizon Lunar Colony")
                 {
-                    Properties.Resources.Icon_horizon.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Horizon.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_horizon.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Horizon.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Assault";
                 }
                 else if (field.Text == "Ilios")
                 {
-                    Properties.Resources.Icon_ilios.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Ilios.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_ilios.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Ilios.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Control";
                 }
                 else if (field.Text == "Junkertown")
                 {
-                    Properties.Resources.Icon_junkertown.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Junkertown.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_junkertown.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Junkertown.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Escort";
                 }
                 else if (field.Text == "King's Row")
                 {
-                    Properties.Resources.Icon_kings.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_King_s_Row.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_kings.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_King_s_Row.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Hybrid";
                 }
                 else if (field.Text == "Lijiang Tower")
                 {
-                    Properties.Resources.Icon_lijiang.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Lijiang.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_lijiang.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Lijiang.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Control";
                 }
                 else if (field.Text == "Nepal")
                 {
-                    Properties.Resources.Icon_nepal.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Nepal.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_nepal.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Nepal.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Control";
                 }
                 else if (field.Text == "Numbani")
                 {
-                    Properties.Resources.Icon_numbani.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Numbani.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_numbani.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Numbani.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Hybrid";
                 }
                 else if (field.Text == "Oasis")
                 {
-                    Properties.Resources.Icon_oasis.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Oasis.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_oasis.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Oasis.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Control";
                 }
                 else if (field.Text == "Route 66")
                 {
-                    Properties.Resources.Icon_route.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Route66.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_route.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Route66.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Escort";
                 }
                 else if (field.Text == "Temple of Anubis")
                 {
-                    Properties.Resources.Icon_temple.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Anubis.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_temple.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Anubis.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Assault";
                 }
                 else if (field.Text == "Volskaya Industries")
                 {
-                    Properties.Resources.Icon_volskaya.Save(path + "\\" + folder + "\\" + file + ".png");
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Volskaya.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_volskaya.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Volskaya.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
                     Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Assault";
                 }
                 else if (field.Text == "Watchpoint: Gibraltar")
                 {
-                    Properties.Resources.Icon_watchpoint.Save(path + "\\" + folder + "\\" + file + ".png");
-                    Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
-                    gametype = "Escort";
-                }
-                else
-                {
-                    if (field.Text == "Assault")
+                    if (radio2.Checked == true && check.Checked == true)
                     {
-                        Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
-                        gametype = "Assault";
+                        Properties.Resources.Color_Watchpoint.Save(path + "\\" + folder + "\\" + file + ".png");
                     }
-                    else if (field.Text == "Escort")
+                    else if (radio1.Checked == true)
                     {
-                        Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
-                        gametype = "Escort";
-                    }
-                    else if (field.Text == "Hybrid")
-                    {
-                        Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
-                        gametype = "Hybrid";
-                    }
-                    else if (field.Text == "Control")
-                    {
-                        Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
-                        gametype = "Control";
+                        Properties.Resources.Icon_watchpoint.Save(path + "\\" + folder + "\\" + file + ".png");
                     }
                     else
                     {
-                        Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
-                        gametype = "";
+                        Properties.Resources.Desat_Watchpoint.Save(path + "\\" + folder + "\\" + file + ".png");
                     }
+                    Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Escort";
+                }
 
+                else if (field.Text == "Assault")
+                {
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Assault.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_assault_pool.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Assault.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    Properties.Resources.Icon_assault.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Assault";
+                }
+                else if (field.Text == "Escort")
+                {
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Escort.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_escort_pool.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Escort.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Escort";
+                }
+                else if (field.Text == "Hybrid")
+                {
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Hybrid.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_hybrid_pool.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Hybrid.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    Properties.Resources.Icon_hybrid.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Hybrid";
+                }
+                else if (field.Text == "Control")
+                {
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Control.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_control_pool.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Control.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Control";
+                }
+                else
+                {
                     Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
+                    Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "";
+
                 }
                 using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
                 {
@@ -1334,6 +1440,7 @@ namespace OW_Scoreboard_Tool
             string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
 
             field.Text = loadingText;
+            field.Text.Trim();
 
 
         }
@@ -1382,6 +1489,167 @@ namespace OW_Scoreboard_Tool
         {
 
 
+        }
+
+        public void CreateFileWatcher(String path)
+        {
+            FileSystemWatcher watcher = new FileSystemWatcher();
+            watcher.Path = path;
+
+            watcher.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName;
+            watcher.Filter = "Replay Replay.mp4";
+            watcher.Changed += new FileSystemEventHandler(OnChanged);
+            watcher.EnableRaisingEvents = true;
+        }
+
+        private static void OnChanged(object source, FileSystemEventArgs e)
+        {
+            string filelessPath = Path.GetDirectoryName(e.FullPath);
+            string copyPath = filelessPath + "\\Playlist";
+            System.IO.DirectoryInfo di = new DirectoryInfo(copyPath);
+            int count = di.GetFiles().Length;
+            int prefix = count + 1;
+            string previousfile = count.ToString() + "-" + e.Name;
+            string copiedFile = prefix.ToString() + "-" + e.Name;
+            string copiedFullPath = Path.Combine(copyPath, copiedFile);
+            string previousFullPath = Path.Combine(copyPath, previousfile);
+
+            if (!File.Exists(copiedFullPath))
+            {
+                if (count != 0)
+                {
+                    if (!FilesAreEqual(new FileInfo(previousFullPath), new FileInfo(e.FullPath)))
+                    {
+                        File.Copy(e.FullPath, copiedFullPath);
+                    }
+                    
+
+                }
+                else
+                {
+                    File.Copy(e.FullPath, copiedFullPath);
+                }
+
+            }
+
+        }
+
+        private static bool FilesAreEqual(FileInfo first, FileInfo second)
+        {
+            if(first.Length != second.Length)
+            {
+                return false;
+            }
+
+            if (string.Equals(first.FullName, second.FullName, StringComparison.OrdinalIgnoreCase)){
+                return true;
+            }
+
+            int iterations = (int)Math.Ceiling((double)first.Length / Bytes_TO_READ);
+
+            using (FileStream fs1 = first.OpenRead())
+            using (FileStream fs2 = second.OpenRead())
+            {
+                byte[] one = new byte[Bytes_TO_READ];
+                byte[] two = new byte[Bytes_TO_READ];
+
+                for (int i=0; i < iterations; i++)
+                {
+                    fs1.Read(one, 0, Bytes_TO_READ);
+                    fs2.Read(two, 0, Bytes_TO_READ);
+
+                    if (BitConverter.ToInt64(one, 0) != BitConverter.ToInt64(two, 0))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        private void replayReset_Click(object sender, EventArgs e)
+        {
+            System.IO.DirectoryInfo di = new DirectoryInfo(path + main + playlist);
+            foreach (FileInfo file in di.GetFiles())
+            {
+                file.Delete();
+            }
+        }
+
+        private void replayClean_Click(object sender, EventArgs e)
+        {
+            System.IO.DirectoryInfo di = new DirectoryInfo(path + main + playlist);
+            foreach (FileInfo file in di.GetFiles())
+            {
+                if (file.Length < 1000000)
+                {
+                    file.Delete();
+                }
+            }
+        }
+
+        private void updateCompleted(CheckBox field, TextBox team1, TextBox team2, NumericUpDown score1, NumericUpDown score2, String folder, String file)
+        {
+            String winner = "";
+            if(field.Checked == true)
+            {
+                if(score1.Value > score2.Value)
+                {
+                    winner = team1.Text;
+                }
+                else if(score2.Value > score1.Value)
+                {
+                    winner = team2.Text;
+                }
+                else
+                {
+                    winner = "DRAW";
+                }
+
+                using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
+                {
+                    sw.WriteLine(winner.TrimEnd());
+                }
+            }
+            using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
+            {
+                sw.WriteLine(winner.TrimEnd());
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            getFileName(m1t1Logo);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            getFileName(m1t2Logo);
+        }
+
+        public void getFileName(TextBox field)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.png; )|*.png";
+            open.ShowDialog();
+
+            field.Text = open.FileName;
+
+        }
+
+        public void updateLogos(TextBox field, String folder, String file)
+        {
+            
+            if (field.Text != "")
+            {
+                Bitmap logo = new Bitmap(field.Text);
+                logo.Save(path + "\\" + folder + "\\" + file + ".png");
+            }
+            else
+            {
+                Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
+            }
+               
         }
 
         /*private void loadHero(ComboBox field, String folder, String file)
