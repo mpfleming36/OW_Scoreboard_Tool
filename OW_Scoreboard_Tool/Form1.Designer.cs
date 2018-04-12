@@ -369,7 +369,7 @@
             this.label20.Location = new System.Drawing.Point(5, 441);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(41, 13);
-            this.label20.TabIndex = 174;
+            this.label20.TabIndex = 0;
             this.label20.Text = "Current";
             // 
             // label17
@@ -378,7 +378,7 @@
             this.label17.Location = new System.Drawing.Point(133, 52);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(28, 13);
-            this.label17.TabIndex = 171;
+            this.label17.TabIndex = 0;
             this.label17.Text = "Side";
             // 
             // groupBox2
@@ -389,7 +389,7 @@
             this.groupBox2.Location = new System.Drawing.Point(468, 430);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(184, 30);
-            this.groupBox2.TabIndex = 170;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
             // m1Hero3D
@@ -398,7 +398,7 @@
             this.m1Hero3D.Location = new System.Drawing.Point(122, 9);
             this.m1Hero3D.Name = "m1Hero3D";
             this.m1Hero3D.Size = new System.Drawing.Size(39, 17);
-            this.m1Hero3D.TabIndex = 69;
+            this.m1Hero3D.TabIndex = 94;
             this.m1Hero3D.Text = "3D";
             this.m1Hero3D.UseVisualStyleBackColor = true;
             // 
@@ -409,7 +409,7 @@
             this.m1HeroPortrait.Location = new System.Drawing.Point(6, 9);
             this.m1HeroPortrait.Name = "m1HeroPortrait";
             this.m1HeroPortrait.Size = new System.Drawing.Size(58, 17);
-            this.m1HeroPortrait.TabIndex = 66;
+            this.m1HeroPortrait.TabIndex = 92;
             this.m1HeroPortrait.TabStop = true;
             this.m1HeroPortrait.Text = "Portrait";
             this.m1HeroPortrait.UseVisualStyleBackColor = true;
@@ -420,7 +420,7 @@
             this.m1HeroIcon.Location = new System.Drawing.Point(70, 9);
             this.m1HeroIcon.Name = "m1HeroIcon";
             this.m1HeroIcon.Size = new System.Drawing.Size(46, 17);
-            this.m1HeroIcon.TabIndex = 68;
+            this.m1HeroIcon.TabIndex = 93;
             this.m1HeroIcon.Text = "Icon";
             this.m1HeroIcon.UseVisualStyleBackColor = true;
             // 
@@ -431,7 +431,7 @@
             this.m1MapStyle.Location = new System.Drawing.Point(363, 430);
             this.m1MapStyle.Name = "m1MapStyle";
             this.m1MapStyle.Size = new System.Drawing.Size(99, 30);
-            this.m1MapStyle.TabIndex = 73;
+            this.m1MapStyle.TabIndex = 0;
             this.m1MapStyle.TabStop = false;
             // 
             // m1MapFull
@@ -440,7 +440,7 @@
             this.m1MapFull.Location = new System.Drawing.Point(6, 9);
             this.m1MapFull.Name = "m1MapFull";
             this.m1MapFull.Size = new System.Drawing.Size(41, 17);
-            this.m1MapFull.TabIndex = 66;
+            this.m1MapFull.TabIndex = 90;
             this.m1MapFull.Text = "Full";
             this.m1MapFull.UseVisualStyleBackColor = true;
             // 
@@ -451,7 +451,7 @@
             this.m1MapLong.Location = new System.Drawing.Point(53, 9);
             this.m1MapLong.Name = "m1MapLong";
             this.m1MapLong.Size = new System.Drawing.Size(49, 17);
-            this.m1MapLong.TabIndex = 68;
+            this.m1MapLong.TabIndex = 91;
             this.m1MapLong.TabStop = true;
             this.m1MapLong.Text = "Long";
             this.m1MapLong.UseVisualStyleBackColor = true;
@@ -469,7 +469,7 @@
             this.m1Map.Location = new System.Drawing.Point(52, 430);
             this.m1Map.Name = "m1Map";
             this.m1Map.Size = new System.Drawing.Size(305, 30);
-            this.m1Map.TabIndex = 73;
+            this.m1Map.TabIndex = 0;
             this.m1Map.TabStop = false;
             // 
             // m1m0Selected
@@ -479,7 +479,7 @@
             this.m1m0Selected.Location = new System.Drawing.Point(273, 9);
             this.m1m0Selected.Name = "m1m0Selected";
             this.m1m0Selected.Size = new System.Drawing.Size(33, 17);
-            this.m1m0Selected.TabIndex = 171;
+            this.m1m0Selected.TabIndex = 76;
             this.m1m0Selected.TabStop = true;
             this.m1m0Selected.Text = "N";
             this.m1m0Selected.UseVisualStyleBackColor = true;
@@ -490,7 +490,7 @@
             this.m1m6Selected.Location = new System.Drawing.Point(198, 9);
             this.m1m6Selected.Name = "m1m6Selected";
             this.m1m6Selected.Size = new System.Drawing.Size(31, 17);
-            this.m1m6Selected.TabIndex = 170;
+            this.m1m6Selected.TabIndex = 74;
             this.m1m6Selected.Text = "6";
             this.m1m6Selected.UseVisualStyleBackColor = true;
             // 
@@ -500,7 +500,7 @@
             this.m1m7Selected.Location = new System.Drawing.Point(236, 9);
             this.m1m7Selected.Name = "m1m7Selected";
             this.m1m7Selected.Size = new System.Drawing.Size(31, 17);
-            this.m1m7Selected.TabIndex = 171;
+            this.m1m7Selected.TabIndex = 75;
             this.m1m7Selected.Text = "7";
             this.m1m7Selected.UseVisualStyleBackColor = true;
             // 
@@ -510,7 +510,7 @@
             this.m1m4Selected.Location = new System.Drawing.Point(121, 9);
             this.m1m4Selected.Name = "m1m4Selected";
             this.m1m4Selected.Size = new System.Drawing.Size(31, 17);
-            this.m1m4Selected.TabIndex = 170;
+            this.m1m4Selected.TabIndex = 72;
             this.m1m4Selected.Text = "4";
             this.m1m4Selected.UseVisualStyleBackColor = true;
             // 
@@ -520,7 +520,7 @@
             this.m1m5Selected.Location = new System.Drawing.Point(159, 9);
             this.m1m5Selected.Name = "m1m5Selected";
             this.m1m5Selected.Size = new System.Drawing.Size(31, 17);
-            this.m1m5Selected.TabIndex = 171;
+            this.m1m5Selected.TabIndex = 73;
             this.m1m5Selected.Text = "5";
             this.m1m5Selected.UseVisualStyleBackColor = true;
             // 
@@ -530,7 +530,7 @@
             this.m1m1Selected.Location = new System.Drawing.Point(6, 9);
             this.m1m1Selected.Name = "m1m1Selected";
             this.m1m1Selected.Size = new System.Drawing.Size(31, 17);
-            this.m1m1Selected.TabIndex = 66;
+            this.m1m1Selected.TabIndex = 69;
             this.m1m1Selected.Text = "1";
             this.m1m1Selected.UseVisualStyleBackColor = true;
             // 
@@ -540,7 +540,7 @@
             this.m1m2Selected.Location = new System.Drawing.Point(44, 9);
             this.m1m2Selected.Name = "m1m2Selected";
             this.m1m2Selected.Size = new System.Drawing.Size(31, 17);
-            this.m1m2Selected.TabIndex = 67;
+            this.m1m2Selected.TabIndex = 70;
             this.m1m2Selected.Text = "2";
             this.m1m2Selected.UseVisualStyleBackColor = true;
             // 
@@ -550,7 +550,7 @@
             this.m1m3Selected.Location = new System.Drawing.Point(82, 9);
             this.m1m3Selected.Name = "m1m3Selected";
             this.m1m3Selected.Size = new System.Drawing.Size(31, 17);
-            this.m1m3Selected.TabIndex = 68;
+            this.m1m3Selected.TabIndex = 71;
             this.m1m3Selected.Text = "3";
             this.m1m3Selected.UseVisualStyleBackColor = true;
             // 
@@ -560,7 +560,7 @@
             this.m1m7Completed.Location = new System.Drawing.Point(571, 407);
             this.m1m7Completed.Name = "m1m7Completed";
             this.m1m7Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m7Completed.TabIndex = 168;
+            this.m1m7Completed.TabIndex = 68;
             this.m1m7Completed.Text = "Completed?";
             this.m1m7Completed.UseVisualStyleBackColor = true;
             // 
@@ -570,7 +570,7 @@
             this.m1m6Completed.Location = new System.Drawing.Point(478, 407);
             this.m1m6Completed.Name = "m1m6Completed";
             this.m1m6Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m6Completed.TabIndex = 167;
+            this.m1m6Completed.TabIndex = 64;
             this.m1m6Completed.Text = "Completed?";
             this.m1m6Completed.UseVisualStyleBackColor = true;
             // 
@@ -580,7 +580,7 @@
             this.m1m5Completed.Location = new System.Drawing.Point(383, 407);
             this.m1m5Completed.Name = "m1m5Completed";
             this.m1m5Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m5Completed.TabIndex = 166;
+            this.m1m5Completed.TabIndex = 60;
             this.m1m5Completed.Text = "Completed?";
             this.m1m5Completed.UseVisualStyleBackColor = true;
             // 
@@ -590,7 +590,7 @@
             this.m1m4Completed.Location = new System.Drawing.Point(290, 407);
             this.m1m4Completed.Name = "m1m4Completed";
             this.m1m4Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m4Completed.TabIndex = 165;
+            this.m1m4Completed.TabIndex = 56;
             this.m1m4Completed.Text = "Completed?";
             this.m1m4Completed.UseVisualStyleBackColor = true;
             // 
@@ -600,7 +600,7 @@
             this.m1m3Completed.Location = new System.Drawing.Point(196, 407);
             this.m1m3Completed.Name = "m1m3Completed";
             this.m1m3Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m3Completed.TabIndex = 164;
+            this.m1m3Completed.TabIndex = 52;
             this.m1m3Completed.Text = "Completed?";
             this.m1m3Completed.UseVisualStyleBackColor = true;
             // 
@@ -610,7 +610,7 @@
             this.m1m2Completed.Location = new System.Drawing.Point(99, 407);
             this.m1m2Completed.Name = "m1m2Completed";
             this.m1m2Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m2Completed.TabIndex = 163;
+            this.m1m2Completed.TabIndex = 48;
             this.m1m2Completed.Text = "Completed?";
             this.m1m2Completed.UseVisualStyleBackColor = true;
             // 
@@ -620,7 +620,7 @@
             this.m1m1Completed.Location = new System.Drawing.Point(6, 407);
             this.m1m1Completed.Name = "m1m1Completed";
             this.m1m1Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m1Completed.TabIndex = 162;
+            this.m1m1Completed.TabIndex = 44;
             this.m1m1Completed.Text = "Completed?";
             this.m1m1Completed.UseVisualStyleBackColor = true;
             // 
@@ -629,7 +629,7 @@
             this.m1t2LogoButton.Location = new System.Drawing.Point(411, 72);
             this.m1t2LogoButton.Name = "m1t2LogoButton";
             this.m1t2LogoButton.Size = new System.Drawing.Size(27, 23);
-            this.m1t2LogoButton.TabIndex = 160;
+            this.m1t2LogoButton.TabIndex = 88;
             this.m1t2LogoButton.Text = "...";
             this.m1t2LogoButton.UseVisualStyleBackColor = true;
             this.m1t2LogoButton.Click += new System.EventHandler(this.button2_Click);
@@ -639,7 +639,7 @@
             this.m1t1LogoButton.Location = new System.Drawing.Point(221, 72);
             this.m1t1LogoButton.Name = "m1t1LogoButton";
             this.m1t1LogoButton.Size = new System.Drawing.Size(27, 23);
-            this.m1t1LogoButton.TabIndex = 159;
+            this.m1t1LogoButton.TabIndex = 87;
             this.m1t1LogoButton.Text = "...";
             this.m1t1LogoButton.UseVisualStyleBackColor = true;
             this.m1t1LogoButton.Click += new System.EventHandler(this.button1_Click);
@@ -650,7 +650,7 @@
             this.m1t2Logo.Location = new System.Drawing.Point(444, 74);
             this.m1t2Logo.Name = "m1t2Logo";
             this.m1t2Logo.Size = new System.Drawing.Size(133, 20);
-            this.m1t2Logo.TabIndex = 158;
+            this.m1t2Logo.TabIndex = 89;
             // 
             // m1t1Logo
             // 
@@ -658,7 +658,7 @@
             this.m1t1Logo.Location = new System.Drawing.Point(79, 74);
             this.m1t1Logo.Name = "m1t1Logo";
             this.m1t1Logo.Size = new System.Drawing.Size(136, 20);
-            this.m1t1Logo.TabIndex = 157;
+            this.m1t1Logo.TabIndex = 86;
             // 
             // t2LogoLabel
             // 
@@ -666,7 +666,7 @@
             this.t2LogoLabel.Location = new System.Drawing.Point(583, 77);
             this.t2LogoLabel.Name = "t2LogoLabel";
             this.t2LogoLabel.Size = new System.Drawing.Size(70, 13);
-            this.t2LogoLabel.TabIndex = 156;
+            this.t2LogoLabel.TabIndex = 0;
             this.t2LogoLabel.Text = "Team 2 Logo";
             // 
             // t1LogoLabel
@@ -675,7 +675,7 @@
             this.t1LogoLabel.Location = new System.Drawing.Point(3, 77);
             this.t1LogoLabel.Name = "t1LogoLabel";
             this.t1LogoLabel.Size = new System.Drawing.Size(70, 13);
-            this.t1LogoLabel.TabIndex = 155;
+            this.t1LogoLabel.TabIndex = 0;
             this.t1LogoLabel.Text = "Team 1 Logo";
             // 
             // m1m7t2Score
@@ -684,14 +684,14 @@
             this.m1m7t2Score.Name = "m1m7t2Score";
             this.m1m7t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m7t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m7t2Score.TabIndex = 147;
+            this.m1m7t2Score.TabIndex = 67;
             // 
             // m1m7t1Score
             // 
             this.m1m7t1Score.Location = new System.Drawing.Point(570, 381);
             this.m1m7t1Score.Name = "m1m7t1Score";
             this.m1m7t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m7t1Score.TabIndex = 146;
+            this.m1m7t1Score.TabIndex = 66;
             // 
             // m1m7Map
             // 
@@ -723,7 +723,7 @@
             this.m1m7Map.Location = new System.Drawing.Point(570, 354);
             this.m1m7Map.Name = "m1m7Map";
             this.m1m7Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m7Map.TabIndex = 145;
+            this.m1m7Map.TabIndex = 65;
             // 
             // m1m7Label
             // 
@@ -731,7 +731,7 @@
             this.m1m7Label.Location = new System.Drawing.Point(569, 338);
             this.m1m7Label.Name = "m1m7Label";
             this.m1m7Label.Size = new System.Drawing.Size(37, 13);
-            this.m1m7Label.TabIndex = 144;
+            this.m1m7Label.TabIndex = 0;
             this.m1m7Label.Text = "Map 7";
             // 
             // m1m6t2Score
@@ -740,14 +740,14 @@
             this.m1m6t2Score.Name = "m1m6t2Score";
             this.m1m6t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m6t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m6t2Score.TabIndex = 143;
+            this.m1m6t2Score.TabIndex = 63;
             // 
             // m1m6t1Score
             // 
             this.m1m6t1Score.Location = new System.Drawing.Point(477, 381);
             this.m1m6t1Score.Name = "m1m6t1Score";
             this.m1m6t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m6t1Score.TabIndex = 142;
+            this.m1m6t1Score.TabIndex = 62;
             // 
             // m1m6Map
             // 
@@ -779,7 +779,7 @@
             this.m1m6Map.Location = new System.Drawing.Point(477, 354);
             this.m1m6Map.Name = "m1m6Map";
             this.m1m6Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m6Map.TabIndex = 141;
+            this.m1m6Map.TabIndex = 61;
             // 
             // m1m6Label
             // 
@@ -787,7 +787,7 @@
             this.m1m6Label.Location = new System.Drawing.Point(476, 338);
             this.m1m6Label.Name = "m1m6Label";
             this.m1m6Label.Size = new System.Drawing.Size(37, 13);
-            this.m1m6Label.TabIndex = 140;
+            this.m1m6Label.TabIndex = 0;
             this.m1m6Label.Text = "Map 6";
             // 
             // label16
@@ -796,7 +796,7 @@
             this.label16.Location = new System.Drawing.Point(391, 103);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(29, 13);
-            this.label16.TabIndex = 139;
+            this.label16.TabIndex = 0;
             this.label16.Text = "Role";
             // 
             // label15
@@ -805,7 +805,7 @@
             this.label15.Location = new System.Drawing.Point(517, 103);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(30, 13);
-            this.label15.TabIndex = 138;
+            this.label15.TabIndex = 0;
             this.label15.Text = "Hero";
             // 
             // label14
@@ -814,7 +814,7 @@
             this.label14.Location = new System.Drawing.Point(240, 103);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(29, 13);
-            this.label14.TabIndex = 137;
+            this.label14.TabIndex = 0;
             this.label14.Text = "Role";
             // 
             // label7
@@ -823,7 +823,7 @@
             this.label7.Location = new System.Drawing.Point(113, 103);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 13);
-            this.label7.TabIndex = 136;
+            this.label7.TabIndex = 0;
             this.label7.Text = "Hero";
             // 
             // m1t2SRLabel
@@ -832,7 +832,7 @@
             this.m1t2SRLabel.Location = new System.Drawing.Point(407, 5);
             this.m1t2SRLabel.Name = "m1t2SRLabel";
             this.m1t2SRLabel.Size = new System.Drawing.Size(61, 13);
-            this.m1t2SRLabel.TabIndex = 135;
+            this.m1t2SRLabel.TabIndex = 0;
             this.m1t2SRLabel.Text = "Team 2 SR";
             // 
             // m1t1SRLabel
@@ -841,7 +841,7 @@
             this.m1t1SRLabel.Location = new System.Drawing.Point(187, 5);
             this.m1t1SRLabel.Name = "m1t1SRLabel";
             this.m1t1SRLabel.Size = new System.Drawing.Size(61, 13);
-            this.m1t1SRLabel.TabIndex = 134;
+            this.m1t1SRLabel.TabIndex = 0;
             this.m1t1SRLabel.Text = "Team 1 SR";
             // 
             // m1t2SR
@@ -849,14 +849,14 @@
             this.m1t2SR.Location = new System.Drawing.Point(371, 21);
             this.m1t2SR.Name = "m1t2SR";
             this.m1t2SR.Size = new System.Drawing.Size(97, 20);
-            this.m1t2SR.TabIndex = 133;
+            this.m1t2SR.TabIndex = 22;
             // 
             // m1t1SR
             // 
             this.m1t1SR.Location = new System.Drawing.Point(190, 21);
             this.m1t1SR.Name = "m1t1SR";
             this.m1t1SR.Size = new System.Drawing.Size(97, 20);
-            this.m1t1SR.TabIndex = 132;
+            this.m1t1SR.TabIndex = 2;
             // 
             // m1t2p6Role
             // 
@@ -872,7 +872,7 @@
             this.m1t2p6Role.Name = "m1t2p6Role";
             this.m1t2p6Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.m1t2p6Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t2p6Role.TabIndex = 131;
+            this.m1t2p6Role.TabIndex = 40;
             // 
             // m1t2p5Role
             // 
@@ -888,7 +888,7 @@
             this.m1t2p5Role.Name = "m1t2p5Role";
             this.m1t2p5Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.m1t2p5Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t2p5Role.TabIndex = 130;
+            this.m1t2p5Role.TabIndex = 39;
             // 
             // m1t2p4Role
             // 
@@ -904,7 +904,7 @@
             this.m1t2p4Role.Name = "m1t2p4Role";
             this.m1t2p4Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.m1t2p4Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t2p4Role.TabIndex = 129;
+            this.m1t2p4Role.TabIndex = 38;
             // 
             // m1t2p3Role
             // 
@@ -920,7 +920,7 @@
             this.m1t2p3Role.Name = "m1t2p3Role";
             this.m1t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.m1t2p3Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t2p3Role.TabIndex = 128;
+            this.m1t2p3Role.TabIndex = 37;
             // 
             // m1t2p2Role
             // 
@@ -936,7 +936,7 @@
             this.m1t2p2Role.Name = "m1t2p2Role";
             this.m1t2p2Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.m1t2p2Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t2p2Role.TabIndex = 127;
+            this.m1t2p2Role.TabIndex = 36;
             // 
             // m1t2p1Role
             // 
@@ -952,7 +952,7 @@
             this.m1t2p1Role.Name = "m1t2p1Role";
             this.m1t2p1Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.m1t2p1Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t2p1Role.TabIndex = 126;
+            this.m1t2p1Role.TabIndex = 35;
             // 
             // m1t1p6Role
             // 
@@ -968,7 +968,7 @@
             this.m1t1p6Role.Name = "m1t1p6Role";
             this.m1t1p6Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t1p6Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t1p6Role.TabIndex = 125;
+            this.m1t1p6Role.TabIndex = 20;
             // 
             // m1t1p5Role
             // 
@@ -984,7 +984,7 @@
             this.m1t1p5Role.Name = "m1t1p5Role";
             this.m1t1p5Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t1p5Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t1p5Role.TabIndex = 124;
+            this.m1t1p5Role.TabIndex = 19;
             // 
             // m1t1p4Role
             // 
@@ -1000,7 +1000,7 @@
             this.m1t1p4Role.Name = "m1t1p4Role";
             this.m1t1p4Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t1p4Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t1p4Role.TabIndex = 123;
+            this.m1t1p4Role.TabIndex = 18;
             // 
             // m1t1p3Role
             // 
@@ -1016,7 +1016,7 @@
             this.m1t1p3Role.Name = "m1t1p3Role";
             this.m1t1p3Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t1p3Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t1p3Role.TabIndex = 122;
+            this.m1t1p3Role.TabIndex = 17;
             // 
             // m1t1p2Role
             // 
@@ -1032,7 +1032,7 @@
             this.m1t1p2Role.Name = "m1t1p2Role";
             this.m1t1p2Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t1p2Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t1p2Role.TabIndex = 121;
+            this.m1t1p2Role.TabIndex = 16;
             // 
             // m1t1p1Role
             // 
@@ -1048,7 +1048,7 @@
             this.m1t1p1Role.Name = "m1t1p1Role";
             this.m1t1p1Role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t1p1Role.Size = new System.Drawing.Size(82, 21);
-            this.m1t1p1Role.TabIndex = 120;
+            this.m1t1p1Role.TabIndex = 15;
             // 
             // m1m5t2Score
             // 
@@ -1056,14 +1056,14 @@
             this.m1m5t2Score.Name = "m1m5t2Score";
             this.m1m5t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m5t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m5t2Score.TabIndex = 119;
+            this.m1m5t2Score.TabIndex = 59;
             // 
             // m1m5t1Score
             // 
             this.m1m5t1Score.Location = new System.Drawing.Point(382, 381);
             this.m1m5t1Score.Name = "m1m5t1Score";
             this.m1m5t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m5t1Score.TabIndex = 118;
+            this.m1m5t1Score.TabIndex = 58;
             // 
             // m1m4t2Score
             // 
@@ -1071,14 +1071,14 @@
             this.m1m4t2Score.Name = "m1m4t2Score";
             this.m1m4t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m4t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m4t2Score.TabIndex = 117;
+            this.m1m4t2Score.TabIndex = 55;
             // 
             // m1m4t1Score
             // 
             this.m1m4t1Score.Location = new System.Drawing.Point(289, 381);
             this.m1m4t1Score.Name = "m1m4t1Score";
             this.m1m4t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m4t1Score.TabIndex = 116;
+            this.m1m4t1Score.TabIndex = 54;
             // 
             // m1m3t2Score
             // 
@@ -1086,14 +1086,14 @@
             this.m1m3t2Score.Name = "m1m3t2Score";
             this.m1m3t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m3t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m3t2Score.TabIndex = 115;
+            this.m1m3t2Score.TabIndex = 51;
             // 
             // m1m3t1Score
             // 
             this.m1m3t1Score.Location = new System.Drawing.Point(195, 381);
             this.m1m3t1Score.Name = "m1m3t1Score";
             this.m1m3t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m3t1Score.TabIndex = 114;
+            this.m1m3t1Score.TabIndex = 50;
             // 
             // m1m2t2Score
             // 
@@ -1101,14 +1101,14 @@
             this.m1m2t2Score.Name = "m1m2t2Score";
             this.m1m2t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m2t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m2t2Score.TabIndex = 113;
+            this.m1m2t2Score.TabIndex = 47;
             // 
             // m1m2t1Score
             // 
             this.m1m2t1Score.Location = new System.Drawing.Point(98, 381);
             this.m1m2t1Score.Name = "m1m2t1Score";
             this.m1m2t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m2t1Score.TabIndex = 112;
+            this.m1m2t1Score.TabIndex = 46;
             // 
             // m1m1t2Score
             // 
@@ -1116,14 +1116,14 @@
             this.m1m1t2Score.Name = "m1m1t2Score";
             this.m1m1t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m1t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m1t2Score.TabIndex = 111;
+            this.m1m1t2Score.TabIndex = 43;
             // 
             // m1m1t1Score
             // 
             this.m1m1t1Score.Location = new System.Drawing.Point(5, 381);
             this.m1m1t1Score.Name = "m1m1t1Score";
             this.m1m1t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m1t1Score.TabIndex = 110;
+            this.m1m1t1Score.TabIndex = 42;
             // 
             // m1m5Map
             // 
@@ -1155,7 +1155,7 @@
             this.m1m5Map.Location = new System.Drawing.Point(382, 354);
             this.m1m5Map.Name = "m1m5Map";
             this.m1m5Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m5Map.TabIndex = 109;
+            this.m1m5Map.TabIndex = 57;
             // 
             // m1m4Map
             // 
@@ -1187,7 +1187,7 @@
             this.m1m4Map.Location = new System.Drawing.Point(289, 354);
             this.m1m4Map.Name = "m1m4Map";
             this.m1m4Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m4Map.TabIndex = 108;
+            this.m1m4Map.TabIndex = 53;
             // 
             // m1m3Map
             // 
@@ -1219,7 +1219,7 @@
             this.m1m3Map.Location = new System.Drawing.Point(195, 354);
             this.m1m3Map.Name = "m1m3Map";
             this.m1m3Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m3Map.TabIndex = 107;
+            this.m1m3Map.TabIndex = 49;
             // 
             // m1m2Map
             // 
@@ -1251,7 +1251,7 @@
             this.m1m2Map.Location = new System.Drawing.Point(98, 354);
             this.m1m2Map.Name = "m1m2Map";
             this.m1m2Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m2Map.TabIndex = 106;
+            this.m1m2Map.TabIndex = 45;
             // 
             // m1m1Map
             // 
@@ -1283,7 +1283,7 @@
             this.m1m1Map.Location = new System.Drawing.Point(5, 354);
             this.m1m1Map.Name = "m1m1Map";
             this.m1m1Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m1Map.TabIndex = 105;
+            this.m1m1Map.TabIndex = 41;
             // 
             // m1m3Label
             // 
@@ -1291,7 +1291,7 @@
             this.m1m3Label.Location = new System.Drawing.Point(194, 338);
             this.m1m3Label.Name = "m1m3Label";
             this.m1m3Label.Size = new System.Drawing.Size(37, 13);
-            this.m1m3Label.TabIndex = 104;
+            this.m1m3Label.TabIndex = 0;
             this.m1m3Label.Text = "Map 3";
             // 
             // m1m4Label
@@ -1300,7 +1300,7 @@
             this.m1m4Label.Location = new System.Drawing.Point(288, 338);
             this.m1m4Label.Name = "m1m4Label";
             this.m1m4Label.Size = new System.Drawing.Size(37, 13);
-            this.m1m4Label.TabIndex = 103;
+            this.m1m4Label.TabIndex = 0;
             this.m1m4Label.Text = "Map 4";
             // 
             // m1m5Label
@@ -1309,7 +1309,7 @@
             this.m1m5Label.Location = new System.Drawing.Point(381, 338);
             this.m1m5Label.Name = "m1m5Label";
             this.m1m5Label.Size = new System.Drawing.Size(37, 13);
-            this.m1m5Label.TabIndex = 102;
+            this.m1m5Label.TabIndex = 0;
             this.m1m5Label.Text = "Map 5";
             // 
             // m1m2Label
@@ -1318,7 +1318,7 @@
             this.m1m2Label.Location = new System.Drawing.Point(97, 338);
             this.m1m2Label.Name = "m1m2Label";
             this.m1m2Label.Size = new System.Drawing.Size(37, 13);
-            this.m1m2Label.TabIndex = 101;
+            this.m1m2Label.TabIndex = 0;
             this.m1m2Label.Text = "Map 2";
             // 
             // m1m1Label
@@ -1327,7 +1327,7 @@
             this.m1m1Label.Location = new System.Drawing.Point(4, 338);
             this.m1m1Label.Name = "m1m1Label";
             this.m1m1Label.Size = new System.Drawing.Size(37, 13);
-            this.m1m1Label.TabIndex = 100;
+            this.m1m1Label.TabIndex = 0;
             this.m1m1Label.Text = "Map 1";
             // 
             // m1t1Side
@@ -1338,7 +1338,7 @@
             this.m1t1Side.Location = new System.Drawing.Point(167, 42);
             this.m1t1Side.Name = "m1t1Side";
             this.m1t1Side.Size = new System.Drawing.Size(120, 30);
-            this.m1t1Side.TabIndex = 72;
+            this.m1t1Side.TabIndex = 0;
             this.m1t1Side.TabStop = false;
             // 
             // m1Attack
@@ -1347,7 +1347,7 @@
             this.m1Attack.Location = new System.Drawing.Point(6, 9);
             this.m1Attack.Name = "m1Attack";
             this.m1Attack.Size = new System.Drawing.Size(32, 17);
-            this.m1Attack.TabIndex = 66;
+            this.m1Attack.TabIndex = 79;
             this.m1Attack.Text = "A";
             this.m1Attack.UseVisualStyleBackColor = true;
             // 
@@ -1357,7 +1357,7 @@
             this.m1Defend.Location = new System.Drawing.Point(44, 9);
             this.m1Defend.Name = "m1Defend";
             this.m1Defend.Size = new System.Drawing.Size(33, 17);
-            this.m1Defend.TabIndex = 67;
+            this.m1Defend.TabIndex = 80;
             this.m1Defend.Text = "D";
             this.m1Defend.UseVisualStyleBackColor = true;
             // 
@@ -1368,7 +1368,7 @@
             this.m1Neutral.Location = new System.Drawing.Point(82, 9);
             this.m1Neutral.Name = "m1Neutral";
             this.m1Neutral.Size = new System.Drawing.Size(33, 17);
-            this.m1Neutral.TabIndex = 68;
+            this.m1Neutral.TabIndex = 81;
             this.m1Neutral.TabStop = true;
             this.m1Neutral.Text = "N";
             this.m1Neutral.UseVisualStyleBackColor = true;
@@ -1379,7 +1379,7 @@
             this.m1DivisionLabel.Location = new System.Drawing.Point(379, 52);
             this.m1DivisionLabel.Name = "m1DivisionLabel";
             this.m1DivisionLabel.Size = new System.Drawing.Size(60, 13);
-            this.m1DivisionLabel.TabIndex = 65;
+            this.m1DivisionLabel.TabIndex = 0;
             this.m1DivisionLabel.Text = "Mutual Info";
             // 
             // m1DivisionNumber
@@ -1387,7 +1387,7 @@
             this.m1DivisionNumber.Location = new System.Drawing.Point(445, 46);
             this.m1DivisionNumber.Name = "m1DivisionNumber";
             this.m1DivisionNumber.Size = new System.Drawing.Size(124, 20);
-            this.m1DivisionNumber.TabIndex = 64;
+            this.m1DivisionNumber.TabIndex = 85;
             // 
             // m1currentCheck
             // 
@@ -1395,7 +1395,7 @@
             this.m1currentCheck.Location = new System.Drawing.Point(216, 49);
             this.m1currentCheck.Name = "m1currentCheck";
             this.m1currentCheck.Size = new System.Drawing.Size(60, 17);
-            this.m1currentCheck.TabIndex = 61;
+            this.m1currentCheck.TabIndex = 0;
             this.m1currentCheck.Text = "Current";
             this.m1currentCheck.UseVisualStyleBackColor = true;
             this.m1currentCheck.Visible = false;
@@ -1405,7 +1405,7 @@
             this.m1UpdateButton.Location = new System.Drawing.Point(292, 77);
             this.m1UpdateButton.Name = "m1UpdateButton";
             this.m1UpdateButton.Size = new System.Drawing.Size(75, 23);
-            this.m1UpdateButton.TabIndex = 57;
+            this.m1UpdateButton.TabIndex = 84;
             this.m1UpdateButton.Text = "Update";
             this.m1UpdateButton.UseVisualStyleBackColor = true;
             this.m1UpdateButton.Click += new System.EventHandler(this.m1UpdateButton_Click);
@@ -1447,7 +1447,7 @@
             this.m1t2p6Hero.Name = "m1t2p6Hero";
             this.m1t2p6Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2p6Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t2p6Hero.TabIndex = 54;
+            this.m1t2p6Hero.TabIndex = 34;
             // 
             // m1t2p5Hero
             // 
@@ -1486,7 +1486,7 @@
             this.m1t2p5Hero.Name = "m1t2p5Hero";
             this.m1t2p5Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2p5Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t2p5Hero.TabIndex = 53;
+            this.m1t2p5Hero.TabIndex = 33;
             // 
             // m1t2p4Hero
             // 
@@ -1525,7 +1525,7 @@
             this.m1t2p4Hero.Name = "m1t2p4Hero";
             this.m1t2p4Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2p4Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t2p4Hero.TabIndex = 52;
+            this.m1t2p4Hero.TabIndex = 32;
             // 
             // m1t2p3Hero
             // 
@@ -1564,7 +1564,7 @@
             this.m1t2p3Hero.Name = "m1t2p3Hero";
             this.m1t2p3Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2p3Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t2p3Hero.TabIndex = 51;
+            this.m1t2p3Hero.TabIndex = 31;
             // 
             // m1t2p2Hero
             // 
@@ -1603,7 +1603,7 @@
             this.m1t2p2Hero.Name = "m1t2p2Hero";
             this.m1t2p2Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2p2Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t2p2Hero.TabIndex = 50;
+            this.m1t2p2Hero.TabIndex = 30;
             // 
             // m1t2p1Hero
             // 
@@ -1642,7 +1642,7 @@
             this.m1t2p1Hero.Name = "m1t2p1Hero";
             this.m1t2p1Hero.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2p1Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t2p1Hero.TabIndex = 49;
+            this.m1t2p1Hero.TabIndex = 29;
             // 
             // m1t1p6Hero
             // 
@@ -1680,7 +1680,7 @@
             this.m1t1p6Hero.Location = new System.Drawing.Point(113, 314);
             this.m1t1p6Hero.Name = "m1t1p6Hero";
             this.m1t1p6Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t1p6Hero.TabIndex = 46;
+            this.m1t1p6Hero.TabIndex = 14;
             // 
             // m1t1p5Hero
             // 
@@ -1718,7 +1718,7 @@
             this.m1t1p5Hero.Location = new System.Drawing.Point(113, 275);
             this.m1t1p5Hero.Name = "m1t1p5Hero";
             this.m1t1p5Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t1p5Hero.TabIndex = 45;
+            this.m1t1p5Hero.TabIndex = 13;
             // 
             // m1t1p4Hero
             // 
@@ -1756,7 +1756,7 @@
             this.m1t1p4Hero.Location = new System.Drawing.Point(113, 236);
             this.m1t1p4Hero.Name = "m1t1p4Hero";
             this.m1t1p4Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t1p4Hero.TabIndex = 44;
+            this.m1t1p4Hero.TabIndex = 12;
             // 
             // m1t1p3Hero
             // 
@@ -1794,7 +1794,7 @@
             this.m1t1p3Hero.Location = new System.Drawing.Point(113, 197);
             this.m1t1p3Hero.Name = "m1t1p3Hero";
             this.m1t1p3Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t1p3Hero.TabIndex = 43;
+            this.m1t1p3Hero.TabIndex = 11;
             // 
             // m1t1p2Hero
             // 
@@ -1832,7 +1832,7 @@
             this.m1t1p2Hero.Location = new System.Drawing.Point(113, 158);
             this.m1t1p2Hero.Name = "m1t1p2Hero";
             this.m1t1p2Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t1p2Hero.TabIndex = 42;
+            this.m1t1p2Hero.TabIndex = 10;
             // 
             // m1t1p1Hero
             // 
@@ -1870,14 +1870,14 @@
             this.m1t1p1Hero.Location = new System.Drawing.Point(113, 119);
             this.m1t1p1Hero.Name = "m1t1p1Hero";
             this.m1t1p1Hero.Size = new System.Drawing.Size(121, 21);
-            this.m1t1p1Hero.TabIndex = 41;
+            this.m1t1p1Hero.TabIndex = 9;
             // 
             // m1ResetButton
             // 
             this.m1ResetButton.Location = new System.Drawing.Point(292, 49);
             this.m1ResetButton.Name = "m1ResetButton";
             this.m1ResetButton.Size = new System.Drawing.Size(75, 23);
-            this.m1ResetButton.TabIndex = 40;
+            this.m1ResetButton.TabIndex = 83;
             this.m1ResetButton.Text = "Reset";
             this.m1ResetButton.UseVisualStyleBackColor = true;
             this.m1ResetButton.Click += new System.EventHandler(this.m1ResetButton_Click);
@@ -1887,7 +1887,7 @@
             this.m1SwapButton.Location = new System.Drawing.Point(292, 21);
             this.m1SwapButton.Name = "m1SwapButton";
             this.m1SwapButton.Size = new System.Drawing.Size(75, 23);
-            this.m1SwapButton.TabIndex = 39;
+            this.m1SwapButton.TabIndex = 82;
             this.m1SwapButton.Text = "Swap";
             this.m1SwapButton.UseVisualStyleBackColor = true;
             this.m1SwapButton.Click += new System.EventHandler(this.m1SwapButton_Click);
@@ -1897,7 +1897,7 @@
             this.m1t2p6Name.Location = new System.Drawing.Point(553, 314);
             this.m1t2p6Name.Name = "m1t2p6Name";
             this.m1t2p6Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t2p6Name.TabIndex = 33;
+            this.m1t2p6Name.TabIndex = 28;
             // 
             // m1t2p6Label
             // 
@@ -1905,7 +1905,7 @@
             this.m1t2p6Label.Location = new System.Drawing.Point(608, 298);
             this.m1t2p6Label.Name = "m1t2p6Label";
             this.m1t2p6Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t2p6Label.TabIndex = 34;
+            this.m1t2p6Label.TabIndex = 0;
             this.m1t2p6Label.Text = "Player 6";
             // 
             // m1t2p5Name
@@ -1913,7 +1913,7 @@
             this.m1t2p5Name.Location = new System.Drawing.Point(553, 275);
             this.m1t2p5Name.Name = "m1t2p5Name";
             this.m1t2p5Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t2p5Name.TabIndex = 31;
+            this.m1t2p5Name.TabIndex = 27;
             // 
             // m1t2p5Label
             // 
@@ -1921,7 +1921,7 @@
             this.m1t2p5Label.Location = new System.Drawing.Point(608, 259);
             this.m1t2p5Label.Name = "m1t2p5Label";
             this.m1t2p5Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t2p5Label.TabIndex = 32;
+            this.m1t2p5Label.TabIndex = 0;
             this.m1t2p5Label.Text = "Player 5";
             // 
             // m1t2p4Name
@@ -1929,7 +1929,7 @@
             this.m1t2p4Name.Location = new System.Drawing.Point(553, 236);
             this.m1t2p4Name.Name = "m1t2p4Name";
             this.m1t2p4Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t2p4Name.TabIndex = 29;
+            this.m1t2p4Name.TabIndex = 26;
             // 
             // m1t2p4Label
             // 
@@ -1937,7 +1937,7 @@
             this.m1t2p4Label.Location = new System.Drawing.Point(608, 220);
             this.m1t2p4Label.Name = "m1t2p4Label";
             this.m1t2p4Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t2p4Label.TabIndex = 30;
+            this.m1t2p4Label.TabIndex = 0;
             this.m1t2p4Label.Text = "Player 4";
             // 
             // m1t2p3Name
@@ -1945,7 +1945,7 @@
             this.m1t2p3Name.Location = new System.Drawing.Point(553, 197);
             this.m1t2p3Name.Name = "m1t2p3Name";
             this.m1t2p3Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t2p3Name.TabIndex = 27;
+            this.m1t2p3Name.TabIndex = 25;
             // 
             // m1t2p3Label
             // 
@@ -1953,7 +1953,7 @@
             this.m1t2p3Label.Location = new System.Drawing.Point(608, 181);
             this.m1t2p3Label.Name = "m1t2p3Label";
             this.m1t2p3Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t2p3Label.TabIndex = 28;
+            this.m1t2p3Label.TabIndex = 0;
             this.m1t2p3Label.Text = "Player 3";
             // 
             // m1t2p2Name
@@ -1961,7 +1961,7 @@
             this.m1t2p2Name.Location = new System.Drawing.Point(553, 158);
             this.m1t2p2Name.Name = "m1t2p2Name";
             this.m1t2p2Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t2p2Name.TabIndex = 25;
+            this.m1t2p2Name.TabIndex = 24;
             // 
             // m1t2p2Label
             // 
@@ -1969,7 +1969,7 @@
             this.m1t2p2Label.Location = new System.Drawing.Point(608, 142);
             this.m1t2p2Label.Name = "m1t2p2Label";
             this.m1t2p2Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t2p2Label.TabIndex = 26;
+            this.m1t2p2Label.TabIndex = 0;
             this.m1t2p2Label.Text = "Player 2";
             // 
             // m1t2p1Name
@@ -1985,7 +1985,7 @@
             this.m1t2p1Label.Location = new System.Drawing.Point(608, 103);
             this.m1t2p1Label.Name = "m1t2p1Label";
             this.m1t2p1Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t2p1Label.TabIndex = 24;
+            this.m1t2p1Label.TabIndex = 0;
             this.m1t2p1Label.Text = "Player 1";
             // 
             // m1t1p6Name
@@ -1993,7 +1993,7 @@
             this.m1t1p6Name.Location = new System.Drawing.Point(7, 314);
             this.m1t1p6Name.Name = "m1t1p6Name";
             this.m1t1p6Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t1p6Name.TabIndex = 17;
+            this.m1t1p6Name.TabIndex = 8;
             // 
             // m1t1p6Label
             // 
@@ -2001,7 +2001,7 @@
             this.m1t1p6Label.Location = new System.Drawing.Point(7, 298);
             this.m1t1p6Label.Name = "m1t1p6Label";
             this.m1t1p6Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t1p6Label.TabIndex = 18;
+            this.m1t1p6Label.TabIndex = 0;
             this.m1t1p6Label.Text = "Player 6";
             // 
             // m1t1p5Name
@@ -2009,7 +2009,7 @@
             this.m1t1p5Name.Location = new System.Drawing.Point(7, 275);
             this.m1t1p5Name.Name = "m1t1p5Name";
             this.m1t1p5Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t1p5Name.TabIndex = 15;
+            this.m1t1p5Name.TabIndex = 7;
             // 
             // m1t1p5Label
             // 
@@ -2017,7 +2017,7 @@
             this.m1t1p5Label.Location = new System.Drawing.Point(7, 259);
             this.m1t1p5Label.Name = "m1t1p5Label";
             this.m1t1p5Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t1p5Label.TabIndex = 16;
+            this.m1t1p5Label.TabIndex = 0;
             this.m1t1p5Label.Text = "Player 5";
             // 
             // m1t1p4Name
@@ -2025,7 +2025,7 @@
             this.m1t1p4Name.Location = new System.Drawing.Point(7, 236);
             this.m1t1p4Name.Name = "m1t1p4Name";
             this.m1t1p4Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t1p4Name.TabIndex = 13;
+            this.m1t1p4Name.TabIndex = 6;
             // 
             // m1t1p4Label
             // 
@@ -2033,7 +2033,7 @@
             this.m1t1p4Label.Location = new System.Drawing.Point(7, 220);
             this.m1t1p4Label.Name = "m1t1p4Label";
             this.m1t1p4Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t1p4Label.TabIndex = 14;
+            this.m1t1p4Label.TabIndex = 0;
             this.m1t1p4Label.Text = "Player 4";
             // 
             // m1t1p3Name
@@ -2041,7 +2041,7 @@
             this.m1t1p3Name.Location = new System.Drawing.Point(7, 197);
             this.m1t1p3Name.Name = "m1t1p3Name";
             this.m1t1p3Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t1p3Name.TabIndex = 11;
+            this.m1t1p3Name.TabIndex = 5;
             // 
             // m1t1p3Label
             // 
@@ -2049,7 +2049,7 @@
             this.m1t1p3Label.Location = new System.Drawing.Point(7, 181);
             this.m1t1p3Label.Name = "m1t1p3Label";
             this.m1t1p3Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t1p3Label.TabIndex = 12;
+            this.m1t1p3Label.TabIndex = 0;
             this.m1t1p3Label.Text = "Player 3";
             // 
             // m1t1p2Name
@@ -2057,7 +2057,7 @@
             this.m1t1p2Name.Location = new System.Drawing.Point(7, 158);
             this.m1t1p2Name.Name = "m1t1p2Name";
             this.m1t1p2Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t1p2Name.TabIndex = 9;
+            this.m1t1p2Name.TabIndex = 4;
             // 
             // m1t1p2Label
             // 
@@ -2065,7 +2065,7 @@
             this.m1t1p2Label.Location = new System.Drawing.Point(7, 142);
             this.m1t1p2Label.Name = "m1t1p2Label";
             this.m1t1p2Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t1p2Label.TabIndex = 10;
+            this.m1t1p2Label.TabIndex = 0;
             this.m1t1p2Label.Text = "Player 2";
             // 
             // m1t1p1Name
@@ -2073,7 +2073,7 @@
             this.m1t1p1Name.Location = new System.Drawing.Point(7, 119);
             this.m1t1p1Name.Name = "m1t1p1Name";
             this.m1t1p1Name.Size = new System.Drawing.Size(100, 20);
-            this.m1t1p1Name.TabIndex = 7;
+            this.m1t1p1Name.TabIndex = 3;
             // 
             // m1t1p1Label
             // 
@@ -2081,7 +2081,7 @@
             this.m1t1p1Label.Location = new System.Drawing.Point(7, 103);
             this.m1t1p1Label.Name = "m1t1p1Label";
             this.m1t1p1Label.Size = new System.Drawing.Size(45, 13);
-            this.m1t1p1Label.TabIndex = 8;
+            this.m1t1p1Label.TabIndex = 0;
             this.m1t1p1Label.Text = "Player 1";
             // 
             // m1t2Score
@@ -2090,14 +2090,14 @@
             this.m1t2Score.Name = "m1t2Score";
             this.m1t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1t2Score.TabIndex = 6;
+            this.m1t2Score.TabIndex = 78;
             // 
             // m1t1Score
             // 
             this.m1t1Score.Location = new System.Drawing.Point(48, 47);
             this.m1t1Score.Name = "m1t1Score";
             this.m1t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1t1Score.TabIndex = 5;
+            this.m1t1Score.TabIndex = 77;
             // 
             // m1t2ScoreLabel
             // 
@@ -2105,7 +2105,7 @@
             this.m1t2ScoreLabel.Location = new System.Drawing.Point(617, 49);
             this.m1t2ScoreLabel.Name = "m1t2ScoreLabel";
             this.m1t2ScoreLabel.Size = new System.Drawing.Size(35, 13);
-            this.m1t2ScoreLabel.TabIndex = 4;
+            this.m1t2ScoreLabel.TabIndex = 0;
             this.m1t2ScoreLabel.Text = "Score";
             // 
             // m1t1ScoreLabel
@@ -2114,7 +2114,7 @@
             this.m1t1ScoreLabel.Location = new System.Drawing.Point(7, 49);
             this.m1t1ScoreLabel.Name = "m1t1ScoreLabel";
             this.m1t1ScoreLabel.Size = new System.Drawing.Size(35, 13);
-            this.m1t1ScoreLabel.TabIndex = 3;
+            this.m1t1ScoreLabel.TabIndex = 0;
             this.m1t1ScoreLabel.Text = "Score";
             // 
             // m1t2Name
@@ -2122,7 +2122,7 @@
             this.m1t2Name.Location = new System.Drawing.Point(474, 21);
             this.m1t2Name.Name = "m1t2Name";
             this.m1t2Name.Size = new System.Drawing.Size(178, 20);
-            this.m1t2Name.TabIndex = 1;
+            this.m1t2Name.TabIndex = 21;
             // 
             // m1t2Label
             // 
@@ -2130,7 +2130,7 @@
             this.m1t2Label.Location = new System.Drawing.Point(610, 3);
             this.m1t2Label.Name = "m1t2Label";
             this.m1t2Label.Size = new System.Drawing.Size(43, 13);
-            this.m1t2Label.TabIndex = 2;
+            this.m1t2Label.TabIndex = 0;
             this.m1t2Label.Text = "Team 2";
             // 
             // m1t1Name
@@ -2138,7 +2138,7 @@
             this.m1t1Name.Location = new System.Drawing.Point(6, 21);
             this.m1t1Name.Name = "m1t1Name";
             this.m1t1Name.Size = new System.Drawing.Size(178, 20);
-            this.m1t1Name.TabIndex = 0;
+            this.m1t1Name.TabIndex = 1;
             // 
             // m1t1Label
             // 
