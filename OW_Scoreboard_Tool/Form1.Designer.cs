@@ -570,7 +570,7 @@
             this.m1m6Completed.Location = new System.Drawing.Point(478, 407);
             this.m1m6Completed.Name = "m1m6Completed";
             this.m1m6Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m6Completed.TabIndex = 64;
+            this.m1m6Completed.TabIndex = 67;
             this.m1m6Completed.Text = "Completed?";
             this.m1m6Completed.UseVisualStyleBackColor = true;
             // 
@@ -580,7 +580,7 @@
             this.m1m5Completed.Location = new System.Drawing.Point(383, 407);
             this.m1m5Completed.Name = "m1m5Completed";
             this.m1m5Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m5Completed.TabIndex = 60;
+            this.m1m5Completed.TabIndex = 66;
             this.m1m5Completed.Text = "Completed?";
             this.m1m5Completed.UseVisualStyleBackColor = true;
             // 
@@ -590,7 +590,7 @@
             this.m1m4Completed.Location = new System.Drawing.Point(290, 407);
             this.m1m4Completed.Name = "m1m4Completed";
             this.m1m4Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m4Completed.TabIndex = 56;
+            this.m1m4Completed.TabIndex = 65;
             this.m1m4Completed.Text = "Completed?";
             this.m1m4Completed.UseVisualStyleBackColor = true;
             // 
@@ -600,7 +600,7 @@
             this.m1m3Completed.Location = new System.Drawing.Point(196, 407);
             this.m1m3Completed.Name = "m1m3Completed";
             this.m1m3Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m3Completed.TabIndex = 52;
+            this.m1m3Completed.TabIndex = 64;
             this.m1m3Completed.Text = "Completed?";
             this.m1m3Completed.UseVisualStyleBackColor = true;
             // 
@@ -610,7 +610,7 @@
             this.m1m2Completed.Location = new System.Drawing.Point(99, 407);
             this.m1m2Completed.Name = "m1m2Completed";
             this.m1m2Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m2Completed.TabIndex = 48;
+            this.m1m2Completed.TabIndex = 63;
             this.m1m2Completed.Text = "Completed?";
             this.m1m2Completed.UseVisualStyleBackColor = true;
             // 
@@ -620,7 +620,7 @@
             this.m1m1Completed.Location = new System.Drawing.Point(6, 407);
             this.m1m1Completed.Name = "m1m1Completed";
             this.m1m1Completed.Size = new System.Drawing.Size(82, 17);
-            this.m1m1Completed.TabIndex = 44;
+            this.m1m1Completed.TabIndex = 62;
             this.m1m1Completed.Text = "Completed?";
             this.m1m1Completed.UseVisualStyleBackColor = true;
             // 
@@ -684,14 +684,14 @@
             this.m1m7t2Score.Name = "m1m7t2Score";
             this.m1m7t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m7t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m7t2Score.TabIndex = 67;
+            this.m1m7t2Score.TabIndex = 61;
             // 
             // m1m7t1Score
             // 
             this.m1m7t1Score.Location = new System.Drawing.Point(570, 381);
             this.m1m7t1Score.Name = "m1m7t1Score";
             this.m1m7t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m7t1Score.TabIndex = 66;
+            this.m1m7t1Score.TabIndex = 60;
             // 
             // m1m7Map
             // 
@@ -723,7 +723,7 @@
             this.m1m7Map.Location = new System.Drawing.Point(570, 354);
             this.m1m7Map.Name = "m1m7Map";
             this.m1m7Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m7Map.TabIndex = 65;
+            this.m1m7Map.TabIndex = 47;
             // 
             // m1m7Label
             // 
@@ -740,14 +740,14 @@
             this.m1m6t2Score.Name = "m1m6t2Score";
             this.m1m6t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m6t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m6t2Score.TabIndex = 63;
+            this.m1m6t2Score.TabIndex = 59;
             // 
             // m1m6t1Score
             // 
             this.m1m6t1Score.Location = new System.Drawing.Point(477, 381);
             this.m1m6t1Score.Name = "m1m6t1Score";
             this.m1m6t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m6t1Score.TabIndex = 62;
+            this.m1m6t1Score.TabIndex = 58;
             // 
             // m1m6Map
             // 
@@ -779,7 +779,7 @@
             this.m1m6Map.Location = new System.Drawing.Point(477, 354);
             this.m1m6Map.Name = "m1m6Map";
             this.m1m6Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m6Map.TabIndex = 61;
+            this.m1m6Map.TabIndex = 46;
             // 
             // m1m6Label
             // 
@@ -1056,14 +1056,14 @@
             this.m1m5t2Score.Name = "m1m5t2Score";
             this.m1m5t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m5t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m5t2Score.TabIndex = 59;
+            this.m1m5t2Score.TabIndex = 57;
             // 
             // m1m5t1Score
             // 
             this.m1m5t1Score.Location = new System.Drawing.Point(382, 381);
             this.m1m5t1Score.Name = "m1m5t1Score";
             this.m1m5t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m5t1Score.TabIndex = 58;
+            this.m1m5t1Score.TabIndex = 56;
             // 
             // m1m4t2Score
             // 
@@ -1086,14 +1086,14 @@
             this.m1m3t2Score.Name = "m1m3t2Score";
             this.m1m3t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m3t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m3t2Score.TabIndex = 51;
+            this.m1m3t2Score.TabIndex = 53;
             // 
             // m1m3t1Score
             // 
             this.m1m3t1Score.Location = new System.Drawing.Point(195, 381);
             this.m1m3t1Score.Name = "m1m3t1Score";
             this.m1m3t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m3t1Score.TabIndex = 50;
+            this.m1m3t1Score.TabIndex = 52;
             // 
             // m1m2t2Score
             // 
@@ -1101,14 +1101,14 @@
             this.m1m2t2Score.Name = "m1m2t2Score";
             this.m1m2t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m2t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m2t2Score.TabIndex = 47;
+            this.m1m2t2Score.TabIndex = 51;
             // 
             // m1m2t1Score
             // 
             this.m1m2t1Score.Location = new System.Drawing.Point(98, 381);
             this.m1m2t1Score.Name = "m1m2t1Score";
             this.m1m2t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m2t1Score.TabIndex = 46;
+            this.m1m2t1Score.TabIndex = 50;
             // 
             // m1m1t2Score
             // 
@@ -1116,14 +1116,14 @@
             this.m1m1t2Score.Name = "m1m1t2Score";
             this.m1m1t2Score.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1m1t2Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m1t2Score.TabIndex = 43;
+            this.m1m1t2Score.TabIndex = 49;
             // 
             // m1m1t1Score
             // 
             this.m1m1t1Score.Location = new System.Drawing.Point(5, 381);
             this.m1m1t1Score.Name = "m1m1t1Score";
             this.m1m1t1Score.Size = new System.Drawing.Size(36, 20);
-            this.m1m1t1Score.TabIndex = 42;
+            this.m1m1t1Score.TabIndex = 48;
             // 
             // m1m5Map
             // 
@@ -1155,7 +1155,7 @@
             this.m1m5Map.Location = new System.Drawing.Point(382, 354);
             this.m1m5Map.Name = "m1m5Map";
             this.m1m5Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m5Map.TabIndex = 57;
+            this.m1m5Map.TabIndex = 45;
             // 
             // m1m4Map
             // 
@@ -1187,7 +1187,7 @@
             this.m1m4Map.Location = new System.Drawing.Point(289, 354);
             this.m1m4Map.Name = "m1m4Map";
             this.m1m4Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m4Map.TabIndex = 53;
+            this.m1m4Map.TabIndex = 44;
             // 
             // m1m3Map
             // 
@@ -1219,7 +1219,7 @@
             this.m1m3Map.Location = new System.Drawing.Point(195, 354);
             this.m1m3Map.Name = "m1m3Map";
             this.m1m3Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m3Map.TabIndex = 49;
+            this.m1m3Map.TabIndex = 43;
             // 
             // m1m2Map
             // 
@@ -1251,7 +1251,7 @@
             this.m1m2Map.Location = new System.Drawing.Point(98, 354);
             this.m1m2Map.Name = "m1m2Map";
             this.m1m2Map.Size = new System.Drawing.Size(83, 21);
-            this.m1m2Map.TabIndex = 45;
+            this.m1m2Map.TabIndex = 42;
             // 
             // m1m1Map
             // 
