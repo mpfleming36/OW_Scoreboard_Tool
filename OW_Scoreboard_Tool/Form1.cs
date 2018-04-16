@@ -1512,6 +1512,7 @@ namespace OW_Scoreboard_Tool
                 {
                     loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + "Gametype" + ".txt");
                 }
+
                 Console.Out.WriteLine("This is the loaded text: " + loadingText);
                 field.SelectedIndex = field.FindString(loadingText.Trim());
                 Console.Out.WriteLine("This is the index: " + field.SelectedIndex);
