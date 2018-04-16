@@ -590,7 +590,7 @@ namespace OW_Scoreboard_Tool
         {
             using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
             {
-                sw.WriteLine(field.Text.TrimEnd());
+                sw.WriteLine(field.Text.Trim());
             }
         }
 
@@ -598,7 +598,7 @@ namespace OW_Scoreboard_Tool
         {
             using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
             {
-                sw.WriteLine(field.Value.ToString().TrimEnd());
+                sw.WriteLine(field.Value.ToString().Trim());
             }
         }
 
@@ -1469,12 +1469,12 @@ namespace OW_Scoreboard_Tool
                     }
                     else
                     {
-                        sw.WriteLine(field.Text.TrimEnd());
+                        sw.WriteLine(field.Text.Trim());
                     }
                 }
                 using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + "Gametype" + ".txt"))
                 {
-                    sw.WriteLine(gametype.TrimEnd());
+                    sw.WriteLine(gametype.Trim());
                 }
             }
         }
@@ -1661,12 +1661,12 @@ namespace OW_Scoreboard_Tool
 
                 using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
                 {
-                    sw.WriteLine(winner.TrimEnd());
+                    sw.WriteLine(winner.Trim());
                 }
             }
             using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
             {
-                sw.WriteLine(winner.TrimEnd());
+                sw.WriteLine(winner.Trim());
             }
         }
 
