@@ -77,6 +77,42 @@ namespace OW_Scoreboard_Tool
             loadText(utility7, "General", "utility7");
             loadText(utility8, "General", "utility8");
 
+            loadCombo(m1t1p1Hero, "Match1", "t1p1Hero");
+            loadCombo(m1t1p2Hero, "Match1", "t1p2Hero");
+            loadCombo(m1t1p3Hero, "Match1", "t1p3Hero");
+            loadCombo(m1t1p4Hero, "Match1", "t1p4Hero");
+            loadCombo(m1t1p5Hero, "Match1", "t1p5Hero");
+            loadCombo(m1t1p6Hero, "Match1", "t1p6Hero");
+
+            loadCombo(m1t2p1Hero, "Match1", "t2p1Hero");
+            loadCombo(m1t2p2Hero, "Match1", "t2p2Hero");
+            loadCombo(m1t2p3Hero, "Match1", "t2p3Hero");
+            loadCombo(m1t2p4Hero, "Match1", "t2p4Hero");
+            loadCombo(m1t2p5Hero, "Match1", "t2p5Hero");
+            loadCombo(m1t2p6Hero, "Match1", "t2p6Hero");
+
+            loadCombo(m1t1p1Role, "Match1", "t1p1Role");
+            loadCombo(m1t1p2Role, "Match1", "t1p2Role");
+            loadCombo(m1t1p3Role, "Match1", "t1p3Role");
+            loadCombo(m1t1p4Role, "Match1", "t1p4Role");
+            loadCombo(m1t1p5Role, "Match1", "t1p5Role");
+            loadCombo(m1t1p6Role, "Match1", "t1p6Role");
+
+            loadCombo(m1t2p1Role, "Match1", "t2p1Role");
+            loadCombo(m1t2p2Role, "Match1", "t2p2Role");
+            loadCombo(m1t2p3Role, "Match1", "t2p3Role");
+            loadCombo(m1t2p4Role, "Match1", "t2p4Role");
+            loadCombo(m1t2p5Role, "Match1", "t2p5Role");
+            loadCombo(m1t2p6Role, "Match1", "t2p6Role");
+
+            loadCombo(m1m1Map, "Match1", "m1Map");
+            loadCombo(m1m2Map, "Match1", "m2Map");
+            loadCombo(m1m3Map, "Match1", "m3Map");
+            loadCombo(m1m4Map, "Match1", "m4Map");
+            loadCombo(m1m5Map, "Match1", "m5Map");
+            loadCombo(m1m6Map, "Match1", "m6Map");
+            loadCombo(m1m7Map, "Match1", "m7Map");
+
         }
 
         private void m1SwapButton_Click(object sender, EventArgs e)
@@ -377,7 +413,7 @@ namespace OW_Scoreboard_Tool
             updateHero(m1t1p4Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p4Hero");
             updateHero(m1t1p5Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p5Hero");
             updateHero(m1t1p6Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p6Hero");
-                                                               
+                                                             
             updateHero(m1t2p1Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t2p1Hero");
             updateHero(m1t2p2Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t2p2Hero");
             updateHero(m1t2p3Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t2p3Hero");
@@ -568,7 +604,11 @@ namespace OW_Scoreboard_Tool
 
         private void updateHero(ComboBox field, RadioButton radio1, RadioButton radio2, RadioButton radio3, String folder, String file)
         {
-            
+            using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
+            {
+                sw.WriteLine(field.SelectedItem.ToString());
+            }
+
 
             if (field.SelectedItem != null)
             {
@@ -991,7 +1031,10 @@ namespace OW_Scoreboard_Tool
 
         private void updateRole(ComboBox field, String folder, String file)
         {
-
+            using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
+            {
+                sw.WriteLine(field.SelectedItem.ToString());
+            }
 
             if (field.SelectedItem != null)
             {
@@ -1048,6 +1091,7 @@ namespace OW_Scoreboard_Tool
 
         private void updateMap(ComboBox field, RadioButton check, RadioButton radio1, RadioButton radio2, String folder, String file)
         {
+
             if (field.SelectedItem != null)
             {
                 String gametype = "";
@@ -1455,6 +1499,15 @@ namespace OW_Scoreboard_Tool
 
         }
 
+        private void loadCombo(ComboBox field, String folder, String file)
+        {
+            string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
+            Console.Out.WriteLine("This is the loaded text: " + loadingText);
+            field.SelectedIndex = field.FindString(loadingText.Trim());
+            Console.Out.WriteLine("This is the index: " + field.SelectedIndex);
+
+        }
+
         private void resetText(TextBox field)
         {
             field.Text = "";
@@ -1651,11 +1704,6 @@ namespace OW_Scoreboard_Tool
             }
                
         }
-
-        /*private void loadHero(ComboBox field, String folder, String file)
-        {
-           
-        } */
 
     }
 }
