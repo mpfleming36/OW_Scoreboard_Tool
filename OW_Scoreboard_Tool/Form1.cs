@@ -1481,31 +1481,42 @@ namespace OW_Scoreboard_Tool
 
         private void loadText(TextBox field, String folder, String file)
         {
-            string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
-
-            field.Text = loadingText;
-            field.Text.Trim();
-
+            if (File.Exists(path + "\\" + folder + "\\" + file + ".txt"))
+            {
+                string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
+                field.Text = loadingText;
+                field.Text.Trim();
+            }
 
         }
 
         private void loadScore(NumericUpDown field, String folder, String file)
         {
-            string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
-            decimal number;
-            Decimal.TryParse(loadingText, out number);
-            field.Value = number; 
-
+            if (File.Exists(path + "\\" + folder + "\\" + file + ".txt"))
+            {
+                string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
+                decimal number;
+                Decimal.TryParse(loadingText, out number);
+                field.Value = number;
+            }
 
         }
 
         private void loadCombo(ComboBox field, String folder, String file)
-        {
-            string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
-            Console.Out.WriteLine("This is the loaded text: " + loadingText);
-            field.SelectedIndex = field.FindString(loadingText.Trim());
-            Console.Out.WriteLine("This is the index: " + field.SelectedIndex);
+            {
+            if (File.Exists(path + "\\" + folder + "\\" + file + ".txt"))
+            {
+                string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
+                Console.Out.WriteLine(file.Substring(2, 3));
+                if (loadingText.Trim() == "?" && file.Substring(2, 3) == "Map")
+                {
+                    loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + "Gametype" + ".txt");
+                }
 
+                Console.Out.WriteLine("This is the loaded text: " + loadingText);
+                field.SelectedIndex = field.FindString(loadingText.Trim());
+                Console.Out.WriteLine("This is the index: " + field.SelectedIndex);
+            }
         }
 
         private void resetText(TextBox field)
