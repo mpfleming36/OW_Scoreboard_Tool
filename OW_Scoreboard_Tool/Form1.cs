@@ -1503,19 +1503,15 @@ namespace OW_Scoreboard_Tool
         }
 
         private void loadCombo(ComboBox field, String folder, String file)
-            {
+        {
             if (File.Exists(path + "\\" + folder + "\\" + file + ".txt"))
             {
                 string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
-                Console.Out.WriteLine(file.Substring(2, 3));
-                if (loadingText.Trim() == "?" && file.Substring(2, 3) == "Map")
+                if (loadingText.Trim() == "?" && file.Contains("Map"))
                 {
                     loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + "Gametype" + ".txt");
                 }
-
-                Console.Out.WriteLine("This is the loaded text: " + loadingText);
                 field.SelectedIndex = field.FindString(loadingText.Trim());
-                Console.Out.WriteLine("This is the index: " + field.SelectedIndex);
             }
         }
 
