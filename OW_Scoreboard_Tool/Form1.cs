@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace OW_Scoreboard_Tool
 {
@@ -18,10 +19,112 @@ namespace OW_Scoreboard_Tool
         string playlist = "\\Playlist";
         const int Bytes_TO_READ = sizeof(Int64);
 
+        //for global hotkeys
+        public const int NOMOD = 0x0000;
+        public const int ALT = 0x0001;
+	    public const int CTRL = 0x0002;
+	    public const int SHIFT = 0x0004;
+	    public const int WIN = 0x0008;
+
+        int cycleSidesHotKeyId = 0;
+        int cycleSidesHotKeyMod = ALT;
+        int cycleSidesHotKeyCode = (int)Keys.S;
+
+        int swapTeamsHotKeyId = 1;
+        int swapTeamsHotKeyMod = ALT;
+        int swapTeamsHotKeyCode = (int)Keys.T;
+
+        int updateHotKeyId = 2;
+        int updateHotKeyMod = ALT;
+        int updateHotKeyCode = (int)Keys.U;
+
+        int increaseTeam1ScoreHotKeyId = 3;
+        int increaseTeam1ScoreHotKeyMod = ALT;
+        int increaseTeam1ScoreHotKeyCode = (int)Keys.D1;
+
+        int decreaseTeam1ScoreHotKeyId = 4;
+        int decreaseTeam1ScoreHotKeyMod = CTRL;
+        int decreaseTeam1ScoreHotKeyCode = (int)Keys.D1;
+
+        int increaseTeam2ScoreHotKeyId = 5;
+        int increaseTeam2ScoreHotKeyMod = ALT;
+        int increaseTeam2ScoreHotKeyCode = (int)Keys.D2;
+
+        int decreaseTeam2ScoreHotKeyId = 6;
+        int decreaseTeam2ScoreHotKeyMod = CTRL;
+        int decreaseTeam2ScoreHotKeyCode = (int)Keys.D2;
+
+        [DllImport("user32.dll")]
+        public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
+
         public Form1()
         {
             InitializeComponent();
             CreateFileWatcher(path + main);
+            //for global hotkeys
+            RegisterHotKey(this.Handle, cycleSidesHotKeyId, cycleSidesHotKeyMod, cycleSidesHotKeyCode);
+            RegisterHotKey(this.Handle, swapTeamsHotKeyId, swapTeamsHotKeyMod, swapTeamsHotKeyCode);
+            RegisterHotKey(this.Handle, updateHotKeyId, updateHotKeyMod, updateHotKeyCode);
+            RegisterHotKey(this.Handle, increaseTeam1ScoreHotKeyId, increaseTeam1ScoreHotKeyMod, increaseTeam1ScoreHotKeyCode);
+            RegisterHotKey(this.Handle, decreaseTeam1ScoreHotKeyId, decreaseTeam1ScoreHotKeyMod, decreaseTeam1ScoreHotKeyCode);
+            RegisterHotKey(this.Handle, increaseTeam2ScoreHotKeyId, increaseTeam2ScoreHotKeyMod, increaseTeam2ScoreHotKeyCode);
+            RegisterHotKey(this.Handle, decreaseTeam2ScoreHotKeyId, decreaseTeam2ScoreHotKeyMod, decreaseTeam2ScoreHotKeyCode);
+        }
+
+        //for global hotkeys
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == 0x0312)
+            {
+                int id = m.WParam.ToInt32();
+
+                if (id == cycleSidesHotKeyId)
+                {
+                    if (m1Attack.Checked == true)
+                    {
+                        m1Defend.PerformClick();
+                    }
+                    else if (m1Defend.Checked == true)
+                    {
+                        m1Neutral.PerformClick();
+                    }
+                    else if (m1Neutral.Checked == true)
+                    {
+                        m1Attack.PerformClick();
+                    }
+                }
+
+                if (id == swapTeamsHotKeyId)
+                {
+                    m1SwapButton.PerformClick();
+                }
+
+                if (id == updateHotKeyId)
+                {
+                    m1UpdateButton.PerformClick();
+                }
+
+                if (id == increaseTeam1ScoreHotKeyId)
+                {
+                    m1t1Score.UpButton();
+                }
+
+                if (id == decreaseTeam1ScoreHotKeyId)
+                {
+                    m1t1Score.DownButton();
+                }
+
+                if (id == increaseTeam2ScoreHotKeyId)
+                {
+                    m1t2Score.UpButton();
+                }
+
+                if (id == decreaseTeam2ScoreHotKeyId)
+                {
+                    m1t2Score.DownButton();
+                }
+            }
+            base.WndProc(ref m);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -565,8 +668,6 @@ namespace OW_Scoreboard_Tool
                 updateLogos(m1t2Logo, "Current", "t2Logo");
             }
         }
-
-
 
         private void generalUpdateButton_Click(object sender, EventArgs e)
         {

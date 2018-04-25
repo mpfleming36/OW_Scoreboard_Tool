@@ -200,6 +200,8 @@
             this.hostLabel = new System.Windows.Forms.Label();
             this.message = new System.Windows.Forms.TextBox();
             this.messageLabel = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labelSwapSide = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Match_1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -223,12 +225,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.m1t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m1t1Score)).BeginInit();
             this.General_Info.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Match_1);
             this.tabControl1.Controls.Add(this.General_Info);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -2468,6 +2472,28 @@
             this.messageLabel.TabIndex = 1;
             this.messageLabel.Text = "Message";
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.labelSwapSide);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(659, 467);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Hotkeys";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // labelSwapSide
+            // 
+            this.labelSwapSide.AutoSize = true;
+            this.labelSwapSide.Location = new System.Drawing.Point(6, 9);
+            this.labelSwapSide.Name = "labelSwapSide";
+            this.labelSwapSide.Size = new System.Drawing.Size(162, 169);
+            this.labelSwapSide.TabIndex = 0;
+            this.labelSwapSide.Text = "Swap Sides: Alt + S\r\n\r\nSwap Teams: Alt + T\r\n\r\nUpdate: Alt + U\r\n\r\nIncrease Team 1 " +
+    "Score: Alt + 1\r\n\r\nDecrease Team 1 Score: Ctrl + 1\r\n\r\nIncrease Team 2 Score: Alt " +
+    "+ 2\r\n\r\nDecrease Team 2 Score: Ctrl + 2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2476,6 +2502,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Overwatch Scoreboard Tool";
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.Match_1.ResumeLayout(false);
@@ -2506,6 +2533,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.m1t1Score)).EndInit();
             this.General_Info.ResumeLayout(false);
             this.General_Info.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2685,5 +2714,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button replayClean;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label labelSwapSide;
     }
 }
