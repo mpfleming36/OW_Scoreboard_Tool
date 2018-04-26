@@ -201,7 +201,22 @@
             this.message = new System.Windows.Forms.TextBox();
             this.messageLabel = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.comboBoxCycleSidesMod = new System.Windows.Forms.ComboBox();
+            this.buttonUpdateHotkeys = new System.Windows.Forms.Button();
             this.labelSwapSide = new System.Windows.Forms.Label();
+            this.comboBoxSwapTeamsMod = new System.Windows.Forms.ComboBox();
+            this.comboBoxT1UpMod = new System.Windows.Forms.ComboBox();
+            this.comboBoxUpdateMod = new System.Windows.Forms.ComboBox();
+            this.comboBoxT2UpMod = new System.Windows.Forms.ComboBox();
+            this.comboBoxT1DownMod = new System.Windows.Forms.ComboBox();
+            this.comboBoxT2DownMod = new System.Windows.Forms.ComboBox();
+            this.comboBoxCycleSidesKey = new System.Windows.Forms.ComboBox();
+            this.comboBoxSwapTeamsKey = new System.Windows.Forms.ComboBox();
+            this.comboBoxT1UpKey = new System.Windows.Forms.ComboBox();
+            this.comboBoxUpdateKey = new System.Windows.Forms.ComboBox();
+            this.comboBoxT2UpKey = new System.Windows.Forms.ComboBox();
+            this.comboBoxT1DownKey = new System.Windows.Forms.ComboBox();
+            this.comboBoxT2DownKey = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.Match_1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -2474,6 +2489,21 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.comboBoxT2DownKey);
+            this.tabPage1.Controls.Add(this.comboBoxT2UpKey);
+            this.tabPage1.Controls.Add(this.comboBoxT1DownKey);
+            this.tabPage1.Controls.Add(this.comboBoxT1UpKey);
+            this.tabPage1.Controls.Add(this.comboBoxUpdateKey);
+            this.tabPage1.Controls.Add(this.comboBoxSwapTeamsKey);
+            this.tabPage1.Controls.Add(this.comboBoxCycleSidesKey);
+            this.tabPage1.Controls.Add(this.comboBoxT2DownMod);
+            this.tabPage1.Controls.Add(this.comboBoxT2UpMod);
+            this.tabPage1.Controls.Add(this.comboBoxT1DownMod);
+            this.tabPage1.Controls.Add(this.comboBoxT1UpMod);
+            this.tabPage1.Controls.Add(this.comboBoxUpdateMod);
+            this.tabPage1.Controls.Add(this.comboBoxSwapTeamsMod);
+            this.tabPage1.Controls.Add(this.comboBoxCycleSidesMod);
+            this.tabPage1.Controls.Add(this.buttonUpdateHotkeys);
             this.tabPage1.Controls.Add(this.labelSwapSide);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -2483,16 +2513,718 @@
             this.tabPage1.Text = "Hotkeys";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // comboBoxCycleSidesMod
+            // 
+            this.comboBoxCycleSidesMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCycleSidesMod.FormattingEnabled = true;
+            this.comboBoxCycleSidesMod.Items.AddRange(new object[] {
+            "ALT",
+            "CTRL",
+            "SHIFT",
+            "WIN"});
+            this.comboBoxCycleSidesMod.Location = new System.Drawing.Point(135, 3);
+            this.comboBoxCycleSidesMod.Name = "comboBoxCycleSidesMod";
+            this.comboBoxCycleSidesMod.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxCycleSidesMod.TabIndex = 16;
+            // 
+            // buttonUpdateHotkeys
+            // 
+            this.buttonUpdateHotkeys.Location = new System.Drawing.Point(560, 6);
+            this.buttonUpdateHotkeys.Name = "buttonUpdateHotkeys";
+            this.buttonUpdateHotkeys.Size = new System.Drawing.Size(93, 23);
+            this.buttonUpdateHotkeys.TabIndex = 15;
+            this.buttonUpdateHotkeys.Text = "Update Hotkeys";
+            this.buttonUpdateHotkeys.UseVisualStyleBackColor = true;
+            this.buttonUpdateHotkeys.Click += new System.EventHandler(this.buttonUpdateHotkeys_Click);
+            // 
             // labelSwapSide
             // 
             this.labelSwapSide.AutoSize = true;
             this.labelSwapSide.Location = new System.Drawing.Point(6, 9);
             this.labelSwapSide.Name = "labelSwapSide";
-            this.labelSwapSide.Size = new System.Drawing.Size(162, 169);
+            this.labelSwapSide.Size = new System.Drawing.Size(123, 169);
             this.labelSwapSide.TabIndex = 0;
-            this.labelSwapSide.Text = "Swap Sides: Alt + S\r\n\r\nSwap Teams: Alt + T\r\n\r\nUpdate: Alt + U\r\n\r\nIncrease Team 1 " +
-    "Score: Alt + 1\r\n\r\nDecrease Team 1 Score: Ctrl + 1\r\n\r\nIncrease Team 2 Score: Alt " +
-    "+ 2\r\n\r\nDecrease Team 2 Score: Ctrl + 2";
+            this.labelSwapSide.Text = "Swap Sides\r\n\r\nSwap Teams\r\n\r\nUpdate\r\n\r\nIncrease Team 1 Score\r\n\r\nDecrease Team 1 Sc" +
+    "ore\r\n\r\nIncrease Team 2 Score\r\n\r\nDecrease Team 2 Score";
+            // 
+            // comboBoxSwapTeamsMod
+            // 
+            this.comboBoxSwapTeamsMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSwapTeamsMod.FormattingEnabled = true;
+            this.comboBoxSwapTeamsMod.Items.AddRange(new object[] {
+            "ALT",
+            "CTRL",
+            "SHIFT",
+            "WIN"});
+            this.comboBoxSwapTeamsMod.Location = new System.Drawing.Point(135, 30);
+            this.comboBoxSwapTeamsMod.Name = "comboBoxSwapTeamsMod";
+            this.comboBoxSwapTeamsMod.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxSwapTeamsMod.TabIndex = 17;
+            // 
+            // comboBoxT1UpMod
+            // 
+            this.comboBoxT1UpMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxT1UpMod.FormattingEnabled = true;
+            this.comboBoxT1UpMod.Items.AddRange(new object[] {
+            "ALT",
+            "CTRL",
+            "SHIFT",
+            "WIN"});
+            this.comboBoxT1UpMod.Location = new System.Drawing.Point(135, 84);
+            this.comboBoxT1UpMod.Name = "comboBoxT1UpMod";
+            this.comboBoxT1UpMod.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxT1UpMod.TabIndex = 19;
+            // 
+            // comboBoxUpdateMod
+            // 
+            this.comboBoxUpdateMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUpdateMod.FormattingEnabled = true;
+            this.comboBoxUpdateMod.Items.AddRange(new object[] {
+            "ALT",
+            "CTRL",
+            "SHIFT",
+            "WIN"});
+            this.comboBoxUpdateMod.Location = new System.Drawing.Point(135, 57);
+            this.comboBoxUpdateMod.Name = "comboBoxUpdateMod";
+            this.comboBoxUpdateMod.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxUpdateMod.TabIndex = 18;
+            // 
+            // comboBoxT2UpMod
+            // 
+            this.comboBoxT2UpMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxT2UpMod.FormattingEnabled = true;
+            this.comboBoxT2UpMod.Items.AddRange(new object[] {
+            "ALT",
+            "CTRL",
+            "SHIFT",
+            "WIN"});
+            this.comboBoxT2UpMod.Location = new System.Drawing.Point(135, 138);
+            this.comboBoxT2UpMod.Name = "comboBoxT2UpMod";
+            this.comboBoxT2UpMod.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxT2UpMod.TabIndex = 21;
+            // 
+            // comboBoxT1DownMod
+            // 
+            this.comboBoxT1DownMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxT1DownMod.FormattingEnabled = true;
+            this.comboBoxT1DownMod.Items.AddRange(new object[] {
+            "ALT",
+            "CTRL",
+            "SHIFT",
+            "WIN"});
+            this.comboBoxT1DownMod.Location = new System.Drawing.Point(135, 111);
+            this.comboBoxT1DownMod.Name = "comboBoxT1DownMod";
+            this.comboBoxT1DownMod.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxT1DownMod.TabIndex = 20;
+            // 
+            // comboBoxT2DownMod
+            // 
+            this.comboBoxT2DownMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxT2DownMod.FormattingEnabled = true;
+            this.comboBoxT2DownMod.Items.AddRange(new object[] {
+            "ALT",
+            "CTRL",
+            "SHIFT",
+            "WIN"});
+            this.comboBoxT2DownMod.Location = new System.Drawing.Point(135, 165);
+            this.comboBoxT2DownMod.Name = "comboBoxT2DownMod";
+            this.comboBoxT2DownMod.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxT2DownMod.TabIndex = 22;
+            // 
+            // comboBoxCycleSidesKey
+            // 
+            this.comboBoxCycleSidesKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCycleSidesKey.FormattingEnabled = true;
+            this.comboBoxCycleSidesKey.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "0",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+            "Numlock",
+            "Numpad 0",
+            "Numpad 1",
+            "Numpad 2",
+            "Numpad 3",
+            "Numpad 4",
+            "Numpad 5",
+            "Numpad 6",
+            "Numpad 7",
+            "Numpad 8",
+            "Numpad 9",
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "Backspace",
+            "Enter",
+            "Tab",
+            "Escape",
+            "Space",
+            "Page Up",
+            "Page Down",
+            "End",
+            "Home",
+            "Left",
+            "Right",
+            "Up",
+            "Down",
+            "Insert",
+            "Delete"});
+            this.comboBoxCycleSidesKey.Location = new System.Drawing.Point(200, 3);
+            this.comboBoxCycleSidesKey.Name = "comboBoxCycleSidesKey";
+            this.comboBoxCycleSidesKey.Size = new System.Drawing.Size(61, 21);
+            this.comboBoxCycleSidesKey.TabIndex = 23;
+            // 
+            // comboBoxSwapTeamsKey
+            // 
+            this.comboBoxSwapTeamsKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSwapTeamsKey.FormattingEnabled = true;
+            this.comboBoxSwapTeamsKey.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "0",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+            "Numlock",
+            "Numpad 0",
+            "Numpad 1",
+            "Numpad 2",
+            "Numpad 3",
+            "Numpad 4",
+            "Numpad 5",
+            "Numpad 6",
+            "Numpad 7",
+            "Numpad 8",
+            "Numpad 9",
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "Backspace",
+            "Enter",
+            "Tab",
+            "Escape",
+            "Space",
+            "Page Up",
+            "Page Down",
+            "End",
+            "Home",
+            "Left",
+            "Right",
+            "Up",
+            "Down",
+            "Insert",
+            "Delete"});
+            this.comboBoxSwapTeamsKey.Location = new System.Drawing.Point(200, 30);
+            this.comboBoxSwapTeamsKey.Name = "comboBoxSwapTeamsKey";
+            this.comboBoxSwapTeamsKey.Size = new System.Drawing.Size(61, 21);
+            this.comboBoxSwapTeamsKey.TabIndex = 24;
+            // 
+            // comboBoxT1UpKey
+            // 
+            this.comboBoxT1UpKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxT1UpKey.FormattingEnabled = true;
+            this.comboBoxT1UpKey.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "0",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+            "Numlock",
+            "Numpad 0",
+            "Numpad 1",
+            "Numpad 2",
+            "Numpad 3",
+            "Numpad 4",
+            "Numpad 5",
+            "Numpad 6",
+            "Numpad 7",
+            "Numpad 8",
+            "Numpad 9",
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "Backspace",
+            "Enter",
+            "Tab",
+            "Escape",
+            "Space",
+            "Page Up",
+            "Page Down",
+            "End",
+            "Home",
+            "Left",
+            "Right",
+            "Up",
+            "Down",
+            "Insert",
+            "Delete"});
+            this.comboBoxT1UpKey.Location = new System.Drawing.Point(200, 84);
+            this.comboBoxT1UpKey.Name = "comboBoxT1UpKey";
+            this.comboBoxT1UpKey.Size = new System.Drawing.Size(61, 21);
+            this.comboBoxT1UpKey.TabIndex = 26;
+            // 
+            // comboBoxUpdateKey
+            // 
+            this.comboBoxUpdateKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUpdateKey.FormattingEnabled = true;
+            this.comboBoxUpdateKey.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "0",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+            "Numlock",
+            "Numpad 0",
+            "Numpad 1",
+            "Numpad 2",
+            "Numpad 3",
+            "Numpad 4",
+            "Numpad 5",
+            "Numpad 6",
+            "Numpad 7",
+            "Numpad 8",
+            "Numpad 9",
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "Backspace",
+            "Enter",
+            "Tab",
+            "Escape",
+            "Space",
+            "Page Up",
+            "Page Down",
+            "End",
+            "Home",
+            "Left",
+            "Right",
+            "Up",
+            "Down",
+            "Insert",
+            "Delete"});
+            this.comboBoxUpdateKey.Location = new System.Drawing.Point(200, 57);
+            this.comboBoxUpdateKey.Name = "comboBoxUpdateKey";
+            this.comboBoxUpdateKey.Size = new System.Drawing.Size(61, 21);
+            this.comboBoxUpdateKey.TabIndex = 25;
+            // 
+            // comboBoxT2UpKey
+            // 
+            this.comboBoxT2UpKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxT2UpKey.FormattingEnabled = true;
+            this.comboBoxT2UpKey.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "0",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+            "Numlock",
+            "Numpad 0",
+            "Numpad 1",
+            "Numpad 2",
+            "Numpad 3",
+            "Numpad 4",
+            "Numpad 5",
+            "Numpad 6",
+            "Numpad 7",
+            "Numpad 8",
+            "Numpad 9",
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "Backspace",
+            "Enter",
+            "Tab",
+            "Escape",
+            "Space",
+            "Page Up",
+            "Page Down",
+            "End",
+            "Home",
+            "Left",
+            "Right",
+            "Up",
+            "Down",
+            "Insert",
+            "Delete"});
+            this.comboBoxT2UpKey.Location = new System.Drawing.Point(200, 138);
+            this.comboBoxT2UpKey.Name = "comboBoxT2UpKey";
+            this.comboBoxT2UpKey.Size = new System.Drawing.Size(61, 21);
+            this.comboBoxT2UpKey.TabIndex = 28;
+            // 
+            // comboBoxT1DownKey
+            // 
+            this.comboBoxT1DownKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxT1DownKey.FormattingEnabled = true;
+            this.comboBoxT1DownKey.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "0",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+            "Numlock",
+            "Numpad 0",
+            "Numpad 1",
+            "Numpad 2",
+            "Numpad 3",
+            "Numpad 4",
+            "Numpad 5",
+            "Numpad 6",
+            "Numpad 7",
+            "Numpad 8",
+            "Numpad 9",
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "Backspace",
+            "Enter",
+            "Tab",
+            "Escape",
+            "Space",
+            "Page Up",
+            "Page Down",
+            "End",
+            "Home",
+            "Left",
+            "Right",
+            "Up",
+            "Down",
+            "Insert",
+            "Delete"});
+            this.comboBoxT1DownKey.Location = new System.Drawing.Point(200, 111);
+            this.comboBoxT1DownKey.Name = "comboBoxT1DownKey";
+            this.comboBoxT1DownKey.Size = new System.Drawing.Size(61, 21);
+            this.comboBoxT1DownKey.TabIndex = 27;
+            // 
+            // comboBoxT2DownKey
+            // 
+            this.comboBoxT2DownKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxT2DownKey.FormattingEnabled = true;
+            this.comboBoxT2DownKey.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "0",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+            "Numlock",
+            "Numpad 0",
+            "Numpad 1",
+            "Numpad 2",
+            "Numpad 3",
+            "Numpad 4",
+            "Numpad 5",
+            "Numpad 6",
+            "Numpad 7",
+            "Numpad 8",
+            "Numpad 9",
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "Backspace",
+            "Enter",
+            "Tab",
+            "Escape",
+            "Space",
+            "Page Up",
+            "Page Down",
+            "End",
+            "Home",
+            "Left",
+            "Right",
+            "Up",
+            "Down",
+            "Insert",
+            "Delete"});
+            this.comboBoxT2DownKey.Location = new System.Drawing.Point(200, 165);
+            this.comboBoxT2DownKey.Name = "comboBoxT2DownKey";
+            this.comboBoxT2DownKey.Size = new System.Drawing.Size(61, 21);
+            this.comboBoxT2DownKey.TabIndex = 29;
             // 
             // Form1
             // 
@@ -2716,5 +3448,20 @@
         private System.Windows.Forms.Button replayClean;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label labelSwapSide;
+        private System.Windows.Forms.Button buttonUpdateHotkeys;
+        private System.Windows.Forms.ComboBox comboBoxCycleSidesMod;
+        private System.Windows.Forms.ComboBox comboBoxCycleSidesKey;
+        private System.Windows.Forms.ComboBox comboBoxT2DownMod;
+        private System.Windows.Forms.ComboBox comboBoxT2UpMod;
+        private System.Windows.Forms.ComboBox comboBoxT1DownMod;
+        private System.Windows.Forms.ComboBox comboBoxT1UpMod;
+        private System.Windows.Forms.ComboBox comboBoxUpdateMod;
+        private System.Windows.Forms.ComboBox comboBoxSwapTeamsMod;
+        private System.Windows.Forms.ComboBox comboBoxT2DownKey;
+        private System.Windows.Forms.ComboBox comboBoxT2UpKey;
+        private System.Windows.Forms.ComboBox comboBoxT1DownKey;
+        private System.Windows.Forms.ComboBox comboBoxT1UpKey;
+        private System.Windows.Forms.ComboBox comboBoxUpdateKey;
+        private System.Windows.Forms.ComboBox comboBoxSwapTeamsKey;
     }
 }
