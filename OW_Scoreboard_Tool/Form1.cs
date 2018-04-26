@@ -190,6 +190,13 @@ namespace OW_Scoreboard_Tool
             loadCombo(m1m6Map, "Match1", "m6Map");
             loadCombo(m1m7Map, "Match1", "m7Map");
 
+            loadHotKey(cycleSidesHotKeyId, "Settings", "cycleSides", comboBoxCycleSidesMod, comboBoxCycleSidesKey);
+            loadHotKey(swapTeamsHotKeyId, "Settings", "swapTeams", comboBoxSwapTeamsMod, comboBoxSwapTeamsKey);
+            loadHotKey(updateHotKeyId, "Settings", "update", comboBoxUpdateMod, comboBoxUpdateKey);
+            loadHotKey(t1UpHotKeyId, "Settings", "t1Up", comboBoxT1UpMod, comboBoxT1UpKey);
+            loadHotKey(t1DownHotKeyId, "Settings", "t1Down", comboBoxT1DownMod, comboBoxT1DownKey);
+            loadHotKey(t2UpHotKeyId, "Settings", "t2Up", comboBoxT2UpMod, comboBoxT2UpKey);
+            loadHotKey(t2DownHotKeyId, "Settings", "t2Down", comboBoxT2DownMod, comboBoxT2DownKey);
         }
 
         private void m1SwapButton_Click(object sender, EventArgs e)
@@ -1789,19 +1796,20 @@ namespace OW_Scoreboard_Tool
 
         private void buttonUpdateHotkeys_Click(object sender, EventArgs e)
         {
-            updateHotKey(cycleSidesHotKeyId, comboBoxCycleSidesMod, comboBoxCycleSidesKey);
-            updateHotKey(swapTeamsHotKeyId, comboBoxSwapTeamsMod, comboBoxSwapTeamsKey);
-            updateHotKey(updateHotKeyId, comboBoxUpdateMod, comboBoxUpdateKey);
-            updateHotKey(t1UpHotKeyId, comboBoxT1UpMod, comboBoxT1UpKey);
-            updateHotKey(t1DownHotKeyId, comboBoxT1DownMod, comboBoxT1DownKey);
-            updateHotKey(t2UpHotKeyId, comboBoxT2UpMod, comboBoxT2UpKey);
-            updateHotKey(t2DownHotKeyId, comboBoxT2DownMod, comboBoxT2DownKey);
+            updateHotKey(cycleSidesHotKeyId, "cycleSides", comboBoxCycleSidesMod, comboBoxCycleSidesKey);
+            updateHotKey(swapTeamsHotKeyId, "swapTeams", comboBoxSwapTeamsMod, comboBoxSwapTeamsKey);
+            updateHotKey(updateHotKeyId, "update", comboBoxUpdateMod, comboBoxUpdateKey);
+            updateHotKey(t1UpHotKeyId, "t1Up", comboBoxT1UpMod, comboBoxT1UpKey);
+            updateHotKey(t1DownHotKeyId, "t1Down", comboBoxT1DownMod, comboBoxT1DownKey);
+            updateHotKey(t2UpHotKeyId, "t2Up", comboBoxT2UpMod, comboBoxT2UpKey);
+            updateHotKey(t2DownHotKeyId, "t2Down", comboBoxT2DownMod, comboBoxT2DownKey);
         }
 
-        private void updateHotKey(int hotKeyId, ComboBox modBox, ComboBox keyBox)
+        private void updateHotKey(int hotKeyId, string hotKeyName, ComboBox modBox, ComboBox keyBox)
         {
             int hotKeyMod = NOMOD;
             string hotKeyModRaw = modBox.SelectedItem.ToString();
+
             if (hotKeyModRaw == "ALT")
             {
                 hotKeyMod = ALT;
@@ -1818,8 +1826,10 @@ namespace OW_Scoreboard_Tool
             {
                 hotKeyMod = WIN;
             }
+
             int hotKeyCode = 0;
             string hotKeyCodeRaw = keyBox.SelectedItem.ToString();
+
             if (hotKeyCodeRaw == "0")
             {
                 hotKeyCode = (int)Keys.D0;
@@ -2117,8 +2127,340 @@ namespace OW_Scoreboard_Tool
                 hotKeyCode = (int)Keys.Delete;
             }
 
+            File.WriteAllText(path + "\\Settings\\" + hotKeyName + "Mod.txt", hotKeyModRaw);
+            File.WriteAllText(path + "\\Settings\\" + hotKeyName + "Key.txt", hotKeyCodeRaw);
             UnregisterHotKey(this.Handle, hotKeyId);
             RegisterHotKey(this.Handle, hotKeyId, hotKeyMod, hotKeyCode);
+        }
+
+        private void loadHotKey(int hotKeyId, string folder, string hotKeyName, ComboBox modBox, ComboBox keyBox)
+        {
+            if (File.Exists(path + "\\" + folder + "\\" + hotKeyName + "Mod.txt") && File.Exists(path + "\\" + folder + "\\" + hotKeyName + "Key.txt"))
+            {
+                string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + hotKeyName + "Mod.txt");
+                modBox.SelectedIndex = modBox.FindString(loadingText.Trim());
+
+                int hotKeyMod = NOMOD;
+                if (loadingText == "ALT")
+                {
+                    hotKeyMod = ALT;
+                }
+                else if (loadingText == "CTRL")
+                {
+                    hotKeyMod = CTRL;
+                }
+                else if (loadingText == "SHIFT")
+                {
+                    hotKeyMod = SHIFT;
+                }
+                else if (loadingText == "WIN")
+                {
+                    hotKeyMod = WIN;
+                }
+
+                loadingText = File.ReadAllText(path + "\\" + folder + "\\" + hotKeyName + "Key.txt");
+                keyBox.SelectedIndex = keyBox.FindString(loadingText.Trim());
+
+                int hotKeyCode = 0;
+                if (loadingText == "0")
+                {
+                    hotKeyCode = (int)Keys.D0;
+                }
+                else if (loadingText == "1")
+                {
+                    hotKeyCode = (int)Keys.D1;
+                }
+                else if (loadingText == "2")
+                {
+                    hotKeyCode = (int)Keys.D2;
+                }
+                else if (loadingText == "3")
+                {
+                    hotKeyCode = (int)Keys.D3;
+                }
+                else if (loadingText == "4")
+                {
+                    hotKeyCode = (int)Keys.D4;
+                }
+                else if (loadingText == "5")
+                {
+                    hotKeyCode = (int)Keys.D5;
+                }
+                else if (loadingText == "6")
+                {
+                    hotKeyCode = (int)Keys.D6;
+                }
+                else if (loadingText == "7")
+                {
+                    hotKeyCode = (int)Keys.D7;
+                }
+                else if (loadingText == "8")
+                {
+                    hotKeyCode = (int)Keys.D8;
+                }
+                else if (loadingText == "9")
+                {
+                    hotKeyCode = (int)Keys.D9;
+                }
+                else if (loadingText == "A")
+                {
+                    hotKeyCode = (int)Keys.A;
+                }
+                else if (loadingText == "B")
+                {
+                    hotKeyCode = (int)Keys.B;
+                }
+                else if (loadingText == "C")
+                {
+                    hotKeyCode = (int)Keys.C;
+                }
+                else if (loadingText == "D")
+                {
+                    hotKeyCode = (int)Keys.D;
+                }
+                else if (loadingText == "E")
+                {
+                    hotKeyCode = (int)Keys.E;
+                }
+                else if (loadingText == "F")
+                {
+                    hotKeyCode = (int)Keys.F;
+                }
+                else if (loadingText == "G")
+                {
+                    hotKeyCode = (int)Keys.G;
+                }
+                else if (loadingText == "H")
+                {
+                    hotKeyCode = (int)Keys.H;
+                }
+                else if (loadingText == "I")
+                {
+                    hotKeyCode = (int)Keys.I;
+                }
+                else if (loadingText == "J")
+                {
+                    hotKeyCode = (int)Keys.J;
+                }
+                else if (loadingText == "K")
+                {
+                    hotKeyCode = (int)Keys.K;
+                }
+                else if (loadingText == "L")
+                {
+                    hotKeyCode = (int)Keys.L;
+                }
+                else if (loadingText == "M")
+                {
+                    hotKeyCode = (int)Keys.M;
+                }
+                else if (loadingText == "N")
+                {
+                    hotKeyCode = (int)Keys.N;
+                }
+                else if (loadingText == "O")
+                {
+                    hotKeyCode = (int)Keys.O;
+                }
+                else if (loadingText == "P")
+                {
+                    hotKeyCode = (int)Keys.P;
+                }
+                else if (loadingText == "Q")
+                {
+                    hotKeyCode = (int)Keys.Q;
+                }
+                else if (loadingText == "R")
+                {
+                    hotKeyCode = (int)Keys.R;
+                }
+                else if (loadingText == "S")
+                {
+                    hotKeyCode = (int)Keys.S;
+                }
+                else if (loadingText == "T")
+                {
+                    hotKeyCode = (int)Keys.T;
+                }
+                else if (loadingText == "U")
+                {
+                    hotKeyCode = (int)Keys.U;
+                }
+                else if (loadingText == "V")
+                {
+                    hotKeyCode = (int)Keys.V;
+                }
+                else if (loadingText == "W")
+                {
+                    hotKeyCode = (int)Keys.W;
+                }
+                else if (loadingText == "X")
+                {
+                    hotKeyCode = (int)Keys.X;
+                }
+                else if (loadingText == "Y")
+                {
+                    hotKeyCode = (int)Keys.Y;
+                }
+                else if (loadingText == "Z")
+                {
+                    hotKeyCode = (int)Keys.Z;
+                }
+                else if (loadingText == "Numlock")
+                {
+                    hotKeyCode = (int)Keys.NumLock;
+                }
+                else if (loadingText == "Numpad 0")
+                {
+                    hotKeyCode = (int)Keys.NumPad0;
+                }
+                else if (loadingText == "Numpad 1")
+                {
+                    hotKeyCode = (int)Keys.NumPad1;
+                }
+                else if (loadingText == "Numpad 2")
+                {
+                    hotKeyCode = (int)Keys.NumPad2;
+                }
+                else if (loadingText == "Numpad 3")
+                {
+                    hotKeyCode = (int)Keys.NumPad3;
+                }
+                else if (loadingText == "Numpad 4")
+                {
+                    hotKeyCode = (int)Keys.NumPad4;
+                }
+                else if (loadingText == "Numpad 5")
+                {
+                    hotKeyCode = (int)Keys.NumPad5;
+                }
+                else if (loadingText == "Numpad 6")
+                {
+                    hotKeyCode = (int)Keys.NumPad6;
+                }
+                else if (loadingText == "Numpad 7")
+                {
+                    hotKeyCode = (int)Keys.NumPad7;
+                }
+                else if (loadingText == "Numpad 8")
+                {
+                    hotKeyCode = (int)Keys.NumPad8;
+                }
+                else if (loadingText == "Numpad 9")
+                {
+                    hotKeyCode = (int)Keys.NumPad9;
+                }
+                else if (loadingText == "F1")
+                {
+                    hotKeyCode = (int)Keys.F1;
+                }
+                else if (loadingText == "F2")
+                {
+                    hotKeyCode = (int)Keys.F2;
+                }
+                else if (loadingText == "F3")
+                {
+                    hotKeyCode = (int)Keys.F3;
+                }
+                else if (loadingText == "F4")
+                {
+                    hotKeyCode = (int)Keys.F4;
+                }
+                else if (loadingText == "F5")
+                {
+                    hotKeyCode = (int)Keys.F5;
+                }
+                else if (loadingText == "F6")
+                {
+                    hotKeyCode = (int)Keys.F6;
+                }
+                else if (loadingText == "F7")
+                {
+                    hotKeyCode = (int)Keys.F7;
+                }
+                else if (loadingText == "F8")
+                {
+                    hotKeyCode = (int)Keys.F8;
+                }
+                else if (loadingText == "F9")
+                {
+                    hotKeyCode = (int)Keys.F9;
+                }
+                else if (loadingText == "F10")
+                {
+                    hotKeyCode = (int)Keys.F10;
+                }
+                else if (loadingText == "F11")
+                {
+                    hotKeyCode = (int)Keys.F11;
+                }
+                else if (loadingText == "F12")
+                {
+                    hotKeyCode = (int)Keys.F12;
+                }
+                else if (loadingText == "Backspace")
+                {
+                    hotKeyCode = (int)Keys.Back;
+                }
+                else if (loadingText == "Enter")
+                {
+                    hotKeyCode = (int)Keys.Enter;
+                }
+                else if (loadingText == "Tab")
+                {
+                    hotKeyCode = (int)Keys.Tab;
+                }
+                else if (loadingText == "Escape")
+                {
+                    hotKeyCode = (int)Keys.Escape;
+                }
+                else if (loadingText == "Space")
+                {
+                    hotKeyCode = (int)Keys.Space;
+                }
+                else if (loadingText == "Page Up")
+                {
+                    hotKeyCode = (int)Keys.PageUp;
+                }
+                else if (loadingText == "Page Down")
+                {
+                    hotKeyCode = (int)Keys.PageDown;
+                }
+                else if (loadingText == "End")
+                {
+                    hotKeyCode = (int)Keys.End;
+                }
+                else if (loadingText == "Home")
+                {
+                    hotKeyCode = (int)Keys.Home;
+                }
+                else if (loadingText == "Left")
+                {
+                    hotKeyCode = (int)Keys.Left;
+                }
+                else if (loadingText == "Right")
+                {
+                    hotKeyCode = (int)Keys.Right;
+                }
+                else if (loadingText == "Up")
+                {
+                    hotKeyCode = (int)Keys.Up;
+                }
+                else if (loadingText == "Down")
+                {
+                    hotKeyCode = (int)Keys.Down;
+                }
+                else if (loadingText == "Insert")
+                {
+                    hotKeyCode = (int)Keys.Insert;
+                }
+                else if (loadingText == "Delete")
+                {
+                    hotKeyCode = (int)Keys.Delete;
+                }
+
+                RegisterHotKey(this.Handle, hotKeyId, hotKeyMod, hotKeyCode);
+            }
         }
     }
 }
