@@ -190,13 +190,13 @@ namespace OW_Scoreboard_Tool
             loadCombo(m1m6Map, "Match1", "m6Map");
             loadCombo(m1m7Map, "Match1", "m7Map");
 
-            loadHotKey(cycleSidesHotKeyId, "Settings", "cycleSides", comboBoxCycleSidesMod, comboBoxCycleSidesKey);
-            loadHotKey(swapTeamsHotKeyId, "Settings", "swapTeams", comboBoxSwapTeamsMod, comboBoxSwapTeamsKey);
-            loadHotKey(updateHotKeyId, "Settings", "update", comboBoxUpdateMod, comboBoxUpdateKey);
-            loadHotKey(t1UpHotKeyId, "Settings", "t1Up", comboBoxT1UpMod, comboBoxT1UpKey);
-            loadHotKey(t1DownHotKeyId, "Settings", "t1Down", comboBoxT1DownMod, comboBoxT1DownKey);
-            loadHotKey(t2UpHotKeyId, "Settings", "t2Up", comboBoxT2UpMod, comboBoxT2UpKey);
-            loadHotKey(t2DownHotKeyId, "Settings", "t2Down", comboBoxT2DownMod, comboBoxT2DownKey);
+            loadHotKey(cycleSidesHotKeyId, "Settings", "cycleSides", comboBoxCycleSidesMod, comboBoxCycleSidesKey, useCycleSidesHotKey);
+            loadHotKey(swapTeamsHotKeyId, "Settings", "swapTeams", comboBoxSwapTeamsMod, comboBoxSwapTeamsKey, useSwapTeamsHotKey);
+            loadHotKey(updateHotKeyId, "Settings", "update", comboBoxUpdateMod, comboBoxUpdateKey, useUpdateHotKey);
+            loadHotKey(t1UpHotKeyId, "Settings", "t1Up", comboBoxT1UpMod, comboBoxT1UpKey, useT1UpHotKey);
+            loadHotKey(t1DownHotKeyId, "Settings", "t1Down", comboBoxT1DownMod, comboBoxT1DownKey, useT1DownHotKey);
+            loadHotKey(t2UpHotKeyId, "Settings", "t2Up", comboBoxT2UpMod, comboBoxT2UpKey, useT2UpHotKey);
+            loadHotKey(t2DownHotKeyId, "Settings", "t2Down", comboBoxT2DownMod, comboBoxT2DownKey, useT2DownHotKey);
         }
 
         private void m1SwapButton_Click(object sender, EventArgs e)
@@ -1796,16 +1796,16 @@ namespace OW_Scoreboard_Tool
 
         private void buttonUpdateHotkeys_Click(object sender, EventArgs e)
         {
-            updateHotKey(cycleSidesHotKeyId, "cycleSides", comboBoxCycleSidesMod, comboBoxCycleSidesKey);
-            updateHotKey(swapTeamsHotKeyId, "swapTeams", comboBoxSwapTeamsMod, comboBoxSwapTeamsKey);
-            updateHotKey(updateHotKeyId, "update", comboBoxUpdateMod, comboBoxUpdateKey);
-            updateHotKey(t1UpHotKeyId, "t1Up", comboBoxT1UpMod, comboBoxT1UpKey);
-            updateHotKey(t1DownHotKeyId, "t1Down", comboBoxT1DownMod, comboBoxT1DownKey);
-            updateHotKey(t2UpHotKeyId, "t2Up", comboBoxT2UpMod, comboBoxT2UpKey);
-            updateHotKey(t2DownHotKeyId, "t2Down", comboBoxT2DownMod, comboBoxT2DownKey);
+            updateHotKey(cycleSidesHotKeyId, "cycleSides", comboBoxCycleSidesMod, comboBoxCycleSidesKey, useCycleSidesHotKey);
+            updateHotKey(swapTeamsHotKeyId, "swapTeams", comboBoxSwapTeamsMod, comboBoxSwapTeamsKey, useSwapTeamsHotKey);
+            updateHotKey(updateHotKeyId, "update", comboBoxUpdateMod, comboBoxUpdateKey, useUpdateHotKey);
+            updateHotKey(t1UpHotKeyId, "t1Up", comboBoxT1UpMod, comboBoxT1UpKey, useT1UpHotKey);
+            updateHotKey(t1DownHotKeyId, "t1Down", comboBoxT1DownMod, comboBoxT1DownKey, useT1DownHotKey);
+            updateHotKey(t2UpHotKeyId, "t2Up", comboBoxT2UpMod, comboBoxT2UpKey, useT2UpHotKey);
+            updateHotKey(t2DownHotKeyId, "t2Down", comboBoxT2DownMod, comboBoxT2DownKey, useT2DownHotKey);
         }
 
-        private void updateHotKey(int hotKeyId, string hotKeyName, ComboBox modBox, ComboBox keyBox)
+        private void updateHotKey(int hotKeyId, string hotKeyName, ComboBox modBox, ComboBox keyBox, CheckBox useBox)
         {
             int hotKeyMod = NOMOD;
             string hotKeyModRaw = modBox.SelectedItem.ToString();
@@ -2127,13 +2127,20 @@ namespace OW_Scoreboard_Tool
                 hotKeyCode = (int)Keys.Delete;
             }
 
-            File.WriteAllText(path + "\\Settings\\" + hotKeyName + "Mod.txt", hotKeyModRaw);
-            File.WriteAllText(path + "\\Settings\\" + hotKeyName + "Key.txt", hotKeyCodeRaw);
             UnregisterHotKey(this.Handle, hotKeyId);
-            RegisterHotKey(this.Handle, hotKeyId, hotKeyMod, hotKeyCode);
+            if (useBox.Checked)
+            {
+                File.WriteAllText(path + "\\Settings\\" + hotKeyName + "Mod.txt", hotKeyModRaw);
+                File.WriteAllText(path + "\\Settings\\" + hotKeyName + "Key.txt", hotKeyCodeRaw);
+                RegisterHotKey(this.Handle, hotKeyId, hotKeyMod, hotKeyCode);
+            }
+            else
+            {
+                File.WriteAllText(path + "\\Settings\\" + hotKeyName + "Mod.txt", "NO_USE");
+            }
         }
 
-        private void loadHotKey(int hotKeyId, string folder, string hotKeyName, ComboBox modBox, ComboBox keyBox)
+        private void loadHotKey(int hotKeyId, string folder, string hotKeyName, ComboBox modBox, ComboBox keyBox, CheckBox useBox)
         {
             if (File.Exists(path + "\\" + folder + "\\" + hotKeyName + "Mod.txt") && File.Exists(path + "\\" + folder + "\\" + hotKeyName + "Key.txt"))
             {
@@ -2156,6 +2163,10 @@ namespace OW_Scoreboard_Tool
                 else if (loadingText == "WIN")
                 {
                     hotKeyMod = WIN;
+                }
+                else if (loadingText == "NO_USE")
+                {
+                    return;
                 }
 
                 loadingText = File.ReadAllText(path + "\\" + folder + "\\" + hotKeyName + "Key.txt");
@@ -2460,6 +2471,7 @@ namespace OW_Scoreboard_Tool
                 }
 
                 RegisterHotKey(this.Handle, hotKeyId, hotKeyMod, hotKeyCode);
+                useBox.Checked = true;
             }
         }
     }
