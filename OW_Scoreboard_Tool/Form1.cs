@@ -1317,6 +1317,23 @@ namespace OW_Scoreboard_Tool
                     Properties.Resources.Icon_control.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "Control";
                 }
+                else if (field.Text == "Rialto")
+                {
+                    if (radio2.Checked == true && check.Checked == true)
+                    {
+                        Properties.Resources.Color_Rialto.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio1.Checked == true)
+                    {
+                        Properties.Resources.Icon_rialto.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.Desat_Rialto.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    Properties.Resources.Icon_escort.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
+                    gametype = "Escort";
+                }
                 else if (field.Text == "Route 66")
                 {
                     if (radio2.Checked == true && check.Checked == true)

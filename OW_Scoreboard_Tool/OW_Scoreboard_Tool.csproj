@@ -173,6 +173,9 @@
     <None Include="Resources\Icon-none.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Icon-rialto.png" />
+    <None Include="Resources\Desat Rialto.png" />
+    <None Include="Resources\Color Rialto.png" />
     <None Include="Resources\3D-Zenyatta.png" />
     <None Include="Resources\3D-Zarya.png" />
     <None Include="Resources\3D-Winston.png" />
@@ -213,7 +216,6 @@
     <None Include="Resources\Color Assault.png" />
     <None Include="Resources\Color Anubis.png" />
     <None Include="Resources\Color Eichenwalde.png" />
-    <None Include="Resources\Color Eiwhenwalde.png" />
     <None Include="Resources\Color Junkertown.png" />
     <None Include="Resources\Color Lijiang.png" />
     <None Include="Resources\Desat Watchpoint.png" />
@@ -233,16 +235,13 @@
     <None Include="Resources\Desat Horizon.png" />
     <None Include="Resources\Desat Hanamura.png" />
     <None Include="Resources\Desat Anubis.png" />
-    <None Include="Resources\Junkertown.png" />
     <None Include="Resources\Color Watchpoint.png" />
     <None Include="Resources\Color Route66.png" />
     <None Include="Resources\Color Dorado.png" />
-    <None Include="Resources\Eiwhenwalde.png" />
     <None Include="Resources\Color Numbani.png" />
     <None Include="Resources\Color King_s Row.png" />
     <None Include="Resources\Color Hollywood.png" />
     <None Include="Resources\Color Blizzworld.png" />
-    <None Include="Resources\Lijiang.png" />
     <None Include="Resources\Color Oasis.png" />
     <None Include="Resources\Color Nepal.png" />
     <None Include="Resources\Color Ilios.png" />
