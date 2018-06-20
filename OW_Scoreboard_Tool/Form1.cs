@@ -384,7 +384,6 @@ namespace OW_Scoreboard_Tool
 
         private void m1UpdateButton_Click(object sender, EventArgs e)
         {
-
             updateText(m1DivisionNumber, "Match1", "DivisionNumber");
 
             updateScore(m1t1Score, "Match1", "t1Score");
@@ -529,7 +528,6 @@ namespace OW_Scoreboard_Tool
                 updateSide(m1Defend, "Current", "t1Side", "t2Side");
                 updateSide(m1Neutral, "Current", "t1Side", "t2Side");
 
-
                 updateMap(m1m1Map, m1m1Selected, m1MapFull, m1MapLong, "Current", "m1Map");
                 updateMap(m1m2Map, m1m2Selected, m1MapFull, m1MapLong, "Current", "m2Map");
                 updateMap(m1m3Map, m1m3Selected, m1MapFull, m1MapLong, "Current", "m3Map");
@@ -565,8 +563,6 @@ namespace OW_Scoreboard_Tool
                 updateLogos(m1t2Logo, "Current", "t2Logo");
             }
         }
-
-
 
         private void generalUpdateButton_Click(object sender, EventArgs e)
         {
@@ -608,7 +604,6 @@ namespace OW_Scoreboard_Tool
             {
                 sw.WriteLine(field.SelectedItem.ToString());
             }
-
 
             if (field.SelectedItem != null)
             {
