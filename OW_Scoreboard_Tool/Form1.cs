@@ -16,12 +16,58 @@ namespace OW_Scoreboard_Tool
         string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         string main = "\\Replay";
         string playlist = "\\Playlist";
+        string intros = "\\Intros";
         const int Bytes_TO_READ = sizeof(Int64);
+        string[] introsList = new string[] {
+            "Opening Anubis 1.mp4",
+            "Opening Anubis 2.mp4",
+            "Opening Blizzard World 1.mp4",
+            "Opening Blizzard World 2.mp4",
+            "Opening Dorado 1.mp4",
+            "Opening Dorado 2.mp4",
+            "Opening Eichenwalde 1.mp4",
+            "Opening Eichenwalde 2.mp4",
+            "Opening Hanamura 1.mp4",
+            "Opening Hanamura 2.mp4",
+            "Opening Hollywood 1.mp4",
+            "Opening Hollywood 2.mp4",
+            "Opening Horizon 1.mp4",
+            "Opening Horizon 2.mp4",
+            "Opening Ilios 1.mp4",
+            "Opening Ilios 2.mp4",
+            "Opening Junkertown 1.mp4",
+            "Opening Junkertown 2.mp4",
+            "Opening Kings Row 1.mp4",
+            "Opening Kings Row 2.mp4",
+            "Opening Lijiang Tower 1.mp4",
+            "Opening Lijiang Tower 2.mp4",
+            "Opening Nepal 1.mp4",
+            "Opening Nepal 2.mp4",
+            "Opening Numbani 1.mp4",
+            "Opening Numbani 2.mp4",
+            "Opening Oasis 1.mp4",
+            "Opening Oasis 2.mp4",
+            "Opening Rialto 1.mp4",
+            "Opening Rialto 2.mp4",
+            "Opening Route 66 1.mp4",
+            "Opening Route 66 2.mp4",
+            "Opening Volskaya 1.mp4",
+            "Opening Volskaya 2.mp4",
+            "Opening Watchpoint Gibraltar 1.mp4",
+            "Opening Watchpoint Gibraltar 2.mp4"
+        };
 
         public Form1()
         {
             InitializeComponent();
             CreateFileWatcher(path + main);
+
+            //foreach (var intro in Directory.GetFiles(path + intros))
+            //{
+            //    //Console.WriteLine(path); // full path
+            //    Console.WriteLine(System.IO.Path.GetFileName(intro)); // file name
+            //}
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -1095,6 +1141,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Blizzworld.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[2]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1112,6 +1159,7 @@ namespace OW_Scoreboard_Tool
                 {   if(radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Dorado.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[4]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1130,6 +1178,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Eichenwalde.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[6]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1147,6 +1196,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Hanamura.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[8]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1164,6 +1214,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Hollywood.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[10]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1181,6 +1232,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Horizon.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[12]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1198,6 +1250,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Ilios.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[14]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1215,6 +1268,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Junkertown.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[16]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1232,6 +1286,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_King_s_Row.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[18]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1249,6 +1304,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Lijiang.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[20]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1266,6 +1322,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Nepal.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[22]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1283,6 +1340,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Numbani.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[24]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1300,6 +1358,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Oasis.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[26]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1317,6 +1376,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Rialto.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[28]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1334,6 +1394,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Route66.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[30]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1351,6 +1412,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Anubis.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[0]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1368,6 +1430,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Volskaya.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[32]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1385,6 +1448,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Watchpoint.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro(introsList[34]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1403,6 +1467,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Assault.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro("");
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1420,6 +1485,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Escort.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro("");
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1437,6 +1503,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Hybrid.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro("");
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1454,6 +1521,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Control.Save(path + "\\" + folder + "\\" + file + ".png");
+                        updateIntro("");
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1471,6 +1539,7 @@ namespace OW_Scoreboard_Tool
                     Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "";
+                    updateIntro("");
 
                 }
                 using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
@@ -1722,6 +1791,59 @@ namespace OW_Scoreboard_Tool
                 Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
             }
                
+        }
+
+        public void updateIntro(string mapIntro)
+        {
+            string missing = null;
+            string temp;
+            foreach (var intro in introsList)
+            {
+                Console.WriteLine("List Loop");
+                bool exists = false;
+                Console.WriteLine("Current intro " + path + intros + "\\" + intro);
+                foreach (var files in Directory.GetFiles(path + intros))
+                {
+                    Console.WriteLine("File Loop");
+                    Console.WriteLine("File " + files);
+                    if ((path + intros + path + "\\" + intro).ToString().Equals(files.ToString())) {
+                        Console.WriteLine("If equal");
+                        exists = true;
+                        break;
+                    }
+                }
+                if(exists == false)
+                {
+                    Console.WriteLine("If Exists");
+                    missing = intro;
+
+                    break;
+                }
+                //if (!Directory.GetFiles(path + intros).Contains(intro))
+                //{
+                //    missing = intro;
+
+                //    break;
+                //}
+                //Console.WriteLine(path); // full path
+                //Console.WriteLine(System.IO.Path.GetFileName(intro)); // file name
+            }
+            if(missing == null)
+            {
+                File.Move(path + intros + "\\" + missing, path+intros+"\\CurrentIntro.mp4");
+            }
+            else if(missing != mapIntro)
+            {
+                Console.Out.WriteLine("The current path " + path+intros+ "\\CurrentIntro.mp4");
+                Console.Out.WriteLine("The missing path " + path + intros + "\\" + missing);
+                Console.Out.WriteLine("The new map path " + path + intros + "\\" + mapIntro);
+                File.Move(path + intros + "\\CurrentIntro.mp4", path + intros + "\\" + missing);
+                File.Move(path + intros + "\\" + mapIntro, path + intros + "\\CurrentIntro.mp4");
+            }
+            else
+            {   
+                File.Move(path + intros + "\\CurrentIntro.mp4", path + intros + "\\" + missing);
+            }
         }
 
     }

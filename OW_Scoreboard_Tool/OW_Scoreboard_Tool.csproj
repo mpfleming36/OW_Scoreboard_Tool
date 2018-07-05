@@ -63,6 +63,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Gametype.cs" />
+    <Compile Include="Entities\Hero.cs" />
+    <Compile Include="Entities\Map.cs" />
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="Entities\Replay.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\Series.cs" />
+    <Compile Include="Entities\Team.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +181,42 @@
     <None Include="Resources\Icon-none.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Opening Dorado 2.mp4" />
+    <None Include="Resources\Opening Dorado 1.mp4" />
+    <None Include="Resources\Opening Blizzard World 2.mp4" />
+    <None Include="Resources\Opening Blizzard World 1.mp4" />
+    <None Include="Resources\Opening Anubis 2.mp4" />
+    <None Include="Resources\Opening Anubis 1.mp4" />
+    <None Include="Resources\Opening Watchpoint Gibraltar 2.mp4" />
+    <None Include="Resources\Opening Watchpoint Gibraltar 1.mp4" />
+    <None Include="Resources\Opening Volskaya 2.mp4" />
+    <None Include="Resources\Opening Volskaya 1.mp4" />
+    <None Include="Resources\Opening Route 66 2.mp4" />
+    <None Include="Resources\Opening Route 66 1.mp4" />
+    <None Include="Resources\Opening Rialto 2.mp4" />
+    <None Include="Resources\Opening Rialto 1.mp4" />
+    <None Include="Resources\Opening Oasis 2.mp4" />
+    <None Include="Resources\Opening Oasis 1.mp4" />
+    <None Include="Resources\Opening Numbani 2.mp4" />
+    <None Include="Resources\Opening Numbani 1.mp4" />
+    <None Include="Resources\Opening Nepal 2.mp4" />
+    <None Include="Resources\Opening Nepal 1.mp4" />
+    <None Include="Resources\Opening Lijiang Tower 2.mp4" />
+    <None Include="Resources\Opening Lijiang Tower 1.mp4" />
+    <None Include="Resources\Opening Kings Row 2.mp4" />
+    <None Include="Resources\Opening Kings Row 1.mp4" />
+    <None Include="Resources\Opening Junkertown 2.mp4" />
+    <None Include="Resources\Opening Junkertown 1.mp4" />
+    <None Include="Resources\Opening Ilios 2.mp4" />
+    <None Include="Resources\Opening Ilios 1.mp4" />
+    <None Include="Resources\Opening Horizon 2.mp4" />
+    <None Include="Resources\Opening Horizon 1.mp4" />
+    <None Include="Resources\Opening Hollywood 2.mp4" />
+    <None Include="Resources\Opening Hollywood 1.mp4" />
+    <None Include="Resources\Opening Hanamura 2.mp4" />
+    <None Include="Resources\Opening Hanamura 1.mp4" />
+    <None Include="Resources\Opening Eichenwalde 2.mp4" />
+    <None Include="Resources\Opening Eichenwalde 1.mp4" />
     <None Include="Resources\Icon-rialto.png" />
     <None Include="Resources\Desat Rialto.png" />
     <None Include="Resources\Color Rialto.png" />
