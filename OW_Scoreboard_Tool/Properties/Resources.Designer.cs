@@ -1573,9 +1573,9 @@ namespace OW_Scoreboard_Tool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Reinhart {
+        internal static System.Drawing.Bitmap Reinhardt {
             get {
-                object obj = ResourceManager.GetObject("Reinhart", resourceCulture);
+                object obj = ResourceManager.GetObject("Reinhardt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1613,9 +1613,9 @@ namespace OW_Scoreboard_Tool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Symetra {
+        internal static System.Drawing.Bitmap Symmetra {
             get {
-                object obj = ResourceManager.GetObject("Symetra", resourceCulture);
+                object obj = ResourceManager.GetObject("Symmetra", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OW_Scoreboard_Tool.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +14,33 @@ namespace OW_Scoreboard_Tool
 {
     public partial class Form1 : Form
     {
+        #region Inital Properties
         string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         string main = "\\Replay";
         string playlist = "\\Playlist";
-        string intros = "\\Intros";
         const int Bytes_TO_READ = sizeof(Int64);
+        Series Match1 = new Series();
+        List<Role> RoleList = new List<Role>
+        {
+            new Role()
+        };
+        List<Hero> HeroList = new List<Hero>
+        {
+            new Hero()
+        };
+        List<Gametype> GametypeList = new List<Gametype>
+        {
+            new Gametype()
+        };
+        List<Map> MapList = new List<Map>
+        {
+            new Map()
+        };
+        List<string> FolderList;
+        List<string> Match1Files;
+        List<string> GeneralFiles;
+        List<string> SettingFiles;
+        /*string intros = "\\Intros";
         string[] introsList = new string[] {
             "Opening Anubis 1.mp4",
             "Opening Anubis 2.mp4",
@@ -56,23 +79,36 @@ namespace OW_Scoreboard_Tool
             "Opening Watchpoint Gibraltar 1.mp4",
             "Opening Watchpoint Gibraltar 2.mp4"
         };
+        */
+        #endregion
 
         public Form1()
         {
             InitializeComponent();
+
+            GenerateRoles();
+            GenerateHeroes();
+            GenerateGametypes();
+            GenerateMaps();
+            GenerateFolderList();
+            GenerateFileList();
+
+            CheckFolders();
+            CheckFiles();
+
             CreateFileWatcher(path + main);
 
-            //foreach (var intro in Directory.GetFiles(path + intros))
-            //{
-            //    //Console.WriteLine(path); // full path
-            //    Console.WriteLine(System.IO.Path.GetFileName(intro)); // file name
-            //}
+            foreach (var file in Directory.GetFiles(path + "\\General"))
+            {
+                //Console.WriteLine(path); // full path
+                Console.WriteLine(System.IO.Path.GetFileName(file)); // file name
+            }
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            loadText(m1DivisionNumber, "Match1", "DivisionNumber");
+            loadText(m1MutualInfo, "Match1", "DivisionNumber");
             loadScore(m1t1Score, "Match1", "t1Score");
             loadText(m1t1Name, "Match1", "t1Name");
             loadText(m1t1SR, "Match1", "t1SR");
@@ -161,6 +197,7 @@ namespace OW_Scoreboard_Tool
 
         }
 
+        #region Button Actions
         private void m1SwapButton_Click(object sender, EventArgs e)
         {
 
@@ -318,7 +355,7 @@ namespace OW_Scoreboard_Tool
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove all match data?", "Reset Match Data?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                resetText(m1DivisionNumber);
+                resetText(m1MutualInfo);
 
                 resetScore(m1t1Score);
                 resetText(m1t1Name);
@@ -430,7 +467,7 @@ namespace OW_Scoreboard_Tool
 
         private void m1UpdateButton_Click(object sender, EventArgs e)
         {
-            updateText(m1DivisionNumber, "Match1", "DivisionNumber");
+            updateText(m1MutualInfo, "Match1", "DivisionNumber");
 
             updateScore(m1t1Score, "Match1", "t1Score");
             updateText(m1t1Name, "Match1", "t1Name");
@@ -507,20 +544,24 @@ namespace OW_Scoreboard_Tool
             updateScore(m1m7t1Score, "Match1", "m7t1Score");
             updateScore(m1m7t2Score, "Match1", "m7t2Score");
 
-            updateCompleted(m1m1Completed, m1t1Name, m1t2Name, m1m1t1Score, m1m1t2Score, "Match1", "m1MapWin");
-            updateCompleted(m1m2Completed, m1t1Name, m1t2Name, m1m2t1Score, m1m2t2Score, "Match1", "m2MapWin");
-            updateCompleted(m1m3Completed, m1t1Name, m1t2Name, m1m3t1Score, m1m3t2Score, "Match1", "m3MapWin");
-            updateCompleted(m1m4Completed, m1t1Name, m1t2Name, m1m4t1Score, m1m4t2Score, "Match1", "m4MapWin");
-            updateCompleted(m1m5Completed, m1t1Name, m1t2Name, m1m5t1Score, m1m5t2Score, "Match1", "m5MapWin");
-            updateCompleted(m1m6Completed, m1t1Name, m1t2Name, m1m6t1Score, m1m6t2Score, "Match1", "m6MapWin");
-            updateCompleted(m1m7Completed, m1t1Name, m1t2Name, m1m7t1Score, m1m7t2Score, "Match1", "m7MapWin");
+            updateCompleted(m1m1Completed, m1t1Name, m1t2Name, m1m1t1Score, m1m1t2Score, "Match1", "m1MapWin", m1t1Logo, m1t2Logo);
+            updateCompleted(m1m2Completed, m1t1Name, m1t2Name, m1m2t1Score, m1m2t2Score, "Match1", "m2MapWin", m1t1Logo, m1t2Logo);
+            updateCompleted(m1m3Completed, m1t1Name, m1t2Name, m1m3t1Score, m1m3t2Score, "Match1", "m3MapWin", m1t1Logo, m1t2Logo);
+            updateCompleted(m1m4Completed, m1t1Name, m1t2Name, m1m4t1Score, m1m4t2Score, "Match1", "m4MapWin", m1t1Logo, m1t2Logo);
+            updateCompleted(m1m5Completed, m1t1Name, m1t2Name, m1m5t1Score, m1m5t2Score, "Match1", "m5MapWin", m1t1Logo, m1t2Logo);
+            updateCompleted(m1m6Completed, m1t1Name, m1t2Name, m1m6t1Score, m1m6t2Score, "Match1", "m6MapWin", m1t1Logo, m1t2Logo);
+            updateCompleted(m1m7Completed, m1t1Name, m1t2Name, m1m7t1Score, m1m7t2Score, "Match1", "m7MapWin", m1t1Logo, m1t2Logo);
 
             updateLogos(m1t1Logo, "Match1", "t1Logo");
             updateLogos(m1t2Logo, "Match1", "t2Logo");
 
+            updateSeries();
+            Match1.printAll();
+
+
             if (m1currentCheck.Checked == true)
             {
-                updateText(m1DivisionNumber, "Current", "DivisionNumber");
+                updateText(m1MutualInfo, "Current", "DivisionNumber");
 
                 updateScore(m1t1Score, "Current", "t1Score");
                 updateText(m1t1Name, "Current", "t1Name");
@@ -597,13 +638,13 @@ namespace OW_Scoreboard_Tool
                 updateScore(m1m7t1Score, "Current", "m7t1Score");
                 updateScore(m1m7t2Score, "Current", "m7t2Score");
 
-                updateCompleted(m1m1Completed, m1t1Name, m1t2Name, m1m1t1Score, m1m1t2Score, "Current", "m1MapWin");
-                updateCompleted(m1m2Completed, m1t1Name, m1t2Name, m1m2t1Score, m1m2t2Score, "Current", "m2MapWin");
-                updateCompleted(m1m3Completed, m1t1Name, m1t2Name, m1m3t1Score, m1m3t2Score, "Current", "m3MapWin");
-                updateCompleted(m1m4Completed, m1t1Name, m1t2Name, m1m4t1Score, m1m4t2Score, "Current", "m4MapWin");
-                updateCompleted(m1m5Completed, m1t1Name, m1t2Name, m1m5t1Score, m1m5t2Score, "Current", "m5MapWin");
-                updateCompleted(m1m6Completed, m1t1Name, m1t2Name, m1m6t1Score, m1m6t2Score, "Current", "m6MapWin");
-                updateCompleted(m1m7Completed, m1t1Name, m1t2Name, m1m7t1Score, m1m7t2Score, "Current", "m7MapWin");
+                updateCompleted(m1m1Completed, m1t1Name, m1t2Name, m1m1t1Score, m1m1t2Score, "Current", "m1MapWin", m1t1Logo, m1t2Logo);
+                updateCompleted(m1m2Completed, m1t1Name, m1t2Name, m1m2t1Score, m1m2t2Score, "Current", "m2MapWin", m1t1Logo, m1t2Logo);
+                updateCompleted(m1m3Completed, m1t1Name, m1t2Name, m1m3t1Score, m1m3t2Score, "Current", "m3MapWin", m1t1Logo, m1t2Logo);
+                updateCompleted(m1m4Completed, m1t1Name, m1t2Name, m1m4t1Score, m1m4t2Score, "Current", "m4MapWin", m1t1Logo, m1t2Logo);
+                updateCompleted(m1m5Completed, m1t1Name, m1t2Name, m1m5t1Score, m1m5t2Score, "Current", "m5MapWin", m1t1Logo, m1t2Logo);
+                updateCompleted(m1m6Completed, m1t1Name, m1t2Name, m1m6t1Score, m1m6t2Score, "Current", "m6MapWin", m1t1Logo, m1t2Logo);
+                updateCompleted(m1m7Completed, m1t1Name, m1t2Name, m1m7t1Score, m1m7t2Score, "Current", "m7MapWin", m1t1Logo, m1t2Logo);
 
                 updateLogos(m1t1Logo, "Current", "t1Logo");
                 updateLogos(m1t2Logo, "Current", "t2Logo");
@@ -628,6 +669,46 @@ namespace OW_Scoreboard_Tool
             updateText(utility8, "General", "utility8");
         }
 
+        private void replayReset_Click(object sender, EventArgs e)
+        {
+            System.IO.DirectoryInfo di = new DirectoryInfo(path + main + playlist);
+            foreach (FileInfo file in di.GetFiles())
+            {
+                file.Delete();
+            }
+        }
+
+        private void replayClean_Click(object sender, EventArgs e)
+        {
+            System.IO.DirectoryInfo di = new DirectoryInfo(path + main + playlist);
+            foreach (FileInfo file in di.GetFiles())
+            {
+                if (file.Length < 1000000)
+                {
+                    file.Delete();
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t1Logo);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t2Logo);
+        }
+
+        #endregion
+
+        #region Updaters
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="field"></param>
+        /// <param name="folder"></param>
+        /// <param name="file"></param>
         private void updateText(TextBox field, String folder, String file)
         {
             using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
@@ -636,6 +717,12 @@ namespace OW_Scoreboard_Tool
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="field"></param>
+        /// <param name="folder"></param>
+        /// <param name="file"></param>
         private void updateScore(NumericUpDown field, String folder, String file)
         {
             using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
@@ -644,6 +731,15 @@ namespace OW_Scoreboard_Tool
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="field"></param>
+        /// <param name="radio1"></param>
+        /// <param name="radio2"></param>
+        /// <param name="radio3"></param>
+        /// <param name="folder"></param>
+        /// <param name="file"></param>
         private void updateHero(ComboBox field, RadioButton radio1, RadioButton radio2, RadioButton radio3, String folder, String file)
         {
             using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
@@ -905,7 +1001,7 @@ namespace OW_Scoreboard_Tool
                     }
                     else
                     {
-                        Properties.Resources.Reinhart.Save(path + "\\" + folder + "\\" + file + ".png");
+                        Properties.Resources.Reinhardt.Save(path + "\\" + folder + "\\" + file + ".png");
                     }
                 }
                 else if (field.SelectedItem.ToString().Equals("Roadhog"))
@@ -965,7 +1061,7 @@ namespace OW_Scoreboard_Tool
                     }
                     else
                     {
-                        Properties.Resources.Symetra.Save(path + "\\" + folder + "\\" + file + ".png");
+                        Properties.Resources.Symmetra.Save(path + "\\" + folder + "\\" + file + ".png");
                     }
                 }
                 else if (field.SelectedItem.ToString().Equals("Torbjörn"))
@@ -1070,6 +1166,12 @@ namespace OW_Scoreboard_Tool
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="field"></param>
+        /// <param name="folder"></param>
+        /// <param name="file"></param>
         private void updateRole(ComboBox field, String folder, String file)
         {
             using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
@@ -1107,6 +1209,13 @@ namespace OW_Scoreboard_Tool
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="field"></param>
+        /// <param name="folder"></param>
+        /// <param name="file1"></param>
+        /// <param name="file2"></param>
         private void updateSide(RadioButton field, String folder, String file1, String file2)
         {
             if (field.Checked == true)
@@ -1130,6 +1239,15 @@ namespace OW_Scoreboard_Tool
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="field"></param>
+        /// <param name="check"></param>
+        /// <param name="radio1"></param>
+        /// <param name="radio2"></param>
+        /// <param name="folder"></param>
+        /// <param name="file"></param>
         private void updateMap(ComboBox field, RadioButton check, RadioButton radio1, RadioButton radio2, String folder, String file)
         {
 
@@ -1141,7 +1259,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Blizzworld.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[2]);
+                        //updateIntro(introsList[2]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1159,7 +1277,7 @@ namespace OW_Scoreboard_Tool
                 {   if(radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Dorado.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[4]);
+                        //updateIntro(introsList[4]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1178,7 +1296,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Eichenwalde.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[6]);
+                        //updateIntro(introsList[6]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1196,7 +1314,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Hanamura.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[8]);
+                        //updateIntro(introsList[8]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1214,7 +1332,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Hollywood.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[10]);
+                        //updateIntro(introsList[10]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1232,7 +1350,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Horizon.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[12]);
+                        //updateIntro(introsList[12]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1250,7 +1368,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Ilios.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[14]);
+                        //updateIntro(introsList[14]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1268,7 +1386,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Junkertown.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[16]);
+                        //updateIntro(introsList[16]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1286,7 +1404,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_King_s_Row.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[18]);
+                        //updateIntro(introsList[18]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1304,7 +1422,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Lijiang.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[20]);
+                        //updateIntro(introsList[20]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1322,7 +1440,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Nepal.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[22]);
+                        //updateIntro(introsList[22]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1340,7 +1458,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Numbani.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[24]);
+                        //updateIntro(introsList[24]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1358,7 +1476,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Oasis.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[26]);
+                        //updateIntro(introsList[26]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1376,7 +1494,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Rialto.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[28]);
+                        //updateIntro(introsList[28]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1394,7 +1512,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Route66.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[30]);
+                        //updateIntro(introsList[30]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1412,7 +1530,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Anubis.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[0]);
+                        //updateIntro(introsList[0]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1430,7 +1548,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Volskaya.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[32]);
+                        //updateIntro(introsList[32]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1448,7 +1566,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Watchpoint.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro(introsList[34]);
+                        //updateIntro(introsList[34]);
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1467,7 +1585,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Assault.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro("");
+                        //updateIntro("");
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1485,7 +1603,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Escort.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro("");
+                        //updateIntro("");
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1503,7 +1621,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Hybrid.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro("");
+                        //updateIntro("");
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1521,7 +1639,7 @@ namespace OW_Scoreboard_Tool
                     if (radio2.Checked == true && check.Checked == true)
                     {
                         Properties.Resources.Color_Control.Save(path + "\\" + folder + "\\" + file + ".png");
-                        updateIntro("");
+                        //updateIntro("");
                     }
                     else if (radio1.Checked == true)
                     {
@@ -1539,7 +1657,7 @@ namespace OW_Scoreboard_Tool
                     Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
                     Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + "Gametype" + ".png");
                     gametype = "";
-                    updateIntro("");
+                    //updateIntro("");
 
                 }
                 using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
@@ -1560,191 +1678,47 @@ namespace OW_Scoreboard_Tool
             }
         }
 
-        private void loadText(TextBox field, String folder, String file)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="field"></param>
+        /// <param name="team1"></param>
+        /// <param name="team2"></param>
+        /// <param name="score1"></param>
+        /// <param name="score2"></param>
+        /// <param name="folder"></param>
+        /// <param name="file"></param>
+        /// <param name="team1Logo"></param>
+        /// <param name="team2Logo"></param>
+        private void updateCompleted(CheckBox field, TextBox team1, TextBox team2, NumericUpDown score1, NumericUpDown score2, String folder, String file, TextBox team1Logo, TextBox team2Logo)
         {
-            if (File.Exists(path + "\\" + folder + "\\" + file + ".txt"))
+            string winner = "";
+            string winnerLogo = "";
+
+            if (field.Checked == true)
             {
-                string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
-                field.Text = loadingText;
-                field.Text.Trim();
-            }
-
-        }
-
-        private void loadScore(NumericUpDown field, String folder, String file)
-        {
-            if (File.Exists(path + "\\" + folder + "\\" + file + ".txt"))
-            {
-                string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
-                decimal number;
-                Decimal.TryParse(loadingText, out number);
-                field.Value = number;
-            }
-
-        }
-
-        private void loadCombo(ComboBox field, String folder, String file)
-        {
-            if (File.Exists(path + "\\" + folder + "\\" + file + ".txt"))
-            {
-                string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
-                if (loadingText.Trim() == "?" && file.Contains("Map"))
-                {
-                    loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + "Gametype" + ".txt");
-                }
-                field.SelectedIndex = field.FindString(loadingText.Trim());
-            }
-        }
-
-        private void resetText(TextBox field)
-        {
-            field.Text = "";
-        }
-
-        private void resetScore(NumericUpDown field)
-        {
-            field.Value = 0;
-        }
-
-        private void resetHero(ComboBox field)
-        {
-            field.SelectedIndex = 0;
-        }
-
-        private void resetRole(ComboBox field)
-        {
-            field.SelectedIndex = 0;
-        }
-
-        private void resetSide(RadioButton field)
-        {
-            field.Checked = true;
-        }
-
-        private void resetMap(ComboBox field)
-        {
-            field.SelectedIndex = 0;
-        }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        public void CreateFileWatcher(String path)
-        {
-            FileSystemWatcher watcher = new FileSystemWatcher();
-            watcher.Path = path;
-
-            watcher.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName;
-            watcher.Filter = "Replay Replay.mp4";
-            watcher.Changed += new FileSystemEventHandler(OnChanged);
-            watcher.EnableRaisingEvents = true;
-        }
-
-        private static void OnChanged(object source, FileSystemEventArgs e)
-        {
-            string filelessPath = Path.GetDirectoryName(e.FullPath);
-            string copyPath = filelessPath + "\\Playlist";
-            System.IO.DirectoryInfo di = new DirectoryInfo(copyPath);
-            int count = di.GetFiles().Length;
-            int prefix = count + 1;
-            string previousfile = count.ToString() + "-" + e.Name;
-            string copiedFile = prefix.ToString() + "-" + e.Name;
-            string copiedFullPath = Path.Combine(copyPath, copiedFile);
-            string previousFullPath = Path.Combine(copyPath, previousfile);
-
-            if (!File.Exists(copiedFullPath))
-            {
-                if (count != 0)
-                {
-                    if (!FilesAreEqual(new FileInfo(previousFullPath), new FileInfo(e.FullPath)))
-                    {
-                        File.Copy(e.FullPath, copiedFullPath);
-                    }
-                    
-
-                }
-                else
-                {
-                    File.Copy(e.FullPath, copiedFullPath);
-                }
-
-            }
-
-        }
-
-        private static bool FilesAreEqual(FileInfo first, FileInfo second)
-        {
-            if(first.Length != second.Length)
-            {
-                return false;
-            }
-
-            if (string.Equals(first.FullName, second.FullName, StringComparison.OrdinalIgnoreCase)){
-                return true;
-            }
-
-            int iterations = (int)Math.Ceiling((double)first.Length / Bytes_TO_READ);
-
-            using (FileStream fs1 = first.OpenRead())
-            using (FileStream fs2 = second.OpenRead())
-            {
-                byte[] one = new byte[Bytes_TO_READ];
-                byte[] two = new byte[Bytes_TO_READ];
-
-                for (int i=0; i < iterations; i++)
-                {
-                    fs1.Read(one, 0, Bytes_TO_READ);
-                    fs2.Read(two, 0, Bytes_TO_READ);
-
-                    if (BitConverter.ToInt64(one, 0) != BitConverter.ToInt64(two, 0))
-                    {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
-
-        private void replayReset_Click(object sender, EventArgs e)
-        {
-            System.IO.DirectoryInfo di = new DirectoryInfo(path + main + playlist);
-            foreach (FileInfo file in di.GetFiles())
-            {
-                file.Delete();
-            }
-        }
-
-        private void replayClean_Click(object sender, EventArgs e)
-        {
-            System.IO.DirectoryInfo di = new DirectoryInfo(path + main + playlist);
-            foreach (FileInfo file in di.GetFiles())
-            {
-                if (file.Length < 1000000)
-                {
-                    file.Delete();
-                }
-            }
-        }
-
-        private void updateCompleted(CheckBox field, TextBox team1, TextBox team2, NumericUpDown score1, NumericUpDown score2, String folder, String file)
-        {
-            String winner = "";
-            if(field.Checked == true)
-            {
-                if(score1.Value > score2.Value)
+                if (score1.Value > score2.Value)
                 {
                     winner = team1.Text;
+                    winnerLogo = team1Logo.Text;
+                    TextBox temp = new TextBox();
+                    temp.Text = winnerLogo;
+                    updateLogos(temp, folder, file);
+
                 }
-                else if(score2.Value > score1.Value)
+                else if (score2.Value > score1.Value)
                 {
                     winner = team2.Text;
+                    winnerLogo = team2Logo.Text;
+                    TextBox temp = new TextBox();
+                    temp.Text = winnerLogo;
+                    updateLogos(temp, folder, file);
                 }
                 else
                 {
                     winner = "DRAW";
+                    Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
+
                 }
 
                 using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
@@ -1752,35 +1726,25 @@ namespace OW_Scoreboard_Tool
                     sw.WriteLine(winner.Trim());
                 }
             }
-            using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
+            else
             {
-                sw.WriteLine(winner.Trim());
+                using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
+                {
+                    sw.WriteLine(winner.Trim());
+                }
+                Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            getFileName(m1t1Logo);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            getFileName(m1t2Logo);
-        }
-
-        public void getFileName(TextBox field)
-        {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.png; )|*.png";
-            open.ShowDialog();
-
-            field.Text = open.FileName;
-
-        }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="field"></param>
+        /// <param name="folder"></param>
+        /// <param name="file"></param>
         public void updateLogos(TextBox field, String folder, String file)
         {
-            
+
             if (field.Text != "")
             {
                 Bitmap logo = new Bitmap(field.Text);
@@ -1790,9 +1754,10 @@ namespace OW_Scoreboard_Tool
             {
                 Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
             }
-               
+
         }
 
+        /*
         public void updateIntro(string mapIntro)
         {
             string missing = null;
@@ -1844,7 +1809,643 @@ namespace OW_Scoreboard_Tool
             {   
                 File.Move(path + intros + "\\CurrentIntro.mp4", path + intros + "\\" + missing);
             }
+        }*/
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public void updateSeries()
+        {
+            Match1 = new Series("Match1", updateTeams("h"), updateTeams("a"), updateMapPool(), m1t1Score.Value.ToString(), m1t2Score.Value.ToString());
+            Match1.Maps[0].HomeScore = m1m1t1Score.Value.ToString();
+            Match1.Maps[0].AwayScore = m1m1t2Score.Value.ToString();
+            Match1.Maps[1].HomeScore = m1m2t1Score.Value.ToString();
+            Match1.Maps[1].AwayScore = m1m2t2Score.Value.ToString();
+            Match1.Maps[2].HomeScore = m1m3t1Score.Value.ToString();
+            Match1.Maps[2].AwayScore = m1m3t2Score.Value.ToString();
+            Match1.Maps[3].HomeScore = m1m4t1Score.Value.ToString();
+            Match1.Maps[3].AwayScore = m1m4t2Score.Value.ToString();
+            Match1.Maps[4].HomeScore = m1m5t1Score.Value.ToString();
+            Match1.Maps[4].AwayScore = m1m5t2Score.Value.ToString();
+            Match1.Maps[5].HomeScore = m1m6t1Score.Value.ToString();
+            Match1.Maps[5].AwayScore = m1m6t2Score.Value.ToString();
+            Match1.Maps[6].HomeScore = m1m7t1Score.Value.ToString();
+            Match1.Maps[6].AwayScore = m1m7t2Score.Value.ToString();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="side"></param>
+        /// <returns></returns>
+        public List<Player> updatePlayers(string side)
+        {
+            List<Player> players = new List<Player>();
+            if (side.Equals("h"))
+            {
+                players.Add(new Player(m1t1p1Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t1p1Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t1p1Role.Text)));
+                players.Add(new Player(m1t1p2Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t1p2Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t1p2Role.Text)));
+                players.Add(new Player(m1t1p3Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t1p3Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t1p3Role.Text)));
+                players.Add(new Player(m1t1p4Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t1p4Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t1p4Role.Text)));
+                players.Add(new Player(m1t1p5Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t1p5Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t1p5Role.Text)));
+                players.Add(new Player(m1t1p6Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t1p6Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t1p6Role.Text)));
+            }
+            else if(side.Equals("a"))
+            {
+                players.Add(new Player(m1t2p1Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t2p1Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t2p1Role.Text)));
+                players.Add(new Player(m1t2p2Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t2p2Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t2p2Role.Text)));
+                players.Add(new Player(m1t2p3Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t2p3Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t2p3Role.Text)));
+                players.Add(new Player(m1t2p4Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t2p4Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t2p4Role.Text)));
+                players.Add(new Player(m1t2p5Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t2p5Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t2p5Role.Text)));
+                players.Add(new Player(m1t2p6Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t2p6Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t2p6Role.Text)));
+            }
+            else
+            {
+                players.Add(new Player(m1t1p1Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t1p1Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t1p1Role.Text)));
+                players.Add(new Player(m1t1p2Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t1p2Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t1p2Role.Text)));
+                players.Add(new Player(m1t1p3Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t1p3Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t1p3Role.Text)));
+                players.Add(new Player(m1t1p4Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t1p4Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t1p4Role.Text)));
+                players.Add(new Player(m1t1p5Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t1p5Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t1p5Role.Text)));
+                players.Add(new Player(m1t1p6Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t1p6Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t1p6Role.Text)));
+                players.Add(new Player(m1t2p1Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t2p1Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t2p1Role.Text)));
+                players.Add(new Player(m1t2p2Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t2p2Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t2p2Role.Text)));
+                players.Add(new Player(m1t2p3Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t2p3Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t2p3Role.Text)));
+                players.Add(new Player(m1t2p4Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t2p4Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t2p4Role.Text)));
+                players.Add(new Player(m1t2p5Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t2p5Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t2p5Role.Text)));
+                players.Add(new Player(m1t2p6Name.Text, new List<Hero> { HeroList.FirstOrDefault(s => s.Name == m1t2p6Hero.Text) }, RoleList.FirstOrDefault(s => s.Name == m1t2p6Role.Text)));
+            }
+
+            return players;
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="side"></param>
+        /// <returns></returns>
+        public Team updateTeams(string side)
+        {
+            Team team;
+            if (side.Equals("h"))
+            {
+                team = new Team(m1t1Name.Text, m1t1SR.Text, m1t1Logo.Text, updatePlayers(side));
+            }
+            else if (side.Equals("a"))
+            {
+                team = new Team(m1t2Name.Text, m1t2SR.Text, m1t2Logo.Text, updatePlayers(side));
+            }
+            else
+            {
+                team = new Team();
+            }
+            return team;
+
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public List<Map> updateMapPool()
+        {
+            List<Map> mapPool = new List<Map>
+            {
+                MapList.FirstOrDefault(s => s.Name == m1m1Map.Text),
+                MapList.FirstOrDefault(s => s.Name == m1m2Map.Text),
+                MapList.FirstOrDefault(s => s.Name == m1m3Map.Text),
+                MapList.FirstOrDefault(s => s.Name == m1m4Map.Text),
+                MapList.FirstOrDefault(s => s.Name == m1m5Map.Text),
+                MapList.FirstOrDefault(s => s.Name == m1m6Map.Text),
+                MapList.FirstOrDefault(s => s.Name == m1m7Map.Text)
+            };
+
+            return mapPool;
+        }
+        #endregion
+
+        #region Loaders
+        private void loadText(TextBox field, String folder, String file)
+        {
+            if (File.Exists(path + "\\" + folder + "\\" + file + ".txt"))
+            {
+                string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
+                field.Text = loadingText;
+                field.Text.Trim();
+            }
+            else
+            {
+                File.Create(path + "\\" + folder + "\\" + file + ".txt");
+            }
+
+        }
+
+        private void loadScore(NumericUpDown field, String folder, String file)
+        {
+            if (File.Exists(path + "\\" + folder + "\\" + file + ".txt"))
+            {
+                string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
+                decimal number;
+                Decimal.TryParse(loadingText, out number);
+                field.Value = number;
+            }
+            else
+            {
+                File.Create(path + "\\" + folder + "\\" + file + ".txt");
+            }
+
+        }
+
+        private void loadCombo(ComboBox field, String folder, String file)
+        {
+            if (File.Exists(path + "\\" + folder + "\\" + file + ".txt"))
+            {
+                string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
+                if (loadingText.Trim() == "?" && file.Contains("Map"))
+                {
+                    loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + "Gametype" + ".txt");
+                }
+                field.SelectedIndex = field.FindString(loadingText.Trim());
+            }
+            else
+            {
+                File.Create(path + "\\" + folder + "\\" + file + ".txt");
+            }
+        }
+        #endregion
+
+        #region Resetters
+        private void resetText(TextBox field)
+        {
+            field.Text = "";
+        }
+
+        private void resetScore(NumericUpDown field)
+        {
+            field.Value = 0;
+        }
+
+        private void resetHero(ComboBox field)
+        {
+            field.SelectedIndex = 0;
+        }
+
+        private void resetRole(ComboBox field)
+        {
+            field.SelectedIndex = 0;
+        }
+
+        private void resetSide(RadioButton field)
+        {
+            field.Checked = true;
+        }
+
+        private void resetMap(ComboBox field)
+        {
+            field.SelectedIndex = 0;
+        }
+        #endregion
+
+        #region Boolean Methods
+        /// <summary>
+        /// 
+        /// </summary>
+        public void CheckFolders()
+        {
+            foreach (var folder in FolderList)
+            {
+                if (!Directory.Exists(path + folder))
+                {
+                    Directory.CreateDirectory(path + folder);
+                }
+
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void CheckFiles()
+        {
+
+            foreach (var file in Match1Files)
+            {
+                if(!File.Exists(path + FolderList[0] + "\\" + file))
+                {
+                    File.Create(path + FolderList[0] + "\\" + file).Close();
+                }
+            }
+
+            foreach (var file in GeneralFiles)
+            {
+                if (!File.Exists(path + FolderList[1] + "\\" + file))
+                {
+                    File.Create(path + FolderList[1] + "\\" + file).Close();
+                }
+            }
+
+            foreach (var file in SettingFiles)
+            {
+                if (!File.Exists(path + FolderList[2] + "\\" + file))
+                {
+                    File.Create(path + FolderList[2] + "\\" + file).Close();
+                }
+            }
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
+        /// <returns></returns>
+        private static bool IsFileEqual(FileInfo first, FileInfo second)
+        {
+            if (first.Length != second.Length)
+            {
+                return false;
+            }
+
+            if (string.Equals(first.FullName, second.FullName, StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+
+            int iterations = (int)Math.Ceiling((double)first.Length / Bytes_TO_READ);
+
+            using (FileStream fs1 = first.OpenRead())
+            using (FileStream fs2 = second.OpenRead())
+            {
+                byte[] one = new byte[Bytes_TO_READ];
+                byte[] two = new byte[Bytes_TO_READ];
+
+                for (int i = 0; i < iterations; i++)
+                {
+                    fs1.Read(one, 0, Bytes_TO_READ);
+                    fs2.Read(two, 0, Bytes_TO_READ);
+
+                    if (BitConverter.ToInt64(one, 0) != BitConverter.ToInt64(two, 0))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool IsFileModified()
+        {
+
+            return true;
+        }
+        #endregion
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path"></param>
+        public void CreateFileWatcher(String path)
+        {
+            FileSystemWatcher watcher = new FileSystemWatcher();
+            watcher.Path = path;
+
+            watcher.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName;
+            watcher.Filter = "Replay Replay.mp4";
+            watcher.Changed += new FileSystemEventHandler(OnChanged);
+            watcher.EnableRaisingEvents = true;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="e"></param>
+        private static void OnChanged(object source, FileSystemEventArgs e)
+        {
+            string filelessPath = Path.GetDirectoryName(e.FullPath);
+            string copyPath = filelessPath + "\\Playlist";
+            System.IO.DirectoryInfo di = new DirectoryInfo(copyPath);
+            int count = di.GetFiles().Length;
+            int prefix = count + 1;
+            string previousfile = count.ToString() + "-" + e.Name;
+            string copiedFile = prefix.ToString() + "-" + e.Name;
+            string copiedFullPath = Path.Combine(copyPath, copiedFile);
+            string previousFullPath = Path.Combine(copyPath, previousfile);
+
+            if (!File.Exists(copiedFullPath))
+            {
+                if (count != 0)
+                {
+                    if (!IsFileEqual(new FileInfo(previousFullPath), new FileInfo(e.FullPath)))
+                    {
+                        File.Copy(e.FullPath, copiedFullPath);
+                    }
+                    
+
+                }
+                else
+                {
+                    File.Copy(e.FullPath, copiedFullPath);
+                }
+
+            }
+
+        }
+        
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="field"></param>
+        public void GetLogoFile(TextBox field)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.png; )|*.png";
+            open.ShowDialog();
+
+            field.Text = open.FileName;
+
+        }
+
+
+        #region Generators
+        /// <summary>
+        /// Generates the Roles;
+        /// </summary>
+        public void GenerateRoles()
+        {
+            RoleList.Add(new Role("DPS", Properties.Resources.Icon_offense));
+            RoleList.Add(new Role("Flex", Properties.Resources.Icon_flex));
+            RoleList.Add(new Role("Support", Properties.Resources.Icon_support));
+            RoleList.Add(new Role("Tank", Properties.Resources.Icon_tank));
+        }
+
+        /// <summary>
+        /// Generates the Heroes
+        /// </summary>
+        public void GenerateHeroes()
+        {
+            HeroList.Add(new Hero("Ana", Properties.Resources.Icon_ana, Properties.Resources.Ana, Properties.Resources._3D_Ana));
+            HeroList.Add(new Hero("Bastion", Properties.Resources.Icon_bastion, Properties.Resources.Bastion, Properties.Resources._3D_Bastion));
+            HeroList.Add(new Hero("Brigitte", Properties.Resources.Icon_brigitte, Properties.Resources.Brigitte, Properties.Resources._3D_Brigitte));
+            HeroList.Add(new Hero("D.Va", Properties.Resources.Icon_dva, Properties.Resources.Dva, Properties.Resources._3D_Dva));
+            HeroList.Add(new Hero("Doomfist", Properties.Resources.Icon_doomfist, Properties.Resources.Doomfist, Properties.Resources._3D_Doomfist));
+            HeroList.Add(new Hero("Genji", Properties.Resources.Icon_genji, Properties.Resources.Genji, Properties.Resources._3D_Genji));
+            HeroList.Add(new Hero("Hanzo", Properties.Resources.Icon_hanzo, Properties.Resources.Hanzo, Properties.Resources._3D_Hanzo));
+            HeroList.Add(new Hero("Junkrat", Properties.Resources.Icon_junkrat, Properties.Resources.Junkrat, Properties.Resources._3D_Junkrat));
+            HeroList.Add(new Hero("Lúcio", Properties.Resources.Icon_Lucio, Properties.Resources.Lucio, Properties.Resources._3D_Lucio));
+            HeroList.Add(new Hero("Mccree", Properties.Resources.Icon_mccree, Properties.Resources.McCree, Properties.Resources._3D_McCree));
+            HeroList.Add(new Hero("Mei", Properties.Resources.Icon_mei, Properties.Resources.Mei, Properties.Resources._3D_Mei));
+            HeroList.Add(new Hero("Mercy", Properties.Resources.Icon_mercy, Properties.Resources.Mercy, Properties.Resources._3D_Mercy));
+            HeroList.Add(new Hero("Moira", Properties.Resources.Icon_moira, Properties.Resources.Moira, Properties.Resources._3D_Moira));
+            HeroList.Add(new Hero("Orisa", Properties.Resources.Icon_orisa, Properties.Resources.Orisa, Properties.Resources._3D_Orisa));
+            HeroList.Add(new Hero("Pharah", Properties.Resources.Icon_pharah, Properties.Resources.Pharah, Properties.Resources._3D_Pharah));
+            HeroList.Add(new Hero("Reaper", Properties.Resources.Icon_reaper, Properties.Resources.Reaper, Properties.Resources._3D_Reaper));
+            HeroList.Add(new Hero("Reinhardt", Properties.Resources.Icon_reinhardt, Properties.Resources.Reinhardt, Properties.Resources._3D_Reinhardt));
+            HeroList.Add(new Hero("Roadhog", Properties.Resources.Icon_roadhog, Properties.Resources.Roadhog, Properties.Resources._3D_Roadhog));
+            HeroList.Add(new Hero("Soldier: 76", Properties.Resources.Icon_soldier76, Properties.Resources.Soldier76, Properties.Resources._3D_Soldier76));
+            HeroList.Add(new Hero("Sombra", Properties.Resources.Icon_sombra, Properties.Resources.Sombra, Properties.Resources._3D_Sombra));
+            HeroList.Add(new Hero("Symmetra", Properties.Resources.Icon_symmetra, Properties.Resources.Symmetra, Properties.Resources._3D_Symmetra));
+            HeroList.Add(new Hero("Torbjörn", Properties.Resources.Icon_torbjorn, Properties.Resources.Torbjorn, Properties.Resources._3D_Torbjorn));
+            HeroList.Add(new Hero("Tracer", Properties.Resources.Icon_tracer, Properties.Resources.Tracer, Properties.Resources._3D_Tracer));
+            HeroList.Add(new Hero("Widowmaker", Properties.Resources.Icon_widowmaker, Properties.Resources.Widowmaker, Properties.Resources._3D_Widowmaker));
+            HeroList.Add(new Hero("Winston", Properties.Resources.Icon_winston, Properties.Resources.Winston, Properties.Resources._3D_Winston));
+            HeroList.Add(new Hero("Wrecking Ball", Properties.Resources.Icon_none, Properties.Resources.Icon_none, Properties.Resources.Icon_none));
+            HeroList.Add(new Hero("Zarya", Properties.Resources.Icon_zarya, Properties.Resources.Zarya, Properties.Resources._3D_Zarya));
+            HeroList.Add(new Hero("Zenyatta", Properties.Resources.Icon_zenyatta, Properties.Resources.Zenyatta, Properties.Resources._3D_Zenyatta));
+        }
+
+        /// <summary>
+        /// Generates the Gametypes
+        /// </summary>
+        public void GenerateGametypes()
+        {
+            GametypeList.Add(new Gametype("Assault", Properties.Resources.Icon_assault));
+            GametypeList.Add(new Gametype("Control", Properties.Resources.Icon_control));
+            GametypeList.Add(new Gametype("Escort", Properties.Resources.Icon_escort));
+            GametypeList.Add(new Gametype("Hybrid", Properties.Resources.Icon_hybrid));
+        }
+
+        /// <summary>
+        /// Generates the Maps
+        /// </summary>
+        public void GenerateMaps()
+        {
+            MapList.Add(new Map("Assault", GametypeList[1], Properties.Resources.Icon_assault_pool, Properties.Resources.Color_Assault, ""));
+            MapList.Add(new Map("Control", GametypeList[2], Properties.Resources.Icon_control_pool, Properties.Resources.Color_Control, ""));
+            MapList.Add(new Map("Escort", GametypeList[3], Properties.Resources.Icon_escort_pool, Properties.Resources.Color_Escort, ""));
+            MapList.Add(new Map("Hybrid", GametypeList[4], Properties.Resources.Icon_hybrid_pool, Properties.Resources.Color_Hybrid, ""));
+            MapList.Add(new Map("Blizzard World", GametypeList[4], Properties.Resources.Icon_hybrid_pool, Properties.Resources.Color_Hybrid, ""));
+            MapList.Add(new Map("Dorado", GametypeList[3], Properties.Resources.Icon_control_pool, Properties.Resources.Color_Escort, ""));
+            MapList.Add(new Map("Eichenwalde", GametypeList[4], Properties.Resources.Icon_hybrid_pool, Properties.Resources.Color_Hybrid, ""));
+            MapList.Add(new Map("Hanamura", GametypeList[1], Properties.Resources.Icon_assault_pool, Properties.Resources.Color_Assault, ""));
+            MapList.Add(new Map("Hollywood", GametypeList[4], Properties.Resources.Icon_hybrid_pool, Properties.Resources.Color_Hybrid, ""));
+            MapList.Add(new Map("Horizon Lunar Colony", GametypeList[1], Properties.Resources.Icon_assault_pool, Properties.Resources.Color_Assault, ""));
+            MapList.Add(new Map("Ilios", GametypeList[2], Properties.Resources.Icon_control_pool, Properties.Resources.Color_Control, ""));
+            MapList.Add(new Map("Junkertown", GametypeList[3], Properties.Resources.Icon_escort_pool, Properties.Resources.Color_Escort, ""));
+            MapList.Add(new Map("King\'s Row", GametypeList[4], Properties.Resources.Icon_hybrid_pool, Properties.Resources.Color_Hybrid, ""));
+            MapList.Add(new Map("Lijiang Tower", GametypeList[2], Properties.Resources.Icon_control_pool, Properties.Resources.Color_Control, ""));
+            MapList.Add(new Map("Nepal", GametypeList[2], Properties.Resources.Icon_control_pool, Properties.Resources.Color_Control, ""));
+            MapList.Add(new Map("Numbani", GametypeList[4], Properties.Resources.Icon_hybrid_pool, Properties.Resources.Color_Hybrid, ""));
+            MapList.Add(new Map("Oasis", GametypeList[2], Properties.Resources.Icon_control_pool, Properties.Resources.Color_Control, ""));
+            MapList.Add(new Map("Rialto", GametypeList[3], Properties.Resources.Icon_escort_pool, Properties.Resources.Color_Escort, ""));
+            MapList.Add(new Map("Route 66", GametypeList[3], Properties.Resources.Icon_escort_pool, Properties.Resources.Color_Escort, ""));
+            MapList.Add(new Map("Temple of Anubis", GametypeList[1], Properties.Resources.Icon_assault_pool, Properties.Resources.Color_Assault, ""));
+            MapList.Add(new Map("Volskaya Industries", GametypeList[1], Properties.Resources.Icon_assault_pool, Properties.Resources.Color_Assault, ""));
+            MapList.Add(new Map("Watchpoint: Gibraltar", GametypeList[3], Properties.Resources.Icon_escort_pool, Properties.Resources.Color_Escort, ""));
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void GenerateFileList()
+        {
+            Match1Files = new List<string>
+            {
+                "DivisionNumber.txt",
+                "m1Map.png",
+                "m1Map.txt",
+                "m1MapGametype.png",
+                "m1MapGametype.txt",
+                "m1MapWin.png",
+                "m1MapWin.txt",
+                "m1t1Score.txt",
+                "m1t2Score.txt",
+                "m2Map.png",
+                "m2Map.txt",
+                "m2MapGametype.png",
+                "m2MapGametype.txt",
+                "m2MapWin.png",
+                "m2MapWin.txt",
+                "m2t1Score.txt",
+                "m2t2Score.txt",
+                "m3Map.png",
+                "m3Map.txt",
+                "m3MapGametype.png",
+                "m3MapGametype.txt",
+                "m3MapWin.png",
+                "m3MapWin.txt",
+                "m3t1Score.txt",
+                "m3t2Score.txt",
+                "m4Map.png",
+                "m4Map.txt",
+                "m4MapGametype.png",
+                "m4MapGametype.txt",
+                "m4MapWin.png",
+                "m4MapWin.txt",
+                "m4t1Score.txt",
+                "m4t2Score.txt",
+                "m5Map.png",
+                "m5Map.txt",
+                "m5MapGametype.png",
+                "m5MapGametype.txt",
+                "m5MapWin.png",
+                "m5MapWin.txt",
+                "m5t1Score.txt",
+                "m5t2Score.txt",
+                "m6Map.png",
+                "m6Map.txt",
+                "m6MapGametype.png",
+                "m6MapGametype.txt",
+                "m6MapWin.png",
+                "m6MapWin.txt",
+                "m6t1Score.txt",
+                "m6t2Score.txt",
+                "m7Map.png",
+                "m7Map.txt",
+                "m7MapGametype.png",
+                "m7MapGametype.txt",
+                "m7MapWin.png",
+                "m7MapWin.txt",
+                "m7t1Score.txt",
+                "m7t2Score.txt",
+                "MessageBox.txt",
+                "t1Logo.png",
+                "t1Name.txt",
+                "t1p1Hero.png",
+                "t1p1Hero.txt",
+                "t1p1Name.txt",
+                "t1p1Role.png",
+                "t1p1Role.txt",
+                "t1p2Hero.png",
+                "t1p2Hero.txt",
+                "t1p2Name.txt",
+                "t1p2Role.png",
+                "t1p2Role.txt",
+                "t1p3Hero.png",
+                "t1p3Hero.txt",
+                "t1p3Name.txt",
+                "t1p3Role.png",
+                "t1p3Role.txt",
+                "t1p4Hero.png",
+                "t1p4Hero.txt",
+                "t1p4Name.txt",
+                "t1p4Role.png",
+                "t1p4Role.txt",
+                "t1p5Hero.png",
+                "t1p5Hero.txt",
+                "t1p5Name.txt",
+                "t1p5Role.png",
+                "t1p5Role.txt",
+                "t1p6Hero.png",
+                "t1p6Hero.txt",
+                "t1p6Name.txt",
+                "t1p6Role.png",
+                "t1p6Role.txt",
+                "t1Score.txt",
+                "t1Side.png",
+                "t1SR.txt",
+                "t2Logo.png",
+                "t2Name.txt",
+                "t2p1Hero.png",
+                "t2p1Hero.txt",
+                "t2p1Name.txt",
+                "t2p1Role.png",
+                "t2p1Role.txt",
+                "t2p2Hero.png",
+                "t2p2Hero.txt",
+                "t2p2Name.txt",
+                "t2p2Role.png",
+                "t2p2Role.txt",
+                "t2p3Hero.png",
+                "t2p3Hero.txt",
+                "t2p3Name.txt",
+                "t2p3Role.png",
+                "t2p3Role.txt",
+                "t2p4Hero.png",
+                "t2p4Hero.txt",
+                "t2p4Name.txt",
+                "t2p4Role.png",
+                "t2p4Role.txt",
+                "t2p5Hero.png",
+                "t2p5Hero.txt",
+                "t2p5Name.txt",
+                "t2p5Role.png",
+                "t2p5Role.txt",
+                "t2p6Hero.png",
+                "t2p6Hero.txt",
+                "t2p6Name.txt",
+                "t2p6Role.png",
+                "t2p6Role.txt",
+                "t2Score.txt",
+                "t2Side.png",
+                "t2SR.txt"
+            };
+
+            GeneralFiles = new List<string>
+            {
+                "analyst1.txt",
+                "analyst2.txt",
+                "caster1.txt",
+                "caster2.txt",
+                "host.txt",
+                "message.txt",
+                "utility1.txt",
+                "utility2.txt",
+                "utility3.txt",
+                "utility4.txt",
+                "utility5.txt",
+                "utility6.txt",
+                "utility7.txt",
+                "utility8.txt"
+            };
+
+            SettingFiles = new List<string>
+            {
+
+            };
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void GenerateFolderList()
+        {
+            FolderList = new List<string>
+            {
+                "\\Match1",
+                "\\General",
+                "\\Settings",
+                "\\Replay",
+                "\\Replay\\Playlist"
+            };
+        }
+        #endregion
     }
 }

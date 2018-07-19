@@ -117,7 +117,7 @@
             this.m1Defend = new System.Windows.Forms.RadioButton();
             this.m1Neutral = new System.Windows.Forms.RadioButton();
             this.m1DivisionLabel = new System.Windows.Forms.Label();
-            this.m1DivisionNumber = new System.Windows.Forms.TextBox();
+            this.m1MutualInfo = new System.Windows.Forms.TextBox();
             this.m1currentCheck = new System.Windows.Forms.CheckBox();
             this.m1UpdateButton = new System.Windows.Forms.Button();
             this.m1t2p6Hero = new System.Windows.Forms.ComboBox();
@@ -173,29 +173,29 @@
             this.generalUpdateButton = new System.Windows.Forms.Button();
             this.generalResetButton = new System.Windows.Forms.Button();
             this.utility8 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.utility8Label = new System.Windows.Forms.Label();
             this.utility7 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.utility7Label = new System.Windows.Forms.Label();
             this.utility6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.utility6Label = new System.Windows.Forms.Label();
             this.utility5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.utility5Label = new System.Windows.Forms.Label();
             this.utility4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.utility4Label = new System.Windows.Forms.Label();
             this.utility3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.utility3Label = new System.Windows.Forms.Label();
             this.utility2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.utility2Label = new System.Windows.Forms.Label();
             this.utility1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.utility1Label = new System.Windows.Forms.Label();
             this.analyst2 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.analyst2Label = new System.Windows.Forms.Label();
             this.analyst1 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.analyst1Label = new System.Windows.Forms.Label();
             this.caster2 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.caster2Label = new System.Windows.Forms.Label();
             this.caster1 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.caster1Label = new System.Windows.Forms.Label();
             this.host = new System.Windows.Forms.TextBox();
             this.hostLabel = new System.Windows.Forms.Label();
             this.message = new System.Windows.Forms.TextBox();
@@ -306,7 +306,7 @@
             this.Match_1.Controls.Add(this.m1m1Label);
             this.Match_1.Controls.Add(this.m1t1Side);
             this.Match_1.Controls.Add(this.m1DivisionLabel);
-            this.Match_1.Controls.Add(this.m1DivisionNumber);
+            this.Match_1.Controls.Add(this.m1MutualInfo);
             this.Match_1.Controls.Add(this.m1currentCheck);
             this.Match_1.Controls.Add(this.m1UpdateButton);
             this.Match_1.Controls.Add(this.m1t2p6Hero);
@@ -1389,12 +1389,12 @@
             this.m1DivisionLabel.TabIndex = 0;
             this.m1DivisionLabel.Text = "Mutual Info";
             // 
-            // m1DivisionNumber
+            // m1MutualInfo
             // 
-            this.m1DivisionNumber.Location = new System.Drawing.Point(445, 46);
-            this.m1DivisionNumber.Name = "m1DivisionNumber";
-            this.m1DivisionNumber.Size = new System.Drawing.Size(124, 20);
-            this.m1DivisionNumber.TabIndex = 85;
+            this.m1MutualInfo.Location = new System.Drawing.Point(445, 46);
+            this.m1MutualInfo.Name = "m1MutualInfo";
+            this.m1MutualInfo.Size = new System.Drawing.Size(124, 20);
+            this.m1MutualInfo.TabIndex = 85;
             // 
             // m1currentCheck
             // 
@@ -2164,29 +2164,29 @@
             this.General_Info.Controls.Add(this.generalUpdateButton);
             this.General_Info.Controls.Add(this.generalResetButton);
             this.General_Info.Controls.Add(this.utility8);
-            this.General_Info.Controls.Add(this.label9);
+            this.General_Info.Controls.Add(this.utility8Label);
             this.General_Info.Controls.Add(this.utility7);
-            this.General_Info.Controls.Add(this.label8);
+            this.General_Info.Controls.Add(this.utility7Label);
             this.General_Info.Controls.Add(this.utility6);
-            this.General_Info.Controls.Add(this.label6);
+            this.General_Info.Controls.Add(this.utility6Label);
             this.General_Info.Controls.Add(this.utility5);
-            this.General_Info.Controls.Add(this.label5);
+            this.General_Info.Controls.Add(this.utility5Label);
             this.General_Info.Controls.Add(this.utility4);
-            this.General_Info.Controls.Add(this.label4);
+            this.General_Info.Controls.Add(this.utility4Label);
             this.General_Info.Controls.Add(this.utility3);
-            this.General_Info.Controls.Add(this.label3);
+            this.General_Info.Controls.Add(this.utility3Label);
             this.General_Info.Controls.Add(this.utility2);
-            this.General_Info.Controls.Add(this.label2);
+            this.General_Info.Controls.Add(this.utility2Label);
             this.General_Info.Controls.Add(this.utility1);
-            this.General_Info.Controls.Add(this.label1);
+            this.General_Info.Controls.Add(this.utility1Label);
             this.General_Info.Controls.Add(this.analyst2);
-            this.General_Info.Controls.Add(this.label13);
+            this.General_Info.Controls.Add(this.analyst2Label);
             this.General_Info.Controls.Add(this.analyst1);
-            this.General_Info.Controls.Add(this.label12);
+            this.General_Info.Controls.Add(this.analyst1Label);
             this.General_Info.Controls.Add(this.caster2);
-            this.General_Info.Controls.Add(this.label11);
+            this.General_Info.Controls.Add(this.caster2Label);
             this.General_Info.Controls.Add(this.caster1);
-            this.General_Info.Controls.Add(this.label10);
+            this.General_Info.Controls.Add(this.caster1Label);
             this.General_Info.Controls.Add(this.host);
             this.General_Info.Controls.Add(this.hostLabel);
             this.General_Info.Controls.Add(this.message);
@@ -2258,14 +2258,14 @@
             this.utility8.Size = new System.Drawing.Size(176, 20);
             this.utility8.TabIndex = 28;
             // 
-            // label9
+            // utility8Label
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 391);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Utility8";
+            this.utility8Label.AutoSize = true;
+            this.utility8Label.Location = new System.Drawing.Point(8, 391);
+            this.utility8Label.Name = "utility8Label";
+            this.utility8Label.Size = new System.Drawing.Size(38, 13);
+            this.utility8Label.TabIndex = 27;
+            this.utility8Label.Text = "Utility8";
             // 
             // utility7
             // 
@@ -2274,14 +2274,14 @@
             this.utility7.Size = new System.Drawing.Size(176, 20);
             this.utility7.TabIndex = 26;
             // 
-            // label8
+            // utility7Label
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 365);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 13);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Utility7";
+            this.utility7Label.AutoSize = true;
+            this.utility7Label.Location = new System.Drawing.Point(8, 365);
+            this.utility7Label.Name = "utility7Label";
+            this.utility7Label.Size = new System.Drawing.Size(38, 13);
+            this.utility7Label.TabIndex = 25;
+            this.utility7Label.Text = "Utility7";
             // 
             // utility6
             // 
@@ -2290,14 +2290,14 @@
             this.utility6.Size = new System.Drawing.Size(176, 20);
             this.utility6.TabIndex = 24;
             // 
-            // label6
+            // utility6Label
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 339);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Utility6";
+            this.utility6Label.AutoSize = true;
+            this.utility6Label.Location = new System.Drawing.Point(8, 339);
+            this.utility6Label.Name = "utility6Label";
+            this.utility6Label.Size = new System.Drawing.Size(38, 13);
+            this.utility6Label.TabIndex = 23;
+            this.utility6Label.Text = "Utility6";
             // 
             // utility5
             // 
@@ -2306,14 +2306,14 @@
             this.utility5.Size = new System.Drawing.Size(176, 20);
             this.utility5.TabIndex = 22;
             // 
-            // label5
+            // utility5Label
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 313);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Utility5";
+            this.utility5Label.AutoSize = true;
+            this.utility5Label.Location = new System.Drawing.Point(8, 313);
+            this.utility5Label.Name = "utility5Label";
+            this.utility5Label.Size = new System.Drawing.Size(38, 13);
+            this.utility5Label.TabIndex = 21;
+            this.utility5Label.Text = "Utility5";
             // 
             // utility4
             // 
@@ -2322,14 +2322,14 @@
             this.utility4.Size = new System.Drawing.Size(176, 20);
             this.utility4.TabIndex = 20;
             // 
-            // label4
+            // utility4Label
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 287);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Utility4";
+            this.utility4Label.AutoSize = true;
+            this.utility4Label.Location = new System.Drawing.Point(8, 287);
+            this.utility4Label.Name = "utility4Label";
+            this.utility4Label.Size = new System.Drawing.Size(38, 13);
+            this.utility4Label.TabIndex = 19;
+            this.utility4Label.Text = "Utility4";
             // 
             // utility3
             // 
@@ -2338,14 +2338,14 @@
             this.utility3.Size = new System.Drawing.Size(176, 20);
             this.utility3.TabIndex = 18;
             // 
-            // label3
+            // utility3Label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 261);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Utility3";
+            this.utility3Label.AutoSize = true;
+            this.utility3Label.Location = new System.Drawing.Point(8, 261);
+            this.utility3Label.Name = "utility3Label";
+            this.utility3Label.Size = new System.Drawing.Size(38, 13);
+            this.utility3Label.TabIndex = 17;
+            this.utility3Label.Text = "Utility3";
             // 
             // utility2
             // 
@@ -2354,14 +2354,14 @@
             this.utility2.Size = new System.Drawing.Size(176, 20);
             this.utility2.TabIndex = 16;
             // 
-            // label2
+            // utility2Label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 235);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Utility2";
+            this.utility2Label.AutoSize = true;
+            this.utility2Label.Location = new System.Drawing.Point(8, 235);
+            this.utility2Label.Name = "utility2Label";
+            this.utility2Label.Size = new System.Drawing.Size(38, 13);
+            this.utility2Label.TabIndex = 15;
+            this.utility2Label.Text = "Utility2";
             // 
             // utility1
             // 
@@ -2370,14 +2370,14 @@
             this.utility1.Size = new System.Drawing.Size(176, 20);
             this.utility1.TabIndex = 14;
             // 
-            // label1
+            // utility1Label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 209);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Utility1";
+            this.utility1Label.AutoSize = true;
+            this.utility1Label.Location = new System.Drawing.Point(8, 209);
+            this.utility1Label.Name = "utility1Label";
+            this.utility1Label.Size = new System.Drawing.Size(38, 13);
+            this.utility1Label.TabIndex = 13;
+            this.utility1Label.Text = "Utility1";
             // 
             // analyst2
             // 
@@ -2386,14 +2386,14 @@
             this.analyst2.Size = new System.Drawing.Size(176, 20);
             this.analyst2.TabIndex = 12;
             // 
-            // label13
+            // analyst2Label
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(8, 183);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 13);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "Analyst2";
+            this.analyst2Label.AutoSize = true;
+            this.analyst2Label.Location = new System.Drawing.Point(8, 183);
+            this.analyst2Label.Name = "analyst2Label";
+            this.analyst2Label.Size = new System.Drawing.Size(47, 13);
+            this.analyst2Label.TabIndex = 11;
+            this.analyst2Label.Text = "Analyst2";
             // 
             // analyst1
             // 
@@ -2402,14 +2402,14 @@
             this.analyst1.Size = new System.Drawing.Size(176, 20);
             this.analyst1.TabIndex = 10;
             // 
-            // label12
+            // analyst1Label
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 157);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 13);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Analyst1";
+            this.analyst1Label.AutoSize = true;
+            this.analyst1Label.Location = new System.Drawing.Point(8, 157);
+            this.analyst1Label.Name = "analyst1Label";
+            this.analyst1Label.Size = new System.Drawing.Size(47, 13);
+            this.analyst1Label.TabIndex = 9;
+            this.analyst1Label.Text = "Analyst1";
             // 
             // caster2
             // 
@@ -2418,14 +2418,14 @@
             this.caster2.Size = new System.Drawing.Size(176, 20);
             this.caster2.TabIndex = 8;
             // 
-            // label11
+            // caster2Label
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 131);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 13);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Caster2";
+            this.caster2Label.AutoSize = true;
+            this.caster2Label.Location = new System.Drawing.Point(8, 131);
+            this.caster2Label.Name = "caster2Label";
+            this.caster2Label.Size = new System.Drawing.Size(43, 13);
+            this.caster2Label.TabIndex = 7;
+            this.caster2Label.Text = "Caster2";
             // 
             // caster1
             // 
@@ -2434,14 +2434,14 @@
             this.caster1.Size = new System.Drawing.Size(176, 20);
             this.caster1.TabIndex = 6;
             // 
-            // label10
+            // caster1Label
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 105);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 13);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Caster1";
+            this.caster1Label.AutoSize = true;
+            this.caster1Label.Location = new System.Drawing.Point(8, 105);
+            this.caster1Label.Name = "caster1Label";
+            this.caster1Label.Size = new System.Drawing.Size(43, 13);
+            this.caster1Label.TabIndex = 5;
+            this.caster1Label.Text = "Caster1";
             // 
             // host
             // 
@@ -2520,7 +2520,7 @@
         #endregion
 
 
-        #region 
+        #region Private Objects
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Match_1;
         private System.Windows.Forms.TextBox m1t1Name;
@@ -2571,9 +2571,8 @@
         private System.Windows.Forms.ComboBox m1t2p1Hero;
         private System.Windows.Forms.Button m1UpdateButton;
         private System.Windows.Forms.Label m1DivisionLabel;
-        private System.Windows.Forms.TextBox m1DivisionNumber;
+        private System.Windows.Forms.TextBox m1MutualInfo;
         private System.Windows.Forms.CheckBox m1currentCheck;
-        #endregion
 
         private System.Windows.Forms.TabPage General_Info;
         private System.Windows.Forms.RadioButton m1Neutral;
@@ -2617,33 +2616,33 @@
         private System.Windows.Forms.Label m1t2SRLabel;
         private System.Windows.Forms.Label m1t1SRLabel;
         private System.Windows.Forms.TextBox analyst2;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label analyst2Label;
         private System.Windows.Forms.TextBox analyst1;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label analyst1Label;
         private System.Windows.Forms.TextBox caster2;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label caster2Label;
         private System.Windows.Forms.TextBox caster1;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label caster1Label;
         private System.Windows.Forms.TextBox host;
         private System.Windows.Forms.Label hostLabel;
         private System.Windows.Forms.TextBox message;
         private System.Windows.Forms.Label messageLabel;
         private System.Windows.Forms.TextBox utility8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label utility8Label;
         private System.Windows.Forms.TextBox utility7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label utility7Label;
         private System.Windows.Forms.TextBox utility6;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label utility6Label;
         private System.Windows.Forms.TextBox utility5;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label utility5Label;
         private System.Windows.Forms.TextBox utility4;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label utility4Label;
         private System.Windows.Forms.TextBox utility3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label utility3Label;
         private System.Windows.Forms.TextBox utility2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label utility2Label;
         private System.Windows.Forms.TextBox utility1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label utility1Label;
         private System.Windows.Forms.Button generalUpdateButton;
         private System.Windows.Forms.Button generalResetButton;
         private System.Windows.Forms.RichTextBox description;
@@ -2692,5 +2691,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button replayClean;
+        #endregion
     }
 }

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="description.Text" xml:space="preserve">
-    <value>This application was developed to allow Overwatch esport production teams a simple way to present information to their audience. New updates typically follow hero and map releases. To find the latest version, you can go here: https://obsproject.com/forum/resources/overwatch-scoreboard-tool.522/
+    <value>This application was developed to allow Overwatch esport production teams a simple way to present information to their audience. New updates typically follow hero and map releases. To find the latest version, you can go here: https://broadcast.gg/
 
 For feature requests, bug reports, or just to contact the developer, go to https://twitter.com/pimpindacrib
 
