@@ -200,6 +200,38 @@
             this.hostLabel = new System.Windows.Forms.Label();
             this.message = new System.Windows.Forms.TextBox();
             this.messageLabel = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.playerHero3D3 = new System.Windows.Forms.RadioButton();
+            this.playerHeroPortrait3 = new System.Windows.Forms.RadioButton();
+            this.playerHeroIcon3 = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.playerHero3D2 = new System.Windows.Forms.RadioButton();
+            this.playerHeroPortrait2 = new System.Windows.Forms.RadioButton();
+            this.playerHeroIcon2 = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.playerHero3D1 = new System.Windows.Forms.RadioButton();
+            this.playerHeroPortrait1 = new System.Windows.Forms.RadioButton();
+            this.playerHeroIcon1 = new System.Windows.Forms.RadioButton();
+            this.playerUpdate = new System.Windows.Forms.Button();
+            this.playerReset = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.playerSRBox = new System.Windows.Forms.TextBox();
+            this.playerTeamLogoButton = new System.Windows.Forms.Button();
+            this.playerTeamLogoBox = new System.Windows.Forms.TextBox();
+            this.playerTeamLogoLabel = new System.Windows.Forms.Label();
+            this.playerTeamBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.playerHeroBox3 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.playerHeroBox2 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.playerRoleBox = new System.Windows.Forms.ComboBox();
+            this.playerHeroBox1 = new System.Windows.Forms.ComboBox();
+            this.playerBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Match_1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -223,12 +255,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.m1t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m1t1Score)).BeginInit();
             this.General_Info.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Match_1);
             this.tabControl1.Controls.Add(this.General_Info);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -360,7 +397,7 @@
             this.Match_1.Padding = new System.Windows.Forms.Padding(3);
             this.Match_1.Size = new System.Drawing.Size(659, 467);
             this.Match_1.TabIndex = 0;
-            this.Match_1.Text = "Match 1";
+            this.Match_1.Text = "Match";
             this.Match_1.UseVisualStyleBackColor = true;
             // 
             // label20
@@ -1442,6 +1479,7 @@
             "Reinhardt",
             "Roadhog",
             "Winston",
+            "Wrecking Ball",
             "Zarya",
             "Ana",
             "Brigitte",
@@ -1481,6 +1519,7 @@
             "Reinhardt",
             "Roadhog",
             "Winston",
+            "Wrecking Ball",
             "Zarya",
             "Ana",
             "Brigitte",
@@ -1520,6 +1559,7 @@
             "Reinhardt",
             "Roadhog",
             "Winston",
+            "Wrecking Ball",
             "Zarya",
             "Ana",
             "Brigitte",
@@ -1559,6 +1599,7 @@
             "Reinhardt",
             "Roadhog",
             "Winston",
+            "Wrecking Ball",
             "Zarya",
             "Ana",
             "Brigitte",
@@ -1598,6 +1639,7 @@
             "Reinhardt",
             "Roadhog",
             "Winston",
+            "Wrecking Ball",
             "Zarya",
             "Ana",
             "Brigitte",
@@ -1637,6 +1679,7 @@
             "Reinhardt",
             "Roadhog",
             "Winston",
+            "Wrecking Ball",
             "Zarya",
             "Ana",
             "Brigitte",
@@ -1676,6 +1719,7 @@
             "Reinhardt",
             "Roadhog",
             "Winston",
+            "Wrecking Ball",
             "Zarya",
             "Ana",
             "Brigitte",
@@ -1714,6 +1758,7 @@
             "Reinhardt",
             "Roadhog",
             "Winston",
+            "Wrecking Ball",
             "Zarya",
             "Ana",
             "Brigitte",
@@ -1752,6 +1797,7 @@
             "Reinhardt",
             "Roadhog",
             "Winston",
+            "Wrecking Ball",
             "Zarya",
             "Ana",
             "Brigitte",
@@ -1790,6 +1836,7 @@
             "Reinhardt",
             "Roadhog",
             "Winston",
+            "Wrecking Ball",
             "Zarya",
             "Ana",
             "Brigitte",
@@ -1828,6 +1875,7 @@
             "Reinhardt",
             "Roadhog",
             "Winston",
+            "Wrecking Ball",
             "Zarya",
             "Ana",
             "Brigitte",
@@ -1866,6 +1914,7 @@
             "Reinhardt",
             "Roadhog",
             "Winston",
+            "Wrecking Ball",
             "Zarya",
             "Ana",
             "Brigitte",
@@ -2475,6 +2524,431 @@
             this.messageLabel.TabIndex = 1;
             this.messageLabel.Text = "Message";
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.Controls.Add(this.groupBox3);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.playerUpdate);
+            this.tabPage1.Controls.Add(this.playerReset);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.playerSRBox);
+            this.tabPage1.Controls.Add(this.playerTeamLogoButton);
+            this.tabPage1.Controls.Add(this.playerTeamLogoBox);
+            this.tabPage1.Controls.Add(this.playerTeamLogoLabel);
+            this.tabPage1.Controls.Add(this.playerTeamBox);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.playerHeroBox3);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.playerHeroBox2);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.playerRoleBox);
+            this.tabPage1.Controls.Add(this.playerHeroBox1);
+            this.tabPage1.Controls.Add(this.playerBox);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(659, 467);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Player";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.playerHero3D3);
+            this.groupBox4.Controls.Add(this.playerHeroPortrait3);
+            this.groupBox4.Controls.Add(this.playerHeroIcon3);
+            this.groupBox4.Location = new System.Drawing.Point(366, 85);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(70, 77);
+            this.groupBox4.TabIndex = 97;
+            this.groupBox4.TabStop = false;
+            // 
+            // playerHero3D3
+            // 
+            this.playerHero3D3.AutoSize = true;
+            this.playerHero3D3.Location = new System.Drawing.Point(6, 55);
+            this.playerHero3D3.Name = "playerHero3D3";
+            this.playerHero3D3.Size = new System.Drawing.Size(39, 17);
+            this.playerHero3D3.TabIndex = 94;
+            this.playerHero3D3.Text = "3D";
+            this.playerHero3D3.UseVisualStyleBackColor = true;
+            // 
+            // playerHeroPortrait3
+            // 
+            this.playerHeroPortrait3.AutoSize = true;
+            this.playerHeroPortrait3.Checked = true;
+            this.playerHeroPortrait3.Location = new System.Drawing.Point(6, 9);
+            this.playerHeroPortrait3.Name = "playerHeroPortrait3";
+            this.playerHeroPortrait3.Size = new System.Drawing.Size(58, 17);
+            this.playerHeroPortrait3.TabIndex = 92;
+            this.playerHeroPortrait3.TabStop = true;
+            this.playerHeroPortrait3.Text = "Portrait";
+            this.playerHeroPortrait3.UseVisualStyleBackColor = true;
+            // 
+            // playerHeroIcon3
+            // 
+            this.playerHeroIcon3.AutoSize = true;
+            this.playerHeroIcon3.Location = new System.Drawing.Point(6, 32);
+            this.playerHeroIcon3.Name = "playerHeroIcon3";
+            this.playerHeroIcon3.Size = new System.Drawing.Size(46, 17);
+            this.playerHeroIcon3.TabIndex = 93;
+            this.playerHeroIcon3.Text = "Icon";
+            this.playerHeroIcon3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.playerHero3D2);
+            this.groupBox3.Controls.Add(this.playerHeroPortrait2);
+            this.groupBox3.Controls.Add(this.playerHeroIcon2);
+            this.groupBox3.Location = new System.Drawing.Point(236, 85);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(70, 77);
+            this.groupBox3.TabIndex = 96;
+            this.groupBox3.TabStop = false;
+            // 
+            // playerHero3D2
+            // 
+            this.playerHero3D2.AutoSize = true;
+            this.playerHero3D2.Location = new System.Drawing.Point(6, 55);
+            this.playerHero3D2.Name = "playerHero3D2";
+            this.playerHero3D2.Size = new System.Drawing.Size(39, 17);
+            this.playerHero3D2.TabIndex = 94;
+            this.playerHero3D2.Text = "3D";
+            this.playerHero3D2.UseVisualStyleBackColor = true;
+            // 
+            // playerHeroPortrait2
+            // 
+            this.playerHeroPortrait2.AutoSize = true;
+            this.playerHeroPortrait2.Checked = true;
+            this.playerHeroPortrait2.Location = new System.Drawing.Point(6, 9);
+            this.playerHeroPortrait2.Name = "playerHeroPortrait2";
+            this.playerHeroPortrait2.Size = new System.Drawing.Size(58, 17);
+            this.playerHeroPortrait2.TabIndex = 92;
+            this.playerHeroPortrait2.TabStop = true;
+            this.playerHeroPortrait2.Text = "Portrait";
+            this.playerHeroPortrait2.UseVisualStyleBackColor = true;
+            // 
+            // playerHeroIcon2
+            // 
+            this.playerHeroIcon2.AutoSize = true;
+            this.playerHeroIcon2.Location = new System.Drawing.Point(6, 32);
+            this.playerHeroIcon2.Name = "playerHeroIcon2";
+            this.playerHeroIcon2.Size = new System.Drawing.Size(46, 17);
+            this.playerHeroIcon2.TabIndex = 93;
+            this.playerHeroIcon2.Text = "Icon";
+            this.playerHeroIcon2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.playerHero3D1);
+            this.groupBox1.Controls.Add(this.playerHeroPortrait1);
+            this.groupBox1.Controls.Add(this.playerHeroIcon1);
+            this.groupBox1.Location = new System.Drawing.Point(109, 85);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(70, 77);
+            this.groupBox1.TabIndex = 95;
+            this.groupBox1.TabStop = false;
+            // 
+            // playerHero3D1
+            // 
+            this.playerHero3D1.AutoSize = true;
+            this.playerHero3D1.Location = new System.Drawing.Point(6, 55);
+            this.playerHero3D1.Name = "playerHero3D1";
+            this.playerHero3D1.Size = new System.Drawing.Size(39, 17);
+            this.playerHero3D1.TabIndex = 94;
+            this.playerHero3D1.Text = "3D";
+            this.playerHero3D1.UseVisualStyleBackColor = true;
+            // 
+            // playerHeroPortrait1
+            // 
+            this.playerHeroPortrait1.AutoSize = true;
+            this.playerHeroPortrait1.Checked = true;
+            this.playerHeroPortrait1.Location = new System.Drawing.Point(6, 9);
+            this.playerHeroPortrait1.Name = "playerHeroPortrait1";
+            this.playerHeroPortrait1.Size = new System.Drawing.Size(58, 17);
+            this.playerHeroPortrait1.TabIndex = 92;
+            this.playerHeroPortrait1.TabStop = true;
+            this.playerHeroPortrait1.Text = "Portrait";
+            this.playerHeroPortrait1.UseVisualStyleBackColor = true;
+            // 
+            // playerHeroIcon1
+            // 
+            this.playerHeroIcon1.AutoSize = true;
+            this.playerHeroIcon1.Location = new System.Drawing.Point(6, 32);
+            this.playerHeroIcon1.Name = "playerHeroIcon1";
+            this.playerHeroIcon1.Size = new System.Drawing.Size(46, 17);
+            this.playerHeroIcon1.TabIndex = 93;
+            this.playerHeroIcon1.Text = "Icon";
+            this.playerHeroIcon1.UseVisualStyleBackColor = true;
+            // 
+            // playerUpdate
+            // 
+            this.playerUpdate.Location = new System.Drawing.Point(578, 6);
+            this.playerUpdate.Name = "playerUpdate";
+            this.playerUpdate.Size = new System.Drawing.Size(75, 23);
+            this.playerUpdate.TabIndex = 94;
+            this.playerUpdate.Text = "Update";
+            this.playerUpdate.UseVisualStyleBackColor = true;
+            this.playerUpdate.Click += new System.EventHandler(this.playerUpdate_Click);
+            // 
+            // playerReset
+            // 
+            this.playerReset.Location = new System.Drawing.Point(497, 6);
+            this.playerReset.Name = "playerReset";
+            this.playerReset.Size = new System.Drawing.Size(75, 23);
+            this.playerReset.TabIndex = 93;
+            this.playerReset.Text = "Reset";
+            this.playerReset.UseVisualStyleBackColor = true;
+            this.playerReset.Click += new System.EventHandler(this.playerReset_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(575, 42);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(22, 13);
+            this.label9.TabIndex = 91;
+            this.label9.Text = "SR";
+            // 
+            // playerSRBox
+            // 
+            this.playerSRBox.Location = new System.Drawing.Point(578, 58);
+            this.playerSRBox.Name = "playerSRBox";
+            this.playerSRBox.Size = new System.Drawing.Size(75, 20);
+            this.playerSRBox.TabIndex = 92;
+            // 
+            // playerTeamLogoButton
+            // 
+            this.playerTeamLogoButton.Location = new System.Drawing.Point(329, 17);
+            this.playerTeamLogoButton.Name = "playerTeamLogoButton";
+            this.playerTeamLogoButton.Size = new System.Drawing.Size(27, 23);
+            this.playerTeamLogoButton.TabIndex = 90;
+            this.playerTeamLogoButton.Text = "...";
+            this.playerTeamLogoButton.UseVisualStyleBackColor = true;
+            this.playerTeamLogoButton.Click += new System.EventHandler(this.playerTeamLogoButton_Click);
+            // 
+            // playerTeamLogoBox
+            // 
+            this.playerTeamLogoBox.Enabled = false;
+            this.playerTeamLogoBox.Location = new System.Drawing.Point(187, 19);
+            this.playerTeamLogoBox.Name = "playerTeamLogoBox";
+            this.playerTeamLogoBox.Size = new System.Drawing.Size(136, 20);
+            this.playerTeamLogoBox.TabIndex = 89;
+            // 
+            // playerTeamLogoLabel
+            // 
+            this.playerTeamLogoLabel.AutoSize = true;
+            this.playerTeamLogoLabel.Location = new System.Drawing.Point(184, 3);
+            this.playerTeamLogoLabel.Name = "playerTeamLogoLabel";
+            this.playerTeamLogoLabel.Size = new System.Drawing.Size(61, 13);
+            this.playerTeamLogoLabel.TabIndex = 88;
+            this.playerTeamLogoLabel.Text = "Team Logo";
+            // 
+            // playerTeamBox
+            // 
+            this.playerTeamBox.Location = new System.Drawing.Point(3, 19);
+            this.playerTeamBox.Name = "playerTeamBox";
+            this.playerTeamBox.Size = new System.Drawing.Size(178, 20);
+            this.playerTeamBox.TabIndex = 27;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Team";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(363, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Hero";
+            // 
+            // playerHeroBox3
+            // 
+            this.playerHeroBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.playerHeroBox3.FormattingEnabled = true;
+            this.playerHeroBox3.Items.AddRange(new object[] {
+            "",
+            "Doomfist",
+            "Genji",
+            "McCree",
+            "Pharah",
+            "Reaper",
+            "Soldier: 76",
+            "Sombra",
+            "Tracer",
+            "Bastion",
+            "Hanzo",
+            "Junkrat",
+            "Mei",
+            "Torbjörn",
+            "Widowmaker",
+            "D.Va",
+            "Orisa",
+            "Reinhardt",
+            "Roadhog",
+            "Winston",
+            "Wrecking Ball",
+            "Zarya",
+            "Ana",
+            "Brigitte",
+            "Lúcio",
+            "Mercy",
+            "Moira",
+            "Symmetra",
+            "Zenyatta"});
+            this.playerHeroBox3.Location = new System.Drawing.Point(363, 58);
+            this.playerHeroBox3.Name = "playerHeroBox3";
+            this.playerHeroBox3.Size = new System.Drawing.Size(121, 21);
+            this.playerHeroBox3.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(236, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Hero";
+            // 
+            // playerHeroBox2
+            // 
+            this.playerHeroBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.playerHeroBox2.FormattingEnabled = true;
+            this.playerHeroBox2.Items.AddRange(new object[] {
+            "",
+            "Doomfist",
+            "Genji",
+            "McCree",
+            "Pharah",
+            "Reaper",
+            "Soldier: 76",
+            "Sombra",
+            "Tracer",
+            "Bastion",
+            "Hanzo",
+            "Junkrat",
+            "Mei",
+            "Torbjörn",
+            "Widowmaker",
+            "D.Va",
+            "Orisa",
+            "Reinhardt",
+            "Roadhog",
+            "Winston",
+            "Wrecking Ball",
+            "Zarya",
+            "Ana",
+            "Brigitte",
+            "Lúcio",
+            "Mercy",
+            "Moira",
+            "Symmetra",
+            "Zenyatta"});
+            this.playerHeroBox2.Location = new System.Drawing.Point(236, 58);
+            this.playerHeroBox2.Name = "playerHeroBox2";
+            this.playerHeroBox2.Size = new System.Drawing.Size(121, 21);
+            this.playerHeroBox2.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(490, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Role";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(109, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Hero";
+            // 
+            // playerRoleBox
+            // 
+            this.playerRoleBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.playerRoleBox.FormattingEnabled = true;
+            this.playerRoleBox.Items.AddRange(new object[] {
+            "",
+            "DPS",
+            "Flex",
+            "Support",
+            "Tank"});
+            this.playerRoleBox.Location = new System.Drawing.Point(490, 57);
+            this.playerRoleBox.Name = "playerRoleBox";
+            this.playerRoleBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.playerRoleBox.Size = new System.Drawing.Size(82, 21);
+            this.playerRoleBox.TabIndex = 21;
+            // 
+            // playerHeroBox1
+            // 
+            this.playerHeroBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.playerHeroBox1.FormattingEnabled = true;
+            this.playerHeroBox1.Items.AddRange(new object[] {
+            "",
+            "Doomfist",
+            "Genji",
+            "McCree",
+            "Pharah",
+            "Reaper",
+            "Soldier: 76",
+            "Sombra",
+            "Tracer",
+            "Bastion",
+            "Hanzo",
+            "Junkrat",
+            "Mei",
+            "Torbjörn",
+            "Widowmaker",
+            "D.Va",
+            "Orisa",
+            "Reinhardt",
+            "Roadhog",
+            "Winston",
+            "Wrecking Ball",
+            "Zarya",
+            "Ana",
+            "Brigitte",
+            "Lúcio",
+            "Mercy",
+            "Moira",
+            "Symmetra",
+            "Zenyatta"});
+            this.playerHeroBox1.Location = new System.Drawing.Point(109, 58);
+            this.playerHeroBox1.Name = "playerHeroBox1";
+            this.playerHeroBox1.Size = new System.Drawing.Size(121, 21);
+            this.playerHeroBox1.TabIndex = 20;
+            // 
+            // playerBox
+            // 
+            this.playerBox.Location = new System.Drawing.Point(3, 58);
+            this.playerBox.Name = "playerBox";
+            this.playerBox.Size = new System.Drawing.Size(100, 20);
+            this.playerBox.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Player";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2513,6 +2987,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.m1t1Score)).EndInit();
             this.General_Info.ResumeLayout(false);
             this.General_Info.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2692,5 +3174,38 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button replayClean;
         #endregion
+
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox playerHeroBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox playerHeroBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox playerRoleBox;
+        private System.Windows.Forms.ComboBox playerHeroBox1;
+        private System.Windows.Forms.TextBox playerBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox playerSRBox;
+        private System.Windows.Forms.Button playerTeamLogoButton;
+        private System.Windows.Forms.TextBox playerTeamLogoBox;
+        private System.Windows.Forms.Label playerTeamLogoLabel;
+        private System.Windows.Forms.TextBox playerTeamBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button playerUpdate;
+        private System.Windows.Forms.Button playerReset;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton playerHero3D3;
+        private System.Windows.Forms.RadioButton playerHeroPortrait3;
+        private System.Windows.Forms.RadioButton playerHeroIcon3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton playerHero3D2;
+        private System.Windows.Forms.RadioButton playerHeroPortrait2;
+        private System.Windows.Forms.RadioButton playerHeroIcon2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton playerHero3D1;
+        private System.Windows.Forms.RadioButton playerHeroPortrait1;
+        private System.Windows.Forms.RadioButton playerHeroIcon1;
     }
 }

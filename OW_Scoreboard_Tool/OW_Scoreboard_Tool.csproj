@@ -181,6 +181,9 @@
     <None Include="Resources\Icon-none.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\3D-WreckingBall.png" />
+    <Content Include="Resources\Icon-Wrecking_Ball.png" />
+    <Content Include="Resources\WreckingBall.png" />
     <None Include="Resources\Icon-rialto.png" />
     <None Include="Resources\Desat Rialto.png" />
     <None Include="Resources\Color Rialto.png" />
@@ -320,6 +323,7 @@
     <None Include="Hero Portraits\Ana.png" />
     <None Include="Hero Portraits\Soldier76.png" />
     <Content Include="Hero Portraits\Moira.png" />
+    <Content Include="Hero Portraits\WreckingBall.png" />
     <Content Include="owul_logo_gray.ico" />
     <None Include="Resources\Icon-assault.png" />
     <None Include="Resources\Icon-control.png" />

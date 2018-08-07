@@ -39,6 +39,7 @@ namespace OW_Scoreboard_Tool
         List<string> FolderList;
         List<string> Match1Files;
         List<string> GeneralFiles;
+        List<string> PlayerFiles;
         List<string> SettingFiles;
         /*string intros = "\\Intros";
         string[] introsList = new string[] {
@@ -194,6 +195,16 @@ namespace OW_Scoreboard_Tool
             loadCombo(m1m5Map, "Match1", "m5Map");
             loadCombo(m1m6Map, "Match1", "m6Map");
             loadCombo(m1m7Map, "Match1", "m7Map");
+
+            loadText(playerBox, "Player", "player");
+            loadText(playerTeamBox, "Player", "team");
+            loadText(playerTeamLogoBox, "Player", "logo");
+            loadText(playerSRBox, "Player", "sr");
+
+            loadCombo(playerHeroBox1, "Player", "hero1");
+            loadCombo(playerHeroBox2, "Player", "hero2");
+            loadCombo(playerHeroBox3, "Player", "hero3");
+            loadCombo(playerRoleBox, "Player", "role");
 
         }
 
@@ -556,7 +567,7 @@ namespace OW_Scoreboard_Tool
             updateLogos(m1t2Logo, "Match1", "t2Logo");
 
             updateSeries();
-            Match1.printAll();
+            //Match1.printAll();
 
 
             if (m1currentCheck.Checked == true)
@@ -698,6 +709,54 @@ namespace OW_Scoreboard_Tool
         private void button2_Click(object sender, EventArgs e)
         {
             GetLogoFile(m1t2Logo);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void playerReset_Click(object sender, EventArgs e)
+        {
+            resetText(playerBox);
+            resetText(playerTeamBox);
+            resetText(playerTeamLogoBox);
+            resetText(playerSRBox);
+
+            resetHero(playerHeroBox1);
+            resetHero(playerHeroBox2);
+            resetHero(playerHeroBox3);
+            resetRole(playerRoleBox);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void playerUpdate_Click(object sender, EventArgs e)
+        {
+            updateText(playerBox, "Player", "player");
+            updateText(playerTeamBox, "Player", "team");
+            updateText(playerSRBox, "Player", "sr");
+
+            updateHero(playerHeroBox1, playerHeroPortrait1, playerHeroIcon1, playerHero3D1, "Player", "hero1");
+            updateHero(playerHeroBox2, playerHeroPortrait2, playerHeroIcon2, playerHero3D2, "Player", "hero2");
+            updateHero(playerHeroBox3, playerHeroPortrait3, playerHeroIcon3, playerHero3D3, "Player", "hero3");
+
+            updateRole(playerRoleBox, "Player", "role");
+
+            updateLogos(playerTeamLogoBox, "Player", "logo");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void playerTeamLogoButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(playerTeamLogoBox);
         }
 
         #endregion
@@ -1122,6 +1181,21 @@ namespace OW_Scoreboard_Tool
                     else
                     {
                         Properties.Resources.Winston.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                }
+                else if (field.SelectedItem.ToString().Equals("Wrecking Ball"))
+                {
+                    if (radio2.Checked == true)
+                    {
+                        Properties.Resources.Icon_Wrecking_Ball.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else if (radio3.Checked == true)
+                    {
+                        Properties.Resources._3D_WreckingBall.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    else
+                    {
+                        Properties.Resources.WreckingBall.Save(path + "\\" + folder + "\\" + file + ".png");
                     }
                 }
                 else if (field.SelectedItem.ToString().Equals("Zarya"))
@@ -1911,13 +1985,13 @@ namespace OW_Scoreboard_Tool
         {
             List<Map> mapPool = new List<Map>
             {
-                MapList.FirstOrDefault(s => s.Name == m1m1Map.Text),
-                MapList.FirstOrDefault(s => s.Name == m1m2Map.Text),
-                MapList.FirstOrDefault(s => s.Name == m1m3Map.Text),
-                MapList.FirstOrDefault(s => s.Name == m1m4Map.Text),
-                MapList.FirstOrDefault(s => s.Name == m1m5Map.Text),
-                MapList.FirstOrDefault(s => s.Name == m1m6Map.Text),
-                MapList.FirstOrDefault(s => s.Name == m1m7Map.Text)
+                MapList.SingleOrDefault(s => s.Name == m1m1Map.Text),
+                MapList.SingleOrDefault(s => s.Name == m1m2Map.Text),
+                MapList.SingleOrDefault(s => s.Name == m1m3Map.Text),
+                MapList.SingleOrDefault(s => s.Name == m1m4Map.Text),
+                MapList.SingleOrDefault(s => s.Name == m1m5Map.Text),
+                MapList.SingleOrDefault(s => s.Name == m1m6Map.Text),
+                MapList.SingleOrDefault(s => s.Name == m1m7Map.Text)
             };
 
             return mapPool;
@@ -2043,12 +2117,19 @@ namespace OW_Scoreboard_Tool
                     File.Create(path + FolderList[1] + "\\" + file).Close();
                 }
             }
-
-            foreach (var file in SettingFiles)
+            foreach (var file in PlayerFiles)
             {
                 if (!File.Exists(path + FolderList[2] + "\\" + file))
                 {
                     File.Create(path + FolderList[2] + "\\" + file).Close();
+                }
+            }
+
+            foreach (var file in SettingFiles)
+            {
+                if (!File.Exists(path + FolderList[3] + "\\" + file))
+                {
+                    File.Create(path + FolderList[3] + "\\" + file).Close();
                 }
             }
 
@@ -2225,7 +2306,7 @@ namespace OW_Scoreboard_Tool
             HeroList.Add(new Hero("Tracer", Properties.Resources.Icon_tracer, Properties.Resources.Tracer, Properties.Resources._3D_Tracer));
             HeroList.Add(new Hero("Widowmaker", Properties.Resources.Icon_widowmaker, Properties.Resources.Widowmaker, Properties.Resources._3D_Widowmaker));
             HeroList.Add(new Hero("Winston", Properties.Resources.Icon_winston, Properties.Resources.Winston, Properties.Resources._3D_Winston));
-            HeroList.Add(new Hero("Wrecking Ball", Properties.Resources.Icon_none, Properties.Resources.Icon_none, Properties.Resources.Icon_none));
+            HeroList.Add(new Hero("Wrecking Ball", Properties.Resources.Icon_Wrecking_Ball, Properties.Resources.WreckingBall, Properties.Resources._3D_WreckingBall));
             HeroList.Add(new Hero("Zarya", Properties.Resources.Icon_zarya, Properties.Resources.Zarya, Properties.Resources._3D_Zarya));
             HeroList.Add(new Hero("Zenyatta", Properties.Resources.Icon_zenyatta, Properties.Resources.Zenyatta, Properties.Resources._3D_Zenyatta));
         }
@@ -2426,6 +2507,23 @@ namespace OW_Scoreboard_Tool
                 "utility8.txt"
             };
 
+            PlayerFiles = new List<string>
+            {
+                "hero1.png",
+                "hero1.txt",
+                "hero2.png",
+                "hero2.txt",
+                "hero3.png",
+                "hero3.txt",
+                "logo.png",
+                "logo.txt",
+                "player.txt",
+                "role.png",
+                "role.txt",
+                "sr.txt",
+                "team.txt",
+            };
+
             SettingFiles = new List<string>
             {
 
@@ -2441,11 +2539,13 @@ namespace OW_Scoreboard_Tool
             {
                 "\\Match1",
                 "\\General",
+                "\\Player",
                 "\\Settings",
                 "\\Replay",
                 "\\Replay\\Playlist"
             };
         }
         #endregion
+
     }
 }

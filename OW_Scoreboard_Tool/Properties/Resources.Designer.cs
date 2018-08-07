@@ -313,6 +313,16 @@ namespace OW_Scoreboard_Tool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3D_WreckingBall {
+            get {
+                object obj = ResourceManager.GetObject("_3D_WreckingBall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3D_Zarya {
             get {
                 object obj = ResourceManager.GetObject("_3D_Zarya", resourceCulture);
@@ -1463,6 +1473,16 @@ namespace OW_Scoreboard_Tool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_Wrecking_Ball {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Wrecking_Ball", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_zarya {
             get {
                 object obj = ResourceManager.GetObject("Icon_zarya", resourceCulture);
@@ -1656,6 +1676,16 @@ namespace OW_Scoreboard_Tool.Properties {
         internal static System.Drawing.Bitmap Winston {
             get {
                 object obj = ResourceManager.GetObject("Winston", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WreckingBall {
+            get {
+                object obj = ResourceManager.GetObject("WreckingBall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

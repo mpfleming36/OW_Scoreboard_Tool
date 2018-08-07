@@ -11,16 +11,16 @@ namespace OW_Scoreboard_Tool.Entities
     public class Map
     {
         #region Properties
-        private string _name;
-        private Gametype _gametype;
-        private Bitmap _icon;
-        private Bitmap _wide;
-        private bool _completed;
-        private bool _selected;
-        private string _introPath;
-        private string _homeScore;
-        private string _awayScore;
-        private Team _winner;
+        private string _name = "";
+        private Gametype _gametype = new Gametype();
+        private Bitmap _icon = Properties.Resources.Icon_none;
+        private Bitmap _wide = Properties.Resources.Icon_none;
+        private bool _completed = false;
+        private bool _selected = false;
+        private string _introPath = "";
+        private string _homeScore = "";
+        private string _awayScore = "";
+        private Team _winner = new Team();
 
         public string Name { get => _name; set => _name = value; }
         public Gametype Gametype { get => _gametype; set => _gametype = value; }
