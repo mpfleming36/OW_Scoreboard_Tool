@@ -2246,8 +2246,7 @@ namespace OW_Scoreboard_Tool
 
             }
 
-        }
-        
+        } 
         
         /// <summary>
         /// 
@@ -2262,7 +2261,6 @@ namespace OW_Scoreboard_Tool
             field.Text = open.FileName;
 
         }
-
 
         #region Generators
         /// <summary>
