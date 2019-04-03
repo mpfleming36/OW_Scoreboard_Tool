@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace OW_Scoreboard_Tool.Entities
 {
@@ -14,6 +15,7 @@ namespace OW_Scoreboard_Tool.Entities
         private Bitmap _icon;
 
         public string Name { get => _name; set => _name = value; }
+        [XmlIgnore]
         public Bitmap Icon { get => _icon; set => _icon = value; }
         #endregion
 

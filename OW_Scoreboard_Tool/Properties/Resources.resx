@@ -613,4 +613,130 @@
   <data name="_3D_WreckingBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3D-WreckingBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Ana_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ana_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bastion_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bastion_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Brigitte_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Brigitte_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Doomfist_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doomfist_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_Va_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D.Va_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Genji_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Genji_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hanzo_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hanzo_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Junkrat_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Junkrat_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lucio_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucio_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="McCree_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\McCree_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mei_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mei_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mercy_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mercy_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Moira_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Moira_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orisa_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orisa_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pharah_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pharah_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reaper_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reaper_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reinhardt_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reinhardt_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Roadhog_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Roadhog_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Soldier__76_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Soldier-_76_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sombra_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sombra_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Symmetra_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Symmetra_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Torbjorn_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torbjorn_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tracer_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tracer_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Widowmaker_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Widowmaker_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Winston_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Winston_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wrecking_Ball_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wrecking_Ball_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zarya_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Zarya_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zenyatta_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Zenyatta_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Color_Busan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Color Busan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Desat_Busan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Desat Busan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_busan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-busan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ashe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Hero Portraits\Ashe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ashe_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ashe_OWL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Ashe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Ashe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_3D_Ashe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3D-Ashe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baptiste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\baptiste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baptiste_OWL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\baptiste_owl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Color_Paris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\color paris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Desat_Paris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\desat paris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Baptiste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icon-baptiste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_paris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icon-paris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_3D_Baptiste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\3d-baptiste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

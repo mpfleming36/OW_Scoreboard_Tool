@@ -12,16 +12,18 @@ namespace OW_Scoreboard_Tool.Entities
         private string _name;
         private Team _home;
         private Team _away;
-        private List<Map> _maps;
+        private List<Game> _games;
         private string _homeScore;
         private string _awayScore;
+        private string _version;
 
         public string Name { get => _name; set => _name = value; }
         public Team Home { get => _home; set => _home = value; }
         public Team Away { get => _away; set => _away = value; }
-        public List<Map> Maps { get => _maps; set => _maps = value; }
+        public List<Game> Games { get => _games; set => _games = value; }
         public string HomeScore { get => _homeScore; set => _homeScore = value; }
         public string AwayScore { get => _awayScore; set => _awayScore = value; }
+        public string Version { get => _version; set => _version = value; }
         #endregion
 
         #region Constructors
@@ -42,12 +44,12 @@ namespace OW_Scoreboard_Tool.Entities
         /// <param name="maps"></param>
         /// <param name="homeScore"></param>
         /// <param name="awayScore"></param>
-        public Series(string name, Team home, Team away, List<Map> maps, string homeScore, string awayScore)
+        public Series(string name, Team home, Team away, List<Game> games, string homeScore, string awayScore)
         {
             _name = name;
             _home = home;
             _away = away;
-            _maps = maps;
+            _games = games;
             HomeScore = homeScore;
             AwayScore = awayScore;
         }
@@ -72,13 +74,13 @@ namespace OW_Scoreboard_Tool.Entities
                 Console.Out.WriteLine("Hero: " + player.Heroes[0].Name);
                 Console.Out.WriteLine("Role: " + player.Role.Name);
             }
-            Console.Out.WriteLine("Maps: ");
-            foreach (Map map in _maps)
+            Console.Out.WriteLine("Games: ");
+            foreach (Game game in _games)
             {
-                Console.Out.WriteLine("Map: " + map.Name);
-                Console.Out.WriteLine("Gametype: " + map.Gametype.Name);
-                Console.Out.WriteLine("Home Score: " + map.HomeScore);
-                Console.Out.WriteLine("Away Score: " + map.AwayScore);
+                Console.Out.WriteLine("Map: " + game.Map.Name);
+                Console.Out.WriteLine("Gametype: " + game.Map.Gametype.Name);
+                Console.Out.WriteLine("Home Score: " + game.HomeScore);
+                Console.Out.WriteLine("Away Score: " + game.AwayScore);
             }
         }
     }

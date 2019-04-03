@@ -50,6 +50,12 @@
     <ApplicationIcon>owul_logo_gray.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.2\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,6 +69,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Game.cs" />
     <Compile Include="Entities\Gametype.cs" />
     <Compile Include="Entities\Hero.cs" />
     <Compile Include="Entities\Map.cs" />
@@ -79,6 +92,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +103,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -181,9 +198,51 @@
     <None Include="Resources\Icon-none.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\3D-Ashe.png" />
+    <None Include="Hero Portraits\Ashe.png" />
+    <Content Include="Resources\3D-Baptiste.png" />
     <Content Include="Resources\3D-WreckingBall.png" />
+    <None Include="Resources\Zarya_OWL.png" />
+    <None Include="Resources\Wrecking_Ball_OWL.png" />
+    <None Include="Resources\Ana_OWL.png" />
+    <None Include="Resources\Bastion_OWL.png" />
+    <None Include="Resources\Brigitte_OWL.png" />
+    <None Include="Resources\D.Va_OWL.png" />
+    <None Include="Resources\Doomfist_OWL.png" />
+    <None Include="Resources\Genji_OWL.png" />
+    <None Include="Resources\Hanzo_OWL.png" />
+    <None Include="Resources\Color Busan.png" />
+    <None Include="Resources\Desat Busan.png" />
+    <None Include="Resources\Icon-busan.png" />
+    <None Include="Resources\Icon-Ashe.png" />
+    <None Include="Resources\Ashe_OWL.png" />
+    <Content Include="Resources\Baptiste.png" />
+    <Content Include="Resources\Baptiste_OWL.png" />
+    <Content Include="Resources\Color Paris.png" />
+    <Content Include="Resources\Desat Paris.png" />
+    <Content Include="Resources\Icon-Baptiste.png" />
+    <Content Include="Resources\Icon-paris.png" />
     <Content Include="Resources\Icon-Wrecking_Ball.png" />
+    <None Include="Resources\Junkrat_OWL.png" />
+    <None Include="Resources\Lucio_OWL.png" />
+    <None Include="Resources\McCree_OWL.png" />
+    <None Include="Resources\Mei_OWL.png" />
+    <None Include="Resources\Mercy_OWL.png" />
+    <None Include="Resources\Moira_OWL.png" />
+    <None Include="Resources\Orisa_OWL.png" />
+    <None Include="Resources\Pharah_OWL.png" />
+    <None Include="Resources\Reaper_OWL.png" />
+    <None Include="Resources\Reinhardt_OWL.png" />
+    <None Include="Resources\Roadhog_OWL.png" />
+    <None Include="Resources\Soldier-_76_OWL.png" />
+    <None Include="Resources\Sombra_OWL.png" />
+    <None Include="Resources\Symmetra_OWL.png" />
+    <None Include="Resources\Torbjorn_OWL.png" />
+    <None Include="Resources\Tracer_OWL.png" />
+    <None Include="Resources\Widowmaker_OWL.png" />
+    <None Include="Resources\Winston_OWL.png" />
     <Content Include="Resources\WreckingBall.png" />
+    <None Include="Resources\Zenyatta_OWL.png" />
     <None Include="Resources\Icon-rialto.png" />
     <None Include="Resources\Desat Rialto.png" />
     <None Include="Resources\Color Rialto.png" />

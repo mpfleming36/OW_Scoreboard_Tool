@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace OW_Scoreboard_Tool.Entities
 {
@@ -15,23 +16,15 @@ namespace OW_Scoreboard_Tool.Entities
         private Gametype _gametype = new Gametype();
         private Bitmap _icon = Properties.Resources.Icon_none;
         private Bitmap _wide = Properties.Resources.Icon_none;
-        private bool _completed = false;
-        private bool _selected = false;
         private string _introPath = "";
-        private string _homeScore = "";
-        private string _awayScore = "";
-        private Team _winner = new Team();
 
         public string Name { get => _name; set => _name = value; }
         public Gametype Gametype { get => _gametype; set => _gametype = value; }
+        [XmlIgnore]
         public Bitmap Icon { get => _icon; set => _icon = value; }
+        [XmlIgnore]
         public Bitmap Wide { get => _wide; set => _wide = value; }
-        public bool Completed { get => _completed; set => _completed = value; }
-        public bool Selected { get => _selected; set => _selected = value; }
         public string IntroPath { get => _introPath; set => _introPath = value; }
-        public string HomeScore { get => _homeScore; set => _homeScore = value; }
-        public string AwayScore { get => _awayScore; set => _awayScore = value; }
-        public Team Winner { get => _winner; set => _winner = value; }
         #endregion
 
         #region Constructors
