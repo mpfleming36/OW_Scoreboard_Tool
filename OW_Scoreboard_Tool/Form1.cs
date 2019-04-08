@@ -20,12 +20,12 @@ namespace OW_Scoreboard_Tool
     {
         #region Inital Properties
         string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        string main = "\\Replay";
-        string playlist = "\\Playlist";
         string xmlVersion = "0.2";
         const int Bytes_TO_READ = sizeof(Int64);
         Series Match1 = new Series();
 
+        List<Replay> Replays = new List<Replay>();
+        FileSystemWatcher replayWatcher = new FileSystemWatcher();
 
         List<Role> RoleList = new List<Role>
         {
@@ -49,6 +49,7 @@ namespace OW_Scoreboard_Tool
         List<string> GeneralFiles;
         List<string> PlayerFiles;
         List<string> SettingFiles;
+        List<string> ReplayFiles;
 
         #endregion
 
@@ -129,6 +130,21 @@ namespace OW_Scoreboard_Tool
             loadText(utility7, "General", "utility7");
             loadText(utility8, "General", "utility8");
 
+            loadText(imagePath1, "General", "imagePath1");
+            loadText(imagePath2, "General", "imagePath2");
+            loadText(imagePath3, "General", "imagePath3");
+            loadText(imagePath4, "General", "imagePath4");
+            loadText(imagePath5, "General", "imagePath5");
+            loadText(imagePath6, "General", "imagePath6");
+            loadText(imagePath7, "General", "imagePath7");
+            loadText(imagePath8, "General", "imagePath8");
+            loadText(imagePath9, "General", "imagePath9");
+            loadText(imagePath10, "General", "imagePath10");
+            loadText(imagePath11, "General", "imagePath11");
+            loadText(imagePath12, "General", "imagePath12");
+            loadText(imagePath13, "General", "imagePath13");
+            loadText(imagePath14, "General", "imagePath14");
+
             loadCombo(m1t1p1Hero, "Match1", "t1p1Hero");
             loadCombo(m1t1p2Hero, "Match1", "t1p2Hero");
             loadCombo(m1t1p3Hero, "Match1", "t1p3Hero");
@@ -166,9 +182,11 @@ namespace OW_Scoreboard_Tool
             loadCombo(m1m7Map, "Match1", "m7Map");
 
             loadText(playerBox, "Player", "player");
-            loadText(playerTeamBox, "Player", "team");
-            loadText(playerTeamLogoBox, "Player", "logo");
             loadText(playerSRBox, "Player", "sr");
+            loadText(playerImagePath, "Player", "image");
+            loadText(playerTeamBox, "Player", "team");
+            loadText(playerTeamInfoBox, "Player", "info");
+            loadText(playerTeamLogoBox, "Player", "logo");
 
             loadCombo(playerHeroBox1, "Player", "hero1");
             loadCombo(playerHeroBox2, "Player", "hero2");
@@ -177,37 +195,62 @@ namespace OW_Scoreboard_Tool
 
             updateSeries();
 
-            //FileSystemWatcher watcher = new FileSystemWatcher();
-
-            //watcher.Path = path + FolderList[5];
-            //watcher.NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.Size;
-            //watcher.EnableRaisingEvents = true;
-            //watcher.Changed += new FileSystemEventHandler(Changed);
-
-            //updateList();
+            updateReplayPage();
+            updateList();
         }
 
         private void Changed(object sender, FileSystemEventArgs e)
         {
-            updateList();
+            BeginInvoke(new Action(() => updateList()));
         }
 
         private void updateList()
         {
-            listView1.Clear();
+            replayListView.Items.Clear();
+            replayImageList.Images.Clear();
+            Replays.Clear();
             var di = new DirectoryInfo(path+FolderList[5]);
             int imageIndex = 0;
             foreach (FileInfo fi in di.GetFiles())
             {
                 ShellFile shellFile = ShellFile.FromFilePath(fi.FullName);
                 Bitmap shellThumb = shellFile.Thumbnail.Bitmap;
-                imageList1.Images.Add(shellThumb);
+                replayImageList.Images.Add(shellThumb);
                 ListViewItem item = new ListViewItem();
                 item.Text = fi.Name;
                 item.ImageIndex = imageIndex;
-                listView1.Items.Add(item);
+                item.SubItems.Add("");
+                item.SubItems.Add("");
+                item.SubItems.Add("");
+                item.SubItems.Add(fi.CreationTime.ToShortTimeString());
+                replayListView.Items.Add(item);
+                Replays.Add(new Replay());
+                Replays[imageIndex].Players = new List<Player>();
+                Replays[imageIndex].ReplayPath = fi.FullName;
+                Replays[imageIndex].Name = fi.Name;
+                Replays[imageIndex].Created = fi.CreationTime;
+                Replays[imageIndex].Thumbnail = shellThumb;
                 imageIndex++;
             }
+        }
+
+        private void updateReplayPage()
+        {
+            replayTeamComboBox.Items.Clear();
+            replayMapComboBox.Items.Clear();
+
+            replayTeamComboBox.Items.Add("");
+            replayTeamComboBox.Items.Add(Match1.Home.Name);
+            replayTeamComboBox.Items.Add(Match1.Away.Name);
+
+            replayMapComboBox.Items.Add("");
+            replayMapComboBox.Items.Add(Match1.Games[0].Map.Name);
+            replayMapComboBox.Items.Add(Match1.Games[1].Map.Name);
+            replayMapComboBox.Items.Add(Match1.Games[2].Map.Name);
+            replayMapComboBox.Items.Add(Match1.Games[3].Map.Name);
+            replayMapComboBox.Items.Add(Match1.Games[4].Map.Name);
+            replayMapComboBox.Items.Add(Match1.Games[5].Map.Name);
+            replayMapComboBox.Items.Add(Match1.Games[6].Map.Name);
         }
 
         #region Button Actions
@@ -371,6 +414,9 @@ namespace OW_Scoreboard_Tool
             m1t1ColorButton.BackColor = m1t1Color.Color;
             m1t2Color.Color = tempColor;
             m1t2ColorButton.BackColor = m1t2Color.Color;
+
+            updateReplayPage();
+
         }
 
         /// <summary>
@@ -489,6 +535,20 @@ namespace OW_Scoreboard_Tool
                 resetText(utility6);
                 resetText(utility7);
                 resetText(utility8);
+                resetText(imagePath1);
+                resetText(imagePath2);
+                resetText(imagePath3);
+                resetText(imagePath4);
+                resetText(imagePath5);
+                resetText(imagePath6);
+                resetText(imagePath7);
+                resetText(imagePath8);
+                resetText(imagePath9);
+                resetText(imagePath10);
+                resetText(imagePath11);
+                resetText(imagePath12);
+                resetText(imagePath13);
+                resetText(imagePath14);
             }
             else if(dialogResult == DialogResult.No)
             {
@@ -595,9 +655,8 @@ namespace OW_Scoreboard_Tool
             updateText(m1t2Logo, "Match1", "t2Logo");
 
             updateSeries();
-
+            updateReplayPage();
             //Match1.printAll();
-
         }
 
         /// <summary>
@@ -619,6 +678,21 @@ namespace OW_Scoreboard_Tool
             updateText(utility6, "General", "utility6");
             updateText(utility7, "General", "utility7");
             updateText(utility8, "General", "utility8");
+
+            updateLogos(imagePath1, "General", "imagePath1");
+            updateLogos(imagePath2, "General", "imagePath2");
+            updateLogos(imagePath3, "General", "imagePath3");
+            updateLogos(imagePath4, "General", "imagePath4");
+            updateLogos(imagePath5, "General", "imagePath5");
+            updateLogos(imagePath6, "General", "imagePath6");
+            updateLogos(imagePath7, "General", "imagePath7");
+            updateLogos(imagePath8, "General", "imagePath8");
+            updateLogos(imagePath9, "General", "imagePath9");
+            updateLogos(imagePath10, "General", "imagePath10");
+            updateLogos(imagePath11, "General", "imagePath11");
+            updateLogos(imagePath12, "General", "imagePath12");
+            updateLogos(imagePath13, "General", "imagePath13");
+            updateLogos(imagePath14, "General", "imagePath14");
         }
 
         /// <summary>
@@ -674,10 +748,19 @@ namespace OW_Scoreboard_Tool
         /// </summary>
         private void replayReset_Click(object sender, EventArgs e)
         {
-            System.IO.DirectoryInfo di = new DirectoryInfo(path + FolderList[5]);
-            foreach (FileInfo file in di.GetFiles())
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove all replays?", "Reset Replay Data?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                file.Delete();
+                System.IO.DirectoryInfo di = new DirectoryInfo(path + FolderList[5]);
+                foreach (FileInfo file in di.GetFiles())
+                {
+                    file.Delete();
+                }
+                updateList();
+            }
+            else if(dialogResult == DialogResult.No)
+            {
+                //do nothing
             }
         }
 
@@ -742,15 +825,25 @@ namespace OW_Scoreboard_Tool
         /// </summary>
         private void playerReset_Click(object sender, EventArgs e)
         {
-            resetText(playerBox);
-            resetText(playerTeamBox);
-            resetText(playerTeamLogoBox);
-            resetText(playerSRBox);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove all player data?", "Reset Player Data?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                resetText(playerBox);
+                resetText(playerSRBox);
+                resetText(playerImagePath);
+                resetText(playerTeamBox);
+                resetText(playerTeamInfoBox);
+                resetText(playerTeamLogoBox);
 
-            resetHero(playerHeroBox1);
-            resetHero(playerHeroBox2);
-            resetHero(playerHeroBox3);
-            resetRole(playerRoleBox);
+                resetHero(playerHeroBox1);
+                resetHero(playerHeroBox2);
+                resetHero(playerHeroBox3);
+                resetRole(playerRoleBox);
+            }
+            else if(dialogResult == DialogResult.No)
+            {
+                //do nothing
+            }
         }
 
         /// <summary>
@@ -759,8 +852,9 @@ namespace OW_Scoreboard_Tool
         private void playerUpdate_Click(object sender, EventArgs e)
         {
             updateText(playerBox, "Player", "player");
-            updateText(playerTeamBox, "Player", "team");
             updateText(playerSRBox, "Player", "sr");
+            updateText(playerTeamBox, "Player", "team");
+            updateText(playerTeamInfoBox, "Player", "info");
 
             updateHero(playerHeroBox1, playerHeroPortrait1, playerHeroIcon1, playerHero3D1, "Player", "hero1");
             updateHero(playerHeroBox2, playerHeroPortrait2, playerHeroIcon2, playerHero3D2, "Player", "hero2");
@@ -768,6 +862,7 @@ namespace OW_Scoreboard_Tool
 
             updateRole(playerRoleBox, "Player", "role");
 
+            updateLogos(playerImagePath, "Player", "image");
             updateLogos(playerTeamLogoBox, "Player", "logo");
         }
 
@@ -777,6 +872,14 @@ namespace OW_Scoreboard_Tool
         private void playerTeamLogoButton_Click(object sender, EventArgs e)
         {
             GetLogoFile(playerTeamLogoBox);
+        }
+
+        /// <summary>
+        /// Button to get player image for the player of the match
+        /// </summary>
+        private void playerImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(playerImagePath);
         }
 
         /// <summary>
@@ -2043,8 +2146,7 @@ namespace OW_Scoreboard_Tool
             if (File.Exists(path + "\\" + folder + "\\" + file + ".txt"))
             {
                 string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
-                field.Text = loadingText;
-                field.Text.Trim();
+                field.Text = loadingText.Trim();
             }
             else
             {
@@ -2733,6 +2835,14 @@ namespace OW_Scoreboard_Tool
                 }
             }
 
+            foreach (var file in ReplayFiles)
+            {
+                if (!File.Exists(path + FolderList[4] + "\\" + file))
+                {
+                    File.Create(path + FolderList[4] + "\\" + file).Close();
+                }
+            }
+
         }
 
         /// <summary>
@@ -2741,7 +2851,7 @@ namespace OW_Scoreboard_Tool
         /// <param name="first">File 1's info</param>
         /// <param name="second">File 2's info</param>
         /// <returns>Boolean</returns>
-        private static bool IsFileEqual(FileInfo first, FileInfo second)
+        private bool IsFileEqual(FileInfo first, FileInfo second)
         {
             if (first.Length != second.Length)
             {
@@ -2796,7 +2906,6 @@ namespace OW_Scoreboard_Tool
         {
             FileSystemWatcher watcher = new FileSystemWatcher();
             watcher.Path = path;
-
             watcher.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName;
             watcher.Filter = "Replay Replay.mp4";
             watcher.Changed += new FileSystemEventHandler(OnChanged);
@@ -2806,7 +2915,7 @@ namespace OW_Scoreboard_Tool
         /// <summary>
         /// Event handler that saves a copy of the most recent replay to the playlist folder
         /// </summary>
-        private static void OnChanged(object source, FileSystemEventArgs e)
+        private void OnChanged(object source, FileSystemEventArgs e)
         {
             string filelessPath = Path.GetDirectoryName(e.FullPath);
             string copyPath = filelessPath + "\\Playlist";
@@ -2826,15 +2935,41 @@ namespace OW_Scoreboard_Tool
                     {
                         Thread.Sleep(1000);
                         File.Copy(e.FullPath, copiedFullPath);
-                    }  
+                        BeginInvoke(new Action(() => addReplay(copiedFullPath)));
+                    }
                 }
                 else
                 {
+                    Thread.Sleep(1000);
                     File.Copy(e.FullPath, copiedFullPath);
+                    BeginInvoke(new Action(() => addReplay(copiedFullPath)));
                 }
             }
-        } 
-        
+        }
+
+        private void addReplay(string path)
+        {
+            FileInfo fi = new FileInfo(path);
+            ShellFile shellFile = ShellFile.FromFilePath(fi.FullName);
+            Bitmap shellThumb = shellFile.Thumbnail.ExtraLargeBitmap;
+            Replay replay = new Replay();
+            replay.Players = new List<Player>();
+            replay.ReplayPath = fi.FullName;
+            replay.Name = fi.Name;
+            replay.Thumbnail = shellThumb;
+            Replays.Add(replay);
+            replayImageList.Images.Add(shellThumb);
+            ListViewItem item = new ListViewItem();
+            item.Text = fi.Name;
+            item.ImageIndex = replayImageList.Images.Count - 1;
+            item.SubItems.Add("");
+            item.SubItems.Add("");
+            item.SubItems.Add("");
+            item.SubItems.Add(fi.CreationTime.ToShortTimeString());
+            replayListView.Items.Add(item);
+            replayListView.Refresh();
+        }
+
         /// <summary>
         /// Gets the logo for the team
         /// </summary>
@@ -3123,7 +3258,21 @@ namespace OW_Scoreboard_Tool
                 "utility5.txt",
                 "utility6.txt",
                 "utility7.txt",
-                "utility8.txt"
+                "utility8.txt",
+                "imagePath1.txt",
+                "imagePath2.txt",
+                "imagePath3.txt",
+                "imagePath4.txt",
+                "imagePath5.txt",
+                "imagePath6.txt",
+                "imagePath7.txt",
+                "imagePath8.txt",
+                "imagePath9.txt",
+                "imagePath10.txt",
+                "imagePath11.txt",
+                "imagePath12.txt",
+                "imagePath13.txt",
+                "imagePath14.txt"
             };
 
             PlayerFiles = new List<string>
@@ -3136,11 +3285,21 @@ namespace OW_Scoreboard_Tool
                 "hero3.txt",
                 "logo.png",
                 "logo.txt",
+                "image.png",
+                "image.txt",
                 "player.txt",
                 "role.png",
                 "role.txt",
                 "sr.txt",
                 "team.txt",
+                "info.txt"
+            };
+
+            ReplayFiles = new List<string>
+            {
+                "Replay Replay.mp4",
+                "Desk Replay.mp4",
+                "ReplayPath.txt"
             };
 
             SettingFiles = new List<string>
@@ -3169,5 +3328,329 @@ namespace OW_Scoreboard_Tool
         }
 
         #endregion
+
+        private void replayTeamComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            replayPlayersCheckedListBox.Items.Clear();
+
+            if (replayTeamComboBox.SelectedIndex == 1)
+            {
+                foreach (Player player in Match1.Home.Players)
+                {
+                    replayPlayersCheckedListBox.Items.Insert(0, player.Name);
+                }
+            }
+            else if (replayTeamComboBox.SelectedIndex == 2)
+            {
+                foreach (Player player in Match1.Away.Players)
+                {
+                    replayPlayersCheckedListBox.Items.Insert(0, player.Name);
+                }
+            }
+            else
+            {
+                foreach (Player player in Match1.Home.Players)
+                {
+                    replayPlayersCheckedListBox.Items.Insert(0, player.Name);
+                }
+                foreach (Player player in Match1.Away.Players)
+                {
+                    replayPlayersCheckedListBox.Items.Insert(0, player.Name);
+                }
+            }
+            if (replayListView.SelectedItems.Count > 0)
+            {
+                Replay selctedReplay = Replays[replayListView.SelectedItems[0].Index];
+                if (replayTeamComboBox.Text == Match1.Home.Name)
+                {
+                    selctedReplay.Team = Match1.Home;
+                }
+                else if(replayTeamComboBox.Text == Match1.Away.Name)
+                {
+                    selctedReplay.Team = Match1.Away;
+                }
+                else
+                {
+                    selctedReplay.Team = new Team();
+                }
+                
+                replayListView.SelectedItems[0].SubItems[1].Text = replayTeamComboBox.Text;
+
+            }
+        }
+
+        private void replayMapComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (replayListView.SelectedItems.Count > 0)
+            {
+                Replay selctedReplay = Replays[replayListView.SelectedItems[0].Index];
+
+                if (replayMapComboBox.Text == Match1.Games[0].Map.Name)
+                {
+                    selctedReplay.Map = Match1.Games[0].Map;
+                }
+                else if (replayMapComboBox.Text == Match1.Games[1].Map.Name)
+                {
+                    selctedReplay.Map = Match1.Games[1].Map;
+                }
+                else if (replayMapComboBox.Text == Match1.Games[1].Map.Name)
+                {
+                    selctedReplay.Map = Match1.Games[1].Map;
+                }
+                else if (replayMapComboBox.Text == Match1.Games[2].Map.Name)
+                {
+                    selctedReplay.Map = Match1.Games[2].Map;
+                }
+                else if (replayMapComboBox.Text == Match1.Games[3].Map.Name)
+                {
+                    selctedReplay.Map = Match1.Games[3].Map;
+                }
+                else if (replayMapComboBox.Text == Match1.Games[4].Map.Name)
+                {
+                    selctedReplay.Map = Match1.Games[4].Map;
+                }
+                else if (replayMapComboBox.Text == Match1.Games[5].Map.Name)
+                {
+                    selctedReplay.Map = Match1.Games[5].Map;
+                }
+                else if (replayMapComboBox.Text == Match1.Games[6].Map.Name)
+                {
+                    selctedReplay.Map = Match1.Games[6].Map;
+                }
+                else
+                {
+                    selctedReplay.Map = new Map();
+                }
+                replayListView.SelectedItems[0].SubItems[2].Text = replayMapComboBox.Text;
+            }
+        }
+
+        private void replayRichTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (replayListView.SelectedItems.Count > 0)
+            {
+                Replay selctedReplay = Replays[replayListView.SelectedItems[0].Index];
+                selctedReplay.Description = replayRichTextBox.Text;
+                replayListView.SelectedItems[0].SubItems[3].Text = replayRichTextBox.Text;
+            }
+        }
+
+        private void playersCheckedListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (replayListView.SelectedItems.Count > 0)
+            {
+                Replays[replayListView.SelectedItems[0].Index].Players.Clear();
+                if (replayTeamComboBox.SelectedIndex == 1)
+                {
+                    foreach (Player player in Match1.Home.Players)
+                    {
+                        if (replayPlayersCheckedListBox.CheckedItems.Contains(player.Name.Trim()))
+                        {
+                            Replays[replayListView.SelectedItems[0].Index].Players.Add(player);
+                        }
+                    }
+                }
+                else if (replayTeamComboBox.SelectedIndex == 2)
+                {
+                    foreach (Player player in Match1.Away.Players)
+                    {
+                        if (replayPlayersCheckedListBox.CheckedItems.Contains(player.Name.Trim()))
+                        {
+                            Replays[replayListView.SelectedItems[0].Index].Players.Add(player);
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (Player player in Match1.Home.Players)
+                    {
+                        if (replayPlayersCheckedListBox.CheckedItems.Contains(player.Name.Trim()))
+                        {
+                            Replays[replayListView.SelectedItems[0].Index].Players.Add(player);
+                        }
+                    }
+                    foreach (Player player in Match1.Away.Players)
+                    {
+                        if (replayPlayersCheckedListBox.CheckedItems.Contains(player.Name.Trim()))
+                        {
+                            Replays[replayListView.SelectedItems[0].Index].Players.Add(player);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void replayListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (replayListView.SelectedItems.Count > 0)
+            {
+                Replay selctedReplay = Replays[replayListView.SelectedItems[0].Index];
+
+                if (selctedReplay.Description != null)
+                {
+                    replayRichTextBox.Text = selctedReplay.Description;
+                }
+                else
+                {
+                    replayRichTextBox.Text = "";
+                }
+                if (selctedReplay.Team != null)
+                {
+                    replayTeamComboBox.SelectedIndex = replayTeamComboBox.FindStringExact(selctedReplay.Team.Name);
+                }
+                else
+                {
+                    replayTeamComboBox.SelectedIndex = 0;
+                }
+                if (selctedReplay.Map != null)
+                {
+                    replayMapComboBox.SelectedIndex = replayMapComboBox.FindStringExact(selctedReplay.Map.Name);
+                }
+                else
+                {
+                    replayMapComboBox.SelectedIndex = 0;
+                }
+                if(selctedReplay.Players.Count != 0)
+                {
+                    foreach(Player player in selctedReplay.Players)
+                    {
+                        if (replayPlayersCheckedListBox.Items.Contains(player.Name))
+                        {
+                            replayPlayersCheckedListBox.SetItemCheckState(replayPlayersCheckedListBox.Items.IndexOf(player.Name), CheckState.Checked);
+                        }
+                    }
+                }
+                else
+                {
+                    foreach(int i in replayPlayersCheckedListBox.CheckedIndices)
+                    {
+                        replayPlayersCheckedListBox.SetItemCheckState(i, CheckState.Unchecked);
+                    }
+                    
+                }
+                
+            }
+        }
+        private void replayCopyDetailsButton_Click(object sender, EventArgs e)
+        {
+            if (replayListView.SelectedItems.Count > 0)
+            {
+                Replay selctedReplay = Replays[replayListView.SelectedItems[0].Index];
+                string team = "";
+                string map = "";
+                string description = "";
+                if (selctedReplay.Description != null)
+                {
+                    description = selctedReplay.Description;
+                }
+                if (selctedReplay.Team != null)
+                {
+                    team = selctedReplay.Team.Name;
+                }
+                if (selctedReplay.Map != null)
+                {
+                    map = selctedReplay.Map.Name;
+                }
+                string players = "";
+                foreach(Player player in selctedReplay.Players)
+                {
+                    players += player.Name + " ";
+                }
+
+                MessageBox.Show("Team: " + team + 
+                "\nPlayers: " + players +
+                "\nMap: " + map +
+                "\nDescription: " + description
+                    );
+
+                Clipboard.SetText("Team: " + team + 
+                    "\nPlayers: " + players +
+                    "\nMap: " + map +
+                    "\nDescription: " + description
+                    );
+            }
+        }
+
+        private void replaySetButton_Click(object sender, EventArgs e)
+        {
+            using (StreamWriter sw = File.CreateText(path + FolderList[4] + "\\" + ReplayFiles[2]))
+            {
+                sw.WriteLine(Replays[replayListView.SelectedItems[0].Index].Name);
+            }
+
+            
+        }
+
+        private void imageButton1_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath1);
+        }
+
+        private void imageButton2_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath2);
+        }
+
+        private void imageButton3_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath3);
+        }
+
+        private void imageButton4_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath4);
+        }
+
+        private void imageButton5_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath5);
+        }
+
+        private void imageButton6_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath6);
+        }
+
+        private void imageButton7_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath7);
+        }
+
+        private void imageButton8_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath8);
+        }
+
+        private void imageButton9_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath9);
+        }
+
+        private void imageButton10_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath10);
+        }
+
+        private void imageButton11_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath11);
+        }
+
+        private void imageButton12_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath12);
+        }
+
+        private void imageButton13_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath13);
+        }
+
+        private void imageButton14_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(imagePath14);
+        }
+
+        
     }
 }

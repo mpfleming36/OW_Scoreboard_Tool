@@ -44,41 +44,41 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.General_Info = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.playerTeamInfoBox = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.playerNameBox = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.button27 = new System.Windows.Forms.Button();
+            this.playerImagePath = new System.Windows.Forms.TextBox();
+            this.playerImageButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.button26 = new System.Windows.Forms.Button();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.button25 = new System.Windows.Forms.Button();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.button24 = new System.Windows.Forms.Button();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.button23 = new System.Windows.Forms.Button();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.button22 = new System.Windows.Forms.Button();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.button21 = new System.Windows.Forms.Button();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.button20 = new System.Windows.Forms.Button();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.button19 = new System.Windows.Forms.Button();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.button18 = new System.Windows.Forms.Button();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.button16 = new System.Windows.Forms.Button();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.button14 = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.imageButton14 = new System.Windows.Forms.Button();
+            this.imagePath14 = new System.Windows.Forms.TextBox();
+            this.imageButton13 = new System.Windows.Forms.Button();
+            this.imagePath13 = new System.Windows.Forms.TextBox();
+            this.imageButton12 = new System.Windows.Forms.Button();
+            this.imagePath12 = new System.Windows.Forms.TextBox();
+            this.imageButton11 = new System.Windows.Forms.Button();
+            this.imagePath11 = new System.Windows.Forms.TextBox();
+            this.imageButton10 = new System.Windows.Forms.Button();
+            this.imagePath10 = new System.Windows.Forms.TextBox();
+            this.imageButton9 = new System.Windows.Forms.Button();
+            this.imagePath9 = new System.Windows.Forms.TextBox();
+            this.imageButton8 = new System.Windows.Forms.Button();
+            this.imagePath8 = new System.Windows.Forms.TextBox();
+            this.imageButton7 = new System.Windows.Forms.Button();
+            this.imagePath7 = new System.Windows.Forms.TextBox();
+            this.imageButton6 = new System.Windows.Forms.Button();
+            this.imagePath6 = new System.Windows.Forms.TextBox();
+            this.imageButton5 = new System.Windows.Forms.Button();
+            this.imagePath5 = new System.Windows.Forms.TextBox();
+            this.imageButton4 = new System.Windows.Forms.Button();
+            this.imagePath4 = new System.Windows.Forms.TextBox();
+            this.imageButton3 = new System.Windows.Forms.Button();
+            this.imagePath3 = new System.Windows.Forms.TextBox();
+            this.imageButton2 = new System.Windows.Forms.Button();
+            this.imagePath2 = new System.Windows.Forms.TextBox();
+            this.imageButton1 = new System.Windows.Forms.Button();
+            this.imagePath1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.playerSRBox = new System.Windows.Forms.TextBox();
             this.playerBox = new System.Windows.Forms.TextBox();
@@ -124,8 +124,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.playerUpdate = new System.Windows.Forms.Button();
             this.playerReset = new System.Windows.Forms.Button();
-            this.replayClean = new System.Windows.Forms.Button();
-            this.replayReset = new System.Windows.Forms.Button();
             this.generalUpdateButton = new System.Windows.Forms.Button();
             this.generalResetButton = new System.Windows.Forms.Button();
             this.utility8Label = new System.Windows.Forms.Label();
@@ -142,6 +140,8 @@
             this.caster1Label = new System.Windows.Forms.Label();
             this.hostLabel = new System.Windows.Forms.Label();
             this.messageLabel = new System.Windows.Forms.Label();
+            this.replayClean = new System.Windows.Forms.Button();
+            this.replayReset = new System.Windows.Forms.Button();
             this.Match_1 = new System.Windows.Forms.TabPage();
             this.m1t2ColorButton = new System.Windows.Forms.Button();
             this.m1t1ColorButton = new System.Windows.Forms.Button();
@@ -308,12 +308,26 @@
             this.m1t1Label = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Replay_Manager = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.m1t1Color = new System.Windows.Forms.ColorDialog();
-            this.m1t2Color = new System.Windows.Forms.ColorDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.replaySetButton = new System.Windows.Forms.Button();
+            this.replayCopyDetailsButton = new System.Windows.Forms.Button();
+            this.replayRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.replayPlayersCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.replayMapComboBox = new System.Windows.Forms.ComboBox();
+            this.replayTeamComboBox = new System.Windows.Forms.ComboBox();
+            this.replayListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.replayImageList = new System.Windows.Forms.ImageList(this.components);
+            this.m1t1Color = new System.Windows.Forms.ColorDialog();
+            this.m1t2Color = new System.Windows.Forms.ColorDialog();
             this.menuStrip1.SuspendLayout();
             this.General_Info.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -428,41 +442,41 @@
             // General_Info
             // 
             this.General_Info.Controls.Add(this.label21);
-            this.General_Info.Controls.Add(this.textBox29);
+            this.General_Info.Controls.Add(this.playerTeamInfoBox);
             this.General_Info.Controls.Add(this.label19);
-            this.General_Info.Controls.Add(this.textBox28);
+            this.General_Info.Controls.Add(this.playerNameBox);
             this.General_Info.Controls.Add(this.label18);
-            this.General_Info.Controls.Add(this.textBox27);
-            this.General_Info.Controls.Add(this.button27);
+            this.General_Info.Controls.Add(this.playerImagePath);
+            this.General_Info.Controls.Add(this.playerImageButton);
             this.General_Info.Controls.Add(this.label13);
-            this.General_Info.Controls.Add(this.button26);
-            this.General_Info.Controls.Add(this.textBox26);
-            this.General_Info.Controls.Add(this.button25);
-            this.General_Info.Controls.Add(this.textBox25);
-            this.General_Info.Controls.Add(this.button24);
-            this.General_Info.Controls.Add(this.textBox24);
-            this.General_Info.Controls.Add(this.button23);
-            this.General_Info.Controls.Add(this.textBox23);
-            this.General_Info.Controls.Add(this.button22);
-            this.General_Info.Controls.Add(this.textBox22);
-            this.General_Info.Controls.Add(this.button21);
-            this.General_Info.Controls.Add(this.textBox21);
-            this.General_Info.Controls.Add(this.button20);
-            this.General_Info.Controls.Add(this.textBox20);
-            this.General_Info.Controls.Add(this.button19);
-            this.General_Info.Controls.Add(this.textBox19);
-            this.General_Info.Controls.Add(this.button18);
-            this.General_Info.Controls.Add(this.textBox18);
-            this.General_Info.Controls.Add(this.button17);
-            this.General_Info.Controls.Add(this.textBox17);
-            this.General_Info.Controls.Add(this.button16);
-            this.General_Info.Controls.Add(this.textBox16);
-            this.General_Info.Controls.Add(this.button15);
-            this.General_Info.Controls.Add(this.textBox15);
-            this.General_Info.Controls.Add(this.button14);
-            this.General_Info.Controls.Add(this.textBox14);
-            this.General_Info.Controls.Add(this.button13);
-            this.General_Info.Controls.Add(this.textBox13);
+            this.General_Info.Controls.Add(this.imageButton14);
+            this.General_Info.Controls.Add(this.imagePath14);
+            this.General_Info.Controls.Add(this.imageButton13);
+            this.General_Info.Controls.Add(this.imagePath13);
+            this.General_Info.Controls.Add(this.imageButton12);
+            this.General_Info.Controls.Add(this.imagePath12);
+            this.General_Info.Controls.Add(this.imageButton11);
+            this.General_Info.Controls.Add(this.imagePath11);
+            this.General_Info.Controls.Add(this.imageButton10);
+            this.General_Info.Controls.Add(this.imagePath10);
+            this.General_Info.Controls.Add(this.imageButton9);
+            this.General_Info.Controls.Add(this.imagePath9);
+            this.General_Info.Controls.Add(this.imageButton8);
+            this.General_Info.Controls.Add(this.imagePath8);
+            this.General_Info.Controls.Add(this.imageButton7);
+            this.General_Info.Controls.Add(this.imagePath7);
+            this.General_Info.Controls.Add(this.imageButton6);
+            this.General_Info.Controls.Add(this.imagePath6);
+            this.General_Info.Controls.Add(this.imageButton5);
+            this.General_Info.Controls.Add(this.imagePath5);
+            this.General_Info.Controls.Add(this.imageButton4);
+            this.General_Info.Controls.Add(this.imagePath4);
+            this.General_Info.Controls.Add(this.imageButton3);
+            this.General_Info.Controls.Add(this.imagePath3);
+            this.General_Info.Controls.Add(this.imageButton2);
+            this.General_Info.Controls.Add(this.imagePath2);
+            this.General_Info.Controls.Add(this.imageButton1);
+            this.General_Info.Controls.Add(this.imagePath1);
             this.General_Info.Controls.Add(this.label9);
             this.General_Info.Controls.Add(this.playerSRBox);
             this.General_Info.Controls.Add(this.playerBox);
@@ -499,8 +513,6 @@
             this.General_Info.Controls.Add(this.label6);
             this.General_Info.Controls.Add(this.playerUpdate);
             this.General_Info.Controls.Add(this.playerReset);
-            this.General_Info.Controls.Add(this.replayClean);
-            this.General_Info.Controls.Add(this.replayReset);
             this.General_Info.Controls.Add(this.generalUpdateButton);
             this.General_Info.Controls.Add(this.generalResetButton);
             this.General_Info.Controls.Add(this.utility8Label);
@@ -534,12 +546,12 @@
             this.label21.TabIndex = 153;
             this.label21.Text = "Utility Images";
             // 
-            // textBox29
+            // playerTeamInfoBox
             // 
-            this.textBox29.Location = new System.Drawing.Point(816, 251);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(109, 20);
-            this.textBox29.TabIndex = 152;
+            this.playerTeamInfoBox.Location = new System.Drawing.Point(816, 251);
+            this.playerTeamInfoBox.Name = "playerTeamInfoBox";
+            this.playerTeamInfoBox.Size = new System.Drawing.Size(109, 20);
+            this.playerTeamInfoBox.TabIndex = 152;
             // 
             // label19
             // 
@@ -550,12 +562,12 @@
             this.label19.TabIndex = 151;
             this.label19.Text = "Team 1 Info";
             // 
-            // textBox28
+            // playerNameBox
             // 
-            this.textBox28.Location = new System.Drawing.Point(632, 212);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(118, 20);
-            this.textBox28.TabIndex = 150;
+            this.playerNameBox.Location = new System.Drawing.Point(632, 212);
+            this.playerNameBox.Name = "playerNameBox";
+            this.playerNameBox.Size = new System.Drawing.Size(118, 20);
+            this.playerNameBox.TabIndex = 150;
             // 
             // label18
             // 
@@ -566,22 +578,23 @@
             this.label18.TabIndex = 149;
             this.label18.Text = "Player Name";
             // 
-            // textBox27
+            // playerImagePath
             // 
-            this.textBox27.Enabled = false;
-            this.textBox27.Location = new System.Drawing.Point(756, 212);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(136, 20);
-            this.textBox27.TabIndex = 147;
+            this.playerImagePath.Enabled = false;
+            this.playerImagePath.Location = new System.Drawing.Point(756, 212);
+            this.playerImagePath.Name = "playerImagePath";
+            this.playerImagePath.Size = new System.Drawing.Size(136, 20);
+            this.playerImagePath.TabIndex = 147;
             // 
-            // button27
+            // playerImageButton
             // 
-            this.button27.Location = new System.Drawing.Point(898, 210);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(27, 23);
-            this.button27.TabIndex = 148;
-            this.button27.Text = "...";
-            this.button27.UseVisualStyleBackColor = true;
+            this.playerImageButton.Location = new System.Drawing.Point(898, 210);
+            this.playerImageButton.Name = "playerImageButton";
+            this.playerImageButton.Size = new System.Drawing.Size(27, 23);
+            this.playerImageButton.TabIndex = 148;
+            this.playerImageButton.Text = "...";
+            this.playerImageButton.UseVisualStyleBackColor = true;
+            this.playerImageButton.Click += new System.EventHandler(this.playerImageButton_Click);
             // 
             // label13
             // 
@@ -592,243 +605,271 @@
             this.label13.TabIndex = 146;
             this.label13.Text = "Player Image";
             // 
-            // button26
+            // imageButton14
             // 
-            this.button26.Location = new System.Drawing.Point(384, 372);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(27, 23);
-            this.button26.TabIndex = 145;
-            this.button26.Text = "...";
-            this.button26.UseVisualStyleBackColor = true;
+            this.imageButton14.Location = new System.Drawing.Point(384, 372);
+            this.imageButton14.Name = "imageButton14";
+            this.imageButton14.Size = new System.Drawing.Size(27, 23);
+            this.imageButton14.TabIndex = 145;
+            this.imageButton14.Text = "...";
+            this.imageButton14.UseVisualStyleBackColor = true;
+            this.imageButton14.Click += new System.EventHandler(this.imageButton14_Click);
             // 
-            // textBox26
+            // imagePath14
             // 
-            this.textBox26.Enabled = false;
-            this.textBox26.Location = new System.Drawing.Point(242, 373);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(136, 20);
-            this.textBox26.TabIndex = 144;
+            this.imagePath14.Enabled = false;
+            this.imagePath14.Location = new System.Drawing.Point(242, 373);
+            this.imagePath14.Name = "imagePath14";
+            this.imagePath14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath14.Size = new System.Drawing.Size(136, 20);
+            this.imagePath14.TabIndex = 144;
             // 
-            // button25
+            // imageButton13
             // 
-            this.button25.Location = new System.Drawing.Point(384, 346);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(27, 23);
-            this.button25.TabIndex = 143;
-            this.button25.Text = "...";
-            this.button25.UseVisualStyleBackColor = true;
+            this.imageButton13.Location = new System.Drawing.Point(384, 346);
+            this.imageButton13.Name = "imageButton13";
+            this.imageButton13.Size = new System.Drawing.Size(27, 23);
+            this.imageButton13.TabIndex = 143;
+            this.imageButton13.Text = "...";
+            this.imageButton13.UseVisualStyleBackColor = true;
+            this.imageButton13.Click += new System.EventHandler(this.imageButton13_Click);
             // 
-            // textBox25
+            // imagePath13
             // 
-            this.textBox25.Enabled = false;
-            this.textBox25.Location = new System.Drawing.Point(242, 347);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(136, 20);
-            this.textBox25.TabIndex = 142;
+            this.imagePath13.Enabled = false;
+            this.imagePath13.Location = new System.Drawing.Point(242, 347);
+            this.imagePath13.Name = "imagePath13";
+            this.imagePath13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath13.Size = new System.Drawing.Size(136, 20);
+            this.imagePath13.TabIndex = 142;
             // 
-            // button24
+            // imageButton12
             // 
-            this.button24.Location = new System.Drawing.Point(384, 320);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(27, 23);
-            this.button24.TabIndex = 141;
-            this.button24.Text = "...";
-            this.button24.UseVisualStyleBackColor = true;
+            this.imageButton12.Location = new System.Drawing.Point(384, 320);
+            this.imageButton12.Name = "imageButton12";
+            this.imageButton12.Size = new System.Drawing.Size(27, 23);
+            this.imageButton12.TabIndex = 141;
+            this.imageButton12.Text = "...";
+            this.imageButton12.UseVisualStyleBackColor = true;
+            this.imageButton12.Click += new System.EventHandler(this.imageButton12_Click);
             // 
-            // textBox24
+            // imagePath12
             // 
-            this.textBox24.Enabled = false;
-            this.textBox24.Location = new System.Drawing.Point(242, 321);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(136, 20);
-            this.textBox24.TabIndex = 140;
+            this.imagePath12.Enabled = false;
+            this.imagePath12.Location = new System.Drawing.Point(242, 321);
+            this.imagePath12.Name = "imagePath12";
+            this.imagePath12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath12.Size = new System.Drawing.Size(136, 20);
+            this.imagePath12.TabIndex = 140;
             // 
-            // button23
+            // imageButton11
             // 
-            this.button23.Location = new System.Drawing.Point(384, 294);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(27, 23);
-            this.button23.TabIndex = 139;
-            this.button23.Text = "...";
-            this.button23.UseVisualStyleBackColor = true;
+            this.imageButton11.Location = new System.Drawing.Point(384, 294);
+            this.imageButton11.Name = "imageButton11";
+            this.imageButton11.Size = new System.Drawing.Size(27, 23);
+            this.imageButton11.TabIndex = 139;
+            this.imageButton11.Text = "...";
+            this.imageButton11.UseVisualStyleBackColor = true;
+            this.imageButton11.Click += new System.EventHandler(this.imageButton11_Click);
             // 
-            // textBox23
+            // imagePath11
             // 
-            this.textBox23.Enabled = false;
-            this.textBox23.Location = new System.Drawing.Point(242, 295);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(136, 20);
-            this.textBox23.TabIndex = 138;
+            this.imagePath11.Enabled = false;
+            this.imagePath11.Location = new System.Drawing.Point(242, 295);
+            this.imagePath11.Name = "imagePath11";
+            this.imagePath11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath11.Size = new System.Drawing.Size(136, 20);
+            this.imagePath11.TabIndex = 138;
             // 
-            // button22
+            // imageButton10
             // 
-            this.button22.Location = new System.Drawing.Point(384, 268);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(27, 23);
-            this.button22.TabIndex = 137;
-            this.button22.Text = "...";
-            this.button22.UseVisualStyleBackColor = true;
+            this.imageButton10.Location = new System.Drawing.Point(384, 268);
+            this.imageButton10.Name = "imageButton10";
+            this.imageButton10.Size = new System.Drawing.Size(27, 23);
+            this.imageButton10.TabIndex = 137;
+            this.imageButton10.Text = "...";
+            this.imageButton10.UseVisualStyleBackColor = true;
+            this.imageButton10.Click += new System.EventHandler(this.imageButton10_Click);
             // 
-            // textBox22
+            // imagePath10
             // 
-            this.textBox22.Enabled = false;
-            this.textBox22.Location = new System.Drawing.Point(242, 269);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(136, 20);
-            this.textBox22.TabIndex = 136;
+            this.imagePath10.Enabled = false;
+            this.imagePath10.Location = new System.Drawing.Point(242, 269);
+            this.imagePath10.Name = "imagePath10";
+            this.imagePath10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath10.Size = new System.Drawing.Size(136, 20);
+            this.imagePath10.TabIndex = 136;
             // 
-            // button21
+            // imageButton9
             // 
-            this.button21.Location = new System.Drawing.Point(384, 242);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(27, 23);
-            this.button21.TabIndex = 135;
-            this.button21.Text = "...";
-            this.button21.UseVisualStyleBackColor = true;
+            this.imageButton9.Location = new System.Drawing.Point(384, 242);
+            this.imageButton9.Name = "imageButton9";
+            this.imageButton9.Size = new System.Drawing.Size(27, 23);
+            this.imageButton9.TabIndex = 135;
+            this.imageButton9.Text = "...";
+            this.imageButton9.UseVisualStyleBackColor = true;
+            this.imageButton9.Click += new System.EventHandler(this.imageButton9_Click);
             // 
-            // textBox21
+            // imagePath9
             // 
-            this.textBox21.Enabled = false;
-            this.textBox21.Location = new System.Drawing.Point(242, 243);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(136, 20);
-            this.textBox21.TabIndex = 134;
+            this.imagePath9.Enabled = false;
+            this.imagePath9.Location = new System.Drawing.Point(242, 243);
+            this.imagePath9.Name = "imagePath9";
+            this.imagePath9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath9.Size = new System.Drawing.Size(136, 20);
+            this.imagePath9.TabIndex = 134;
             // 
-            // button20
+            // imageButton8
             // 
-            this.button20.Location = new System.Drawing.Point(384, 216);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(27, 23);
-            this.button20.TabIndex = 133;
-            this.button20.Text = "...";
-            this.button20.UseVisualStyleBackColor = true;
+            this.imageButton8.Location = new System.Drawing.Point(384, 216);
+            this.imageButton8.Name = "imageButton8";
+            this.imageButton8.Size = new System.Drawing.Size(27, 23);
+            this.imageButton8.TabIndex = 133;
+            this.imageButton8.Text = "...";
+            this.imageButton8.UseVisualStyleBackColor = true;
+            this.imageButton8.Click += new System.EventHandler(this.imageButton8_Click);
             // 
-            // textBox20
+            // imagePath8
             // 
-            this.textBox20.Enabled = false;
-            this.textBox20.Location = new System.Drawing.Point(242, 217);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(136, 20);
-            this.textBox20.TabIndex = 132;
+            this.imagePath8.Enabled = false;
+            this.imagePath8.Location = new System.Drawing.Point(242, 217);
+            this.imagePath8.Name = "imagePath8";
+            this.imagePath8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath8.Size = new System.Drawing.Size(136, 20);
+            this.imagePath8.TabIndex = 132;
             // 
-            // button19
+            // imageButton7
             // 
-            this.button19.Location = new System.Drawing.Point(384, 190);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(27, 23);
-            this.button19.TabIndex = 131;
-            this.button19.Text = "...";
-            this.button19.UseVisualStyleBackColor = true;
+            this.imageButton7.Location = new System.Drawing.Point(384, 190);
+            this.imageButton7.Name = "imageButton7";
+            this.imageButton7.Size = new System.Drawing.Size(27, 23);
+            this.imageButton7.TabIndex = 131;
+            this.imageButton7.Text = "...";
+            this.imageButton7.UseVisualStyleBackColor = true;
+            this.imageButton7.Click += new System.EventHandler(this.imageButton7_Click);
             // 
-            // textBox19
+            // imagePath7
             // 
-            this.textBox19.Enabled = false;
-            this.textBox19.Location = new System.Drawing.Point(242, 191);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(136, 20);
-            this.textBox19.TabIndex = 130;
+            this.imagePath7.Enabled = false;
+            this.imagePath7.Location = new System.Drawing.Point(242, 191);
+            this.imagePath7.Name = "imagePath7";
+            this.imagePath7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath7.Size = new System.Drawing.Size(136, 20);
+            this.imagePath7.TabIndex = 130;
             // 
-            // button18
+            // imageButton6
             // 
-            this.button18.Location = new System.Drawing.Point(384, 164);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(27, 23);
-            this.button18.TabIndex = 129;
-            this.button18.Text = "...";
-            this.button18.UseVisualStyleBackColor = true;
+            this.imageButton6.Location = new System.Drawing.Point(384, 164);
+            this.imageButton6.Name = "imageButton6";
+            this.imageButton6.Size = new System.Drawing.Size(27, 23);
+            this.imageButton6.TabIndex = 129;
+            this.imageButton6.Text = "...";
+            this.imageButton6.UseVisualStyleBackColor = true;
+            this.imageButton6.Click += new System.EventHandler(this.imageButton6_Click);
             // 
-            // textBox18
+            // imagePath6
             // 
-            this.textBox18.Enabled = false;
-            this.textBox18.Location = new System.Drawing.Point(242, 165);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(136, 20);
-            this.textBox18.TabIndex = 128;
+            this.imagePath6.Enabled = false;
+            this.imagePath6.Location = new System.Drawing.Point(242, 165);
+            this.imagePath6.Name = "imagePath6";
+            this.imagePath6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath6.Size = new System.Drawing.Size(136, 20);
+            this.imagePath6.TabIndex = 128;
             // 
-            // button17
+            // imageButton5
             // 
-            this.button17.Location = new System.Drawing.Point(384, 138);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(27, 23);
-            this.button17.TabIndex = 127;
-            this.button17.Text = "...";
-            this.button17.UseVisualStyleBackColor = true;
+            this.imageButton5.Location = new System.Drawing.Point(384, 138);
+            this.imageButton5.Name = "imageButton5";
+            this.imageButton5.Size = new System.Drawing.Size(27, 23);
+            this.imageButton5.TabIndex = 127;
+            this.imageButton5.Text = "...";
+            this.imageButton5.UseVisualStyleBackColor = true;
+            this.imageButton5.Click += new System.EventHandler(this.imageButton5_Click);
             // 
-            // textBox17
+            // imagePath5
             // 
-            this.textBox17.Enabled = false;
-            this.textBox17.Location = new System.Drawing.Point(242, 139);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(136, 20);
-            this.textBox17.TabIndex = 126;
+            this.imagePath5.Enabled = false;
+            this.imagePath5.Location = new System.Drawing.Point(242, 139);
+            this.imagePath5.Name = "imagePath5";
+            this.imagePath5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath5.Size = new System.Drawing.Size(136, 20);
+            this.imagePath5.TabIndex = 126;
             // 
-            // button16
+            // imageButton4
             // 
-            this.button16.Location = new System.Drawing.Point(384, 112);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(27, 23);
-            this.button16.TabIndex = 125;
-            this.button16.Text = "...";
-            this.button16.UseVisualStyleBackColor = true;
+            this.imageButton4.Location = new System.Drawing.Point(384, 112);
+            this.imageButton4.Name = "imageButton4";
+            this.imageButton4.Size = new System.Drawing.Size(27, 23);
+            this.imageButton4.TabIndex = 125;
+            this.imageButton4.Text = "...";
+            this.imageButton4.UseVisualStyleBackColor = true;
+            this.imageButton4.Click += new System.EventHandler(this.imageButton4_Click);
             // 
-            // textBox16
+            // imagePath4
             // 
-            this.textBox16.Enabled = false;
-            this.textBox16.Location = new System.Drawing.Point(242, 113);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(136, 20);
-            this.textBox16.TabIndex = 124;
+            this.imagePath4.Enabled = false;
+            this.imagePath4.Location = new System.Drawing.Point(242, 113);
+            this.imagePath4.Name = "imagePath4";
+            this.imagePath4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath4.Size = new System.Drawing.Size(136, 20);
+            this.imagePath4.TabIndex = 124;
             // 
-            // button15
+            // imageButton3
             // 
-            this.button15.Location = new System.Drawing.Point(384, 86);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(27, 23);
-            this.button15.TabIndex = 123;
-            this.button15.Text = "...";
-            this.button15.UseVisualStyleBackColor = true;
+            this.imageButton3.Location = new System.Drawing.Point(384, 86);
+            this.imageButton3.Name = "imageButton3";
+            this.imageButton3.Size = new System.Drawing.Size(27, 23);
+            this.imageButton3.TabIndex = 123;
+            this.imageButton3.Text = "...";
+            this.imageButton3.UseVisualStyleBackColor = true;
+            this.imageButton3.Click += new System.EventHandler(this.imageButton3_Click);
             // 
-            // textBox15
+            // imagePath3
             // 
-            this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(242, 87);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(136, 20);
-            this.textBox15.TabIndex = 122;
+            this.imagePath3.Enabled = false;
+            this.imagePath3.Location = new System.Drawing.Point(242, 87);
+            this.imagePath3.Name = "imagePath3";
+            this.imagePath3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath3.Size = new System.Drawing.Size(136, 20);
+            this.imagePath3.TabIndex = 122;
             // 
-            // button14
+            // imageButton2
             // 
-            this.button14.Location = new System.Drawing.Point(384, 60);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(27, 23);
-            this.button14.TabIndex = 121;
-            this.button14.Text = "...";
-            this.button14.UseVisualStyleBackColor = true;
+            this.imageButton2.Location = new System.Drawing.Point(384, 60);
+            this.imageButton2.Name = "imageButton2";
+            this.imageButton2.Size = new System.Drawing.Size(27, 23);
+            this.imageButton2.TabIndex = 121;
+            this.imageButton2.Text = "...";
+            this.imageButton2.UseVisualStyleBackColor = true;
+            this.imageButton2.Click += new System.EventHandler(this.imageButton2_Click);
             // 
-            // textBox14
+            // imagePath2
             // 
-            this.textBox14.Enabled = false;
-            this.textBox14.Location = new System.Drawing.Point(242, 61);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(136, 20);
-            this.textBox14.TabIndex = 120;
+            this.imagePath2.Enabled = false;
+            this.imagePath2.Location = new System.Drawing.Point(242, 61);
+            this.imagePath2.Name = "imagePath2";
+            this.imagePath2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath2.Size = new System.Drawing.Size(136, 20);
+            this.imagePath2.TabIndex = 120;
             // 
-            // button13
+            // imageButton1
             // 
-            this.button13.Location = new System.Drawing.Point(384, 34);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(27, 23);
-            this.button13.TabIndex = 119;
-            this.button13.Text = "...";
-            this.button13.UseVisualStyleBackColor = true;
+            this.imageButton1.Location = new System.Drawing.Point(384, 34);
+            this.imageButton1.Name = "imageButton1";
+            this.imageButton1.Size = new System.Drawing.Size(27, 23);
+            this.imageButton1.TabIndex = 119;
+            this.imageButton1.Text = "...";
+            this.imageButton1.UseVisualStyleBackColor = true;
+            this.imageButton1.Click += new System.EventHandler(this.imageButton1_Click);
             // 
-            // textBox13
+            // imagePath1
             // 
-            this.textBox13.Enabled = false;
-            this.textBox13.Location = new System.Drawing.Point(242, 35);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(136, 20);
-            this.textBox13.TabIndex = 118;
+            this.imagePath1.Enabled = false;
+            this.imagePath1.Location = new System.Drawing.Point(242, 35);
+            this.imagePath1.Name = "imagePath1";
+            this.imagePath1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagePath1.Size = new System.Drawing.Size(136, 20);
+            this.imagePath1.TabIndex = 118;
             // 
             // label9
             // 
@@ -1327,26 +1368,6 @@
             this.playerReset.UseVisualStyleBackColor = true;
             this.playerReset.Click += new System.EventHandler(this.playerReset_Click);
             // 
-            // replayClean
-            // 
-            this.replayClean.Location = new System.Drawing.Point(491, 191);
-            this.replayClean.Name = "replayClean";
-            this.replayClean.Size = new System.Drawing.Size(67, 38);
-            this.replayClean.TabIndex = 62;
-            this.replayClean.Text = "Clean Replays";
-            this.replayClean.UseVisualStyleBackColor = true;
-            this.replayClean.Click += new System.EventHandler(this.replayClean_Click);
-            // 
-            // replayReset
-            // 
-            this.replayReset.Location = new System.Drawing.Point(491, 138);
-            this.replayReset.Name = "replayReset";
-            this.replayReset.Size = new System.Drawing.Size(67, 38);
-            this.replayReset.TabIndex = 61;
-            this.replayReset.Text = "Reset Replays";
-            this.replayReset.UseVisualStyleBackColor = true;
-            this.replayReset.Click += new System.EventHandler(this.replayReset_Click);
-            // 
             // generalUpdateButton
             // 
             this.generalUpdateButton.Location = new System.Drawing.Point(92, 6);
@@ -1492,6 +1513,26 @@
             this.messageLabel.Size = new System.Drawing.Size(50, 13);
             this.messageLabel.TabIndex = 1;
             this.messageLabel.Text = "Message";
+            // 
+            // replayClean
+            // 
+            this.replayClean.Location = new System.Drawing.Point(858, 363);
+            this.replayClean.Name = "replayClean";
+            this.replayClean.Size = new System.Drawing.Size(67, 38);
+            this.replayClean.TabIndex = 62;
+            this.replayClean.Text = "Clean Replays";
+            this.replayClean.UseVisualStyleBackColor = true;
+            this.replayClean.Click += new System.EventHandler(this.replayClean_Click);
+            // 
+            // replayReset
+            // 
+            this.replayReset.Location = new System.Drawing.Point(858, 283);
+            this.replayReset.Name = "replayReset";
+            this.replayReset.Size = new System.Drawing.Size(67, 38);
+            this.replayReset.TabIndex = 61;
+            this.replayReset.Text = "Reset Replays";
+            this.replayReset.UseVisualStyleBackColor = true;
+            this.replayReset.Click += new System.EventHandler(this.replayReset_Click);
             // 
             // Match_1
             // 
@@ -2181,17 +2222,19 @@
             // 
             // m1t2Logo
             // 
-            this.m1t2Logo.Enabled = false;
             this.m1t2Logo.Location = new System.Drawing.Point(505, 21);
             this.m1t2Logo.Name = "m1t2Logo";
+            this.m1t2Logo.ReadOnly = true;
+            this.m1t2Logo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t2Logo.Size = new System.Drawing.Size(133, 20);
             this.m1t2Logo.TabIndex = 89;
             // 
             // m1t1Logo
             // 
-            this.m1t1Logo.Enabled = false;
             this.m1t1Logo.Location = new System.Drawing.Point(293, 21);
             this.m1t1Logo.Name = "m1t1Logo";
+            this.m1t1Logo.ReadOnly = true;
+            this.m1t1Logo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m1t1Logo.Size = new System.Drawing.Size(136, 20);
             this.m1t1Logo.TabIndex = 86;
             // 
@@ -3755,7 +3798,20 @@
             // 
             // Replay_Manager
             // 
-            this.Replay_Manager.Controls.Add(this.listView1);
+            this.Replay_Manager.Controls.Add(this.button1);
+            this.Replay_Manager.Controls.Add(this.replaySetButton);
+            this.Replay_Manager.Controls.Add(this.replayCopyDetailsButton);
+            this.Replay_Manager.Controls.Add(this.replayRichTextBox);
+            this.Replay_Manager.Controls.Add(this.label25);
+            this.Replay_Manager.Controls.Add(this.label24);
+            this.Replay_Manager.Controls.Add(this.label23);
+            this.Replay_Manager.Controls.Add(this.label22);
+            this.Replay_Manager.Controls.Add(this.replayPlayersCheckedListBox);
+            this.Replay_Manager.Controls.Add(this.replayMapComboBox);
+            this.Replay_Manager.Controls.Add(this.replayTeamComboBox);
+            this.Replay_Manager.Controls.Add(this.replayListView);
+            this.Replay_Manager.Controls.Add(this.replayClean);
+            this.Replay_Manager.Controls.Add(this.replayReset);
             this.Replay_Manager.Location = new System.Drawing.Point(4, 22);
             this.Replay_Manager.Name = "Replay_Manager";
             this.Replay_Manager.Padding = new System.Windows.Forms.Padding(3);
@@ -3764,32 +3820,169 @@
             this.Replay_Manager.Text = "Replays";
             this.Replay_Manager.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // button1
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.button1.Location = new System.Drawing.Point(785, 363);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 38);
+            this.button1.TabIndex = 65;
+            this.button1.Text = "Clear Replay";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // replaySetButton
+            // 
+            this.replaySetButton.Location = new System.Drawing.Point(785, 283);
+            this.replaySetButton.Name = "replaySetButton";
+            this.replaySetButton.Size = new System.Drawing.Size(67, 38);
+            this.replaySetButton.TabIndex = 64;
+            this.replaySetButton.Text = "Set Replay";
+            this.replaySetButton.UseVisualStyleBackColor = true;
+            this.replaySetButton.Click += new System.EventHandler(this.replaySetButton_Click);
+            // 
+            // replayCopyDetailsButton
+            // 
+            this.replayCopyDetailsButton.Location = new System.Drawing.Point(547, 363);
+            this.replayCopyDetailsButton.Name = "replayCopyDetailsButton";
+            this.replayCopyDetailsButton.Size = new System.Drawing.Size(67, 38);
+            this.replayCopyDetailsButton.TabIndex = 63;
+            this.replayCopyDetailsButton.Text = "Copy Details";
+            this.replayCopyDetailsButton.UseVisualStyleBackColor = true;
+            this.replayCopyDetailsButton.Click += new System.EventHandler(this.replayCopyDetailsButton_Click);
+            // 
+            // replayRichTextBox
+            // 
+            this.replayRichTextBox.Location = new System.Drawing.Point(315, 306);
+            this.replayRichTextBox.Name = "replayRichTextBox";
+            this.replayRichTextBox.Size = new System.Drawing.Size(226, 96);
+            this.replayRichTextBox.TabIndex = 8;
+            this.replayRichTextBox.Text = "";
+            this.replayRichTextBox.TextChanged += new System.EventHandler(this.replayRichTextBox_TextChanged);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(277, 343);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(32, 13);
+            this.label25.TabIndex = 7;
+            this.label25.Text = "Desc";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(278, 283);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(28, 13);
+            this.label24.TabIndex = 6;
+            this.label24.Text = "Map";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 343);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(41, 13);
+            this.label23.TabIndex = 5;
+            this.label23.Text = "Players";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(7, 281);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(34, 13);
+            this.label22.TabIndex = 4;
+            this.label22.Text = "Team";
+            // 
+            // replayPlayersCheckedListBox
+            // 
+            this.replayPlayersCheckedListBox.CheckOnClick = true;
+            this.replayPlayersCheckedListBox.FormattingEnabled = true;
+            this.replayPlayersCheckedListBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.replayPlayersCheckedListBox.Location = new System.Drawing.Point(53, 308);
+            this.replayPlayersCheckedListBox.Name = "replayPlayersCheckedListBox";
+            this.replayPlayersCheckedListBox.Size = new System.Drawing.Size(218, 94);
+            this.replayPlayersCheckedListBox.TabIndex = 3;
+            this.replayPlayersCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.playersCheckedListBox_SelectedIndexChanged);
+            // 
+            // replayMapComboBox
+            // 
+            this.replayMapComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.replayMapComboBox.FormattingEnabled = true;
+            this.replayMapComboBox.Location = new System.Drawing.Point(315, 280);
+            this.replayMapComboBox.Name = "replayMapComboBox";
+            this.replayMapComboBox.Size = new System.Drawing.Size(226, 21);
+            this.replayMapComboBox.TabIndex = 2;
+            this.replayMapComboBox.SelectedIndexChanged += new System.EventHandler(this.replayMapComboBox_SelectedIndexChanged);
+            // 
+            // replayTeamComboBox
+            // 
+            this.replayTeamComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.replayTeamComboBox.FormattingEnabled = true;
+            this.replayTeamComboBox.Location = new System.Drawing.Point(53, 280);
+            this.replayTeamComboBox.Name = "replayTeamComboBox";
+            this.replayTeamComboBox.Size = new System.Drawing.Size(219, 21);
+            this.replayTeamComboBox.TabIndex = 1;
+            this.replayTeamComboBox.SelectedIndexChanged += new System.EventHandler(this.replayTeamComboBox_SelectedIndexChanged);
+            // 
+            // replayListView
+            // 
+            this.replayListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
-            this.listView1.LargeImageList = this.imageList1;
-            this.listView1.Location = new System.Drawing.Point(7, 7);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(918, 301);
-            this.listView1.SmallImageList = this.imageList1;
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(128, 72);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.replayListView.FullRowSelect = true;
+            this.replayListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.replayListView.HideSelection = false;
+            this.replayListView.LargeImageList = this.replayImageList;
+            this.replayListView.Location = new System.Drawing.Point(7, 7);
+            this.replayListView.MultiSelect = false;
+            this.replayListView.Name = "replayListView";
+            this.replayListView.Size = new System.Drawing.Size(918, 267);
+            this.replayListView.SmallImageList = this.replayImageList;
+            this.replayListView.TabIndex = 0;
+            this.replayListView.UseCompatibleStateImageBehavior = false;
+            this.replayListView.View = System.Windows.Forms.View.Details;
+            this.replayListView.SelectedIndexChanged += new System.EventHandler(this.replayListView_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "File Name";
+            this.columnHeader1.Width = 256;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "File Path";
+            this.columnHeader2.Text = "Team";
+            this.columnHeader2.Width = 150;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Map";
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Description";
+            this.columnHeader4.Width = 250;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Created";
+            this.columnHeader5.Width = 74;
+            // 
+            // replayImageList
+            // 
+            this.replayImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.replayImageList.ImageSize = new System.Drawing.Size(128, 72);
+            this.replayImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Form1
             // 
@@ -3840,6 +4033,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.m1t1Score)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.Replay_Manager.ResumeLayout(false);
+            this.Replay_Manager.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4087,51 +4281,65 @@
         private System.Windows.Forms.TextBox m1t1p1Info;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox28;
+        private System.Windows.Forms.Button imageButton13;
+        private System.Windows.Forms.TextBox imagePath13;
+        private System.Windows.Forms.Button imageButton12;
+        private System.Windows.Forms.TextBox imagePath12;
+        private System.Windows.Forms.Button imageButton11;
+        private System.Windows.Forms.TextBox imagePath11;
+        private System.Windows.Forms.Button imageButton10;
+        private System.Windows.Forms.TextBox imagePath10;
+        private System.Windows.Forms.Button imageButton9;
+        private System.Windows.Forms.TextBox imagePath9;
+        private System.Windows.Forms.Button imageButton8;
+        private System.Windows.Forms.TextBox imagePath8;
+        private System.Windows.Forms.Button imageButton7;
+        private System.Windows.Forms.TextBox imagePath7;
+        private System.Windows.Forms.Button imageButton6;
+        private System.Windows.Forms.TextBox imagePath6;
+        private System.Windows.Forms.Button imageButton5;
+        private System.Windows.Forms.TextBox imagePath5;
+        private System.Windows.Forms.Button imageButton4;
+        private System.Windows.Forms.TextBox imagePath4;
+        private System.Windows.Forms.Button imageButton3;
+        private System.Windows.Forms.TextBox imagePath3;
+        private System.Windows.Forms.Button imageButton2;
+        private System.Windows.Forms.TextBox imagePath2;
+        private System.Windows.Forms.Button imageButton1;
+        private System.Windows.Forms.TextBox imagePath1;
+        private System.Windows.Forms.TextBox playerNameBox;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.TextBox playerImagePath;
+        private System.Windows.Forms.Button playerImageButton;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.Button imageButton14;
+        private System.Windows.Forms.TextBox imagePath14;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.TextBox playerTeamInfoBox;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button m1t2ColorButton;
         private System.Windows.Forms.Button m1t1ColorButton;
         private System.Windows.Forms.ColorDialog m1t1Color;
         private System.Windows.Forms.ColorDialog m1t2Color;
         private System.Windows.Forms.TabPage Replay_Manager;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ListView replayListView;
+        private System.Windows.Forms.ImageList replayImageList;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.RichTextBox replayRichTextBox;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox replayMapComboBox;
+        private System.Windows.Forms.ComboBox replayTeamComboBox;
+        private System.Windows.Forms.Button replayCopyDetailsButton;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.CheckedListBox replayPlayersCheckedListBox;
+        private System.Windows.Forms.Button replaySetButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 #endregion
