@@ -217,6 +217,7 @@
     <None Include="Resources\Icon-busan.png" />
     <None Include="Resources\Icon-Ashe.png" />
     <None Include="Resources\Ashe_OWL.png" />
+    <Content Include="Resources\Ashe.png" />
     <Content Include="Resources\Baptiste.png" />
     <Content Include="Resources\Baptiste_OWL.png" />
     <Content Include="Resources\Color Paris.png" />

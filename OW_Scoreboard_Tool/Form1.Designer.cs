@@ -4228,6 +4228,8 @@ namespace OW_Scoreboard_Tool
             this.colorThemeDialog1.CustomColors = customColors;
             this.colorThemeDialog2.CustomColors = customColors;
             this.colorThemeDialog3.CustomColors = customColors;
+            this.m1t1Color.CustomColors = customColors;
+            this.m1t2Color.CustomColors = customColors;
 
             // 
             // Form1
