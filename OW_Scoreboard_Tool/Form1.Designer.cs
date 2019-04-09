@@ -1,4 +1,6 @@
-﻿namespace OW_Scoreboard_Tool
+﻿using System.Drawing;
+
+namespace OW_Scoreboard_Tool
 {
     partial class Form1
     {
@@ -43,6 +45,24 @@
             this.exportAwayTeamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.General_Info = new System.Windows.Forms.TabPage();
+            this.colorThemeButton3 = new System.Windows.Forms.Button();
+            this.colorThemeButton2 = new System.Windows.Forms.Button();
+            this.imageLabel14 = new System.Windows.Forms.Label();
+            this.imageLabel13 = new System.Windows.Forms.Label();
+            this.imageLabel12 = new System.Windows.Forms.Label();
+            this.imageLabel11 = new System.Windows.Forms.Label();
+            this.imageLabel10 = new System.Windows.Forms.Label();
+            this.imageLabel9 = new System.Windows.Forms.Label();
+            this.imageLabel8 = new System.Windows.Forms.Label();
+            this.imageLabel7 = new System.Windows.Forms.Label();
+            this.imageLabel6 = new System.Windows.Forms.Label();
+            this.imageLabel5 = new System.Windows.Forms.Label();
+            this.imageLabel4 = new System.Windows.Forms.Label();
+            this.imageLabel3 = new System.Windows.Forms.Label();
+            this.imageLabel2 = new System.Windows.Forms.Label();
+            this.imageLabel1 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.colorThemeButton1 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.playerTeamInfoBox = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -308,7 +328,8 @@
             this.m1t1Label = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Replay_Manager = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.replaySaveButton = new System.Windows.Forms.Button();
+            this.replayClearButton = new System.Windows.Forms.Button();
             this.replaySetButton = new System.Windows.Forms.Button();
             this.replayCopyDetailsButton = new System.Windows.Forms.Button();
             this.replayRichTextBox = new System.Windows.Forms.RichTextBox();
@@ -328,6 +349,9 @@
             this.replayImageList = new System.Windows.Forms.ImageList(this.components);
             this.m1t1Color = new System.Windows.Forms.ColorDialog();
             this.m1t2Color = new System.Windows.Forms.ColorDialog();
+            this.colorThemeDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorThemeDialog2 = new System.Windows.Forms.ColorDialog();
+            this.colorThemeDialog3 = new System.Windows.Forms.ColorDialog();
             this.menuStrip1.SuspendLayout();
             this.General_Info.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -441,6 +465,24 @@
             // 
             // General_Info
             // 
+            this.General_Info.Controls.Add(this.colorThemeButton3);
+            this.General_Info.Controls.Add(this.colorThemeButton2);
+            this.General_Info.Controls.Add(this.imageLabel14);
+            this.General_Info.Controls.Add(this.imageLabel13);
+            this.General_Info.Controls.Add(this.imageLabel12);
+            this.General_Info.Controls.Add(this.imageLabel11);
+            this.General_Info.Controls.Add(this.imageLabel10);
+            this.General_Info.Controls.Add(this.imageLabel9);
+            this.General_Info.Controls.Add(this.imageLabel8);
+            this.General_Info.Controls.Add(this.imageLabel7);
+            this.General_Info.Controls.Add(this.imageLabel6);
+            this.General_Info.Controls.Add(this.imageLabel5);
+            this.General_Info.Controls.Add(this.imageLabel4);
+            this.General_Info.Controls.Add(this.imageLabel3);
+            this.General_Info.Controls.Add(this.imageLabel2);
+            this.General_Info.Controls.Add(this.imageLabel1);
+            this.General_Info.Controls.Add(this.label26);
+            this.General_Info.Controls.Add(this.colorThemeButton1);
             this.General_Info.Controls.Add(this.label21);
             this.General_Info.Controls.Add(this.playerTeamInfoBox);
             this.General_Info.Controls.Add(this.label19);
@@ -537,10 +579,175 @@
             this.General_Info.Text = "General";
             this.General_Info.UseVisualStyleBackColor = true;
             // 
+            // colorThemeButton3
+            // 
+            this.colorThemeButton3.Location = new System.Drawing.Point(465, 121);
+            this.colorThemeButton3.Name = "colorThemeButton3";
+            this.colorThemeButton3.Size = new System.Drawing.Size(75, 38);
+            this.colorThemeButton3.TabIndex = 171;
+            this.colorThemeButton3.Text = "Tertiary";
+            this.colorThemeButton3.UseVisualStyleBackColor = true;
+            this.colorThemeButton3.Click += new System.EventHandler(this.colorThemeButton3_Click);
+            // 
+            // colorThemeButton2
+            // 
+            this.colorThemeButton2.Location = new System.Drawing.Point(465, 77);
+            this.colorThemeButton2.Name = "colorThemeButton2";
+            this.colorThemeButton2.Size = new System.Drawing.Size(75, 38);
+            this.colorThemeButton2.TabIndex = 170;
+            this.colorThemeButton2.Text = "Secondary";
+            this.colorThemeButton2.UseVisualStyleBackColor = true;
+            this.colorThemeButton2.Click += new System.EventHandler(this.colorThemeButton2_Click);
+            // 
+            // imageLabel14
+            // 
+            this.imageLabel14.AutoSize = true;
+            this.imageLabel14.Location = new System.Drawing.Point(242, 375);
+            this.imageLabel14.Name = "imageLabel14";
+            this.imageLabel14.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel14.TabIndex = 169;
+            this.imageLabel14.Text = "Image14";
+            // 
+            // imageLabel13
+            // 
+            this.imageLabel13.AutoSize = true;
+            this.imageLabel13.Location = new System.Drawing.Point(242, 349);
+            this.imageLabel13.Name = "imageLabel13";
+            this.imageLabel13.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel13.TabIndex = 168;
+            this.imageLabel13.Text = "Image13";
+            // 
+            // imageLabel12
+            // 
+            this.imageLabel12.AutoSize = true;
+            this.imageLabel12.Location = new System.Drawing.Point(242, 323);
+            this.imageLabel12.Name = "imageLabel12";
+            this.imageLabel12.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel12.TabIndex = 167;
+            this.imageLabel12.Text = "Image12";
+            // 
+            // imageLabel11
+            // 
+            this.imageLabel11.AutoSize = true;
+            this.imageLabel11.Location = new System.Drawing.Point(242, 297);
+            this.imageLabel11.Name = "imageLabel11";
+            this.imageLabel11.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel11.TabIndex = 166;
+            this.imageLabel11.Text = "Image11";
+            // 
+            // imageLabel10
+            // 
+            this.imageLabel10.AutoSize = true;
+            this.imageLabel10.Location = new System.Drawing.Point(242, 271);
+            this.imageLabel10.Name = "imageLabel10";
+            this.imageLabel10.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel10.TabIndex = 165;
+            this.imageLabel10.Text = "Image10";
+            // 
+            // imageLabel9
+            // 
+            this.imageLabel9.AutoSize = true;
+            this.imageLabel9.Location = new System.Drawing.Point(242, 245);
+            this.imageLabel9.Name = "imageLabel9";
+            this.imageLabel9.Size = new System.Drawing.Size(42, 13);
+            this.imageLabel9.TabIndex = 164;
+            this.imageLabel9.Text = "Image9";
+            // 
+            // imageLabel8
+            // 
+            this.imageLabel8.AutoSize = true;
+            this.imageLabel8.Location = new System.Drawing.Point(242, 219);
+            this.imageLabel8.Name = "imageLabel8";
+            this.imageLabel8.Size = new System.Drawing.Size(42, 13);
+            this.imageLabel8.TabIndex = 163;
+            this.imageLabel8.Text = "Image8";
+            // 
+            // imageLabel7
+            // 
+            this.imageLabel7.AutoSize = true;
+            this.imageLabel7.Location = new System.Drawing.Point(242, 193);
+            this.imageLabel7.Name = "imageLabel7";
+            this.imageLabel7.Size = new System.Drawing.Size(42, 13);
+            this.imageLabel7.TabIndex = 162;
+            this.imageLabel7.Text = "Image7";
+            // 
+            // imageLabel6
+            // 
+            this.imageLabel6.AutoSize = true;
+            this.imageLabel6.Location = new System.Drawing.Point(242, 167);
+            this.imageLabel6.Name = "imageLabel6";
+            this.imageLabel6.Size = new System.Drawing.Size(42, 13);
+            this.imageLabel6.TabIndex = 161;
+            this.imageLabel6.Text = "Image6";
+            // 
+            // imageLabel5
+            // 
+            this.imageLabel5.AutoSize = true;
+            this.imageLabel5.Location = new System.Drawing.Point(242, 141);
+            this.imageLabel5.Name = "imageLabel5";
+            this.imageLabel5.Size = new System.Drawing.Size(42, 13);
+            this.imageLabel5.TabIndex = 160;
+            this.imageLabel5.Text = "Image5";
+            // 
+            // imageLabel4
+            // 
+            this.imageLabel4.AutoSize = true;
+            this.imageLabel4.Location = new System.Drawing.Point(242, 115);
+            this.imageLabel4.Name = "imageLabel4";
+            this.imageLabel4.Size = new System.Drawing.Size(42, 13);
+            this.imageLabel4.TabIndex = 159;
+            this.imageLabel4.Text = "Image4";
+            // 
+            // imageLabel3
+            // 
+            this.imageLabel3.AutoSize = true;
+            this.imageLabel3.Location = new System.Drawing.Point(242, 89);
+            this.imageLabel3.Name = "imageLabel3";
+            this.imageLabel3.Size = new System.Drawing.Size(42, 13);
+            this.imageLabel3.TabIndex = 158;
+            this.imageLabel3.Text = "Image3";
+            // 
+            // imageLabel2
+            // 
+            this.imageLabel2.AutoSize = true;
+            this.imageLabel2.Location = new System.Drawing.Point(242, 63);
+            this.imageLabel2.Name = "imageLabel2";
+            this.imageLabel2.Size = new System.Drawing.Size(42, 13);
+            this.imageLabel2.TabIndex = 157;
+            this.imageLabel2.Text = "Image2";
+            // 
+            // imageLabel1
+            // 
+            this.imageLabel1.AutoSize = true;
+            this.imageLabel1.Location = new System.Drawing.Point(242, 38);
+            this.imageLabel1.Name = "imageLabel1";
+            this.imageLabel1.Size = new System.Drawing.Size(42, 13);
+            this.imageLabel1.TabIndex = 156;
+            this.imageLabel1.Text = "Image1";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(462, 17);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(72, 13);
+            this.label26.TabIndex = 155;
+            this.label26.Text = "Color Themes";
+            // 
+            // colorThemeButton1
+            // 
+            this.colorThemeButton1.Location = new System.Drawing.Point(465, 33);
+            this.colorThemeButton1.Name = "colorThemeButton1";
+            this.colorThemeButton1.Size = new System.Drawing.Size(75, 38);
+            this.colorThemeButton1.TabIndex = 154;
+            this.colorThemeButton1.Text = "Primary";
+            this.colorThemeButton1.UseVisualStyleBackColor = true;
+            this.colorThemeButton1.Click += new System.EventHandler(this.colorThemeButton1_Click);
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(239, 16);
+            this.label21.Location = new System.Drawing.Point(287, 15);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(69, 13);
             this.label21.TabIndex = 153;
@@ -607,7 +814,7 @@
             // 
             // imageButton14
             // 
-            this.imageButton14.Location = new System.Drawing.Point(384, 372);
+            this.imageButton14.Location = new System.Drawing.Point(432, 371);
             this.imageButton14.Name = "imageButton14";
             this.imageButton14.Size = new System.Drawing.Size(27, 23);
             this.imageButton14.TabIndex = 145;
@@ -617,16 +824,16 @@
             // 
             // imagePath14
             // 
-            this.imagePath14.Enabled = false;
-            this.imagePath14.Location = new System.Drawing.Point(242, 373);
+            this.imagePath14.Location = new System.Drawing.Point(290, 372);
             this.imagePath14.Name = "imagePath14";
+            this.imagePath14.ReadOnly = true;
             this.imagePath14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath14.Size = new System.Drawing.Size(136, 20);
             this.imagePath14.TabIndex = 144;
             // 
             // imageButton13
             // 
-            this.imageButton13.Location = new System.Drawing.Point(384, 346);
+            this.imageButton13.Location = new System.Drawing.Point(432, 345);
             this.imageButton13.Name = "imageButton13";
             this.imageButton13.Size = new System.Drawing.Size(27, 23);
             this.imageButton13.TabIndex = 143;
@@ -636,16 +843,16 @@
             // 
             // imagePath13
             // 
-            this.imagePath13.Enabled = false;
-            this.imagePath13.Location = new System.Drawing.Point(242, 347);
+            this.imagePath13.Location = new System.Drawing.Point(290, 346);
             this.imagePath13.Name = "imagePath13";
+            this.imagePath13.ReadOnly = true;
             this.imagePath13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath13.Size = new System.Drawing.Size(136, 20);
             this.imagePath13.TabIndex = 142;
             // 
             // imageButton12
             // 
-            this.imageButton12.Location = new System.Drawing.Point(384, 320);
+            this.imageButton12.Location = new System.Drawing.Point(432, 319);
             this.imageButton12.Name = "imageButton12";
             this.imageButton12.Size = new System.Drawing.Size(27, 23);
             this.imageButton12.TabIndex = 141;
@@ -655,16 +862,16 @@
             // 
             // imagePath12
             // 
-            this.imagePath12.Enabled = false;
-            this.imagePath12.Location = new System.Drawing.Point(242, 321);
+            this.imagePath12.Location = new System.Drawing.Point(290, 320);
             this.imagePath12.Name = "imagePath12";
+            this.imagePath12.ReadOnly = true;
             this.imagePath12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath12.Size = new System.Drawing.Size(136, 20);
             this.imagePath12.TabIndex = 140;
             // 
             // imageButton11
             // 
-            this.imageButton11.Location = new System.Drawing.Point(384, 294);
+            this.imageButton11.Location = new System.Drawing.Point(432, 293);
             this.imageButton11.Name = "imageButton11";
             this.imageButton11.Size = new System.Drawing.Size(27, 23);
             this.imageButton11.TabIndex = 139;
@@ -674,16 +881,16 @@
             // 
             // imagePath11
             // 
-            this.imagePath11.Enabled = false;
-            this.imagePath11.Location = new System.Drawing.Point(242, 295);
+            this.imagePath11.Location = new System.Drawing.Point(290, 294);
             this.imagePath11.Name = "imagePath11";
+            this.imagePath11.ReadOnly = true;
             this.imagePath11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath11.Size = new System.Drawing.Size(136, 20);
             this.imagePath11.TabIndex = 138;
             // 
             // imageButton10
             // 
-            this.imageButton10.Location = new System.Drawing.Point(384, 268);
+            this.imageButton10.Location = new System.Drawing.Point(432, 267);
             this.imageButton10.Name = "imageButton10";
             this.imageButton10.Size = new System.Drawing.Size(27, 23);
             this.imageButton10.TabIndex = 137;
@@ -693,16 +900,16 @@
             // 
             // imagePath10
             // 
-            this.imagePath10.Enabled = false;
-            this.imagePath10.Location = new System.Drawing.Point(242, 269);
+            this.imagePath10.Location = new System.Drawing.Point(290, 268);
             this.imagePath10.Name = "imagePath10";
+            this.imagePath10.ReadOnly = true;
             this.imagePath10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath10.Size = new System.Drawing.Size(136, 20);
             this.imagePath10.TabIndex = 136;
             // 
             // imageButton9
             // 
-            this.imageButton9.Location = new System.Drawing.Point(384, 242);
+            this.imageButton9.Location = new System.Drawing.Point(432, 241);
             this.imageButton9.Name = "imageButton9";
             this.imageButton9.Size = new System.Drawing.Size(27, 23);
             this.imageButton9.TabIndex = 135;
@@ -712,16 +919,16 @@
             // 
             // imagePath9
             // 
-            this.imagePath9.Enabled = false;
-            this.imagePath9.Location = new System.Drawing.Point(242, 243);
+            this.imagePath9.Location = new System.Drawing.Point(290, 242);
             this.imagePath9.Name = "imagePath9";
+            this.imagePath9.ReadOnly = true;
             this.imagePath9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath9.Size = new System.Drawing.Size(136, 20);
             this.imagePath9.TabIndex = 134;
             // 
             // imageButton8
             // 
-            this.imageButton8.Location = new System.Drawing.Point(384, 216);
+            this.imageButton8.Location = new System.Drawing.Point(432, 215);
             this.imageButton8.Name = "imageButton8";
             this.imageButton8.Size = new System.Drawing.Size(27, 23);
             this.imageButton8.TabIndex = 133;
@@ -731,16 +938,16 @@
             // 
             // imagePath8
             // 
-            this.imagePath8.Enabled = false;
-            this.imagePath8.Location = new System.Drawing.Point(242, 217);
+            this.imagePath8.Location = new System.Drawing.Point(290, 216);
             this.imagePath8.Name = "imagePath8";
+            this.imagePath8.ReadOnly = true;
             this.imagePath8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath8.Size = new System.Drawing.Size(136, 20);
             this.imagePath8.TabIndex = 132;
             // 
             // imageButton7
             // 
-            this.imageButton7.Location = new System.Drawing.Point(384, 190);
+            this.imageButton7.Location = new System.Drawing.Point(432, 189);
             this.imageButton7.Name = "imageButton7";
             this.imageButton7.Size = new System.Drawing.Size(27, 23);
             this.imageButton7.TabIndex = 131;
@@ -750,16 +957,16 @@
             // 
             // imagePath7
             // 
-            this.imagePath7.Enabled = false;
-            this.imagePath7.Location = new System.Drawing.Point(242, 191);
+            this.imagePath7.Location = new System.Drawing.Point(290, 190);
             this.imagePath7.Name = "imagePath7";
+            this.imagePath7.ReadOnly = true;
             this.imagePath7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath7.Size = new System.Drawing.Size(136, 20);
             this.imagePath7.TabIndex = 130;
             // 
             // imageButton6
             // 
-            this.imageButton6.Location = new System.Drawing.Point(384, 164);
+            this.imageButton6.Location = new System.Drawing.Point(432, 163);
             this.imageButton6.Name = "imageButton6";
             this.imageButton6.Size = new System.Drawing.Size(27, 23);
             this.imageButton6.TabIndex = 129;
@@ -769,16 +976,16 @@
             // 
             // imagePath6
             // 
-            this.imagePath6.Enabled = false;
-            this.imagePath6.Location = new System.Drawing.Point(242, 165);
+            this.imagePath6.Location = new System.Drawing.Point(290, 164);
             this.imagePath6.Name = "imagePath6";
+            this.imagePath6.ReadOnly = true;
             this.imagePath6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath6.Size = new System.Drawing.Size(136, 20);
             this.imagePath6.TabIndex = 128;
             // 
             // imageButton5
             // 
-            this.imageButton5.Location = new System.Drawing.Point(384, 138);
+            this.imageButton5.Location = new System.Drawing.Point(432, 137);
             this.imageButton5.Name = "imageButton5";
             this.imageButton5.Size = new System.Drawing.Size(27, 23);
             this.imageButton5.TabIndex = 127;
@@ -788,16 +995,16 @@
             // 
             // imagePath5
             // 
-            this.imagePath5.Enabled = false;
-            this.imagePath5.Location = new System.Drawing.Point(242, 139);
+            this.imagePath5.Location = new System.Drawing.Point(290, 138);
             this.imagePath5.Name = "imagePath5";
+            this.imagePath5.ReadOnly = true;
             this.imagePath5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath5.Size = new System.Drawing.Size(136, 20);
             this.imagePath5.TabIndex = 126;
             // 
             // imageButton4
             // 
-            this.imageButton4.Location = new System.Drawing.Point(384, 112);
+            this.imageButton4.Location = new System.Drawing.Point(432, 111);
             this.imageButton4.Name = "imageButton4";
             this.imageButton4.Size = new System.Drawing.Size(27, 23);
             this.imageButton4.TabIndex = 125;
@@ -807,16 +1014,16 @@
             // 
             // imagePath4
             // 
-            this.imagePath4.Enabled = false;
-            this.imagePath4.Location = new System.Drawing.Point(242, 113);
+            this.imagePath4.Location = new System.Drawing.Point(290, 112);
             this.imagePath4.Name = "imagePath4";
+            this.imagePath4.ReadOnly = true;
             this.imagePath4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath4.Size = new System.Drawing.Size(136, 20);
             this.imagePath4.TabIndex = 124;
             // 
             // imageButton3
             // 
-            this.imageButton3.Location = new System.Drawing.Point(384, 86);
+            this.imageButton3.Location = new System.Drawing.Point(432, 85);
             this.imageButton3.Name = "imageButton3";
             this.imageButton3.Size = new System.Drawing.Size(27, 23);
             this.imageButton3.TabIndex = 123;
@@ -826,16 +1033,16 @@
             // 
             // imagePath3
             // 
-            this.imagePath3.Enabled = false;
-            this.imagePath3.Location = new System.Drawing.Point(242, 87);
+            this.imagePath3.Location = new System.Drawing.Point(290, 86);
             this.imagePath3.Name = "imagePath3";
+            this.imagePath3.ReadOnly = true;
             this.imagePath3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath3.Size = new System.Drawing.Size(136, 20);
             this.imagePath3.TabIndex = 122;
             // 
             // imageButton2
             // 
-            this.imageButton2.Location = new System.Drawing.Point(384, 60);
+            this.imageButton2.Location = new System.Drawing.Point(432, 59);
             this.imageButton2.Name = "imageButton2";
             this.imageButton2.Size = new System.Drawing.Size(27, 23);
             this.imageButton2.TabIndex = 121;
@@ -845,16 +1052,16 @@
             // 
             // imagePath2
             // 
-            this.imagePath2.Enabled = false;
-            this.imagePath2.Location = new System.Drawing.Point(242, 61);
+            this.imagePath2.Location = new System.Drawing.Point(290, 60);
             this.imagePath2.Name = "imagePath2";
+            this.imagePath2.ReadOnly = true;
             this.imagePath2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath2.Size = new System.Drawing.Size(136, 20);
             this.imagePath2.TabIndex = 120;
             // 
             // imageButton1
             // 
-            this.imageButton1.Location = new System.Drawing.Point(384, 34);
+            this.imageButton1.Location = new System.Drawing.Point(432, 33);
             this.imageButton1.Name = "imageButton1";
             this.imageButton1.Size = new System.Drawing.Size(27, 23);
             this.imageButton1.TabIndex = 119;
@@ -864,9 +1071,9 @@
             // 
             // imagePath1
             // 
-            this.imagePath1.Enabled = false;
-            this.imagePath1.Location = new System.Drawing.Point(242, 35);
+            this.imagePath1.Location = new System.Drawing.Point(290, 34);
             this.imagePath1.Name = "imagePath1";
+            this.imagePath1.ReadOnly = true;
             this.imagePath1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.imagePath1.Size = new System.Drawing.Size(136, 20);
             this.imagePath1.TabIndex = 118;
@@ -3798,7 +4005,8 @@
             // 
             // Replay_Manager
             // 
-            this.Replay_Manager.Controls.Add(this.button1);
+            this.Replay_Manager.Controls.Add(this.replaySaveButton);
+            this.Replay_Manager.Controls.Add(this.replayClearButton);
             this.Replay_Manager.Controls.Add(this.replaySetButton);
             this.Replay_Manager.Controls.Add(this.replayCopyDetailsButton);
             this.Replay_Manager.Controls.Add(this.replayRichTextBox);
@@ -3820,14 +4028,25 @@
             this.Replay_Manager.Text = "Replays";
             this.Replay_Manager.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // replaySaveButton
             // 
-            this.button1.Location = new System.Drawing.Point(785, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 38);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "Clear Replay";
-            this.button1.UseVisualStyleBackColor = true;
+            this.replaySaveButton.Location = new System.Drawing.Point(785, 323);
+            this.replaySaveButton.Name = "replaySaveButton";
+            this.replaySaveButton.Size = new System.Drawing.Size(67, 38);
+            this.replaySaveButton.TabIndex = 66;
+            this.replaySaveButton.Text = "Save Replay";
+            this.replaySaveButton.UseVisualStyleBackColor = true;
+            this.replaySaveButton.Click += new System.EventHandler(this.replaySaveButton_Click);
+            // 
+            // replayClearButton
+            // 
+            this.replayClearButton.Location = new System.Drawing.Point(785, 363);
+            this.replayClearButton.Name = "replayClearButton";
+            this.replayClearButton.Size = new System.Drawing.Size(67, 38);
+            this.replayClearButton.TabIndex = 65;
+            this.replayClearButton.Text = "Clear Replay";
+            this.replayClearButton.UseVisualStyleBackColor = true;
+            this.replayClearButton.Click += new System.EventHandler(this.replayClearButton_Click);
             // 
             // replaySetButton
             // 
@@ -3983,6 +4202,33 @@
             this.replayImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             this.replayImageList.ImageSize = new System.Drawing.Size(128, 72);
             this.replayImageList.TransparentColor = System.Drawing.Color.Transparent;
+
+            //
+            // Color Dialog Custom Colors
+            //
+            int[] customColors = new int[]
+            {
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#8cba11")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#ff9c00")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#202224")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#C80013")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#D45800")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#D47900")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#FFD700")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#FFFF00")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#CCFF00")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#00AB84")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#00FFFF")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#27AAE1")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#800080")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#523FFF")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#FF00FF")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#FF6EC7"))
+            };
+            this.colorThemeDialog1.CustomColors = customColors;
+            this.colorThemeDialog2.CustomColors = customColors;
+            this.colorThemeDialog3.CustomColors = customColors;
+
             // 
             // Form1
             // 
@@ -4339,7 +4585,29 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.CheckedListBox replayPlayersCheckedListBox;
         private System.Windows.Forms.Button replaySetButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button replayClearButton;
+        private System.Windows.Forms.Button replaySaveButton;
+        private System.Windows.Forms.Button colorThemeButton3;
+        private System.Windows.Forms.Button colorThemeButton2;
+        private System.Windows.Forms.Label imageLabel14;
+        private System.Windows.Forms.Label imageLabel13;
+        private System.Windows.Forms.Label imageLabel12;
+        private System.Windows.Forms.Label imageLabel11;
+        private System.Windows.Forms.Label imageLabel10;
+        private System.Windows.Forms.Label imageLabel9;
+        private System.Windows.Forms.Label imageLabel8;
+        private System.Windows.Forms.Label imageLabel7;
+        private System.Windows.Forms.Label imageLabel6;
+        private System.Windows.Forms.Label imageLabel5;
+        private System.Windows.Forms.Label imageLabel4;
+        private System.Windows.Forms.Label imageLabel3;
+        private System.Windows.Forms.Label imageLabel2;
+        private System.Windows.Forms.Label imageLabel1;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button colorThemeButton1;
+        private System.Windows.Forms.ColorDialog colorThemeDialog1;
+        private System.Windows.Forms.ColorDialog colorThemeDialog2;
+        private System.Windows.Forms.ColorDialog colorThemeDialog3;
     }
 }
 #endregion

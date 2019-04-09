@@ -115,36 +115,6 @@ namespace OW_Scoreboard_Tool
             loadScore(m1m6t2Score, "Match1", "m6t2Score");
             loadScore(m1m7t2Score, "Match1", "m7t2Score");
 
-            loadText(message, "General", "message");
-            loadText(host, "General", "host");
-            loadText(analyst1, "General", "analyst1");
-            loadText(analyst2, "General", "analyst2");
-            loadText(caster1, "General", "caster1");
-            loadText(caster2, "General", "caster2");
-            loadText(utility1, "General", "utility1");
-            loadText(utility2, "General", "utility2");
-            loadText(utility3, "General", "utility3");
-            loadText(utility4, "General", "utility4");
-            loadText(utility5, "General", "utility5");
-            loadText(utility6, "General", "utility6");
-            loadText(utility7, "General", "utility7");
-            loadText(utility8, "General", "utility8");
-
-            loadText(imagePath1, "General", "imagePath1");
-            loadText(imagePath2, "General", "imagePath2");
-            loadText(imagePath3, "General", "imagePath3");
-            loadText(imagePath4, "General", "imagePath4");
-            loadText(imagePath5, "General", "imagePath5");
-            loadText(imagePath6, "General", "imagePath6");
-            loadText(imagePath7, "General", "imagePath7");
-            loadText(imagePath8, "General", "imagePath8");
-            loadText(imagePath9, "General", "imagePath9");
-            loadText(imagePath10, "General", "imagePath10");
-            loadText(imagePath11, "General", "imagePath11");
-            loadText(imagePath12, "General", "imagePath12");
-            loadText(imagePath13, "General", "imagePath13");
-            loadText(imagePath14, "General", "imagePath14");
-
             loadCombo(m1t1p1Hero, "Match1", "t1p1Hero");
             loadCombo(m1t1p2Hero, "Match1", "t1p2Hero");
             loadCombo(m1t1p3Hero, "Match1", "t1p3Hero");
@@ -180,6 +150,40 @@ namespace OW_Scoreboard_Tool
             loadCombo(m1m5Map, "Match1", "m5Map");
             loadCombo(m1m6Map, "Match1", "m6Map");
             loadCombo(m1m7Map, "Match1", "m7Map");
+
+            loadText(message, "General", "message");
+            loadText(host, "General", "host");
+            loadText(analyst1, "General", "analyst1");
+            loadText(analyst2, "General", "analyst2");
+            loadText(caster1, "General", "caster1");
+            loadText(caster2, "General", "caster2");
+            loadText(utility1, "General", "utility1");
+            loadText(utility2, "General", "utility2");
+            loadText(utility3, "General", "utility3");
+            loadText(utility4, "General", "utility4");
+            loadText(utility5, "General", "utility5");
+            loadText(utility6, "General", "utility6");
+            loadText(utility7, "General", "utility7");
+            loadText(utility8, "General", "utility8");
+
+            loadText(imagePath1, "General", "imagePath1");
+            loadText(imagePath2, "General", "imagePath2");
+            loadText(imagePath3, "General", "imagePath3");
+            loadText(imagePath4, "General", "imagePath4");
+            loadText(imagePath5, "General", "imagePath5");
+            loadText(imagePath6, "General", "imagePath6");
+            loadText(imagePath7, "General", "imagePath7");
+            loadText(imagePath8, "General", "imagePath8");
+            loadText(imagePath9, "General", "imagePath9");
+            loadText(imagePath10, "General", "imagePath10");
+            loadText(imagePath11, "General", "imagePath11");
+            loadText(imagePath12, "General", "imagePath12");
+            loadText(imagePath13, "General", "imagePath13");
+            loadText(imagePath14, "General", "imagePath14");
+
+            loadColor(colorThemeDialog1, colorThemeButton1, "General", "colorTheme1");
+            loadColor(colorThemeDialog2, colorThemeButton2, "General", "colorTheme2");
+            loadColor(colorThemeDialog3, colorThemeButton3, "General", "colorTheme3");
 
             loadText(playerBox, "Player", "player");
             loadText(playerSRBox, "Player", "sr");
@@ -549,6 +553,9 @@ namespace OW_Scoreboard_Tool
                 resetText(imagePath12);
                 resetText(imagePath13);
                 resetText(imagePath14);
+                resetColor(colorThemeDialog1, colorThemeButton1);
+                resetColor(colorThemeDialog2, colorThemeButton2);
+                resetColor(colorThemeDialog3, colorThemeButton3);
             }
             else if(dialogResult == DialogResult.No)
             {
@@ -693,6 +700,25 @@ namespace OW_Scoreboard_Tool
             updateLogos(imagePath12, "General", "imagePath12");
             updateLogos(imagePath13, "General", "imagePath13");
             updateLogos(imagePath14, "General", "imagePath14");
+
+            updateText(imagePath1, "General", "imagePath1");
+            updateText(imagePath2, "General", "imagePath2");
+            updateText(imagePath3, "General", "imagePath3");
+            updateText(imagePath4, "General", "imagePath4");
+            updateText(imagePath5, "General", "imagePath5");
+            updateText(imagePath6, "General", "imagePath6");
+            updateText(imagePath7, "General", "imagePath7");
+            updateText(imagePath8, "General", "imagePath8");
+            updateText(imagePath9, "General", "imagePath9");
+            updateText(imagePath10, "General", "imagePath10");
+            updateText(imagePath11, "General", "imagePath11");
+            updateText(imagePath12, "General", "imagePath12");
+            updateText(imagePath13, "General", "imagePath13");
+            updateText(imagePath14, "General", "imagePath14");
+
+            updateColor(colorThemeDialog1, "General", "colorTheme1");
+            updateColor(colorThemeDialog2, "General", "colorTheme2");
+            updateColor(colorThemeDialog3, "General", "colorTheme3");
         }
 
         /// <summary>
@@ -3272,7 +3298,10 @@ namespace OW_Scoreboard_Tool
                 "imagePath11.txt",
                 "imagePath12.txt",
                 "imagePath13.txt",
-                "imagePath14.txt"
+                "imagePath14.txt",
+                "colorTheme1.txt",
+                "colorTheme2.txt",
+                "colorTheme3.txt",
             };
 
             PlayerFiles = new List<string>
@@ -3573,12 +3602,13 @@ namespace OW_Scoreboard_Tool
 
         private void replaySetButton_Click(object sender, EventArgs e)
         {
-            using (StreamWriter sw = File.CreateText(path + FolderList[4] + "\\" + ReplayFiles[2]))
+            if (replayListView.SelectedItems.Count > 0)
             {
-                sw.WriteLine(Replays[replayListView.SelectedItems[0].Index].Name);
-            }
-
-            
+                using (StreamWriter sw = File.CreateText(path + FolderList[4] + "\\" + ReplayFiles[2]))
+                {
+                    sw.WriteLine(Replays[replayListView.SelectedItems[0].Index].Name);
+                }
+            } 
         }
 
         private void imageButton1_Click(object sender, EventArgs e)
@@ -3651,6 +3681,41 @@ namespace OW_Scoreboard_Tool
             GetLogoFile(imagePath14);
         }
 
-        
+        private void replaySaveButton_Click(object sender, EventArgs e)
+        {
+            if (replayListView.SelectedItems.Count > 0)
+            {
+                File.Copy(path + FolderList[5] + "\\" + Replays[replayListView.SelectedItems[0].Index].Name, path + FolderList[4] + "\\" + ReplayFiles[1], true);
+            }
+        }
+
+        private void replayClearButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void colorThemeButton1_Click(object sender, EventArgs e)
+        {
+            if (colorThemeDialog1.ShowDialog() == DialogResult.OK)
+            {
+                colorThemeButton1.BackColor = colorThemeDialog1.Color;
+            }
+        }
+
+        private void colorThemeButton2_Click(object sender, EventArgs e)
+        {
+            if (colorThemeDialog2.ShowDialog() == DialogResult.OK)
+            {
+                colorThemeButton2.BackColor = colorThemeDialog2.Color;
+            }
+        }
+
+        private void colorThemeButton3_Click(object sender, EventArgs e)
+        {
+            if (colorThemeDialog3.ShowDialog() == DialogResult.OK)
+            {
+                colorThemeButton3.BackColor = colorThemeDialog3.Color;
+            }
+        }
     }
 }
