@@ -51,6 +51,26 @@ namespace OW_Scoreboard_Tool
         List<string> SettingFiles;
         List<string> ReplayFiles;
 
+        int[] customColors = new int[]
+            {
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#8cba11")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#ff9c00")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#202224")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#C80013")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#D45800")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#D47900")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#FFD700")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#FFFF00")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#CCFF00")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#00AB84")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#00FFFF")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#27AAE1")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#800080")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#523FFF")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#FF00FF")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#FF6EC7"))
+            };
+
         #endregion
 
         public Form1()
@@ -63,6 +83,12 @@ namespace OW_Scoreboard_Tool
             GenerateMaps();
             GenerateFolderList();
             GenerateFileList();
+            colorThemeDialog1.CustomColors = customColors;
+            colorThemeDialog2.CustomColors = customColors;
+            colorThemeDialog3.CustomColors = customColors;
+            m1t1Color.CustomColors = customColors;
+            m1t2Color.CustomColors = customColors;
+
 
             CheckFolders();
             CheckFiles();
@@ -142,6 +168,34 @@ namespace OW_Scoreboard_Tool
             loadCombo(m1t2p4Role, "Match1", "t2p4Role");
             loadCombo(m1t2p5Role, "Match1", "t2p5Role");
             loadCombo(m1t2p6Role, "Match1", "t2p6Role");
+
+            loadText(m1t1p1Info, "Match1", "t1p1Info");
+            loadText(m1t1p2Info, "Match1", "t1p2Info");
+            loadText(m1t1p3Info, "Match1", "t1p3Info");
+            loadText(m1t1p4Info, "Match1", "t1p4Info");
+            loadText(m1t1p5Info, "Match1", "t1p5Info");
+            loadText(m1t1p6Info, "Match1", "t1p6Info");
+            
+            loadText(m1t2p1Info, "Match1", "t2p1Info");
+            loadText(m1t2p2Info, "Match1", "t2p2Info");
+            loadText(m1t2p3Info, "Match1", "t2p3Info");
+            loadText(m1t2p4Info, "Match1", "t2p4Info");
+            loadText(m1t2p5Info, "Match1", "t2p5Info");
+            loadText(m1t2p6Info, "Match1", "t2p6Info");
+
+            loadText(m1t1p1Image, "Match1", "t1p1Image");
+            loadText(m1t1p2Image, "Match1", "t1p2Image");
+            loadText(m1t1p3Image, "Match1", "t1p3Image");
+            loadText(m1t1p4Image, "Match1", "t1p4Image");
+            loadText(m1t1p5Image, "Match1", "t1p5Image");
+            loadText(m1t1p6Image, "Match1", "t1p6Image");
+            
+            loadText(m1t2p1Image, "Match1", "t2p1Image");
+            loadText(m1t2p2Image, "Match1", "t2p2Image");
+            loadText(m1t2p3Image, "Match1", "t2p3Image");
+            loadText(m1t2p4Image, "Match1", "t2p4Image");
+            loadText(m1t2p5Image, "Match1", "t2p5Image");
+            loadText(m1t2p6Image, "Match1", "t2p6Image");
 
             loadCombo(m1m1Map, "Match1", "m1Map");
             loadCombo(m1m2Map, "Match1", "m2Map");
@@ -412,6 +466,66 @@ namespace OW_Scoreboard_Tool
             m1t2p6Role.SelectedIndex = temps;
             temps = 0;
 
+            temp = m1t1p1Info.Text;
+            m1t1p1Info.Text = m1t2p1Info.Text;
+            m1t2p1Info.Text = temp;
+            temp = "";
+
+            temp = m1t1p2Info.Text;
+            m1t1p2Info.Text = m1t2p2Info.Text;
+            m1t2p2Info.Text = temp;
+            temp = "";
+
+            temp = m1t1p3Info.Text;
+            m1t1p3Info.Text = m1t2p3Info.Text;
+            m1t2p3Info.Text = temp;
+            temp = "";
+
+            temp = m1t1p4Info.Text;
+            m1t1p4Info.Text = m1t2p4Info.Text;
+            m1t2p4Info.Text = temp;
+            temp = "";
+
+            temp = m1t1p5Info.Text;
+            m1t1p5Info.Text = m1t2p5Info.Text;
+            m1t2p5Info.Text = temp;
+            temp = "";
+
+            temp = m1t1p6Info.Text;
+            m1t1p6Info.Text = m1t2p6Info.Text;
+            m1t2p6Info.Text = temp;
+            temp = "";
+
+            temp = m1t1p1Image.Text;
+            m1t1p1Image.Text = m1t2p1Image.Text;
+            m1t2p1Image.Text = temp;
+            temp = "";
+
+            temp = m1t1p2Image.Text;
+            m1t1p2Image.Text = m1t2p2Image.Text;
+            m1t2p2Image.Text = temp;
+            temp = "";
+
+            temp = m1t1p3Image.Text;
+            m1t1p3Image.Text = m1t2p3Image.Text;
+            m1t2p3Image.Text = temp;
+            temp = "";
+
+            temp = m1t1p4Image.Text;
+            m1t1p4Image.Text = m1t2p4Image.Text;
+            m1t2p4Image.Text = temp;
+            temp = "";
+
+            temp = m1t1p5Image.Text;
+            m1t1p5Image.Text = m1t2p5Image.Text;
+            m1t2p5Image.Text = temp;
+            temp = "";
+
+            temp = m1t1p6Image.Text;
+            m1t1p6Image.Text = m1t2p6Image.Text;
+            m1t2p6Image.Text = temp;
+            temp = "";
+
             Color tempColor = new Color();
             tempColor = m1t1Color.Color;
             m1t1Color.Color = m1t2Color.Color;
@@ -480,6 +594,34 @@ namespace OW_Scoreboard_Tool
                 resetRole(m1t2p4Role);
                 resetRole(m1t2p5Role);
                 resetRole(m1t2p6Role);
+
+                resetText(m1t1p1Info);
+                resetText(m1t1p2Info);
+                resetText(m1t1p3Info);
+                resetText(m1t1p4Info);
+                resetText(m1t1p5Info);
+                resetText(m1t1p6Info);
+
+                resetText(m1t2p1Info);
+                resetText(m1t2p2Info);
+                resetText(m1t2p3Info);
+                resetText(m1t2p4Info);
+                resetText(m1t2p5Info);
+                resetText(m1t2p6Info);
+
+                resetText(m1t1p1Image);
+                resetText(m1t1p2Image);
+                resetText(m1t1p3Image);
+                resetText(m1t1p4Image);
+                resetText(m1t1p5Image);
+                resetText(m1t1p6Image);
+                
+                resetText(m1t2p1Image);
+                resetText(m1t2p2Image);
+                resetText(m1t2p3Image);
+                resetText(m1t2p4Image);
+                resetText(m1t2p5Image);
+                resetText(m1t2p6Image);
 
                 resetSide(m1Neutral);
 
@@ -620,6 +762,48 @@ namespace OW_Scoreboard_Tool
             updateRole(m1t2p4Role, "Match1", "t2p4Role");
             updateRole(m1t2p5Role, "Match1", "t2p5Role");
             updateRole(m1t2p6Role, "Match1", "t2p6Role");
+
+            updateText(m1t1p1Info, "Match1", "t1p1Info");
+            updateText(m1t1p2Info, "Match1", "t1p2Info");
+            updateText(m1t1p3Info, "Match1", "t1p3Info");
+            updateText(m1t1p4Info, "Match1", "t1p4Info");
+            updateText(m1t1p5Info, "Match1", "t1p5Info");
+            updateText(m1t1p6Info, "Match1", "t1p6Info");
+            
+            updateText(m1t2p1Info, "Match1", "t2p1Info");
+            updateText(m1t2p2Info, "Match1", "t2p2Info");
+            updateText(m1t2p3Info, "Match1", "t2p3Info");
+            updateText(m1t2p4Info, "Match1", "t2p4Info");
+            updateText(m1t2p5Info, "Match1", "t2p5Info");
+            updateText(m1t2p6Info, "Match1", "t2p6Info");
+
+            updateLogos(m1t1p1Image, "Match1", "t1p1Image");
+            updateLogos(m1t1p2Image, "Match1", "t1p2Image");
+            updateLogos(m1t1p3Image, "Match1", "t1p3Image");
+            updateLogos(m1t1p4Image, "Match1", "t1p4Image");
+            updateLogos(m1t1p5Image, "Match1", "t1p5Image");
+            updateLogos(m1t1p6Image, "Match1", "t1p6Image");
+
+            updateLogos(m1t2p1Image, "Match1", "t2p1Image");
+            updateLogos(m1t2p2Image, "Match1", "t2p2Image");
+            updateLogos(m1t2p3Image, "Match1", "t2p3Image");
+            updateLogos(m1t2p4Image, "Match1", "t2p4Image");
+            updateLogos(m1t2p5Image, "Match1", "t2p5Image");
+            updateLogos(m1t2p6Image, "Match1", "t2p6Image");
+
+            updateText(m1t1p1Image, "Match1", "t1p1Image");
+            updateText(m1t1p2Image, "Match1", "t1p2Image");
+            updateText(m1t1p3Image, "Match1", "t1p3Image");
+            updateText(m1t1p4Image, "Match1", "t1p4Image");
+            updateText(m1t1p5Image, "Match1", "t1p5Image");
+            updateText(m1t1p6Image, "Match1", "t1p6Image");
+            
+            updateText(m1t2p1Image, "Match1", "t2p1Image");
+            updateText(m1t2p2Image, "Match1", "t2p2Image");
+            updateText(m1t2p3Image, "Match1", "t2p3Image");
+            updateText(m1t2p4Image, "Match1", "t2p4Image");
+            updateText(m1t2p5Image, "Match1", "t2p5Image");
+            updateText(m1t2p6Image, "Match1", "t2p6Image");
 
             updateSide(m1Attack, "Match1", "t1Side", "t2Side");
             updateSide(m1Defend, "Match1", "t1Side", "t2Side");
@@ -3716,6 +3900,66 @@ namespace OW_Scoreboard_Tool
             {
                 colorThemeButton3.BackColor = colorThemeDialog3.Color;
             }
+        }
+
+        private void m1t1p1ImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t1p1Image);
+        }
+
+        private void m1t1p2ImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t1p2Image);
+        }
+
+        private void m1t1p3ImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t1p3Image);
+        }
+
+        private void m1t1p4ImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t1p4Image);
+        }
+
+        private void m1t1p5ImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t1p5Image);
+        }
+
+        private void m1t1p6ImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t1p6Image);
+        }
+
+        private void m1t2p1ImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t2p1Image);
+        }
+
+        private void m1t2p2ImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t2p2Image);
+        }
+
+        private void m1t2p3ImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t2p3Image);
+        }
+
+        private void m1t2p4ImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t2p4Image);
+        }
+
+        private void m1t2p5ImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t2p5Image);
+        }
+
+        private void m1t2p6ImageButton_Click(object sender, EventArgs e)
+        {
+            GetLogoFile(m1t2p6Image);
         }
     }
 }

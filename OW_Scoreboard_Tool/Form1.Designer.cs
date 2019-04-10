@@ -163,6 +163,20 @@ namespace OW_Scoreboard_Tool
             this.replayClean = new System.Windows.Forms.Button();
             this.replayReset = new System.Windows.Forms.Button();
             this.Match_1 = new System.Windows.Forms.TabPage();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.m1t2p6Image = new System.Windows.Forms.TextBox();
+            this.m1t2p5Image = new System.Windows.Forms.TextBox();
+            this.m1t2p4Image = new System.Windows.Forms.TextBox();
+            this.m1t2p3Image = new System.Windows.Forms.TextBox();
+            this.m1t2p2Image = new System.Windows.Forms.TextBox();
+            this.m1t2p1Image = new System.Windows.Forms.TextBox();
+            this.m1t1p6Image = new System.Windows.Forms.TextBox();
+            this.m1t1p5Image = new System.Windows.Forms.TextBox();
+            this.m1t1p4Image = new System.Windows.Forms.TextBox();
+            this.m1t1p3Image = new System.Windows.Forms.TextBox();
+            this.m1t1p2Image = new System.Windows.Forms.TextBox();
+            this.m1t1p1Image = new System.Windows.Forms.TextBox();
             this.m1t2ColorButton = new System.Windows.Forms.Button();
             this.m1t1ColorButton = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -1743,6 +1757,20 @@ namespace OW_Scoreboard_Tool
             // 
             // Match_1
             // 
+            this.Match_1.Controls.Add(this.label28);
+            this.Match_1.Controls.Add(this.label27);
+            this.Match_1.Controls.Add(this.m1t2p6Image);
+            this.Match_1.Controls.Add(this.m1t2p5Image);
+            this.Match_1.Controls.Add(this.m1t2p4Image);
+            this.Match_1.Controls.Add(this.m1t2p3Image);
+            this.Match_1.Controls.Add(this.m1t2p2Image);
+            this.Match_1.Controls.Add(this.m1t2p1Image);
+            this.Match_1.Controls.Add(this.m1t1p6Image);
+            this.Match_1.Controls.Add(this.m1t1p5Image);
+            this.Match_1.Controls.Add(this.m1t1p4Image);
+            this.Match_1.Controls.Add(this.m1t1p3Image);
+            this.Match_1.Controls.Add(this.m1t1p2Image);
+            this.Match_1.Controls.Add(this.m1t1p1Image);
             this.Match_1.Controls.Add(this.m1t2ColorButton);
             this.Match_1.Controls.Add(this.m1t1ColorButton);
             this.Match_1.Controls.Add(this.label12);
@@ -1898,6 +1926,132 @@ namespace OW_Scoreboard_Tool
             this.Match_1.Text = "Match";
             this.Match_1.UseVisualStyleBackColor = true;
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(496, 81);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(36, 13);
+            this.label28.TabIndex = 134;
+            this.label28.Text = "Image";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(396, 81);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(36, 13);
+            this.label27.TabIndex = 133;
+            this.label27.Text = "Image";
+            // 
+            // m1t2p6Image
+            // 
+            this.m1t2p6Image.Location = new System.Drawing.Point(502, 292);
+            this.m1t2p6Image.Name = "m1t2p6Image";
+            this.m1t2p6Image.ReadOnly = true;
+            this.m1t2p6Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t2p6Image.Size = new System.Drawing.Size(30, 20);
+            this.m1t2p6Image.TabIndex = 132;
+            // 
+            // m1t2p5Image
+            // 
+            this.m1t2p5Image.Location = new System.Drawing.Point(502, 253);
+            this.m1t2p5Image.Name = "m1t2p5Image";
+            this.m1t2p5Image.ReadOnly = true;
+            this.m1t2p5Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t2p5Image.Size = new System.Drawing.Size(30, 20);
+            this.m1t2p5Image.TabIndex = 131;
+            // 
+            // m1t2p4Image
+            // 
+            this.m1t2p4Image.Location = new System.Drawing.Point(502, 214);
+            this.m1t2p4Image.Name = "m1t2p4Image";
+            this.m1t2p4Image.ReadOnly = true;
+            this.m1t2p4Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t2p4Image.Size = new System.Drawing.Size(30, 20);
+            this.m1t2p4Image.TabIndex = 130;
+            // 
+            // m1t2p3Image
+            // 
+            this.m1t2p3Image.Location = new System.Drawing.Point(502, 175);
+            this.m1t2p3Image.Name = "m1t2p3Image";
+            this.m1t2p3Image.ReadOnly = true;
+            this.m1t2p3Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t2p3Image.Size = new System.Drawing.Size(30, 20);
+            this.m1t2p3Image.TabIndex = 129;
+            // 
+            // m1t2p2Image
+            // 
+            this.m1t2p2Image.Location = new System.Drawing.Point(502, 136);
+            this.m1t2p2Image.Name = "m1t2p2Image";
+            this.m1t2p2Image.ReadOnly = true;
+            this.m1t2p2Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t2p2Image.Size = new System.Drawing.Size(30, 20);
+            this.m1t2p2Image.TabIndex = 128;
+            // 
+            // m1t2p1Image
+            // 
+            this.m1t2p1Image.Location = new System.Drawing.Point(502, 97);
+            this.m1t2p1Image.Name = "m1t2p1Image";
+            this.m1t2p1Image.ReadOnly = true;
+            this.m1t2p1Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t2p1Image.Size = new System.Drawing.Size(30, 20);
+            this.m1t2p1Image.TabIndex = 127;
+            // 
+            // m1t1p6Image
+            // 
+            this.m1t1p6Image.Location = new System.Drawing.Point(399, 291);
+            this.m1t1p6Image.Name = "m1t1p6Image";
+            this.m1t1p6Image.ReadOnly = true;
+            this.m1t1p6Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p6Image.Size = new System.Drawing.Size(30, 20);
+            this.m1t1p6Image.TabIndex = 126;
+            // 
+            // m1t1p5Image
+            // 
+            this.m1t1p5Image.Location = new System.Drawing.Point(399, 253);
+            this.m1t1p5Image.Name = "m1t1p5Image";
+            this.m1t1p5Image.ReadOnly = true;
+            this.m1t1p5Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p5Image.Size = new System.Drawing.Size(30, 20);
+            this.m1t1p5Image.TabIndex = 125;
+            // 
+            // m1t1p4Image
+            // 
+            this.m1t1p4Image.Location = new System.Drawing.Point(399, 214);
+            this.m1t1p4Image.Name = "m1t1p4Image";
+            this.m1t1p4Image.ReadOnly = true;
+            this.m1t1p4Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p4Image.Size = new System.Drawing.Size(30, 20);
+            this.m1t1p4Image.TabIndex = 124;
+            // 
+            // m1t1p3Image
+            // 
+            this.m1t1p3Image.Location = new System.Drawing.Point(399, 175);
+            this.m1t1p3Image.Name = "m1t1p3Image";
+            this.m1t1p3Image.ReadOnly = true;
+            this.m1t1p3Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p3Image.Size = new System.Drawing.Size(30, 20);
+            this.m1t1p3Image.TabIndex = 123;
+            // 
+            // m1t1p2Image
+            // 
+            this.m1t1p2Image.Location = new System.Drawing.Point(399, 136);
+            this.m1t1p2Image.Name = "m1t1p2Image";
+            this.m1t1p2Image.ReadOnly = true;
+            this.m1t1p2Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p2Image.Size = new System.Drawing.Size(30, 20);
+            this.m1t1p2Image.TabIndex = 122;
+            // 
+            // m1t1p1Image
+            // 
+            this.m1t1p1Image.Location = new System.Drawing.Point(399, 97);
+            this.m1t1p1Image.Name = "m1t1p1Image";
+            this.m1t1p1Image.ReadOnly = true;
+            this.m1t1p1Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m1t1p1Image.Size = new System.Drawing.Size(30, 20);
+            this.m1t1p1Image.TabIndex = 121;
+            // 
             // m1t2ColorButton
             // 
             this.m1t2ColorButton.Location = new System.Drawing.Point(799, 47);
@@ -1938,57 +2092,63 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t2p6ImageButton
             // 
-            this.m1t2p6ImageButton.Location = new System.Drawing.Point(472, 290);
+            this.m1t2p6ImageButton.Location = new System.Drawing.Point(469, 290);
             this.m1t2p6ImageButton.Name = "m1t2p6ImageButton";
             this.m1t2p6ImageButton.Size = new System.Drawing.Size(27, 23);
             this.m1t2p6ImageButton.TabIndex = 89;
             this.m1t2p6ImageButton.Text = "...";
             this.m1t2p6ImageButton.UseVisualStyleBackColor = true;
+            this.m1t2p6ImageButton.Click += new System.EventHandler(this.m1t2p6ImageButton_Click);
             // 
             // m1t2p5ImageButton
             // 
-            this.m1t2p5ImageButton.Location = new System.Drawing.Point(472, 251);
+            this.m1t2p5ImageButton.Location = new System.Drawing.Point(469, 251);
             this.m1t2p5ImageButton.Name = "m1t2p5ImageButton";
             this.m1t2p5ImageButton.Size = new System.Drawing.Size(27, 23);
             this.m1t2p5ImageButton.TabIndex = 116;
             this.m1t2p5ImageButton.Text = "...";
             this.m1t2p5ImageButton.UseVisualStyleBackColor = true;
+            this.m1t2p5ImageButton.Click += new System.EventHandler(this.m1t2p5ImageButton_Click);
             // 
             // m1t2p4ImageButton
             // 
-            this.m1t2p4ImageButton.Location = new System.Drawing.Point(472, 212);
+            this.m1t2p4ImageButton.Location = new System.Drawing.Point(469, 212);
             this.m1t2p4ImageButton.Name = "m1t2p4ImageButton";
             this.m1t2p4ImageButton.Size = new System.Drawing.Size(27, 23);
             this.m1t2p4ImageButton.TabIndex = 115;
             this.m1t2p4ImageButton.Text = "...";
             this.m1t2p4ImageButton.UseVisualStyleBackColor = true;
+            this.m1t2p4ImageButton.Click += new System.EventHandler(this.m1t2p4ImageButton_Click);
             // 
             // m1t2p3ImageButton
             // 
-            this.m1t2p3ImageButton.Location = new System.Drawing.Point(472, 173);
+            this.m1t2p3ImageButton.Location = new System.Drawing.Point(469, 173);
             this.m1t2p3ImageButton.Name = "m1t2p3ImageButton";
             this.m1t2p3ImageButton.Size = new System.Drawing.Size(27, 23);
             this.m1t2p3ImageButton.TabIndex = 114;
             this.m1t2p3ImageButton.Text = "...";
             this.m1t2p3ImageButton.UseVisualStyleBackColor = true;
+            this.m1t2p3ImageButton.Click += new System.EventHandler(this.m1t2p3ImageButton_Click);
             // 
             // m1t2p2ImageButton
             // 
-            this.m1t2p2ImageButton.Location = new System.Drawing.Point(472, 134);
+            this.m1t2p2ImageButton.Location = new System.Drawing.Point(469, 134);
             this.m1t2p2ImageButton.Name = "m1t2p2ImageButton";
             this.m1t2p2ImageButton.Size = new System.Drawing.Size(27, 23);
             this.m1t2p2ImageButton.TabIndex = 113;
             this.m1t2p2ImageButton.Text = "...";
             this.m1t2p2ImageButton.UseVisualStyleBackColor = true;
+            this.m1t2p2ImageButton.Click += new System.EventHandler(this.m1t2p2ImageButton_Click);
             // 
             // m1t2p1ImageButton
             // 
-            this.m1t2p1ImageButton.Location = new System.Drawing.Point(472, 95);
+            this.m1t2p1ImageButton.Location = new System.Drawing.Point(469, 95);
             this.m1t2p1ImageButton.Name = "m1t2p1ImageButton";
             this.m1t2p1ImageButton.Size = new System.Drawing.Size(27, 23);
             this.m1t2p1ImageButton.TabIndex = 112;
             this.m1t2p1ImageButton.Text = "...";
             this.m1t2p1ImageButton.UseVisualStyleBackColor = true;
+            this.m1t2p1ImageButton.Click += new System.EventHandler(this.m1t2p1ImageButton_Click);
             // 
             // m1t1p6ImageButton
             // 
@@ -1998,6 +2158,7 @@ namespace OW_Scoreboard_Tool
             this.m1t1p6ImageButton.TabIndex = 111;
             this.m1t1p6ImageButton.Text = "...";
             this.m1t1p6ImageButton.UseVisualStyleBackColor = true;
+            this.m1t1p6ImageButton.Click += new System.EventHandler(this.m1t1p6ImageButton_Click);
             // 
             // m1t1p5ImageButton
             // 
@@ -2007,6 +2168,7 @@ namespace OW_Scoreboard_Tool
             this.m1t1p5ImageButton.TabIndex = 110;
             this.m1t1p5ImageButton.Text = "...";
             this.m1t1p5ImageButton.UseVisualStyleBackColor = true;
+            this.m1t1p5ImageButton.Click += new System.EventHandler(this.m1t1p5ImageButton_Click);
             // 
             // m1t1p4ImageButton
             // 
@@ -2016,6 +2178,7 @@ namespace OW_Scoreboard_Tool
             this.m1t1p4ImageButton.TabIndex = 109;
             this.m1t1p4ImageButton.Text = "...";
             this.m1t1p4ImageButton.UseVisualStyleBackColor = true;
+            this.m1t1p4ImageButton.Click += new System.EventHandler(this.m1t1p4ImageButton_Click);
             // 
             // m1t1p3ImageButton
             // 
@@ -2025,6 +2188,7 @@ namespace OW_Scoreboard_Tool
             this.m1t1p3ImageButton.TabIndex = 108;
             this.m1t1p3ImageButton.Text = "...";
             this.m1t1p3ImageButton.UseVisualStyleBackColor = true;
+            this.m1t1p3ImageButton.Click += new System.EventHandler(this.m1t1p3ImageButton_Click);
             // 
             // m1t1p2ImageButton
             // 
@@ -2034,6 +2198,7 @@ namespace OW_Scoreboard_Tool
             this.m1t1p2ImageButton.TabIndex = 107;
             this.m1t1p2ImageButton.Text = "...";
             this.m1t1p2ImageButton.UseVisualStyleBackColor = true;
+            this.m1t1p2ImageButton.Click += new System.EventHandler(this.m1t1p2ImageButton_Click);
             // 
             // m1t1p1ImageButton
             // 
@@ -2043,11 +2208,12 @@ namespace OW_Scoreboard_Tool
             this.m1t1p1ImageButton.TabIndex = 106;
             this.m1t1p1ImageButton.Text = "...";
             this.m1t1p1ImageButton.UseVisualStyleBackColor = true;
+            this.m1t1p1ImageButton.Click += new System.EventHandler(this.m1t1p1ImageButton_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(603, 82);
+            this.label10.Location = new System.Drawing.Point(613, 81);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(25, 13);
             this.label10.TabIndex = 105;
@@ -2056,7 +2222,7 @@ namespace OW_Scoreboard_Tool
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(290, 82);
+            this.label8.Location = new System.Drawing.Point(290, 81);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(25, 13);
             this.label8.TabIndex = 104;
@@ -2064,84 +2230,84 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t2p6Info
             // 
-            this.m1t2p6Info.Location = new System.Drawing.Point(538, 293);
+            this.m1t2p6Info.Location = new System.Drawing.Point(538, 292);
             this.m1t2p6Info.Name = "m1t2p6Info";
             this.m1t2p6Info.Size = new System.Drawing.Size(100, 20);
             this.m1t2p6Info.TabIndex = 103;
             // 
             // m1t2p5Info
             // 
-            this.m1t2p5Info.Location = new System.Drawing.Point(538, 254);
+            this.m1t2p5Info.Location = new System.Drawing.Point(538, 253);
             this.m1t2p5Info.Name = "m1t2p5Info";
             this.m1t2p5Info.Size = new System.Drawing.Size(100, 20);
             this.m1t2p5Info.TabIndex = 102;
             // 
             // m1t2p4Info
             // 
-            this.m1t2p4Info.Location = new System.Drawing.Point(538, 215);
+            this.m1t2p4Info.Location = new System.Drawing.Point(538, 214);
             this.m1t2p4Info.Name = "m1t2p4Info";
             this.m1t2p4Info.Size = new System.Drawing.Size(100, 20);
             this.m1t2p4Info.TabIndex = 101;
             // 
             // m1t2p3Info
             // 
-            this.m1t2p3Info.Location = new System.Drawing.Point(538, 176);
+            this.m1t2p3Info.Location = new System.Drawing.Point(538, 175);
             this.m1t2p3Info.Name = "m1t2p3Info";
             this.m1t2p3Info.Size = new System.Drawing.Size(100, 20);
             this.m1t2p3Info.TabIndex = 100;
             // 
             // m1t2p2Info
             // 
-            this.m1t2p2Info.Location = new System.Drawing.Point(538, 137);
+            this.m1t2p2Info.Location = new System.Drawing.Point(538, 136);
             this.m1t2p2Info.Name = "m1t2p2Info";
             this.m1t2p2Info.Size = new System.Drawing.Size(100, 20);
             this.m1t2p2Info.TabIndex = 99;
             // 
             // m1t2p1Info
             // 
-            this.m1t2p1Info.Location = new System.Drawing.Point(538, 98);
+            this.m1t2p1Info.Location = new System.Drawing.Point(538, 97);
             this.m1t2p1Info.Name = "m1t2p1Info";
             this.m1t2p1Info.Size = new System.Drawing.Size(100, 20);
             this.m1t2p1Info.TabIndex = 98;
             // 
             // m1t1p6Info
             // 
-            this.m1t1p6Info.Location = new System.Drawing.Point(293, 293);
+            this.m1t1p6Info.Location = new System.Drawing.Point(293, 292);
             this.m1t1p6Info.Name = "m1t1p6Info";
             this.m1t1p6Info.Size = new System.Drawing.Size(100, 20);
             this.m1t1p6Info.TabIndex = 97;
             // 
             // m1t1p5Info
             // 
-            this.m1t1p5Info.Location = new System.Drawing.Point(293, 254);
+            this.m1t1p5Info.Location = new System.Drawing.Point(293, 253);
             this.m1t1p5Info.Name = "m1t1p5Info";
             this.m1t1p5Info.Size = new System.Drawing.Size(100, 20);
             this.m1t1p5Info.TabIndex = 96;
             // 
             // m1t1p4Info
             // 
-            this.m1t1p4Info.Location = new System.Drawing.Point(293, 215);
+            this.m1t1p4Info.Location = new System.Drawing.Point(293, 214);
             this.m1t1p4Info.Name = "m1t1p4Info";
             this.m1t1p4Info.Size = new System.Drawing.Size(100, 20);
             this.m1t1p4Info.TabIndex = 95;
             // 
             // m1t1p3Info
             // 
-            this.m1t1p3Info.Location = new System.Drawing.Point(293, 176);
+            this.m1t1p3Info.Location = new System.Drawing.Point(293, 175);
             this.m1t1p3Info.Name = "m1t1p3Info";
             this.m1t1p3Info.Size = new System.Drawing.Size(100, 20);
             this.m1t1p3Info.TabIndex = 94;
             // 
             // m1t1p2Info
             // 
-            this.m1t1p2Info.Location = new System.Drawing.Point(293, 137);
+            this.m1t1p2Info.Location = new System.Drawing.Point(293, 136);
             this.m1t1p2Info.Name = "m1t1p2Info";
             this.m1t1p2Info.Size = new System.Drawing.Size(100, 20);
             this.m1t1p2Info.TabIndex = 93;
             // 
             // m1t1p1Info
             // 
-            this.m1t1p1Info.Location = new System.Drawing.Point(293, 98);
+            this.m1t1p1Info.Location = new System.Drawing.Point(293, 97);
             this.m1t1p1Info.Name = "m1t1p1Info";
             this.m1t1p1Info.Size = new System.Drawing.Size(100, 20);
             this.m1t1p1Info.TabIndex = 92;
@@ -2409,7 +2575,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t2LogoButton
             // 
-            this.m1t2LogoButton.Location = new System.Drawing.Point(472, 19);
+            this.m1t2LogoButton.Location = new System.Drawing.Point(469, 19);
             this.m1t2LogoButton.Name = "m1t2LogoButton";
             this.m1t2LogoButton.Size = new System.Drawing.Size(27, 23);
             this.m1t2LogoButton.TabIndex = 88;
@@ -2429,11 +2595,11 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t2Logo
             // 
-            this.m1t2Logo.Location = new System.Drawing.Point(505, 21);
+            this.m1t2Logo.Location = new System.Drawing.Point(502, 21);
             this.m1t2Logo.Name = "m1t2Logo";
             this.m1t2Logo.ReadOnly = true;
             this.m1t2Logo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t2Logo.Size = new System.Drawing.Size(133, 20);
+            this.m1t2Logo.Size = new System.Drawing.Size(136, 20);
             this.m1t2Logo.TabIndex = 89;
             // 
             // m1t1Logo
@@ -2712,7 +2878,7 @@ namespace OW_Scoreboard_Tool
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(788, 82);
+            this.label15.Location = new System.Drawing.Point(788, 81);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(30, 13);
             this.label15.TabIndex = 0;
@@ -2721,7 +2887,7 @@ namespace OW_Scoreboard_Tool
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(216, 82);
+            this.label14.Location = new System.Drawing.Point(216, 81);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(29, 13);
             this.label14.TabIndex = 0;
@@ -2812,7 +2978,7 @@ namespace OW_Scoreboard_Tool
             "Flex",
             "Support",
             "Tank"});
-            this.m1t2p3Role.Location = new System.Drawing.Point(644, 176);
+            this.m1t2p3Role.Location = new System.Drawing.Point(644, 175);
             this.m1t2p3Role.Name = "m1t2p3Role";
             this.m1t2p3Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.m1t2p3Role.Size = new System.Drawing.Size(68, 21);
@@ -4202,35 +4368,26 @@ namespace OW_Scoreboard_Tool
             this.replayImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             this.replayImageList.ImageSize = new System.Drawing.Size(128, 72);
             this.replayImageList.TransparentColor = System.Drawing.Color.Transparent;
-
-            //
-            // Color Dialog Custom Colors
-            //
-            int[] customColors = new int[]
-            {
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#8cba11")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#ff9c00")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#202224")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#C80013")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#D45800")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#D47900")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#FFD700")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#FFFF00")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#CCFF00")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#00AB84")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#00FFFF")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#27AAE1")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#800080")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#523FFF")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#FF00FF")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#FF6EC7"))
-            };
-            this.colorThemeDialog1.CustomColors = customColors;
-            this.colorThemeDialog2.CustomColors = customColors;
-            this.colorThemeDialog3.CustomColors = customColors;
-            this.m1t1Color.CustomColors = customColors;
-            this.m1t2Color.CustomColors = customColors;
-
+            // 
+            // m1t1Color
+            // 
+            this.m1t1Color.Color = System.Drawing.Color.Transparent;
+            // 
+            // m1t2Color
+            // 
+            this.m1t2Color.Color = System.Drawing.Color.Transparent;
+            // 
+            // colorThemeDialog1
+            // 
+            this.colorThemeDialog1.Color = System.Drawing.Color.Transparent;
+            // 
+            // colorThemeDialog2
+            // 
+            this.colorThemeDialog2.Color = System.Drawing.Color.Transparent;
+            // 
+            // colorThemeDialog3
+            // 
+            this.colorThemeDialog3.Color = System.Drawing.Color.Transparent;
             // 
             // Form1
             // 
@@ -4610,6 +4767,20 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.ColorDialog colorThemeDialog1;
         private System.Windows.Forms.ColorDialog colorThemeDialog2;
         private System.Windows.Forms.ColorDialog colorThemeDialog3;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox m1t2p6Image;
+        private System.Windows.Forms.TextBox m1t2p5Image;
+        private System.Windows.Forms.TextBox m1t2p4Image;
+        private System.Windows.Forms.TextBox m1t2p3Image;
+        private System.Windows.Forms.TextBox m1t2p2Image;
+        private System.Windows.Forms.TextBox m1t2p1Image;
+        private System.Windows.Forms.TextBox m1t1p6Image;
+        private System.Windows.Forms.TextBox m1t1p5Image;
+        private System.Windows.Forms.TextBox m1t1p4Image;
+        private System.Windows.Forms.TextBox m1t1p3Image;
+        private System.Windows.Forms.TextBox m1t1p2Image;
+        private System.Windows.Forms.TextBox m1t1p1Image;
     }
 }
 #endregion
