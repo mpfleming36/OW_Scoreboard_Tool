@@ -25,6 +25,7 @@ namespace OW_Scoreboard_Tool
         Series Match1 = new Series();
 
         List<Replay> Replays = new List<Replay>();
+        BindingList<Team> BracketTeams = new BindingList<Team>();
         FileSystemWatcher replayWatcher = new FileSystemWatcher();
 
         List<Role> RoleList = new List<Role>
@@ -50,6 +51,7 @@ namespace OW_Scoreboard_Tool
         List<string> PlayerFiles;
         List<string> SettingFiles;
         List<string> ReplayFiles;
+        List<string> BracketFiles;
 
         int[] customColors = new int[]
             {
@@ -250,6 +252,10 @@ namespace OW_Scoreboard_Tool
             loadCombo(playerHeroBox2, "Player", "hero2");
             loadCombo(playerHeroBox3, "Player", "hero3");
             loadCombo(playerRoleBox, "Player", "role");
+
+            loadBracket();
+
+            linkBracketToTeams();
 
             updateSeries();
 
@@ -2199,7 +2205,7 @@ namespace OW_Scoreboard_Tool
         /// <param name="field">The text box that is being read from</param>
         /// <param name="folder">The target folder</param>
         /// <param name="file">The file name before the extension</param>
-        public void updateLogos(TextBox field, String folder, String file)
+        private void updateLogos(TextBox field, String folder, String file)
         {
             if (field.Text != "")
             {
@@ -2235,10 +2241,43 @@ namespace OW_Scoreboard_Tool
             }
         }
 
+        private void updateButton(Button field, String folder, String file)
+        {
+            if (field.AccessibleDescription != null)
+            {
+                using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + "Path" + ".txt"))
+                {
+
+                    sw.WriteLine(field.AccessibleDescription.Trim());
+
+
+                }
+
+                if (field.AccessibleDescription != "")
+                {
+                    try
+                    {
+                        Bitmap logo = new Bitmap(field.AccessibleDescription);
+                        logo.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("The path \"" + path + "\\" + folder + "\\" + file + ".png" + "\" does not exist!");
+                        field.AccessibleDescription = "";
+                        Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
+                    }
+                }
+                else
+                {
+                    Properties.Resources.Icon_none.Save(path + "\\" + folder + "\\" + file + ".png");
+                }
+            }
+        }
+
         /// <summary>
         /// Method for updating the Series of the form
         /// </summary>
-        public void updateSeries()
+        private void updateSeries()
         {
             Match1 = new Series("Match1", updateTeams("h"), updateTeams("a"), updateMapPool(), m1t1Score.Value.ToString(), m1t2Score.Value.ToString());
             Match1.Games[0].HomeScore = m1m1t1Score.Value.ToString();
@@ -2263,7 +2302,7 @@ namespace OW_Scoreboard_Tool
         /// </summary>
         /// <param name="side">The side of the team</param>
         /// <returns>Lists of players</returns>
-        public List<Player> updatePlayers(string side)
+        private List<Player> updatePlayers(string side)
         {
             List<Player> players = new List<Player>();
             if (side.Equals("h"))
@@ -2293,7 +2332,7 @@ namespace OW_Scoreboard_Tool
         /// </summary>
         /// <param name="side">The side of the team</param>
         /// <returns></returns>
-        public Team updateTeams(string side)
+        private Team updateTeams(string side)
         {
             Team team = new Team();
             if (side.Equals("h"))
@@ -2316,12 +2355,12 @@ namespace OW_Scoreboard_Tool
             return team;
 
         }
-        
+
         /// <summary>
         /// Method for updating the Map Pool of a series
         /// </summary>
         /// <returns>The list of all different games in the series</returns>
-        public List<Game> updateMapPool()
+        private List<Game> updateMapPool()
         {
             List<Map> mapPerGame = new List<Map>
             {
@@ -2428,6 +2467,20 @@ namespace OW_Scoreboard_Tool
             else
             {
                 File.Create(path + "\\" + folder + "\\" + file + ".txt");
+            }
+
+        }
+
+        private void loadButton (Button field, String folder, String file)
+        {
+            if (File.Exists(path + "\\" + folder + "\\" + file + "Path" + ".txt"))
+            {
+                string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + "Path" + ".txt");
+                field.AccessibleDescription = loadingText.Trim();
+            }
+            else
+            {
+                File.Create(path + "\\" + folder + "\\" + file + "Path" + ".txt");
             }
 
         }
@@ -2937,13 +2990,23 @@ namespace OW_Scoreboard_Tool
             field.Color = Color.Transparent;
             button.BackColor = Color.Transparent;
         }
+
+        private void resetButton(Button field)
+        {
+            field.AccessibleDescription = "";
+        }
+
+        private void resetCombo(ComboBox field)
+        {
+            field.SelectedIndex = 0;
+        }
         #endregion
 
         #region Savers
         /// <summary>
         /// Method for exporting series information to an XML
         /// </summary>
-        public void exportSeries()
+        private void exportSeries()
         {
             updateSeries();
             var serializer = new XmlSerializer(Match1.GetType());
@@ -2966,7 +3029,7 @@ namespace OW_Scoreboard_Tool
         /// Method for exporting a teams information to an XML
         /// </summary>
         /// <param name="side">Side of the team</param>
-        public void ExportTeam(string side)
+        private void ExportTeam(string side)
         {
             updateTeams(side);
             var serializer = new XmlSerializer(new Team().GetType());
@@ -2996,7 +3059,7 @@ namespace OW_Scoreboard_Tool
         /// <summary>
         /// Method that creates folders if they are missing
         /// </summary>
-        public void CheckFolders()
+        private void CheckFolders()
         {
             foreach (var folder in FolderList)
             {
@@ -3011,7 +3074,7 @@ namespace OW_Scoreboard_Tool
         /// <summary>
         /// Method that creates files if they are missing
         /// </summary>
-        public void CheckFiles()
+        private void CheckFiles()
         {
 
             foreach (var file in Match1Files)
@@ -3050,6 +3113,14 @@ namespace OW_Scoreboard_Tool
                 if (!File.Exists(path + FolderList[4] + "\\" + file))
                 {
                     File.Create(path + FolderList[4] + "\\" + file).Close();
+                }
+            }
+
+            foreach (var file in BracketFiles)
+            {
+                if (!File.Exists(path + FolderList[9] + "\\" + file))
+                {
+                    File.Create(path + FolderList[9] + "\\" + file).Close();
                 }
             }
 
@@ -3112,7 +3183,7 @@ namespace OW_Scoreboard_Tool
         /// Watches the defined path to see if the replay file has been motified and kicks of en event if it has
         /// </summary>
         /// <param name="path">Path that contains file being watched</param>
-        public void CreateFileWatcher(String path)
+        private void CreateFileWatcher(String path)
         {
             FileSystemWatcher watcher = new FileSystemWatcher();
             watcher.Path = path;
@@ -3184,7 +3255,7 @@ namespace OW_Scoreboard_Tool
         /// Gets the logo for the team
         /// </summary>
         /// <param name="field">Text box being read from for file path</param>
-        public void GetLogoFile(TextBox field)
+        private void GetLogoFile(TextBox field)
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "Image Files(*.png; )|*.png";
@@ -3195,12 +3266,22 @@ namespace OW_Scoreboard_Tool
                 field.Text = open.FileName;
             }
         }
-
+        private void GetLogoForButton(Button field)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.png; )|*.png";
+            open.InitialDirectory = path + FolderList[8];
+            DialogResult res = open.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                field.AccessibleDescription = open.FileName;
+            }
+        }
         #region Generators
         /// <summary>
         /// Generates the Roles;
         /// </summary>
-        public void GenerateRoles()
+        private void GenerateRoles()
         {
             RoleList.Add(new Role("DPS", Properties.Resources.Icon_offense));
             RoleList.Add(new Role("Flex", Properties.Resources.Icon_flex));
@@ -3211,7 +3292,7 @@ namespace OW_Scoreboard_Tool
         /// <summary>
         /// Generates the Heroes
         /// </summary>
-        public void GenerateHeroes()
+        private void GenerateHeroes()
         {
             HeroList.Add(new Hero("Ana", Properties.Resources.Icon_ana, Properties.Resources.Ana, Properties.Resources._3D_Ana, Properties.Resources.Ana_OWL));
             HeroList.Add(new Hero("Ashe", Properties.Resources.Icon_Ashe, Properties.Resources.Ashe, Properties.Resources._3D_Ashe, Properties.Resources.Ashe_OWL));
@@ -3248,7 +3329,7 @@ namespace OW_Scoreboard_Tool
         /// <summary>
         /// Generates the Gametypes
         /// </summary>
-        public void GenerateGametypes()
+        private void GenerateGametypes()
         {
             GametypeList.Add(new Gametype("Assault", Properties.Resources.Icon_assault));
             GametypeList.Add(new Gametype("Control", Properties.Resources.Icon_control));
@@ -3259,7 +3340,7 @@ namespace OW_Scoreboard_Tool
         /// <summary>
         /// Generates the Maps
         /// </summary>
-        public void GenerateMaps()
+        private void GenerateMaps()
         {
             MapList.Add(new Map("Assault", GametypeList[1], Properties.Resources.Icon_assault_pool, Properties.Resources.Color_Assault, ""));
             MapList.Add(new Map("Control", GametypeList[2], Properties.Resources.Icon_control_pool, Properties.Resources.Color_Control, ""));
@@ -3440,7 +3521,7 @@ namespace OW_Scoreboard_Tool
                 "t2p5Role.png",
                 "t2p5Role.txt",
                 "t2p5Info.txt",
-                "t2p5Image.pngt",
+                "t2p5Image.png",
                 "t2p6Hero.png",
                 "t2p6Hero.txt",
                 "t2p6Name.txt",
@@ -3519,6 +3600,183 @@ namespace OW_Scoreboard_Tool
             {
 
             };
+
+            BracketFiles = new List<string>
+            {
+                "bracketTeam1.txt",
+                "bracketTeam2.txt",
+                "bracketTeam3.txt",
+                "bracketTeam4.txt",
+                "bracketTeam5.txt",
+                "bracketTeam6.txt",
+                "bracketTeam7.txt",
+                "bracketTeam8.txt",
+                "bracketTeam9.txt",
+                "bracketTeam10.txt",
+                "bracketTeam11.txt",
+                "bracketTeam12.txt",
+                "bracketTeam13.txt",
+                "bracketTeam14.txt",
+                "bracketTeam15.txt",
+                "bracketTeam16.txt",
+                "bracketTeam1.png",
+                "bracketTeam2.png",
+                "bracketTeam3.png",
+                "bracketTeam4.png",
+                "bracketTeam5.png",
+                "bracketTeam6.png",
+                "bracketTeam7.png",
+                "bracketTeam8.png",
+                "bracketTeam9.png",
+                "bracketTeam10.png",
+                "bracketTeam11.png",
+                "bracketTeam12.png",
+                "bracketTeam13.png",
+                "bracketTeam14.png",
+                "bracketTeam15.png",
+                "bracketTeam16.png",
+                "bracketR1M1Team1.txt",
+                "bracketR1M1Team2.txt",
+                "bracketR1M2Team1.txt",
+                "bracketR1M2Team2.txt",
+                "bracketR1M3Team1.txt",
+                "bracketR1M3Team2.txt",
+                "bracketR1M4Team1.txt",
+                "bracketR1M4Team2.txt",
+                "bracketR1M5Team1.txt",
+                "bracketR1M6Team2.txt",
+                "bracketR1M7Team1.txt",
+                "bracketR1M7Team2.txt",
+                "bracketR1M8Team1.txt",
+                "bracketR1M8Team2.txt",
+                "bracketQFM1Team1.txt",
+                "bracketQFM1Team2.txt",
+                "bracketQFM2Team1.txt",
+                "bracketQFM2Team2.txt",
+                "bracketQFM3Team1.txt",
+                "bracketQFM3Team2.txt",
+                "bracketQFM4Team1.txt",
+                "bracketQFM4Team2.txt",
+                "bracketSFM1Team1.txt",
+                "bracketSFM1Team2.txt",
+                "bracketSFM2Team1.txt",
+                "bracketSFM2Team2.txt",
+                "bracketWFM1Team1.txt",
+                "bracketWFM1Team2.txt",
+                "bracketLR1M1Team1.txt",
+                "bracketLR1M1Team2.txt",
+                "bracketLR1M2Team1.txt",
+                "bracketLR1M2Team2.txt",
+                "bracketLR1M3Team1.txt",
+                "bracketLR1M3Team2.txt",
+                "bracketLR1M4Team1.txt",
+                "bracketLR1M4Team2.txt",
+                "bracketLR2M1Team1.txt",
+                "bracketLR2M1Team2.txt",
+                "bracketLR2M2Team1.txt",
+                "bracketLR2M2Team2.txt",
+                "bracketLR2M3Team1.txt",
+                "bracketLR2M3Team2.txt",
+                "bracketLR2M4Team1.txt",
+                "bracketLR2M4Team2.txt",
+                "bracketLR3M1Team1.txt",
+                "bracketLR3M1Team2.txt",
+                "bracketLR3M2Team1.txt",
+                "bracketLR3M2Team2.txt",
+                "bracketLR4M1Team1.txt",
+                "bracketLR4M1Team2.txt",
+                "bracketLR4M2Team1.txt",
+                "bracketLR4M2Team2.txt",
+                "bracketLSFM1Team1.txt",
+                "bracketLSFM1Team2.txt",
+                "bracketLFM1Team1.txt",
+                "bracketLFM1Team2.txt",
+                "bracketGF1M1Team1.txt",
+                "bracketGF1M1Team2.txt",
+                "bracketGF2M1Team1.txt",
+                "bracketGF2M1Team2.txt",
+                "bracketTPM1Team1.txt",
+                "bracketTPM1Team2.txt",
+                "bracketR1M1Score1.txt",
+                "bracketR1M1Score2.txt",
+                "bracketR1M2Score1.txt",
+                "bracketR1M2Score2.txt",
+                "bracketR1M3Score1.txt",
+                "bracketR1M3Score2.txt",
+                "bracketR1M4Score1.txt",
+                "bracketR1M4Score2.txt",
+                "bracketR1M5Score1.txt",
+                "bracketR1M6Score2.txt",
+                "bracketR1M7Score1.txt",
+                "bracketR1M7Score2.txt",
+                "bracketR1M8Score1.txt",
+                "bracketR1M8Score2.txt",
+                "bracketQFM1Score1.txt",
+                "bracketQFM1Score2.txt",
+                "bracketQFM2Score1.txt",
+                "bracketQFM2Score2.txt",
+                "bracketQFM3Score1.txt",
+                "bracketQFM3Score2.txt",
+                "bracketQFM4Score1.txt",
+                "bracketQFM4Score2.txt",
+                "bracketSFM1Score1.txt",
+                "bracketSFM1Score2.txt",
+                "bracketSFM2Score1.txt",
+                "bracketSFM2Score2.txt",
+                "bracketWFM1Score1.txt",
+                "bracketWFM1Score2.txt",
+                "bracketLR1M1Score1.txt",
+                "bracketLR1M1Score2.txt",
+                "bracketLR1M2Score1.txt",
+                "bracketLR1M2Score2.txt",
+                "bracketLR1M3Score1.txt",
+                "bracketLR1M3Score2.txt",
+                "bracketLR1M4Score1.txt",
+                "bracketLR1M4Score2.txt",
+                "bracketLR2M1Score1.txt",
+                "bracketLR2M1Score2.txt",
+                "bracketLR2M2Score1.txt",
+                "bracketLR2M2Score2.txt",
+                "bracketLR2M3Score1.txt",
+                "bracketLR2M3Score2.txt",
+                "bracketLR2M4Score1.txt",
+                "bracketLR2M4Score2.txt",
+                "bracketLR3M1Score1.txt",
+                "bracketLR3M1Score2.txt",
+                "bracketLR3M2Score1.txt",
+                "bracketLR3M2Score2.txt",
+                "bracketLR4M1Score1.txt",
+                "bracketLR4M1Score2.txt",
+                "bracketLR4M2Score1.txt",
+                "bracketLR4M2Score2.txt",
+                "bracketLSFM1Score1.txt",
+                "bracketLSFM1Score2.txt",
+                "bracketLFM1Score1.txt",
+                "bracketLFM1Score2.txt",
+                "bracketGF1M1Score1.txt",
+                "bracketGF1M1Score2.txt",
+                "bracketGF2M1Score1.txt",
+                "bracketGF2M1Score2.txt",
+                "bracketTPM1Score1.txt",
+                "bracketTPM1Score2.txt",
+                "bracketTeam1Path.txt",
+                "bracketTeam2Path.txt",
+                "bracketTeam3Path.txt",
+                "bracketTeam4Path.txt",
+                "bracketTeam5Path.txt",
+                "bracketTeam6Path.txt",
+                "bracketTeam7Path.txt",
+                "bracketTeam8Path.txt",
+                "bracketTeam9Path.txt",
+                "bracketTeam10Path.txt",
+                "bracketTeam11Path.txt",
+                "bracketTeam12Path.txt",
+                "bracketTeam13Path.txt",
+                "bracketTeam14Path.txt",
+                "bracketTeam15Path.txt",
+                "bracketTeam16Path.txt",
+            };
+
         }
 
         /// <summary>
@@ -3536,7 +3794,8 @@ namespace OW_Scoreboard_Tool
                 "\\Replay\\Playlist",
                 "\\Series",
                 "\\Team",
-                "\\Temp"
+                "\\Temp",
+                "\\Bracket"
             };
         }
 
@@ -3961,5 +4220,755 @@ namespace OW_Scoreboard_Tool
         {
             GetLogoFile(m1t2p6Image);
         }
+
+        private void bracketImage1_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage1);
+        }
+
+        private void bracketImage2_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage2);
+        }
+
+        private void bracketImage3_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage3);
+        }
+
+        private void bracketImage4_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage4);
+        }
+
+        private void bracketImage5_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage5);
+        }
+
+        private void bracketImage6_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage6);
+        }
+
+        private void bracketImage7_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage7);
+        }
+
+        private void bracketImage8_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage8);
+        }
+
+        private void bracketImage9_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage9);
+        }
+
+        private void bracketImage10_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage10);
+        }
+
+        private void bracketImage11_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage11);
+        }
+
+        private void bracketImage12_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage12);
+        }
+
+        private void bracketImage13_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage13);
+        }
+
+        private void bracketImage14_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage14);
+        }
+
+        private void bracketImage15_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage15);
+        }
+
+        private void bracketImage16_Click(object sender, EventArgs e)
+        {
+            GetLogoForButton(bracketImage16);
+        }
+
+        private void bracketTeamsReset_Click(object sender, EventArgs e)
+        {
+            resetText(bracketTeam1);
+            resetText(bracketTeam2);
+            resetText(bracketTeam3);
+            resetText(bracketTeam4);
+            resetText(bracketTeam5);
+            resetText(bracketTeam6);
+            resetText(bracketTeam7);
+            resetText(bracketTeam8);
+            resetText(bracketTeam9);
+            resetText(bracketTeam10);
+            resetText(bracketTeam11);
+            resetText(bracketTeam12);
+            resetText(bracketTeam13);
+            resetText(bracketTeam14);
+            resetText(bracketTeam15);
+            resetText(bracketTeam16);
+
+            resetButton(bracketImage1);
+            resetButton(bracketImage2);
+            resetButton(bracketImage3);
+            resetButton(bracketImage4);
+            resetButton(bracketImage5);
+            resetButton(bracketImage6);
+            resetButton(bracketImage7);
+            resetButton(bracketImage8);
+            resetButton(bracketImage9);
+            resetButton(bracketImage10);
+            resetButton(bracketImage11);
+            resetButton(bracketImage12);
+            resetButton(bracketImage13);
+            resetButton(bracketImage14);
+            resetButton(bracketImage15);
+            resetButton(bracketImage16);
+
+            BracketTeams.Clear();
+
+        }
+
+        private void bracketTeamsUpdate_Click(object sender, EventArgs e)
+        {
+            updateText(bracketTeam1, FolderList[9].Replace("\\",""), BracketFiles[0].Replace(".txt",""));
+            updateText(bracketTeam2, FolderList[9].Replace("\\",""), BracketFiles[1].Replace(".txt",""));
+            updateText(bracketTeam3, FolderList[9].Replace("\\",""), BracketFiles[2].Replace(".txt",""));
+            updateText(bracketTeam4, FolderList[9].Replace("\\",""), BracketFiles[3].Replace(".txt",""));
+            updateText(bracketTeam5, FolderList[9].Replace("\\",""), BracketFiles[4].Replace(".txt",""));
+            updateText(bracketTeam6, FolderList[9].Replace("\\",""), BracketFiles[5].Replace(".txt",""));
+            updateText(bracketTeam7, FolderList[9].Replace("\\",""), BracketFiles[6].Replace(".txt",""));
+            updateText(bracketTeam8, FolderList[9].Replace("\\",""), BracketFiles[7].Replace(".txt",""));
+            updateText(bracketTeam9, FolderList[9].Replace("\\",""), BracketFiles[8].Replace(".txt",""));
+            updateText(bracketTeam10, FolderList[9].Replace("\\",""), BracketFiles[9].Replace(".txt",""));
+            updateText(bracketTeam11, FolderList[9].Replace("\\",""), BracketFiles[10].Replace(".txt",""));
+            updateText(bracketTeam12, FolderList[9].Replace("\\",""), BracketFiles[11].Replace(".txt",""));
+            updateText(bracketTeam13, FolderList[9].Replace("\\",""), BracketFiles[12].Replace(".txt",""));
+            updateText(bracketTeam14, FolderList[9].Replace("\\",""), BracketFiles[13].Replace(".txt",""));
+            updateText(bracketTeam15, FolderList[9].Replace("\\",""), BracketFiles[14].Replace(".txt",""));
+            updateText(bracketTeam16, FolderList[9].Replace("\\",""), BracketFiles[15].Replace(".txt",""));
+            
+            updateButton(bracketImage1, FolderList[9].Replace("\\",""), BracketFiles[16].Replace(".png",""));
+            updateButton(bracketImage2, FolderList[9].Replace("\\",""), BracketFiles[17].Replace(".png",""));
+            updateButton(bracketImage3, FolderList[9].Replace("\\",""), BracketFiles[18].Replace(".png",""));
+            updateButton(bracketImage4, FolderList[9].Replace("\\",""), BracketFiles[19].Replace(".png",""));
+            updateButton(bracketImage5, FolderList[9].Replace("\\",""), BracketFiles[20].Replace(".png",""));
+            updateButton(bracketImage6, FolderList[9].Replace("\\",""), BracketFiles[21].Replace(".png",""));
+            updateButton(bracketImage7, FolderList[9].Replace("\\",""), BracketFiles[22].Replace(".png",""));
+            updateButton(bracketImage8, FolderList[9].Replace("\\",""), BracketFiles[23].Replace(".png",""));
+            updateButton(bracketImage9, FolderList[9].Replace("\\",""), BracketFiles[24].Replace(".png",""));
+            updateButton(bracketImage10, FolderList[9].Replace("\\",""), BracketFiles[25].Replace(".png",""));
+            updateButton(bracketImage11, FolderList[9].Replace("\\",""), BracketFiles[26].Replace(".png",""));
+            updateButton(bracketImage12, FolderList[9].Replace("\\",""), BracketFiles[27].Replace(".png",""));
+            updateButton(bracketImage13, FolderList[9].Replace("\\",""), BracketFiles[28].Replace(".png",""));
+            updateButton(bracketImage14, FolderList[9].Replace("\\",""), BracketFiles[29].Replace(".png",""));
+            updateButton(bracketImage15, FolderList[9].Replace("\\",""), BracketFiles[30].Replace(".png",""));
+            updateButton(bracketImage16, FolderList[9].Replace("\\",""), BracketFiles[31].Replace(".png",""));
+
+            setBracketTeams();
+
+        }
+
+        private void bracketReset_Click(object sender, EventArgs e)
+        {
+            resetCombo(bracketR1M1Team1); 
+            resetCombo(bracketR1M1Team2);
+            resetCombo(bracketR1M2Team1);
+            resetCombo(bracketR1M2Team2);
+            resetCombo(bracketR1M3Team1);
+            resetCombo(bracketR1M3Team2);
+            resetCombo(bracketR1M4Team1);
+            resetCombo(bracketR1M4Team2);
+            resetCombo(bracketR1M5Team1);
+            resetCombo(bracketR1M6Team2);
+            resetCombo(bracketR1M7Team1);
+            resetCombo(bracketR1M7Team2);
+            resetCombo(bracketR1M8Team1);
+            resetCombo(bracketR1M8Team2);
+            resetCombo(bracketQFM1Team1);
+            resetCombo(bracketQFM1Team2);
+            resetCombo(bracketQFM2Team1);
+            resetCombo(bracketQFM2Team2);
+            resetCombo(bracketQFM3Team1);
+            resetCombo(bracketQFM3Team2);
+            resetCombo(bracketQFM4Team1);
+            resetCombo(bracketQFM4Team2);
+            resetCombo(bracketSFM1Team1);
+            resetCombo(bracketSFM1Team2);
+            resetCombo(bracketSFM2Team1);
+            resetCombo(bracketSFM2Team2);
+            resetCombo(bracketWFM1Team1);
+            resetCombo(bracketWFM1Team2);
+            resetCombo(bracketLR1M1Team1);
+            resetCombo(bracketLR1M1Team2);
+            resetCombo(bracketLR1M2Team1);
+            resetCombo(bracketLR1M2Team2);
+            resetCombo(bracketLR1M3Team1);
+            resetCombo(bracketLR1M3Team2);
+            resetCombo(bracketLR1M4Team1);
+            resetCombo(bracketLR1M4Team2);
+            resetCombo(bracketLR2M1Team1);
+            resetCombo(bracketLR2M1Team2);
+            resetCombo(bracketLR2M2Team1);
+            resetCombo(bracketLR2M2Team2);
+            resetCombo(bracketLR2M3Team1);
+            resetCombo(bracketLR2M3Team2);
+            resetCombo(bracketLR2M4Team1);
+            resetCombo(bracketLR2M4Team2);
+            resetCombo(bracketLR3M1Team1);
+            resetCombo(bracketLR3M1Team2);
+            resetCombo(bracketLR3M2Team1);
+            resetCombo(bracketLR3M2Team2);
+            resetCombo(bracketLR4M1Team1);
+            resetCombo(bracketLR4M1Team2);
+            resetCombo(bracketLR4M2Team1);
+            resetCombo(bracketLR4M2Team2);
+            resetCombo(bracketLSFM1Team1);
+            resetCombo(bracketLSFM1Team2);
+            resetCombo(bracketLFM1Team1);
+            resetCombo(bracketLFM1Team2);
+            resetCombo(bracketGF1M1Team1);
+            resetCombo(bracketGF1M1Team2);
+            resetCombo(bracketGF2M1Team1);
+            resetCombo(bracketGF2M1Team2);
+            resetCombo(bracketTPM1Team1);
+            resetCombo(bracketTPM1Team2);
+
+            resetScore(bracketR1M1Score1);
+            resetScore(bracketR1M1Score2);
+            resetScore(bracketR1M2Score1);
+            resetScore(bracketR1M2Score2);
+            resetScore(bracketR1M3Score1);
+            resetScore(bracketR1M3Score2);
+            resetScore(bracketR1M4Score1);
+            resetScore(bracketR1M4Score2);
+            resetScore(bracketR1M5Score1);
+            resetScore(bracketR1M6Score2);
+            resetScore(bracketR1M7Score1);
+            resetScore(bracketR1M7Score2);
+            resetScore(bracketR1M8Score1);
+            resetScore(bracketR1M8Score2);
+            resetScore(bracketQFM1Score1);
+            resetScore(bracketQFM1Score2);
+            resetScore(bracketQFM2Score1);
+            resetScore(bracketQFM2Score2);
+            resetScore(bracketQFM3Score1);
+            resetScore(bracketQFM3Score2);
+            resetScore(bracketQFM4Score1);
+            resetScore(bracketQFM4Score2);
+            resetScore(bracketSFM1Score1);
+            resetScore(bracketSFM1Score2);
+            resetScore(bracketSFM2Score1);
+            resetScore(bracketSFM2Score2);
+            resetScore(bracketWFM1Score1);
+            resetScore(bracketWFM1Score2);
+            resetScore(bracketLR1M1Score1);
+            resetScore(bracketLR1M1Score2);
+            resetScore(bracketLR1M2Score1);
+            resetScore(bracketLR1M2Score2);
+            resetScore(bracketLR1M3Score1);
+            resetScore(bracketLR1M3Score2);
+            resetScore(bracketLR1M4Score1);
+            resetScore(bracketLR1M4Score2);
+            resetScore(bracketLR2M1Score1);
+            resetScore(bracketLR2M1Score2);
+            resetScore(bracketLR2M2Score1);
+            resetScore(bracketLR2M2Score2);
+            resetScore(bracketLR2M3Score1);
+            resetScore(bracketLR2M3Score2);
+            resetScore(bracketLR2M4Score1);
+            resetScore(bracketLR2M4Score2);
+            resetScore(bracketLR3M1Score1);
+            resetScore(bracketLR3M1Score2);
+            resetScore(bracketLR3M2Score1);
+            resetScore(bracketLR3M2Score2);
+            resetScore(bracketLR4M1Score1);
+            resetScore(bracketLR4M1Score2);
+            resetScore(bracketLR4M2Score1);
+            resetScore(bracketLR4M2Score2);
+            resetScore(bracketLSFM1Score1);
+            resetScore(bracketLSFM1Score2);
+            resetScore(bracketLFM1Score1);
+            resetScore(bracketLFM1Score2);
+            resetScore(bracketGF1M1Score1);
+            resetScore(bracketGF1M1Score2);
+            resetScore(bracketGF2M1Score1);
+            resetScore(bracketGF2M1Score2);
+            resetScore(bracketTPM1Score1);
+            resetScore(bracketTPM1Score2);
+        }
+
+        private void bracketUpdate_Click(object sender, EventArgs e)
+        {
+            updateCombo(bracketR1M1Team1, FolderList[9].Replace("\\",""), BracketFiles[32].Replace(".txt",""));
+            updateCombo(bracketR1M1Team2, FolderList[9].Replace("\\",""), BracketFiles[33].Replace(".txt",""));
+            updateCombo(bracketR1M2Team1, FolderList[9].Replace("\\",""), BracketFiles[34].Replace(".txt",""));
+            updateCombo(bracketR1M2Team2, FolderList[9].Replace("\\",""), BracketFiles[35].Replace(".txt",""));
+            updateCombo(bracketR1M3Team1, FolderList[9].Replace("\\",""), BracketFiles[36].Replace(".txt",""));
+            updateCombo(bracketR1M3Team2, FolderList[9].Replace("\\",""), BracketFiles[37].Replace(".txt",""));
+            updateCombo(bracketR1M4Team1, FolderList[9].Replace("\\",""), BracketFiles[38].Replace(".txt",""));
+            updateCombo(bracketR1M4Team2, FolderList[9].Replace("\\",""), BracketFiles[39].Replace(".txt",""));
+            updateCombo(bracketR1M5Team1, FolderList[9].Replace("\\",""), BracketFiles[40].Replace(".txt",""));
+            updateCombo(bracketR1M6Team2, FolderList[9].Replace("\\",""), BracketFiles[41].Replace(".txt",""));
+            updateCombo(bracketR1M7Team1, FolderList[9].Replace("\\",""), BracketFiles[42].Replace(".txt",""));
+            updateCombo(bracketR1M7Team2, FolderList[9].Replace("\\",""), BracketFiles[43].Replace(".txt",""));
+            updateCombo(bracketR1M8Team1, FolderList[9].Replace("\\",""), BracketFiles[44].Replace(".txt",""));
+            updateCombo(bracketR1M8Team2, FolderList[9].Replace("\\",""), BracketFiles[45].Replace(".txt",""));
+            updateCombo(bracketQFM1Team1, FolderList[9].Replace("\\",""), BracketFiles[46].Replace(".txt",""));
+            updateCombo(bracketQFM1Team2, FolderList[9].Replace("\\",""), BracketFiles[47].Replace(".txt",""));
+            updateCombo(bracketQFM2Team1, FolderList[9].Replace("\\",""), BracketFiles[48].Replace(".txt",""));
+            updateCombo(bracketQFM2Team2, FolderList[9].Replace("\\",""), BracketFiles[49].Replace(".txt",""));
+            updateCombo(bracketQFM3Team1, FolderList[9].Replace("\\",""), BracketFiles[50].Replace(".txt",""));
+            updateCombo(bracketQFM3Team2, FolderList[9].Replace("\\",""), BracketFiles[51].Replace(".txt",""));
+            updateCombo(bracketQFM4Team1, FolderList[9].Replace("\\",""), BracketFiles[52].Replace(".txt",""));
+            updateCombo(bracketQFM4Team2, FolderList[9].Replace("\\",""), BracketFiles[53].Replace(".txt",""));
+            updateCombo(bracketSFM1Team1, FolderList[9].Replace("\\",""), BracketFiles[54].Replace(".txt",""));
+            updateCombo(bracketSFM1Team2, FolderList[9].Replace("\\",""), BracketFiles[55].Replace(".txt",""));
+            updateCombo(bracketSFM2Team1, FolderList[9].Replace("\\",""), BracketFiles[56].Replace(".txt",""));
+            updateCombo(bracketSFM2Team2, FolderList[9].Replace("\\",""), BracketFiles[57].Replace(".txt",""));
+            updateCombo(bracketWFM1Team1, FolderList[9].Replace("\\",""), BracketFiles[58].Replace(".txt",""));
+            updateCombo(bracketWFM1Team2, FolderList[9].Replace("\\",""), BracketFiles[59].Replace(".txt",""));
+            updateCombo(bracketLR1M1Team1, FolderList[9].Replace("\\",""), BracketFiles[60].Replace(".txt",""));
+            updateCombo(bracketLR1M1Team2, FolderList[9].Replace("\\",""), BracketFiles[61].Replace(".txt",""));
+            updateCombo(bracketLR1M2Team1, FolderList[9].Replace("\\",""), BracketFiles[62].Replace(".txt",""));
+            updateCombo(bracketLR1M2Team2, FolderList[9].Replace("\\",""), BracketFiles[63].Replace(".txt",""));
+            updateCombo(bracketLR1M3Team1, FolderList[9].Replace("\\",""), BracketFiles[64].Replace(".txt",""));
+            updateCombo(bracketLR1M3Team2, FolderList[9].Replace("\\",""), BracketFiles[65].Replace(".txt",""));
+            updateCombo(bracketLR1M4Team1, FolderList[9].Replace("\\",""), BracketFiles[66].Replace(".txt",""));
+            updateCombo(bracketLR1M4Team2, FolderList[9].Replace("\\",""), BracketFiles[67].Replace(".txt",""));
+            updateCombo(bracketLR2M1Team1, FolderList[9].Replace("\\",""), BracketFiles[68].Replace(".txt",""));
+            updateCombo(bracketLR2M1Team2, FolderList[9].Replace("\\",""), BracketFiles[69].Replace(".txt",""));
+            updateCombo(bracketLR2M2Team1, FolderList[9].Replace("\\",""), BracketFiles[70].Replace(".txt",""));
+            updateCombo(bracketLR2M2Team2, FolderList[9].Replace("\\",""), BracketFiles[71].Replace(".txt",""));
+            updateCombo(bracketLR2M3Team1, FolderList[9].Replace("\\",""), BracketFiles[72].Replace(".txt",""));
+            updateCombo(bracketLR2M3Team2, FolderList[9].Replace("\\",""), BracketFiles[73].Replace(".txt",""));
+            updateCombo(bracketLR2M4Team1, FolderList[9].Replace("\\",""), BracketFiles[74].Replace(".txt",""));
+            updateCombo(bracketLR2M4Team2, FolderList[9].Replace("\\",""), BracketFiles[75].Replace(".txt",""));
+            updateCombo(bracketLR3M1Team1, FolderList[9].Replace("\\",""), BracketFiles[76].Replace(".txt",""));
+            updateCombo(bracketLR3M1Team2, FolderList[9].Replace("\\",""), BracketFiles[77].Replace(".txt",""));
+            updateCombo(bracketLR3M2Team1, FolderList[9].Replace("\\",""), BracketFiles[78].Replace(".txt",""));
+            updateCombo(bracketLR3M2Team2, FolderList[9].Replace("\\",""), BracketFiles[79].Replace(".txt",""));
+            updateCombo(bracketLR4M1Team1, FolderList[9].Replace("\\",""), BracketFiles[80].Replace(".txt",""));
+            updateCombo(bracketLR4M1Team2, FolderList[9].Replace("\\",""), BracketFiles[81].Replace(".txt",""));
+            updateCombo(bracketLR4M2Team1, FolderList[9].Replace("\\",""), BracketFiles[82].Replace(".txt",""));
+            updateCombo(bracketLR4M2Team2, FolderList[9].Replace("\\",""), BracketFiles[83].Replace(".txt",""));
+            updateCombo(bracketLSFM1Team1, FolderList[9].Replace("\\",""), BracketFiles[84].Replace(".txt",""));
+            updateCombo(bracketLSFM1Team2, FolderList[9].Replace("\\",""), BracketFiles[85].Replace(".txt",""));
+            updateCombo(bracketLFM1Team1, FolderList[9].Replace("\\",""), BracketFiles[86].Replace(".txt",""));
+            updateCombo(bracketLFM1Team2, FolderList[9].Replace("\\",""), BracketFiles[87].Replace(".txt",""));
+            updateCombo(bracketGF1M1Team1, FolderList[9].Replace("\\",""), BracketFiles[88].Replace(".txt",""));
+            updateCombo(bracketGF1M1Team2, FolderList[9].Replace("\\",""), BracketFiles[89].Replace(".txt",""));
+            updateCombo(bracketGF2M1Team1, FolderList[9].Replace("\\",""), BracketFiles[90].Replace(".txt",""));
+            updateCombo(bracketGF2M1Team2, FolderList[9].Replace("\\",""), BracketFiles[91].Replace(".txt",""));
+            updateCombo(bracketTPM1Team1, FolderList[9].Replace("\\",""), BracketFiles[92].Replace(".txt",""));
+            updateCombo(bracketTPM1Team2, FolderList[9].Replace("\\",""), BracketFiles[93].Replace(".txt",""));
+
+            updateScore(bracketR1M1Score1, FolderList[9].Replace("\\",""), BracketFiles[94].Replace(".txt",""));
+            updateScore(bracketR1M1Score2, FolderList[9].Replace("\\",""), BracketFiles[95].Replace(".txt",""));
+            updateScore(bracketR1M2Score1, FolderList[9].Replace("\\",""), BracketFiles[96].Replace(".txt",""));
+            updateScore(bracketR1M2Score2, FolderList[9].Replace("\\",""), BracketFiles[97].Replace(".txt",""));
+            updateScore(bracketR1M3Score1, FolderList[9].Replace("\\",""), BracketFiles[98].Replace(".txt",""));
+            updateScore(bracketR1M3Score2, FolderList[9].Replace("\\",""), BracketFiles[99].Replace(".txt",""));
+            updateScore(bracketR1M4Score1, FolderList[9].Replace("\\",""), BracketFiles[100].Replace(".txt",""));
+            updateScore(bracketR1M4Score2, FolderList[9].Replace("\\",""), BracketFiles[101].Replace(".txt",""));
+            updateScore(bracketR1M5Score1, FolderList[9].Replace("\\",""), BracketFiles[102].Replace(".txt",""));
+            updateScore(bracketR1M6Score2, FolderList[9].Replace("\\",""), BracketFiles[103].Replace(".txt",""));
+            updateScore(bracketR1M7Score1, FolderList[9].Replace("\\",""), BracketFiles[104].Replace(".txt",""));
+            updateScore(bracketR1M7Score2, FolderList[9].Replace("\\",""), BracketFiles[105].Replace(".txt",""));
+            updateScore(bracketR1M8Score1, FolderList[9].Replace("\\",""), BracketFiles[106].Replace(".txt",""));
+            updateScore(bracketR1M8Score2, FolderList[9].Replace("\\",""), BracketFiles[107].Replace(".txt",""));
+            updateScore(bracketQFM1Score1, FolderList[9].Replace("\\",""), BracketFiles[108].Replace(".txt",""));
+            updateScore(bracketQFM1Score2, FolderList[9].Replace("\\",""), BracketFiles[109].Replace(".txt",""));
+            updateScore(bracketQFM2Score1, FolderList[9].Replace("\\",""), BracketFiles[110].Replace(".txt",""));
+            updateScore(bracketQFM2Score2, FolderList[9].Replace("\\",""), BracketFiles[111].Replace(".txt",""));
+            updateScore(bracketQFM3Score1, FolderList[9].Replace("\\",""), BracketFiles[112].Replace(".txt",""));
+            updateScore(bracketQFM3Score2, FolderList[9].Replace("\\",""), BracketFiles[113].Replace(".txt",""));
+            updateScore(bracketQFM4Score1, FolderList[9].Replace("\\",""), BracketFiles[114].Replace(".txt",""));
+            updateScore(bracketQFM4Score2, FolderList[9].Replace("\\",""), BracketFiles[115].Replace(".txt",""));
+            updateScore(bracketSFM1Score1, FolderList[9].Replace("\\",""), BracketFiles[116].Replace(".txt",""));
+            updateScore(bracketSFM1Score2, FolderList[9].Replace("\\",""), BracketFiles[117].Replace(".txt",""));
+            updateScore(bracketSFM2Score1, FolderList[9].Replace("\\",""), BracketFiles[118].Replace(".txt",""));
+            updateScore(bracketSFM2Score2, FolderList[9].Replace("\\",""), BracketFiles[119].Replace(".txt",""));
+            updateScore(bracketWFM1Score1, FolderList[9].Replace("\\",""), BracketFiles[120].Replace(".txt",""));
+            updateScore(bracketWFM1Score2, FolderList[9].Replace("\\",""), BracketFiles[121].Replace(".txt",""));
+            updateScore(bracketLR1M1Score1, FolderList[9].Replace("\\",""), BracketFiles[122].Replace(".txt",""));
+            updateScore(bracketLR1M1Score2, FolderList[9].Replace("\\",""), BracketFiles[123].Replace(".txt",""));
+            updateScore(bracketLR1M2Score1, FolderList[9].Replace("\\",""), BracketFiles[124].Replace(".txt",""));
+            updateScore(bracketLR1M2Score2, FolderList[9].Replace("\\",""), BracketFiles[125].Replace(".txt",""));
+            updateScore(bracketLR1M3Score1, FolderList[9].Replace("\\",""), BracketFiles[126].Replace(".txt",""));
+            updateScore(bracketLR1M3Score2, FolderList[9].Replace("\\",""), BracketFiles[127].Replace(".txt",""));
+            updateScore(bracketLR1M4Score1, FolderList[9].Replace("\\",""), BracketFiles[128].Replace(".txt",""));
+            updateScore(bracketLR1M4Score2, FolderList[9].Replace("\\",""), BracketFiles[129].Replace(".txt",""));
+            updateScore(bracketLR2M1Score1, FolderList[9].Replace("\\",""), BracketFiles[130].Replace(".txt",""));
+            updateScore(bracketLR2M1Score2, FolderList[9].Replace("\\",""), BracketFiles[131].Replace(".txt",""));
+            updateScore(bracketLR2M2Score1, FolderList[9].Replace("\\",""), BracketFiles[132].Replace(".txt",""));
+            updateScore(bracketLR2M2Score2, FolderList[9].Replace("\\",""), BracketFiles[133].Replace(".txt",""));
+            updateScore(bracketLR2M3Score1, FolderList[9].Replace("\\",""), BracketFiles[134].Replace(".txt",""));
+            updateScore(bracketLR2M3Score2, FolderList[9].Replace("\\",""), BracketFiles[135].Replace(".txt",""));
+            updateScore(bracketLR2M4Score1, FolderList[9].Replace("\\",""), BracketFiles[136].Replace(".txt",""));
+            updateScore(bracketLR2M4Score2, FolderList[9].Replace("\\",""), BracketFiles[137].Replace(".txt",""));
+            updateScore(bracketLR3M1Score1, FolderList[9].Replace("\\",""), BracketFiles[138].Replace(".txt",""));
+            updateScore(bracketLR3M1Score2, FolderList[9].Replace("\\",""), BracketFiles[139].Replace(".txt",""));
+            updateScore(bracketLR3M2Score1, FolderList[9].Replace("\\",""), BracketFiles[140].Replace(".txt",""));
+            updateScore(bracketLR3M2Score2, FolderList[9].Replace("\\",""), BracketFiles[141].Replace(".txt",""));
+            updateScore(bracketLR4M1Score1, FolderList[9].Replace("\\",""), BracketFiles[142].Replace(".txt",""));
+            updateScore(bracketLR4M1Score2, FolderList[9].Replace("\\",""), BracketFiles[143].Replace(".txt",""));
+            updateScore(bracketLR4M2Score1, FolderList[9].Replace("\\",""), BracketFiles[144].Replace(".txt",""));
+            updateScore(bracketLR4M2Score2, FolderList[9].Replace("\\",""), BracketFiles[145].Replace(".txt",""));
+            updateScore(bracketLSFM1Score1, FolderList[9].Replace("\\",""), BracketFiles[146].Replace(".txt",""));
+            updateScore(bracketLSFM1Score2, FolderList[9].Replace("\\",""), BracketFiles[147].Replace(".txt",""));
+            updateScore(bracketLFM1Score1, FolderList[9].Replace("\\",""), BracketFiles[148].Replace(".txt",""));
+            updateScore(bracketLFM1Score2, FolderList[9].Replace("\\",""), BracketFiles[149].Replace(".txt",""));
+            updateScore(bracketGF1M1Score1, FolderList[9].Replace("\\",""), BracketFiles[150].Replace(".txt",""));
+            updateScore(bracketGF1M1Score2, FolderList[9].Replace("\\",""), BracketFiles[151].Replace(".txt",""));
+            updateScore(bracketGF2M1Score1, FolderList[9].Replace("\\",""), BracketFiles[152].Replace(".txt",""));
+            updateScore(bracketGF2M1Score2, FolderList[9].Replace("\\",""), BracketFiles[153].Replace(".txt",""));
+            updateScore(bracketTPM1Score1, FolderList[9].Replace("\\",""), BracketFiles[154].Replace(".txt",""));
+            updateScore(bracketTPM1Score2, FolderList[9].Replace("\\",""), BracketFiles[155].Replace(".txt",""));
+        }
+
+        private void linkBracketToTeams()
+        {
+            bracketR1M1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M2Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M2Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M3Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M3Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M4Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M4Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M5Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M6Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M7Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M7Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M8Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketR1M8Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketQFM1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketQFM1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketQFM2Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketQFM2Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketQFM3Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketQFM3Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketQFM4Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketQFM4Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketSFM1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketSFM1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketSFM2Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketSFM2Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketWFM1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketWFM1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR1M1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR1M1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR1M2Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR1M2Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR1M3Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR1M3Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR1M4Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR1M4Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR2M1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR2M1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR2M2Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR2M2Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR2M3Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR2M3Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR2M4Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR2M4Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR3M1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR3M1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR3M2Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR3M2Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR4M1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR4M1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR4M2Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLR4M2Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLSFM1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLSFM1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLFM1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketLFM1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketGF1M1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketGF1M1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketGF2M1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketGF2M1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketTPM1Team1.DataSource = new BindingSource { DataSource = BracketTeams };
+            bracketTPM1Team2.DataSource = new BindingSource { DataSource = BracketTeams };
+
+            bracketR1M1Team1.DisplayMember = "Name";
+            bracketR1M1Team2.DisplayMember = "Name";
+            bracketR1M2Team1.DisplayMember = "Name";
+            bracketR1M2Team2.DisplayMember = "Name";
+            bracketR1M3Team1.DisplayMember = "Name";
+            bracketR1M3Team2.DisplayMember = "Name";
+            bracketR1M4Team1.DisplayMember = "Name";
+            bracketR1M4Team2.DisplayMember = "Name";
+            bracketR1M5Team1.DisplayMember = "Name";
+            bracketR1M6Team2.DisplayMember = "Name";
+            bracketR1M7Team1.DisplayMember = "Name";
+            bracketR1M7Team2.DisplayMember = "Name";
+            bracketR1M8Team1.DisplayMember = "Name";
+            bracketR1M8Team2.DisplayMember = "Name";
+            bracketQFM1Team1.DisplayMember = "Name";
+            bracketQFM1Team2.DisplayMember = "Name";
+            bracketQFM2Team1.DisplayMember = "Name";
+            bracketQFM2Team2.DisplayMember = "Name";
+            bracketQFM3Team1.DisplayMember = "Name";
+            bracketQFM3Team2.DisplayMember = "Name";
+            bracketQFM4Team1.DisplayMember = "Name";
+            bracketQFM4Team2.DisplayMember = "Name";
+            bracketSFM1Team1.DisplayMember = "Name";
+            bracketSFM1Team2.DisplayMember = "Name";
+            bracketSFM2Team1.DisplayMember = "Name";
+            bracketSFM2Team2.DisplayMember = "Name";
+            bracketWFM1Team1.DisplayMember = "Name";
+            bracketWFM1Team2.DisplayMember = "Name";
+            bracketLR1M1Team1.DisplayMember = "Name";
+            bracketLR1M1Team2.DisplayMember = "Name";
+            bracketLR1M2Team1.DisplayMember = "Name";
+            bracketLR1M2Team2.DisplayMember = "Name";
+            bracketLR1M3Team1.DisplayMember = "Name";
+            bracketLR1M3Team2.DisplayMember = "Name";
+            bracketLR1M4Team1.DisplayMember = "Name";
+            bracketLR1M4Team2.DisplayMember = "Name";
+            bracketLR2M1Team1.DisplayMember = "Name";
+            bracketLR2M1Team2.DisplayMember = "Name";
+            bracketLR2M2Team1.DisplayMember = "Name";
+            bracketLR2M2Team2.DisplayMember = "Name";
+            bracketLR2M3Team1.DisplayMember = "Name";
+            bracketLR2M3Team2.DisplayMember = "Name";
+            bracketLR2M4Team1.DisplayMember = "Name";
+            bracketLR2M4Team2.DisplayMember = "Name";
+            bracketLR3M1Team1.DisplayMember = "Name";
+            bracketLR3M1Team2.DisplayMember = "Name";
+            bracketLR3M2Team1.DisplayMember = "Name";
+            bracketLR3M2Team2.DisplayMember = "Name";
+            bracketLR4M1Team1.DisplayMember = "Name";
+            bracketLR4M1Team2.DisplayMember = "Name";
+            bracketLR4M2Team1.DisplayMember = "Name";
+            bracketLR4M2Team2.DisplayMember = "Name";
+            bracketLSFM1Team1.DisplayMember = "Name";
+            bracketLSFM1Team2.DisplayMember = "Name";
+            bracketLFM1Team1.DisplayMember = "Name";
+            bracketLFM1Team2.DisplayMember = "Name";
+            bracketGF1M1Team1.DisplayMember = "Name";
+            bracketGF1M1Team2.DisplayMember = "Name";
+            bracketGF2M1Team1.DisplayMember = "Name";
+            bracketGF2M1Team2.DisplayMember = "Name";
+            bracketTPM1Team1.DisplayMember = "Name";
+            bracketTPM1Team2.DisplayMember = "Name";
+
+        }
+
+        private void setBracketTeams()
+        {
+            BracketTeams.Clear();
+            BracketTeams.Add(new Team());
+            BracketTeams.Add(new Team(bracketTeam1.Text, path + FolderList[9] + BracketFiles[16]));
+            BracketTeams.Add(new Team(bracketTeam2.Text, path + FolderList[9] + BracketFiles[17]));
+            BracketTeams.Add(new Team(bracketTeam3.Text, path + FolderList[9] + BracketFiles[18]));
+            BracketTeams.Add(new Team(bracketTeam4.Text, path + FolderList[9] + BracketFiles[19]));
+            BracketTeams.Add(new Team(bracketTeam5.Text, path + FolderList[9] + BracketFiles[20]));
+            BracketTeams.Add(new Team(bracketTeam6.Text, path + FolderList[9] + BracketFiles[21]));
+            BracketTeams.Add(new Team(bracketTeam7.Text, path + FolderList[9] + BracketFiles[22]));
+            BracketTeams.Add(new Team(bracketTeam8.Text, path + FolderList[9] + BracketFiles[23]));
+            BracketTeams.Add(new Team(bracketTeam9.Text, path + FolderList[9] + BracketFiles[24]));
+            BracketTeams.Add(new Team(bracketTeam10.Text, path + FolderList[9] + BracketFiles[25]));
+            BracketTeams.Add(new Team(bracketTeam11.Text, path + FolderList[9] + BracketFiles[26]));
+            BracketTeams.Add(new Team(bracketTeam12.Text, path + FolderList[9] + BracketFiles[27]));
+            BracketTeams.Add(new Team(bracketTeam13.Text, path + FolderList[9] + BracketFiles[28]));
+            BracketTeams.Add(new Team(bracketTeam14.Text, path + FolderList[9] + BracketFiles[29]));
+            BracketTeams.Add(new Team(bracketTeam15.Text, path + FolderList[9] + BracketFiles[30]));
+            BracketTeams.Add(new Team(bracketTeam16.Text, path + FolderList[9] + BracketFiles[31]));
+        }
+
+        private void loadBracket()
+        {
+            loadText(bracketTeam1, FolderList[9].Replace("\\",""), BracketFiles[0].Replace(".txt",""));
+            loadText(bracketTeam2, FolderList[9].Replace("\\",""), BracketFiles[1].Replace(".txt",""));
+            loadText(bracketTeam3, FolderList[9].Replace("\\",""), BracketFiles[2].Replace(".txt",""));
+            loadText(bracketTeam4, FolderList[9].Replace("\\",""), BracketFiles[3].Replace(".txt",""));
+            loadText(bracketTeam5, FolderList[9].Replace("\\",""), BracketFiles[4].Replace(".txt",""));
+            loadText(bracketTeam6, FolderList[9].Replace("\\",""), BracketFiles[5].Replace(".txt",""));
+            loadText(bracketTeam7, FolderList[9].Replace("\\",""), BracketFiles[6].Replace(".txt",""));
+            loadText(bracketTeam8, FolderList[9].Replace("\\",""), BracketFiles[7].Replace(".txt",""));
+            loadText(bracketTeam9, FolderList[9].Replace("\\",""), BracketFiles[8].Replace(".txt",""));
+            loadText(bracketTeam10, FolderList[9].Replace("\\",""), BracketFiles[9].Replace(".txt",""));
+            loadText(bracketTeam11, FolderList[9].Replace("\\",""), BracketFiles[10].Replace(".txt",""));
+            loadText(bracketTeam12, FolderList[9].Replace("\\",""), BracketFiles[11].Replace(".txt",""));
+            loadText(bracketTeam13, FolderList[9].Replace("\\",""), BracketFiles[12].Replace(".txt",""));
+            loadText(bracketTeam14, FolderList[9].Replace("\\",""), BracketFiles[13].Replace(".txt",""));
+            loadText(bracketTeam15, FolderList[9].Replace("\\",""), BracketFiles[14].Replace(".txt",""));
+            loadText(bracketTeam16, FolderList[9].Replace("\\",""), BracketFiles[15].Replace(".txt",""));
+
+            loadButton(bracketImage1, FolderList[9].Replace("\\",""), BracketFiles[16].Replace(".png",""));
+            loadButton(bracketImage2, FolderList[9].Replace("\\",""), BracketFiles[17].Replace(".png",""));
+            loadButton(bracketImage3, FolderList[9].Replace("\\",""), BracketFiles[18].Replace(".png",""));
+            loadButton(bracketImage4, FolderList[9].Replace("\\",""), BracketFiles[19].Replace(".png",""));
+            loadButton(bracketImage5, FolderList[9].Replace("\\",""), BracketFiles[20].Replace(".png",""));
+            loadButton(bracketImage6, FolderList[9].Replace("\\",""), BracketFiles[21].Replace(".png",""));
+            loadButton(bracketImage7, FolderList[9].Replace("\\",""), BracketFiles[22].Replace(".png",""));
+            loadButton(bracketImage8, FolderList[9].Replace("\\",""), BracketFiles[23].Replace(".png",""));
+            loadButton(bracketImage9, FolderList[9].Replace("\\",""), BracketFiles[24].Replace(".png",""));
+            loadButton(bracketImage10, FolderList[9].Replace("\\",""), BracketFiles[25].Replace(".png",""));
+            loadButton(bracketImage11, FolderList[9].Replace("\\",""), BracketFiles[26].Replace(".png",""));
+            loadButton(bracketImage12, FolderList[9].Replace("\\",""), BracketFiles[27].Replace(".png",""));
+            loadButton(bracketImage13, FolderList[9].Replace("\\",""), BracketFiles[28].Replace(".png",""));
+            loadButton(bracketImage14, FolderList[9].Replace("\\",""), BracketFiles[29].Replace(".png",""));
+            loadButton(bracketImage15, FolderList[9].Replace("\\",""), BracketFiles[30].Replace(".png",""));
+            loadButton(bracketImage16, FolderList[9].Replace("\\",""), BracketFiles[31].Replace(".png",""));
+
+            loadCombo(bracketR1M1Team1, FolderList[9].Replace("\\",""), BracketFiles[32].Replace(".txt",""));
+            loadCombo(bracketR1M1Team2, FolderList[9].Replace("\\",""), BracketFiles[33].Replace(".txt",""));
+            loadCombo(bracketR1M2Team1, FolderList[9].Replace("\\",""), BracketFiles[34].Replace(".txt",""));
+            loadCombo(bracketR1M2Team2, FolderList[9].Replace("\\",""), BracketFiles[35].Replace(".txt",""));
+            loadCombo(bracketR1M3Team1, FolderList[9].Replace("\\",""), BracketFiles[36].Replace(".txt",""));
+            loadCombo(bracketR1M3Team2, FolderList[9].Replace("\\",""), BracketFiles[37].Replace(".txt",""));
+            loadCombo(bracketR1M4Team1, FolderList[9].Replace("\\",""), BracketFiles[38].Replace(".txt",""));
+            loadCombo(bracketR1M4Team2, FolderList[9].Replace("\\",""), BracketFiles[39].Replace(".txt",""));
+            loadCombo(bracketR1M5Team1, FolderList[9].Replace("\\",""), BracketFiles[40].Replace(".txt",""));
+            loadCombo(bracketR1M6Team2, FolderList[9].Replace("\\",""), BracketFiles[41].Replace(".txt",""));
+            loadCombo(bracketR1M7Team1, FolderList[9].Replace("\\",""), BracketFiles[42].Replace(".txt",""));
+            loadCombo(bracketR1M7Team2, FolderList[9].Replace("\\",""), BracketFiles[43].Replace(".txt",""));
+            loadCombo(bracketR1M8Team1, FolderList[9].Replace("\\",""), BracketFiles[44].Replace(".txt",""));
+            loadCombo(bracketR1M8Team2, FolderList[9].Replace("\\",""), BracketFiles[45].Replace(".txt",""));
+            loadCombo(bracketQFM1Team1, FolderList[9].Replace("\\",""), BracketFiles[46].Replace(".txt",""));
+            loadCombo(bracketQFM1Team2, FolderList[9].Replace("\\",""), BracketFiles[47].Replace(".txt",""));
+            loadCombo(bracketQFM2Team1, FolderList[9].Replace("\\",""), BracketFiles[48].Replace(".txt",""));
+            loadCombo(bracketQFM2Team2, FolderList[9].Replace("\\",""), BracketFiles[49].Replace(".txt",""));
+            loadCombo(bracketQFM3Team1, FolderList[9].Replace("\\",""), BracketFiles[50].Replace(".txt",""));
+            loadCombo(bracketQFM3Team2, FolderList[9].Replace("\\",""), BracketFiles[51].Replace(".txt",""));
+            loadCombo(bracketQFM4Team1, FolderList[9].Replace("\\",""), BracketFiles[52].Replace(".txt",""));
+            loadCombo(bracketQFM4Team2, FolderList[9].Replace("\\",""), BracketFiles[53].Replace(".txt",""));
+            loadCombo(bracketSFM1Team1, FolderList[9].Replace("\\",""), BracketFiles[54].Replace(".txt",""));
+            loadCombo(bracketSFM1Team2, FolderList[9].Replace("\\",""), BracketFiles[55].Replace(".txt",""));
+            loadCombo(bracketSFM2Team1, FolderList[9].Replace("\\",""), BracketFiles[56].Replace(".txt",""));
+            loadCombo(bracketSFM2Team2, FolderList[9].Replace("\\",""), BracketFiles[57].Replace(".txt",""));
+            loadCombo(bracketWFM1Team1, FolderList[9].Replace("\\",""), BracketFiles[58].Replace(".txt",""));
+            loadCombo(bracketWFM1Team2, FolderList[9].Replace("\\",""), BracketFiles[59].Replace(".txt",""));
+            loadCombo(bracketLR1M1Team1, FolderList[9].Replace("\\",""), BracketFiles[60].Replace(".txt",""));
+            loadCombo(bracketLR1M1Team2, FolderList[9].Replace("\\",""), BracketFiles[61].Replace(".txt",""));
+            loadCombo(bracketLR1M2Team1, FolderList[9].Replace("\\",""), BracketFiles[62].Replace(".txt",""));
+            loadCombo(bracketLR1M2Team2, FolderList[9].Replace("\\",""), BracketFiles[63].Replace(".txt",""));
+            loadCombo(bracketLR1M3Team1, FolderList[9].Replace("\\",""), BracketFiles[64].Replace(".txt",""));
+            loadCombo(bracketLR1M3Team2, FolderList[9].Replace("\\",""), BracketFiles[65].Replace(".txt",""));
+            loadCombo(bracketLR1M4Team1, FolderList[9].Replace("\\",""), BracketFiles[66].Replace(".txt",""));
+            loadCombo(bracketLR1M4Team2, FolderList[9].Replace("\\",""), BracketFiles[67].Replace(".txt",""));
+            loadCombo(bracketLR2M1Team1, FolderList[9].Replace("\\",""), BracketFiles[68].Replace(".txt",""));
+            loadCombo(bracketLR2M1Team2, FolderList[9].Replace("\\",""), BracketFiles[69].Replace(".txt",""));
+            loadCombo(bracketLR2M2Team1, FolderList[9].Replace("\\",""), BracketFiles[70].Replace(".txt",""));
+            loadCombo(bracketLR2M2Team2, FolderList[9].Replace("\\",""), BracketFiles[71].Replace(".txt",""));
+            loadCombo(bracketLR2M3Team1, FolderList[9].Replace("\\",""), BracketFiles[72].Replace(".txt",""));
+            loadCombo(bracketLR2M3Team2, FolderList[9].Replace("\\",""), BracketFiles[73].Replace(".txt",""));
+            loadCombo(bracketLR2M4Team1, FolderList[9].Replace("\\",""), BracketFiles[74].Replace(".txt",""));
+            loadCombo(bracketLR2M4Team2, FolderList[9].Replace("\\",""), BracketFiles[75].Replace(".txt",""));
+            loadCombo(bracketLR3M1Team1, FolderList[9].Replace("\\",""), BracketFiles[76].Replace(".txt",""));
+            loadCombo(bracketLR3M1Team2, FolderList[9].Replace("\\",""), BracketFiles[77].Replace(".txt",""));
+            loadCombo(bracketLR3M2Team1, FolderList[9].Replace("\\",""), BracketFiles[78].Replace(".txt",""));
+            loadCombo(bracketLR3M2Team2, FolderList[9].Replace("\\",""), BracketFiles[79].Replace(".txt",""));
+            loadCombo(bracketLR4M1Team1, FolderList[9].Replace("\\",""), BracketFiles[80].Replace(".txt",""));
+            loadCombo(bracketLR4M1Team2, FolderList[9].Replace("\\",""), BracketFiles[81].Replace(".txt",""));
+            loadCombo(bracketLR4M2Team1, FolderList[9].Replace("\\",""), BracketFiles[82].Replace(".txt",""));
+            loadCombo(bracketLR4M2Team2, FolderList[9].Replace("\\",""), BracketFiles[83].Replace(".txt",""));
+            loadCombo(bracketLSFM1Team1, FolderList[9].Replace("\\",""), BracketFiles[84].Replace(".txt",""));
+            loadCombo(bracketLSFM1Team2, FolderList[9].Replace("\\",""), BracketFiles[85].Replace(".txt",""));
+            loadCombo(bracketLFM1Team1, FolderList[9].Replace("\\",""), BracketFiles[86].Replace(".txt",""));
+            loadCombo(bracketLFM1Team2, FolderList[9].Replace("\\",""), BracketFiles[87].Replace(".txt",""));
+            loadCombo(bracketGF1M1Team1, FolderList[9].Replace("\\",""), BracketFiles[88].Replace(".txt",""));
+            loadCombo(bracketGF1M1Team2, FolderList[9].Replace("\\",""), BracketFiles[89].Replace(".txt",""));
+            loadCombo(bracketGF2M1Team1, FolderList[9].Replace("\\",""), BracketFiles[90].Replace(".txt",""));
+            loadCombo(bracketGF2M1Team2, FolderList[9].Replace("\\",""), BracketFiles[91].Replace(".txt",""));
+            loadCombo(bracketTPM1Team1, FolderList[9].Replace("\\",""), BracketFiles[92].Replace(".txt",""));
+            loadCombo(bracketTPM1Team2, FolderList[9].Replace("\\",""), BracketFiles[93].Replace(".txt",""));
+
+            loadScore(bracketR1M1Score1, FolderList[9].Replace("\\",""), BracketFiles[94].Replace(".txt",""));
+            loadScore(bracketR1M1Score2, FolderList[9].Replace("\\",""), BracketFiles[95].Replace(".txt",""));
+            loadScore(bracketR1M2Score1, FolderList[9].Replace("\\",""), BracketFiles[96].Replace(".txt",""));
+            loadScore(bracketR1M2Score2, FolderList[9].Replace("\\",""), BracketFiles[97].Replace(".txt",""));
+            loadScore(bracketR1M3Score1, FolderList[9].Replace("\\",""), BracketFiles[98].Replace(".txt",""));
+            loadScore(bracketR1M3Score2, FolderList[9].Replace("\\",""), BracketFiles[99].Replace(".txt",""));
+            loadScore(bracketR1M4Score1, FolderList[9].Replace("\\",""), BracketFiles[100].Replace(".txt",""));
+            loadScore(bracketR1M4Score2, FolderList[9].Replace("\\",""), BracketFiles[101].Replace(".txt",""));
+            loadScore(bracketR1M5Score1, FolderList[9].Replace("\\",""), BracketFiles[102].Replace(".txt",""));
+            loadScore(bracketR1M6Score2, FolderList[9].Replace("\\",""), BracketFiles[103].Replace(".txt",""));
+            loadScore(bracketR1M7Score1, FolderList[9].Replace("\\",""), BracketFiles[104].Replace(".txt",""));
+            loadScore(bracketR1M7Score2, FolderList[9].Replace("\\",""), BracketFiles[105].Replace(".txt",""));
+            loadScore(bracketR1M8Score1, FolderList[9].Replace("\\",""), BracketFiles[106].Replace(".txt",""));
+            loadScore(bracketR1M8Score2, FolderList[9].Replace("\\",""), BracketFiles[107].Replace(".txt",""));
+            loadScore(bracketQFM1Score1, FolderList[9].Replace("\\",""), BracketFiles[108].Replace(".txt",""));
+            loadScore(bracketQFM1Score2, FolderList[9].Replace("\\",""), BracketFiles[109].Replace(".txt",""));
+            loadScore(bracketQFM2Score1, FolderList[9].Replace("\\",""), BracketFiles[110].Replace(".txt",""));
+            loadScore(bracketQFM2Score2, FolderList[9].Replace("\\",""), BracketFiles[111].Replace(".txt",""));
+            loadScore(bracketQFM3Score1, FolderList[9].Replace("\\",""), BracketFiles[112].Replace(".txt",""));
+            loadScore(bracketQFM3Score2, FolderList[9].Replace("\\",""), BracketFiles[113].Replace(".txt",""));
+            loadScore(bracketQFM4Score1, FolderList[9].Replace("\\",""), BracketFiles[114].Replace(".txt",""));
+            loadScore(bracketQFM4Score2, FolderList[9].Replace("\\",""), BracketFiles[115].Replace(".txt",""));
+            loadScore(bracketSFM1Score1, FolderList[9].Replace("\\",""), BracketFiles[116].Replace(".txt",""));
+            loadScore(bracketSFM1Score2, FolderList[9].Replace("\\",""), BracketFiles[117].Replace(".txt",""));
+            loadScore(bracketSFM2Score1, FolderList[9].Replace("\\",""), BracketFiles[118].Replace(".txt",""));
+            loadScore(bracketSFM2Score2, FolderList[9].Replace("\\",""), BracketFiles[119].Replace(".txt",""));
+            loadScore(bracketWFM1Score1, FolderList[9].Replace("\\",""), BracketFiles[120].Replace(".txt",""));
+            loadScore(bracketWFM1Score2, FolderList[9].Replace("\\",""), BracketFiles[121].Replace(".txt",""));
+            loadScore(bracketLR1M1Score1, FolderList[9].Replace("\\",""), BracketFiles[122].Replace(".txt",""));
+            loadScore(bracketLR1M1Score2, FolderList[9].Replace("\\",""), BracketFiles[123].Replace(".txt",""));
+            loadScore(bracketLR1M2Score1, FolderList[9].Replace("\\",""), BracketFiles[124].Replace(".txt",""));
+            loadScore(bracketLR1M2Score2, FolderList[9].Replace("\\",""), BracketFiles[125].Replace(".txt",""));
+            loadScore(bracketLR1M3Score1, FolderList[9].Replace("\\",""), BracketFiles[126].Replace(".txt",""));
+            loadScore(bracketLR1M3Score2, FolderList[9].Replace("\\",""), BracketFiles[127].Replace(".txt",""));
+            loadScore(bracketLR1M4Score1, FolderList[9].Replace("\\",""), BracketFiles[128].Replace(".txt",""));
+            loadScore(bracketLR1M4Score2, FolderList[9].Replace("\\",""), BracketFiles[129].Replace(".txt",""));
+            loadScore(bracketLR2M1Score1, FolderList[9].Replace("\\",""), BracketFiles[130].Replace(".txt",""));
+            loadScore(bracketLR2M1Score2, FolderList[9].Replace("\\",""), BracketFiles[131].Replace(".txt",""));
+            loadScore(bracketLR2M2Score1, FolderList[9].Replace("\\",""), BracketFiles[132].Replace(".txt",""));
+            loadScore(bracketLR2M2Score2, FolderList[9].Replace("\\",""), BracketFiles[133].Replace(".txt",""));
+            loadScore(bracketLR2M3Score1, FolderList[9].Replace("\\",""), BracketFiles[134].Replace(".txt",""));
+            loadScore(bracketLR2M3Score2, FolderList[9].Replace("\\",""), BracketFiles[135].Replace(".txt",""));
+            loadScore(bracketLR2M4Score1, FolderList[9].Replace("\\",""), BracketFiles[136].Replace(".txt",""));
+            loadScore(bracketLR2M4Score2, FolderList[9].Replace("\\",""), BracketFiles[137].Replace(".txt",""));
+            loadScore(bracketLR3M1Score1, FolderList[9].Replace("\\",""), BracketFiles[138].Replace(".txt",""));
+            loadScore(bracketLR3M1Score2, FolderList[9].Replace("\\",""), BracketFiles[139].Replace(".txt",""));
+            loadScore(bracketLR3M2Score1, FolderList[9].Replace("\\",""), BracketFiles[140].Replace(".txt",""));
+            loadScore(bracketLR3M2Score2, FolderList[9].Replace("\\",""), BracketFiles[141].Replace(".txt",""));
+            loadScore(bracketLR4M1Score1, FolderList[9].Replace("\\",""), BracketFiles[142].Replace(".txt",""));
+            loadScore(bracketLR4M1Score2, FolderList[9].Replace("\\",""), BracketFiles[143].Replace(".txt",""));
+            loadScore(bracketLR4M2Score1, FolderList[9].Replace("\\",""), BracketFiles[144].Replace(".txt",""));
+            loadScore(bracketLR4M2Score2, FolderList[9].Replace("\\",""), BracketFiles[145].Replace(".txt",""));
+            loadScore(bracketLSFM1Score1, FolderList[9].Replace("\\",""), BracketFiles[146].Replace(".txt",""));
+            loadScore(bracketLSFM1Score2, FolderList[9].Replace("\\",""), BracketFiles[147].Replace(".txt",""));
+            loadScore(bracketLFM1Score1, FolderList[9].Replace("\\",""), BracketFiles[148].Replace(".txt",""));
+            loadScore(bracketLFM1Score2, FolderList[9].Replace("\\",""), BracketFiles[149].Replace(".txt",""));
+            loadScore(bracketGF1M1Score1, FolderList[9].Replace("\\",""), BracketFiles[150].Replace(".txt",""));
+            loadScore(bracketGF1M1Score2, FolderList[9].Replace("\\",""), BracketFiles[151].Replace(".txt",""));
+            loadScore(bracketGF2M1Score1, FolderList[9].Replace("\\",""), BracketFiles[152].Replace(".txt",""));
+            loadScore(bracketGF2M1Score2, FolderList[9].Replace("\\",""), BracketFiles[153].Replace(".txt",""));
+            loadScore(bracketTPM1Score1, FolderList[9].Replace("\\",""), BracketFiles[154].Replace(".txt",""));
+            loadScore(bracketTPM1Score2, FolderList[9].Replace("\\",""), BracketFiles[155].Replace(".txt",""));
+
+
+            setBracketTeams();
+        }
+
+        private void updateCombo(ComboBox field, string folder, string file)
+        {
+            using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
+            {
+                sw.WriteLine(field.SelectedItem.ToString());
+            }
+        }
+
+        private void preventMouseWheel(object sender, MouseEventArgs e)
+        {
+            ((HandledMouseEventArgs)e).Handled = true;
+        }
+
     }
 }

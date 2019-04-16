@@ -220,6 +220,7 @@
     <Content Include="Resources\Ashe.png" />
     <Content Include="Resources\Baptiste.png" />
     <Content Include="Resources\Baptiste_OWL.png" />
+    <Content Include="Resources\BGG.png" />
     <Content Include="Resources\Color Paris.png" />
     <Content Include="Resources\Desat Paris.png" />
     <Content Include="Resources\Icon-Baptiste.png" />

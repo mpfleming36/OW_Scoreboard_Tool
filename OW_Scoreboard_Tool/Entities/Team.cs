@@ -36,6 +36,17 @@ namespace OW_Scoreboard_Tool.Entities
         }
 
         /// <summary>
+        /// Minimal Constructor
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="logopath"></param>
+        public Team(string name, string logopath)
+        {
+            Name = name;
+            LogoPath = logopath;
+        }
+
+        /// <summary>
         /// 
         /// </summary>
         /// <param name="name"></param>
