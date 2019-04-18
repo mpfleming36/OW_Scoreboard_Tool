@@ -221,21 +221,49 @@ namespace OW_Scoreboard_Tool
             loadText(utility6, "General", "utility6");
             loadText(utility7, "General", "utility7");
             loadText(utility8, "General", "utility8");
+            loadText(utility9, "General", "utility9");
+            loadText(utility10, "General", "utility10");
+            loadText(utility11, "General", "utility11");
+            loadText(utility12, "General", "utility12");
+            loadText(utility13, "General", "utility13");
+            loadText(utility14, "General", "utility14");
+            loadText(utility15, "General", "utility15");
+            loadText(utility16, "General", "utility16");
+            loadText(utility17, "General", "utility17");
+            loadText(utility18, "General", "utility18");
+            loadText(utility19, "General", "utility19");
+            loadText(utility20, "General", "utility20");
+            loadText(utility21, "General", "utility21");
+            loadText(utility22, "General", "utility22");
 
-            loadText(imagePath1, "General", "imagePath1");
-            loadText(imagePath2, "General", "imagePath2");
-            loadText(imagePath3, "General", "imagePath3");
-            loadText(imagePath4, "General", "imagePath4");
-            loadText(imagePath5, "General", "imagePath5");
-            loadText(imagePath6, "General", "imagePath6");
-            loadText(imagePath7, "General", "imagePath7");
-            loadText(imagePath8, "General", "imagePath8");
-            loadText(imagePath9, "General", "imagePath9");
-            loadText(imagePath10, "General", "imagePath10");
-            loadText(imagePath11, "General", "imagePath11");
-            loadText(imagePath12, "General", "imagePath12");
-            loadText(imagePath13, "General", "imagePath13");
-            loadText(imagePath14, "General", "imagePath14");
+            loadButton(imageButton1, "General", GeneralFiles[59].Replace(".png", ""));
+            loadButton(imageButton2, "General", GeneralFiles[60].Replace(".png", ""));
+            loadButton(imageButton3, "General", GeneralFiles[61].Replace(".png", ""));
+            loadButton(imageButton4, "General", GeneralFiles[62].Replace(".png", ""));
+            loadButton(imageButton5, "General", GeneralFiles[63].Replace(".png", ""));
+            loadButton(imageButton6, "General", GeneralFiles[64].Replace(".png", ""));
+            loadButton(imageButton7, "General", GeneralFiles[65].Replace(".png", ""));
+            loadButton(imageButton8, "General", GeneralFiles[66].Replace(".png", ""));
+            loadButton(imageButton9, "General", GeneralFiles[67].Replace(".png", ""));
+            loadButton(imageButton10, "General", GeneralFiles[68].Replace(".png", ""));
+            loadButton(imageButton11, "General", GeneralFiles[69].Replace(".png", ""));
+            loadButton(imageButton12, "General", GeneralFiles[70].Replace(".png", ""));
+            loadButton(imageButton13, "General", GeneralFiles[71].Replace(".png", ""));
+            loadButton(imageButton14, "General", GeneralFiles[72].Replace(".png", ""));
+            loadButton(imageButton15, "General", GeneralFiles[73].Replace(".png", ""));
+            loadButton(imageButton16, "General", GeneralFiles[74].Replace(".png", ""));
+            loadButton(imageButton17, "General", GeneralFiles[75].Replace(".png", ""));
+            loadButton(imageButton18, "General", GeneralFiles[76].Replace(".png", ""));
+            loadButton(imageButton19, "General", GeneralFiles[77].Replace(".png", ""));
+            loadButton(imageButton20, "General", GeneralFiles[78].Replace(".png", ""));
+            loadButton(imageButton21, "General", GeneralFiles[79].Replace(".png", ""));
+            loadButton(imageButton22, "General", GeneralFiles[80].Replace(".png", ""));
+            loadButton(imageButton23, "General", GeneralFiles[81].Replace(".png", ""));
+            loadButton(imageButton24, "General", GeneralFiles[82].Replace(".png", ""));
+            loadButton(imageButton25, "General", GeneralFiles[83].Replace(".png", ""));
+            loadButton(imageButton26, "General", GeneralFiles[84].Replace(".png", ""));
+            loadButton(imageButton27, "General", GeneralFiles[85].Replace(".png", ""));
+            loadButton(imageButton28, "General", GeneralFiles[86].Replace(".png", ""));
 
             loadColor(colorThemeDialog1, colorThemeButton1, "General", "colorTheme1");
             loadColor(colorThemeDialog2, colorThemeButton2, "General", "colorTheme2");
@@ -687,23 +715,51 @@ namespace OW_Scoreboard_Tool
                 resetText(utility6);
                 resetText(utility7);
                 resetText(utility8);
-                resetText(imagePath1);
-                resetText(imagePath2);
-                resetText(imagePath3);
-                resetText(imagePath4);
-                resetText(imagePath5);
-                resetText(imagePath6);
-                resetText(imagePath7);
-                resetText(imagePath8);
-                resetText(imagePath9);
-                resetText(imagePath10);
-                resetText(imagePath11);
-                resetText(imagePath12);
-                resetText(imagePath13);
-                resetText(imagePath14);
+                resetText(utility9);
+                resetText(utility10);
+                resetText(utility11);
+                resetText(utility12);
+                resetText(utility13);
+                resetText(utility14);
+                resetText(utility15);
+                resetText(utility16);
+                resetText(utility17);
+                resetText(utility18);
+                resetText(utility19);
+                resetText(utility20);
+                resetText(utility21);
+                resetText(utility22);
                 resetColor(colorThemeDialog1, colorThemeButton1);
                 resetColor(colorThemeDialog2, colorThemeButton2);
                 resetColor(colorThemeDialog3, colorThemeButton3);
+                resetButton(imageButton1);
+                resetButton(imageButton2);
+                resetButton(imageButton3);
+                resetButton(imageButton4);
+                resetButton(imageButton5);
+                resetButton(imageButton6);
+                resetButton(imageButton7);
+                resetButton(imageButton8);
+                resetButton(imageButton9);
+                resetButton(imageButton10);
+                resetButton(imageButton11);
+                resetButton(imageButton12);
+                resetButton(imageButton13);
+                resetButton(imageButton14);
+                resetButton(imageButton15);
+                resetButton(imageButton16);
+                resetButton(imageButton17);
+                resetButton(imageButton18);
+                resetButton(imageButton19);
+                resetButton(imageButton20);
+                resetButton(imageButton21);
+                resetButton(imageButton22);
+                resetButton(imageButton23);
+                resetButton(imageButton24);
+                resetButton(imageButton25);
+                resetButton(imageButton26);
+                resetButton(imageButton27);
+                resetButton(imageButton28);
             }
             else if(dialogResult == DialogResult.No)
             {
@@ -875,36 +931,50 @@ namespace OW_Scoreboard_Tool
             updateText(utility6, "General", "utility6");
             updateText(utility7, "General", "utility7");
             updateText(utility8, "General", "utility8");
+            updateText(utility9, "General", "utility9");
+            updateText(utility10, "General", "utility10");
+            updateText(utility11, "General", "utility11");
+            updateText(utility12, "General", "utility12");
+            updateText(utility13, "General", "utility13");
+            updateText(utility14, "General", "utility14");
+            updateText(utility15, "General", "utility15");
+            updateText(utility16, "General", "utility16");
+            updateText(utility17, "General", "utility17");
+            updateText(utility18, "General", "utility18");
+            updateText(utility19, "General", "utility19");
+            updateText(utility20, "General", "utility20");
+            updateText(utility21, "General", "utility21");
+            updateText(utility22, "General", "utility22");
 
-            updateLogos(imagePath1, "General", "imagePath1");
-            updateLogos(imagePath2, "General", "imagePath2");
-            updateLogos(imagePath3, "General", "imagePath3");
-            updateLogos(imagePath4, "General", "imagePath4");
-            updateLogos(imagePath5, "General", "imagePath5");
-            updateLogos(imagePath6, "General", "imagePath6");
-            updateLogos(imagePath7, "General", "imagePath7");
-            updateLogos(imagePath8, "General", "imagePath8");
-            updateLogos(imagePath9, "General", "imagePath9");
-            updateLogos(imagePath10, "General", "imagePath10");
-            updateLogos(imagePath11, "General", "imagePath11");
-            updateLogos(imagePath12, "General", "imagePath12");
-            updateLogos(imagePath13, "General", "imagePath13");
-            updateLogos(imagePath14, "General", "imagePath14");
+            updateButton(imageButton1, "General", GeneralFiles[59].Replace(".png", ""));
+            updateButton(imageButton2, "General", GeneralFiles[60].Replace(".png", ""));
+            updateButton(imageButton3, "General", GeneralFiles[61].Replace(".png", ""));
+            updateButton(imageButton4, "General", GeneralFiles[62].Replace(".png", ""));
+            updateButton(imageButton5, "General", GeneralFiles[63].Replace(".png", ""));
+            updateButton(imageButton6, "General", GeneralFiles[64].Replace(".png", ""));
+            updateButton(imageButton7, "General", GeneralFiles[65].Replace(".png", ""));
+            updateButton(imageButton8, "General", GeneralFiles[66].Replace(".png", ""));
+            updateButton(imageButton9, "General", GeneralFiles[67].Replace(".png", ""));
+            updateButton(imageButton10, "General", GeneralFiles[68].Replace(".png", ""));
+            updateButton(imageButton11, "General", GeneralFiles[69].Replace(".png", ""));
+            updateButton(imageButton12, "General", GeneralFiles[70].Replace(".png", ""));
+            updateButton(imageButton13, "General", GeneralFiles[71].Replace(".png", ""));
+            updateButton(imageButton14, "General", GeneralFiles[72].Replace(".png", ""));
+            updateButton(imageButton15, "General", GeneralFiles[73].Replace(".png", ""));
+            updateButton(imageButton16, "General", GeneralFiles[74].Replace(".png", ""));
+            updateButton(imageButton17, "General", GeneralFiles[75].Replace(".png", ""));
+            updateButton(imageButton18, "General", GeneralFiles[76].Replace(".png", ""));
+            updateButton(imageButton19, "General", GeneralFiles[77].Replace(".png", ""));
+            updateButton(imageButton20, "General", GeneralFiles[78].Replace(".png", ""));
+            updateButton(imageButton21, "General", GeneralFiles[79].Replace(".png", ""));
+            updateButton(imageButton22, "General", GeneralFiles[80].Replace(".png", ""));
+            updateButton(imageButton23, "General", GeneralFiles[81].Replace(".png", ""));
+            updateButton(imageButton24, "General", GeneralFiles[82].Replace(".png", ""));
+            updateButton(imageButton25, "General", GeneralFiles[83].Replace(".png", ""));
+            updateButton(imageButton26, "General", GeneralFiles[84].Replace(".png", ""));
+            updateButton(imageButton27, "General", GeneralFiles[85].Replace(".png", ""));
+            updateButton(imageButton28, "General", GeneralFiles[86].Replace(".png", ""));
 
-            updateText(imagePath1, "General", "imagePath1");
-            updateText(imagePath2, "General", "imagePath2");
-            updateText(imagePath3, "General", "imagePath3");
-            updateText(imagePath4, "General", "imagePath4");
-            updateText(imagePath5, "General", "imagePath5");
-            updateText(imagePath6, "General", "imagePath6");
-            updateText(imagePath7, "General", "imagePath7");
-            updateText(imagePath8, "General", "imagePath8");
-            updateText(imagePath9, "General", "imagePath9");
-            updateText(imagePath10, "General", "imagePath10");
-            updateText(imagePath11, "General", "imagePath11");
-            updateText(imagePath12, "General", "imagePath12");
-            updateText(imagePath13, "General", "imagePath13");
-            updateText(imagePath14, "General", "imagePath14");
 
             updateColor(colorThemeDialog1, "General", "colorTheme1");
             updateColor(colorThemeDialog2, "General", "colorTheme2");
@@ -3277,6 +3347,19 @@ namespace OW_Scoreboard_Tool
                 field.AccessibleDescription = open.FileName;
             }
         }
+
+        private void GetImageForButton(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.png; )|*.png";
+            open.InitialDirectory = path + FolderList[1];
+            DialogResult res = open.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                ((Button)sender).AccessibleDescription = open.FileName;
+            }
+        }
+
         #region Generators
         /// <summary>
         /// Generates the Roles;
@@ -3536,13 +3619,13 @@ namespace OW_Scoreboard_Tool
 
             GeneralFiles = new List<string>
             {
-                "analyst1.txt",
-                "analyst2.txt",
+                "message.txt",
+                "host.txt",
                 "caster1.txt",
                 "caster2.txt",
-                "host.txt",
-                "message.txt",
-                "utility1.txt",
+                "analyst1.txt",
+                "analyst2.txt",
+                "utility1.txt", //6
                 "utility2.txt",
                 "utility3.txt",
                 "utility4.txt",
@@ -3550,23 +3633,79 @@ namespace OW_Scoreboard_Tool
                 "utility6.txt",
                 "utility7.txt",
                 "utility8.txt",
-                "imagePath1.txt",
-                "imagePath2.txt",
-                "imagePath3.txt",
-                "imagePath4.txt",
-                "imagePath5.txt",
-                "imagePath6.txt",
-                "imagePath7.txt",
-                "imagePath8.txt",
-                "imagePath9.txt",
-                "imagePath10.txt",
-                "imagePath11.txt",
-                "imagePath12.txt",
-                "imagePath13.txt",
-                "imagePath14.txt",
-                "colorTheme1.txt",
+                "utility9.txt",
+                "utility10.txt",
+                "utility11.txt",
+                "utility12.txt",
+                "utility13.txt",
+                "utility14.txt",
+                "utility15.txt",
+                "utility16.txt",
+                "utility17.txt",
+                "utility18.txt",
+                "utility19.txt",
+                "utility20.txt",
+                "utility21.txt",
+                "utility22.txt",
+                "image1Path.png", //28
+                "image2Path.png",
+                "image3Path.png",
+                "image4Path.png",
+                "image5Path.png",
+                "image6Path.png",
+                "image7Path.png",
+                "image8Path.png",
+                "image9Path.png",
+                "image10Path.png",
+                "image11Path.png",
+                "image12Path.png",
+                "image13Path.png",
+                "image14Path.png",
+                "image15Path.png",
+                "image16Path.png",
+                "image17Path.png",
+                "image18Path.png",
+                "image19Path.png",
+                "image20Path.png",
+                "image21Path.png",
+                "image22Path.png",
+                "image23Path.png",
+                "image24Path.png",
+                "image25Path.png",
+                "image26Path.png",
+                "image27Path.png",
+                "image28Path.png",
+                "colorTheme1.txt", //56
                 "colorTheme2.txt",
                 "colorTheme3.txt",
+                "image1.png", //59
+                "image2.png",
+                "image3.png",
+                "image4.png",
+                "image5.png",
+                "image6.png",
+                "image7.png",
+                "image8.png",
+                "image9.png",
+                "image10.png",
+                "image11.png",
+                "image12.png",
+                "image13.png",
+                "image14.png",
+                "image15.png",
+                "image16.png",
+                "image17.png",
+                "image18.png",
+                "image19.png",
+                "image20.png",
+                "image21.png",
+                "image22.png",
+                "image23.png",
+                "image24.png",
+                "image25.png",
+                "image26.png",
+                "image27.png",
+                "image28.png",
             };
 
             PlayerFiles = new List<string>
@@ -4054,76 +4193,6 @@ namespace OW_Scoreboard_Tool
                     sw.WriteLine(Replays[replayListView.SelectedItems[0].Index].Name);
                 }
             } 
-        }
-
-        private void imageButton1_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath1);
-        }
-
-        private void imageButton2_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath2);
-        }
-
-        private void imageButton3_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath3);
-        }
-
-        private void imageButton4_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath4);
-        }
-
-        private void imageButton5_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath5);
-        }
-
-        private void imageButton6_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath6);
-        }
-
-        private void imageButton7_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath7);
-        }
-
-        private void imageButton8_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath8);
-        }
-
-        private void imageButton9_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath9);
-        }
-
-        private void imageButton10_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath10);
-        }
-
-        private void imageButton11_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath11);
-        }
-
-        private void imageButton12_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath12);
-        }
-
-        private void imageButton13_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath13);
-        }
-
-        private void imageButton14_Click(object sender, EventArgs e)
-        {
-            GetLogoFile(imagePath14);
         }
 
         private void replaySaveButton_Click(object sender, EventArgs e)
@@ -4971,7 +5040,6 @@ namespace OW_Scoreboard_Tool
             loadScore(bracketTPM1Score1, FolderList[9].Replace("\\", ""), BracketFiles[158].Replace(".txt", ""));
             loadScore(bracketTPM1Score2, FolderList[9].Replace("\\", ""), BracketFiles[159].Replace(".txt", ""));
 
-
             setBracketTeams();
         }
 
@@ -4987,6 +5055,12 @@ namespace OW_Scoreboard_Tool
         {
             ((HandledMouseEventArgs)e).Handled = true;
         }
+
+        private void ToolTipMouseHover(object sender, EventArgs e)
+        {
+            ButtonToolTip.SetToolTip(((Button)sender), ((Button)sender).AccessibleDescription);
+        }
+
 
     }
 }
