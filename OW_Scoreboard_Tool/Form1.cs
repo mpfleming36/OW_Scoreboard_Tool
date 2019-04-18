@@ -3847,6 +3847,8 @@ namespace OW_Scoreboard_Tool
                 "bracketR1M4Score1.txt",
                 "bracketR1M4Score2.txt",
                 "bracketR1M5Score1.txt",
+                "bracketR1M5Score2.txt",
+                "bracketR1M6Score1.txt",
                 "bracketR1M6Score2.txt",
                 "bracketR1M7Score1.txt",
                 "bracketR1M7Score2.txt",
