@@ -283,8 +283,6 @@ namespace OW_Scoreboard_Tool
 
             loadBracket();
 
-            linkBracketToTeams();
-
             updateSeries();
 
             updateReplayPage();
@@ -3341,7 +3339,7 @@ namespace OW_Scoreboard_Tool
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "Image Files(*.png; )|*.png";
-            open.InitialDirectory = path + FolderList[1];
+            open.InitialDirectory = path + FolderList[8];
             DialogResult res = open.ShowDialog();
             if (res == DialogResult.OK)
             {
@@ -5017,6 +5015,10 @@ namespace OW_Scoreboard_Tool
             loadButton(bracketImage15, FolderList[9].Replace("\\", ""), BracketFiles[30].Replace(".png", ""));
             loadButton(bracketImage16, FolderList[9].Replace("\\", ""), BracketFiles[31].Replace(".png", ""));
 
+            linkBracketToTeams();
+
+            setBracketTeams();
+
             loadCombo(bracketR1M1Team1, FolderList[9].Replace("\\", ""), BracketFiles[32].Replace(".txt", ""));
             loadCombo(bracketR1M1Team2, FolderList[9].Replace("\\", ""), BracketFiles[33].Replace(".txt", ""));
             loadCombo(bracketR1M2Team1, FolderList[9].Replace("\\", ""), BracketFiles[34].Replace(".txt", ""));
@@ -5212,7 +5214,6 @@ namespace OW_Scoreboard_Tool
             loadScore(bracketTeam16MW, FolderList[9].Replace("\\", ""), BracketFiles[238].Replace(".txt", ""));
             loadScore(bracketTeam16ML, FolderList[9].Replace("\\", ""), BracketFiles[239].Replace(".txt", ""));
 
-            setBracketTeams();
         }
 
         private void updateCombo(ComboBox field, string folder, string file)
