@@ -45,6 +45,48 @@ namespace OW_Scoreboard_Tool
             this.exportAwayTeamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.General_Info = new System.Windows.Forms.TabPage();
+            this.imageLabel28 = new System.Windows.Forms.Label();
+            this.imageLabel27 = new System.Windows.Forms.Label();
+            this.imageLabel26 = new System.Windows.Forms.Label();
+            this.imageLabel25 = new System.Windows.Forms.Label();
+            this.imageLabel24 = new System.Windows.Forms.Label();
+            this.imageLabel23 = new System.Windows.Forms.Label();
+            this.imageLabel22 = new System.Windows.Forms.Label();
+            this.imageLabel21 = new System.Windows.Forms.Label();
+            this.imageLabel20 = new System.Windows.Forms.Label();
+            this.imageLabel19 = new System.Windows.Forms.Label();
+            this.imageLabel18 = new System.Windows.Forms.Label();
+            this.imageLabel17 = new System.Windows.Forms.Label();
+            this.imageLabel16 = new System.Windows.Forms.Label();
+            this.imageLabel15 = new System.Windows.Forms.Label();
+            this.imageButton28 = new System.Windows.Forms.Button();
+            this.imageButton27 = new System.Windows.Forms.Button();
+            this.imageButton26 = new System.Windows.Forms.Button();
+            this.imageButton25 = new System.Windows.Forms.Button();
+            this.imageButton24 = new System.Windows.Forms.Button();
+            this.imageButton23 = new System.Windows.Forms.Button();
+            this.imageButton22 = new System.Windows.Forms.Button();
+            this.imageButton21 = new System.Windows.Forms.Button();
+            this.imageButton20 = new System.Windows.Forms.Button();
+            this.imageButton19 = new System.Windows.Forms.Button();
+            this.imageButton18 = new System.Windows.Forms.Button();
+            this.imageButton17 = new System.Windows.Forms.Button();
+            this.imageButton16 = new System.Windows.Forms.Button();
+            this.imageButton15 = new System.Windows.Forms.Button();
+            this.utility22Label = new System.Windows.Forms.Label();
+            this.utility21Label = new System.Windows.Forms.Label();
+            this.utility20Label = new System.Windows.Forms.Label();
+            this.utility19Label = new System.Windows.Forms.Label();
+            this.utility18Label = new System.Windows.Forms.Label();
+            this.utility17Label = new System.Windows.Forms.Label();
+            this.utility16Label = new System.Windows.Forms.Label();
+            this.utility15Label = new System.Windows.Forms.Label();
+            this.utility14Label = new System.Windows.Forms.Label();
+            this.utility13Label = new System.Windows.Forms.Label();
+            this.utility12Label = new System.Windows.Forms.Label();
+            this.utility11Label = new System.Windows.Forms.Label();
+            this.utility10Label = new System.Windows.Forms.Label();
+            this.utility9Label = new System.Windows.Forms.Label();
             this.colorThemeButton3 = new System.Windows.Forms.Button();
             this.colorThemeButton2 = new System.Windows.Forms.Button();
             this.imageLabel14 = new System.Windows.Forms.Label();
@@ -362,6 +404,70 @@ namespace OW_Scoreboard_Tool
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.replayImageList = new System.Windows.Forms.ImageList(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.bracketTeam16ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam16MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam16L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam16W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam15ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam15MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam15L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam15W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam14ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam14MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam14L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam14W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam13ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam13MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam13L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam13W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam12ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam12MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam12L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam12W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam11ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam11MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam11L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam11W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam10ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam10MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam10L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam10W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam9ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam9MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam9L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam9W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam8ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam8MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam8L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam8W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam7ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam7MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam7L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam7W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam6ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam6MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam6L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam6W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam5ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam5MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam5L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam5W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam4ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam4MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam4L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam4W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam3ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam3MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam3L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam3W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam2ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam2MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam2L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam2W = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam1ML = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam1MW = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam1L = new System.Windows.Forms.NumericUpDown();
+            this.bracketTeam1W = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bracketUpdate = new System.Windows.Forms.Button();
             this.bracketReset = new System.Windows.Forms.Button();
@@ -546,48 +652,6 @@ namespace OW_Scoreboard_Tool
             this.colorThemeDialog2 = new System.Windows.Forms.ColorDialog();
             this.colorThemeDialog3 = new System.Windows.Forms.ColorDialog();
             this.ButtonToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.utility22Label = new System.Windows.Forms.Label();
-            this.utility21Label = new System.Windows.Forms.Label();
-            this.utility20Label = new System.Windows.Forms.Label();
-            this.utility19Label = new System.Windows.Forms.Label();
-            this.utility18Label = new System.Windows.Forms.Label();
-            this.utility17Label = new System.Windows.Forms.Label();
-            this.utility16Label = new System.Windows.Forms.Label();
-            this.utility15Label = new System.Windows.Forms.Label();
-            this.utility14Label = new System.Windows.Forms.Label();
-            this.utility13Label = new System.Windows.Forms.Label();
-            this.utility12Label = new System.Windows.Forms.Label();
-            this.utility11Label = new System.Windows.Forms.Label();
-            this.utility10Label = new System.Windows.Forms.Label();
-            this.utility9Label = new System.Windows.Forms.Label();
-            this.imageLabel28 = new System.Windows.Forms.Label();
-            this.imageLabel27 = new System.Windows.Forms.Label();
-            this.imageLabel26 = new System.Windows.Forms.Label();
-            this.imageLabel25 = new System.Windows.Forms.Label();
-            this.imageLabel24 = new System.Windows.Forms.Label();
-            this.imageLabel23 = new System.Windows.Forms.Label();
-            this.imageLabel22 = new System.Windows.Forms.Label();
-            this.imageLabel21 = new System.Windows.Forms.Label();
-            this.imageLabel20 = new System.Windows.Forms.Label();
-            this.imageLabel19 = new System.Windows.Forms.Label();
-            this.imageLabel18 = new System.Windows.Forms.Label();
-            this.imageLabel17 = new System.Windows.Forms.Label();
-            this.imageLabel16 = new System.Windows.Forms.Label();
-            this.imageLabel15 = new System.Windows.Forms.Label();
-            this.imageButton28 = new System.Windows.Forms.Button();
-            this.imageButton27 = new System.Windows.Forms.Button();
-            this.imageButton26 = new System.Windows.Forms.Button();
-            this.imageButton25 = new System.Windows.Forms.Button();
-            this.imageButton24 = new System.Windows.Forms.Button();
-            this.imageButton23 = new System.Windows.Forms.Button();
-            this.imageButton22 = new System.Windows.Forms.Button();
-            this.imageButton21 = new System.Windows.Forms.Button();
-            this.imageButton20 = new System.Windows.Forms.Button();
-            this.imageButton19 = new System.Windows.Forms.Button();
-            this.imageButton18 = new System.Windows.Forms.Button();
-            this.imageButton17 = new System.Windows.Forms.Button();
-            this.imageButton16 = new System.Windows.Forms.Button();
-            this.imageButton15 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.General_Info.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -617,6 +681,70 @@ namespace OW_Scoreboard_Tool
             this.tabControl1.SuspendLayout();
             this.Replay_Manager.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam16ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam16MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam16L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam16W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam15ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam15MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam15L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam15W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam14ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam14MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam14L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam14W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam13ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam13MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam13L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam13W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam12ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam12MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam12L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam12W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam11ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam11MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam11L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam11W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam10ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam10MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam10L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam10W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam9ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam9MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam9L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam9W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam8ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam8MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam8L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam8W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam7ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam7MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam7L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam7W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam6ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam6MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam6L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam6W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam5ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam5MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam5L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam5W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam4ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam4MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam4L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam4W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam3ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam3MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam3L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam3W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam2ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam2MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam2L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam2W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam1ML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam1MW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam1L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam1W)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bracketTPM1Score2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bracketTPM1Score1)).BeginInit();
@@ -922,6 +1050,398 @@ namespace OW_Scoreboard_Tool
             this.General_Info.TabIndex = 1;
             this.General_Info.Text = "General";
             this.General_Info.UseVisualStyleBackColor = true;
+            // 
+            // imageLabel28
+            // 
+            this.imageLabel28.AutoSize = true;
+            this.imageLabel28.Location = new System.Drawing.Point(474, 375);
+            this.imageLabel28.Name = "imageLabel28";
+            this.imageLabel28.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel28.TabIndex = 213;
+            this.imageLabel28.Text = "Image28";
+            // 
+            // imageLabel27
+            // 
+            this.imageLabel27.AutoSize = true;
+            this.imageLabel27.Location = new System.Drawing.Point(474, 349);
+            this.imageLabel27.Name = "imageLabel27";
+            this.imageLabel27.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel27.TabIndex = 212;
+            this.imageLabel27.Text = "Image27";
+            // 
+            // imageLabel26
+            // 
+            this.imageLabel26.AutoSize = true;
+            this.imageLabel26.Location = new System.Drawing.Point(474, 323);
+            this.imageLabel26.Name = "imageLabel26";
+            this.imageLabel26.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel26.TabIndex = 211;
+            this.imageLabel26.Text = "Image26";
+            // 
+            // imageLabel25
+            // 
+            this.imageLabel25.AutoSize = true;
+            this.imageLabel25.Location = new System.Drawing.Point(474, 297);
+            this.imageLabel25.Name = "imageLabel25";
+            this.imageLabel25.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel25.TabIndex = 210;
+            this.imageLabel25.Text = "Image25";
+            // 
+            // imageLabel24
+            // 
+            this.imageLabel24.AutoSize = true;
+            this.imageLabel24.Location = new System.Drawing.Point(474, 271);
+            this.imageLabel24.Name = "imageLabel24";
+            this.imageLabel24.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel24.TabIndex = 209;
+            this.imageLabel24.Text = "Image24";
+            // 
+            // imageLabel23
+            // 
+            this.imageLabel23.AutoSize = true;
+            this.imageLabel23.Location = new System.Drawing.Point(474, 245);
+            this.imageLabel23.Name = "imageLabel23";
+            this.imageLabel23.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel23.TabIndex = 208;
+            this.imageLabel23.Text = "Image23";
+            // 
+            // imageLabel22
+            // 
+            this.imageLabel22.AutoSize = true;
+            this.imageLabel22.Location = new System.Drawing.Point(474, 219);
+            this.imageLabel22.Name = "imageLabel22";
+            this.imageLabel22.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel22.TabIndex = 207;
+            this.imageLabel22.Text = "Image22";
+            // 
+            // imageLabel21
+            // 
+            this.imageLabel21.AutoSize = true;
+            this.imageLabel21.Location = new System.Drawing.Point(474, 193);
+            this.imageLabel21.Name = "imageLabel21";
+            this.imageLabel21.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel21.TabIndex = 206;
+            this.imageLabel21.Text = "Image21";
+            // 
+            // imageLabel20
+            // 
+            this.imageLabel20.AutoSize = true;
+            this.imageLabel20.Location = new System.Drawing.Point(474, 167);
+            this.imageLabel20.Name = "imageLabel20";
+            this.imageLabel20.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel20.TabIndex = 205;
+            this.imageLabel20.Text = "Image20";
+            // 
+            // imageLabel19
+            // 
+            this.imageLabel19.AutoSize = true;
+            this.imageLabel19.Location = new System.Drawing.Point(474, 141);
+            this.imageLabel19.Name = "imageLabel19";
+            this.imageLabel19.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel19.TabIndex = 204;
+            this.imageLabel19.Text = "Image19";
+            // 
+            // imageLabel18
+            // 
+            this.imageLabel18.AutoSize = true;
+            this.imageLabel18.Location = new System.Drawing.Point(474, 115);
+            this.imageLabel18.Name = "imageLabel18";
+            this.imageLabel18.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel18.TabIndex = 203;
+            this.imageLabel18.Text = "Image18";
+            // 
+            // imageLabel17
+            // 
+            this.imageLabel17.AutoSize = true;
+            this.imageLabel17.Location = new System.Drawing.Point(474, 89);
+            this.imageLabel17.Name = "imageLabel17";
+            this.imageLabel17.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel17.TabIndex = 202;
+            this.imageLabel17.Text = "Image17";
+            // 
+            // imageLabel16
+            // 
+            this.imageLabel16.AutoSize = true;
+            this.imageLabel16.Location = new System.Drawing.Point(474, 63);
+            this.imageLabel16.Name = "imageLabel16";
+            this.imageLabel16.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel16.TabIndex = 201;
+            this.imageLabel16.Text = "Image16";
+            // 
+            // imageLabel15
+            // 
+            this.imageLabel15.AutoSize = true;
+            this.imageLabel15.Location = new System.Drawing.Point(474, 38);
+            this.imageLabel15.Name = "imageLabel15";
+            this.imageLabel15.Size = new System.Drawing.Size(48, 13);
+            this.imageLabel15.TabIndex = 200;
+            this.imageLabel15.Text = "Image15";
+            // 
+            // imageButton28
+            // 
+            this.imageButton28.Location = new System.Drawing.Point(522, 371);
+            this.imageButton28.Name = "imageButton28";
+            this.imageButton28.Size = new System.Drawing.Size(27, 23);
+            this.imageButton28.TabIndex = 199;
+            this.imageButton28.Text = "...";
+            this.imageButton28.UseVisualStyleBackColor = true;
+            this.imageButton28.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton27
+            // 
+            this.imageButton27.Location = new System.Drawing.Point(522, 345);
+            this.imageButton27.Name = "imageButton27";
+            this.imageButton27.Size = new System.Drawing.Size(27, 23);
+            this.imageButton27.TabIndex = 198;
+            this.imageButton27.Text = "...";
+            this.imageButton27.UseVisualStyleBackColor = true;
+            this.imageButton27.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton26
+            // 
+            this.imageButton26.Location = new System.Drawing.Point(522, 319);
+            this.imageButton26.Name = "imageButton26";
+            this.imageButton26.Size = new System.Drawing.Size(27, 23);
+            this.imageButton26.TabIndex = 197;
+            this.imageButton26.Text = "...";
+            this.imageButton26.UseVisualStyleBackColor = true;
+            this.imageButton26.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton25
+            // 
+            this.imageButton25.Location = new System.Drawing.Point(522, 293);
+            this.imageButton25.Name = "imageButton25";
+            this.imageButton25.Size = new System.Drawing.Size(27, 23);
+            this.imageButton25.TabIndex = 196;
+            this.imageButton25.Text = "...";
+            this.imageButton25.UseVisualStyleBackColor = true;
+            this.imageButton25.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton24
+            // 
+            this.imageButton24.Location = new System.Drawing.Point(522, 267);
+            this.imageButton24.Name = "imageButton24";
+            this.imageButton24.Size = new System.Drawing.Size(27, 23);
+            this.imageButton24.TabIndex = 195;
+            this.imageButton24.Text = "...";
+            this.imageButton24.UseVisualStyleBackColor = true;
+            this.imageButton24.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton23
+            // 
+            this.imageButton23.Location = new System.Drawing.Point(522, 241);
+            this.imageButton23.Name = "imageButton23";
+            this.imageButton23.Size = new System.Drawing.Size(27, 23);
+            this.imageButton23.TabIndex = 194;
+            this.imageButton23.Text = "...";
+            this.imageButton23.UseVisualStyleBackColor = true;
+            this.imageButton23.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton22
+            // 
+            this.imageButton22.Location = new System.Drawing.Point(522, 215);
+            this.imageButton22.Name = "imageButton22";
+            this.imageButton22.Size = new System.Drawing.Size(27, 23);
+            this.imageButton22.TabIndex = 193;
+            this.imageButton22.Text = "...";
+            this.imageButton22.UseVisualStyleBackColor = true;
+            this.imageButton22.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton21
+            // 
+            this.imageButton21.Location = new System.Drawing.Point(522, 189);
+            this.imageButton21.Name = "imageButton21";
+            this.imageButton21.Size = new System.Drawing.Size(27, 23);
+            this.imageButton21.TabIndex = 192;
+            this.imageButton21.Text = "...";
+            this.imageButton21.UseVisualStyleBackColor = true;
+            this.imageButton21.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton20
+            // 
+            this.imageButton20.Location = new System.Drawing.Point(522, 163);
+            this.imageButton20.Name = "imageButton20";
+            this.imageButton20.Size = new System.Drawing.Size(27, 23);
+            this.imageButton20.TabIndex = 191;
+            this.imageButton20.Text = "...";
+            this.imageButton20.UseVisualStyleBackColor = true;
+            this.imageButton20.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton19
+            // 
+            this.imageButton19.Location = new System.Drawing.Point(522, 137);
+            this.imageButton19.Name = "imageButton19";
+            this.imageButton19.Size = new System.Drawing.Size(27, 23);
+            this.imageButton19.TabIndex = 190;
+            this.imageButton19.Text = "...";
+            this.imageButton19.UseVisualStyleBackColor = true;
+            this.imageButton19.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton18
+            // 
+            this.imageButton18.Location = new System.Drawing.Point(522, 111);
+            this.imageButton18.Name = "imageButton18";
+            this.imageButton18.Size = new System.Drawing.Size(27, 23);
+            this.imageButton18.TabIndex = 189;
+            this.imageButton18.Text = "...";
+            this.imageButton18.UseVisualStyleBackColor = true;
+            this.imageButton18.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton17
+            // 
+            this.imageButton17.Location = new System.Drawing.Point(522, 85);
+            this.imageButton17.Name = "imageButton17";
+            this.imageButton17.Size = new System.Drawing.Size(27, 23);
+            this.imageButton17.TabIndex = 188;
+            this.imageButton17.Text = "...";
+            this.imageButton17.UseVisualStyleBackColor = true;
+            this.imageButton17.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton16
+            // 
+            this.imageButton16.Location = new System.Drawing.Point(522, 59);
+            this.imageButton16.Name = "imageButton16";
+            this.imageButton16.Size = new System.Drawing.Size(27, 23);
+            this.imageButton16.TabIndex = 187;
+            this.imageButton16.Text = "...";
+            this.imageButton16.UseVisualStyleBackColor = true;
+            this.imageButton16.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButton15
+            // 
+            this.imageButton15.Location = new System.Drawing.Point(522, 33);
+            this.imageButton15.Name = "imageButton15";
+            this.imageButton15.Size = new System.Drawing.Size(27, 23);
+            this.imageButton15.TabIndex = 186;
+            this.imageButton15.Text = "...";
+            this.imageButton15.UseVisualStyleBackColor = true;
+            this.imageButton15.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // utility22Label
+            // 
+            this.utility22Label.AutoSize = true;
+            this.utility22Label.Location = new System.Drawing.Point(202, 376);
+            this.utility22Label.Name = "utility22Label";
+            this.utility22Label.Size = new System.Drawing.Size(44, 13);
+            this.utility22Label.TabIndex = 185;
+            this.utility22Label.Text = "Utility22";
+            // 
+            // utility21Label
+            // 
+            this.utility21Label.AutoSize = true;
+            this.utility21Label.Location = new System.Drawing.Point(202, 350);
+            this.utility21Label.Name = "utility21Label";
+            this.utility21Label.Size = new System.Drawing.Size(44, 13);
+            this.utility21Label.TabIndex = 184;
+            this.utility21Label.Text = "Utility21";
+            // 
+            // utility20Label
+            // 
+            this.utility20Label.AutoSize = true;
+            this.utility20Label.Location = new System.Drawing.Point(202, 324);
+            this.utility20Label.Name = "utility20Label";
+            this.utility20Label.Size = new System.Drawing.Size(44, 13);
+            this.utility20Label.TabIndex = 183;
+            this.utility20Label.Text = "Utility20";
+            // 
+            // utility19Label
+            // 
+            this.utility19Label.AutoSize = true;
+            this.utility19Label.Location = new System.Drawing.Point(202, 298);
+            this.utility19Label.Name = "utility19Label";
+            this.utility19Label.Size = new System.Drawing.Size(44, 13);
+            this.utility19Label.TabIndex = 182;
+            this.utility19Label.Text = "Utility19";
+            // 
+            // utility18Label
+            // 
+            this.utility18Label.AutoSize = true;
+            this.utility18Label.Location = new System.Drawing.Point(202, 272);
+            this.utility18Label.Name = "utility18Label";
+            this.utility18Label.Size = new System.Drawing.Size(44, 13);
+            this.utility18Label.TabIndex = 181;
+            this.utility18Label.Text = "Utility18";
+            // 
+            // utility17Label
+            // 
+            this.utility17Label.AutoSize = true;
+            this.utility17Label.Location = new System.Drawing.Point(202, 246);
+            this.utility17Label.Name = "utility17Label";
+            this.utility17Label.Size = new System.Drawing.Size(44, 13);
+            this.utility17Label.TabIndex = 180;
+            this.utility17Label.Text = "Utility17";
+            // 
+            // utility16Label
+            // 
+            this.utility16Label.AutoSize = true;
+            this.utility16Label.Location = new System.Drawing.Point(202, 220);
+            this.utility16Label.Name = "utility16Label";
+            this.utility16Label.Size = new System.Drawing.Size(44, 13);
+            this.utility16Label.TabIndex = 179;
+            this.utility16Label.Text = "Utility16";
+            // 
+            // utility15Label
+            // 
+            this.utility15Label.AutoSize = true;
+            this.utility15Label.Location = new System.Drawing.Point(202, 194);
+            this.utility15Label.Name = "utility15Label";
+            this.utility15Label.Size = new System.Drawing.Size(44, 13);
+            this.utility15Label.TabIndex = 178;
+            this.utility15Label.Text = "Utility15";
+            // 
+            // utility14Label
+            // 
+            this.utility14Label.AutoSize = true;
+            this.utility14Label.Location = new System.Drawing.Point(202, 168);
+            this.utility14Label.Name = "utility14Label";
+            this.utility14Label.Size = new System.Drawing.Size(44, 13);
+            this.utility14Label.TabIndex = 177;
+            this.utility14Label.Text = "Utility14";
+            // 
+            // utility13Label
+            // 
+            this.utility13Label.AutoSize = true;
+            this.utility13Label.Location = new System.Drawing.Point(202, 142);
+            this.utility13Label.Name = "utility13Label";
+            this.utility13Label.Size = new System.Drawing.Size(44, 13);
+            this.utility13Label.TabIndex = 176;
+            this.utility13Label.Text = "Utility13";
+            // 
+            // utility12Label
+            // 
+            this.utility12Label.AutoSize = true;
+            this.utility12Label.Location = new System.Drawing.Point(202, 116);
+            this.utility12Label.Name = "utility12Label";
+            this.utility12Label.Size = new System.Drawing.Size(44, 13);
+            this.utility12Label.TabIndex = 175;
+            this.utility12Label.Text = "Utility12";
+            // 
+            // utility11Label
+            // 
+            this.utility11Label.AutoSize = true;
+            this.utility11Label.Location = new System.Drawing.Point(202, 90);
+            this.utility11Label.Name = "utility11Label";
+            this.utility11Label.Size = new System.Drawing.Size(44, 13);
+            this.utility11Label.TabIndex = 174;
+            this.utility11Label.Text = "Utility11";
+            // 
+            // utility10Label
+            // 
+            this.utility10Label.AutoSize = true;
+            this.utility10Label.Location = new System.Drawing.Point(202, 64);
+            this.utility10Label.Name = "utility10Label";
+            this.utility10Label.Size = new System.Drawing.Size(44, 13);
+            this.utility10Label.TabIndex = 173;
+            this.utility10Label.Text = "Utility10";
+            // 
+            // utility9Label
+            // 
+            this.utility9Label.AutoSize = true;
+            this.utility9Label.Location = new System.Drawing.Point(202, 38);
+            this.utility9Label.Name = "utility9Label";
+            this.utility9Label.Size = new System.Drawing.Size(38, 13);
+            this.utility9Label.TabIndex = 172;
+            this.utility9Label.Text = "Utility9";
             // 
             // colorThemeButton3
             // 
@@ -4718,6 +5238,70 @@ namespace OW_Scoreboard_Tool
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.bracketTeam16ML);
+            this.tabPage1.Controls.Add(this.bracketTeam16MW);
+            this.tabPage1.Controls.Add(this.bracketTeam16L);
+            this.tabPage1.Controls.Add(this.bracketTeam16W);
+            this.tabPage1.Controls.Add(this.bracketTeam15ML);
+            this.tabPage1.Controls.Add(this.bracketTeam15MW);
+            this.tabPage1.Controls.Add(this.bracketTeam15L);
+            this.tabPage1.Controls.Add(this.bracketTeam15W);
+            this.tabPage1.Controls.Add(this.bracketTeam14ML);
+            this.tabPage1.Controls.Add(this.bracketTeam14MW);
+            this.tabPage1.Controls.Add(this.bracketTeam14L);
+            this.tabPage1.Controls.Add(this.bracketTeam14W);
+            this.tabPage1.Controls.Add(this.bracketTeam13ML);
+            this.tabPage1.Controls.Add(this.bracketTeam13MW);
+            this.tabPage1.Controls.Add(this.bracketTeam13L);
+            this.tabPage1.Controls.Add(this.bracketTeam13W);
+            this.tabPage1.Controls.Add(this.bracketTeam12ML);
+            this.tabPage1.Controls.Add(this.bracketTeam12MW);
+            this.tabPage1.Controls.Add(this.bracketTeam12L);
+            this.tabPage1.Controls.Add(this.bracketTeam12W);
+            this.tabPage1.Controls.Add(this.bracketTeam11ML);
+            this.tabPage1.Controls.Add(this.bracketTeam11MW);
+            this.tabPage1.Controls.Add(this.bracketTeam11L);
+            this.tabPage1.Controls.Add(this.bracketTeam11W);
+            this.tabPage1.Controls.Add(this.bracketTeam10ML);
+            this.tabPage1.Controls.Add(this.bracketTeam10MW);
+            this.tabPage1.Controls.Add(this.bracketTeam10L);
+            this.tabPage1.Controls.Add(this.bracketTeam10W);
+            this.tabPage1.Controls.Add(this.bracketTeam9ML);
+            this.tabPage1.Controls.Add(this.bracketTeam9MW);
+            this.tabPage1.Controls.Add(this.bracketTeam9L);
+            this.tabPage1.Controls.Add(this.bracketTeam9W);
+            this.tabPage1.Controls.Add(this.bracketTeam8ML);
+            this.tabPage1.Controls.Add(this.bracketTeam8MW);
+            this.tabPage1.Controls.Add(this.bracketTeam8L);
+            this.tabPage1.Controls.Add(this.bracketTeam8W);
+            this.tabPage1.Controls.Add(this.bracketTeam7ML);
+            this.tabPage1.Controls.Add(this.bracketTeam7MW);
+            this.tabPage1.Controls.Add(this.bracketTeam7L);
+            this.tabPage1.Controls.Add(this.bracketTeam7W);
+            this.tabPage1.Controls.Add(this.bracketTeam6ML);
+            this.tabPage1.Controls.Add(this.bracketTeam6MW);
+            this.tabPage1.Controls.Add(this.bracketTeam6L);
+            this.tabPage1.Controls.Add(this.bracketTeam6W);
+            this.tabPage1.Controls.Add(this.bracketTeam5ML);
+            this.tabPage1.Controls.Add(this.bracketTeam5MW);
+            this.tabPage1.Controls.Add(this.bracketTeam5L);
+            this.tabPage1.Controls.Add(this.bracketTeam5W);
+            this.tabPage1.Controls.Add(this.bracketTeam4ML);
+            this.tabPage1.Controls.Add(this.bracketTeam4MW);
+            this.tabPage1.Controls.Add(this.bracketTeam4L);
+            this.tabPage1.Controls.Add(this.bracketTeam4W);
+            this.tabPage1.Controls.Add(this.bracketTeam3ML);
+            this.tabPage1.Controls.Add(this.bracketTeam3MW);
+            this.tabPage1.Controls.Add(this.bracketTeam3L);
+            this.tabPage1.Controls.Add(this.bracketTeam3W);
+            this.tabPage1.Controls.Add(this.bracketTeam2ML);
+            this.tabPage1.Controls.Add(this.bracketTeam2MW);
+            this.tabPage1.Controls.Add(this.bracketTeam2L);
+            this.tabPage1.Controls.Add(this.bracketTeam2W);
+            this.tabPage1.Controls.Add(this.bracketTeam1ML);
+            this.tabPage1.Controls.Add(this.bracketTeam1MW);
+            this.tabPage1.Controls.Add(this.bracketTeam1L);
+            this.tabPage1.Controls.Add(this.bracketTeam1W);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.bracketImage9);
             this.tabPage1.Controls.Add(this.bracketImage10);
@@ -4758,6 +5342,516 @@ namespace OW_Scoreboard_Tool
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Bracket";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // bracketTeam16ML
+            // 
+            this.bracketTeam16ML.Location = new System.Drawing.Point(222, 384);
+            this.bracketTeam16ML.Name = "bracketTeam16ML";
+            this.bracketTeam16ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam16ML.TabIndex = 269;
+            this.bracketTeam16ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam16MW
+            // 
+            this.bracketTeam16MW.Location = new System.Drawing.Point(192, 384);
+            this.bracketTeam16MW.Name = "bracketTeam16MW";
+            this.bracketTeam16MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam16MW.TabIndex = 268;
+            this.bracketTeam16MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam16L
+            // 
+            this.bracketTeam16L.Location = new System.Drawing.Point(162, 384);
+            this.bracketTeam16L.Name = "bracketTeam16L";
+            this.bracketTeam16L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam16L.TabIndex = 267;
+            this.bracketTeam16L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam16W
+            // 
+            this.bracketTeam16W.Location = new System.Drawing.Point(132, 384);
+            this.bracketTeam16W.Name = "bracketTeam16W";
+            this.bracketTeam16W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam16W.TabIndex = 266;
+            this.bracketTeam16W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam15ML
+            // 
+            this.bracketTeam15ML.Location = new System.Drawing.Point(222, 359);
+            this.bracketTeam15ML.Name = "bracketTeam15ML";
+            this.bracketTeam15ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam15ML.TabIndex = 265;
+            this.bracketTeam15ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam15MW
+            // 
+            this.bracketTeam15MW.Location = new System.Drawing.Point(192, 359);
+            this.bracketTeam15MW.Name = "bracketTeam15MW";
+            this.bracketTeam15MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam15MW.TabIndex = 264;
+            this.bracketTeam15MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam15L
+            // 
+            this.bracketTeam15L.Location = new System.Drawing.Point(162, 359);
+            this.bracketTeam15L.Name = "bracketTeam15L";
+            this.bracketTeam15L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam15L.TabIndex = 263;
+            this.bracketTeam15L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam15W
+            // 
+            this.bracketTeam15W.Location = new System.Drawing.Point(132, 359);
+            this.bracketTeam15W.Name = "bracketTeam15W";
+            this.bracketTeam15W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam15W.TabIndex = 262;
+            this.bracketTeam15W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam14ML
+            // 
+            this.bracketTeam14ML.Location = new System.Drawing.Point(222, 334);
+            this.bracketTeam14ML.Name = "bracketTeam14ML";
+            this.bracketTeam14ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam14ML.TabIndex = 261;
+            this.bracketTeam14ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam14MW
+            // 
+            this.bracketTeam14MW.Location = new System.Drawing.Point(192, 334);
+            this.bracketTeam14MW.Name = "bracketTeam14MW";
+            this.bracketTeam14MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam14MW.TabIndex = 260;
+            this.bracketTeam14MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam14L
+            // 
+            this.bracketTeam14L.Location = new System.Drawing.Point(162, 334);
+            this.bracketTeam14L.Name = "bracketTeam14L";
+            this.bracketTeam14L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam14L.TabIndex = 259;
+            this.bracketTeam14L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam14W
+            // 
+            this.bracketTeam14W.Location = new System.Drawing.Point(132, 334);
+            this.bracketTeam14W.Name = "bracketTeam14W";
+            this.bracketTeam14W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam14W.TabIndex = 258;
+            this.bracketTeam14W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam13ML
+            // 
+            this.bracketTeam13ML.Location = new System.Drawing.Point(222, 309);
+            this.bracketTeam13ML.Name = "bracketTeam13ML";
+            this.bracketTeam13ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam13ML.TabIndex = 257;
+            this.bracketTeam13ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam13MW
+            // 
+            this.bracketTeam13MW.Location = new System.Drawing.Point(192, 309);
+            this.bracketTeam13MW.Name = "bracketTeam13MW";
+            this.bracketTeam13MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam13MW.TabIndex = 256;
+            this.bracketTeam13MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam13L
+            // 
+            this.bracketTeam13L.Location = new System.Drawing.Point(162, 309);
+            this.bracketTeam13L.Name = "bracketTeam13L";
+            this.bracketTeam13L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam13L.TabIndex = 255;
+            this.bracketTeam13L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam13W
+            // 
+            this.bracketTeam13W.Location = new System.Drawing.Point(132, 309);
+            this.bracketTeam13W.Name = "bracketTeam13W";
+            this.bracketTeam13W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam13W.TabIndex = 254;
+            this.bracketTeam13W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam12ML
+            // 
+            this.bracketTeam12ML.Location = new System.Drawing.Point(222, 284);
+            this.bracketTeam12ML.Name = "bracketTeam12ML";
+            this.bracketTeam12ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam12ML.TabIndex = 253;
+            this.bracketTeam12ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam12MW
+            // 
+            this.bracketTeam12MW.Location = new System.Drawing.Point(192, 284);
+            this.bracketTeam12MW.Name = "bracketTeam12MW";
+            this.bracketTeam12MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam12MW.TabIndex = 252;
+            this.bracketTeam12MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam12L
+            // 
+            this.bracketTeam12L.Location = new System.Drawing.Point(162, 284);
+            this.bracketTeam12L.Name = "bracketTeam12L";
+            this.bracketTeam12L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam12L.TabIndex = 251;
+            this.bracketTeam12L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam12W
+            // 
+            this.bracketTeam12W.Location = new System.Drawing.Point(132, 284);
+            this.bracketTeam12W.Name = "bracketTeam12W";
+            this.bracketTeam12W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam12W.TabIndex = 250;
+            this.bracketTeam12W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam11ML
+            // 
+            this.bracketTeam11ML.Location = new System.Drawing.Point(222, 259);
+            this.bracketTeam11ML.Name = "bracketTeam11ML";
+            this.bracketTeam11ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam11ML.TabIndex = 249;
+            this.bracketTeam11ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam11MW
+            // 
+            this.bracketTeam11MW.Location = new System.Drawing.Point(192, 259);
+            this.bracketTeam11MW.Name = "bracketTeam11MW";
+            this.bracketTeam11MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam11MW.TabIndex = 248;
+            this.bracketTeam11MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam11L
+            // 
+            this.bracketTeam11L.Location = new System.Drawing.Point(162, 259);
+            this.bracketTeam11L.Name = "bracketTeam11L";
+            this.bracketTeam11L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam11L.TabIndex = 247;
+            // 
+            // bracketTeam11W
+            // 
+            this.bracketTeam11W.Location = new System.Drawing.Point(132, 259);
+            this.bracketTeam11W.Name = "bracketTeam11W";
+            this.bracketTeam11W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam11W.TabIndex = 246;
+            this.bracketTeam11W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam10ML
+            // 
+            this.bracketTeam10ML.Location = new System.Drawing.Point(222, 234);
+            this.bracketTeam10ML.Name = "bracketTeam10ML";
+            this.bracketTeam10ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam10ML.TabIndex = 245;
+            // 
+            // bracketTeam10MW
+            // 
+            this.bracketTeam10MW.Location = new System.Drawing.Point(192, 234);
+            this.bracketTeam10MW.Name = "bracketTeam10MW";
+            this.bracketTeam10MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam10MW.TabIndex = 244;
+            this.bracketTeam10MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam10L
+            // 
+            this.bracketTeam10L.Location = new System.Drawing.Point(162, 234);
+            this.bracketTeam10L.Name = "bracketTeam10L";
+            this.bracketTeam10L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam10L.TabIndex = 243;
+            this.bracketTeam10L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam10W
+            // 
+            this.bracketTeam10W.Location = new System.Drawing.Point(132, 234);
+            this.bracketTeam10W.Name = "bracketTeam10W";
+            this.bracketTeam10W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam10W.TabIndex = 242;
+            this.bracketTeam10W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam9ML
+            // 
+            this.bracketTeam9ML.Location = new System.Drawing.Point(222, 209);
+            this.bracketTeam9ML.Name = "bracketTeam9ML";
+            this.bracketTeam9ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam9ML.TabIndex = 241;
+            this.bracketTeam9ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam9MW
+            // 
+            this.bracketTeam9MW.Location = new System.Drawing.Point(192, 209);
+            this.bracketTeam9MW.Name = "bracketTeam9MW";
+            this.bracketTeam9MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam9MW.TabIndex = 240;
+            this.bracketTeam9MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam9L
+            // 
+            this.bracketTeam9L.Location = new System.Drawing.Point(162, 209);
+            this.bracketTeam9L.Name = "bracketTeam9L";
+            this.bracketTeam9L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam9L.TabIndex = 239;
+            this.bracketTeam9L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam9W
+            // 
+            this.bracketTeam9W.Location = new System.Drawing.Point(132, 209);
+            this.bracketTeam9W.Name = "bracketTeam9W";
+            this.bracketTeam9W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam9W.TabIndex = 238;
+            this.bracketTeam9W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam8ML
+            // 
+            this.bracketTeam8ML.Location = new System.Drawing.Point(222, 184);
+            this.bracketTeam8ML.Name = "bracketTeam8ML";
+            this.bracketTeam8ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam8ML.TabIndex = 237;
+            this.bracketTeam8ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam8MW
+            // 
+            this.bracketTeam8MW.Location = new System.Drawing.Point(192, 184);
+            this.bracketTeam8MW.Name = "bracketTeam8MW";
+            this.bracketTeam8MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam8MW.TabIndex = 236;
+            this.bracketTeam8MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam8L
+            // 
+            this.bracketTeam8L.Location = new System.Drawing.Point(162, 184);
+            this.bracketTeam8L.Name = "bracketTeam8L";
+            this.bracketTeam8L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam8L.TabIndex = 235;
+            this.bracketTeam8L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam8W
+            // 
+            this.bracketTeam8W.Location = new System.Drawing.Point(132, 184);
+            this.bracketTeam8W.Name = "bracketTeam8W";
+            this.bracketTeam8W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam8W.TabIndex = 234;
+            this.bracketTeam8W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam7ML
+            // 
+            this.bracketTeam7ML.Location = new System.Drawing.Point(222, 159);
+            this.bracketTeam7ML.Name = "bracketTeam7ML";
+            this.bracketTeam7ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam7ML.TabIndex = 233;
+            this.bracketTeam7ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam7MW
+            // 
+            this.bracketTeam7MW.Location = new System.Drawing.Point(192, 159);
+            this.bracketTeam7MW.Name = "bracketTeam7MW";
+            this.bracketTeam7MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam7MW.TabIndex = 232;
+            this.bracketTeam7MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam7L
+            // 
+            this.bracketTeam7L.Location = new System.Drawing.Point(162, 159);
+            this.bracketTeam7L.Name = "bracketTeam7L";
+            this.bracketTeam7L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam7L.TabIndex = 231;
+            this.bracketTeam7L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam7W
+            // 
+            this.bracketTeam7W.Location = new System.Drawing.Point(132, 159);
+            this.bracketTeam7W.Name = "bracketTeam7W";
+            this.bracketTeam7W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam7W.TabIndex = 230;
+            this.bracketTeam7W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam6ML
+            // 
+            this.bracketTeam6ML.Location = new System.Drawing.Point(222, 134);
+            this.bracketTeam6ML.Name = "bracketTeam6ML";
+            this.bracketTeam6ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam6ML.TabIndex = 229;
+            this.bracketTeam6ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam6MW
+            // 
+            this.bracketTeam6MW.Location = new System.Drawing.Point(192, 134);
+            this.bracketTeam6MW.Name = "bracketTeam6MW";
+            this.bracketTeam6MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam6MW.TabIndex = 228;
+            this.bracketTeam6MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam6L
+            // 
+            this.bracketTeam6L.Location = new System.Drawing.Point(162, 134);
+            this.bracketTeam6L.Name = "bracketTeam6L";
+            this.bracketTeam6L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam6L.TabIndex = 227;
+            this.bracketTeam6L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam6W
+            // 
+            this.bracketTeam6W.Location = new System.Drawing.Point(132, 134);
+            this.bracketTeam6W.Name = "bracketTeam6W";
+            this.bracketTeam6W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam6W.TabIndex = 226;
+            this.bracketTeam6W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam5ML
+            // 
+            this.bracketTeam5ML.Location = new System.Drawing.Point(222, 109);
+            this.bracketTeam5ML.Name = "bracketTeam5ML";
+            this.bracketTeam5ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam5ML.TabIndex = 225;
+            this.bracketTeam5ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam5MW
+            // 
+            this.bracketTeam5MW.Location = new System.Drawing.Point(192, 109);
+            this.bracketTeam5MW.Name = "bracketTeam5MW";
+            this.bracketTeam5MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam5MW.TabIndex = 224;
+            this.bracketTeam5MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam5L
+            // 
+            this.bracketTeam5L.Location = new System.Drawing.Point(162, 109);
+            this.bracketTeam5L.Name = "bracketTeam5L";
+            this.bracketTeam5L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam5L.TabIndex = 223;
+            this.bracketTeam5L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam5W
+            // 
+            this.bracketTeam5W.Location = new System.Drawing.Point(132, 109);
+            this.bracketTeam5W.Name = "bracketTeam5W";
+            this.bracketTeam5W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam5W.TabIndex = 222;
+            this.bracketTeam5W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam4ML
+            // 
+            this.bracketTeam4ML.Location = new System.Drawing.Point(222, 84);
+            this.bracketTeam4ML.Name = "bracketTeam4ML";
+            this.bracketTeam4ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam4ML.TabIndex = 221;
+            this.bracketTeam4ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam4MW
+            // 
+            this.bracketTeam4MW.Location = new System.Drawing.Point(192, 84);
+            this.bracketTeam4MW.Name = "bracketTeam4MW";
+            this.bracketTeam4MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam4MW.TabIndex = 220;
+            this.bracketTeam4MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam4L
+            // 
+            this.bracketTeam4L.Location = new System.Drawing.Point(162, 84);
+            this.bracketTeam4L.Name = "bracketTeam4L";
+            this.bracketTeam4L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam4L.TabIndex = 219;
+            this.bracketTeam4L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam4W
+            // 
+            this.bracketTeam4W.Location = new System.Drawing.Point(132, 84);
+            this.bracketTeam4W.Name = "bracketTeam4W";
+            this.bracketTeam4W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam4W.TabIndex = 218;
+            this.bracketTeam4W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam3ML
+            // 
+            this.bracketTeam3ML.Location = new System.Drawing.Point(222, 59);
+            this.bracketTeam3ML.Name = "bracketTeam3ML";
+            this.bracketTeam3ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam3ML.TabIndex = 217;
+            this.bracketTeam3ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam3MW
+            // 
+            this.bracketTeam3MW.Location = new System.Drawing.Point(192, 59);
+            this.bracketTeam3MW.Name = "bracketTeam3MW";
+            this.bracketTeam3MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam3MW.TabIndex = 216;
+            this.bracketTeam3MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam3L
+            // 
+            this.bracketTeam3L.Location = new System.Drawing.Point(162, 59);
+            this.bracketTeam3L.Name = "bracketTeam3L";
+            this.bracketTeam3L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam3L.TabIndex = 215;
+            this.bracketTeam3L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam3W
+            // 
+            this.bracketTeam3W.Location = new System.Drawing.Point(132, 59);
+            this.bracketTeam3W.Name = "bracketTeam3W";
+            this.bracketTeam3W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam3W.TabIndex = 214;
+            this.bracketTeam3W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam2ML
+            // 
+            this.bracketTeam2ML.Location = new System.Drawing.Point(222, 34);
+            this.bracketTeam2ML.Name = "bracketTeam2ML";
+            this.bracketTeam2ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam2ML.TabIndex = 213;
+            this.bracketTeam2ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam2MW
+            // 
+            this.bracketTeam2MW.Location = new System.Drawing.Point(192, 34);
+            this.bracketTeam2MW.Name = "bracketTeam2MW";
+            this.bracketTeam2MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam2MW.TabIndex = 212;
+            this.bracketTeam2MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam2L
+            // 
+            this.bracketTeam2L.Location = new System.Drawing.Point(162, 34);
+            this.bracketTeam2L.Name = "bracketTeam2L";
+            this.bracketTeam2L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam2L.TabIndex = 211;
+            this.bracketTeam2L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam2W
+            // 
+            this.bracketTeam2W.Location = new System.Drawing.Point(132, 34);
+            this.bracketTeam2W.Name = "bracketTeam2W";
+            this.bracketTeam2W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam2W.TabIndex = 210;
+            this.bracketTeam2W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam1ML
+            // 
+            this.bracketTeam1ML.Location = new System.Drawing.Point(222, 9);
+            this.bracketTeam1ML.Name = "bracketTeam1ML";
+            this.bracketTeam1ML.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam1ML.TabIndex = 209;
+            this.bracketTeam1ML.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam1MW
+            // 
+            this.bracketTeam1MW.Location = new System.Drawing.Point(192, 9);
+            this.bracketTeam1MW.Name = "bracketTeam1MW";
+            this.bracketTeam1MW.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam1MW.TabIndex = 208;
+            this.bracketTeam1MW.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam1L
+            // 
+            this.bracketTeam1L.Location = new System.Drawing.Point(162, 9);
+            this.bracketTeam1L.Name = "bracketTeam1L";
+            this.bracketTeam1L.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam1L.TabIndex = 207;
+            this.bracketTeam1L.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
+            // 
+            // bracketTeam1W
+            // 
+            this.bracketTeam1W.Location = new System.Drawing.Point(132, 9);
+            this.bracketTeam1W.Name = "bracketTeam1W";
+            this.bracketTeam1W.Size = new System.Drawing.Size(29, 20);
+            this.bracketTeam1W.TabIndex = 206;
+            this.bracketTeam1W.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.preventMouseWheel);
             // 
             // panel1
             // 
@@ -4907,14 +6001,14 @@ namespace OW_Scoreboard_Tool
             this.panel1.Controls.Add(this.bracketR1M2Team1);
             this.panel1.Controls.Add(this.bracketR1M1Team2);
             this.panel1.Controls.Add(this.bracketR1M1Team1);
-            this.panel1.Location = new System.Drawing.Point(145, 3);
+            this.panel1.Location = new System.Drawing.Point(257, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(785, 404);
+            this.panel1.Size = new System.Drawing.Size(673, 404);
             this.panel1.TabIndex = 32;
             // 
             // bracketUpdate
             // 
-            this.bracketUpdate.Location = new System.Drawing.Point(681, 44);
+            this.bracketUpdate.Location = new System.Drawing.Point(536, 33);
             this.bracketUpdate.Name = "bracketUpdate";
             this.bracketUpdate.Size = new System.Drawing.Size(75, 38);
             this.bracketUpdate.TabIndex = 205;
@@ -4924,7 +6018,7 @@ namespace OW_Scoreboard_Tool
             // 
             // bracketReset
             // 
-            this.bracketReset.Location = new System.Drawing.Point(600, 44);
+            this.bracketReset.Location = new System.Drawing.Point(455, 33);
             this.bracketReset.Name = "bracketReset";
             this.bracketReset.Size = new System.Drawing.Size(75, 38);
             this.bracketReset.TabIndex = 204;
@@ -4934,7 +6028,7 @@ namespace OW_Scoreboard_Tool
             // 
             // bracketTeamsUpdate
             // 
-            this.bracketTeamsUpdate.Location = new System.Drawing.Point(519, 44);
+            this.bracketTeamsUpdate.Location = new System.Drawing.Point(374, 33);
             this.bracketTeamsUpdate.Name = "bracketTeamsUpdate";
             this.bracketTeamsUpdate.Size = new System.Drawing.Size(75, 38);
             this.bracketTeamsUpdate.TabIndex = 203;
@@ -4944,7 +6038,7 @@ namespace OW_Scoreboard_Tool
             // 
             // bracketTeamsReset
             // 
-            this.bracketTeamsReset.Location = new System.Drawing.Point(438, 44);
+            this.bracketTeamsReset.Location = new System.Drawing.Point(293, 33);
             this.bracketTeamsReset.Name = "bracketTeamsReset";
             this.bracketTeamsReset.Size = new System.Drawing.Size(75, 38);
             this.bracketTeamsReset.TabIndex = 202;
@@ -6223,178 +7317,178 @@ namespace OW_Scoreboard_Tool
             // 
             // bracketImage9
             // 
-            this.bracketImage9.Location = new System.Drawing.Point(113, 204);
+            this.bracketImage9.Location = new System.Drawing.Point(107, 209);
             this.bracketImage9.Name = "bracketImage9";
             this.bracketImage9.Size = new System.Drawing.Size(25, 20);
             this.bracketImage9.TabIndex = 24;
             this.bracketImage9.Text = "...";
             this.bracketImage9.UseVisualStyleBackColor = true;
-            this.bracketImage9.Click += new System.EventHandler(this.bracketImage9_Click);
+            this.bracketImage9.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage9.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage10
             // 
-            this.bracketImage10.Location = new System.Drawing.Point(113, 229);
+            this.bracketImage10.Location = new System.Drawing.Point(107, 234);
             this.bracketImage10.Name = "bracketImage10";
             this.bracketImage10.Size = new System.Drawing.Size(25, 20);
             this.bracketImage10.TabIndex = 25;
             this.bracketImage10.Text = "...";
             this.bracketImage10.UseVisualStyleBackColor = true;
-            this.bracketImage10.Click += new System.EventHandler(this.bracketImage10_Click);
+            this.bracketImage10.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage10.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage11
             // 
-            this.bracketImage11.Location = new System.Drawing.Point(113, 254);
+            this.bracketImage11.Location = new System.Drawing.Point(107, 259);
             this.bracketImage11.Name = "bracketImage11";
             this.bracketImage11.Size = new System.Drawing.Size(25, 20);
             this.bracketImage11.TabIndex = 26;
             this.bracketImage11.Text = "...";
             this.bracketImage11.UseVisualStyleBackColor = true;
-            this.bracketImage11.Click += new System.EventHandler(this.bracketImage11_Click);
+            this.bracketImage11.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage11.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage12
             // 
-            this.bracketImage12.Location = new System.Drawing.Point(113, 280);
+            this.bracketImage12.Location = new System.Drawing.Point(107, 284);
             this.bracketImage12.Name = "bracketImage12";
             this.bracketImage12.Size = new System.Drawing.Size(25, 20);
             this.bracketImage12.TabIndex = 27;
             this.bracketImage12.Text = "...";
             this.bracketImage12.UseVisualStyleBackColor = true;
-            this.bracketImage12.Click += new System.EventHandler(this.bracketImage12_Click);
+            this.bracketImage12.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage12.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage13
             // 
-            this.bracketImage13.Location = new System.Drawing.Point(113, 307);
+            this.bracketImage13.Location = new System.Drawing.Point(107, 309);
             this.bracketImage13.Name = "bracketImage13";
             this.bracketImage13.Size = new System.Drawing.Size(25, 20);
             this.bracketImage13.TabIndex = 28;
             this.bracketImage13.Text = "...";
             this.bracketImage13.UseVisualStyleBackColor = true;
-            this.bracketImage13.Click += new System.EventHandler(this.bracketImage13_Click);
+            this.bracketImage13.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage13.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage14
             // 
-            this.bracketImage14.Location = new System.Drawing.Point(113, 332);
+            this.bracketImage14.Location = new System.Drawing.Point(107, 334);
             this.bracketImage14.Name = "bracketImage14";
             this.bracketImage14.Size = new System.Drawing.Size(25, 20);
             this.bracketImage14.TabIndex = 29;
             this.bracketImage14.Text = "...";
             this.bracketImage14.UseVisualStyleBackColor = true;
-            this.bracketImage14.Click += new System.EventHandler(this.bracketImage14_Click);
+            this.bracketImage14.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage14.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage15
             // 
-            this.bracketImage15.Location = new System.Drawing.Point(113, 358);
+            this.bracketImage15.Location = new System.Drawing.Point(107, 359);
             this.bracketImage15.Name = "bracketImage15";
             this.bracketImage15.Size = new System.Drawing.Size(25, 20);
             this.bracketImage15.TabIndex = 30;
             this.bracketImage15.Text = "...";
             this.bracketImage15.UseVisualStyleBackColor = true;
-            this.bracketImage15.Click += new System.EventHandler(this.bracketImage15_Click);
+            this.bracketImage15.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage15.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage16
             // 
-            this.bracketImage16.Location = new System.Drawing.Point(113, 384);
+            this.bracketImage16.Location = new System.Drawing.Point(107, 384);
             this.bracketImage16.Name = "bracketImage16";
             this.bracketImage16.Size = new System.Drawing.Size(25, 20);
             this.bracketImage16.TabIndex = 31;
             this.bracketImage16.Text = "...";
             this.bracketImage16.UseVisualStyleBackColor = true;
-            this.bracketImage16.Click += new System.EventHandler(this.bracketImage16_Click);
+            this.bracketImage16.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage16.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage8
             // 
-            this.bracketImage8.Location = new System.Drawing.Point(113, 179);
+            this.bracketImage8.Location = new System.Drawing.Point(107, 184);
             this.bracketImage8.Name = "bracketImage8";
             this.bracketImage8.Size = new System.Drawing.Size(25, 20);
             this.bracketImage8.TabIndex = 23;
             this.bracketImage8.Text = "...";
             this.bracketImage8.UseVisualStyleBackColor = true;
-            this.bracketImage8.Click += new System.EventHandler(this.bracketImage8_Click);
+            this.bracketImage8.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage8.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage7
             // 
-            this.bracketImage7.Location = new System.Drawing.Point(113, 154);
+            this.bracketImage7.Location = new System.Drawing.Point(107, 159);
             this.bracketImage7.Name = "bracketImage7";
             this.bracketImage7.Size = new System.Drawing.Size(25, 20);
             this.bracketImage7.TabIndex = 22;
             this.bracketImage7.Text = "...";
             this.bracketImage7.UseVisualStyleBackColor = true;
-            this.bracketImage7.Click += new System.EventHandler(this.bracketImage7_Click);
+            this.bracketImage7.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage7.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage6
             // 
-            this.bracketImage6.Location = new System.Drawing.Point(113, 129);
+            this.bracketImage6.Location = new System.Drawing.Point(107, 134);
             this.bracketImage6.Name = "bracketImage6";
             this.bracketImage6.Size = new System.Drawing.Size(25, 20);
             this.bracketImage6.TabIndex = 21;
             this.bracketImage6.Text = "...";
             this.bracketImage6.UseVisualStyleBackColor = true;
-            this.bracketImage6.Click += new System.EventHandler(this.bracketImage6_Click);
+            this.bracketImage6.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage6.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage5
             // 
-            this.bracketImage5.Location = new System.Drawing.Point(113, 104);
+            this.bracketImage5.Location = new System.Drawing.Point(107, 109);
             this.bracketImage5.Name = "bracketImage5";
             this.bracketImage5.Size = new System.Drawing.Size(25, 20);
             this.bracketImage5.TabIndex = 20;
             this.bracketImage5.Text = "...";
             this.bracketImage5.UseVisualStyleBackColor = true;
-            this.bracketImage5.Click += new System.EventHandler(this.bracketImage5_Click);
+            this.bracketImage5.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage5.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage4
             // 
-            this.bracketImage4.Location = new System.Drawing.Point(113, 79);
+            this.bracketImage4.Location = new System.Drawing.Point(107, 84);
             this.bracketImage4.Name = "bracketImage4";
             this.bracketImage4.Size = new System.Drawing.Size(25, 20);
             this.bracketImage4.TabIndex = 19;
             this.bracketImage4.Text = "...";
             this.bracketImage4.UseVisualStyleBackColor = true;
-            this.bracketImage4.Click += new System.EventHandler(this.bracketImage4_Click);
+            this.bracketImage4.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage4.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage3
             // 
-            this.bracketImage3.Location = new System.Drawing.Point(113, 54);
+            this.bracketImage3.Location = new System.Drawing.Point(107, 59);
             this.bracketImage3.Name = "bracketImage3";
             this.bracketImage3.Size = new System.Drawing.Size(25, 20);
             this.bracketImage3.TabIndex = 18;
             this.bracketImage3.Text = "...";
             this.bracketImage3.UseVisualStyleBackColor = true;
-            this.bracketImage3.Click += new System.EventHandler(this.bracketImage3_Click);
+            this.bracketImage3.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage3.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage2
             // 
-            this.bracketImage2.Location = new System.Drawing.Point(113, 29);
+            this.bracketImage2.Location = new System.Drawing.Point(107, 34);
             this.bracketImage2.Name = "bracketImage2";
             this.bracketImage2.Size = new System.Drawing.Size(25, 20);
             this.bracketImage2.TabIndex = 17;
             this.bracketImage2.Text = "...";
             this.bracketImage2.UseVisualStyleBackColor = true;
-            this.bracketImage2.Click += new System.EventHandler(this.bracketImage2_Click);
+            this.bracketImage2.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage2.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketImage1
             // 
-            this.bracketImage1.Location = new System.Drawing.Point(113, 4);
+            this.bracketImage1.Location = new System.Drawing.Point(107, 9);
             this.bracketImage1.Name = "bracketImage1";
             this.bracketImage1.Size = new System.Drawing.Size(25, 20);
             this.bracketImage1.TabIndex = 16;
             this.bracketImage1.Text = "...";
             this.bracketImage1.UseVisualStyleBackColor = true;
-            this.bracketImage1.Click += new System.EventHandler(this.bracketImage1_Click);
+            this.bracketImage1.Click += new System.EventHandler(this.GetImageForButton);
             this.bracketImage1.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // bracketTeam16
@@ -6406,105 +7500,105 @@ namespace OW_Scoreboard_Tool
             // 
             // bracketTeam15
             // 
-            this.bracketTeam15.Location = new System.Drawing.Point(7, 358);
+            this.bracketTeam15.Location = new System.Drawing.Point(7, 359);
             this.bracketTeam15.Name = "bracketTeam15";
             this.bracketTeam15.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam15.TabIndex = 14;
             // 
             // bracketTeam14
             // 
-            this.bracketTeam14.Location = new System.Drawing.Point(7, 332);
+            this.bracketTeam14.Location = new System.Drawing.Point(7, 334);
             this.bracketTeam14.Name = "bracketTeam14";
             this.bracketTeam14.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam14.TabIndex = 13;
             // 
             // bracketTeam13
             // 
-            this.bracketTeam13.Location = new System.Drawing.Point(7, 307);
+            this.bracketTeam13.Location = new System.Drawing.Point(7, 309);
             this.bracketTeam13.Name = "bracketTeam13";
             this.bracketTeam13.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam13.TabIndex = 12;
             // 
             // bracketTeam12
             // 
-            this.bracketTeam12.Location = new System.Drawing.Point(7, 280);
+            this.bracketTeam12.Location = new System.Drawing.Point(7, 284);
             this.bracketTeam12.Name = "bracketTeam12";
             this.bracketTeam12.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam12.TabIndex = 11;
             // 
             // bracketTeam11
             // 
-            this.bracketTeam11.Location = new System.Drawing.Point(7, 254);
+            this.bracketTeam11.Location = new System.Drawing.Point(7, 259);
             this.bracketTeam11.Name = "bracketTeam11";
             this.bracketTeam11.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam11.TabIndex = 10;
             // 
             // bracketTeam10
             // 
-            this.bracketTeam10.Location = new System.Drawing.Point(7, 229);
+            this.bracketTeam10.Location = new System.Drawing.Point(7, 234);
             this.bracketTeam10.Name = "bracketTeam10";
             this.bracketTeam10.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam10.TabIndex = 9;
             // 
             // bracketTeam9
             // 
-            this.bracketTeam9.Location = new System.Drawing.Point(7, 204);
+            this.bracketTeam9.Location = new System.Drawing.Point(7, 209);
             this.bracketTeam9.Name = "bracketTeam9";
             this.bracketTeam9.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam9.TabIndex = 8;
             // 
             // bracketTeam8
             // 
-            this.bracketTeam8.Location = new System.Drawing.Point(7, 179);
+            this.bracketTeam8.Location = new System.Drawing.Point(7, 184);
             this.bracketTeam8.Name = "bracketTeam8";
             this.bracketTeam8.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam8.TabIndex = 7;
             // 
             // bracketTeam7
             // 
-            this.bracketTeam7.Location = new System.Drawing.Point(7, 154);
+            this.bracketTeam7.Location = new System.Drawing.Point(7, 159);
             this.bracketTeam7.Name = "bracketTeam7";
             this.bracketTeam7.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam7.TabIndex = 6;
             // 
             // bracketTeam6
             // 
-            this.bracketTeam6.Location = new System.Drawing.Point(7, 129);
+            this.bracketTeam6.Location = new System.Drawing.Point(7, 134);
             this.bracketTeam6.Name = "bracketTeam6";
             this.bracketTeam6.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam6.TabIndex = 5;
             // 
             // bracketTeam5
             // 
-            this.bracketTeam5.Location = new System.Drawing.Point(7, 104);
+            this.bracketTeam5.Location = new System.Drawing.Point(7, 109);
             this.bracketTeam5.Name = "bracketTeam5";
             this.bracketTeam5.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam5.TabIndex = 4;
             // 
             // bracketTeam4
             // 
-            this.bracketTeam4.Location = new System.Drawing.Point(7, 79);
+            this.bracketTeam4.Location = new System.Drawing.Point(7, 84);
             this.bracketTeam4.Name = "bracketTeam4";
             this.bracketTeam4.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam4.TabIndex = 3;
             // 
             // bracketTeam3
             // 
-            this.bracketTeam3.Location = new System.Drawing.Point(7, 54);
+            this.bracketTeam3.Location = new System.Drawing.Point(7, 59);
             this.bracketTeam3.Name = "bracketTeam3";
             this.bracketTeam3.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam3.TabIndex = 2;
             // 
             // bracketTeam2
             // 
-            this.bracketTeam2.Location = new System.Drawing.Point(7, 29);
+            this.bracketTeam2.Location = new System.Drawing.Point(7, 34);
             this.bracketTeam2.Name = "bracketTeam2";
             this.bracketTeam2.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam2.TabIndex = 1;
             // 
             // bracketTeam1
             // 
-            this.bracketTeam1.Location = new System.Drawing.Point(7, 4);
+            this.bracketTeam1.Location = new System.Drawing.Point(7, 9);
             this.bracketTeam1.Name = "bracketTeam1";
             this.bracketTeam1.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam1.TabIndex = 0;
@@ -6528,398 +7622,6 @@ namespace OW_Scoreboard_Tool
             // colorThemeDialog3
             // 
             this.colorThemeDialog3.Color = System.Drawing.Color.Transparent;
-            // 
-            // utility22Label
-            // 
-            this.utility22Label.AutoSize = true;
-            this.utility22Label.Location = new System.Drawing.Point(202, 376);
-            this.utility22Label.Name = "utility22Label";
-            this.utility22Label.Size = new System.Drawing.Size(44, 13);
-            this.utility22Label.TabIndex = 185;
-            this.utility22Label.Text = "Utility22";
-            // 
-            // utility21Label
-            // 
-            this.utility21Label.AutoSize = true;
-            this.utility21Label.Location = new System.Drawing.Point(202, 350);
-            this.utility21Label.Name = "utility21Label";
-            this.utility21Label.Size = new System.Drawing.Size(44, 13);
-            this.utility21Label.TabIndex = 184;
-            this.utility21Label.Text = "Utility21";
-            // 
-            // utility20Label
-            // 
-            this.utility20Label.AutoSize = true;
-            this.utility20Label.Location = new System.Drawing.Point(202, 324);
-            this.utility20Label.Name = "utility20Label";
-            this.utility20Label.Size = new System.Drawing.Size(44, 13);
-            this.utility20Label.TabIndex = 183;
-            this.utility20Label.Text = "Utility20";
-            // 
-            // utility19Label
-            // 
-            this.utility19Label.AutoSize = true;
-            this.utility19Label.Location = new System.Drawing.Point(202, 298);
-            this.utility19Label.Name = "utility19Label";
-            this.utility19Label.Size = new System.Drawing.Size(44, 13);
-            this.utility19Label.TabIndex = 182;
-            this.utility19Label.Text = "Utility19";
-            // 
-            // utility18Label
-            // 
-            this.utility18Label.AutoSize = true;
-            this.utility18Label.Location = new System.Drawing.Point(202, 272);
-            this.utility18Label.Name = "utility18Label";
-            this.utility18Label.Size = new System.Drawing.Size(44, 13);
-            this.utility18Label.TabIndex = 181;
-            this.utility18Label.Text = "Utility18";
-            // 
-            // utility17Label
-            // 
-            this.utility17Label.AutoSize = true;
-            this.utility17Label.Location = new System.Drawing.Point(202, 246);
-            this.utility17Label.Name = "utility17Label";
-            this.utility17Label.Size = new System.Drawing.Size(44, 13);
-            this.utility17Label.TabIndex = 180;
-            this.utility17Label.Text = "Utility17";
-            // 
-            // utility16Label
-            // 
-            this.utility16Label.AutoSize = true;
-            this.utility16Label.Location = new System.Drawing.Point(202, 220);
-            this.utility16Label.Name = "utility16Label";
-            this.utility16Label.Size = new System.Drawing.Size(44, 13);
-            this.utility16Label.TabIndex = 179;
-            this.utility16Label.Text = "Utility16";
-            // 
-            // utility15Label
-            // 
-            this.utility15Label.AutoSize = true;
-            this.utility15Label.Location = new System.Drawing.Point(202, 194);
-            this.utility15Label.Name = "utility15Label";
-            this.utility15Label.Size = new System.Drawing.Size(44, 13);
-            this.utility15Label.TabIndex = 178;
-            this.utility15Label.Text = "Utility15";
-            // 
-            // utility14Label
-            // 
-            this.utility14Label.AutoSize = true;
-            this.utility14Label.Location = new System.Drawing.Point(202, 168);
-            this.utility14Label.Name = "utility14Label";
-            this.utility14Label.Size = new System.Drawing.Size(44, 13);
-            this.utility14Label.TabIndex = 177;
-            this.utility14Label.Text = "Utility14";
-            // 
-            // utility13Label
-            // 
-            this.utility13Label.AutoSize = true;
-            this.utility13Label.Location = new System.Drawing.Point(202, 142);
-            this.utility13Label.Name = "utility13Label";
-            this.utility13Label.Size = new System.Drawing.Size(44, 13);
-            this.utility13Label.TabIndex = 176;
-            this.utility13Label.Text = "Utility13";
-            // 
-            // utility12Label
-            // 
-            this.utility12Label.AutoSize = true;
-            this.utility12Label.Location = new System.Drawing.Point(202, 116);
-            this.utility12Label.Name = "utility12Label";
-            this.utility12Label.Size = new System.Drawing.Size(44, 13);
-            this.utility12Label.TabIndex = 175;
-            this.utility12Label.Text = "Utility12";
-            // 
-            // utility11Label
-            // 
-            this.utility11Label.AutoSize = true;
-            this.utility11Label.Location = new System.Drawing.Point(202, 90);
-            this.utility11Label.Name = "utility11Label";
-            this.utility11Label.Size = new System.Drawing.Size(44, 13);
-            this.utility11Label.TabIndex = 174;
-            this.utility11Label.Text = "Utility11";
-            // 
-            // utility10Label
-            // 
-            this.utility10Label.AutoSize = true;
-            this.utility10Label.Location = new System.Drawing.Point(202, 64);
-            this.utility10Label.Name = "utility10Label";
-            this.utility10Label.Size = new System.Drawing.Size(44, 13);
-            this.utility10Label.TabIndex = 173;
-            this.utility10Label.Text = "Utility10";
-            // 
-            // utility9Label
-            // 
-            this.utility9Label.AutoSize = true;
-            this.utility9Label.Location = new System.Drawing.Point(202, 38);
-            this.utility9Label.Name = "utility9Label";
-            this.utility9Label.Size = new System.Drawing.Size(38, 13);
-            this.utility9Label.TabIndex = 172;
-            this.utility9Label.Text = "Utility9";
-            // 
-            // imageLabel28
-            // 
-            this.imageLabel28.AutoSize = true;
-            this.imageLabel28.Location = new System.Drawing.Point(474, 375);
-            this.imageLabel28.Name = "imageLabel28";
-            this.imageLabel28.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel28.TabIndex = 213;
-            this.imageLabel28.Text = "Image28";
-            // 
-            // imageLabel27
-            // 
-            this.imageLabel27.AutoSize = true;
-            this.imageLabel27.Location = new System.Drawing.Point(474, 349);
-            this.imageLabel27.Name = "imageLabel27";
-            this.imageLabel27.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel27.TabIndex = 212;
-            this.imageLabel27.Text = "Image27";
-            // 
-            // imageLabel26
-            // 
-            this.imageLabel26.AutoSize = true;
-            this.imageLabel26.Location = new System.Drawing.Point(474, 323);
-            this.imageLabel26.Name = "imageLabel26";
-            this.imageLabel26.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel26.TabIndex = 211;
-            this.imageLabel26.Text = "Image26";
-            // 
-            // imageLabel25
-            // 
-            this.imageLabel25.AutoSize = true;
-            this.imageLabel25.Location = new System.Drawing.Point(474, 297);
-            this.imageLabel25.Name = "imageLabel25";
-            this.imageLabel25.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel25.TabIndex = 210;
-            this.imageLabel25.Text = "Image25";
-            // 
-            // imageLabel24
-            // 
-            this.imageLabel24.AutoSize = true;
-            this.imageLabel24.Location = new System.Drawing.Point(474, 271);
-            this.imageLabel24.Name = "imageLabel24";
-            this.imageLabel24.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel24.TabIndex = 209;
-            this.imageLabel24.Text = "Image24";
-            // 
-            // imageLabel23
-            // 
-            this.imageLabel23.AutoSize = true;
-            this.imageLabel23.Location = new System.Drawing.Point(474, 245);
-            this.imageLabel23.Name = "imageLabel23";
-            this.imageLabel23.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel23.TabIndex = 208;
-            this.imageLabel23.Text = "Image23";
-            // 
-            // imageLabel22
-            // 
-            this.imageLabel22.AutoSize = true;
-            this.imageLabel22.Location = new System.Drawing.Point(474, 219);
-            this.imageLabel22.Name = "imageLabel22";
-            this.imageLabel22.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel22.TabIndex = 207;
-            this.imageLabel22.Text = "Image22";
-            // 
-            // imageLabel21
-            // 
-            this.imageLabel21.AutoSize = true;
-            this.imageLabel21.Location = new System.Drawing.Point(474, 193);
-            this.imageLabel21.Name = "imageLabel21";
-            this.imageLabel21.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel21.TabIndex = 206;
-            this.imageLabel21.Text = "Image21";
-            // 
-            // imageLabel20
-            // 
-            this.imageLabel20.AutoSize = true;
-            this.imageLabel20.Location = new System.Drawing.Point(474, 167);
-            this.imageLabel20.Name = "imageLabel20";
-            this.imageLabel20.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel20.TabIndex = 205;
-            this.imageLabel20.Text = "Image20";
-            // 
-            // imageLabel19
-            // 
-            this.imageLabel19.AutoSize = true;
-            this.imageLabel19.Location = new System.Drawing.Point(474, 141);
-            this.imageLabel19.Name = "imageLabel19";
-            this.imageLabel19.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel19.TabIndex = 204;
-            this.imageLabel19.Text = "Image19";
-            // 
-            // imageLabel18
-            // 
-            this.imageLabel18.AutoSize = true;
-            this.imageLabel18.Location = new System.Drawing.Point(474, 115);
-            this.imageLabel18.Name = "imageLabel18";
-            this.imageLabel18.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel18.TabIndex = 203;
-            this.imageLabel18.Text = "Image18";
-            // 
-            // imageLabel17
-            // 
-            this.imageLabel17.AutoSize = true;
-            this.imageLabel17.Location = new System.Drawing.Point(474, 89);
-            this.imageLabel17.Name = "imageLabel17";
-            this.imageLabel17.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel17.TabIndex = 202;
-            this.imageLabel17.Text = "Image17";
-            // 
-            // imageLabel16
-            // 
-            this.imageLabel16.AutoSize = true;
-            this.imageLabel16.Location = new System.Drawing.Point(474, 63);
-            this.imageLabel16.Name = "imageLabel16";
-            this.imageLabel16.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel16.TabIndex = 201;
-            this.imageLabel16.Text = "Image16";
-            // 
-            // imageLabel15
-            // 
-            this.imageLabel15.AutoSize = true;
-            this.imageLabel15.Location = new System.Drawing.Point(474, 38);
-            this.imageLabel15.Name = "imageLabel15";
-            this.imageLabel15.Size = new System.Drawing.Size(48, 13);
-            this.imageLabel15.TabIndex = 200;
-            this.imageLabel15.Text = "Image15";
-            // 
-            // imageButton28
-            // 
-            this.imageButton28.Location = new System.Drawing.Point(522, 371);
-            this.imageButton28.Name = "imageButton28";
-            this.imageButton28.Size = new System.Drawing.Size(27, 23);
-            this.imageButton28.TabIndex = 199;
-            this.imageButton28.Text = "...";
-            this.imageButton28.UseVisualStyleBackColor = true;
-            this.imageButton28.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton27
-            // 
-            this.imageButton27.Location = new System.Drawing.Point(522, 345);
-            this.imageButton27.Name = "imageButton27";
-            this.imageButton27.Size = new System.Drawing.Size(27, 23);
-            this.imageButton27.TabIndex = 198;
-            this.imageButton27.Text = "...";
-            this.imageButton27.UseVisualStyleBackColor = true;
-            this.imageButton27.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton26
-            // 
-            this.imageButton26.Location = new System.Drawing.Point(522, 319);
-            this.imageButton26.Name = "imageButton26";
-            this.imageButton26.Size = new System.Drawing.Size(27, 23);
-            this.imageButton26.TabIndex = 197;
-            this.imageButton26.Text = "...";
-            this.imageButton26.UseVisualStyleBackColor = true;
-            this.imageButton26.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton25
-            // 
-            this.imageButton25.Location = new System.Drawing.Point(522, 293);
-            this.imageButton25.Name = "imageButton25";
-            this.imageButton25.Size = new System.Drawing.Size(27, 23);
-            this.imageButton25.TabIndex = 196;
-            this.imageButton25.Text = "...";
-            this.imageButton25.UseVisualStyleBackColor = true;
-            this.imageButton25.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton24
-            // 
-            this.imageButton24.Location = new System.Drawing.Point(522, 267);
-            this.imageButton24.Name = "imageButton24";
-            this.imageButton24.Size = new System.Drawing.Size(27, 23);
-            this.imageButton24.TabIndex = 195;
-            this.imageButton24.Text = "...";
-            this.imageButton24.UseVisualStyleBackColor = true;
-            this.imageButton24.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton23
-            // 
-            this.imageButton23.Location = new System.Drawing.Point(522, 241);
-            this.imageButton23.Name = "imageButton23";
-            this.imageButton23.Size = new System.Drawing.Size(27, 23);
-            this.imageButton23.TabIndex = 194;
-            this.imageButton23.Text = "...";
-            this.imageButton23.UseVisualStyleBackColor = true;
-            this.imageButton23.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton22
-            // 
-            this.imageButton22.Location = new System.Drawing.Point(522, 215);
-            this.imageButton22.Name = "imageButton22";
-            this.imageButton22.Size = new System.Drawing.Size(27, 23);
-            this.imageButton22.TabIndex = 193;
-            this.imageButton22.Text = "...";
-            this.imageButton22.UseVisualStyleBackColor = true;
-            this.imageButton22.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton21
-            // 
-            this.imageButton21.Location = new System.Drawing.Point(522, 189);
-            this.imageButton21.Name = "imageButton21";
-            this.imageButton21.Size = new System.Drawing.Size(27, 23);
-            this.imageButton21.TabIndex = 192;
-            this.imageButton21.Text = "...";
-            this.imageButton21.UseVisualStyleBackColor = true;
-            this.imageButton21.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton20
-            // 
-            this.imageButton20.Location = new System.Drawing.Point(522, 163);
-            this.imageButton20.Name = "imageButton20";
-            this.imageButton20.Size = new System.Drawing.Size(27, 23);
-            this.imageButton20.TabIndex = 191;
-            this.imageButton20.Text = "...";
-            this.imageButton20.UseVisualStyleBackColor = true;
-            this.imageButton20.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton19
-            // 
-            this.imageButton19.Location = new System.Drawing.Point(522, 137);
-            this.imageButton19.Name = "imageButton19";
-            this.imageButton19.Size = new System.Drawing.Size(27, 23);
-            this.imageButton19.TabIndex = 190;
-            this.imageButton19.Text = "...";
-            this.imageButton19.UseVisualStyleBackColor = true;
-            this.imageButton19.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton18
-            // 
-            this.imageButton18.Location = new System.Drawing.Point(522, 111);
-            this.imageButton18.Name = "imageButton18";
-            this.imageButton18.Size = new System.Drawing.Size(27, 23);
-            this.imageButton18.TabIndex = 189;
-            this.imageButton18.Text = "...";
-            this.imageButton18.UseVisualStyleBackColor = true;
-            this.imageButton18.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton17
-            // 
-            this.imageButton17.Location = new System.Drawing.Point(522, 85);
-            this.imageButton17.Name = "imageButton17";
-            this.imageButton17.Size = new System.Drawing.Size(27, 23);
-            this.imageButton17.TabIndex = 188;
-            this.imageButton17.Text = "...";
-            this.imageButton17.UseVisualStyleBackColor = true;
-            this.imageButton17.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton16
-            // 
-            this.imageButton16.Location = new System.Drawing.Point(522, 59);
-            this.imageButton16.Name = "imageButton16";
-            this.imageButton16.Size = new System.Drawing.Size(27, 23);
-            this.imageButton16.TabIndex = 187;
-            this.imageButton16.Text = "...";
-            this.imageButton16.UseVisualStyleBackColor = true;
-            this.imageButton16.Click += new System.EventHandler(this.GetImageForButton);
-            // 
-            // imageButton15
-            // 
-            this.imageButton15.Location = new System.Drawing.Point(522, 33);
-            this.imageButton15.Name = "imageButton15";
-            this.imageButton15.Size = new System.Drawing.Size(27, 23);
-            this.imageButton15.TabIndex = 186;
-            this.imageButton15.Text = "...";
-            this.imageButton15.UseVisualStyleBackColor = true;
-            this.imageButton15.Click += new System.EventHandler(this.GetImageForButton);
             // 
             // Form1
             // 
@@ -6973,6 +7675,70 @@ namespace OW_Scoreboard_Tool
             this.Replay_Manager.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam16ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam16MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam16L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam16W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam15ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam15MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam15L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam15W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam14ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam14MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam14L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam14W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam13ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam13MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam13L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam13W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam12ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam12MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam12L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam12W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam11ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam11MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam11L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam11W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam10ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam10MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam10L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam10W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam9ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam9MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam9L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam9W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam8ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam8MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam8L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam8W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam7ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam7MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam7L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam7W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam6ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam6MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam6L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam6W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam5ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam5MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam5L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam5W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam4ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam4MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam4L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam4W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam3ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam3MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam3L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam3W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam2ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam2MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam2L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam2W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam1ML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam1MW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam1L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketTeam1W)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bracketTPM1Score2)).EndInit();
@@ -7603,6 +8369,70 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.Label utility11Label;
         private System.Windows.Forms.Label utility10Label;
         private System.Windows.Forms.Label utility9Label;
+        private System.Windows.Forms.NumericUpDown bracketTeam16ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam16MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam16L;
+        private System.Windows.Forms.NumericUpDown bracketTeam16W;
+        private System.Windows.Forms.NumericUpDown bracketTeam15ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam15MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam15L;
+        private System.Windows.Forms.NumericUpDown bracketTeam15W;
+        private System.Windows.Forms.NumericUpDown bracketTeam14ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam14MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam14L;
+        private System.Windows.Forms.NumericUpDown bracketTeam14W;
+        private System.Windows.Forms.NumericUpDown bracketTeam13ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam13MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam13L;
+        private System.Windows.Forms.NumericUpDown bracketTeam13W;
+        private System.Windows.Forms.NumericUpDown bracketTeam12ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam12MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam12L;
+        private System.Windows.Forms.NumericUpDown bracketTeam12W;
+        private System.Windows.Forms.NumericUpDown bracketTeam11ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam11MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam11L;
+        private System.Windows.Forms.NumericUpDown bracketTeam11W;
+        private System.Windows.Forms.NumericUpDown bracketTeam10ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam10MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam10L;
+        private System.Windows.Forms.NumericUpDown bracketTeam10W;
+        private System.Windows.Forms.NumericUpDown bracketTeam9ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam9MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam9L;
+        private System.Windows.Forms.NumericUpDown bracketTeam9W;
+        private System.Windows.Forms.NumericUpDown bracketTeam8ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam8MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam8L;
+        private System.Windows.Forms.NumericUpDown bracketTeam8W;
+        private System.Windows.Forms.NumericUpDown bracketTeam7ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam7MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam7L;
+        private System.Windows.Forms.NumericUpDown bracketTeam7W;
+        private System.Windows.Forms.NumericUpDown bracketTeam6ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam6MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam6L;
+        private System.Windows.Forms.NumericUpDown bracketTeam6W;
+        private System.Windows.Forms.NumericUpDown bracketTeam5ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam5MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam5L;
+        private System.Windows.Forms.NumericUpDown bracketTeam5W;
+        private System.Windows.Forms.NumericUpDown bracketTeam4ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam4MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam4L;
+        private System.Windows.Forms.NumericUpDown bracketTeam4W;
+        private System.Windows.Forms.NumericUpDown bracketTeam3ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam3MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam3L;
+        private System.Windows.Forms.NumericUpDown bracketTeam3W;
+        private System.Windows.Forms.NumericUpDown bracketTeam2ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam2MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam2L;
+        private System.Windows.Forms.NumericUpDown bracketTeam2W;
+        private System.Windows.Forms.NumericUpDown bracketTeam1ML;
+        private System.Windows.Forms.NumericUpDown bracketTeam1MW;
+        private System.Windows.Forms.NumericUpDown bracketTeam1L;
+        private System.Windows.Forms.NumericUpDown bracketTeam1W;
     }
 }
 #endregion

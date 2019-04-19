@@ -3336,17 +3336,6 @@ namespace OW_Scoreboard_Tool
                 field.Text = open.FileName;
             }
         }
-        private void GetLogoForButton(Button field)
-        {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.png; )|*.png";
-            open.InitialDirectory = path + FolderList[8];
-            DialogResult res = open.ShowDialog();
-            if (res == DialogResult.OK)
-            {
-                field.AccessibleDescription = open.FileName;
-            }
-        }
 
         private void GetImageForButton(object sender, EventArgs e)
         {
@@ -3918,6 +3907,70 @@ namespace OW_Scoreboard_Tool
                 "bracketTeam14Path.txt",
                 "bracketTeam15Path.txt",
                 "bracketTeam16Path.txt",
+                "bracketTeam1W.txt",
+                "bracketTeam1L.txt",
+                "bracketTeam1MW.txt",
+                "bracketTeam1ML.txt",
+                "bracketTeam2W.txt",
+                "bracketTeam2L.txt",
+                "bracketTeam2MW.txt",
+                "bracketTeam2ML.txt",
+                "bracketTeam3W.txt",
+                "bracketTeam3L.txt",
+                "bracketTeam3MW.txt",
+                "bracketTeam3ML.txt",
+                "bracketTeam4W.txt",
+                "bracketTeam4L.txt",
+                "bracketTeam4MW.txt",
+                "bracketTeam4ML.txt",
+                "bracketTeam5W.txt",
+                "bracketTeam5L.txt",
+                "bracketTeam5MW.txt",
+                "bracketTeam5ML.txt",
+                "bracketTeam6W.txt",
+                "bracketTeam6L.txt",
+                "bracketTeam6MW.txt",
+                "bracketTeam6ML.txt",
+                "bracketTeam7W.txt",
+                "bracketTeam7L.txt",
+                "bracketTeam7MW.txt",
+                "bracketTeam7ML.txt",
+                "bracketTeam8W.txt",
+                "bracketTeam8L.txt",
+                "bracketTeam8MW.txt",
+                "bracketTeam8ML.txt",
+                "bracketTeam9W.txt",
+                "bracketTeam9L.txt",
+                "bracketTeam9MW.txt",
+                "bracketTeam9ML.txt",
+                "bracketTeam10W.txt",
+                "bracketTeam10L.txt",
+                "bracketTeam10MW.txt",
+                "bracketTeam10ML.txt",
+                "bracketTeam11W.txt",
+                "bracketTeam11L.txt",
+                "bracketTeam11MW.txt",
+                "bracketTeam11ML.txt",
+                "bracketTeam12W.txt",
+                "bracketTeam12L.txt",
+                "bracketTeam12MW.txt",
+                "bracketTeam12ML.txt",
+                "bracketTeam13W.txt",
+                "bracketTeam13L.txt",
+                "bracketTeam13MW.txt",
+                "bracketTeam13ML.txt",
+                "bracketTeam14W.txt",
+                "bracketTeam14L.txt",
+                "bracketTeam14MW.txt",
+                "bracketTeam14ML.txt",
+                "bracketTeam15W.txt",
+                "bracketTeam15L.txt",
+                "bracketTeam15MW.txt",
+                "bracketTeam15ML.txt",
+                "bracketTeam16W.txt",
+                "bracketTeam16L.txt",
+                "bracketTeam16MW.txt",
+                "bracketTeam16ML.txt"
             };
 
         }
@@ -4294,86 +4347,6 @@ namespace OW_Scoreboard_Tool
             GetLogoFile(m1t2p6Image);
         }
 
-        private void bracketImage1_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage1);
-        }
-
-        private void bracketImage2_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage2);
-        }
-
-        private void bracketImage3_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage3);
-        }
-
-        private void bracketImage4_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage4);
-        }
-
-        private void bracketImage5_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage5);
-        }
-
-        private void bracketImage6_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage6);
-        }
-
-        private void bracketImage7_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage7);
-        }
-
-        private void bracketImage8_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage8);
-        }
-
-        private void bracketImage9_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage9);
-        }
-
-        private void bracketImage10_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage10);
-        }
-
-        private void bracketImage11_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage11);
-        }
-
-        private void bracketImage12_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage12);
-        }
-
-        private void bracketImage13_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage13);
-        }
-
-        private void bracketImage14_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage14);
-        }
-
-        private void bracketImage15_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage15);
-        }
-
-        private void bracketImage16_Click(object sender, EventArgs e)
-        {
-            GetLogoForButton(bracketImage16);
-        }
-
         private void bracketTeamsReset_Click(object sender, EventArgs e)
         {
             resetText(bracketTeam1);
@@ -4409,6 +4382,71 @@ namespace OW_Scoreboard_Tool
             resetButton(bracketImage14);
             resetButton(bracketImage15);
             resetButton(bracketImage16);
+
+            resetScore(bracketTeam1W);
+            resetScore(bracketTeam1L);
+            resetScore(bracketTeam1MW);
+            resetScore(bracketTeam1ML);
+            resetScore(bracketTeam2W);
+            resetScore(bracketTeam2L);
+            resetScore(bracketTeam2MW);
+            resetScore(bracketTeam2ML);
+            resetScore(bracketTeam3W);
+            resetScore(bracketTeam3L);
+            resetScore(bracketTeam3MW);
+            resetScore(bracketTeam3ML);
+            resetScore(bracketTeam4W);
+            resetScore(bracketTeam4L);
+            resetScore(bracketTeam4MW);
+            resetScore(bracketTeam4ML);
+            resetScore(bracketTeam5W);
+            resetScore(bracketTeam5L);
+            resetScore(bracketTeam5MW);
+            resetScore(bracketTeam5ML);
+            resetScore(bracketTeam6W);
+            resetScore(bracketTeam6L);
+            resetScore(bracketTeam6MW);
+            resetScore(bracketTeam6ML);
+            resetScore(bracketTeam7W);
+            resetScore(bracketTeam7L);
+            resetScore(bracketTeam7MW);
+            resetScore(bracketTeam7ML);
+            resetScore(bracketTeam8W);
+            resetScore(bracketTeam8L);
+            resetScore(bracketTeam8MW);
+            resetScore(bracketTeam8ML);
+            resetScore(bracketTeam9W);
+            resetScore(bracketTeam9L);
+            resetScore(bracketTeam9MW);
+            resetScore(bracketTeam9ML);
+            resetScore(bracketTeam10W);
+            resetScore(bracketTeam10L);
+            resetScore(bracketTeam10MW);
+            resetScore(bracketTeam10ML);
+            resetScore(bracketTeam11W);
+            resetScore(bracketTeam11L);
+            resetScore(bracketTeam11MW);
+            resetScore(bracketTeam11ML);
+            resetScore(bracketTeam12W);
+            resetScore(bracketTeam12L);
+            resetScore(bracketTeam12MW);
+            resetScore(bracketTeam12ML);
+            resetScore(bracketTeam13W);
+            resetScore(bracketTeam13L);
+            resetScore(bracketTeam13MW);
+            resetScore(bracketTeam13ML);
+            resetScore(bracketTeam14W);
+            resetScore(bracketTeam14L);
+            resetScore(bracketTeam14MW);
+            resetScore(bracketTeam14ML);
+            resetScore(bracketTeam15W);
+            resetScore(bracketTeam15L);
+            resetScore(bracketTeam15MW);
+            resetScore(bracketTeam15ML);
+            resetScore(bracketTeam16W);
+            resetScore(bracketTeam16L);
+            resetScore(bracketTeam16MW);
+            resetScore(bracketTeam16ML);
 
             BracketTeams.Clear();
 
@@ -4449,6 +4487,71 @@ namespace OW_Scoreboard_Tool
             updateButton(bracketImage14, FolderList[9].Replace("\\", ""), BracketFiles[29].Replace(".png", ""));
             updateButton(bracketImage15, FolderList[9].Replace("\\", ""), BracketFiles[30].Replace(".png", ""));
             updateButton(bracketImage16, FolderList[9].Replace("\\", ""), BracketFiles[31].Replace(".png", ""));
+
+            updateScore(bracketTeam1W, FolderList[9].Replace("\\", ""), BracketFiles[160].Replace(".txt", ""));
+            updateScore(bracketTeam1L, FolderList[9].Replace("\\", ""), BracketFiles[161].Replace(".txt", ""));
+            updateScore(bracketTeam1MW, FolderList[9].Replace("\\", ""), BracketFiles[162].Replace(".txt", ""));
+            updateScore(bracketTeam1ML, FolderList[9].Replace("\\", ""), BracketFiles[163].Replace(".txt", ""));
+            updateScore(bracketTeam2W, FolderList[9].Replace("\\", ""), BracketFiles[164].Replace(".txt", ""));
+            updateScore(bracketTeam2L, FolderList[9].Replace("\\", ""), BracketFiles[165].Replace(".txt", ""));
+            updateScore(bracketTeam2MW, FolderList[9].Replace("\\", ""), BracketFiles[166].Replace(".txt", ""));
+            updateScore(bracketTeam2ML, FolderList[9].Replace("\\", ""), BracketFiles[167].Replace(".txt", ""));
+            updateScore(bracketTeam3W, FolderList[9].Replace("\\", ""), BracketFiles[168].Replace(".txt", ""));
+            updateScore(bracketTeam3L, FolderList[9].Replace("\\", ""), BracketFiles[169].Replace(".txt", ""));
+            updateScore(bracketTeam3MW, FolderList[9].Replace("\\", ""), BracketFiles[170].Replace(".txt", ""));
+            updateScore(bracketTeam3ML, FolderList[9].Replace("\\", ""), BracketFiles[171].Replace(".txt", ""));
+            updateScore(bracketTeam4W, FolderList[9].Replace("\\", ""), BracketFiles[172].Replace(".txt", ""));
+            updateScore(bracketTeam4L, FolderList[9].Replace("\\", ""), BracketFiles[173].Replace(".txt", ""));
+            updateScore(bracketTeam4MW, FolderList[9].Replace("\\", ""), BracketFiles[174].Replace(".txt", ""));
+            updateScore(bracketTeam4ML, FolderList[9].Replace("\\", ""), BracketFiles[175].Replace(".txt", ""));
+            updateScore(bracketTeam5W, FolderList[9].Replace("\\", ""), BracketFiles[176].Replace(".txt", ""));
+            updateScore(bracketTeam5L, FolderList[9].Replace("\\", ""), BracketFiles[177].Replace(".txt", ""));
+            updateScore(bracketTeam5MW, FolderList[9].Replace("\\", ""), BracketFiles[178].Replace(".txt", ""));
+            updateScore(bracketTeam5ML, FolderList[9].Replace("\\", ""), BracketFiles[179].Replace(".txt", ""));
+            updateScore(bracketTeam6W, FolderList[9].Replace("\\", ""), BracketFiles[180].Replace(".txt", ""));
+            updateScore(bracketTeam6L, FolderList[9].Replace("\\", ""), BracketFiles[181].Replace(".txt", ""));
+            updateScore(bracketTeam6MW, FolderList[9].Replace("\\", ""), BracketFiles[182].Replace(".txt", ""));
+            updateScore(bracketTeam6ML, FolderList[9].Replace("\\", ""), BracketFiles[183].Replace(".txt", ""));
+            updateScore(bracketTeam7W, FolderList[9].Replace("\\", ""), BracketFiles[184].Replace(".txt", ""));
+            updateScore(bracketTeam7L, FolderList[9].Replace("\\", ""), BracketFiles[185].Replace(".txt", ""));
+            updateScore(bracketTeam7MW, FolderList[9].Replace("\\", ""), BracketFiles[186].Replace(".txt", ""));
+            updateScore(bracketTeam7ML, FolderList[9].Replace("\\", ""), BracketFiles[187].Replace(".txt", ""));
+            updateScore(bracketTeam8W, FolderList[9].Replace("\\", ""), BracketFiles[188].Replace(".txt", ""));
+            updateScore(bracketTeam8L, FolderList[9].Replace("\\", ""), BracketFiles[189].Replace(".txt", ""));
+            updateScore(bracketTeam8MW, FolderList[9].Replace("\\", ""), BracketFiles[190].Replace(".txt", ""));
+            updateScore(bracketTeam8ML, FolderList[9].Replace("\\", ""), BracketFiles[191].Replace(".txt", ""));
+            updateScore(bracketTeam9W, FolderList[9].Replace("\\", ""), BracketFiles[192].Replace(".txt", ""));
+            updateScore(bracketTeam9L, FolderList[9].Replace("\\", ""), BracketFiles[193].Replace(".txt", ""));
+            updateScore(bracketTeam9MW, FolderList[9].Replace("\\", ""), BracketFiles[194].Replace(".txt", ""));
+            updateScore(bracketTeam9ML, FolderList[9].Replace("\\", ""), BracketFiles[195].Replace(".txt", ""));
+            updateScore(bracketTeam10W, FolderList[9].Replace("\\", ""), BracketFiles[196].Replace(".txt", ""));
+            updateScore(bracketTeam10L, FolderList[9].Replace("\\", ""), BracketFiles[197].Replace(".txt", ""));
+            updateScore(bracketTeam10MW, FolderList[9].Replace("\\", ""), BracketFiles[198].Replace(".txt", ""));
+            updateScore(bracketTeam10ML, FolderList[9].Replace("\\", ""), BracketFiles[199].Replace(".txt", ""));
+            updateScore(bracketTeam11W, FolderList[9].Replace("\\", ""), BracketFiles[200].Replace(".txt", ""));
+            updateScore(bracketTeam11L, FolderList[9].Replace("\\", ""), BracketFiles[201].Replace(".txt", ""));
+            updateScore(bracketTeam11MW, FolderList[9].Replace("\\", ""), BracketFiles[202].Replace(".txt", ""));
+            updateScore(bracketTeam11ML, FolderList[9].Replace("\\", ""), BracketFiles[203].Replace(".txt", ""));
+            updateScore(bracketTeam12W, FolderList[9].Replace("\\", ""), BracketFiles[204].Replace(".txt", ""));
+            updateScore(bracketTeam12L, FolderList[9].Replace("\\", ""), BracketFiles[205].Replace(".txt", ""));
+            updateScore(bracketTeam12MW, FolderList[9].Replace("\\", ""), BracketFiles[206].Replace(".txt", ""));
+            updateScore(bracketTeam12ML, FolderList[9].Replace("\\", ""), BracketFiles[207].Replace(".txt", ""));
+            updateScore(bracketTeam13W, FolderList[9].Replace("\\", ""), BracketFiles[208].Replace(".txt", ""));
+            updateScore(bracketTeam13L, FolderList[9].Replace("\\", ""), BracketFiles[209].Replace(".txt", ""));
+            updateScore(bracketTeam13MW, FolderList[9].Replace("\\", ""), BracketFiles[210].Replace(".txt", ""));
+            updateScore(bracketTeam13ML, FolderList[9].Replace("\\", ""), BracketFiles[211].Replace(".txt", ""));
+            updateScore(bracketTeam14W, FolderList[9].Replace("\\", ""), BracketFiles[212].Replace(".txt", ""));
+            updateScore(bracketTeam14L, FolderList[9].Replace("\\", ""), BracketFiles[213].Replace(".txt", ""));
+            updateScore(bracketTeam14MW, FolderList[9].Replace("\\", ""), BracketFiles[214].Replace(".txt", ""));
+            updateScore(bracketTeam14ML, FolderList[9].Replace("\\", ""), BracketFiles[215].Replace(".txt", ""));
+            updateScore(bracketTeam15W, FolderList[9].Replace("\\", ""), BracketFiles[216].Replace(".txt", ""));
+            updateScore(bracketTeam15L, FolderList[9].Replace("\\", ""), BracketFiles[217].Replace(".txt", ""));
+            updateScore(bracketTeam15MW, FolderList[9].Replace("\\", ""), BracketFiles[218].Replace(".txt", ""));
+            updateScore(bracketTeam15ML, FolderList[9].Replace("\\", ""), BracketFiles[219].Replace(".txt", ""));
+            updateScore(bracketTeam16W, FolderList[9].Replace("\\", ""), BracketFiles[220].Replace(".txt", ""));
+            updateScore(bracketTeam16L, FolderList[9].Replace("\\", ""), BracketFiles[221].Replace(".txt", ""));
+            updateScore(bracketTeam16MW, FolderList[9].Replace("\\", ""), BracketFiles[222].Replace(".txt", ""));
+            updateScore(bracketTeam16ML, FolderList[9].Replace("\\", ""), BracketFiles[223].Replace(".txt", ""));
 
             setBracketTeams();
 
@@ -4585,6 +4688,7 @@ namespace OW_Scoreboard_Tool
             resetScore(bracketGF2M1Score2);
             resetScore(bracketTPM1Score1);
             resetScore(bracketTPM1Score2);
+
         }
 
         private void bracketUpdate_Click(object sender, EventArgs e)
@@ -4718,6 +4822,7 @@ namespace OW_Scoreboard_Tool
             updateScore(bracketGF2M1Score2, FolderList[9].Replace("\\", ""), BracketFiles[157].Replace(".txt", ""));
             updateScore(bracketTPM1Score1, FolderList[9].Replace("\\", ""), BracketFiles[158].Replace(".txt", ""));
             updateScore(bracketTPM1Score2, FolderList[9].Replace("\\", ""), BracketFiles[159].Replace(".txt", ""));
+
         }
 
         private void linkBracketToTeams()
@@ -5041,6 +5146,71 @@ namespace OW_Scoreboard_Tool
             loadScore(bracketGF2M1Score2, FolderList[9].Replace("\\", ""), BracketFiles[157].Replace(".txt", ""));
             loadScore(bracketTPM1Score1, FolderList[9].Replace("\\", ""), BracketFiles[158].Replace(".txt", ""));
             loadScore(bracketTPM1Score2, FolderList[9].Replace("\\", ""), BracketFiles[159].Replace(".txt", ""));
+
+            loadScore(bracketTeam1W, FolderList[9].Replace("\\", ""), BracketFiles[160].Replace(".txt", ""));
+            loadScore(bracketTeam1L, FolderList[9].Replace("\\", ""), BracketFiles[161].Replace(".txt", ""));
+            loadScore(bracketTeam1MW, FolderList[9].Replace("\\", ""), BracketFiles[162].Replace(".txt", ""));
+            loadScore(bracketTeam1ML, FolderList[9].Replace("\\", ""), BracketFiles[163].Replace(".txt", ""));
+            loadScore(bracketTeam2W, FolderList[9].Replace("\\", ""), BracketFiles[164].Replace(".txt", ""));
+            loadScore(bracketTeam2L, FolderList[9].Replace("\\", ""), BracketFiles[165].Replace(".txt", ""));
+            loadScore(bracketTeam2MW, FolderList[9].Replace("\\", ""), BracketFiles[166].Replace(".txt", ""));
+            loadScore(bracketTeam2ML, FolderList[9].Replace("\\", ""), BracketFiles[167].Replace(".txt", ""));
+            loadScore(bracketTeam3W, FolderList[9].Replace("\\", ""), BracketFiles[168].Replace(".txt", ""));
+            loadScore(bracketTeam3L, FolderList[9].Replace("\\", ""), BracketFiles[169].Replace(".txt", ""));
+            loadScore(bracketTeam3MW, FolderList[9].Replace("\\", ""), BracketFiles[170].Replace(".txt", ""));
+            loadScore(bracketTeam3ML, FolderList[9].Replace("\\", ""), BracketFiles[171].Replace(".txt", ""));
+            loadScore(bracketTeam4W, FolderList[9].Replace("\\", ""), BracketFiles[172].Replace(".txt", ""));
+            loadScore(bracketTeam4L, FolderList[9].Replace("\\", ""), BracketFiles[173].Replace(".txt", ""));
+            loadScore(bracketTeam4MW, FolderList[9].Replace("\\", ""), BracketFiles[174].Replace(".txt", ""));
+            loadScore(bracketTeam4ML, FolderList[9].Replace("\\", ""), BracketFiles[175].Replace(".txt", ""));
+            loadScore(bracketTeam5W, FolderList[9].Replace("\\", ""), BracketFiles[176].Replace(".txt", ""));
+            loadScore(bracketTeam5L, FolderList[9].Replace("\\", ""), BracketFiles[177].Replace(".txt", ""));
+            loadScore(bracketTeam5MW, FolderList[9].Replace("\\", ""), BracketFiles[178].Replace(".txt", ""));
+            loadScore(bracketTeam5ML, FolderList[9].Replace("\\", ""), BracketFiles[179].Replace(".txt", ""));
+            loadScore(bracketTeam6W, FolderList[9].Replace("\\", ""), BracketFiles[180].Replace(".txt", ""));
+            loadScore(bracketTeam6L, FolderList[9].Replace("\\", ""), BracketFiles[181].Replace(".txt", ""));
+            loadScore(bracketTeam6MW, FolderList[9].Replace("\\", ""), BracketFiles[182].Replace(".txt", ""));
+            loadScore(bracketTeam6ML, FolderList[9].Replace("\\", ""), BracketFiles[183].Replace(".txt", ""));
+            loadScore(bracketTeam7W, FolderList[9].Replace("\\", ""), BracketFiles[184].Replace(".txt", ""));
+            loadScore(bracketTeam7L, FolderList[9].Replace("\\", ""), BracketFiles[185].Replace(".txt", ""));
+            loadScore(bracketTeam7MW, FolderList[9].Replace("\\", ""), BracketFiles[186].Replace(".txt", ""));
+            loadScore(bracketTeam7ML, FolderList[9].Replace("\\", ""), BracketFiles[187].Replace(".txt", ""));
+            loadScore(bracketTeam8W, FolderList[9].Replace("\\", ""), BracketFiles[188].Replace(".txt", ""));
+            loadScore(bracketTeam8L, FolderList[9].Replace("\\", ""), BracketFiles[189].Replace(".txt", ""));
+            loadScore(bracketTeam8MW, FolderList[9].Replace("\\", ""), BracketFiles[190].Replace(".txt", ""));
+            loadScore(bracketTeam8ML, FolderList[9].Replace("\\", ""), BracketFiles[191].Replace(".txt", ""));
+            loadScore(bracketTeam9W, FolderList[9].Replace("\\", ""), BracketFiles[192].Replace(".txt", ""));
+            loadScore(bracketTeam9L, FolderList[9].Replace("\\", ""), BracketFiles[193].Replace(".txt", ""));
+            loadScore(bracketTeam9MW, FolderList[9].Replace("\\", ""), BracketFiles[194].Replace(".txt", ""));
+            loadScore(bracketTeam9ML, FolderList[9].Replace("\\", ""), BracketFiles[195].Replace(".txt", ""));
+            loadScore(bracketTeam10W, FolderList[9].Replace("\\", ""), BracketFiles[196].Replace(".txt", ""));
+            loadScore(bracketTeam10L, FolderList[9].Replace("\\", ""), BracketFiles[197].Replace(".txt", ""));
+            loadScore(bracketTeam10MW, FolderList[9].Replace("\\", ""), BracketFiles[198].Replace(".txt", ""));
+            loadScore(bracketTeam10ML, FolderList[9].Replace("\\", ""), BracketFiles[199].Replace(".txt", ""));
+            loadScore(bracketTeam11W, FolderList[9].Replace("\\", ""), BracketFiles[200].Replace(".txt", ""));
+            loadScore(bracketTeam11L, FolderList[9].Replace("\\", ""), BracketFiles[201].Replace(".txt", ""));
+            loadScore(bracketTeam11MW, FolderList[9].Replace("\\", ""), BracketFiles[202].Replace(".txt", ""));
+            loadScore(bracketTeam11ML, FolderList[9].Replace("\\", ""), BracketFiles[203].Replace(".txt", ""));
+            loadScore(bracketTeam12W, FolderList[9].Replace("\\", ""), BracketFiles[204].Replace(".txt", ""));
+            loadScore(bracketTeam12L, FolderList[9].Replace("\\", ""), BracketFiles[205].Replace(".txt", ""));
+            loadScore(bracketTeam12MW, FolderList[9].Replace("\\", ""), BracketFiles[206].Replace(".txt", ""));
+            loadScore(bracketTeam12ML, FolderList[9].Replace("\\", ""), BracketFiles[207].Replace(".txt", ""));
+            loadScore(bracketTeam13W, FolderList[9].Replace("\\", ""), BracketFiles[208].Replace(".txt", ""));
+            loadScore(bracketTeam13L, FolderList[9].Replace("\\", ""), BracketFiles[209].Replace(".txt", ""));
+            loadScore(bracketTeam13MW, FolderList[9].Replace("\\", ""), BracketFiles[210].Replace(".txt", ""));
+            loadScore(bracketTeam13ML, FolderList[9].Replace("\\", ""), BracketFiles[211].Replace(".txt", ""));
+            loadScore(bracketTeam14W, FolderList[9].Replace("\\", ""), BracketFiles[212].Replace(".txt", ""));
+            loadScore(bracketTeam14L, FolderList[9].Replace("\\", ""), BracketFiles[213].Replace(".txt", ""));
+            loadScore(bracketTeam14MW, FolderList[9].Replace("\\", ""), BracketFiles[214].Replace(".txt", ""));
+            loadScore(bracketTeam14ML, FolderList[9].Replace("\\", ""), BracketFiles[215].Replace(".txt", ""));
+            loadScore(bracketTeam15W, FolderList[9].Replace("\\", ""), BracketFiles[216].Replace(".txt", ""));
+            loadScore(bracketTeam15L, FolderList[9].Replace("\\", ""), BracketFiles[217].Replace(".txt", ""));
+            loadScore(bracketTeam15MW, FolderList[9].Replace("\\", ""), BracketFiles[218].Replace(".txt", ""));
+            loadScore(bracketTeam15ML, FolderList[9].Replace("\\", ""), BracketFiles[219].Replace(".txt", ""));
+            loadScore(bracketTeam16W, FolderList[9].Replace("\\", ""), BracketFiles[220].Replace(".txt", ""));
+            loadScore(bracketTeam16L, FolderList[9].Replace("\\", ""), BracketFiles[221].Replace(".txt", ""));
+            loadScore(bracketTeam16MW, FolderList[9].Replace("\\", ""), BracketFiles[222].Replace(".txt", ""));
+            loadScore(bracketTeam16ML, FolderList[9].Replace("\\", ""), BracketFiles[223].Replace(".txt", ""));
 
             setBracketTeams();
         }
