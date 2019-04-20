@@ -2318,7 +2318,6 @@ namespace OW_Scoreboard_Tool
 
                     sw.WriteLine(field.AccessibleDescription.Trim());
 
-
                 }
 
                 if (field.AccessibleDescription != "")
@@ -4447,6 +4446,7 @@ namespace OW_Scoreboard_Tool
             resetScore(bracketTeam16ML);
 
             BracketTeams.Clear();
+            BracketTeams.Add(new Team());
 
         }
 
@@ -5234,6 +5234,9 @@ namespace OW_Scoreboard_Tool
             ButtonToolTip.SetToolTip(((Button)sender), ((Button)sender).AccessibleDescription);
         }
 
-
+        private void resetButtonImagePath_Click(object sender, EventArgs e)
+        {
+            ((Button)((ContextMenuStrip)((ToolStripMenuItem)sender).Owner).SourceControl).AccessibleDescription = "";
+        }
     }
 }
