@@ -2663,8 +2663,11 @@ namespace OW_Scoreboard_Tool
                 m1t1Score.Text = Match1.HomeScore;
                 m1t1SR.Text = Match1.Home.Sr;
                 m1t1Logo.Text = Match1.Home.LogoPath;
+                m1t1ColorButton.BackColor = System.Drawing.ColorTranslator.FromHtml(Match1.Home.Color);
 
                 m1t1p1Name.Text = Match1.Home.Players[0].Name;
+                m1t1p1Info.Text = Match1.Home.Players[0].Info;
+                m1t1p1Image.Text = Match1.Home.Players[0].ImagePath;
                 try
                 {
                     m1t1p1Hero.SelectedIndex = m1t1p1Hero.FindStringExact(Match1.Home.Players[0].Heroes[0].Name);
@@ -2681,7 +2684,10 @@ namespace OW_Scoreboard_Tool
                 {
                     m1t1p1Role.SelectedIndex = m1t1p1Role.FindStringExact("");
                 }
+                
                 m1t1p2Name.Text = Match1.Home.Players[1].Name;
+                m1t1p2Info.Text = Match1.Home.Players[1].Info;
+                m1t1p2Image.Text = Match1.Home.Players[1].ImagePath;
                 try
                 {
                     m1t1p2Hero.SelectedIndex = m1t1p2Hero.FindStringExact(Match1.Home.Players[1].Heroes[0].Name);
@@ -2698,7 +2704,10 @@ namespace OW_Scoreboard_Tool
                 {
                     m1t1p2Role.SelectedIndex = m1t1p2Role.FindStringExact("");
                 }
+
                 m1t1p3Name.Text = Match1.Home.Players[2].Name;
+                m1t1p3Info.Text = Match1.Home.Players[2].Info;
+                m1t1p3Image.Text = Match1.Home.Players[2].ImagePath;
                 try
                 {
                     m1t1p3Hero.SelectedIndex = m1t1p3Hero.FindStringExact(Match1.Home.Players[2].Heroes[0].Name);
@@ -2715,7 +2724,10 @@ namespace OW_Scoreboard_Tool
                 {
                     m1t1p3Role.SelectedIndex = m1t1p3Role.FindStringExact("");
                 }
+
                 m1t1p4Name.Text = Match1.Home.Players[3].Name;
+                m1t1p4Info.Text = Match1.Home.Players[3].Info;
+                m1t1p4Image.Text = Match1.Home.Players[3].ImagePath;
                 try
                 {
                     m1t1p4Hero.SelectedIndex = m1t1p4Hero.FindStringExact(Match1.Home.Players[3].Heroes[0].Name);
@@ -2732,7 +2744,10 @@ namespace OW_Scoreboard_Tool
                 {
                     m1t1p4Role.SelectedIndex = m1t1p4Role.FindStringExact("");
                 }
+
                 m1t1p5Name.Text = Match1.Home.Players[4].Name;
+                m1t1p5Info.Text = Match1.Home.Players[4].Info;
+                m1t1p5Image.Text = Match1.Home.Players[4].ImagePath;
                 try
                 {
                     m1t1p5Hero.SelectedIndex = m1t1p5Hero.FindStringExact(Match1.Home.Players[4].Heroes[0].Name);
@@ -2749,7 +2764,10 @@ namespace OW_Scoreboard_Tool
                 {
                     m1t1p5Role.SelectedIndex = m1t1p5Role.FindStringExact("");
                 }
+
                 m1t1p6Name.Text = Match1.Home.Players[5].Name;
+                m1t1p6Info.Text = Match1.Home.Players[5].Info;
+                m1t1p6Image.Text = Match1.Home.Players[5].ImagePath;
                 try
                 {
                     m1t1p6Hero.SelectedIndex = m1t1p6Hero.FindStringExact(Match1.Home.Players[5].Heroes[0].Name);
@@ -2773,8 +2791,11 @@ namespace OW_Scoreboard_Tool
                 m1t2Score.Text = Match1.AwayScore;
                 m1t2SR.Text = Match1.Away.Sr;
                 m1t2Logo.Text = Match1.Away.LogoPath;
+                m1t2ColorButton.BackColor = System.Drawing.ColorTranslator.FromHtml(Match1.Away.Color); 
 
                 m1t2p1Name.Text = Match1.Away.Players[0].Name;
+                m1t2p1Info.Text = Match1.Away.Players[0].Info;
+                m1t2p1Image.Text = Match1.Away.Players[0].ImagePath;
                 try
                 {
                     m1t2p1Hero.SelectedIndex = m1t2p1Hero.FindStringExact(Match1.Away.Players[0].Heroes[0].Name);
@@ -2791,7 +2812,10 @@ namespace OW_Scoreboard_Tool
                 {
                     m1t2p1Role.SelectedIndex = m1t2p1Role.FindStringExact("");
                 }
+
                 m1t2p2Name.Text = Match1.Away.Players[1].Name;
+                m1t2p2Info.Text = Match1.Away.Players[1].Info;
+                m1t2p2Image.Text = Match1.Away.Players[1].ImagePath;
                 try
                 {
                     m1t2p2Hero.SelectedIndex = m1t2p2Hero.FindStringExact(Match1.Away.Players[1].Heroes[0].Name);
@@ -2808,7 +2832,10 @@ namespace OW_Scoreboard_Tool
                 {
                     m1t2p2Role.SelectedIndex = m1t2p2Role.FindStringExact("");
                 }
+
                 m1t2p3Name.Text = Match1.Away.Players[2].Name;
+                m1t2p3Info.Text = Match1.Away.Players[2].Info;
+                m1t2p3Image.Text = Match1.Away.Players[2].ImagePath;
                 try
                 {
                     m1t2p3Hero.SelectedIndex = m1t2p3Hero.FindStringExact(Match1.Away.Players[2].Heroes[0].Name);
@@ -2825,7 +2852,10 @@ namespace OW_Scoreboard_Tool
                 {
                     m1t2p3Role.SelectedIndex = m1t2p3Role.FindStringExact("");
                 }
+
                 m1t2p4Name.Text = Match1.Away.Players[3].Name;
+                m1t2p4Info.Text = Match1.Away.Players[3].Info;
+                m1t2p4Image.Text = Match1.Away.Players[3].ImagePath;
                 try
                 {
                     m1t2p4Hero.SelectedIndex = m1t2p4Hero.FindStringExact(Match1.Away.Players[3].Heroes[0].Name);
@@ -2842,7 +2872,10 @@ namespace OW_Scoreboard_Tool
                 {
                     m1t2p4Role.SelectedIndex = m1t2p4Role.FindStringExact("");
                 }
+
                 m1t2p5Name.Text = Match1.Away.Players[4].Name;
+                m1t2p5Info.Text = Match1.Away.Players[4].Info;
+                m1t2p5Image.Text = Match1.Away.Players[4].ImagePath;
                 try
                 {
                     m1t2p5Hero.SelectedIndex = m1t2p5Hero.FindStringExact(Match1.Away.Players[4].Heroes[0].Name);
@@ -2859,7 +2892,10 @@ namespace OW_Scoreboard_Tool
                 {
                     m1t2p5Role.SelectedIndex = m1t2p5Role.FindStringExact("");
                 }
+
                 m1t2p6Name.Text = Match1.Away.Players[5].Name;
+                m1t2p6Info.Text = Match1.Away.Players[5].Info;
+                m1t2p6Image.Text = Match1.Away.Players[5].ImagePath;
                 try
                 {
                     m1t2p6Hero.SelectedIndex = m1t2p6Hero.FindStringExact(Match1.Away.Players[5].Heroes[0].Name);
