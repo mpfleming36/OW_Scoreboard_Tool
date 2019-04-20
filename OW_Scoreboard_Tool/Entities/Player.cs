@@ -37,11 +37,13 @@ namespace OW_Scoreboard_Tool.Entities
         /// <param name="name"></param>
         /// <param name="heroes"></param>
         /// <param name="role"></param>
-        public Player(string name, List<Hero> heroes, Role role)
+        public Player(string name, List<Hero> heroes, Role role, string info, string imagePath)
         {
             _name = name;
             _heroes = heroes;
             _role = role;
+            _info = info;
+            _imagePath = imagePath;
         }
         #endregion
 

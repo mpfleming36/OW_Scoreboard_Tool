@@ -53,12 +53,13 @@ namespace OW_Scoreboard_Tool.Entities
         /// <param name="sr"></param>
         /// <param name="logoPath"></param>
         /// <param name="players"></param>
-        public Team(string name, string sr, string logoPath, List<Player> players)
+        public Team(string name, string sr, string logoPath, List<Player> players, string color)
         {
             _name = name;
             _sr = sr;
             _logoPath = logoPath;
             _players = players;
+            _color = color;
         }
         #endregion
     }
