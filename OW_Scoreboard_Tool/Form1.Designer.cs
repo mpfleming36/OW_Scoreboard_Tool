@@ -45,6 +45,11 @@ namespace OW_Scoreboard_Tool
             this.exportAwayTeamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.General_Info = new System.Windows.Forms.TabPage();
+            this.colorThemeButton8 = new System.Windows.Forms.Button();
+            this.colorThemeButton7 = new System.Windows.Forms.Button();
+            this.colorThemeButton6 = new System.Windows.Forms.Button();
+            this.colorThemeButton5 = new System.Windows.Forms.Button();
+            this.colorThemeButton4 = new System.Windows.Forms.Button();
             this.imageLabel28 = new System.Windows.Forms.Label();
             this.imageLabel27 = new System.Windows.Forms.Label();
             this.imageLabel26 = new System.Windows.Forms.Label();
@@ -648,11 +653,7 @@ namespace OW_Scoreboard_Tool
             this.bracketTeam3 = new System.Windows.Forms.TextBox();
             this.bracketTeam2 = new System.Windows.Forms.TextBox();
             this.bracketTeam1 = new System.Windows.Forms.TextBox();
-            this.m1t1Color = new System.Windows.Forms.ColorDialog();
-            this.m1t2Color = new System.Windows.Forms.ColorDialog();
-            this.colorThemeDialog1 = new System.Windows.Forms.ColorDialog();
-            this.colorThemeDialog2 = new System.Windows.Forms.ColorDialog();
-            this.colorThemeDialog3 = new System.Windows.Forms.ColorDialog();
+            this.colorThemeDialog = new System.Windows.Forms.ColorDialog();
             this.ButtonToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             this.General_Info.SuspendLayout();
@@ -898,6 +899,11 @@ namespace OW_Scoreboard_Tool
             // 
             // General_Info
             // 
+            this.General_Info.Controls.Add(this.colorThemeButton8);
+            this.General_Info.Controls.Add(this.colorThemeButton7);
+            this.General_Info.Controls.Add(this.colorThemeButton6);
+            this.General_Info.Controls.Add(this.colorThemeButton5);
+            this.General_Info.Controls.Add(this.colorThemeButton4);
             this.General_Info.Controls.Add(this.imageLabel28);
             this.General_Info.Controls.Add(this.imageLabel27);
             this.General_Info.Controls.Add(this.imageLabel26);
@@ -1053,6 +1059,56 @@ namespace OW_Scoreboard_Tool
             this.General_Info.TabIndex = 1;
             this.General_Info.Text = "General";
             this.General_Info.UseVisualStyleBackColor = true;
+            // 
+            // colorThemeButton8
+            // 
+            this.colorThemeButton8.Location = new System.Drawing.Point(554, 341);
+            this.colorThemeButton8.Name = "colorThemeButton8";
+            this.colorThemeButton8.Size = new System.Drawing.Size(72, 38);
+            this.colorThemeButton8.TabIndex = 218;
+            this.colorThemeButton8.Text = "Octonary";
+            this.colorThemeButton8.UseVisualStyleBackColor = true;
+            this.colorThemeButton8.Click += new System.EventHandler(this.colorThemeButton_Click);
+            // 
+            // colorThemeButton7
+            // 
+            this.colorThemeButton7.Location = new System.Drawing.Point(554, 297);
+            this.colorThemeButton7.Name = "colorThemeButton7";
+            this.colorThemeButton7.Size = new System.Drawing.Size(72, 38);
+            this.colorThemeButton7.TabIndex = 217;
+            this.colorThemeButton7.Text = "Septenary";
+            this.colorThemeButton7.UseVisualStyleBackColor = true;
+            this.colorThemeButton7.Click += new System.EventHandler(this.colorThemeButton_Click);
+            // 
+            // colorThemeButton6
+            // 
+            this.colorThemeButton6.Location = new System.Drawing.Point(554, 253);
+            this.colorThemeButton6.Name = "colorThemeButton6";
+            this.colorThemeButton6.Size = new System.Drawing.Size(72, 38);
+            this.colorThemeButton6.TabIndex = 216;
+            this.colorThemeButton6.Text = "Senary";
+            this.colorThemeButton6.UseVisualStyleBackColor = true;
+            this.colorThemeButton6.Click += new System.EventHandler(this.colorThemeButton_Click);
+            // 
+            // colorThemeButton5
+            // 
+            this.colorThemeButton5.Location = new System.Drawing.Point(554, 209);
+            this.colorThemeButton5.Name = "colorThemeButton5";
+            this.colorThemeButton5.Size = new System.Drawing.Size(72, 38);
+            this.colorThemeButton5.TabIndex = 215;
+            this.colorThemeButton5.Text = "Quinary";
+            this.colorThemeButton5.UseVisualStyleBackColor = true;
+            this.colorThemeButton5.Click += new System.EventHandler(this.colorThemeButton_Click);
+            // 
+            // colorThemeButton4
+            // 
+            this.colorThemeButton4.Location = new System.Drawing.Point(554, 165);
+            this.colorThemeButton4.Name = "colorThemeButton4";
+            this.colorThemeButton4.Size = new System.Drawing.Size(72, 38);
+            this.colorThemeButton4.TabIndex = 214;
+            this.colorThemeButton4.Text = "Quaternary";
+            this.colorThemeButton4.UseVisualStyleBackColor = true;
+            this.colorThemeButton4.Click += new System.EventHandler(this.colorThemeButton_Click);
             // 
             // imageLabel28
             // 
@@ -1482,7 +1538,7 @@ namespace OW_Scoreboard_Tool
             this.colorThemeButton3.TabIndex = 171;
             this.colorThemeButton3.Text = "Tertiary";
             this.colorThemeButton3.UseVisualStyleBackColor = true;
-            this.colorThemeButton3.Click += new System.EventHandler(this.colorThemeButton3_Click);
+            this.colorThemeButton3.Click += new System.EventHandler(this.colorThemeButton_Click);
             // 
             // colorThemeButton2
             // 
@@ -1492,7 +1548,7 @@ namespace OW_Scoreboard_Tool
             this.colorThemeButton2.TabIndex = 170;
             this.colorThemeButton2.Text = "Secondary";
             this.colorThemeButton2.UseVisualStyleBackColor = true;
-            this.colorThemeButton2.Click += new System.EventHandler(this.colorThemeButton2_Click);
+            this.colorThemeButton2.Click += new System.EventHandler(this.colorThemeButton_Click);
             // 
             // imageLabel14
             // 
@@ -1623,7 +1679,7 @@ namespace OW_Scoreboard_Tool
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(554, 17);
+            this.label26.Location = new System.Drawing.Point(554, 11);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(72, 13);
             this.label26.TabIndex = 155;
@@ -1637,7 +1693,7 @@ namespace OW_Scoreboard_Tool
             this.colorThemeButton1.TabIndex = 154;
             this.colorThemeButton1.Text = "Primary";
             this.colorThemeButton1.UseVisualStyleBackColor = true;
-            this.colorThemeButton1.Click += new System.EventHandler(this.colorThemeButton1_Click);
+            this.colorThemeButton1.Click += new System.EventHandler(this.colorThemeButton_Click);
             // 
             // label21
             // 
@@ -2957,7 +3013,7 @@ namespace OW_Scoreboard_Tool
             this.m1t2ColorButton.TabIndex = 120;
             this.m1t2ColorButton.Text = "Color";
             this.m1t2ColorButton.UseVisualStyleBackColor = true;
-            this.m1t2ColorButton.Click += new System.EventHandler(this.m1t2ColorButton_Click);
+            this.m1t2ColorButton.Click += new System.EventHandler(this.colorThemeButton_Click);
             // 
             // m1t1ColorButton
             // 
@@ -2967,7 +3023,7 @@ namespace OW_Scoreboard_Tool
             this.m1t1ColorButton.TabIndex = 119;
             this.m1t1ColorButton.Text = "Color";
             this.m1t1ColorButton.UseVisualStyleBackColor = true;
-            this.m1t1ColorButton.Click += new System.EventHandler(this.m1t1ColorButton_Click);
+            this.m1t1ColorButton.Click += new System.EventHandler(this.colorThemeButton_Click);
             // 
             // label12
             // 
@@ -7678,25 +7734,9 @@ namespace OW_Scoreboard_Tool
             this.bracketTeam1.Size = new System.Drawing.Size(100, 20);
             this.bracketTeam1.TabIndex = 0;
             // 
-            // m1t1Color
+            // colorThemeDialog
             // 
-            this.m1t1Color.Color = System.Drawing.Color.Transparent;
-            // 
-            // m1t2Color
-            // 
-            this.m1t2Color.Color = System.Drawing.Color.Transparent;
-            // 
-            // colorThemeDialog1
-            // 
-            this.colorThemeDialog1.Color = System.Drawing.Color.Transparent;
-            // 
-            // colorThemeDialog2
-            // 
-            this.colorThemeDialog2.Color = System.Drawing.Color.Transparent;
-            // 
-            // colorThemeDialog3
-            // 
-            this.colorThemeDialog3.Color = System.Drawing.Color.Transparent;
+            this.colorThemeDialog.Color = System.Drawing.Color.Transparent;
             // 
             // Form1
             // 
@@ -8166,8 +8206,6 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button m1t2ColorButton;
         private System.Windows.Forms.Button m1t1ColorButton;
-        private System.Windows.Forms.ColorDialog m1t1Color;
-        private System.Windows.Forms.ColorDialog m1t2Color;
         private System.Windows.Forms.TabPage Replay_Manager;
         private System.Windows.Forms.ListView replayListView;
         private System.Windows.Forms.ImageList replayImageList;
@@ -8206,9 +8244,7 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.Label imageLabel1;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button colorThemeButton1;
-        private System.Windows.Forms.ColorDialog colorThemeDialog1;
-        private System.Windows.Forms.ColorDialog colorThemeDialog2;
-        private System.Windows.Forms.ColorDialog colorThemeDialog3;
+        private System.Windows.Forms.ColorDialog colorThemeDialog;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox m1t2p6Image;
@@ -8511,6 +8547,11 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.NumericUpDown bracketTeam1W;
         private System.Windows.Forms.ContextMenuStrip imageButtonContextMenu;
         private System.Windows.Forms.ToolStripMenuItem resetButtonImagePath;
+        private System.Windows.Forms.Button colorThemeButton8;
+        private System.Windows.Forms.Button colorThemeButton7;
+        private System.Windows.Forms.Button colorThemeButton6;
+        private System.Windows.Forms.Button colorThemeButton5;
+        private System.Windows.Forms.Button colorThemeButton4;
     }
 }
 #endregion

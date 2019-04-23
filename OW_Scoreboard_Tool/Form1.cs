@@ -59,6 +59,7 @@ namespace OW_Scoreboard_Tool
                 ColorTranslator.ToOle(ColorTranslator.FromHtml("#ff9c00")),
                 ColorTranslator.ToOle(ColorTranslator.FromHtml("#202224")),
                 ColorTranslator.ToOle(ColorTranslator.FromHtml("#C80013")),
+                ColorTranslator.ToOle(ColorTranslator.FromHtml("#27AAE1")),
                 ColorTranslator.ToOle(ColorTranslator.FromHtml("#D45800")),
                 ColorTranslator.ToOle(ColorTranslator.FromHtml("#D47900")),
                 ColorTranslator.ToOle(ColorTranslator.FromHtml("#FFD700")),
@@ -66,7 +67,6 @@ namespace OW_Scoreboard_Tool
                 ColorTranslator.ToOle(ColorTranslator.FromHtml("#CCFF00")),
                 ColorTranslator.ToOle(ColorTranslator.FromHtml("#00AB84")),
                 ColorTranslator.ToOle(ColorTranslator.FromHtml("#00FFFF")),
-                ColorTranslator.ToOle(ColorTranslator.FromHtml("#27AAE1")),
                 ColorTranslator.ToOle(ColorTranslator.FromHtml("#800080")),
                 ColorTranslator.ToOle(ColorTranslator.FromHtml("#523FFF")),
                 ColorTranslator.ToOle(ColorTranslator.FromHtml("#FF00FF")),
@@ -85,12 +85,7 @@ namespace OW_Scoreboard_Tool
             GenerateMaps();
             GenerateFolderList();
             GenerateFileList();
-            colorThemeDialog1.CustomColors = customColors;
-            colorThemeDialog2.CustomColors = customColors;
-            colorThemeDialog3.CustomColors = customColors;
-            m1t1Color.CustomColors = customColors;
-            m1t2Color.CustomColors = customColors;
-
+            colorThemeDialog.CustomColors = customColors;
 
             CheckFolders();
             CheckFiles();
@@ -113,7 +108,7 @@ namespace OW_Scoreboard_Tool
             loadText(m1t1p5Name, "Match1", "t1p5Name");
             loadText(m1t1p6Name, "Match1", "t1p6Name");
             loadText(m1t1Logo, "Match1", "t1Logo");
-            loadColor(m1t1Color, m1t1ColorButton, "Match1", "t1Color");
+            loadColor(m1t1ColorButton, "Match1", "t1Color");
 
             loadScore(m1t2Score, "Match1", "t2Score");
             loadText(m1t2Name, "Match1", "t2Name");
@@ -125,7 +120,7 @@ namespace OW_Scoreboard_Tool
             loadText(m1t2p5Name, "Match1", "t2p5Name");
             loadText(m1t2p6Name, "Match1", "t2p6Name");
             loadText(m1t2Logo, "Match1", "t2Logo");
-            loadColor(m1t2Color, m1t2ColorButton, "Match1", "t2Color");
+            loadColor(m1t2ColorButton, "Match1", "t2Color");
 
             loadScore(m1m1t1Score, "Match1", "m1t1Score");
             loadScore(m1m2t1Score, "Match1", "m2t1Score");
@@ -265,9 +260,14 @@ namespace OW_Scoreboard_Tool
             loadButton(imageButton27, "General", GeneralFiles[85].Replace(".png", ""));
             loadButton(imageButton28, "General", GeneralFiles[86].Replace(".png", ""));
 
-            loadColor(colorThemeDialog1, colorThemeButton1, "General", "colorTheme1");
-            loadColor(colorThemeDialog2, colorThemeButton2, "General", "colorTheme2");
-            loadColor(colorThemeDialog3, colorThemeButton3, "General", "colorTheme3");
+            loadColor(colorThemeButton1, "General", "colorTheme1");
+            loadColor(colorThemeButton2, "General", "colorTheme2");
+            loadColor(colorThemeButton3, "General", "colorTheme3");
+            loadColor(colorThemeButton4, "General", "colorTheme4");
+            loadColor(colorThemeButton5, "General", "colorTheme5");
+            loadColor(colorThemeButton6, "General", "colorTheme6");
+            loadColor(colorThemeButton7, "General", "colorTheme7");
+            loadColor(colorThemeButton8, "General", "colorTheme8");
 
             loadText(playerBox, "Player", "player");
             loadText(playerSRBox, "Player", "sr");
@@ -559,11 +559,10 @@ namespace OW_Scoreboard_Tool
             temp = "";
 
             Color tempColor = new Color();
-            tempColor = m1t1Color.Color;
-            m1t1Color.Color = m1t2Color.Color;
-            m1t1ColorButton.BackColor = m1t1Color.Color;
-            m1t2Color.Color = tempColor;
-            m1t2ColorButton.BackColor = m1t2Color.Color;
+            tempColor = m1t1ColorButton.BackColor;
+            m1t1ColorButton.BackColor = m1t2ColorButton.BackColor;
+            m1t2ColorButton.BackColor = tempColor;
+            tempColor = Color.Transparent;
 
             updateReplayPage();
 
@@ -683,8 +682,8 @@ namespace OW_Scoreboard_Tool
                 resetText(m1t1Logo);
                 resetText(m1t2Logo);
 
-                resetColor(m1t1Color, m1t1ColorButton);
-                resetColor(m1t2Color, m1t2ColorButton);
+                resetColor(colorThemeDialog, m1t1ColorButton);
+                resetColor(colorThemeDialog, m1t2ColorButton);
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -727,9 +726,14 @@ namespace OW_Scoreboard_Tool
                 resetText(utility20);
                 resetText(utility21);
                 resetText(utility22);
-                resetColor(colorThemeDialog1, colorThemeButton1);
-                resetColor(colorThemeDialog2, colorThemeButton2);
-                resetColor(colorThemeDialog3, colorThemeButton3);
+                resetColor(colorThemeDialog, colorThemeButton1);
+                resetColor(colorThemeDialog, colorThemeButton2);
+                resetColor(colorThemeDialog, colorThemeButton3);
+                resetColor(colorThemeDialog, colorThemeButton4);
+                resetColor(colorThemeDialog, colorThemeButton5);
+                resetColor(colorThemeDialog, colorThemeButton6);
+                resetColor(colorThemeDialog, colorThemeButton7);
+                resetColor(colorThemeDialog, colorThemeButton8);
                 resetButton(imageButton1);
                 resetButton(imageButton2);
                 resetButton(imageButton3);
@@ -782,7 +786,7 @@ namespace OW_Scoreboard_Tool
             updateText(m1t1p4Name, "Match1", "t1p4Name");
             updateText(m1t1p5Name, "Match1", "t1p5Name");
             updateText(m1t1p6Name, "Match1", "t1p6Name");
-            updateColor(m1t1Color, "Match1", "t1Color");
+            updateColor(m1t1ColorButton, "Match1", "t1Color");
 
             updateScore(m1t2Score, "Match1", "t2Score");
             updateText(m1t2Name, "Match1", "t2Name");
@@ -793,7 +797,7 @@ namespace OW_Scoreboard_Tool
             updateText(m1t2p4Name, "Match1", "t2p4Name");
             updateText(m1t2p5Name, "Match1", "t2p5Name");
             updateText(m1t2p6Name, "Match1", "t2p6Name");
-            updateColor(m1t2Color, "Match1", "t2Color");
+            updateColor(m1t1ColorButton, "Match1", "t2Color");
 
             updateHero(m1t1p1Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p1Hero");
             updateHero(m1t1p2Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p2Hero");
@@ -974,9 +978,14 @@ namespace OW_Scoreboard_Tool
             updateButton(imageButton28, "General", GeneralFiles[86].Replace(".png", ""));
 
 
-            updateColor(colorThemeDialog1, "General", "colorTheme1");
-            updateColor(colorThemeDialog2, "General", "colorTheme2");
-            updateColor(colorThemeDialog3, "General", "colorTheme3");
+            updateColor(colorThemeButton1, "General", "colorTheme1");
+            updateColor(colorThemeButton2, "General", "colorTheme2");
+            updateColor(colorThemeButton3, "General", "colorTheme3");
+            updateColor(colorThemeButton4, "General", "colorTheme4");
+            updateColor(colorThemeButton5, "General", "colorTheme5");
+            updateColor(colorThemeButton6, "General", "colorTheme6");
+            updateColor(colorThemeButton7, "General", "colorTheme7");
+            updateColor(colorThemeButton8, "General", "colorTheme8");
         }
 
         /// <summary>
@@ -1078,30 +1087,6 @@ namespace OW_Scoreboard_Tool
         private void button2_Click(object sender, EventArgs e)
         {
             GetLogoFile(m1t2Logo);
-        }
-
-        /// <summary>
-        /// Button to set the home team color
-        /// </summary>
-        private void m1t1ColorButton_Click(object sender, EventArgs e)
-        {
-            if (m1t1Color.ShowDialog() == DialogResult.OK)
-            {
-                Match1.Home.Color = ColorTranslator.ToHtml(Color.FromArgb(m1t1Color.Color.ToArgb()));
-                m1t1ColorButton.BackColor = m1t1Color.Color;
-            }
-        }
-
-        /// <summary>
-        /// Button to set the away team color
-        /// </summary>
-        private void m1t2ColorButton_Click(object sender, EventArgs e)
-        {
-            if (m1t2Color.ShowDialog() == DialogResult.OK)
-            {
-                Match1.Away.Color = ColorTranslator.ToHtml(Color.FromArgb(m1t2Color.Color.ToArgb()));
-                m1t2ColorButton.BackColor = m1t2Color.Color;
-            }
         }
 
         /// <summary>
@@ -2301,11 +2286,11 @@ namespace OW_Scoreboard_Tool
         /// <param name="field">The color dialog that is being read from</param>
         /// <param name="folder">The target folder</param>
         /// <param name="file">The file name before the extension</param>
-        private void updateColor(ColorDialog field, String folder, String file)
+        private void updateColor(Button field, String folder, String file)
         {
             using (StreamWriter sw = File.CreateText(path + "\\" + folder + "\\" + file + ".txt"))
             {
-                sw.WriteLine(ColorTranslator.ToHtml(Color.FromArgb(field.Color.ToArgb())));
+                sw.WriteLine(ColorTranslator.ToHtml(Color.FromArgb(field.BackColor.ToArgb())));
             }
         }
 
@@ -2522,13 +2507,12 @@ namespace OW_Scoreboard_Tool
         /// <param name="field">The text box that is being written to</param>
         /// <param name="folder">The target folder</param>
         /// <param name="file">The file name before the extension</param>
-        private void loadColor(ColorDialog field, Button button, String folder, String file)
+        private void loadColor(Button button, String folder, String file)
         {
             if (File.Exists(path + "\\" + folder + "\\" + file + ".txt"))
             {
                 string loadingText = File.ReadAllText(path + "\\" + folder + "\\" + file + ".txt");
                 Color loadedColor = System.Drawing.ColorTranslator.FromHtml(loadingText.Trim());
-                field.Color = loadedColor;
                 button.BackColor = loadedColor;
             }
             else
@@ -3736,6 +3720,11 @@ namespace OW_Scoreboard_Tool
                 "image26.png",
                 "image27.png",
                 "image28.png",
+                "colorTheme4.txt", //87
+                "colorTheme5.txt",
+                "colorTheme6.txt",
+                "colorTheme7.txt", 
+                "colorTheme8.txt"
             };
 
             PlayerFiles = new List<string>
@@ -4304,27 +4293,11 @@ namespace OW_Scoreboard_Tool
 
         }
 
-        private void colorThemeButton1_Click(object sender, EventArgs e)
+        private void colorThemeButton_Click(object sender, EventArgs e)
         {
-            if (colorThemeDialog1.ShowDialog() == DialogResult.OK)
+            if (colorThemeDialog.ShowDialog(this) == DialogResult.OK)
             {
-                colorThemeButton1.BackColor = colorThemeDialog1.Color;
-            }
-        }
-
-        private void colorThemeButton2_Click(object sender, EventArgs e)
-        {
-            if (colorThemeDialog2.ShowDialog() == DialogResult.OK)
-            {
-                colorThemeButton2.BackColor = colorThemeDialog2.Color;
-            }
-        }
-
-        private void colorThemeButton3_Click(object sender, EventArgs e)
-        {
-            if (colorThemeDialog3.ShowDialog() == DialogResult.OK)
-            {
-                colorThemeButton3.BackColor = colorThemeDialog3.Color;
+                ((Button)sender).BackColor = colorThemeDialog.Color;
             }
         }
 
