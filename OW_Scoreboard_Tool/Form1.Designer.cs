@@ -60,6 +60,8 @@ namespace OW_Scoreboard_Tool
             this.imageLabel16 = new System.Windows.Forms.Label();
             this.imageLabel15 = new System.Windows.Forms.Label();
             this.imageButton28 = new System.Windows.Forms.Button();
+            this.imageButtonContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.resetButtonImagePath = new System.Windows.Forms.ToolStripMenuItem();
             this.imageButton27 = new System.Windows.Forms.Button();
             this.imageButton26 = new System.Windows.Forms.Button();
             this.imageButton25 = new System.Windows.Forms.Button();
@@ -652,10 +654,9 @@ namespace OW_Scoreboard_Tool
             this.colorThemeDialog2 = new System.Windows.Forms.ColorDialog();
             this.colorThemeDialog3 = new System.Windows.Forms.ColorDialog();
             this.ButtonToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.imageButtonContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.resetButtonImagePath = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.General_Info.SuspendLayout();
+            this.imageButtonContextMenu.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -812,7 +813,6 @@ namespace OW_Scoreboard_Tool
             ((System.ComponentModel.ISupportInitialize)(this.bracketR1M2Score1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bracketR1M1Score2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bracketR1M1Score1)).BeginInit();
-            this.imageButtonContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1190,6 +1190,20 @@ namespace OW_Scoreboard_Tool
             this.imageButton28.Text = "...";
             this.imageButton28.UseVisualStyleBackColor = true;
             this.imageButton28.Click += new System.EventHandler(this.GetImageForButton);
+            // 
+            // imageButtonContextMenu
+            // 
+            this.imageButtonContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.resetButtonImagePath});
+            this.imageButtonContextMenu.Name = "imageButtonContextMenu";
+            this.imageButtonContextMenu.Size = new System.Drawing.Size(139, 26);
+            // 
+            // resetButtonImagePath
+            // 
+            this.resetButtonImagePath.Name = "resetButtonImagePath";
+            this.resetButtonImagePath.Size = new System.Drawing.Size(138, 22);
+            this.resetButtonImagePath.Text = "Reset Image";
+            this.resetButtonImagePath.Click += new System.EventHandler(this.resetButtonImagePath_Click);
             // 
             // imageButton27
             // 
@@ -2975,6 +2989,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t2p6ImageButton
             // 
+            this.m1t2p6ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t2p6ImageButton.Location = new System.Drawing.Point(469, 290);
             this.m1t2p6ImageButton.Name = "m1t2p6ImageButton";
             this.m1t2p6ImageButton.Size = new System.Drawing.Size(27, 23);
@@ -2986,6 +3001,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t2p5ImageButton
             // 
+            this.m1t2p5ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t2p5ImageButton.Location = new System.Drawing.Point(469, 251);
             this.m1t2p5ImageButton.Name = "m1t2p5ImageButton";
             this.m1t2p5ImageButton.Size = new System.Drawing.Size(27, 23);
@@ -2997,6 +3013,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t2p4ImageButton
             // 
+            this.m1t2p4ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t2p4ImageButton.Location = new System.Drawing.Point(469, 212);
             this.m1t2p4ImageButton.Name = "m1t2p4ImageButton";
             this.m1t2p4ImageButton.Size = new System.Drawing.Size(27, 23);
@@ -3008,6 +3025,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t2p3ImageButton
             // 
+            this.m1t2p3ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t2p3ImageButton.Location = new System.Drawing.Point(469, 173);
             this.m1t2p3ImageButton.Name = "m1t2p3ImageButton";
             this.m1t2p3ImageButton.Size = new System.Drawing.Size(27, 23);
@@ -3019,6 +3037,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t2p2ImageButton
             // 
+            this.m1t2p2ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t2p2ImageButton.Location = new System.Drawing.Point(469, 134);
             this.m1t2p2ImageButton.Name = "m1t2p2ImageButton";
             this.m1t2p2ImageButton.Size = new System.Drawing.Size(27, 23);
@@ -3030,6 +3049,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t2p1ImageButton
             // 
+            this.m1t2p1ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t2p1ImageButton.Location = new System.Drawing.Point(469, 95);
             this.m1t2p1ImageButton.Name = "m1t2p1ImageButton";
             this.m1t2p1ImageButton.Size = new System.Drawing.Size(27, 23);
@@ -3041,6 +3061,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t1p6ImageButton
             // 
+            this.m1t1p6ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t1p6ImageButton.Location = new System.Drawing.Point(435, 290);
             this.m1t1p6ImageButton.Name = "m1t1p6ImageButton";
             this.m1t1p6ImageButton.Size = new System.Drawing.Size(27, 23);
@@ -3052,6 +3073,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t1p5ImageButton
             // 
+            this.m1t1p5ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t1p5ImageButton.Location = new System.Drawing.Point(435, 251);
             this.m1t1p5ImageButton.Name = "m1t1p5ImageButton";
             this.m1t1p5ImageButton.Size = new System.Drawing.Size(27, 23);
@@ -3063,6 +3085,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t1p4ImageButton
             // 
+            this.m1t1p4ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t1p4ImageButton.Location = new System.Drawing.Point(435, 212);
             this.m1t1p4ImageButton.Name = "m1t1p4ImageButton";
             this.m1t1p4ImageButton.Size = new System.Drawing.Size(27, 23);
@@ -3074,6 +3097,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t1p3ImageButton
             // 
+            this.m1t1p3ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t1p3ImageButton.Location = new System.Drawing.Point(435, 173);
             this.m1t1p3ImageButton.Name = "m1t1p3ImageButton";
             this.m1t1p3ImageButton.Size = new System.Drawing.Size(27, 23);
@@ -3085,6 +3109,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t1p2ImageButton
             // 
+            this.m1t1p2ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t1p2ImageButton.Location = new System.Drawing.Point(435, 134);
             this.m1t1p2ImageButton.Name = "m1t1p2ImageButton";
             this.m1t1p2ImageButton.Size = new System.Drawing.Size(27, 23);
@@ -3096,6 +3121,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t1p1ImageButton
             // 
+            this.m1t1p1ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t1p1ImageButton.Location = new System.Drawing.Point(435, 95);
             this.m1t1p1ImageButton.Name = "m1t1p1ImageButton";
             this.m1t1p1ImageButton.Size = new System.Drawing.Size(27, 23);
@@ -3470,6 +3496,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t2LogoButton
             // 
+            this.m1t2LogoButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t2LogoButton.Location = new System.Drawing.Point(469, 19);
             this.m1t2LogoButton.Name = "m1t2LogoButton";
             this.m1t2LogoButton.Size = new System.Drawing.Size(27, 23);
@@ -3481,6 +3508,7 @@ namespace OW_Scoreboard_Tool
             // 
             // m1t1LogoButton
             // 
+            this.m1t1LogoButton.ContextMenuStrip = this.imageButtonContextMenu;
             this.m1t1LogoButton.Location = new System.Drawing.Point(435, 19);
             this.m1t1LogoButton.Name = "m1t1LogoButton";
             this.m1t1LogoButton.Size = new System.Drawing.Size(27, 23);
@@ -7670,20 +7698,6 @@ namespace OW_Scoreboard_Tool
             // 
             this.colorThemeDialog3.Color = System.Drawing.Color.Transparent;
             // 
-            // imageButtonContextMenu
-            // 
-            this.imageButtonContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.resetButtonImagePath});
-            this.imageButtonContextMenu.Name = "imageButtonContextMenu";
-            this.imageButtonContextMenu.Size = new System.Drawing.Size(139, 26);
-            // 
-            // resetButtonImagePath
-            // 
-            this.resetButtonImagePath.Name = "resetButtonImagePath";
-            this.resetButtonImagePath.Size = new System.Drawing.Size(138, 22);
-            this.resetButtonImagePath.Text = "Reset Image";
-            this.resetButtonImagePath.Click += new System.EventHandler(this.resetButtonImagePath_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7699,6 +7713,7 @@ namespace OW_Scoreboard_Tool
             this.menuStrip1.PerformLayout();
             this.General_Info.ResumeLayout(false);
             this.General_Info.PerformLayout();
+            this.imageButtonContextMenu.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -7866,7 +7881,6 @@ namespace OW_Scoreboard_Tool
             ((System.ComponentModel.ISupportInitialize)(this.bracketR1M2Score1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bracketR1M1Score2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bracketR1M1Score1)).EndInit();
-            this.imageButtonContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

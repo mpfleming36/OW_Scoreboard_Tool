@@ -3320,6 +3320,10 @@ namespace OW_Scoreboard_Tool
                         Thread.Sleep(1000);
                         File.Copy(e.FullPath, copiedFullPath);
                         BeginInvoke(new Action(() => addReplay(copiedFullPath)));
+                        using (StreamWriter sw = File.CreateText(path + FolderList[4] + "\\" + ReplayFiles[2]))
+                        {
+                            sw.WriteLine(copiedFullPath.Replace(path + FolderList[5] + "\\", ""));
+                        }
                     }
                 }
                 else
@@ -3327,6 +3331,10 @@ namespace OW_Scoreboard_Tool
                     Thread.Sleep(1000);
                     File.Copy(e.FullPath, copiedFullPath);
                     BeginInvoke(new Action(() => addReplay(copiedFullPath)));
+                    using (StreamWriter sw = File.CreateText(path + FolderList[4] + "\\" + ReplayFiles[2]))
+                    {
+                        sw.WriteLine(copiedFullPath.Replace(path + FolderList[5] + "\\", ""));
+                    }
                 }
             }
         }
