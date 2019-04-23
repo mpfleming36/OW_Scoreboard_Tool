@@ -797,7 +797,7 @@ namespace OW_Scoreboard_Tool
             updateText(m1t2p4Name, "Match1", "t2p4Name");
             updateText(m1t2p5Name, "Match1", "t2p5Name");
             updateText(m1t2p6Name, "Match1", "t2p6Name");
-            updateColor(m1t1ColorButton, "Match1", "t2Color");
+            updateColor(m1t2ColorButton, "Match1", "t2Color");
 
             updateHero(m1t1p1Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p1Hero");
             updateHero(m1t1p2Hero, m1HeroPortrait, m1HeroIcon, m1Hero3D, "Match1", "t1p2Hero");
