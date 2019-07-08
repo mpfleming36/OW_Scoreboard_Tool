@@ -11,12 +11,14 @@ namespace OW_Scoreboard_Tool.Entities
     public class Gametype
     {
         #region Properties
-        private string _name;
-        private Bitmap _icon;
+        private string _name = "";
+        private Bitmap _icon = Properties.Resources.Icon_none;
+        private string _iconPath = "";
 
         public string Name { get => _name; set => _name = value; }
         [XmlIgnore]
         public Bitmap Icon { get => _icon; set => _icon = value; }
+        public string IconPath { get => _iconPath; set => _iconPath = value; }
         #endregion
 
         #region Constructors
@@ -33,10 +35,12 @@ namespace OW_Scoreboard_Tool.Entities
         /// </summary>
         /// <param name="name"></param>
         /// <param name="icon"></param>
-        public Gametype(string name, Bitmap icon)
+        /// <param name="iconPath"></param>
+        public Gametype(string name, Bitmap icon, string iconPath)
         {
             _name = name;
             _icon = icon;
+            _iconPath = iconPath;
         }
         #endregion
     }

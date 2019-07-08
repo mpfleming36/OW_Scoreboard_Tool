@@ -553,6 +553,16 @@ namespace OW_Scoreboard_Tool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Color_Havana {
+            get {
+                object obj = ResourceManager.GetObject("Color_Havana", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Color_Hollywood {
             get {
                 object obj = ResourceManager.GetObject("Color_Hollywood", resourceCulture);
@@ -1283,6 +1293,16 @@ namespace OW_Scoreboard_Tool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_havana {
+            get {
+                object obj = ResourceManager.GetObject("Icon_havana", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_hollywood {
             get {
                 object obj = ResourceManager.GetObject("Icon_hollywood", resourceCulture);
@@ -1866,6 +1886,16 @@ namespace OW_Scoreboard_Tool.Properties {
         internal static System.Drawing.Bitmap Pharah_OWL {
             get {
                 object obj = ResourceManager.GetObject("Pharah_OWL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Questionmark {
+            get {
+                object obj = ResourceManager.GetObject("Questionmark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

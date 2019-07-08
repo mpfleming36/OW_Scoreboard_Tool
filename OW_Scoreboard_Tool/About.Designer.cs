@@ -55,6 +55,7 @@
             this.Controls.Add(this.description);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(400, 425);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(400, 425);
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;

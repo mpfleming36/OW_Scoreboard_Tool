@@ -75,6 +75,66 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Dialogs\SelectGametypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dialogs\SelectGametypeDialog.Designer.cs">
+      <DependentUpon>SelectGametypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\SelectHeroDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dialogs\SelectHeroDialog.Designer.cs">
+      <DependentUpon>SelectHeroDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\SelectMapDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dialogs\SelectMapDialog.Designer.cs">
+      <DependentUpon>SelectMapDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\SelectObjectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dialogs\SelectObjectDialog.Designer.cs">
+      <DependentUpon>SelectObjectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\SelectRoleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dialogs\SelectRoleDialog.Designer.cs">
+      <DependentUpon>SelectRoleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\CreateRoleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dialogs\CreateRoleDialog.Designer.cs">
+      <DependentUpon>CreateRoleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\CreateMapDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dialogs\CreateMapDialog.Designer.cs">
+      <DependentUpon>CreateMapDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\CreateHeroDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dialogs\CreateHeroDialog.Designer.cs">
+      <DependentUpon>CreateHeroDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\CreateGametypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dialogs\CreateGametypeDialog.Designer.cs">
+      <DependentUpon>CreateGametypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\CreateObjectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dialogs\CreateObjectDialog.Designer.cs">
+      <DependentUpon>CreateObjectDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Game.cs" />
     <Compile Include="Entities\Gametype.cs" />
     <Compile Include="Entities\Hero.cs" />
@@ -94,6 +154,36 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dialogs\SelectGametypeDialog.resx">
+      <DependentUpon>SelectGametypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dialogs\CreateGametypeDialog.resx">
+      <DependentUpon>CreateGametypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dialogs\SelectHeroDialog.resx">
+      <DependentUpon>SelectHeroDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dialogs\CreateHeroDialog.resx">
+      <DependentUpon>CreateHeroDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dialogs\SelectMapDialog.resx">
+      <DependentUpon>SelectMapDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dialogs\CreateMapDialog.resx">
+      <DependentUpon>CreateMapDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dialogs\SelectObjectDialog.resx">
+      <DependentUpon>SelectObjectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dialogs\CreateObjectDialog.resx">
+      <DependentUpon>CreateObjectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dialogs\SelectRoleDialog.resx">
+      <DependentUpon>SelectRoleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dialogs\CreateRoleDialog.resx">
+      <DependentUpon>CreateRoleDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -221,9 +311,11 @@
     <Content Include="Resources\Baptiste.png" />
     <Content Include="Resources\Baptiste_OWL.png" />
     <Content Include="Resources\BGG.png" />
+    <Content Include="Resources\Color Havana.png" />
     <Content Include="Resources\Color Paris.png" />
     <Content Include="Resources\Desat Paris.png" />
     <Content Include="Resources\Icon-Baptiste.png" />
+    <None Include="Resources\Icon-havana.png" />
     <Content Include="Resources\Icon-paris.png" />
     <Content Include="Resources\Icon-Wrecking_Ball.png" />
     <None Include="Resources\Junkrat_OWL.png" />
@@ -244,6 +336,7 @@
     <None Include="Resources\Tracer_OWL.png" />
     <None Include="Resources\Widowmaker_OWL.png" />
     <None Include="Resources\Winston_OWL.png" />
+    <None Include="Resources\Questionmark.png" />
     <Content Include="Resources\WreckingBall.png" />
     <None Include="Resources\Zenyatta_OWL.png" />
     <None Include="Resources\Icon-rialto.png" />

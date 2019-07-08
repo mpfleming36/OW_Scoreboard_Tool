@@ -43,6 +43,28 @@ namespace OW_Scoreboard_Tool
             this.importAwayTeamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportHomeTeamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportAwayTeamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createGametypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editGametypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteGametypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.defaultGametypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.heroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createHeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editHeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteHeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.defaultHeroesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mapToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.createMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.defaultMapsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.roleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createRoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editRoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteRoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.defaultRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.defaultAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.General_Info = new System.Windows.Forms.TabPage();
             this.colorThemeButton8 = new System.Windows.Forms.Button();
@@ -117,9 +139,7 @@ namespace OW_Scoreboard_Tool
             this.label19 = new System.Windows.Forms.Label();
             this.playerNameBox = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.playerImagePath = new System.Windows.Forms.TextBox();
             this.playerImageButton = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.imageButton14 = new System.Windows.Forms.Button();
             this.utility22 = new System.Windows.Forms.TextBox();
             this.imageButton13 = new System.Windows.Forms.Button();
@@ -151,7 +171,6 @@ namespace OW_Scoreboard_Tool
             this.label9 = new System.Windows.Forms.Label();
             this.playerSRBox = new System.Windows.Forms.TextBox();
             this.playerBox = new System.Windows.Forms.TextBox();
-            this.playerTeamLogoBox = new System.Windows.Forms.TextBox();
             this.playerTeamBox = new System.Windows.Forms.TextBox();
             this.utility8 = new System.Windows.Forms.TextBox();
             this.utility7 = new System.Windows.Forms.TextBox();
@@ -170,18 +189,6 @@ namespace OW_Scoreboard_Tool
             this.label1 = new System.Windows.Forms.Label();
             this.playerRoleBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.playerHero3D3 = new System.Windows.Forms.RadioButton();
-            this.playerHeroPortrait3 = new System.Windows.Forms.RadioButton();
-            this.playerHeroIcon3 = new System.Windows.Forms.RadioButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.playerHero3D2 = new System.Windows.Forms.RadioButton();
-            this.playerHeroPortrait2 = new System.Windows.Forms.RadioButton();
-            this.playerHeroIcon2 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.playerHero3D1 = new System.Windows.Forms.RadioButton();
-            this.playerHeroPortrait1 = new System.Windows.Forms.RadioButton();
-            this.playerHeroIcon1 = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.playerHeroBox3 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -189,7 +196,6 @@ namespace OW_Scoreboard_Tool
             this.label2 = new System.Windows.Forms.Label();
             this.playerHeroBox1 = new System.Windows.Forms.ComboBox();
             this.playerTeamLogoButton = new System.Windows.Forms.Button();
-            this.playerTeamLogoLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.playerUpdate = new System.Windows.Forms.Button();
             this.playerReset = new System.Windows.Forms.Button();
@@ -214,22 +220,8 @@ namespace OW_Scoreboard_Tool
             this.Match_1 = new System.Windows.Forms.TabPage();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.m1t2p6Image = new System.Windows.Forms.TextBox();
-            this.m1t2p5Image = new System.Windows.Forms.TextBox();
-            this.m1t2p4Image = new System.Windows.Forms.TextBox();
-            this.m1t2p3Image = new System.Windows.Forms.TextBox();
-            this.m1t2p2Image = new System.Windows.Forms.TextBox();
-            this.m1t2p1Image = new System.Windows.Forms.TextBox();
-            this.m1t1p6Image = new System.Windows.Forms.TextBox();
-            this.m1t1p5Image = new System.Windows.Forms.TextBox();
-            this.m1t1p4Image = new System.Windows.Forms.TextBox();
-            this.m1t1p3Image = new System.Windows.Forms.TextBox();
-            this.m1t1p2Image = new System.Windows.Forms.TextBox();
-            this.m1t1p1Image = new System.Windows.Forms.TextBox();
             this.m1t2ColorButton = new System.Windows.Forms.Button();
             this.m1t1ColorButton = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.m1t2p6ImageButton = new System.Windows.Forms.Button();
             this.m1t2p5ImageButton = new System.Windows.Forms.Button();
             this.m1t2p4ImageButton = new System.Windows.Forms.Button();
@@ -258,13 +250,6 @@ namespace OW_Scoreboard_Tool
             this.m1t1p1Info = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.m1Hero3D = new System.Windows.Forms.RadioButton();
-            this.m1HeroPortrait = new System.Windows.Forms.RadioButton();
-            this.m1HeroIcon = new System.Windows.Forms.RadioButton();
-            this.m1MapStyle = new System.Windows.Forms.GroupBox();
-            this.m1MapFull = new System.Windows.Forms.RadioButton();
-            this.m1MapLong = new System.Windows.Forms.RadioButton();
             this.m1Map = new System.Windows.Forms.GroupBox();
             this.m1m0Selected = new System.Windows.Forms.RadioButton();
             this.m1m6Selected = new System.Windows.Forms.RadioButton();
@@ -283,8 +268,6 @@ namespace OW_Scoreboard_Tool
             this.m1m1Completed = new System.Windows.Forms.CheckBox();
             this.m1t2LogoButton = new System.Windows.Forms.Button();
             this.m1t1LogoButton = new System.Windows.Forms.Button();
-            this.m1t2Logo = new System.Windows.Forms.TextBox();
-            this.m1t1Logo = new System.Windows.Forms.TextBox();
             this.m1t2SR = new System.Windows.Forms.TextBox();
             this.m1t1SR = new System.Windows.Forms.TextBox();
             this.m1MutualInfo = new System.Windows.Forms.TextBox();
@@ -658,12 +641,7 @@ namespace OW_Scoreboard_Tool
             this.menuStrip1.SuspendLayout();
             this.General_Info.SuspendLayout();
             this.imageButtonContextMenu.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.Match_1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.m1MapStyle.SuspendLayout();
             this.m1Map.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m1m7t2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m1m7t1Score)).BeginInit();
@@ -821,6 +799,7 @@ namespace OW_Scoreboard_Tool
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.teamToolStripMenuItem,
+            this.customizeToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -859,36 +838,211 @@ namespace OW_Scoreboard_Tool
             this.exportHomeTeamToolStripMenuItem,
             this.exportAwayTeamToolStripMenuItem});
             this.teamToolStripMenuItem.Name = "teamToolStripMenuItem";
-            this.teamToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.teamToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.teamToolStripMenuItem.Text = "Team";
             // 
             // importHomeTeamToolStripMenuItem
             // 
             this.importHomeTeamToolStripMenuItem.Name = "importHomeTeamToolStripMenuItem";
-            this.importHomeTeamToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.importHomeTeamToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.importHomeTeamToolStripMenuItem.Text = "Import Home Team";
             this.importHomeTeamToolStripMenuItem.Click += new System.EventHandler(this.importHomeTeamToolStripMenuItem_Click);
             // 
             // importAwayTeamToolStripMenuItem
             // 
             this.importAwayTeamToolStripMenuItem.Name = "importAwayTeamToolStripMenuItem";
-            this.importAwayTeamToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.importAwayTeamToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.importAwayTeamToolStripMenuItem.Text = "Import Away Team";
             this.importAwayTeamToolStripMenuItem.Click += new System.EventHandler(this.importAwayTeamToolStripMenuItem_Click);
             // 
             // exportHomeTeamToolStripMenuItem
             // 
             this.exportHomeTeamToolStripMenuItem.Name = "exportHomeTeamToolStripMenuItem";
-            this.exportHomeTeamToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.exportHomeTeamToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.exportHomeTeamToolStripMenuItem.Text = "Export Home Team";
             this.exportHomeTeamToolStripMenuItem.Click += new System.EventHandler(this.exportHomeTeamToolStripMenuItem_Click);
             // 
             // exportAwayTeamToolStripMenuItem
             // 
             this.exportAwayTeamToolStripMenuItem.Name = "exportAwayTeamToolStripMenuItem";
-            this.exportAwayTeamToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.exportAwayTeamToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.exportAwayTeamToolStripMenuItem.Text = "Export Away Team";
             this.exportAwayTeamToolStripMenuItem.Click += new System.EventHandler(this.exportAwayTeamToolStripMenuItem_Click);
+            // 
+            // customizeToolStripMenuItem
+            // 
+            this.customizeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mapToolStripMenuItem,
+            this.heroToolStripMenuItem,
+            this.mapToolStripMenuItem1,
+            this.roleToolStripMenuItem,
+            this.defaultAllToolStripMenuItem});
+            this.customizeToolStripMenuItem.Name = "customizeToolStripMenuItem";
+            this.customizeToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.customizeToolStripMenuItem.Text = "Customize";
+            // 
+            // mapToolStripMenuItem
+            // 
+            this.mapToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createGametypeToolStripMenuItem,
+            this.editGametypeToolStripMenuItem,
+            this.deleteGametypeToolStripMenuItem,
+            this.defaultGametypesToolStripMenuItem});
+            this.mapToolStripMenuItem.Name = "mapToolStripMenuItem";
+            this.mapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mapToolStripMenuItem.Text = "Gametype";
+            // 
+            // createGametypeToolStripMenuItem
+            // 
+            this.createGametypeToolStripMenuItem.Name = "createGametypeToolStripMenuItem";
+            this.createGametypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createGametypeToolStripMenuItem.Text = "Create Gametype";
+            this.createGametypeToolStripMenuItem.Click += new System.EventHandler(this.createGametypeToolStripMenuItem_Click);
+            // 
+            // editGametypeToolStripMenuItem
+            // 
+            this.editGametypeToolStripMenuItem.Name = "editGametypeToolStripMenuItem";
+            this.editGametypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editGametypeToolStripMenuItem.Text = "Edit Gametype";
+            this.editGametypeToolStripMenuItem.Click += new System.EventHandler(this.editGametypeToolStripMenuItem_Click);
+            // 
+            // deleteGametypeToolStripMenuItem
+            // 
+            this.deleteGametypeToolStripMenuItem.Name = "deleteGametypeToolStripMenuItem";
+            this.deleteGametypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteGametypeToolStripMenuItem.Text = "Delete Gametype";
+            this.deleteGametypeToolStripMenuItem.Click += new System.EventHandler(this.deleteGametypeToolStripMenuItem_Click);
+            // 
+            // defaultGametypesToolStripMenuItem
+            // 
+            this.defaultGametypesToolStripMenuItem.Name = "defaultGametypesToolStripMenuItem";
+            this.defaultGametypesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.defaultGametypesToolStripMenuItem.Text = "Default Gametypes";
+            this.defaultGametypesToolStripMenuItem.Click += new System.EventHandler(this.defaultGametypesToolStripMenuItem_Click);
+            // 
+            // heroToolStripMenuItem
+            // 
+            this.heroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createHeroToolStripMenuItem,
+            this.editHeroToolStripMenuItem,
+            this.deleteHeroToolStripMenuItem,
+            this.defaultHeroesToolStripMenuItem});
+            this.heroToolStripMenuItem.Name = "heroToolStripMenuItem";
+            this.heroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.heroToolStripMenuItem.Text = "Hero";
+            // 
+            // createHeroToolStripMenuItem
+            // 
+            this.createHeroToolStripMenuItem.Name = "createHeroToolStripMenuItem";
+            this.createHeroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.createHeroToolStripMenuItem.Text = "Create Hero";
+            this.createHeroToolStripMenuItem.Click += new System.EventHandler(this.createHeroToolStripMenuItem_Click);
+            // 
+            // editHeroToolStripMenuItem
+            // 
+            this.editHeroToolStripMenuItem.Name = "editHeroToolStripMenuItem";
+            this.editHeroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editHeroToolStripMenuItem.Text = "Edit Hero";
+            this.editHeroToolStripMenuItem.Click += new System.EventHandler(this.editHeroToolStripMenuItem_Click);
+            // 
+            // deleteHeroToolStripMenuItem
+            // 
+            this.deleteHeroToolStripMenuItem.Name = "deleteHeroToolStripMenuItem";
+            this.deleteHeroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteHeroToolStripMenuItem.Text = "Delete Hero";
+            this.deleteHeroToolStripMenuItem.Click += new System.EventHandler(this.deleteHeroToolStripMenuItem_Click);
+            // 
+            // defaultHeroesToolStripMenuItem
+            // 
+            this.defaultHeroesToolStripMenuItem.Name = "defaultHeroesToolStripMenuItem";
+            this.defaultHeroesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.defaultHeroesToolStripMenuItem.Text = "Default Heroes";
+            this.defaultHeroesToolStripMenuItem.Click += new System.EventHandler(this.defaultHeroesToolStripMenuItem_Click);
+            // 
+            // mapToolStripMenuItem1
+            // 
+            this.mapToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createMapToolStripMenuItem,
+            this.editMapToolStripMenuItem,
+            this.deleteMapToolStripMenuItem,
+            this.defaultMapsToolStripMenuItem});
+            this.mapToolStripMenuItem1.Name = "mapToolStripMenuItem1";
+            this.mapToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.mapToolStripMenuItem1.Text = "Map";
+            // 
+            // createMapToolStripMenuItem
+            // 
+            this.createMapToolStripMenuItem.Name = "createMapToolStripMenuItem";
+            this.createMapToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.createMapToolStripMenuItem.Text = "Create Map";
+            this.createMapToolStripMenuItem.Click += new System.EventHandler(this.createMapToolStripMenuItem_Click);
+            // 
+            // editMapToolStripMenuItem
+            // 
+            this.editMapToolStripMenuItem.Name = "editMapToolStripMenuItem";
+            this.editMapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editMapToolStripMenuItem.Text = "Edit Map";
+            this.editMapToolStripMenuItem.Click += new System.EventHandler(this.editMapToolStripMenuItem_Click);
+            // 
+            // deleteMapToolStripMenuItem
+            // 
+            this.deleteMapToolStripMenuItem.Name = "deleteMapToolStripMenuItem";
+            this.deleteMapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteMapToolStripMenuItem.Text = "Delete Map";
+            this.deleteMapToolStripMenuItem.Click += new System.EventHandler(this.deleteMapToolStripMenuItem_Click);
+            // 
+            // defaultMapsToolStripMenuItem
+            // 
+            this.defaultMapsToolStripMenuItem.Name = "defaultMapsToolStripMenuItem";
+            this.defaultMapsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.defaultMapsToolStripMenuItem.Text = "Default Maps";
+            this.defaultMapsToolStripMenuItem.Click += new System.EventHandler(this.defaultMapsToolStripMenuItem_Click);
+            // 
+            // roleToolStripMenuItem
+            // 
+            this.roleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createRoleToolStripMenuItem,
+            this.editRoleToolStripMenuItem,
+            this.deleteRoleToolStripMenuItem,
+            this.defaultRolesToolStripMenuItem});
+            this.roleToolStripMenuItem.Name = "roleToolStripMenuItem";
+            this.roleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.roleToolStripMenuItem.Text = "Role";
+            // 
+            // createRoleToolStripMenuItem
+            // 
+            this.createRoleToolStripMenuItem.Name = "createRoleToolStripMenuItem";
+            this.createRoleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.createRoleToolStripMenuItem.Text = "Create Role";
+            this.createRoleToolStripMenuItem.Click += new System.EventHandler(this.createRoleToolStripMenuItem_Click);
+            // 
+            // editRoleToolStripMenuItem
+            // 
+            this.editRoleToolStripMenuItem.Name = "editRoleToolStripMenuItem";
+            this.editRoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editRoleToolStripMenuItem.Text = "Edit Role";
+            this.editRoleToolStripMenuItem.Click += new System.EventHandler(this.editRoleToolStripMenuItem_Click);
+            // 
+            // deleteRoleToolStripMenuItem
+            // 
+            this.deleteRoleToolStripMenuItem.Name = "deleteRoleToolStripMenuItem";
+            this.deleteRoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteRoleToolStripMenuItem.Text = "Delete Role";
+            this.deleteRoleToolStripMenuItem.Click += new System.EventHandler(this.deleteRoleToolStripMenuItem_Click);
+            // 
+            // defaultRolesToolStripMenuItem
+            // 
+            this.defaultRolesToolStripMenuItem.Name = "defaultRolesToolStripMenuItem";
+            this.defaultRolesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.defaultRolesToolStripMenuItem.Text = "Default Roles";
+            this.defaultRolesToolStripMenuItem.Click += new System.EventHandler(this.defaultRolesToolStripMenuItem_Click);
+            // 
+            // defaultAllToolStripMenuItem
+            // 
+            this.defaultAllToolStripMenuItem.Name = "defaultAllToolStripMenuItem";
+            this.defaultAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.defaultAllToolStripMenuItem.Text = "Default All";
+            this.defaultAllToolStripMenuItem.Click += new System.EventHandler(this.defaultAllToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -969,9 +1123,7 @@ namespace OW_Scoreboard_Tool
             this.General_Info.Controls.Add(this.label19);
             this.General_Info.Controls.Add(this.playerNameBox);
             this.General_Info.Controls.Add(this.label18);
-            this.General_Info.Controls.Add(this.playerImagePath);
             this.General_Info.Controls.Add(this.playerImageButton);
-            this.General_Info.Controls.Add(this.label13);
             this.General_Info.Controls.Add(this.imageButton14);
             this.General_Info.Controls.Add(this.utility22);
             this.General_Info.Controls.Add(this.imageButton13);
@@ -1003,7 +1155,6 @@ namespace OW_Scoreboard_Tool
             this.General_Info.Controls.Add(this.label9);
             this.General_Info.Controls.Add(this.playerSRBox);
             this.General_Info.Controls.Add(this.playerBox);
-            this.General_Info.Controls.Add(this.playerTeamLogoBox);
             this.General_Info.Controls.Add(this.playerTeamBox);
             this.General_Info.Controls.Add(this.utility8);
             this.General_Info.Controls.Add(this.utility7);
@@ -1022,9 +1173,6 @@ namespace OW_Scoreboard_Tool
             this.General_Info.Controls.Add(this.label1);
             this.General_Info.Controls.Add(this.playerRoleBox);
             this.General_Info.Controls.Add(this.label3);
-            this.General_Info.Controls.Add(this.groupBox4);
-            this.General_Info.Controls.Add(this.groupBox3);
-            this.General_Info.Controls.Add(this.groupBox1);
             this.General_Info.Controls.Add(this.label5);
             this.General_Info.Controls.Add(this.playerHeroBox3);
             this.General_Info.Controls.Add(this.label4);
@@ -1032,7 +1180,6 @@ namespace OW_Scoreboard_Tool
             this.General_Info.Controls.Add(this.label2);
             this.General_Info.Controls.Add(this.playerHeroBox1);
             this.General_Info.Controls.Add(this.playerTeamLogoButton);
-            this.General_Info.Controls.Add(this.playerTeamLogoLabel);
             this.General_Info.Controls.Add(this.label6);
             this.General_Info.Controls.Add(this.playerUpdate);
             this.General_Info.Controls.Add(this.playerReset);
@@ -1722,7 +1869,7 @@ namespace OW_Scoreboard_Tool
             // 
             // playerNameBox
             // 
-            this.playerNameBox.Location = new System.Drawing.Point(632, 212);
+            this.playerNameBox.Location = new System.Drawing.Point(759, 89);
             this.playerNameBox.Name = "playerNameBox";
             this.playerNameBox.Size = new System.Drawing.Size(118, 20);
             this.playerNameBox.TabIndex = 150;
@@ -1730,39 +1877,21 @@ namespace OW_Scoreboard_Tool
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(632, 196);
+            this.label18.Location = new System.Drawing.Point(759, 73);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(67, 13);
             this.label18.TabIndex = 149;
             this.label18.Text = "Player Name";
             // 
-            // playerImagePath
-            // 
-            this.playerImagePath.Enabled = false;
-            this.playerImagePath.Location = new System.Drawing.Point(756, 212);
-            this.playerImagePath.Name = "playerImagePath";
-            this.playerImagePath.Size = new System.Drawing.Size(136, 20);
-            this.playerImagePath.TabIndex = 147;
-            // 
             // playerImageButton
             // 
-            this.playerImageButton.Location = new System.Drawing.Point(898, 210);
+            this.playerImageButton.Location = new System.Drawing.Point(901, 129);
             this.playerImageButton.Name = "playerImageButton";
             this.playerImageButton.Size = new System.Drawing.Size(27, 23);
             this.playerImageButton.TabIndex = 148;
             this.playerImageButton.Text = "...";
             this.playerImageButton.UseVisualStyleBackColor = true;
-            this.playerImageButton.Click += new System.EventHandler(this.playerImageButton_Click);
             this.playerImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(756, 196);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 13);
-            this.label13.TabIndex = 146;
-            this.label13.Text = "Player Image";
             // 
             // imageButton14
             // 
@@ -2067,14 +2196,6 @@ namespace OW_Scoreboard_Tool
             this.playerBox.Size = new System.Drawing.Size(126, 20);
             this.playerBox.TabIndex = 113;
             // 
-            // playerTeamLogoBox
-            // 
-            this.playerTeamLogoBox.Enabled = false;
-            this.playerTeamLogoBox.Location = new System.Drawing.Point(632, 292);
-            this.playerTeamLogoBox.Name = "playerTeamLogoBox";
-            this.playerTeamLogoBox.Size = new System.Drawing.Size(136, 20);
-            this.playerTeamLogoBox.TabIndex = 100;
-            // 
             // playerTeamBox
             // 
             this.playerTeamBox.Location = new System.Drawing.Point(632, 251);
@@ -2213,135 +2334,6 @@ namespace OW_Scoreboard_Tool
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 112;
             this.label3.Text = "Player";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.playerHero3D3);
-            this.groupBox4.Controls.Add(this.playerHeroPortrait3);
-            this.groupBox4.Controls.Add(this.playerHeroIcon3);
-            this.groupBox4.Location = new System.Drawing.Point(759, 162);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(166, 29);
-            this.groupBox4.TabIndex = 110;
-            this.groupBox4.TabStop = false;
-            // 
-            // playerHero3D3
-            // 
-            this.playerHero3D3.AutoSize = true;
-            this.playerHero3D3.Location = new System.Drawing.Point(121, 9);
-            this.playerHero3D3.Name = "playerHero3D3";
-            this.playerHero3D3.Size = new System.Drawing.Size(39, 17);
-            this.playerHero3D3.TabIndex = 94;
-            this.playerHero3D3.Text = "3D";
-            this.playerHero3D3.UseVisualStyleBackColor = true;
-            // 
-            // playerHeroPortrait3
-            // 
-            this.playerHeroPortrait3.AutoSize = true;
-            this.playerHeroPortrait3.Checked = true;
-            this.playerHeroPortrait3.Location = new System.Drawing.Point(6, 9);
-            this.playerHeroPortrait3.Name = "playerHeroPortrait3";
-            this.playerHeroPortrait3.Size = new System.Drawing.Size(58, 17);
-            this.playerHeroPortrait3.TabIndex = 92;
-            this.playerHeroPortrait3.TabStop = true;
-            this.playerHeroPortrait3.Text = "Portrait";
-            this.playerHeroPortrait3.UseVisualStyleBackColor = true;
-            // 
-            // playerHeroIcon3
-            // 
-            this.playerHeroIcon3.AutoSize = true;
-            this.playerHeroIcon3.Location = new System.Drawing.Point(70, 9);
-            this.playerHeroIcon3.Name = "playerHeroIcon3";
-            this.playerHeroIcon3.Size = new System.Drawing.Size(46, 17);
-            this.playerHeroIcon3.TabIndex = 93;
-            this.playerHeroIcon3.Text = "Icon";
-            this.playerHeroIcon3.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.playerHero3D2);
-            this.groupBox3.Controls.Add(this.playerHeroPortrait2);
-            this.groupBox3.Controls.Add(this.playerHeroIcon2);
-            this.groupBox3.Location = new System.Drawing.Point(759, 122);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(166, 29);
-            this.groupBox3.TabIndex = 109;
-            this.groupBox3.TabStop = false;
-            // 
-            // playerHero3D2
-            // 
-            this.playerHero3D2.AutoSize = true;
-            this.playerHero3D2.Location = new System.Drawing.Point(121, 10);
-            this.playerHero3D2.Name = "playerHero3D2";
-            this.playerHero3D2.Size = new System.Drawing.Size(39, 17);
-            this.playerHero3D2.TabIndex = 94;
-            this.playerHero3D2.Text = "3D";
-            this.playerHero3D2.UseVisualStyleBackColor = true;
-            // 
-            // playerHeroPortrait2
-            // 
-            this.playerHeroPortrait2.AutoSize = true;
-            this.playerHeroPortrait2.Checked = true;
-            this.playerHeroPortrait2.Location = new System.Drawing.Point(6, 9);
-            this.playerHeroPortrait2.Name = "playerHeroPortrait2";
-            this.playerHeroPortrait2.Size = new System.Drawing.Size(58, 17);
-            this.playerHeroPortrait2.TabIndex = 92;
-            this.playerHeroPortrait2.TabStop = true;
-            this.playerHeroPortrait2.Text = "Portrait";
-            this.playerHeroPortrait2.UseVisualStyleBackColor = true;
-            // 
-            // playerHeroIcon2
-            // 
-            this.playerHeroIcon2.AutoSize = true;
-            this.playerHeroIcon2.Location = new System.Drawing.Point(70, 10);
-            this.playerHeroIcon2.Name = "playerHeroIcon2";
-            this.playerHeroIcon2.Size = new System.Drawing.Size(46, 17);
-            this.playerHeroIcon2.TabIndex = 93;
-            this.playerHeroIcon2.Text = "Icon";
-            this.playerHeroIcon2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.playerHero3D1);
-            this.groupBox1.Controls.Add(this.playerHeroPortrait1);
-            this.groupBox1.Controls.Add(this.playerHeroIcon1);
-            this.groupBox1.Location = new System.Drawing.Point(759, 82);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(166, 29);
-            this.groupBox1.TabIndex = 108;
-            this.groupBox1.TabStop = false;
-            // 
-            // playerHero3D1
-            // 
-            this.playerHero3D1.AutoSize = true;
-            this.playerHero3D1.Location = new System.Drawing.Point(121, 9);
-            this.playerHero3D1.Name = "playerHero3D1";
-            this.playerHero3D1.Size = new System.Drawing.Size(39, 17);
-            this.playerHero3D1.TabIndex = 94;
-            this.playerHero3D1.Text = "3D";
-            this.playerHero3D1.UseVisualStyleBackColor = true;
-            // 
-            // playerHeroPortrait1
-            // 
-            this.playerHeroPortrait1.AutoSize = true;
-            this.playerHeroPortrait1.Checked = true;
-            this.playerHeroPortrait1.Location = new System.Drawing.Point(6, 9);
-            this.playerHeroPortrait1.Name = "playerHeroPortrait1";
-            this.playerHeroPortrait1.Size = new System.Drawing.Size(58, 17);
-            this.playerHeroPortrait1.TabIndex = 92;
-            this.playerHeroPortrait1.TabStop = true;
-            this.playerHeroPortrait1.Text = "Portrait";
-            this.playerHeroPortrait1.UseVisualStyleBackColor = true;
-            // 
-            // playerHeroIcon1
-            // 
-            this.playerHeroIcon1.AutoSize = true;
-            this.playerHeroIcon1.Location = new System.Drawing.Point(70, 9);
-            this.playerHeroIcon1.Name = "playerHeroIcon1";
-            this.playerHeroIcon1.Size = new System.Drawing.Size(46, 17);
-            this.playerHeroIcon1.TabIndex = 93;
-            this.playerHeroIcon1.Text = "Icon";
-            this.playerHeroIcon1.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -2501,17 +2493,7 @@ namespace OW_Scoreboard_Tool
             this.playerTeamLogoButton.TabIndex = 101;
             this.playerTeamLogoButton.Text = "...";
             this.playerTeamLogoButton.UseVisualStyleBackColor = true;
-            this.playerTeamLogoButton.Click += new System.EventHandler(this.playerTeamLogoButton_Click);
             this.playerTeamLogoButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
-            // 
-            // playerTeamLogoLabel
-            // 
-            this.playerTeamLogoLabel.AutoSize = true;
-            this.playerTeamLogoLabel.Location = new System.Drawing.Point(632, 276);
-            this.playerTeamLogoLabel.Name = "playerTeamLogoLabel";
-            this.playerTeamLogoLabel.Size = new System.Drawing.Size(61, 13);
-            this.playerTeamLogoLabel.TabIndex = 99;
-            this.playerTeamLogoLabel.Text = "Team Logo";
             // 
             // label6
             // 
@@ -2712,22 +2694,8 @@ namespace OW_Scoreboard_Tool
             // 
             this.Match_1.Controls.Add(this.label28);
             this.Match_1.Controls.Add(this.label27);
-            this.Match_1.Controls.Add(this.m1t2p6Image);
-            this.Match_1.Controls.Add(this.m1t2p5Image);
-            this.Match_1.Controls.Add(this.m1t2p4Image);
-            this.Match_1.Controls.Add(this.m1t2p3Image);
-            this.Match_1.Controls.Add(this.m1t2p2Image);
-            this.Match_1.Controls.Add(this.m1t2p1Image);
-            this.Match_1.Controls.Add(this.m1t1p6Image);
-            this.Match_1.Controls.Add(this.m1t1p5Image);
-            this.Match_1.Controls.Add(this.m1t1p4Image);
-            this.Match_1.Controls.Add(this.m1t1p3Image);
-            this.Match_1.Controls.Add(this.m1t1p2Image);
-            this.Match_1.Controls.Add(this.m1t1p1Image);
             this.Match_1.Controls.Add(this.m1t2ColorButton);
             this.Match_1.Controls.Add(this.m1t1ColorButton);
-            this.Match_1.Controls.Add(this.label12);
-            this.Match_1.Controls.Add(this.label11);
             this.Match_1.Controls.Add(this.m1t2p6ImageButton);
             this.Match_1.Controls.Add(this.m1t2p5ImageButton);
             this.Match_1.Controls.Add(this.m1t2p4ImageButton);
@@ -2756,8 +2724,6 @@ namespace OW_Scoreboard_Tool
             this.Match_1.Controls.Add(this.m1t1p1Info);
             this.Match_1.Controls.Add(this.label20);
             this.Match_1.Controls.Add(this.label17);
-            this.Match_1.Controls.Add(this.groupBox2);
-            this.Match_1.Controls.Add(this.m1MapStyle);
             this.Match_1.Controls.Add(this.m1Map);
             this.Match_1.Controls.Add(this.m1m7Completed);
             this.Match_1.Controls.Add(this.m1m6Completed);
@@ -2768,8 +2734,6 @@ namespace OW_Scoreboard_Tool
             this.Match_1.Controls.Add(this.m1m1Completed);
             this.Match_1.Controls.Add(this.m1t2LogoButton);
             this.Match_1.Controls.Add(this.m1t1LogoButton);
-            this.Match_1.Controls.Add(this.m1t2Logo);
-            this.Match_1.Controls.Add(this.m1t1Logo);
             this.Match_1.Controls.Add(this.m1t2SR);
             this.Match_1.Controls.Add(this.m1t1SR);
             this.Match_1.Controls.Add(this.m1MutualInfo);
@@ -2897,114 +2861,6 @@ namespace OW_Scoreboard_Tool
             this.label27.TabIndex = 133;
             this.label27.Text = "Image";
             // 
-            // m1t2p6Image
-            // 
-            this.m1t2p6Image.Location = new System.Drawing.Point(502, 292);
-            this.m1t2p6Image.Name = "m1t2p6Image";
-            this.m1t2p6Image.ReadOnly = true;
-            this.m1t2p6Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t2p6Image.Size = new System.Drawing.Size(30, 20);
-            this.m1t2p6Image.TabIndex = 132;
-            // 
-            // m1t2p5Image
-            // 
-            this.m1t2p5Image.Location = new System.Drawing.Point(502, 253);
-            this.m1t2p5Image.Name = "m1t2p5Image";
-            this.m1t2p5Image.ReadOnly = true;
-            this.m1t2p5Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t2p5Image.Size = new System.Drawing.Size(30, 20);
-            this.m1t2p5Image.TabIndex = 131;
-            // 
-            // m1t2p4Image
-            // 
-            this.m1t2p4Image.Location = new System.Drawing.Point(502, 214);
-            this.m1t2p4Image.Name = "m1t2p4Image";
-            this.m1t2p4Image.ReadOnly = true;
-            this.m1t2p4Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t2p4Image.Size = new System.Drawing.Size(30, 20);
-            this.m1t2p4Image.TabIndex = 130;
-            // 
-            // m1t2p3Image
-            // 
-            this.m1t2p3Image.Location = new System.Drawing.Point(502, 175);
-            this.m1t2p3Image.Name = "m1t2p3Image";
-            this.m1t2p3Image.ReadOnly = true;
-            this.m1t2p3Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t2p3Image.Size = new System.Drawing.Size(30, 20);
-            this.m1t2p3Image.TabIndex = 129;
-            // 
-            // m1t2p2Image
-            // 
-            this.m1t2p2Image.Location = new System.Drawing.Point(502, 136);
-            this.m1t2p2Image.Name = "m1t2p2Image";
-            this.m1t2p2Image.ReadOnly = true;
-            this.m1t2p2Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t2p2Image.Size = new System.Drawing.Size(30, 20);
-            this.m1t2p2Image.TabIndex = 128;
-            // 
-            // m1t2p1Image
-            // 
-            this.m1t2p1Image.Location = new System.Drawing.Point(502, 97);
-            this.m1t2p1Image.Name = "m1t2p1Image";
-            this.m1t2p1Image.ReadOnly = true;
-            this.m1t2p1Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t2p1Image.Size = new System.Drawing.Size(30, 20);
-            this.m1t2p1Image.TabIndex = 127;
-            // 
-            // m1t1p6Image
-            // 
-            this.m1t1p6Image.Location = new System.Drawing.Point(399, 291);
-            this.m1t1p6Image.Name = "m1t1p6Image";
-            this.m1t1p6Image.ReadOnly = true;
-            this.m1t1p6Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1p6Image.Size = new System.Drawing.Size(30, 20);
-            this.m1t1p6Image.TabIndex = 126;
-            // 
-            // m1t1p5Image
-            // 
-            this.m1t1p5Image.Location = new System.Drawing.Point(399, 253);
-            this.m1t1p5Image.Name = "m1t1p5Image";
-            this.m1t1p5Image.ReadOnly = true;
-            this.m1t1p5Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1p5Image.Size = new System.Drawing.Size(30, 20);
-            this.m1t1p5Image.TabIndex = 125;
-            // 
-            // m1t1p4Image
-            // 
-            this.m1t1p4Image.Location = new System.Drawing.Point(399, 214);
-            this.m1t1p4Image.Name = "m1t1p4Image";
-            this.m1t1p4Image.ReadOnly = true;
-            this.m1t1p4Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1p4Image.Size = new System.Drawing.Size(30, 20);
-            this.m1t1p4Image.TabIndex = 124;
-            // 
-            // m1t1p3Image
-            // 
-            this.m1t1p3Image.Location = new System.Drawing.Point(399, 175);
-            this.m1t1p3Image.Name = "m1t1p3Image";
-            this.m1t1p3Image.ReadOnly = true;
-            this.m1t1p3Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1p3Image.Size = new System.Drawing.Size(30, 20);
-            this.m1t1p3Image.TabIndex = 123;
-            // 
-            // m1t1p2Image
-            // 
-            this.m1t1p2Image.Location = new System.Drawing.Point(399, 136);
-            this.m1t1p2Image.Name = "m1t1p2Image";
-            this.m1t1p2Image.ReadOnly = true;
-            this.m1t1p2Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1p2Image.Size = new System.Drawing.Size(30, 20);
-            this.m1t1p2Image.TabIndex = 122;
-            // 
-            // m1t1p1Image
-            // 
-            this.m1t1p1Image.Location = new System.Drawing.Point(399, 97);
-            this.m1t1p1Image.Name = "m1t1p1Image";
-            this.m1t1p1Image.ReadOnly = true;
-            this.m1t1p1Image.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1p1Image.Size = new System.Drawing.Size(30, 20);
-            this.m1t1p1Image.TabIndex = 121;
-            // 
             // m1t2ColorButton
             // 
             this.m1t2ColorButton.Location = new System.Drawing.Point(799, 47);
@@ -3025,24 +2881,6 @@ namespace OW_Scoreboard_Tool
             this.m1t1ColorButton.UseVisualStyleBackColor = true;
             this.m1t1ColorButton.Click += new System.EventHandler(this.colorThemeButton_Click);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(774, 361);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 13);
-            this.label12.TabIndex = 118;
-            this.label12.Text = "Hero Style";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(666, 361);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 13);
-            this.label11.TabIndex = 117;
-            this.label11.Text = "Map Style";
-            // 
             // m1t2p6ImageButton
             // 
             this.m1t2p6ImageButton.ContextMenuStrip = this.imageButtonContextMenu;
@@ -3052,7 +2890,7 @@ namespace OW_Scoreboard_Tool
             this.m1t2p6ImageButton.TabIndex = 89;
             this.m1t2p6ImageButton.Text = "...";
             this.m1t2p6ImageButton.UseVisualStyleBackColor = true;
-            this.m1t2p6ImageButton.Click += new System.EventHandler(this.m1t2p6ImageButton_Click);
+            this.m1t2p6ImageButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t2p6ImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // m1t2p5ImageButton
@@ -3064,7 +2902,7 @@ namespace OW_Scoreboard_Tool
             this.m1t2p5ImageButton.TabIndex = 116;
             this.m1t2p5ImageButton.Text = "...";
             this.m1t2p5ImageButton.UseVisualStyleBackColor = true;
-            this.m1t2p5ImageButton.Click += new System.EventHandler(this.m1t2p5ImageButton_Click);
+            this.m1t2p5ImageButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t2p5ImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // m1t2p4ImageButton
@@ -3076,7 +2914,7 @@ namespace OW_Scoreboard_Tool
             this.m1t2p4ImageButton.TabIndex = 115;
             this.m1t2p4ImageButton.Text = "...";
             this.m1t2p4ImageButton.UseVisualStyleBackColor = true;
-            this.m1t2p4ImageButton.Click += new System.EventHandler(this.m1t2p4ImageButton_Click);
+            this.m1t2p4ImageButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t2p4ImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // m1t2p3ImageButton
@@ -3088,7 +2926,7 @@ namespace OW_Scoreboard_Tool
             this.m1t2p3ImageButton.TabIndex = 114;
             this.m1t2p3ImageButton.Text = "...";
             this.m1t2p3ImageButton.UseVisualStyleBackColor = true;
-            this.m1t2p3ImageButton.Click += new System.EventHandler(this.m1t2p3ImageButton_Click);
+            this.m1t2p3ImageButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t2p3ImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // m1t2p2ImageButton
@@ -3100,7 +2938,7 @@ namespace OW_Scoreboard_Tool
             this.m1t2p2ImageButton.TabIndex = 113;
             this.m1t2p2ImageButton.Text = "...";
             this.m1t2p2ImageButton.UseVisualStyleBackColor = true;
-            this.m1t2p2ImageButton.Click += new System.EventHandler(this.m1t2p2ImageButton_Click);
+            this.m1t2p2ImageButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t2p2ImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // m1t2p1ImageButton
@@ -3112,7 +2950,7 @@ namespace OW_Scoreboard_Tool
             this.m1t2p1ImageButton.TabIndex = 112;
             this.m1t2p1ImageButton.Text = "...";
             this.m1t2p1ImageButton.UseVisualStyleBackColor = true;
-            this.m1t2p1ImageButton.Click += new System.EventHandler(this.m1t2p1ImageButton_Click);
+            this.m1t2p1ImageButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t2p1ImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // m1t1p6ImageButton
@@ -3124,7 +2962,7 @@ namespace OW_Scoreboard_Tool
             this.m1t1p6ImageButton.TabIndex = 111;
             this.m1t1p6ImageButton.Text = "...";
             this.m1t1p6ImageButton.UseVisualStyleBackColor = true;
-            this.m1t1p6ImageButton.Click += new System.EventHandler(this.m1t1p6ImageButton_Click);
+            this.m1t1p6ImageButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t1p6ImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // m1t1p5ImageButton
@@ -3136,7 +2974,7 @@ namespace OW_Scoreboard_Tool
             this.m1t1p5ImageButton.TabIndex = 110;
             this.m1t1p5ImageButton.Text = "...";
             this.m1t1p5ImageButton.UseVisualStyleBackColor = true;
-            this.m1t1p5ImageButton.Click += new System.EventHandler(this.m1t1p5ImageButton_Click);
+            this.m1t1p5ImageButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t1p5ImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // m1t1p4ImageButton
@@ -3148,7 +2986,7 @@ namespace OW_Scoreboard_Tool
             this.m1t1p4ImageButton.TabIndex = 109;
             this.m1t1p4ImageButton.Text = "...";
             this.m1t1p4ImageButton.UseVisualStyleBackColor = true;
-            this.m1t1p4ImageButton.Click += new System.EventHandler(this.m1t1p4ImageButton_Click);
+            this.m1t1p4ImageButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t1p4ImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // m1t1p3ImageButton
@@ -3160,7 +2998,7 @@ namespace OW_Scoreboard_Tool
             this.m1t1p3ImageButton.TabIndex = 108;
             this.m1t1p3ImageButton.Text = "...";
             this.m1t1p3ImageButton.UseVisualStyleBackColor = true;
-            this.m1t1p3ImageButton.Click += new System.EventHandler(this.m1t1p3ImageButton_Click);
+            this.m1t1p3ImageButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t1p3ImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // m1t1p2ImageButton
@@ -3172,7 +3010,7 @@ namespace OW_Scoreboard_Tool
             this.m1t1p2ImageButton.TabIndex = 107;
             this.m1t1p2ImageButton.Text = "...";
             this.m1t1p2ImageButton.UseVisualStyleBackColor = true;
-            this.m1t1p2ImageButton.Click += new System.EventHandler(this.m1t1p2ImageButton_Click);
+            this.m1t1p2ImageButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t1p2ImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // m1t1p1ImageButton
@@ -3184,7 +3022,7 @@ namespace OW_Scoreboard_Tool
             this.m1t1p1ImageButton.TabIndex = 106;
             this.m1t1p1ImageButton.Text = "...";
             this.m1t1p1ImageButton.UseVisualStyleBackColor = true;
-            this.m1t1p1ImageButton.Click += new System.EventHandler(this.m1t1p1ImageButton_Click);
+            this.m1t1p1ImageButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t1p1ImageButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // label10
@@ -3306,81 +3144,6 @@ namespace OW_Scoreboard_Tool
             this.label17.Size = new System.Drawing.Size(28, 13);
             this.label17.TabIndex = 0;
             this.label17.Text = "Side";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.m1Hero3D);
-            this.groupBox2.Controls.Add(this.m1HeroPortrait);
-            this.groupBox2.Controls.Add(this.m1HeroIcon);
-            this.groupBox2.Location = new System.Drawing.Point(775, 372);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(150, 30);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            // 
-            // m1Hero3D
-            // 
-            this.m1Hero3D.AutoSize = true;
-            this.m1Hero3D.Location = new System.Drawing.Point(112, 9);
-            this.m1Hero3D.Name = "m1Hero3D";
-            this.m1Hero3D.Size = new System.Drawing.Size(39, 17);
-            this.m1Hero3D.TabIndex = 94;
-            this.m1Hero3D.Text = "3D";
-            this.m1Hero3D.UseVisualStyleBackColor = true;
-            // 
-            // m1HeroPortrait
-            // 
-            this.m1HeroPortrait.AutoSize = true;
-            this.m1HeroPortrait.Checked = true;
-            this.m1HeroPortrait.Location = new System.Drawing.Point(6, 9);
-            this.m1HeroPortrait.Name = "m1HeroPortrait";
-            this.m1HeroPortrait.Size = new System.Drawing.Size(58, 17);
-            this.m1HeroPortrait.TabIndex = 92;
-            this.m1HeroPortrait.TabStop = true;
-            this.m1HeroPortrait.Text = "Portrait";
-            this.m1HeroPortrait.UseVisualStyleBackColor = true;
-            // 
-            // m1HeroIcon
-            // 
-            this.m1HeroIcon.AutoSize = true;
-            this.m1HeroIcon.Location = new System.Drawing.Point(64, 9);
-            this.m1HeroIcon.Name = "m1HeroIcon";
-            this.m1HeroIcon.Size = new System.Drawing.Size(46, 17);
-            this.m1HeroIcon.TabIndex = 93;
-            this.m1HeroIcon.Text = "Icon";
-            this.m1HeroIcon.UseVisualStyleBackColor = true;
-            // 
-            // m1MapStyle
-            // 
-            this.m1MapStyle.Controls.Add(this.m1MapFull);
-            this.m1MapStyle.Controls.Add(this.m1MapLong);
-            this.m1MapStyle.Location = new System.Drawing.Point(669, 372);
-            this.m1MapStyle.Name = "m1MapStyle";
-            this.m1MapStyle.Size = new System.Drawing.Size(99, 30);
-            this.m1MapStyle.TabIndex = 0;
-            this.m1MapStyle.TabStop = false;
-            // 
-            // m1MapFull
-            // 
-            this.m1MapFull.AutoSize = true;
-            this.m1MapFull.Location = new System.Drawing.Point(6, 9);
-            this.m1MapFull.Name = "m1MapFull";
-            this.m1MapFull.Size = new System.Drawing.Size(41, 17);
-            this.m1MapFull.TabIndex = 90;
-            this.m1MapFull.Text = "Full";
-            this.m1MapFull.UseVisualStyleBackColor = true;
-            // 
-            // m1MapLong
-            // 
-            this.m1MapLong.AutoSize = true;
-            this.m1MapLong.Checked = true;
-            this.m1MapLong.Location = new System.Drawing.Point(49, 9);
-            this.m1MapLong.Name = "m1MapLong";
-            this.m1MapLong.Size = new System.Drawing.Size(49, 17);
-            this.m1MapLong.TabIndex = 91;
-            this.m1MapLong.TabStop = true;
-            this.m1MapLong.Text = "Long";
-            this.m1MapLong.UseVisualStyleBackColor = true;
             // 
             // m1Map
             // 
@@ -3559,7 +3322,7 @@ namespace OW_Scoreboard_Tool
             this.m1t2LogoButton.TabIndex = 88;
             this.m1t2LogoButton.Text = "...";
             this.m1t2LogoButton.UseVisualStyleBackColor = true;
-            this.m1t2LogoButton.Click += new System.EventHandler(this.button2_Click);
+            this.m1t2LogoButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t2LogoButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // m1t1LogoButton
@@ -3571,26 +3334,8 @@ namespace OW_Scoreboard_Tool
             this.m1t1LogoButton.TabIndex = 87;
             this.m1t1LogoButton.Text = "...";
             this.m1t1LogoButton.UseVisualStyleBackColor = true;
-            this.m1t1LogoButton.Click += new System.EventHandler(this.button1_Click);
+            this.m1t1LogoButton.Click += new System.EventHandler(this.GetImageForButton);
             this.m1t1LogoButton.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
-            // 
-            // m1t2Logo
-            // 
-            this.m1t2Logo.Location = new System.Drawing.Point(502, 21);
-            this.m1t2Logo.Name = "m1t2Logo";
-            this.m1t2Logo.ReadOnly = true;
-            this.m1t2Logo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t2Logo.Size = new System.Drawing.Size(136, 20);
-            this.m1t2Logo.TabIndex = 89;
-            // 
-            // m1t1Logo
-            // 
-            this.m1t1Logo.Location = new System.Drawing.Point(293, 21);
-            this.m1t1Logo.Name = "m1t1Logo";
-            this.m1t1Logo.ReadOnly = true;
-            this.m1t1Logo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.m1t1Logo.Size = new System.Drawing.Size(136, 20);
-            this.m1t1Logo.TabIndex = 86;
             // 
             // m1t2SR
             // 
@@ -3765,6 +3510,7 @@ namespace OW_Scoreboard_Tool
             "Nepal",
             "Oasis",
             "Dorado",
+            "Havana",
             "Junkertown",
             "Rialto",
             "Route 66",
@@ -3824,6 +3570,7 @@ namespace OW_Scoreboard_Tool
             "Nepal",
             "Oasis",
             "Dorado",
+            "Havana",
             "Junkertown",
             "Rialto",
             "Route 66",
@@ -4189,6 +3936,7 @@ namespace OW_Scoreboard_Tool
             "Nepal",
             "Oasis",
             "Dorado",
+            "Havana",
             "Junkertown",
             "Rialto",
             "Route 66",
@@ -4224,6 +3972,7 @@ namespace OW_Scoreboard_Tool
             "Nepal",
             "Oasis",
             "Dorado",
+            "Havana",
             "Junkertown",
             "Rialto",
             "Route 66",
@@ -4259,6 +4008,7 @@ namespace OW_Scoreboard_Tool
             "Nepal",
             "Oasis",
             "Dorado",
+            "Havana",
             "Junkertown",
             "Rialto",
             "Route 66",
@@ -4294,6 +4044,7 @@ namespace OW_Scoreboard_Tool
             "Nepal",
             "Oasis",
             "Dorado",
+            "Havana",
             "Junkertown",
             "Rialto",
             "Route 66",
@@ -4329,6 +4080,7 @@ namespace OW_Scoreboard_Tool
             "Nepal",
             "Oasis",
             "Dorado",
+            "Havana",
             "Junkertown",
             "Rialto",
             "Route 66",
@@ -5149,7 +4901,6 @@ namespace OW_Scoreboard_Tool
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(939, 434);
             this.tabControl1.TabIndex = 0;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // Replay_Manager
             // 
@@ -7754,18 +7505,8 @@ namespace OW_Scoreboard_Tool
             this.General_Info.ResumeLayout(false);
             this.General_Info.PerformLayout();
             this.imageButtonContextMenu.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.Match_1.ResumeLayout(false);
             this.Match_1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.m1MapStyle.ResumeLayout(false);
-            this.m1MapStyle.PerformLayout();
             this.m1Map.ResumeLayout(false);
             this.m1Map.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m1m7t2Score)).EndInit();
@@ -7945,7 +7686,6 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox playerSRBox;
         private System.Windows.Forms.TextBox playerBox;
-        private System.Windows.Forms.TextBox playerTeamLogoBox;
         private System.Windows.Forms.TextBox playerTeamBox;
         private System.Windows.Forms.TextBox utility8;
         private System.Windows.Forms.TextBox utility7;
@@ -7964,26 +7704,12 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox playerRoleBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton playerHero3D3;
-        private System.Windows.Forms.RadioButton playerHeroPortrait3;
-        private System.Windows.Forms.RadioButton playerHeroIcon3;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton playerHero3D2;
-        private System.Windows.Forms.RadioButton playerHeroPortrait2;
-        private System.Windows.Forms.RadioButton playerHeroIcon2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton playerHero3D1;
-        private System.Windows.Forms.RadioButton playerHeroPortrait1;
-        private System.Windows.Forms.RadioButton playerHeroIcon1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox playerHeroBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox playerHeroBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox playerHeroBox1;
-        private System.Windows.Forms.Button playerTeamLogoButton;
-        private System.Windows.Forms.Label playerTeamLogoLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button playerUpdate;
         private System.Windows.Forms.Button playerReset;
@@ -8008,13 +7734,6 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.TabPage Match_1;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton m1Hero3D;
-        private System.Windows.Forms.RadioButton m1HeroPortrait;
-        private System.Windows.Forms.RadioButton m1HeroIcon;
-        private System.Windows.Forms.GroupBox m1MapStyle;
-        private System.Windows.Forms.RadioButton m1MapFull;
-        private System.Windows.Forms.RadioButton m1MapLong;
         private System.Windows.Forms.GroupBox m1Map;
         private System.Windows.Forms.RadioButton m1m0Selected;
         private System.Windows.Forms.RadioButton m1m6Selected;
@@ -8033,8 +7752,6 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.CheckBox m1m1Completed;
         private System.Windows.Forms.Button m1t2LogoButton;
         private System.Windows.Forms.Button m1t1LogoButton;
-        private System.Windows.Forms.TextBox m1t2Logo;
-        private System.Windows.Forms.TextBox m1t1Logo;
         private System.Windows.Forms.TextBox m1t2SR;
         private System.Windows.Forms.TextBox m1t1SR;
         private System.Windows.Forms.TextBox m1MutualInfo;
@@ -8166,8 +7883,6 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.TextBox m1t1p3Info;
         private System.Windows.Forms.TextBox m1t1p2Info;
         private System.Windows.Forms.TextBox m1t1p1Info;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button imageButton13;
         private System.Windows.Forms.TextBox utility21;
         private System.Windows.Forms.Button imageButton12;
@@ -8196,9 +7911,7 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.TextBox utility9;
         private System.Windows.Forms.TextBox playerNameBox;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox playerImagePath;
         private System.Windows.Forms.Button playerImageButton;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button imageButton14;
         private System.Windows.Forms.TextBox utility22;
         private System.Windows.Forms.Label label21;
@@ -8247,18 +7960,6 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.ColorDialog colorThemeDialog;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox m1t2p6Image;
-        private System.Windows.Forms.TextBox m1t2p5Image;
-        private System.Windows.Forms.TextBox m1t2p4Image;
-        private System.Windows.Forms.TextBox m1t2p3Image;
-        private System.Windows.Forms.TextBox m1t2p2Image;
-        private System.Windows.Forms.TextBox m1t2p1Image;
-        private System.Windows.Forms.TextBox m1t1p6Image;
-        private System.Windows.Forms.TextBox m1t1p5Image;
-        private System.Windows.Forms.TextBox m1t1p4Image;
-        private System.Windows.Forms.TextBox m1t1p3Image;
-        private System.Windows.Forms.TextBox m1t1p2Image;
-        private System.Windows.Forms.TextBox m1t1p1Image;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label bracketTP;
@@ -8552,6 +8253,29 @@ namespace OW_Scoreboard_Tool
         private System.Windows.Forms.Button colorThemeButton6;
         private System.Windows.Forms.Button colorThemeButton5;
         private System.Windows.Forms.Button colorThemeButton4;
+        private System.Windows.Forms.ToolStripMenuItem customizeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem heroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mapToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem roleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createGametypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editGametypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteGametypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem defaultGametypesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createHeroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editHeroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteHeroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem defaultHeroesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createMapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editMapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteMapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem defaultMapsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createRoleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editRoleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteRoleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem defaultRolesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem defaultAllToolStripMenuItem;
+        private System.Windows.Forms.Button playerTeamLogoButton;
     }
 }
 #endregion
