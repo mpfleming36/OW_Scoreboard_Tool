@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace OW_Scoreboard_Tool.Controls
 {
-    public partial class CreateObjectDialog : Form
+    public abstract partial class CreateObjectDialog : Form
     {
         private string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         private string _objectName = "";
         private Bitmap _objectImage = new Bitmap(Properties.Resources.Icon_none);
+
+
+        public abstract string TypePath
+        {
+            get;
+        }
 
         public CreateObjectDialog()
         {
@@ -41,7 +47,7 @@ namespace OW_Scoreboard_Tool.Controls
         public void SetObjects()
         {
             ObjectName = CreateObjectNameTextBox.Text.ToString();
-            ObjectImage = new Bitmap(CreateObjectIconButton.AccessibleDescription);
+            ObjectImage = new Bitmap(CreateObjectIconButton.AccessibleDescription, true);
         }
 
         public virtual void CreateObjectOKButton_Click(object sender, EventArgs e)

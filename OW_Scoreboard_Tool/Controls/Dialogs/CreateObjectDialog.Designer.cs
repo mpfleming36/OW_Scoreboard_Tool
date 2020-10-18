@@ -1,6 +1,6 @@
 ﻿namespace OW_Scoreboard_Tool.Controls
 {
-    partial class CreateObjectDialog
+    abstract partial class CreateObjectDialog
     {
         /// <summary>
         /// Required designer variable.

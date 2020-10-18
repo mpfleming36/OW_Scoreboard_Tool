@@ -1383,17 +1383,6 @@ namespace OW_Scoreboard_Tool
             this.imageLabel15.TabIndex = 200;
             this.imageLabel15.Text = "Image15";
             // 
-            // imageButton28
-            // 
-            this.imageButton28.ContextMenuStrip = this.imageButtonContextMenu;
-            this.imageButton28.Location = new System.Drawing.Point(522, 371);
-            this.imageButton28.Name = "imageButton28";
-            this.imageButton28.Size = new System.Drawing.Size(27, 23);
-            this.imageButton28.TabIndex = 199;
-            this.imageButton28.Text = "...";
-            this.imageButton28.UseVisualStyleBackColor = true;
-            this.imageButton28.Click += new System.EventHandler(this.GetImageForButton);
-            // 
             // imageButtonContextMenu
             // 
             this.imageButtonContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1408,6 +1397,18 @@ namespace OW_Scoreboard_Tool
             this.resetButtonImagePath.Text = "Reset Image";
             this.resetButtonImagePath.Click += new System.EventHandler(this.resetButtonImagePath_Click);
             // 
+            // imageButton28
+            // 
+            this.imageButton28.ContextMenuStrip = this.imageButtonContextMenu;
+            this.imageButton28.Location = new System.Drawing.Point(522, 371);
+            this.imageButton28.Name = "imageButton28";
+            this.imageButton28.Size = new System.Drawing.Size(27, 23);
+            this.imageButton28.TabIndex = 199;
+            this.imageButton28.Text = "...";
+            this.imageButton28.UseVisualStyleBackColor = true;
+            this.imageButton28.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton28.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
+            // 
             // imageButton27
             // 
             this.imageButton27.ContextMenuStrip = this.imageButtonContextMenu;
@@ -1418,6 +1419,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton27.Text = "...";
             this.imageButton27.UseVisualStyleBackColor = true;
             this.imageButton27.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton27.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // imageButton26
             // 
@@ -1429,6 +1431,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton26.Text = "...";
             this.imageButton26.UseVisualStyleBackColor = true;
             this.imageButton26.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton26.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // imageButton25
             // 
@@ -1440,6 +1443,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton25.Text = "...";
             this.imageButton25.UseVisualStyleBackColor = true;
             this.imageButton25.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton25.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // imageButton24
             // 
@@ -1451,6 +1455,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton24.Text = "...";
             this.imageButton24.UseVisualStyleBackColor = true;
             this.imageButton24.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton24.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // imageButton23
             // 
@@ -1462,6 +1467,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton23.Text = "...";
             this.imageButton23.UseVisualStyleBackColor = true;
             this.imageButton23.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton23.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // imageButton22
             // 
@@ -1473,6 +1479,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton22.Text = "...";
             this.imageButton22.UseVisualStyleBackColor = true;
             this.imageButton22.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton22.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // imageButton21
             // 
@@ -1484,6 +1491,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton21.Text = "...";
             this.imageButton21.UseVisualStyleBackColor = true;
             this.imageButton21.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton21.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // imageButton20
             // 
@@ -1495,6 +1503,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton20.Text = "...";
             this.imageButton20.UseVisualStyleBackColor = true;
             this.imageButton20.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton20.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // imageButton19
             // 
@@ -1506,6 +1515,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton19.Text = "...";
             this.imageButton19.UseVisualStyleBackColor = true;
             this.imageButton19.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton19.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // imageButton18
             // 
@@ -1517,6 +1527,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton18.Text = "...";
             this.imageButton18.UseVisualStyleBackColor = true;
             this.imageButton18.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton18.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // imageButton17
             // 
@@ -1528,6 +1539,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton17.Text = "...";
             this.imageButton17.UseVisualStyleBackColor = true;
             this.imageButton17.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton17.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // imageButton16
             // 
@@ -1539,6 +1551,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton16.Text = "...";
             this.imageButton16.UseVisualStyleBackColor = true;
             this.imageButton16.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton16.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // imageButton15
             // 
@@ -1550,6 +1563,7 @@ namespace OW_Scoreboard_Tool
             this.imageButton15.Text = "...";
             this.imageButton15.UseVisualStyleBackColor = true;
             this.imageButton15.Click += new System.EventHandler(this.GetImageForButton);
+            this.imageButton15.MouseHover += new System.EventHandler(this.ToolTipMouseHover);
             // 
             // utility22Label
             // 

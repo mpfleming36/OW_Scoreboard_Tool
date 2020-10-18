@@ -11,6 +11,14 @@ namespace OW_Scoreboard_Tool.Controls
 {
     public partial class CreateMapDialog : CreateObjectDialog
     {
+        public override string TypePath
+        {
+            get
+            {
+                return "\\Maps\\";
+            }
+        }
+
         private Map _createdMap;
         private BindingList<Gametype> _availableGametypes;
 

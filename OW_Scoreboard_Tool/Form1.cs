@@ -21,7 +21,7 @@ namespace OW_Scoreboard_Tool
     {
         #region Inital Properties
         public string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        string xmlVersion = "0.3";
+        string xmlVersion = "0.4";
         const int Bytes_TO_READ = sizeof(Int64);
         Series Match1 = new Series();
 
@@ -190,33 +190,9 @@ namespace OW_Scoreboard_Tool
             loadScore(m1m6t2Score, "Match1", "m6t2Score");
             loadScore(m1m7t2Score, "Match1", "m7t2Score");
 
-            loadCombo(m1t1p1Hero, "Match1", "t1p1Hero");
-            loadCombo(m1t1p2Hero, "Match1", "t1p2Hero");
-            loadCombo(m1t1p3Hero, "Match1", "t1p3Hero");
-            loadCombo(m1t1p4Hero, "Match1", "t1p4Hero");
-            loadCombo(m1t1p5Hero, "Match1", "t1p5Hero");
-            loadCombo(m1t1p6Hero, "Match1", "t1p6Hero");
+            LoadPlayerHeroes();
 
-            loadCombo(m1t2p1Hero, "Match1", "t2p1Hero");
-            loadCombo(m1t2p2Hero, "Match1", "t2p2Hero");
-            loadCombo(m1t2p3Hero, "Match1", "t2p3Hero");
-            loadCombo(m1t2p4Hero, "Match1", "t2p4Hero");
-            loadCombo(m1t2p5Hero, "Match1", "t2p5Hero");
-            loadCombo(m1t2p6Hero, "Match1", "t2p6Hero");
-
-            loadCombo(m1t1p1Role, "Match1", "t1p1Role");
-            loadCombo(m1t1p2Role, "Match1", "t1p2Role");
-            loadCombo(m1t1p3Role, "Match1", "t1p3Role");
-            loadCombo(m1t1p4Role, "Match1", "t1p4Role");
-            loadCombo(m1t1p5Role, "Match1", "t1p5Role");
-            loadCombo(m1t1p6Role, "Match1", "t1p6Role");
-
-            loadCombo(m1t2p1Role, "Match1", "t2p1Role");
-            loadCombo(m1t2p2Role, "Match1", "t2p2Role");
-            loadCombo(m1t2p3Role, "Match1", "t2p3Role");
-            loadCombo(m1t2p4Role, "Match1", "t2p4Role");
-            loadCombo(m1t2p5Role, "Match1", "t2p5Role");
-            loadCombo(m1t2p6Role, "Match1", "t2p6Role");
+            LoadPlayerRoles();
 
             loadText(m1t1p1Info, "Match1", "t1p1Info");
             loadText(m1t1p2Info, "Match1", "t1p2Info");
@@ -246,13 +222,7 @@ namespace OW_Scoreboard_Tool
             loadButton(m1t2p5ImageButton, "Match1", "t2p5Image");
             loadButton(m1t2p6ImageButton, "Match1", "t2p6Image");
 
-            loadCombo(m1m1Map, "Match1", "m1Map");
-            loadCombo(m1m2Map, "Match1", "m2Map");
-            loadCombo(m1m3Map, "Match1", "m3Map");
-            loadCombo(m1m4Map, "Match1", "m4Map");
-            loadCombo(m1m5Map, "Match1", "m5Map");
-            loadCombo(m1m6Map, "Match1", "m6Map");
-            loadCombo(m1m7Map, "Match1", "m7Map");
+            LoadMapsPlayed();
 
             loadText(message, "General", "message");
             loadText(host, "General", "host");
@@ -356,6 +326,8 @@ namespace OW_Scoreboard_Tool
             m1t1Name.Text = m1t2Name.Text;
             m1t2Name.Text = temp;
             temp = "";
+            m1t1Name.Modified = true;
+            m1t2Name.Modified = true;
 
             decimal temporary;
             temporary = m1t1Score.Value;
@@ -402,6 +374,8 @@ namespace OW_Scoreboard_Tool
             m1t1SR.Text = m1t2SR.Text;
             m1t2SR.Text = temp;
             temp = "";
+            m1t1SR.Modified = true;
+            m1t2SR.Modified = true;
 
             temp = m1t1LogoButton.AccessibleDescription;
             m1t1LogoButton.AccessibleDescription = m1t2LogoButton.AccessibleDescription;
@@ -412,31 +386,43 @@ namespace OW_Scoreboard_Tool
             m1t1p1Name.Text = m1t2p1Name.Text;
             m1t2p1Name.Text = temp;
             temp = "";
+            m1t1p1Name.Modified = true;
+            m1t2p1Name.Modified = true;
 
             temp = m1t1p2Name.Text;
             m1t1p2Name.Text = m1t2p2Name.Text;
             m1t2p2Name.Text = temp;
             temp = "";
+            m1t1p2Name.Modified = true;
+            m1t2p2Name.Modified = true;
 
             temp = m1t1p3Name.Text;
             m1t1p3Name.Text = m1t2p3Name.Text;
             m1t2p3Name.Text = temp;
             temp = "";
+            m1t1p3Name.Modified = true;
+            m1t2p3Name.Modified = true;
 
             temp = m1t1p4Name.Text;
             m1t1p4Name.Text = m1t2p4Name.Text;
             m1t2p4Name.Text = temp;
             temp = "";
+            m1t1p4Name.Modified = true;
+            m1t2p4Name.Modified = true;
 
             temp = m1t1p5Name.Text;
             m1t1p5Name.Text = m1t2p5Name.Text;
             m1t2p5Name.Text = temp;
             temp = "";
+            m1t1p5Name.Modified = true;
+            m1t2p5Name.Modified = true;
 
             temp = m1t1p6Name.Text;
             m1t1p6Name.Text = m1t2p6Name.Text;
             m1t2p6Name.Text = temp;
             temp = "";
+            m1t2p6Name.Modified = true;
+            m1t1p6Name.Modified = true;
 
             int temps = 0;
             temps = m1t1p1Hero.SelectedIndex;
@@ -503,31 +489,43 @@ namespace OW_Scoreboard_Tool
             m1t1p1Info.Text = m1t2p1Info.Text;
             m1t2p1Info.Text = temp;
             temp = "";
+            m1t1p1Info.Modified = true;
+            m1t2p1Info.Modified = true;
 
             temp = m1t1p2Info.Text;
             m1t1p2Info.Text = m1t2p2Info.Text;
             m1t2p2Info.Text = temp;
             temp = "";
+            m1t1p2Info.Modified = true;
+            m1t2p2Info.Modified = true;
 
             temp = m1t1p3Info.Text;
             m1t1p3Info.Text = m1t2p3Info.Text;
             m1t2p3Info.Text = temp;
             temp = "";
+            m1t1p3Info.Modified = true;
+            m1t2p3Info.Modified = true;
 
             temp = m1t1p4Info.Text;
             m1t1p4Info.Text = m1t2p4Info.Text;
             m1t2p4Info.Text = temp;
             temp = "";
+            m1t1p4Info.Modified = true;
+            m1t2p4Info.Modified = true;
 
             temp = m1t1p5Info.Text;
             m1t1p5Info.Text = m1t2p5Info.Text;
             m1t2p5Info.Text = temp;
             temp = "";
-
+            m1t1p5Info.Modified = true;
+            m1t2p5Info.Modified = true;
+            
             temp = m1t1p6Info.Text;
             m1t1p6Info.Text = m1t2p6Info.Text;
             m1t2p6Info.Text = temp;
             temp = "";
+            m1t1p6Info.Modified = true;
+            m1t2p6Info.Modified = true;
 
             temp = m1t1p1ImageButton.AccessibleDescription;
             m1t1p1ImageButton.AccessibleDescription = m1t2p1ImageButton.AccessibleDescription;
@@ -804,13 +802,13 @@ namespace OW_Scoreboard_Tool
             updateScore(m1m7t1Score, "Match1", "m7t1Score");
             updateScore(m1m7t2Score, "Match1", "m7t2Score");
 
-            updateCompleted(m1m1Completed, m1t1Name, m1t2Name, m1m1t1Score, m1m1t2Score, "Match1", "m1MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription);
-            updateCompleted(m1m2Completed, m1t1Name, m1t2Name, m1m2t1Score, m1m2t2Score, "Match1", "m2MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription);
-            updateCompleted(m1m3Completed, m1t1Name, m1t2Name, m1m3t1Score, m1m3t2Score, "Match1", "m3MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription);
-            updateCompleted(m1m4Completed, m1t1Name, m1t2Name, m1m4t1Score, m1m4t2Score, "Match1", "m4MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription);
-            updateCompleted(m1m5Completed, m1t1Name, m1t2Name, m1m5t1Score, m1m5t2Score, "Match1", "m5MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription);
-            updateCompleted(m1m6Completed, m1t1Name, m1t2Name, m1m6t1Score, m1m6t2Score, "Match1", "m6MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription);
-            updateCompleted(m1m7Completed, m1t1Name, m1t2Name, m1m7t1Score, m1m7t2Score, "Match1", "m7MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription);
+            updateCompleted(m1m1Completed, m1t1Name, m1t2Name, m1m1t1Score, m1m1t2Score, "Match1", "m1MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription, m1m1Map);
+            updateCompleted(m1m2Completed, m1t1Name, m1t2Name, m1m2t1Score, m1m2t2Score, "Match1", "m2MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription, m1m2Map);
+            updateCompleted(m1m3Completed, m1t1Name, m1t2Name, m1m3t1Score, m1m3t2Score, "Match1", "m3MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription, m1m3Map);
+            updateCompleted(m1m4Completed, m1t1Name, m1t2Name, m1m4t1Score, m1m4t2Score, "Match1", "m4MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription, m1m4Map);
+            updateCompleted(m1m5Completed, m1t1Name, m1t2Name, m1m5t1Score, m1m5t2Score, "Match1", "m5MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription, m1m5Map);
+            updateCompleted(m1m6Completed, m1t1Name, m1t2Name, m1m6t1Score, m1m6t2Score, "Match1", "m6MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription, m1m6Map);
+            updateCompleted(m1m7Completed, m1t1Name, m1t2Name, m1m7t1Score, m1m7t2Score, "Match1", "m7MapWin", m1t1LogoButton.AccessibleDescription, m1t2LogoButton.AccessibleDescription, m1m7Map);
 
             updateButton(m1t1LogoButton, "Match1", "t1Logo");
             updateButton(m1t2LogoButton, "Match1", "t2Logo");
@@ -1258,7 +1256,7 @@ namespace OW_Scoreboard_Tool
         }
 
         /// <summary>
-        /// Updates the file system with the list of teams in the bracket and their information
+        /// Updates the file system with the list of teams in the bracket: name, logo, Win/Loss, and Map Win/Loss
         /// </summary>
         private void bracketTeamsUpdate_Click(object sender, EventArgs e)
         {
@@ -1363,6 +1361,7 @@ namespace OW_Scoreboard_Tool
 
             setBracketTeams();
 
+            LoadTeamsInBracket();
         }
 
         /// <summary>
@@ -2072,7 +2071,7 @@ namespace OW_Scoreboard_Tool
         /// <param name="file">The file name before the extension</param>
         /// <param name="team1Logo">Team 1 logo</param>
         /// <param name="team2Logo">Team 2 logo</param>
-        private void updateCompleted(CheckBox field, TextBox team1, TextBox team2, NumericUpDown score1, NumericUpDown score2, String folder, String file, string team1Logo, string team2Logo)
+        private void updateCompleted(CheckBox field, TextBox team1, TextBox team2, NumericUpDown score1, NumericUpDown score2, String folder, String file, string team1Logo, string team2Logo, ComboBox map)
         {
             string winner = "";
             string winnerLogo = "";
@@ -2104,6 +2103,8 @@ namespace OW_Scoreboard_Tool
                 {
                     sw.WriteLine(winner.Trim());
                 }
+
+                GrayScale(((Map)map.SelectedValue).Icon).Save(path + "\\" + folder + "\\" + file.Replace("Win","") + ".png");
             }
             else
             {
@@ -2250,26 +2251,18 @@ namespace OW_Scoreboard_Tool
         /// <returns></returns>
         private Team updateTeams(string side)
         {
-            Team team = new Team();
             if (side.Equals("h"))
             {
-                team = new Team(m1t1Name.Text, m1t1SR.Text, m1t1LogoButton.AccessibleDescription, updatePlayers(side), ColorTranslator.ToHtml(Color.FromArgb(m1t1ColorButton.BackColor.ToArgb())));
-                if(Match1.Home == null)
-                {
-                    Match1.Home = team;
-                }
+                Match1.Home = new Team(m1t1Name.Text, m1t1SR.Text, m1t1LogoButton.AccessibleDescription, updatePlayers(side), ColorTranslator.ToHtml(Color.FromArgb(m1t1ColorButton.BackColor.ToArgb())));
+                Match1.Home.Version = xmlVersion;
+                return Match1.Home;
             }
-            else if (side.Equals("a"))
+            else
             {
-                team = new Team(m1t2Name.Text, m1t2SR.Text, m1t2LogoButton.AccessibleDescription, updatePlayers(side), ColorTranslator.ToHtml(Color.FromArgb(m1t2ColorButton.BackColor.ToArgb())));
-                if (Match1.Away == null)
-                {
-                    Match1.Away = team;
-                }
+                Match1.Away = new Team(m1t2Name.Text, m1t2SR.Text, m1t2LogoButton.AccessibleDescription, updatePlayers(side), ColorTranslator.ToHtml(Color.FromArgb(m1t2ColorButton.BackColor.ToArgb())));
+                Match1.Away.Version = xmlVersion;
+                return Match1.Away;
             }
-            team.Version = xmlVersion;
-            return team;
-
         }
 
         /// <summary>
@@ -2887,184 +2880,64 @@ namespace OW_Scoreboard_Tool
         }
 
         /// <summary>
-        /// Loads Custom Gametypes from Gametype Directory
+        /// Method to load the player's heroes for the series.
         /// </summary>
-        private void LoadCustomGametypes()
+        private void LoadPlayerHeroes()
         {
-            var serializer = new XmlSerializer(typeof(Gametype));
-            string dir = path + FolderList[10];
-            Gametype gametype = new Gametype();
+            loadCombo(m1t1p1Hero, "Match1", "t1p1Hero");
+            loadCombo(m1t1p2Hero, "Match1", "t1p2Hero");
+            loadCombo(m1t1p3Hero, "Match1", "t1p3Hero");
+            loadCombo(m1t1p4Hero, "Match1", "t1p4Hero");
+            loadCombo(m1t1p5Hero, "Match1", "t1p5Hero");
+            loadCombo(m1t1p6Hero, "Match1", "t1p6Hero");
 
-            foreach (String file in Directory.GetFiles(dir, "*.gametype", SearchOption.AllDirectories))
-            {
-                using (XmlReader reader = XmlReader.Create(file))
-                {
-                    try
-                    {
-                        gametype = (Gametype)serializer.Deserialize(reader);
-                        Image image;
-                        using (var temp = new Bitmap(gametype.IconPath))
-                        {
-                            image = new Bitmap(temp);
-                        }
-                        gametype.Icon = new Bitmap(image);
-                        GametypeList.Add(gametype);
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show("There was an issue loading the Gametype, some data could be missing!");
-                    }
-                    reader.Close();
-                }
-            }
+            loadCombo(m1t2p1Hero, "Match1", "t2p1Hero");
+            loadCombo(m1t2p2Hero, "Match1", "t2p2Hero");
+            loadCombo(m1t2p3Hero, "Match1", "t2p3Hero");
+            loadCombo(m1t2p4Hero, "Match1", "t2p4Hero");
+            loadCombo(m1t2p5Hero, "Match1", "t2p5Hero");
+            loadCombo(m1t2p6Hero, "Match1", "t2p6Hero");
         }
 
         /// <summary>
-        /// Loads Custom Heroes from Hero Directory
+        /// Method to load the player's roles for the series.
         /// </summary>
-        private void LoadCustomHeroes()
+        private void LoadPlayerRoles()
         {
-            var serializer = new XmlSerializer(typeof(Hero));
-            string dir = path + FolderList[11];
-            Hero hero = new Hero();
+            loadCombo(m1t1p1Role, "Match1", "t1p1Role");
+            loadCombo(m1t1p2Role, "Match1", "t1p2Role");
+            loadCombo(m1t1p3Role, "Match1", "t1p3Role");
+            loadCombo(m1t1p4Role, "Match1", "t1p4Role");
+            loadCombo(m1t1p5Role, "Match1", "t1p5Role");
+            loadCombo(m1t1p6Role, "Match1", "t1p6Role");
 
-            foreach (String file in Directory.GetFiles(dir, "*.hero", SearchOption.AllDirectories))
-            {
-                using (XmlReader reader = XmlReader.Create(file))
-                {
-                    try
-                    {
-                        hero = (Hero)serializer.Deserialize(reader);
-                        Image image;
-                        using (var temp = new Bitmap(hero.IconPath))
-                        {
-                            image = new Bitmap(temp);
-                        }
-                        hero.Icon = new Bitmap(image);
-                        HeroList.Add(hero);
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show("There was an issue loading the Hero, some data could be missing!");
-                    }
-                    reader.Close();
-                }
-            }
+            loadCombo(m1t2p1Role, "Match1", "t2p1Role");
+            loadCombo(m1t2p2Role, "Match1", "t2p2Role");
+            loadCombo(m1t2p3Role, "Match1", "t2p3Role");
+            loadCombo(m1t2p4Role, "Match1", "t2p4Role");
+            loadCombo(m1t2p5Role, "Match1", "t2p5Role");
+            loadCombo(m1t2p6Role, "Match1", "t2p6Role");
         }
 
         /// <summary>
-        /// Loads Custom Maps from Map Directory
+        /// Method to load the maps played for the series.
         /// </summary>
-        private void LoadCustomMaps()
+        private void LoadMapsPlayed()
         {
-            var serializer = new XmlSerializer(typeof(Map));
-            string dir = path + FolderList[12];
-            Map map = new Map();
-
-            foreach (String file in Directory.GetFiles(dir, "*.map", SearchOption.AllDirectories))
-            {
-                using (XmlReader reader = XmlReader.Create(file))
-                {
-                    try
-                    {
-                        map = (Map)serializer.Deserialize(reader);
-                        Image image;
-                        using (var temp = new Bitmap(map.IconPath))
-                        {
-                            image = new Bitmap(temp);
-                        }
-                        map.Icon = new Bitmap(image);
-                        if (!GametypeList.Any(n => n.Name == map.Gametype.Name))
-                        {
-                            MessageBox.Show("The Gametype associated with Map(" + map.Name + ") currently does not exist.");
-                        }
-                        MapList.Add(map);
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show("There was an issue loading the Map, some data could be missing!");
-                    }
-                    reader.Close();
-                }
-            }
+            loadCombo(m1m1Map, "Match1", "m1Map");
+            loadCombo(m1m2Map, "Match1", "m2Map");
+            loadCombo(m1m3Map, "Match1", "m3Map");
+            loadCombo(m1m4Map, "Match1", "m4Map");
+            loadCombo(m1m5Map, "Match1", "m5Map");
+            loadCombo(m1m6Map, "Match1", "m6Map");
+            loadCombo(m1m7Map, "Match1", "m7Map");
         }
 
         /// <summary>
-        /// Loads Custom Roles from Role Directory
+        /// Method to load the comboboxes in the bracket with the team names from the bracket team file
         /// </summary>
-        private void LoadCustomRoles()
+        private void LoadTeamsInBracket()
         {
-            var serializer = new XmlSerializer(typeof(Role));
-            string dir = path + FolderList[13];
-            Role role = new Role();
-
-            foreach (String file in Directory.GetFiles(dir, "*.role", SearchOption.AllDirectories))
-            {
-                using (XmlReader reader = XmlReader.Create(file))
-                {
-                    try
-                    {
-                        role = (Role)serializer.Deserialize(reader);
-                        Image image;
-                        using (var temp = new Bitmap(role.IconPath))
-                        {
-                            image = new Bitmap(temp);
-                        }
-                        role.Icon = new Bitmap(image);
-                        RoleList.Add(role);
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show("There was an issue loading the Role, some data could be missing!");
-                    }
-                    reader.Close();
-                }
-            }
-        }
-
-        /// <summary>
-        /// Loads the Bracket with the teams in the file system
-        /// </summary>
-        private void loadBracket()
-        {
-            loadText(bracketTeam1, FolderList[9].Replace("\\", ""), BracketFiles[0].Replace(".txt", ""));
-            loadText(bracketTeam2, FolderList[9].Replace("\\", ""), BracketFiles[1].Replace(".txt", ""));
-            loadText(bracketTeam3, FolderList[9].Replace("\\", ""), BracketFiles[2].Replace(".txt", ""));
-            loadText(bracketTeam4, FolderList[9].Replace("\\", ""), BracketFiles[3].Replace(".txt", ""));
-            loadText(bracketTeam5, FolderList[9].Replace("\\", ""), BracketFiles[4].Replace(".txt", ""));
-            loadText(bracketTeam6, FolderList[9].Replace("\\", ""), BracketFiles[5].Replace(".txt", ""));
-            loadText(bracketTeam7, FolderList[9].Replace("\\", ""), BracketFiles[6].Replace(".txt", ""));
-            loadText(bracketTeam8, FolderList[9].Replace("\\", ""), BracketFiles[7].Replace(".txt", ""));
-            loadText(bracketTeam9, FolderList[9].Replace("\\", ""), BracketFiles[8].Replace(".txt", ""));
-            loadText(bracketTeam10, FolderList[9].Replace("\\", ""), BracketFiles[9].Replace(".txt", ""));
-            loadText(bracketTeam11, FolderList[9].Replace("\\", ""), BracketFiles[10].Replace(".txt", ""));
-            loadText(bracketTeam12, FolderList[9].Replace("\\", ""), BracketFiles[11].Replace(".txt", ""));
-            loadText(bracketTeam13, FolderList[9].Replace("\\", ""), BracketFiles[12].Replace(".txt", ""));
-            loadText(bracketTeam14, FolderList[9].Replace("\\", ""), BracketFiles[13].Replace(".txt", ""));
-            loadText(bracketTeam15, FolderList[9].Replace("\\", ""), BracketFiles[14].Replace(".txt", ""));
-            loadText(bracketTeam16, FolderList[9].Replace("\\", ""), BracketFiles[15].Replace(".txt", ""));
-
-            loadButton(bracketImage1, FolderList[9].Replace("\\", ""), BracketFiles[16].Replace(".png", ""));
-            loadButton(bracketImage2, FolderList[9].Replace("\\", ""), BracketFiles[17].Replace(".png", ""));
-            loadButton(bracketImage3, FolderList[9].Replace("\\", ""), BracketFiles[18].Replace(".png", ""));
-            loadButton(bracketImage4, FolderList[9].Replace("\\", ""), BracketFiles[19].Replace(".png", ""));
-            loadButton(bracketImage5, FolderList[9].Replace("\\", ""), BracketFiles[20].Replace(".png", ""));
-            loadButton(bracketImage6, FolderList[9].Replace("\\", ""), BracketFiles[21].Replace(".png", ""));
-            loadButton(bracketImage7, FolderList[9].Replace("\\", ""), BracketFiles[22].Replace(".png", ""));
-            loadButton(bracketImage8, FolderList[9].Replace("\\", ""), BracketFiles[23].Replace(".png", ""));
-            loadButton(bracketImage9, FolderList[9].Replace("\\", ""), BracketFiles[24].Replace(".png", ""));
-            loadButton(bracketImage10, FolderList[9].Replace("\\", ""), BracketFiles[25].Replace(".png", ""));
-            loadButton(bracketImage11, FolderList[9].Replace("\\", ""), BracketFiles[26].Replace(".png", ""));
-            loadButton(bracketImage12, FolderList[9].Replace("\\", ""), BracketFiles[27].Replace(".png", ""));
-            loadButton(bracketImage13, FolderList[9].Replace("\\", ""), BracketFiles[28].Replace(".png", ""));
-            loadButton(bracketImage14, FolderList[9].Replace("\\", ""), BracketFiles[29].Replace(".png", ""));
-            loadButton(bracketImage15, FolderList[9].Replace("\\", ""), BracketFiles[30].Replace(".png", ""));
-            loadButton(bracketImage16, FolderList[9].Replace("\\", ""), BracketFiles[31].Replace(".png", ""));
-
-            linkBracketToTeams();
-
-            setBracketTeams();
-
             loadCombo(bracketR1M1Team1, FolderList[9].Replace("\\", ""), BracketFiles[32].Replace(".txt", ""));
             loadCombo(bracketR1M1Team2, FolderList[9].Replace("\\", ""), BracketFiles[33].Replace(".txt", ""));
             loadCombo(bracketR1M2Team1, FolderList[9].Replace("\\", ""), BracketFiles[34].Replace(".txt", ""));
@@ -3130,6 +3003,189 @@ namespace OW_Scoreboard_Tool
             loadCombo(bracketTPM1Team1, FolderList[9].Replace("\\", ""), BracketFiles[94].Replace(".txt", ""));
             loadCombo(bracketTPM1Team2, FolderList[9].Replace("\\", ""), BracketFiles[95].Replace(".txt", ""));
 
+        }
+
+        /// <summary>
+        /// Loads Custom Gametypes from Gametype Directory
+        /// </summary>
+        private void LoadCustomGametypes()
+        {
+            var serializer = new XmlSerializer(typeof(Gametype));
+            string dir = path + FolderList[10];
+            Gametype gametype = new Gametype();
+
+            foreach (String file in Directory.GetFiles(dir, "*.gametype", SearchOption.AllDirectories))
+            {
+                using (XmlReader reader = XmlReader.Create(file))
+                {
+                    try
+                    {
+                        gametype = (Gametype)serializer.Deserialize(reader);
+                        Image image;
+                        using (var temp = new Bitmap(path + gametype.IconPath))
+                        {
+                            image = new Bitmap(temp);
+                        }
+                        gametype.Icon = new Bitmap(image);
+                        GametypeList.Add(gametype);
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("There was an issue loading the Gametype, some data could be missing!");
+                    }
+                    reader.Close();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Loads Custom Heroes from Hero Directory
+        /// </summary>
+        private void LoadCustomHeroes()
+        {
+            var serializer = new XmlSerializer(typeof(Hero));
+            string dir = path + FolderList[11];
+            Hero hero = new Hero();
+
+            foreach (String file in Directory.GetFiles(dir, "*.hero", SearchOption.AllDirectories))
+            {
+                using (XmlReader reader = XmlReader.Create(file))
+                {
+                    try
+                    {
+                        hero = (Hero)serializer.Deserialize(reader);
+                        Image image;
+                        using (var temp = new Bitmap(path + hero.IconPath))
+                        {
+                            image = new Bitmap(temp);
+                        }
+                        hero.Icon = new Bitmap(image);
+                        HeroList.Add(hero);
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("There was an issue loading the Hero, some data could be missing!");
+                    }
+                    reader.Close();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Loads Custom Maps from Map Directory
+        /// </summary>
+        private void LoadCustomMaps()
+        {
+            var serializer = new XmlSerializer(typeof(Map));
+            string dir = path + FolderList[12];
+            Map map = new Map();
+
+            foreach (String file in Directory.GetFiles(dir, "*.map", SearchOption.AllDirectories))
+            {
+                using (XmlReader reader = XmlReader.Create(file))
+                {
+                    try
+                    {
+                        map = (Map)serializer.Deserialize(reader);
+                        Image image;
+                        using (var temp = new Bitmap(path + map.IconPath))
+                        {
+                            image = new Bitmap(temp);
+                        }
+                        map.Icon = new Bitmap(image);
+                        if (!GametypeList.Any(n => n.Name == map.Gametype.Name))
+                        {
+                            MessageBox.Show("The Gametype associated with Map(" + map.Name + ") currently does not exist.");
+                        }
+                        MapList.Add(map);
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("There was an issue loading the Map, some data could be missing!");
+                    }
+                    reader.Close();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Loads Custom Roles from Role Directory
+        /// </summary>
+        private void LoadCustomRoles()
+        {
+            var serializer = new XmlSerializer(typeof(Role));
+            string dir = path + FolderList[13];
+            Role role = new Role();
+
+            foreach (String file in Directory.GetFiles(dir, "*.role", SearchOption.AllDirectories))
+            {
+                using (XmlReader reader = XmlReader.Create(file))
+                {
+                    try
+                    {
+                        role = (Role)serializer.Deserialize(reader);
+                        Image image;
+                        using (var temp = new Bitmap(path + role.IconPath))
+                        {
+                            image = new Bitmap(temp);
+                        }
+                        role.Icon = new Bitmap(image);
+                        RoleList.Add(role);
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("There was an issue loading the Role, some data could be missing!");
+                    }
+                    reader.Close();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Loads the Bracket with the teams in the file system
+        /// </summary>
+        private void loadBracket()
+        {
+            loadText(bracketTeam1, FolderList[9].Replace("\\", ""), BracketFiles[0].Replace(".txt", ""));
+            loadText(bracketTeam2, FolderList[9].Replace("\\", ""), BracketFiles[1].Replace(".txt", ""));
+            loadText(bracketTeam3, FolderList[9].Replace("\\", ""), BracketFiles[2].Replace(".txt", ""));
+            loadText(bracketTeam4, FolderList[9].Replace("\\", ""), BracketFiles[3].Replace(".txt", ""));
+            loadText(bracketTeam5, FolderList[9].Replace("\\", ""), BracketFiles[4].Replace(".txt", ""));
+            loadText(bracketTeam6, FolderList[9].Replace("\\", ""), BracketFiles[5].Replace(".txt", ""));
+            loadText(bracketTeam7, FolderList[9].Replace("\\", ""), BracketFiles[6].Replace(".txt", ""));
+            loadText(bracketTeam8, FolderList[9].Replace("\\", ""), BracketFiles[7].Replace(".txt", ""));
+            loadText(bracketTeam9, FolderList[9].Replace("\\", ""), BracketFiles[8].Replace(".txt", ""));
+            loadText(bracketTeam10, FolderList[9].Replace("\\", ""), BracketFiles[9].Replace(".txt", ""));
+            loadText(bracketTeam11, FolderList[9].Replace("\\", ""), BracketFiles[10].Replace(".txt", ""));
+            loadText(bracketTeam12, FolderList[9].Replace("\\", ""), BracketFiles[11].Replace(".txt", ""));
+            loadText(bracketTeam13, FolderList[9].Replace("\\", ""), BracketFiles[12].Replace(".txt", ""));
+            loadText(bracketTeam14, FolderList[9].Replace("\\", ""), BracketFiles[13].Replace(".txt", ""));
+            loadText(bracketTeam15, FolderList[9].Replace("\\", ""), BracketFiles[14].Replace(".txt", ""));
+            loadText(bracketTeam16, FolderList[9].Replace("\\", ""), BracketFiles[15].Replace(".txt", ""));
+
+            loadButton(bracketImage1, FolderList[9].Replace("\\", ""), BracketFiles[16].Replace(".png", ""));
+            loadButton(bracketImage2, FolderList[9].Replace("\\", ""), BracketFiles[17].Replace(".png", ""));
+            loadButton(bracketImage3, FolderList[9].Replace("\\", ""), BracketFiles[18].Replace(".png", ""));
+            loadButton(bracketImage4, FolderList[9].Replace("\\", ""), BracketFiles[19].Replace(".png", ""));
+            loadButton(bracketImage5, FolderList[9].Replace("\\", ""), BracketFiles[20].Replace(".png", ""));
+            loadButton(bracketImage6, FolderList[9].Replace("\\", ""), BracketFiles[21].Replace(".png", ""));
+            loadButton(bracketImage7, FolderList[9].Replace("\\", ""), BracketFiles[22].Replace(".png", ""));
+            loadButton(bracketImage8, FolderList[9].Replace("\\", ""), BracketFiles[23].Replace(".png", ""));
+            loadButton(bracketImage9, FolderList[9].Replace("\\", ""), BracketFiles[24].Replace(".png", ""));
+            loadButton(bracketImage10, FolderList[9].Replace("\\", ""), BracketFiles[25].Replace(".png", ""));
+            loadButton(bracketImage11, FolderList[9].Replace("\\", ""), BracketFiles[26].Replace(".png", ""));
+            loadButton(bracketImage12, FolderList[9].Replace("\\", ""), BracketFiles[27].Replace(".png", ""));
+            loadButton(bracketImage13, FolderList[9].Replace("\\", ""), BracketFiles[28].Replace(".png", ""));
+            loadButton(bracketImage14, FolderList[9].Replace("\\", ""), BracketFiles[29].Replace(".png", ""));
+            loadButton(bracketImage15, FolderList[9].Replace("\\", ""), BracketFiles[30].Replace(".png", ""));
+            loadButton(bracketImage16, FolderList[9].Replace("\\", ""), BracketFiles[31].Replace(".png", ""));
+
+            linkBracketToTeams();
+
+            setBracketTeams();
+
+            LoadTeamsInBracket();
+            
             loadScore(bracketR1M1Score1, FolderList[9].Replace("\\", ""), BracketFiles[96].Replace(".txt", ""));
             loadScore(bracketR1M1Score2, FolderList[9].Replace("\\", ""), BracketFiles[97].Replace(".txt", ""));
             loadScore(bracketR1M2Score1, FolderList[9].Replace("\\", ""), BracketFiles[98].Replace(".txt", ""));
@@ -3397,10 +3453,18 @@ namespace OW_Scoreboard_Tool
                 if (side == "h")
                 {
                     Match1.Home = team;
+                    if (team.LogoPath != string.Empty)
+                    {
+                        Match1.Home.LogoPath = path + team.LogoPath;
+                    }
                 }
                 else
                 {
                     Match1.Away = team;
+                    if (team.LogoPath != string.Empty)
+                    {
+                        Match1.Away.LogoPath = path + team.LogoPath;
+                    }
                 }
                 loadTeams(side);
             }
@@ -3451,16 +3515,34 @@ namespace OW_Scoreboard_Tool
                 {
                     if (side == "h")
                     {
+                        ExportTeamLogo(Match1.Home);
                         serializer.Serialize(writer, Match1.Home);
                     }
                     else
                     {
+                        ExportTeamLogo(Match1.Away);
                         serializer.Serialize(writer, Match1.Away);
                     }
                 }
             }
         }
         
+        private void ExportTeamLogo(Team team)
+        {
+            if(team.LogoPath != string.Empty)
+            { 
+                Bitmap teamLogo = new Bitmap(team.LogoPath);
+                try
+                {
+                    team.LogoPath = FolderList[7] + "\\" + team.Name.Replace(":", "-").Replace(" ", "_") + ".png";
+                    teamLogo.Save(path + team.LogoPath);
+                }
+                catch
+                {
+                    MessageBox.Show("There was an issue exporting the team, the team name might have unsupported characters!");
+                }
+            }
+        }
         #endregion
 
         #region Boolean Methods
@@ -3584,7 +3666,7 @@ namespace OW_Scoreboard_Tool
         /// </summary>
         private void GenerateRoles()
         {
-            DefaultRoleList.Add(new Role("DPS", Properties.Resources.Icon_offense, ""));
+            DefaultRoleList.Add(new Role("DPS", Properties.Resources.Icon_dps, ""));
             DefaultRoleList.Add(new Role("Flex", Properties.Resources.Icon_flex, ""));
             DefaultRoleList.Add(new Role("Support", Properties.Resources.Icon_support, ""));
             DefaultRoleList.Add(new Role("Tank", Properties.Resources.Icon_tank, ""));
@@ -3615,6 +3697,7 @@ namespace OW_Scoreboard_Tool
             DefaultHeroList.Add(new Hero("Reaper", Properties.Resources.Reaper, ""));
             DefaultHeroList.Add(new Hero("Reinhardt", Properties.Resources.Reinhardt, ""));
             DefaultHeroList.Add(new Hero("Roadhog", Properties.Resources.Roadhog, ""));
+            DefaultHeroList.Add(new Hero("Sigma", Properties.Resources.Sigma, ""));
             DefaultHeroList.Add(new Hero("Soldier: 76", Properties.Resources.Soldier76, ""));
             DefaultHeroList.Add(new Hero("Sombra", Properties.Resources.Sombra, ""));
             DefaultHeroList.Add(new Hero("Symmetra", Properties.Resources.Symmetra, ""));
@@ -3643,31 +3726,31 @@ namespace OW_Scoreboard_Tool
         /// </summary>
         private void GenerateMaps()
         {
-            DefaultMapList.Add(new Map("Assault", DefaultGametypeList[1], Properties.Resources.Color_Assault, ""));
-            DefaultMapList.Add(new Map("Control", DefaultGametypeList[2], Properties.Resources.Color_Control, ""));
-            DefaultMapList.Add(new Map("Escort", DefaultGametypeList[3], Properties.Resources.Color_Escort, ""));
-            DefaultMapList.Add(new Map("Hybrid", DefaultGametypeList[4], Properties.Resources.Color_Hybrid, ""));
-            DefaultMapList.Add(new Map("Busan", DefaultGametypeList[2], Properties.Resources.Color_Busan, ""));
-            DefaultMapList.Add(new Map("Blizzard World", DefaultGametypeList[4], Properties.Resources.Color_Blizzworld, ""));
-            DefaultMapList.Add(new Map("Dorado", DefaultGametypeList[3], Properties.Resources.Color_Dorado, ""));
-            DefaultMapList.Add(new Map("Eichenwalde", DefaultGametypeList[4], Properties.Resources.Color_Eichenwalde, ""));
-            DefaultMapList.Add(new Map("Havana", DefaultGametypeList[3], Properties.Resources.Color_Havana, ""));
-            DefaultMapList.Add(new Map("Hanamura", DefaultGametypeList[1], Properties.Resources.Color_Hanamura, ""));
-            DefaultMapList.Add(new Map("Hollywood", DefaultGametypeList[4], Properties.Resources.Color_Hollywood, ""));
-            DefaultMapList.Add(new Map("Horizon Lunar Colony", DefaultGametypeList[1], Properties.Resources.Color_Horizon, ""));
-            DefaultMapList.Add(new Map("Ilios", DefaultGametypeList[2], Properties.Resources.Color_Ilios, ""));
-            DefaultMapList.Add(new Map("Junkertown", DefaultGametypeList[3], Properties.Resources.Color_Junkertown, ""));
-            DefaultMapList.Add(new Map("King\'s Row", DefaultGametypeList[4], Properties.Resources.Color_King_s_Row, ""));
-            DefaultMapList.Add(new Map("Lijiang Tower", DefaultGametypeList[2], Properties.Resources.Color_Lijiang, ""));
-            DefaultMapList.Add(new Map("Paris", DefaultGametypeList[1], Properties.Resources.Color_Paris, ""));
-            DefaultMapList.Add(new Map("Nepal", DefaultGametypeList[2], Properties.Resources.Color_Nepal, ""));
-            DefaultMapList.Add(new Map("Numbani", DefaultGametypeList[4], Properties.Resources.Color_Numbani, ""));
-            DefaultMapList.Add(new Map("Oasis", DefaultGametypeList[2], Properties.Resources.Color_Oasis, ""));
-            DefaultMapList.Add(new Map("Rialto", DefaultGametypeList[3], Properties.Resources.Color_Rialto, ""));
-            DefaultMapList.Add(new Map("Route 66", DefaultGametypeList[3], Properties.Resources.Color_Route66, ""));
-            DefaultMapList.Add(new Map("Temple of Anubis", DefaultGametypeList[1], Properties.Resources.Color_Anubis, ""));
-            DefaultMapList.Add(new Map("Volskaya Industries", DefaultGametypeList[1], Properties.Resources.Color_Volskaya, ""));
-            DefaultMapList.Add(new Map("Watchpoint: Gibraltar", DefaultGametypeList[3], Properties.Resources.Color_Watchpoint, ""));
+            DefaultMapList.Add(new Map("Assault", DefaultGametypeList[1], Properties.Resources.Assault, ""));
+            DefaultMapList.Add(new Map("Control", DefaultGametypeList[2], Properties.Resources.Control, ""));
+            DefaultMapList.Add(new Map("Escort", DefaultGametypeList[3], Properties.Resources.Escort, ""));
+            DefaultMapList.Add(new Map("Hybrid", DefaultGametypeList[4], Properties.Resources.Hybrid, ""));
+            DefaultMapList.Add(new Map("Blizzard World", DefaultGametypeList[4], Properties.Resources.Blizzard_World, ""));
+            DefaultMapList.Add(new Map("Busan", DefaultGametypeList[2], Properties.Resources.Busan, ""));
+            DefaultMapList.Add(new Map("Dorado", DefaultGametypeList[3], Properties.Resources.Dorado, ""));
+            DefaultMapList.Add(new Map("Eichenwalde", DefaultGametypeList[4], Properties.Resources.Eichenwalde, ""));
+            DefaultMapList.Add(new Map("Hanamura", DefaultGametypeList[1], Properties.Resources.Hanamura, ""));
+            DefaultMapList.Add(new Map("Havana", DefaultGametypeList[3], Properties.Resources.Havana, ""));
+            DefaultMapList.Add(new Map("Hollywood", DefaultGametypeList[4], Properties.Resources.Hollywood, ""));
+            DefaultMapList.Add(new Map("Horizon Lunar Colony", DefaultGametypeList[1], Properties.Resources.Horizon_Lundar_Colony, ""));
+            DefaultMapList.Add(new Map("Ilios", DefaultGametypeList[2], Properties.Resources.Ilios, ""));
+            DefaultMapList.Add(new Map("Junkertown", DefaultGametypeList[3], Properties.Resources.Junkertown, ""));
+            DefaultMapList.Add(new Map("King\'s Row", DefaultGametypeList[4], Properties.Resources.King_s_Row, ""));
+            DefaultMapList.Add(new Map("Lijiang Tower", DefaultGametypeList[2], Properties.Resources.Lijiang_Tower, ""));
+            DefaultMapList.Add(new Map("Paris", DefaultGametypeList[1], Properties.Resources.Paris, ""));
+            DefaultMapList.Add(new Map("Nepal", DefaultGametypeList[2], Properties.Resources.Nepal, ""));
+            DefaultMapList.Add(new Map("Numbani", DefaultGametypeList[4], Properties.Resources.Numbani, ""));
+            DefaultMapList.Add(new Map("Oasis", DefaultGametypeList[2], Properties.Resources.Oasis, ""));
+            DefaultMapList.Add(new Map("Rialto", DefaultGametypeList[3], Properties.Resources.Rialto, ""));
+            DefaultMapList.Add(new Map("Route 66", DefaultGametypeList[3], Properties.Resources.Route_66, ""));
+            DefaultMapList.Add(new Map("Temple of Anubis", DefaultGametypeList[1], Properties.Resources.Temple_of_Anubis, ""));
+            DefaultMapList.Add(new Map("Volskaya Industries", DefaultGametypeList[1], Properties.Resources.Volskaya_Industries, ""));
+            DefaultMapList.Add(new Map("Watchpoint: Gibraltar", DefaultGametypeList[3], Properties.Resources.Watchpoint_Gibraltar, ""));
 
         }
 
@@ -4686,72 +4769,6 @@ namespace OW_Scoreboard_Tool
             BracketTeams.Add(new Team(bracketTeam14.Text, path + FolderList[9] + BracketFiles[29]));
             BracketTeams.Add(new Team(bracketTeam15.Text, path + FolderList[9] + BracketFiles[30]));
             BracketTeams.Add(new Team(bracketTeam16.Text, path + FolderList[9] + BracketFiles[31]));
-
-            loadCombo(bracketR1M1Team1, FolderList[9].Replace("\\", ""), BracketFiles[32].Replace(".txt", ""));
-            loadCombo(bracketR1M1Team2, FolderList[9].Replace("\\", ""), BracketFiles[33].Replace(".txt", ""));
-            loadCombo(bracketR1M2Team1, FolderList[9].Replace("\\", ""), BracketFiles[34].Replace(".txt", ""));
-            loadCombo(bracketR1M2Team2, FolderList[9].Replace("\\", ""), BracketFiles[35].Replace(".txt", ""));
-            loadCombo(bracketR1M3Team1, FolderList[9].Replace("\\", ""), BracketFiles[36].Replace(".txt", ""));
-            loadCombo(bracketR1M3Team2, FolderList[9].Replace("\\", ""), BracketFiles[37].Replace(".txt", ""));
-            loadCombo(bracketR1M4Team1, FolderList[9].Replace("\\", ""), BracketFiles[38].Replace(".txt", ""));
-            loadCombo(bracketR1M4Team2, FolderList[9].Replace("\\", ""), BracketFiles[39].Replace(".txt", ""));
-            loadCombo(bracketR1M5Team1, FolderList[9].Replace("\\", ""), BracketFiles[40].Replace(".txt", ""));
-            loadCombo(bracketR1M5Team2, FolderList[9].Replace("\\", ""), BracketFiles[41].Replace(".txt", ""));
-            loadCombo(bracketR1M6Team1, FolderList[9].Replace("\\", ""), BracketFiles[42].Replace(".txt", ""));
-            loadCombo(bracketR1M6Team2, FolderList[9].Replace("\\", ""), BracketFiles[43].Replace(".txt", ""));
-            loadCombo(bracketR1M7Team1, FolderList[9].Replace("\\", ""), BracketFiles[44].Replace(".txt", ""));
-            loadCombo(bracketR1M7Team2, FolderList[9].Replace("\\", ""), BracketFiles[45].Replace(".txt", ""));
-            loadCombo(bracketR1M8Team1, FolderList[9].Replace("\\", ""), BracketFiles[46].Replace(".txt", ""));
-            loadCombo(bracketR1M8Team2, FolderList[9].Replace("\\", ""), BracketFiles[47].Replace(".txt", ""));
-            loadCombo(bracketQFM1Team1, FolderList[9].Replace("\\", ""), BracketFiles[48].Replace(".txt", ""));
-            loadCombo(bracketQFM1Team2, FolderList[9].Replace("\\", ""), BracketFiles[49].Replace(".txt", ""));
-            loadCombo(bracketQFM2Team1, FolderList[9].Replace("\\", ""), BracketFiles[50].Replace(".txt", ""));
-            loadCombo(bracketQFM2Team2, FolderList[9].Replace("\\", ""), BracketFiles[51].Replace(".txt", ""));
-            loadCombo(bracketQFM3Team1, FolderList[9].Replace("\\", ""), BracketFiles[52].Replace(".txt", ""));
-            loadCombo(bracketQFM3Team2, FolderList[9].Replace("\\", ""), BracketFiles[53].Replace(".txt", ""));
-            loadCombo(bracketQFM4Team1, FolderList[9].Replace("\\", ""), BracketFiles[54].Replace(".txt", ""));
-            loadCombo(bracketQFM4Team2, FolderList[9].Replace("\\", ""), BracketFiles[55].Replace(".txt", ""));
-            loadCombo(bracketSFM1Team1, FolderList[9].Replace("\\", ""), BracketFiles[56].Replace(".txt", ""));
-            loadCombo(bracketSFM1Team2, FolderList[9].Replace("\\", ""), BracketFiles[57].Replace(".txt", ""));
-            loadCombo(bracketSFM2Team1, FolderList[9].Replace("\\", ""), BracketFiles[58].Replace(".txt", ""));
-            loadCombo(bracketSFM2Team2, FolderList[9].Replace("\\", ""), BracketFiles[59].Replace(".txt", ""));
-            loadCombo(bracketWFM1Team1, FolderList[9].Replace("\\", ""), BracketFiles[60].Replace(".txt", ""));
-            loadCombo(bracketWFM1Team2, FolderList[9].Replace("\\", ""), BracketFiles[61].Replace(".txt", ""));
-            loadCombo(bracketLR1M1Team1, FolderList[9].Replace("\\", ""), BracketFiles[62].Replace(".txt", ""));
-            loadCombo(bracketLR1M1Team2, FolderList[9].Replace("\\", ""), BracketFiles[63].Replace(".txt", ""));
-            loadCombo(bracketLR1M2Team1, FolderList[9].Replace("\\", ""), BracketFiles[64].Replace(".txt", ""));
-            loadCombo(bracketLR1M2Team2, FolderList[9].Replace("\\", ""), BracketFiles[65].Replace(".txt", ""));
-            loadCombo(bracketLR1M3Team1, FolderList[9].Replace("\\", ""), BracketFiles[66].Replace(".txt", ""));
-            loadCombo(bracketLR1M3Team2, FolderList[9].Replace("\\", ""), BracketFiles[67].Replace(".txt", ""));
-            loadCombo(bracketLR1M4Team1, FolderList[9].Replace("\\", ""), BracketFiles[68].Replace(".txt", ""));
-            loadCombo(bracketLR1M4Team2, FolderList[9].Replace("\\", ""), BracketFiles[69].Replace(".txt", ""));
-            loadCombo(bracketLR2M1Team1, FolderList[9].Replace("\\", ""), BracketFiles[70].Replace(".txt", ""));
-            loadCombo(bracketLR2M1Team2, FolderList[9].Replace("\\", ""), BracketFiles[71].Replace(".txt", ""));
-            loadCombo(bracketLR2M2Team1, FolderList[9].Replace("\\", ""), BracketFiles[72].Replace(".txt", ""));
-            loadCombo(bracketLR2M2Team2, FolderList[9].Replace("\\", ""), BracketFiles[73].Replace(".txt", ""));
-            loadCombo(bracketLR2M3Team1, FolderList[9].Replace("\\", ""), BracketFiles[74].Replace(".txt", ""));
-            loadCombo(bracketLR2M3Team2, FolderList[9].Replace("\\", ""), BracketFiles[75].Replace(".txt", ""));
-            loadCombo(bracketLR2M4Team1, FolderList[9].Replace("\\", ""), BracketFiles[76].Replace(".txt", ""));
-            loadCombo(bracketLR2M4Team2, FolderList[9].Replace("\\", ""), BracketFiles[77].Replace(".txt", ""));
-            loadCombo(bracketLR3M1Team1, FolderList[9].Replace("\\", ""), BracketFiles[78].Replace(".txt", ""));
-            loadCombo(bracketLR3M1Team2, FolderList[9].Replace("\\", ""), BracketFiles[79].Replace(".txt", ""));
-            loadCombo(bracketLR3M2Team1, FolderList[9].Replace("\\", ""), BracketFiles[80].Replace(".txt", ""));
-            loadCombo(bracketLR3M2Team2, FolderList[9].Replace("\\", ""), BracketFiles[81].Replace(".txt", ""));
-            loadCombo(bracketLR4M1Team1, FolderList[9].Replace("\\", ""), BracketFiles[82].Replace(".txt", ""));
-            loadCombo(bracketLR4M1Team2, FolderList[9].Replace("\\", ""), BracketFiles[83].Replace(".txt", ""));
-            loadCombo(bracketLR4M2Team1, FolderList[9].Replace("\\", ""), BracketFiles[84].Replace(".txt", ""));
-            loadCombo(bracketLR4M2Team2, FolderList[9].Replace("\\", ""), BracketFiles[85].Replace(".txt", ""));
-            loadCombo(bracketLSFM1Team1, FolderList[9].Replace("\\", ""), BracketFiles[86].Replace(".txt", ""));
-            loadCombo(bracketLSFM1Team2, FolderList[9].Replace("\\", ""), BracketFiles[87].Replace(".txt", ""));
-            loadCombo(bracketLFM1Team1, FolderList[9].Replace("\\", ""), BracketFiles[88].Replace(".txt", ""));
-            loadCombo(bracketLFM1Team2, FolderList[9].Replace("\\", ""), BracketFiles[89].Replace(".txt", ""));
-            loadCombo(bracketGF1M1Team1, FolderList[9].Replace("\\", ""), BracketFiles[90].Replace(".txt", ""));
-            loadCombo(bracketGF1M1Team2, FolderList[9].Replace("\\", ""), BracketFiles[91].Replace(".txt", ""));
-            loadCombo(bracketGF2M1Team1, FolderList[9].Replace("\\", ""), BracketFiles[92].Replace(".txt", ""));
-            loadCombo(bracketGF2M1Team2, FolderList[9].Replace("\\", ""), BracketFiles[93].Replace(".txt", ""));
-            loadCombo(bracketTPM1Team1, FolderList[9].Replace("\\", ""), BracketFiles[94].Replace(".txt", ""));
-            loadCombo(bracketTPM1Team2, FolderList[9].Replace("\\", ""), BracketFiles[95].Replace(".txt", ""));
-
         }
 
         #endregion
@@ -4968,6 +4985,7 @@ namespace OW_Scoreboard_Tool
                 {
                     gametype.IconPath = filePath.Replace(".gametype", ".png");
                     gametype.Icon.Save(gametype.IconPath);
+                    gametype.IconPath = gametype.IconPath.Replace(path, "");
                     serializer.Serialize(writer, gametype);
                 }
             }
@@ -4988,10 +5006,12 @@ namespace OW_Scoreboard_Tool
                 {
                     hero.IconPath = filePath.Replace(".hero", ".png");
                     hero.Icon.Save(hero.IconPath);
+                    hero.IconPath = hero.IconPath.Replace(path, "");
                     serializer.Serialize(writer, hero);
                 }
             }
             HeroList.Add(hero);
+            LoadPlayerHeroes();
         }
 
         /// <summary>
@@ -5008,10 +5028,12 @@ namespace OW_Scoreboard_Tool
                 {
                     map.IconPath = filePath.Replace(".map", ".png");
                     map.Icon.Save(map.IconPath);
+                    map.IconPath = map.IconPath.Replace(path, "");
                     serializer.Serialize(writer, map);
                 }
             }
             MapList.Add(map);
+            LoadMapsPlayed();
         }
 
         /// <summary>
@@ -5028,10 +5050,12 @@ namespace OW_Scoreboard_Tool
                 {
                     role.IconPath = filePath.Replace(".role", ".png");
                     role.Icon.Save(role.IconPath);
+                    role.IconPath = role.IconPath.Replace(path, "");
                     serializer.Serialize(writer, role);
                 }
             }
             RoleList.Add(role);
+            LoadPlayerRoles();
         }
 
         /// <summary>
@@ -5150,7 +5174,6 @@ namespace OW_Scoreboard_Tool
             replayListView.Refresh();
         }
 
-
         /// <summary>
         /// Wipes the directory that is used as a parameter.
         /// </summary>
@@ -5166,6 +5189,43 @@ namespace OW_Scoreboard_Tool
             {
                 subDirectory.Delete(true);
             }
+        }
+        
+        /// <summary>
+        /// Turns an image to grayscale
+        /// </summary>
+        public Bitmap GrayScale(Bitmap image)
+        {
+            //get image dimension
+            int width = image.Width;
+            int height = image.Height;
+
+            //color of pixel
+            Color p;
+
+            //grayscale
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
+                {
+                    //get pixel value
+                    p = image.GetPixel(x, y);
+
+                    //extract pixel component ARGB
+                    int a = p.A;
+                    int r = p.R;
+                    int g = p.G;
+                    int b = p.B;
+
+                    //find average
+                    int avg = (r + g + b) / 3;
+
+                    //set new pixel value
+                    image.SetPixel(x, y, Color.FromArgb(a, avg, avg, avg));
+                }
+            }
+
+            return image;
         }
 
         #endregion

@@ -11,6 +11,14 @@ namespace OW_Scoreboard_Tool.Controls
 {
     public partial class CreateHeroDialog : CreateObjectDialog
     {
+        public override string TypePath
+        {
+            get
+            {
+                return "\\Heroes\\";
+            }
+        }
+
         private Hero _createdHero;
 
         public Hero CreatedHero { get => _createdHero; set => _createdHero = value; }

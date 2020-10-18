@@ -11,6 +11,14 @@ namespace OW_Scoreboard_Tool.Controls
 {
     public partial class CreateRoleDialog : CreateObjectDialog
     {
+        public override string TypePath
+        {
+            get
+            {
+                return "\\Roles\\";
+            }
+        }
+
         private Role _createdRole;
 
         public Role CreatedRole { get => _createdRole; set => _createdRole = value; }
